@@ -8,7 +8,8 @@ enum RETURN_TYPE {
     NEW_MAP,
     NEW_CHAPTER,
     GAME_OVER,
-    BATTLE
+    BATTLE,
+    GAME
 };
 
 #endif

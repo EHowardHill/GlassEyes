@@ -361,7 +361,7 @@ int battle_map()
     vector<conversation *, 3> convos[RESULT_SIZE];
     vector<conversation *, 3> spare_convos;
 
-    switch (global_data_ptr->battle_foe)
+    switch (global_data_ptr->foe)
     {
     case FOE_VISKERS_01:
         bs.enemy_sprite_item = &sprite_items::visker_battle;
@@ -452,7 +452,7 @@ int battle_map()
         }
 
         // Update enemy animation
-        if (global_data_ptr->battle_foe == FOE_CROKE_01)
+        if (global_data_ptr->foe == FOE_CROKE_01)
         {
             // Special animation handling for Croke
             if (bs.stage == stage_talking && bs.active_conv)
@@ -538,7 +538,7 @@ int battle_map()
         if (bs.stage == stage_talking)
         {
             // Special handling for Croke battle
-            if (global_data_ptr->battle_foe == FOE_CROKE_01)
+            if (global_data_ptr->foe == FOE_CROKE_01)
             {
                 if (!is_dialogue_active(&bs))
                 {

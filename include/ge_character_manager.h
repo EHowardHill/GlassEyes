@@ -34,7 +34,7 @@ struct character_manager
     character *find_by_index(int index);
     character *find_by_id(int id);
     void update(map_manager *current_map);
-    void alert();
+    void alert(int status);
     int size() const { return characters.size(); }
 
     bool music_fadeout = false;

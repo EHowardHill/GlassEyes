@@ -25,11 +25,11 @@
             }
         },
         "maps/cave_02.tmx": {
-            "scale": 0.75,
+            "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 368,
-                "y": 694
+                "x": 336.3333333333333,
+                "y": 773
             }
         },
         "maps/cave_03.tmx": {
@@ -46,6 +46,14 @@
             "viewCenter": {
                 "x": 351.5,
                 "y": 665.5
+            }
+        },
+        "maps/cave_05.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 249.66666666666666,
+                "y": 191.66666666666669
             }
         },
         "maps/cave_cowbemmie.tmx": {
@@ -74,17 +82,17 @@
         },
         "maps/forest_03.tmx": {
             "scale": 1.5,
-            "selectedLayer": 4,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 443.3333333333333,
-                "y": 263.66666666666663
+                "x": 1253,
+                "y": 293
             }
         },
         "maps/forest_04.tmx": {
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 131.5,
+                "x": 131.25,
                 "y": 147.25
             }
         },
@@ -156,8 +164,8 @@
             "scale": 1.59013671875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 423.23404777989316,
-                "y": 210.98814714733157
+                "x": 255.9528342443039,
+                "y": 192.12184486888165
             }
         },
         "maps/viskers_house.tmx": {
@@ -216,21 +224,20 @@
         }
     },
     "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes-GBA/bgs/tilesets",
-    "map.height": 9,
+    "map.height": 16,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 9,
+    "map.width": 16,
     "openFiles": [
         "maps/forest_03.tmx",
-        "maps/tavern_01.tmx",
-        "maps/cave_02.tmx"
+        "maps/tavern_01.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
-        "maps/cave_02.tmx",
         "maps/tavern_01.tmx",
         "maps/forest_03.tmx",
+        "maps/cave_02.tmx",
         "maps/cave_03.tmx",
         "maps/garbage_04.tmx",
         "maps/forest_02.tmx",

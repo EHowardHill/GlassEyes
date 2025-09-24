@@ -6,11 +6,11 @@
 #include "bn_music_items.h"
 #include "bn_sound_items.h"
 #include "bn_random.h"
+#include "bn_blending.h"
 
 #include "bn_regular_bg_items_bg_battle_grid.h"
 #include "bn_regular_bg_items_bg_dialogue_box.h"
 #include "bn_sprite_items_hearts.h"
-#include "bn_sprite_items_battle_icons.h"
 #include "bn_sprite_items_battle_chars.h"
 #include "bn_sprite_items_battle_squares.h"
 
@@ -308,9 +308,12 @@ static void init_dart_game(game_state &gs)
     // Create dartboard
     gs.darts.dartboard = sprite_items::dartboard.create_sprite(0, -16);
     gs.darts.dartboard->set_z_order(1);
+    gs.darts.dartboard->set_blending_enabled(true);
+
+    bn::blending::set_transparency_alpha(0.4);
 
     // Create crosshair (using a small icon or custom sprite)
-    gs.darts.crosshair = sprite_items::battle_icons.create_sprite(0, -16, 0);
+    gs.darts.crosshair = sprite_items::hearts.create_sprite(0, -16, 1);
     gs.darts.crosshair->set_z_order(-1);
 
     // Create power meter sprites
@@ -789,7 +792,7 @@ int game_map(int game_type = 0)
     // Setup conversations based on foe
     vector<conversation *, 3> convos[G_SIZE];
 
-    switch (global_data_ptr->battle_foe)
+    switch (global_data_ptr->foe)
     {
     case FOE_VISKERS_01:
         gs.enemy_sprite_item = &sprite_items::visker_battle;

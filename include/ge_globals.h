@@ -138,6 +138,7 @@ enum action_list
 	BIG_SHOT_2,
 	FINAL_MSG_ACTION,
 	GO_SPAMTON_GO,
+	CHAT_TOLLBOOTH,
 	ACTIONS_SIZE
 };
 
@@ -156,7 +157,7 @@ struct global_data
 	vector_2 entry_position = {0, 0};
 	vector_2 ginger_position = {0, 0};
 	int entry_direction = DIR_RIGHT;
-	int battle_foe = 0;
+	int foe = 0;
 	int hp[4] = {20, 20, 20, 20};
 	int max_hp[4] = {20, 20, 20, 20};
 	int enemy_hp[4] = {20, 20, 20, 20};

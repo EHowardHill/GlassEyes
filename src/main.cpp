@@ -16,7 +16,6 @@
 
 #include "bn_sprite_items_spr_vista_01.h"
 
-#include "bn_regular_bg_items_floor_wood01.h"
 #include "bn_regular_bg_items_big_bg_forest_01.h"
 #include "bn_regular_bg_items_bg_gameover.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
@@ -364,16 +363,18 @@ int main()
     global_data_ptr->process_stage = AVALON; // BLACK_TO_LAB;
 
     // Test game
+    /*
     global_data_ptr->items[OBJ_LIME] = true;
-    global_data_ptr->battle_foe = FOE_TEST;
+    global_data_ptr->foe = FOE_TEST;
     value = game_map(GAME_DARTS);
     core::update();
     value = NEW_CHAPTER;
+    */
 
     // Test battle before game begins
     /*
     global_data_ptr->items[OBJ_LIME] = true;
-    global_data_ptr->battle_foe = FOE_TEST;
+    global_data_ptr->foe = FOE_TEST;
     value = battle_map();
     core::update();
     value = NEW_CHAPTER;
@@ -386,6 +387,11 @@ int main()
         case BATTLE:
         {
             value = battle_map();
+            break;
+        }
+        case GAME:
+        {
+            value = game_map();
             break;
         }
         case NEW_CHAPTER:

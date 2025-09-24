@@ -123,7 +123,7 @@ character *character_manager::find_by_id(int id)
     return nullptr;
 }
 
-void character_manager::alert()
+void character_manager::alert(int new_status = BATTLE)
 {
     vector_2 player_pos = player_ptr->v_sprite.real_position().position;
 
@@ -137,7 +137,7 @@ void character_manager::alert()
     }
 
     global_data_ptr->entry_direction = player_ptr->face;
-    status = BATTLE;
+    status = new_status;
 }
 
 // Modified character_manager::update method to handle branching dialogue

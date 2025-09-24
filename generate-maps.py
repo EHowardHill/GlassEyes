@@ -256,6 +256,7 @@ inline constexpr map map_$name = {
 full_data = []
 for key in map_data.keys():
     map = map_data[key]
+    print(f'> updated "{key}"')
 
     if "metadata" not in map.keys():
         map["metadata"] = ""
