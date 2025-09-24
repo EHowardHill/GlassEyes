@@ -1,7 +1,5 @@
 *.elf
 *.sav
 build/
-/butano
 .DS_Store
-full-source.txt
 full-source.txt
