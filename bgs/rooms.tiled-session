@@ -1,0 +1,251 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "maps/forest_03.tmx",
+    "expandedProjectPaths": [
+        "tilesets",
+        "maps",
+        "."
+    ],
+    "exportAsImage.includeBackgroundColor": true,
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "C:/Users/ethan/Documents/GitHub/GlassEyes-GBA/concepts/db_ch_visker.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "maps/cave_01.tmx": {
+            "scale": 1.6561383928571427,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 224.01509535683002,
+                "y": 292.5480153649168
+            }
+        },
+        "maps/cave_02.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 368,
+                "y": 694
+            }
+        },
+        "maps/cave_03.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 364,
+                "y": 487.5
+            }
+        },
+        "maps/cave_04.tmx": {
+            "scale": 1,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 351.5,
+                "y": 665.5
+            }
+        },
+        "maps/cave_cowbemmie.tmx": {
+            "scale": 2,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 261.5,
+                "y": 258.75
+            }
+        },
+        "maps/forest_01.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 3569.333333333333,
+                "y": 191.66666666666663
+            }
+        },
+        "maps/forest_02.tmx": {
+            "scale": 4,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 527.5,
+                "y": 172.875
+            }
+        },
+        "maps/forest_03.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 443.3333333333333,
+                "y": 263.66666666666663
+            }
+        },
+        "maps/forest_04.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 131.5,
+                "y": 147.25
+            }
+        },
+        "maps/garbage_01.tmx": {
+            "scale": 3,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 715,
+                "y": 260.8333333333333
+            }
+        },
+        "maps/garbage_02.tmx": {
+            "scale": 2,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 222,
+                "y": 124.25
+            }
+        },
+        "maps/garbage_03.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 283.3333333333333,
+                "y": 194.33333333333334
+            }
+        },
+        "maps/garbage_04.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 512,
+                "y": 383.33333333333326
+            }
+        },
+        "maps/garbage_05.tmx": {
+            "scale": 2,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 98,
+                "y": 1195.75
+            }
+        },
+        "maps/lab_01.tmx": {
+            "scale": 3,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 499.66666666666663,
+                "y": 273.8333333333333
+            }
+        },
+        "maps/room01.tmx": {
+            "scale": 2.1634765625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 205.6874605037465,
+                "y": 127.34133790737565
+            }
+        },
+        "maps/shop_01.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 159.75,
+                "y": 159.75
+            }
+        },
+        "maps/tavern_01.tmx": {
+            "scale": 1.59013671875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 423.23404777989316,
+                "y": 210.98814714733157
+            }
+        },
+        "maps/viskers_house.tmx": {
+            "scale": 1.8356770833333333,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 158.52461342034331,
+                "y": 175.6844942545042
+            }
+        },
+        "tilesets/blue-labels.tsx": {
+            "scaleInDock": 2
+        },
+        "tilesets/cowbemmie01.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "tilesets/floor_wood01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilesets/forest01.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "tilesets/garbage-cave01.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        },
+        "tilesets/lab01.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/room01.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilesets/room02.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilesets/spr_visker_01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilesets/tavern01.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/underground01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilesets/underground02.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes-GBA/bgs/tilesets",
+    "map.height": 9,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 32,
+    "map.tileWidth": 32,
+    "map.width": 9,
+    "openFiles": [
+        "maps/forest_03.tmx",
+        "maps/tavern_01.tmx",
+        "maps/cave_02.tmx"
+    ],
+    "project": "rooms.tiled-project",
+    "recentFiles": [
+        "maps/cave_02.tmx",
+        "maps/tavern_01.tmx",
+        "maps/forest_03.tmx",
+        "maps/cave_03.tmx",
+        "maps/garbage_04.tmx",
+        "maps/forest_02.tmx",
+        "maps/garbage_03.tmx",
+        "maps/garbage_05.tmx",
+        "maps/shop_01.tmx",
+        "tilesets/room02.tsx",
+        "maps/lab_01.tmx",
+        "maps/cave_cowbemmie.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 32,
+        "width": 32
+    },
+    "tileset.transparentColor": "#000000",
+    "tileset.useTransparentColor": false
+}

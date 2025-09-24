@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" source="../tilesets/garbage-cave01.tsx"/>
+ <tileset firstgid="73" source="../tilesets/blue-labels.tsx"/>
+ <layer id="1" name="colliders" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,6,2,15,17,2,4,0,
+0,12,54,56,0,0,13,0,
+0,12,55,0,0,0,13,0,
+0,12,0,0,0,0,13,0,
+0,12,0,0,0,0,13,0,
+0,10,3,0,0,3,11,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="decor" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,31,27,0,0,
+0,0,0,18,19,33,0,0,
+0,0,52,21,20,34,0,0,
+0,0,39,23,22,33,0,0,
+0,0,0,60,60,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="actions" width="8" height="8" opacity="0.78">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,84,0,0,0,
+0,0,0,83,0,0,0,0,
+0,0,82,0,0,85,0,0,
+0,0,82,0,0,85,0,0,
+0,0,0,81,81,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="characters" width="8" height="8" opacity="0.31">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

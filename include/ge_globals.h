@@ -1,0 +1,175 @@
+// ge_globals.h
+
+#ifndef GE_GLOBALS_H
+#define GE_GLOBALS_H
+
+#include "bn_music_item.h"
+#include "bn_random.h"
+#include "ge_maps.h"
+#include "ge_sprites.h"
+#include "ge_text.h"
+
+using namespace bn;
+
+constexpr int GE_PARTY_SIZE = 4;
+
+enum action_list
+{
+	ACT_NONE,
+	CONVO_SCENE_1,
+	CONVO_GARBAGE_1,
+	CONVO_GARBAGE_2,
+	CONVO_GARBAGE_3,
+	TO_GARBAGE_02,
+	CONVO_GARBAGE_SIGN01,
+	TO_VISKERS_HOUSE,
+	TO_GARBAGE_03,
+	TO_GARBAGE_02b,
+	CONVO_VISKER_SIGN,
+	CONVO_VISKER_BED,
+	CONVO_VISKER_NIGHTSTAND,
+	CONVO_VISKER_FOOD,
+	CONVO_GARBAGE_03_SIGN,
+	CONVO_VISKER_FIGHT,
+	CONVO_VISKER_AFTER_FIGHT,
+	TO_GARBAGE_04,
+	GARBAGE_04_EXIT_01,
+	GARBAGE_04_EXIT_02,
+	GARBAGE_04_EXIT_03,
+	GARBAGE_04_EXIT_04,
+	GARBAGE_04_EXIT_05,
+	CONVO_GARBAGE_04_SIGN,
+	EXIT_GARBAGE_01,
+	CONVO_GARBAGE_05_SIGN,
+	CONVO_GARBAGE_FINAL_01,
+	CONVO_LAB_RUG,
+	LAB_BED,
+	LAB_COMPUTER,
+	LAB_BOOKSHELF,
+	CONVO_LAB_GINGER,
+	LAB_DOOR,
+	LAB_FRIDGE,
+	LAB_LOCKER,
+	TO_LAB_OUTSIDE,
+	CONVO_FOREST_01,
+	CONVO_FOREST_01_SIGN,
+	CONVO_FOREST_02,
+	CONVO_CROKE_01,
+	CONVO_FOREST_02_SIGN,
+	TO_CAVE_01,
+	CONVO_FOREST_03_SIGN,
+	CONVO_FOREST_03,
+	CONVO_FOREST_NOTE,
+	CONVO_BRIDGE_01,
+	CONVO_BRIDGE_02,
+	CONVO_BRIDGE_03,
+	TO_CAVE_02,
+	ENTER_BG,
+	EXIT_BG,
+	FROM_CAVE_01,
+	CONVO_CAVE_01,
+	FOREST_01_SETUP,
+	CONVO_CAVE_02_SIGN,
+	ACT_55,
+	ACT_56,
+	ACT_57,
+	ACT_58,
+	ACT_59,
+	ACT_60,
+	ACT_61,
+	ACT_62,
+	ACT_63,
+	ACT_64,
+	ACT_65,
+	ACT_66,
+	ACT_67,
+	ACT_68,
+	ACT_69,
+	CONVO_COWBEMMIE_01_SIGN,
+	TO_FOREST_02,
+	TEMMIE_01,
+	TEMMIE_02,
+	TEMMIE_03,
+	TEMMIE_04,
+	TEMMIE_05,
+	TEMMIE_06,
+	TEMMIE_07,
+	BACK_TO_FOREST_02,
+	CAVE_04_SIGN,
+	TO_FOREST_03,
+	BACK_TO_CAVE_03,
+	TO_CAVE_04,
+	TO_FOREST_02b,
+	NEW_BERLIN_SIGN,
+	AVALON_SIGN_01 = 87,
+	AVALON_SIGN_02,
+	TO_AVALON_TAVERN,
+	AVALON_SIGN_VISTA,
+	AVALON_SIGN_03,
+	AVALON_SIGN_04,
+	TO_AVALON_BUTCHER,
+	AVALON_SIGN_05,
+	TO_AVALON_SHOP_01,
+	TO_AVALON_SHOP_02,
+	CHAT_NOODLE,
+	CHAT_GRANDMA,
+	CHAT_COURIER,
+	CHAT_PRIMARY,
+	CHAT_WORMGUY,
+	OUT_AVALON_SHOP_01,
+	CHAT_DOLL,
+	BUY_TIRE,
+	BUY_ENOKI,
+	BUY_BANANA,
+	BUY_LIME,
+	CHAT_GOAT,
+	CHAT_BEAR,
+	CHAT_HORSE,
+	CHAT_BIRB,
+	CHAT_SNEAKER,
+	JUKEBOX_01,
+	CHAT_ROBIN,
+	CHAT_TOLLHOUSE,
+	WORM_ACTION,
+	FROM_AVALON_TAVERN,
+	TO_SPAMTON,
+	FROM_SPAMTON,
+	BIG_SHOT,
+	BIG_SHOT_2,
+	FINAL_MSG_ACTION,
+	GO_SPAMTON_GO,
+	ACTIONS_SIZE
+};
+
+enum response_list
+{
+	NONE,
+	RESPONSES_SIZE
+};
+
+struct global_data
+{
+	random bn_random;
+	int action_iterations[ACTIONS_SIZE] = {0};
+	const map *entry_map = nullptr;
+	const regular_bg_item *bg = nullptr;
+	vector_2 entry_position = {0, 0};
+	vector_2 ginger_position = {0, 0};
+	int entry_direction = DIR_RIGHT;
+	int battle_foe = 0;
+	int hp[4] = {20, 20, 20, 20};
+	int max_hp[4] = {20, 20, 20, 20};
+	int enemy_hp[4] = {20, 20, 20, 20};
+	int enemy_max_hp[4] = {20, 20, 20, 20};
+	bool progress_cue = false;
+	int process_stage = 0;
+	bool items[ITEMS_SIZE] = {0};
+	int gold = 0;
+
+	const music_item *bg_track;
+};
+
+// Declaration only - use 'extern' keyword
+extern global_data *global_data_ptr;
+
+#endif // GE_GLOBALS_H

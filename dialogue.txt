@@ -1,0 +1,866 @@
+Name / ID	Portrait	Emotion	Action	Line1	Line2	Line3	Shake	Size	Speed	Index	Anim	Navigate	Branching Dialogue 1	Branching Dialogue 2
+														
+intro_01														
+				Deep within the	woods of the	"old world,"								
+				There once	lay a cabin.									
+				Forgotten by	the man who 	"built it,"								
+				Nearly forgotten	by the woman	"who lived within,"								
+				The last of her	"kind, a Marelon,"	named Vista.								
+														
+test_convo														
+		EM_SKIP	ACT_WALK							CHAR_VISTA	&vista_reminisce	"{2, 6}"		
+				"In her cabin,"	most days were	just the same.								
+				She read her books	and cared for her	sawdust doll.								
+			ACT_SFX_KNOCK	"But today,"	there was a knock	at the door.				CHAR_VISTA				
+	db_ch_vista	EM_DEFAULT	ACT_WALK	Yes?	Who is it?					CHAR_VISTA	&vista_pickup	"{1, 3}"		
+	db_ch_vista	EM_SULLEN		"Hmm,"	What could this be?									
+	db_ch_vista	EM_HAPPY		"""Dear Vista,"	I don't know if you	"remember me.."""								
+	db_ch_vista	EM_DEFAULT		"""It's been years"	"and years.."""									
+	db_ch_vista	EM_DEFAULT		I don't..	remember..	anyone else..								
+			ACT_PROGRESS							CUTSCENE_TO_GARBAGE				
+														
+intro_02														
+				"""I know it's hard,"	"I know it's so hard,"									
+				But I need you	"to remember.."""									
+														
+intro_03														
+				      Cinemint      	      presents      									
+														
+garbage_01														
+		EM_SKIP	ACT_MUSIC_VISKER											
+		EM_SKIP								CHAR_JEREMY	&jeremy_lay_down			
+	db_ch_visker	EM_SULLEN		It body warm.		Ewww.				CHAR_VISKER	&visker_poke			
+														
+	db_ch_visker	EM_ANGRY		"NO, NO LIKE,"	First human down the	"chute in ages,"				CHAR_VISKER				
+	db_ch_visker	EM_ANGRY		And it ALIVE?	"Hey, do something"	"for me, human."								
+														
+	db_ch_visker	EM_DEFAULT		Go and DIE. NOW.	I'm so so HUNGRY	for HUMAN.								
+				HELP! HELP!!	"Well, excuse ME."								&garbage_01_alt_01	
+	db_ch_visker	EM_DEFAULT		"Ok.. I feel bad,"	human is kinda	pathetic								
+	db_ch_visker	EM_DEFAULT		I let you	go but you have to	do me favor.								
+	db_ch_visker	EM_DEFAULT		Go to Avalon.	Send me TURKEY.	Hungry for turkey.								
+	db_ch_visker	EM_DEFAULT		Tell them it for	"""VISKER""."	"""King of TRASH""."								
+	db_ch_visker	EM_ANGRY	ACT_WALK	"Excuse me, human."	I wait now..	for DEAD human.				CHAR_VISKER		"{2, 2}"		
+		EM_SKIP	ACT_MUSIC_RESET											
+														
+garbage_01_alt_01														
+	db_ch_visker	EM_SULLEN		*sigh*	It okay.	I forgive you.								
+	db_ch_visker	EM_DEFAULT		But I WON'T	say where EXIT is									
+	db_ch_visker	EM_CONFUSED		Cos..	I want you to die	so I eat you.								
+	db_ch_visker	EM_DEFAULT		"..Okay, I let you"	go but you have to	do me favor.								
+	db_ch_visker	EM_DEFAULT		Go to Avalon.	Send me TURKEY.	Hungry for turkey.								
+	db_ch_visker	EM_DEFAULT		Tell them it for	"""VISKER""."	"""King of TRASH""."								
+	db_ch_visker	EM_ANGRY	ACT_WALK	"Excuse me, human."	I wait now..	for DEAD human.				CHAR_VISKER		"{2, 2}"		
+		EM_SKIP	ACT_MUSIC_RESET											
+														
+garbage_02														
+	db_ch_visker			Dead human fall..		Any moment now..								
+														
+garbage_02b														
+	db_ch_visker			Aaaany day now…										
+														
+garbage_03														
+	db_ch_visker	EM_SKIP	ACT_TELEPORT							CHAR_VISKER		"{14, 5}"		
+	db_ch_visker	EM_ANGRY	ACT_WALK	HEY HEY HEY	Where YOU going?					CHAR_VISKER		"{19, 6}"		
+	db_ch_visker	EM_SIDE_EYE		"It, like,"	SO dangerous	out there.								
+	db_ch_visker	EM_WAT		Muetos hate humans.	They ALL want	you dead.								
+				Oh no.	Get out of my way.								&garbage_03_alt_01	
+	db_ch_visker	EM_DEFAULT		I..										
+	db_ch_visker	EM_SIDE_EYE		..										
+	db_ch_visker	EM_ANNOYED	ACT_WALK	Human win	this time.					CHAR_VISKER		"{2, 2}"		
+		EM_SKIP												
+														
+garbage_03_alt_01														
+	db_ch_visker	EM_SIDE_EYE		"If human insists,"	but I warn human..									
+	db_ch_visker	EM_DEFAULT		Better to die here	than out there.									
+	db_ch_visker	EM_DEFAULT	ACT_WALK	Visker does not	have conflict of	interest.				CHAR_VISKER		"{2, 2}"		
+		EM_SKIP												
+														
+garbage_sign01														
+				MT. GARBAGE										
+				(No Littering)										
+														
+garbage_sign01b														
+				"Look, man,"	I'm a sign.									
+				I only say	exactly one thing.									
+				Not what you might	call a	conversationalist.								
+														
+garbage_sign02														
+				VISKER HOUSE	NO HUMANS ALLOWED	UNLESS you DEAD								
+														
+visker_h_01														
+				This pile is mostly	take-away food.	(He took it away)								
+														
+visker_h_02														
+				A pile of tabloids.	Also Infinite Jest.	All are dog-eared.								
+				Under the desk..	Oh dear..									
+				You've never seen	so many	Reader's Digests.								
+														
+visker_h_03														
+				His nest is made of	discarded t-shirts.									
+				Half of them are	from the exact same	family reunion.								
+														
+garbage_sign03														
+				TO WHOEVER IS	PAINTING ALL	THESE POLKA DOTS								
+				PAINT COSTS THE	CITY MONEY									
+				STOP IT	THANK YOU	MGMT								
+														
+garbage_04														
+	db_ch_visker	EM_SAD		"So.. Human, uh.."	Close close to	garbage exit..								
+	db_ch_visker	EM_DEFAULT		Human doesn't	LOOK like fighter	though.								
+	db_ch_visker	EM_SULLEN		Since human is	gonna fight..	a lot..								
+	db_ch_visker	EM_HAPPY		I fight human.	First.									
+	db_ch_visker	EM_SIDE_EYE		"If human wins,"	then good enough	to go home.								
+	db_ch_visker	EM_EXCITED		"If *I* win, then"	I get yummy	human meal.								
+	db_ch_visker	EM_DEFAULT		Win-win scenario.										
+				"Let's go, ratboy."	Not in the mood.	Can we talk?							&garbage_04_alt_01	&garbage_04_alt_02
+	db_ch_visker	EM_EXCITED		Yay.	Let's fight now.									
+			ACT_FIGHT							FOE_VISKERS_01				
+														
+garbage_04_alt_01														
+	db_ch_visker	EM_EXCITED		Well TOO BAD	because I AM									
+			ACT_FIGHT							FOE_VISKERS_01				
+														
+garbage_04_alt_02														
+	db_ch_visker	EM_EXCITED		No TALK	only KICK ASS									
+			ACT_FIGHT							FOE_VISKERS_01				
+														
+garbage_fight_01														
+	db_ch_visker	EM_DEFAULT		You see that?	That your	"""THIRD EYE""."								
+	db_ch_visker	EM_DEFAULT		It a direct	window to your soul.									
+	db_ch_visker	EM_EXCITED		I so so hungry.	I go first.	Mkay?								
+														
+garbage_fight_02														
+	db_ch_visker	EM_DISAPPOINTED		Human is good	at this.									
+	db_ch_visker	EM_SULLEN		But Human is not	ready for	NEXT ATTACK.								
+														
+garbage_fight_03														
+	db_ch_visker	EM_ANNOYED		Ow										
+														
+garbage_fight_04														
+	db_ch_visker	EM_ANNOYED		OW OW OW	"OKAY, HUMAN WIN"	HUMAN WIN								
+														
+garbage_spare														
+				SPARE is not	effective on	Visker.								
+				He seems very	resolute to fight.									
+														
+garbage_05														
+	db_ch_visker	EM_DISAPPOINTED		Fine.	Grrr.	Human can go.								
+	db_ch_visker	EM_DEFAULT		But if human	*dies*..	Remember..								
+	db_ch_visker	EM_HAPPY		All trash returns	back to VISKER.	KING of TRASH.								
+														
+garbage_05b														
+	db_ch_visker	EM_HAPPY		*weird noises*										
+														
+garbage_sign04														
+				"To escape, you must"	return to where	you came from.								
+														
+garbage_sign05														
+				"ABANDON ALL HOPE,"	YE WHO ENTER									
+														
+garbage_06														
+				"Ugh, you again."	Who are you?								&garbage_06_alt_01	
+	db_ch_visker_wife	EM_HAPPY		Huh? Me?	"You not know me,"	human.								
+	db_ch_visker	EM_ANGRY	ACT_WALK	HUMAN!	Human don't speak to	my wife like that!!				CHAR_VISKER		"{5, 2}"		
+	db_ch_visker	EM_ANGRY		Human really	messed up.									
+	db_ch_visker	EM_ANGRY		Visker need to fight	human AGAIN for	wife's HONOR.								
+			ACT_FIGHT							FOE_VISKERS_02				
+														
+garbage_06_alt_01														
+	db_ch_visker	EM_ANGRY	ACT_WALK	Is HUMAN	being rude to WIFE?!					CHAR_VISKER		"{5, 2}"		
+	db_ch_visker	EM_ANGRY		Human really	messed up.									
+	db_ch_visker	EM_ANGRY		Visker need to fight	human AGAIN for	wife's HONOR.								
+			ACT_FIGHT							FOE_VISKERS_02				
+														
+garbage_06_alt_02														
+	db_ch_visker	EM_ANGRY	ACT_WALK	Is HUMAN	being rude to WIFE?!					CHAR_VISKER		"{5, 2}"		
+	db_ch_visker	EM_ANGRY		Human really	messed up.									
+	db_ch_visker	EM_ANGRY		Visker need to fight	human AGAIN for	wife's HONOR.								
+			ACT_FIGHT							FOE_VISKERS_02				
+														
+garbage_fight_05														
+	db_ch_visker	EM_ANNOYED		Taste WRATH	of VISKER	king of TRASH								
+														
+garbage_06b														
+		EM_SKIP								CHAR_JEREMY	&jeremy_lay_down			
+		EM_SKIP	ACT_TELEPORT							CHAR_VISKER		"{5, 2}"		
+	db_ch_visker	EM_DISAPPOINTED		"Let's go home, wife."	I'm hungry.									
+	db_ch_visker_wife	EM_DEFAULT		Why not eat human.										
+	db_ch_visker	EM_DISAPPOINTED		I'm angry at human.	We eat human later.									
+			ACT_PROGRESS							GARBAGE_TO_BLACK				
+														
+lab_01														
+		EM_SKIP								CHAR_JEREMY	&jeremy_lay_down			
+				Absolutely	everything hurts.					CHAR_GINGER	&ginger_eat_lime			
+				"For some reason,"	you smell like	limes.								
+														
+lab_02														
+				Surely an empty cot	would have been	better than a rug?								
+														
+lab_02b														
+				You don't really	feel tired anymore.									
+														
+lab_03														
+				The outpost computer	must have all sorts	of secrets.								
+				The password	being one of them.									
+				"""ILOVELIMES"""	"""LIMETIME"""	"""password123"""							&lab_03_alt_01	&lab_03_alt_02
+				PASSWORD	INCORRECT									
+														
+lab_03_alt_01														
+				PASSWORD	INCORRECT									
+														
+lab_03_alt_02														
+				LOGIN SUCCESSFUL										
+				"December 31, 19XX"										
+				FINAL LOG.	Funding cuts are	sending us home.								
+				"Unfortunately,"	we haven't been	able to find them.								
+				In all honesty	this whole year	feels like it's been								
+				a huge waste.		Our prevailing								
+				theory as to where	new muetos come	from is that								
+				"they ""pop out of"	"the ground"". It's as"	good as any.								
+														
+lab_04														
+				If you had been	able to finish	"your degree,"								
+				You'd probably	"be able to ""get"""	these books.								
+														
+lab_05														
+		EM_SKIP	ACT_MUSIC_GINGER											
+	db_ch_ginger	EM_HAPPY		Oh! You're awake!	Thank goodness.									
+	db_ch_ginger	EM_EMBARRASSED		"You're not, like,"	"super injured,"	are you?								
+	db_ch_ginger	EM_EMBARRASSED		If you smell like	"limes, that's.."	uh..								
+	db_ch_ginger	EM_DEFAULT		Because I have	all these limes..									
+	db_ch_ginger	EM_DEFAULT		..Lime juice is an	"antiseptic, right?"									
+				NO?!	Yes. Of course.	..							&lab_05_alt_01	
+	db_ch_ginger	EM_DEFAULT		Oh.		Uh..								
+	db_ch_ginger	EM_DEFAULT				You want a lime?								
+				Yes.	…Yes.								&lab_05_alt_02	
+				LIME has been	added to your	inventory!								
+				Press START	to view your	inventory items.								
+		EM_SKIP	ACT_ITEM							OBJ_LIME				
+	db_ch_ginger	EM_SIDE_EYE		I found you out	near the garbage	chute.								
+	db_ch_ginger	EM_SAD		The rat who lives	out there usually	eats dead humans.								
+	db_ch_ginger	EM_HAPPY		"I'm Ginger,"	by the way.					CHAR_GINGER				
+	db_ch_ginger	EM_SAD		It's hard for humans	to get back into the	"city, huh?"								
+	db_ch_ginger	EM_HAPPY		I'm heading to	Canterbury.									
+	db_ch_ginger	EM_DEFAULT		I figured that since	"you were a human,"	you were too.								
+	db_ch_ginger	EM_HAPPY		Do you know	how to get there?									
+				Not a clue.	I know everything.								&lab_05_alt_03	
+	db_ch_ginger	EM_SIDE_EYE		Uh.. Well..	There are signs	everywhere..								
+	db_ch_ginger	EM_DEFAULT		I'm sure we'll	figure it out.									
+		EM_SKIP	ACT_MUSIC_RESET											
+		EM_SKIP	ACT_CUE_GINGER											
+														
+lab_05_alt_01														
+	db_ch_ginger	EM_HAPPY		Whew..	Thank goodness!									
+	db_ch_ginger	EM_DEFAULT		So..		You want a lime?								
+				Yes.	…Yes.								&lab_05_alt_02	
+				LIME has been	added to your	inventory!								
+				Press START	to view your	inventory items.								
+		EM_SKIP	ACT_ITEM							OBJ_LIME				
+	db_ch_ginger	EM_SIDE_EYE		I found you out	near the garbage	chute.								
+	db_ch_ginger	EM_SAD		The rat who lives	out there usually	eats dead humans.								
+	db_ch_ginger	EM_HAPPY		"I'm Ginger,"	by the way.					CHAR_GINGER				
+	db_ch_ginger	EM_SAD		It's hard for humans	to get back into the	"city, huh?"								
+	db_ch_ginger	EM_HAPPY		I'm heading to	Canterbury.									
+	db_ch_ginger	EM_DEFAULT		I figured that since	"you were a human,"	you were too.								
+	db_ch_ginger	EM_HAPPY		Do you know	how to get there?									
+				Not a clue.	I know everything.								&lab_05_alt_03	
+	db_ch_ginger	EM_SIDE_EYE		Uh.. Well..	There are signs	everywhere..								
+	db_ch_ginger	EM_DEFAULT		I'm sure we'll	figure it out.									
+		EM_SKIP	ACT_MUSIC_RESET											
+		EM_SKIP	ACT_CUE_GINGER											
+														
+lab_05_alt_02														
+				LIME has been	added to your	inventory!								
+				Press START	to view your	inventory items.								
+		EM_SKIP	ACT_ITEM							OBJ_LIME				
+	db_ch_ginger	EM_SIDE_EYE		I found you out	near the garbage	chute.								
+	db_ch_ginger	EM_SAD		The rat who lives	out there usually	eats dead humans.								
+	db_ch_ginger	EM_HAPPY		"I'm Ginger,"	by the way.					CHAR_GINGER				
+	db_ch_ginger	EM_SAD		It's hard for humans	to get back into the	"city, huh?"								
+	db_ch_ginger	EM_HAPPY		I'm heading to	Canterbury.									
+	db_ch_ginger	EM_DEFAULT		I figured that since	"you were a human,"	you were too.								
+	db_ch_ginger	EM_HAPPY		Do you know	how to get there?									
+				Not a clue.	I know everything.								&lab_05_alt_03	
+	db_ch_ginger	EM_SIDE_EYE		Uh.. Well..	There are signs	everywhere..								
+	db_ch_ginger	EM_DEFAULT		I'm sure we'll	figure it out.									
+		EM_SKIP	ACT_MUSIC_RESET											
+		EM_SKIP	ACT_CUE_GINGER											
+														
+lab_05_alt_03														
+	db_ch_ginger	EM_HAPPY		YAY!	This'll be easy!									
+	db_ch_ginger	EM_HAPPY		Lead the way!										
+		EM_SKIP	ACT_MUSIC_RESET											
+		EM_SKIP	ACT_CUE_GINGER											
+														
+lab_06														
+	db_ch_ginger	EM_HAPPY		I've been hiding out	in this old	outpost lab.								
+	db_ch_ginger	EM_SIDE_EYE		"It's nice to have,"	"y'know,"	running water.								
+	db_ch_ginger	EM_DEFAULT		Clean bathrooms	are hard to come by	out here.								
+	db_ch_ginger	EM_SAD		I'll admit I'm not	thrilled about	leaving.								
+														
+lab_07														
+	db_ch_ginger	EM_WAT		Oh- you don't	want to open	the fridge door.								
+	db_ch_ginger	EM_SIDE_EYE		The dehydrated	limes were the only	fresh things.								
+	db_ch_ginger	EM_SAD		Everything else..	Let's just say it	has a smell.								
+	db_ch_ginger	EM_DEFAULT		This place was	probably abandoned	for a year or two.								
+														
+lab_08														
+				They emptied	out the lockers.	Ugh.								
+														
+leaving_lab														
+	db_ch_ginger	EM_DEFAULT		You don't mind	"if I follow you,"	right?								
+				You're fine.	Yes I do mind.								&leaving_lab_alt_01	
+	db_ch_ginger	EM_SIDE_EYE		"Thank you,"	"I just, uh.."	Nevermind.								
+	db_ch_ginger	EM_DEFAULT		It's scary	out there.									
+				True.	It's not that bad.								&leaving_lab_alt_02	
+	db_ch_ginger	EM_DEFAULT		Alright..	I'm ready.	Let's go.								
+			ACT_PROGRESS							FOREST_01				
+														
+leaving_lab_alt_01														
+	db_ch_ginger	EM_EMBARRASSED		Was that sarcasm?	"I'm sorry, I can't"	really tell.								
+				Yes.	No.								&leaving_lab_alt_03	
+	db_ch_ginger	EM_HAPPY		Oh..	Thank goodness.									
+	db_ch_ginger	EM_DEFAULT		It's scary	out there.									
+				True.	It's not that bad.								&leaving_lab_alt_02	
+	db_ch_ginger	EM_DEFAULT		Alright..	I'm ready.	Let's go.								
+			ACT_PROGRESS							FOREST_01				
+														
+leaving_lab_alt_02														
+	db_ch_ginger	EM_SIDE_EYE		Well.. I guess it's	good at least	one of us								
+	db_ch_ginger	EM_SIDE_EYE		feels that way.										
+	db_ch_ginger	EM_DEFAULT		Alright..	I'm ready.	Let's go.								
+			ACT_PROGRESS							FOREST_01				
+														
+leaving_lab_alt_03														
+	db_ch_ginger	EM_SAD		Oh.. I see.										
+	db_ch_ginger	EM_SAD		"Well, uh.. It's"	"dangerous out there,"									
+	db_ch_ginger	EM_SAD		I'll tag along until	"we get to Avalon,"	then I'll..								
+	db_ch_ginger	EM_SAD		figure something	else out.									
+			ACT_PROGRESS							FOREST_01				
+														
+forest_dlg_01														
+	db_ch_ginger	EM_SIDE_EYE		"Oh- Not that way,"	That's the way to	Berlin.				CHAR_GINGER				
+				I know.	Oh.. Right.								&forest_dlg_01_alt_01	
+	db_ch_ginger	EM_DEFAULT		They don't let	humans back in	through the gate.								
+	db_ch_ginger	EM_DEFAULT		I know it's right	"there, but.."									
+	db_ch_ginger	EM_DEFAULT		"Plus, with the war"	and all that..									
+	db_ch_ginger	EM_SIDE_EYE		..I can read	"your face, I know"	it's tough.								
+	db_ch_ginger	EM_DEFAULT		Canterbury isn't	too far though.									
+														
+forest_dlg_01_alt_01														
+	db_ch_ginger	EM_DEFAULT		I know it's right	"there, but.."									
+	db_ch_ginger	EM_DEFAULT		"Plus, with the war"	and all that..									
+	db_ch_ginger	EM_SIDE_EYE		..I can read	"your face, I know"	it's tough.								
+	db_ch_ginger	EM_DEFAULT		Canterbury isn't	too far though.									
+														
+forest_dlg_02														
+	db_ch_ginger	EM_DEFAULT		Okay.. we're not	too far from	Avalon village.								
+	db_ch_ginger	EM_SIDE_EYE		"I'll admit, though.."	Not sure what	they'll do when								
+	db_ch_ginger	EM_SIDE_EYE		they see a human.										
+														
+croke_01														
+														
+	db_ch_croke	EM_DEFAULT	ACT_MUSIC_FADEOUT	"HALT NOW,"	FILTHY GLABBER!									
+	db_ch_ginger	EM_WAT	ACT_WALK	Don't hurt us!!	Please!					CHAR_CROKE		"{41, 8}"		
+	db_ch_croke	EM_DEFAULT		Filthy Glabber 	can die!					CHAR_CROKE	&croke_accuse			
+	db_ch_croke	EM_DEFAULT		..with the mueto	who is a glabber	by association!								
+				"""Glabber""?"	Hey. Chill out.								&croke_01_alt_01	
+	db_ch_ginger	EM_SIDE_EYE		It's a slur for	"humans, it means"	"""bald."""								
+				Now it's personal.	Isn't he a frog?								&croke_01_alt_02	
+	db_ch_ginger	EM_SIDE_EYE		Oh dear..										
+			ACT_FIGHT							FOE_CROKE_01				
+														
+croke_01_alt_02														
+	db_ch_croke	EM_DEFAULT		SHUT UP!!										
+			ACT_FIGHT							FOE_CROKE_01				
+														
+croke_01_alt_01														
+	db_ch_croke	EM_DEFAULT		NO! NEVER!										
+	db_ch_ginger	EM_WAT		Hey! Stop!	Don't you know	who I am??								
+	db_ch_croke	EM_DEFAULT		A glabber	"collaborator,"	no doubt!!								
+	db_ch_croke	EM_DEFAULT		Same thing as	glabber in	my book!								
+		ACT_FIGHT								FOE_CROKE_01				
+														
+croke_02														
+	db_ch_croke	EM_DEFAULT		"TASTE POISON,"	GLABBER!									
+	db_ch_croke	EM_DEFAULT		...										
+														
+croke_03														
+	db_ch_croke	EM_DEFAULT		..										
+	db_ch_croke	EM_DEFAULT		..A-										
+														
+croke_04														
+	db_ch_ginger	EM_CONFUSED		..										
+	db_ch_ginger	EM_WAT		D-Did he just..										
+														
+														
+croke_05														
+		EM_SKIP								CHAR_CROKE	&croke_lay_down			
+		EM_SKIP												
+	db_ch_ginger	EM_CONFUSED		He's.. Dead..										
+	db_ch_ginger	EM_CONFUSED		..I've never seen	anyone use a poison	dart so badly..								
+				Let's raid his stuff	"RIP, frog man."								&croke_05_alt_01	
+	db_ch_ginger	EM_SAD		Doesn't that	seem in bad taste?									
+				No	On second thought..								&croke_05_alt_01	
+	db_ch_ginger	EM_SIDE_EYE		I guess it's fine if	he has something we	need to survive..								
+				You found:	PHOTOGRAPH									
+		EM_SKIP	ACT_ITEM							OBJ_PHOTO				
+														
+croke_05_alt_01														
+	db_ch_ginger	EM_DEFAULT		Rest in peace..	Whoever you were..									
+														
+convo_photo														
+				It just seems to	be a photo of	himself.								
+														
+forest_dlg_sign_01														
+				DANGEROUS!!!	DO NOT ENTER									
+				RESEARCHERS ONLY										
+														
+cave_01														
+	db_ch_ginger	EM_DEFAULT		There are lots and	lots of tunnels	under the Old World.								
+	db_ch_ginger	EM_EMBARRASSED		"I'm, uh.."	not supposed to	talk about them.								
+				How come?	Understood.								&cave_01_alt_01	
+	db_ch_ginger	EM_DEFAULT		I know you're	"probably thinking,"									
+	db_ch_ginger	EM_SIDE_EYE		"""Well, why did"	she say anything	if she can't talk								
+	db_ch_ginger	EM_SIDE_EYE		"about the tunnels."""										
+	db_ch_ginger	EM_DEFAULT		Well.. Uh.. If we	have to go through	"tunnels,"								
+	db_ch_ginger	EM_EMBARRASSED		I'm sure you'll	find out for	"yourself, but.."								
+	db_ch_ginger	EM_DEFAULT		I don't want it	coming from me.									
+														
+cave_01_alt_01														
+	db_ch_ginger	EM_SIDE_EYE		"Right, just.."										
+	db_ch_ginger	EM_DEFAULT		Don't put your	"guard down,"	down here.								
+														
+forest_dlg_sign_02														
+	db_ch_ginger	EM_CONFUSED		I can't read this..	I think it's for	"sale, though."								
+				You can't read?	Got it.								&forest_dlg_sign_02_alt_01	
+	db_ch_ginger	EM_SIDE_EYE		"No, I can read,"	just not.. That.									
+														
+forest_dlg_sign_02_alt_01														
+	db_ch_ginger	EM_DEFAULT		Cute house though.	Real shame.									
+														
+forest_dlg_03														
+	db_ch_ginger	EM_SIDE_EYE		I don't know if	trying to get in	is wise.								
+														
+forest_dlg_paper														
+				You found:	DOCUMENT									
+				Nothing on it	makes much	"sense, though."								
+		EM_SKIP	ACT_ITEM							OBJ_DOCUMENT				
+														
+bridge_01														
+	db_ch_ginger	EM_DEFAULT		Yes.	Avalon is	that way.								
+	db_ch_ginger	EM_DEFAULT		It probably won't	get fixed for a	"while, though.."								
+	db_ch_ginger	EM_DEFAULT		Muetos have	a joke:									
+	db_ch_ginger	EM_EMBARRASSED		"""Mueto bridges"	"are human bridges,"	"but broken."""								
+	db_ch_ginger	EM_DEFAULT		..but there's a	tunnel around here	somewhere.								
+	db_ch_ginger	EM_DEFAULT		You can get most	places through the	tunnels.								
+														
+tunnel_01														
+	db_ch_ginger	EM_DEFAULT		"Hey- Just, uh.."	Before we go in..									
+	db_ch_ginger	EM_SIDE_EYE		Just..	"Be careful, okay?"									
+														
+														
+														
+														
+														
+														
+														
+temmie_sign														
+				COWBEMMIE	VILLAGE									
+														
+temmie_01														
+	db_ch_temmie	EM_DEFAULT		HOIDY AND	WELCOM TO	COWBEMMIE LAND								
+	db_ch_temmie	EM_DEFAULT		COM EXPERENCE	OUR VIBRANT	CULTURE								
+														
+														
+temmie_02														
+	db_ch_temmie	EM_HAPPY		hoi-dy!!	im cowbemmie									
+	db_ch_temmie	EM_DEFAULT		wat r you	cowpokes doin	round these parts								
+	db_ch_ginger	EM_HAPPY		Oh hi!!	I've heard all	about y'all!								
+	db_ch_temmie	EM_DEFAULT		we surviv on	butter from	da churn								
+	db_ch_ginger	EM_DEFAULT		What?										
+	db_ch_temmie	EM_DEFAULT		everythings gonna	churn out ok									
+														
+temmie_03														
+				"""The beautiful"	blue tunnel flower	can be found								
+				all over the	tunnels of the	Old World.								
+				It's toxic and	everyone is	"slightly allergic."""								
+														
+temmie_04														
+	db_ch_temmie	EM_DEFAULT		hoi cowbemmie										
+	db_ch_temmie	EM_HAPPY		hoi to you too	cowbemmie									
+	db_ch_temmie	EM_DEFAULT		this ton aint	big nough for da	two of us								
+	db_ch_temmie	EM_EXCITED		okay		..then draw								
+	db_ch_temmie	EM_DEFAULT		i cant draw										
+	db_ch_temmie	EM_EXCITED		oh ok ok										
+	db_ch_temmie	EM_EXCITED		maybe it is	big nough then									
+														
+temmie_05														
+				"""AR HISTORY"""	~ cowbemmie									
+				The cowbemmie	next to it appears	to be painted on.								
+														
+temmie_06														
+	db_ch_temmie	EM_DEFAULT		in da olden days	cowbemmies rode	da hose								
+	db_ch_temmie	EM_ANGRY		MOO										
+	db_ch_temmie	EM_DEFAULT		good hose										
+														
+temmie_07														
+	db_ch_temmie	EM_HAPPY		no good culture	is withot a	CULT								
+	db_ch_temmie	EM_DEFAULT		if u wanna be	honorary cow-	bemmie								
+	db_ch_temmie	EM_EXCITED		u gotta partake	in da frot	of da churn								
+	db_ch_ginger	EM_DEFAULT		Fruit?										
+	db_ch_temmie	EM_EXCITED		frot of da churn	yes									
+	db_ch_temmie	EM_DEFAULT		it'll churn y'all's	life around									
+	db_ch_temmie	EM_DEFAULT		then we mail u	yor honorary	cowbemmie hat								
+	db_ch_temmie	EM_DEFAULT		an u can come	to secret meetings									
+														
+cave_sign_01														
+				WARNING:	SKULL WORMS									
+	db_ch_ginger	EM_SIDE_EYE		Eww..										
+														
+cave_sign_02														
+				If you make	"a mistake,"									
+				go back to where	you came from and	get a breath of air.								
+				You'll come back	with fresh ideas.									
+														
+new_berlin_sign														
+				"They call it,"	"""New Berlin""."									
+				Airplanes come in	through the slit at	the top.								
+				Most of the lower	levels are destroyed	because of the war.								
+				Humans who leave	don't tend to make	it back alive.								
+														
+avalon_sign_01														
+	db_ch_ginger	EM_DEFAULT		That's a lot of	trash down there.									
+	db_ch_ginger	EM_DEFAULT		Yeah..	I'mma stand	back here.								
+	db_ch_ginger	EM_DEFAULT		I don't like	anything about that	ledge.								
+														
+avalon_sign_02														
+				WELCOME TO	AVALON VILLAGE									
+	db_ch_ginger	EM_EMBARRASSED		I think I smell	something rotting.	*retch*								
+	db_ch_ginger	EM_DEFAULT		I don't want	to stay long.									
+														
+avalon_sign_03														
+				GRAND MASTER	SENATRIX									
+				Who is she?	You look similar.								&avalon_sign_03_alt_03	
+	db_ch_ginger	EM_SIDE_EYE		Muetos don't live	very long. Maybe	five years at most.								
+	db_ch_ginger	EM_DEFAULT		The Senatrix has	lived for two-	hundred years.								
+	db_ch_ginger	EM_DEFAULT		Many muetos see	her as a fixture of	the world.								
+	db_ch_ginger	EM_DEFAULT		"Officially, she's"	"a demigoddess, the"	daughter of Losus.								
+	db_ch_ginger	EM_DEFAULT		She rules as our	queen.									
+				..Losus?	200 years?								&avalon_sign_03_alt_01	
+	db_ch_ginger	EM_DEFAULT		Muetos believe	"in two goddesses,"	Losus and Genne.								
+	db_ch_ginger	EM_DEFAULT		"Losus is all-good,"	while Genne is	all-evil.								
+	db_ch_ginger	EM_DEFAULT		They say Losus is	"still creating life,"	which is why								
+	db_ch_ginger	EM_DEFAULT		muetos spring out	of holes in the	"ground,"								
+	db_ch_ginger	EM_DEFAULT		while humans come	"from Genne, which"	is the reason why								
+	db_ch_ginger	EM_DEFAULT		new humans come	from other humans.									
+				You believe that?	Interesting.								&avalon_sign_03_alt_04	
+	db_ch_ginger	EM_SIDE_EYE		"I.. don't, but it's"	unwise not to be	spiritual out here.								
+														
+avalon_sign_03_alt_04														
+	db_ch_ginger	EM_DEFAULT		"Yeah, that's one"	word for it.									
+														
+avalon_sign_03_alt_03														
+	db_ch_ginger	EM_SIDE_EYE		Yeah..	I get that a lot.									
+														
+avalon_sign_03_alt_01														
+	db_ch_ginger	EM_DEFAULT		She goes through a	ritual where she	"sheds her skin,"								
+	db_ch_ginger	EM_DEFAULT		And then she looks	"young again, but"	different.								
+				Eww.	Cool.								&avalon_sign_03_alt_02	
+	db_ch_ginger	EM_SIDE_EYE		"Yeah, it's kinda"	gross.									
+														
+avalon_sign_03_alt_02														
+	db_ch_ginger	EM_DEFAULT		Only problem is	then they gotta go	replace the statues.								
+														
+avalon_sign_04														
+				THE RED ROBIN	TAVERN & INN	BYOB								
+														
+avalon_sign_05														
+	db_ch_ginger	EM_DEFAULT		"Give me a moment,"	I think I can	read this..								
+	db_ch_ginger	EM_DEFAULT		"""Ma.. Ma.. Sel.."""		Uh..								
+	db_ch_ginger	EM_DEFAULT		Yeah..	I got nothing.									
+														
+avalon_sign_06														
+	db_ch_ginger	EM_DEFAULT		No idea what	that says.									
+	db_ch_ginger	EM_SIDE_EYE		All the blood	all over the ground	"is really, uh.."								
+	db_ch_ginger	EM_DEFAULT		Giving me a warm	"fuzzy feeling,"	though.								
+														
+convo_lime														
+				It tastes sour.	"Lots of Vitamin C,"	though.								
+				HP INCREASED	BY 5									
+		EM_SKIP	ACT_HP							5				
+														
+convo_document														
+				None of this	makes any sense.									
+														
+avalon_guy_01														
+	db_ch_ginger	EM_SAD		I-Is he dead?!										
+	db_ch_deadguy	EM_DEFAULT		"Nope, I just like"	sleeping face-down	in the snow.								
+	db_ch_deadguy	EM_DEFAULT		"It's nice, you"	should try it	sometime.				CHAR_NOODLE	&noodle_go			
+	db_ch_ginger	EM_DEFAULT		Do you know	how to get to	Canterbury?								
+	db_ch_deadguy	EM_DEFAULT		zzzzzzzzzzz										
+	db_ch_ginger	EM_SIDE_EYE		Time to ask	"around, I suppose."									
+														
+avalon_guy_02														
+	db_ch_deadguy	EM_DEFAULT		zzzzzzzzzzz	zzzzzzzzzzz	zzzzzzzzzzz								
+														
+avalon_grandma_01														
+	db_ch_ginger	EM_DEFAULT		"Hello, ma'am?"										
+	db_ch_grandma	EM_DEFAULT		"Yes, what is it,"	sweetheart?									
+	db_ch_ginger	EM_DEFAULT		Do you know how	to get to Canterbury	from here?								
+	db_ch_grandma	EM_DEFAULT		Say.. You look just	like her majesty	Princess Semura.								
+	db_ch_ginger	EM_SIDE_EYE		"Hehe, I get that a"	"lot but I'm, uh, not"	the Princess.								
+	db_ch_grandma	EM_DEFAULT		What's the human	doing here?	Human..								
+	db_ch_grandma	EM_DEFAULT		"Please, cause some"	"mischief, I'd like"	entertainment.								
+	db_ch_grandma	EM_DEFAULT		We haven't had a	good hanging in	over a week.								
+	db_ch_ginger	EM_SIDE_EYE		We need to get	out of here.									
+														
+avalon_grandma_02														
+	db_ch_grandma	EM_DEFAULT		Hmm.. Hmm..	What a slow day..									
+	db_ch_ginger	EM_SIDE_EYE		Psst.. She kinda	freaks me out..	Let's go elsewhere..								
+														
+avalon_wormguy_01														
+	db_ch_wormguy	EM_DEFAULT		"HUMAN, would"	you be kind enough	to support								
+	db_ch_wormguy	EM_DEFAULT		"a poor, grieving"	father?									
+	db_ch_ginger	EM_DEFAULT		But muetos don't-										
+	db_ch_wormguy	EM_DEFAULT		(shush!!)	(human doesn't	know that!!)								
+	db_ch_wormguy	EM_DEFAULT		The wicked fairies	of the wood turned	by beloved daughter								
+	db_ch_wormguy	EM_DEFAULT		Into a statue!	(The horror!)									
+	db_ch_wormguy	EM_DEFAULT		If you pay me	"1G however,"	I can show you								
+	db_ch_wormguy	EM_DEFAULT		her sorry fate.										
+				"No way, worm guy."	Sure. Why not.								&avalon_wormguy_01_alt_01	
+	db_ch_wormguy	EM_DEFAULT		You will regret it!	I hope YOU turn to	a statue as well!								
+														
+avalon_wormguy_01_alt_01														
+	db_ch_wormguy	EM_DEFAULT		What a fine choice!	Here is your ticket!									
+				You found:	WORM TICKET									
+				It was once a	fast food receipt.	Nice.								
+		EM_SKIP	ACT_ITEM							OBJ_TICKET				
+														
+avalon_wormguy_02														
+				It's definitely a	statue of a worm.									
+				It appears to have	been yard decor	at one point.								
+				Confusing.	New Berlin doesn't	have any yards.								
+				Maybe muetos	are into yard worms.									
+														
+avalon_courier_01														
+	db_ch_ginger	EM_DEFAULT		Do you know the	way to Canterbury?									
+	db_ch_courier	EM_DEFAULT		"..of course I do,"	do you not know	who I am?								
+	db_ch_ginger	EM_DEFAULT		No..?										
+	db_ch_courier	EM_DEFAULT		Every local knows	that this badge	"means ""courier""."								
+	db_ch_courier	EM_DEFAULT		I wouldn't expect	a princess to know	"that, though."								
+	db_ch_ginger	EM_SIDE_EYE		I don't know what	you're talking	about.								
+	db_ch_courier	EM_DEFAULT		Oh.. Right.	Of course.	It's a secret.								
+	db_ch_courier	EM_DEFAULT		"Now, I am"	fascinated by the..	human here.								
+	db_ch_ginger	EM_DEFAULT		We just need to	get to Canterbury.									
+														
+avalon_courier_02														
+	db_ch_courier	EM_DEFAULT		If you need my	"services, just let"	me know.								
+														
+avalon_courier_03														
+	db_ch_ginger	EM_DEFAULT		"Sir, we need this"	turkey delivered to	the garbage pile.								
+	db_ch_courier	EM_HAPPY		"Oh.. Your highness,"	only humans and the	rich use that pile.								
+	db_ch_courier	EM_DEFAULT		Just throw your	trash off the cliff.									
+	db_ch_ginger	EM_SIDE_EYE		"No, it's for someone"	who lives there.									
+	db_ch_courier	EM_DEFAULT		..Visker?	What does he want	a turkey for?								
+	db_ch_ginger	EM_DEFAULT		Would you mind	explaining?									
+				He asked me to.	No reason.								&avalon_courier_03_alt_01	
+	db_ch_courier	EM_DEFAULT		A virtuous human..	imagine that.									
+				One full of..	patience.	Admirable.								
+				I will deliver it.										
+														
+avalon_courier_03_alt_01														
+				Is it poisoned?	I hope so. That rat	gets on my nerves.								
+														
+avalon_courier_04														
+	db_ch_ginger	EM_DEFAULT		"Sir, we need this"	turkey delivered to	the garbage pile.								
+	db_ch_courier	EM_DEFAULT		My fee is 5G.										
+	db_ch_ginger	EM_DEFAULT		Oh.. Heheh..	I apologize then.									
+	db_ch_courier	EM_DEFAULT		I would deliver it	for free if my	client was royalty.								
+	db_ch_ginger	EM_SIDE_EYE		"Gee, it's a shame"	that I'm not royalty	"then, huh."								
+	db_ch_courier	EM_DEFAULT		"Whatever you say,"	princess.									
+														
+avalon_shop_01														
+	db_ch_primary	EM_DEFAULT		How'se you two	fine folks doin on a	day like today?								
+	db_ch_ginger	EM_HAPPY		I'm doing well!										
+	db_ch_primary	EM_DEFAULT		"I'm not, this"	town sucks so bad									
+	db_ch_primary	EM_DEFAULT		I'd move but I spent	"like 500,000G on"	this shop								
+	db_ch_primary	EM_DEFAULT		I need to pay it all	off first									
+				Well that sucks	You didn't rent?	I'll buy the shop.							&avalon_shop_01_alt_02	&avalon_shop_01_alt_03
+	db_ch_primary	EM_DEFAULT		You'se can buy	my things though									
+														
+avalon_shop_01_alt_02														
+	db_ch_primary	EM_DEFAULT		I value ownership										
+														
+avalon_shop_01_alt_03														
+	db_ch_primary	EM_DEFAULT		Come back with	"500,000G and let's"	"chat some more, ok?"								
+														
+doll_guy_01														
+	db_ch_ginger	EM_HAPPY		"Hey, look at this"	"doll, it's kinda"	cute.								
+	db_ch_doll	EM_DEFAULT		"Look, babe, I don't"	know where you're	"from,"								
+	db_ch_doll	EM_DEFAULT		"But in this town,"	that's considered	"""harrassment""."								
+	db_ch_ginger	EM_WAT		"I, uh.. I'm sorry,"	I didn't know you	were.. uh.. alive.								
+	db_ch_doll	EM_DEFAULT		That's extremely	"disrespectful,"	toots.								
+	db_ch_doll	EM_DEFAULT		I'm just a shopper	like any other.									
+	db_ch_ginger	EM_EMBARRASSED		"We're, uh.."	We're gonna go now.									
+	db_ch_primary	EM_HAPPY		Hehehehe				SIZE_SMALL						
+	db_ch_primary	EM_DEFAULT		You'se should take	my classes on	ventriloquism.		SIZE_DEFAULT						
+														
+item_tire_01														
+				A tire would be	"fantastic, if you"	had a car.								
+				"But is 10,000G"	really fair?									
+														
+item_enoki_01														
+	db_ch_ginger	EM_SIDE_EYE		Is this supposed to	be a human doll?									
+	db_ch_ginger	EM_DEFAULT		Her mouth is above	her eyes..									
+	db_ch_ginger	EM_HAPPY		It is cute.										
+	db_ch_ginger	EM_CONFUSED		..	"Maybe not ""20,000G"""	cute though.								
+														
+item_banana_hat_01														
+	db_ch_primary	EM_DEFAULT		We're running a	special on the	banana hat!								
+	db_ch_primary	EM_DEFAULT		"""BUY ONE:"	"GET THAT ONE"""									
+														
+item_lime_01														
+	db_ch_ginger	EM_DEFAULT		I don't think I	could ever get sick	of limes.								
+	db_ch_ginger	EM_ANNOYED		"50,000G for a lime.."										
+	db_ch_primary	EM_DEFAULT		It's out of season.	And we're in the	woods.								
+														
+avalon_shop_02														
+	db_ch_primary	EM_DEFAULT		Give me money ok										
+														
+final_msg														
+				Thanks for	trying out the	demo so far!								
+				I've only been	working on this	"for 2 months,"								
+				so I'm sure I'll	make lots of	progress.								
+				This village is	only partially done	for now.								
+				"Discord, X, BlueSky:"		"""@cinemint"""								
+				Feel free to reach	out! Take care!	~ Cinemint								
+														
+youtube_ad														
+				"10 years ago,"	Toby Fox released	"""Undertale"" for PC."								
+				"That same year,"	I released my oldest	fantasy novel.								
+				"In some ways,"	the two works were	very similar.								
+				"In other ways,"	they were not.									
+				To celebrate the	"anniversary of both,"	"however,"								
+				I've decided to	adapt the latter in	the former's style.								
+				An early demo is	now available on	Itch.io!								
+														
+scruffys_01														
+	db_ch_greyfriar	EM_DEFAULT		I can't believe	they'd slander me	like that!								
+	db_ch_greyfriar	EM_DEFAULT		My mates say	I've got a	"""gambling problem""."								
+	db_ch_greyfriar	EM_DEFAULT		I bet they're	making fun of me	right now.								
+				I'm bet they're not.	I bet you're right.								&scruffys_01_alt_01	
+	db_ch_greyfriar	EM_DEFAULT		..										
+	db_ch_greyfriar	EM_DEFAULT		I'll give you $10	if they're not.									
+														
+scruffys_01_alt_01														
+				"""B-Bet.."""	I feel..	An itch..								
+														
+scruffys_02														
+	db_ch_jelly	EM_DEFAULT		And that's when I	"said, ""Yes. ALL of"	"the toenails."""								
+	db_ch_jelly	EM_DEFAULT		Um..	"Can I help you,"	human?								
+	db_ch_ginger	EM_DEFAULT		Do you know how	to get to	Canterbury?								
+	db_ch_jelly	EM_DEFAULT		"I asked the human,"	not you.	Rude.								
+				Where is Canterbury?	Goodbye.								&scruffys_02_alt_01	
+	db_ch_jelly			So a human shows	up in the middle of	"Avalon,"								
+	db_ch_jelly			And doesn't know	how to get to	Canterbury.								
+	db_ch_jelly			Every mueto knows	how to get to	Canterbury.								
+	db_ch_jelly			That's why the	gods love us more.									
+	db_ch_ginger	EM_DEFAULT		I don't-										
+				What?	Did I	hear something?								
+														
+scruffys_02_alt_01														
+	db_ch_jelly			"Hey, check out the"	tollhouse on the	east side.								
+	db_ch_jelly			That's the best way	to leave and never	come back.								
+														
+scruffys_03														
+	db_ch_ginger	EM_DEFAULT		Can you help us	figure out how to	get to Canterbury?								
+	db_ch_horsey	EM_DEFAULT		..Nay.										
+														
+scruffys_04														
+	db_ch_glompy	EM_DEFAULT		They don't got	alcohol here no	more.								
+	db_ch_glompy	EM_DEFAULT		I gotta drink this	lake water and	pretend a little.								
+	db_ch_glompy	EM_DEFAULT		Look at it.	I think it moved	on its own.								
+	db_ch_ginger	EM_DEFAULT		Surely there's	something else to	drink.								
+	db_ch_glompy	EM_DEFAULT		There is but I'd	have to get up.									
+	db_ch_glompy	EM_DEFAULT		If you two find	"somethin' else, I'll"	pay a little.								
+														
+scruffys_04b														
+	db_ch_glompy	EM_DEFAULT		"""How dry I am.."""		"""How dry I am.."""								
+														
+scruffys_04c														
+	db_ch_glompy	EM_DEFAULT		Oh!! Thank you!	"Here, take this,"	I don't need it.								
+				You found:	5G									
+scruffys_05														
+	db_ch_barry	EM_DEFAULT		A human..	They say your kind	is good at darts.								
+	db_ch_barry	EM_DEFAULT		"If you beat me,"	I'll give you 50G.	Deal?								
+				Deal.	No deal.								&scruffys_05_alt_01	
+	db_ch_barry			Let's play!										
+		ACT_GAME								GAME_DARTS				
+														
+&scruffys_05_alt_01														
+	db_ch_barry	EM_DEFAULT		Too afraid.	I see.									
+														
+scruffys_05b														
+	db_ch_barry	EM_DEFAULT		I.. I can't..	YOU!	GLABBER!								
+				I'LL KILL YOU!!										
+														
+tollhouse_01														
+	db_ch_tollman	EM_DEFAULT		Ask not for	whom the bell	tolls..								
+	db_ch_tollman	EM_DEFAULT		For it might be	*I*!	The tollman!								
+	db_ch_ginger	EM_DEFAULT		You take your job	very seriously.									
+	db_ch_tollman	EM_DEFAULT		But of course I do.	I spent every	waking moment								
+	db_ch_tollman	EM_DEFAULT		of my life in this	booth.									
+	db_ch_tollman	EM_DEFAULT		If I didn't take it	"seriously, then my"	entire life would								
+	db_ch_tollman	EM_DEFAULT		be an enormous	waste.									
+	db_ch_tollman	EM_DEFAULT		Can't you see how	serious I am about	getting into heaven?								
+	db_ch_ginger	EM_DEFAULT		How much is	the toll?									
+	db_ch_tollman	EM_DEFAULT		50G.										
+	db_ch_ginger	EM_DEFAULT		50G?!										
+	db_ch_tollman	EM_DEFAULT		Of course.	How much is freedom	worth it to you?								
+	db_ch_ginger	EM_DEFAULT		I don't like this	toll man.									
+	db_ch_tollman	EM_DEFAULT		Your approval is	not the approval	I'm after.								
+														
+tollhouse_01b														
+	db_ch_tollman	EM_DEFAULT		You returned..	but not with 50G!									
+	db_ch_tollman	EM_DEFAULT		Your time may not	be meaningful to	"yourself,"								
+	db_ch_tollman	EM_DEFAULT		But my time is	the most precious	thing in the world!								
+	db_ch_tollman	EM_DEFAULT		Return.	But only with	enough.								
+														
+worm_action_01														
+				It seems that	someone left a	bottle here.								
+				Perhaps it's to pay	respects?	No clue.								
+				I'll take it.	I'll leave it be.								&worm_action_01_alt_01	
+				You found:	WINE BOTTLE									
+														
+worm_action_01_alt_01														
+				A considerate	choice.									
+														
+captive_01														
+	db_ch_ginger	EM_DEFAULT		W-WHERE ARE	WE?!									
+				In a cave.	Ow.								&captive_01_alt_01	
+	db_ch_ginger	EM_DEFAULT		I mean..	"Of course, but.."	What did..								
+	db_ch_ginger	EM_DEFAULT		I think we're	trapped down here!!									
+	db_ch_ginger	EM_DEFAULT		I-I knew this was	a bad idea..	I knew								
+	db_ch_ginger	EM_DEFAULT		I-I wasn't	supposed to leave..									
+	db_ch_ginger	EM_DEFAULT		W-We're gonna	die down here..									
+														
+captive_01_alt_01														
+	db_ch_ginger	EM_DEFAULT												
+														
+scruffys_06														
+				"I'm sorry, we"	haven't gotten any	shipments in								
+				in weeks.	All we have is	water.								
+				1G per glass.										
+														
+scruffys_06b														
+	db_ch_robin	EM_DEFAULT		What can I get	for you?									
+	db_ch_robin	EM_DEFAULT		Water.	No water.								&scruffys_06b_alt_01	
+	db_ch_robin	EM_DEFAULT		"One water,"	coming right up.									
+	db_ch_robin	EM_DEFAULT		You found:	WATER									
+														
+scruffys_06b_alt_01														
+	db_ch_robin	EM_DEFAULT		Your loss.										
+														
+henry_01														
