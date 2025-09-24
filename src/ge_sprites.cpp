@@ -21,6 +21,7 @@
 #include "bn_sprite_items_spr_sneaker_01.h"
 #include "bn_sprite_items_spr_tower_01.h"
 #include "bn_sprite_items_spr_spamton_01.h"
+#include "bn_sprite_items_spr_wormguy_01.h"
 #include "bn_sprite_items_spr_elements.h"
 
 #include "ge_structs.h"
@@ -265,6 +266,11 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     case CHAR_SPAMTON:
     {
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_spamton_01;
+        break;
+    }
+    case CHAR_WORMDUDE:
+    {
+        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_wormguy_01;
         break;
     }
     case ITEM_BUTTON:

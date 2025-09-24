@@ -451,16 +451,6 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
-            case WORM_ACTION:
-            {
-                if (global_data_ptr->action_iterations[WORM_ACTION] == 1)
-                {
-                    ch_man->db.emplace();
-                    ch_man->db->load(&tollhouse_01);
-                    ch_man->db->init(ch_man);
-                }
-                break;
-            }
             default:
             {
                 break;

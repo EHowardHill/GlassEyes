@@ -778,7 +778,7 @@ static void update_dart_game(game_state &gs)
 }
 
 // Main battle function
-int game_map(int game_type = 0)
+int game_map()
 {
     music::stop();
     music_items::boss.play();

@@ -35,7 +35,7 @@
 
 using namespace bn;
 
-int game_map(int game_type);
+int game_map();
 
 enum game_stage
 {
