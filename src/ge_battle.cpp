@@ -926,6 +926,7 @@ int battle_map()
                         switch (bs.menu_index)
                         {
                         case 0: // ATTACK
+                        {
                             bs.character_actions[bs.choosing_for] = ACTION_ATTACK;
 
                             // Clean up and move to next character
@@ -940,8 +941,10 @@ int battle_map()
                             }
                             bs.choosing_for++;
                             break;
+                        }
 
                         case 1: // ITEM - Open item menu
+                        {
                             // Hide main menu icons
                             for (int i = 0; i < 3; ++i)
                             {
@@ -952,8 +955,10 @@ int battle_map()
                             // Initialize and open item menu
                             bs.item_menu.init();
                             break;
+                        }
 
-                        case 2: // SPARE
+                        case 2:
+                        {
                             bs.character_actions[bs.choosing_for] = ACTION_SPARE;
 
                             // Clean up and move to next character
@@ -969,8 +974,11 @@ int battle_map()
                             bs.choosing_for++;
                             break;
                         }
-                        default: {
+
+                        default:
+                        {
                             break;
+                        }
                         }
                     }
 
