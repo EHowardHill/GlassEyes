@@ -758,21 +758,21 @@ scruffys_01_alt_01
 				"""B-Bet.."""	I feel..	An itch..								
 														
 scruffys_02														
-	db_ch_jelly	EM_DEFAULT		And that's when I	"said, ""Yes. ALL of"	"the toenails."""								
-	db_ch_jelly	EM_DEFAULT		Um..	"Can I help you,"	human?								
+	db_ch_jelly	EM_DEFAULT		And that's when I	said-..									
+	db_ch_jelly	EM_HAPPY		Um..	"Can I help you,"	human?								
 	db_ch_ginger	EM_DEFAULT		Do you know how	to get to	Canterbury?								
-	db_ch_jelly	EM_DEFAULT		"I asked the human,"	not you.	Rude.								
+	db_ch_jelly	EM_HAPPY		"I asked the human,"	not you.	Rude.								
 				Where is Canterbury?	Goodbye.								&scruffys_02_alt_01	
-	db_ch_jelly			So a human shows	up in the middle of	"Avalon,"								
-	db_ch_jelly			And doesn't know	how to get to	Canterbury.								
-	db_ch_jelly			Every mueto knows	how to get to	Canterbury.								
-	db_ch_jelly			That's why the	gods love us more.									
+	db_ch_jelly	EM_DEFAULT		So a human shows	up in the middle of	"Avalon,"								
+	db_ch_jelly	EM_DEFAULT		And doesn't know	how to get to	Canterbury.								
+	db_ch_jelly	EM_HAPPY		Every mueto knows	how to get to	Canterbury.								
+	db_ch_jelly	EM_DEFAULT		That's why the	gods love us more.									
 	db_ch_ginger	EM_DEFAULT		I don't-										
 				What?	Did I	hear something?								
 														
 scruffys_02_alt_01														
-	db_ch_jelly			"Hey, check out the"	tollhouse on the	east side.								
-	db_ch_jelly			That's the best way	to leave and never	come back.								
+	db_ch_jelly	EM_DEFAULT		"Hey, check out the"	tollhouse on the	east side.								
+	db_ch_jelly	EM_DEFAULT		That's the best way	to leave and never	come back.								
 														
 scruffys_03														
 	db_ch_ginger	EM_DEFAULT		Can you help us	figure out how to	get to Canterbury?								
@@ -850,9 +850,9 @@ captive_01_alt_01
 	db_ch_ginger	EM_DEFAULT												
 														
 scruffys_06														
-				"I'm sorry, we"	haven't gotten any	shipments in								
-				in weeks.	All we have is	water.								
-				1G per glass.										
+	db_ch_robin	EM_DEFAULT		"I'm sorry, we"	haven't gotten any	shipments in								
+	db_ch_robin	EM_DEFAULT		in weeks.	All we have is	water.								
+	db_ch_robin	EM_DEFAULT		1G per glass.										
 														
 scruffys_06b														
 	db_ch_robin	EM_DEFAULT		What can I get	for you?									

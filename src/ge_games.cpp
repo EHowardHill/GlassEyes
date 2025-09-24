@@ -388,9 +388,8 @@ static void update_dart_aiming(game_state &gs)
     // Very occasional small drift
     if (d.wobble_timer % 60 == 0)
     {
-        bn::random rng;
-        d.random_jitter_x = rng.get_fixed(-2, 2);
-        d.random_jitter_y = rng.get_fixed(-2, 2);
+        d.random_jitter_x = gs.rng.get_fixed(-2, 2);
+        d.random_jitter_y = gs.rng.get_fixed(-2, 2);
     }
 
     // Fade jitter
@@ -426,17 +425,16 @@ static void update_dart_power(game_state &gs)
     auto &d = gs.darts;
 
     // Make power oscillation less predictable
-    bn::random rng;
     int base_direction = d.power_direction.integer();
 
     // Occasionally change direction unexpectedly
-    if (rng.get_int(100) < 3) // 3% chance each frame
+    if (gs.rng.get_int(100) < 3) // 3% chance each frame
     {
         d.power_direction = -d.power_direction;
     }
 
     // Variable power increment for less predictable timing
-    int power_increment = base_direction + rng.get_int(-1, 1);
+    int power_increment = base_direction + gs.rng.get_int(-1, 1);
     d.power += power_increment;
 
     if (d.power >= d.max_power || d.power <= 0)
@@ -463,9 +461,6 @@ static void update_dart_power(game_state &gs)
         d.state = DART_THROWING;
         d.throw_timer = 0;
 
-        // Calculate throw trajectory with power strongly affecting accuracy
-        bn::random rng;
-
         // Power ranges from 0 to 100 (max_power)
         // Perfect power is 100, worst is 0
         // Calculate accuracy: 1.0 at max power, 0.0 at min power
@@ -479,8 +474,8 @@ static void update_dart_power(game_state &gs)
         fixed actual_error = max_error * error_multiplier;
 
         // Apply random error based on power level
-        d.dart_target_x = d.wobbled_aim_x + rng.get_fixed(-actual_error, actual_error);
-        d.dart_target_y = d.wobbled_aim_y + rng.get_fixed(-actual_error, actual_error);
+        d.dart_target_x = d.wobbled_aim_x + gs.rng.get_fixed(-actual_error, actual_error);
+        d.dart_target_y = d.wobbled_aim_y + gs.rng.get_fixed(-actual_error, actual_error);
 
         // Create dart sprite at starting position (always from left for player)
         d.dart = sprite_items::darts.create_sprite(-80, 60, 0);
@@ -678,10 +673,9 @@ static void update_enemy_dart_turn(game_state &gs)
         // They were already set at state_timer == 30
 
         // Optional: Add some inaccuracy based on enemy skill
-        bn::random rng;
         fixed accuracy_error = 10 * (1.0 - d.enemy_accuracy); // Use the enemy_accuracy field
-        d.dart_target_x += rng.get_fixed(-accuracy_error, accuracy_error);
-        d.dart_target_y += rng.get_fixed(-accuracy_error, accuracy_error);
+        d.dart_target_x += gs.rng.get_fixed(-accuracy_error, accuracy_error);
+        d.dart_target_y += gs.rng.get_fixed(-accuracy_error, accuracy_error);
 
         // Create dart sprite at starting position (from RIGHT side for enemy)
         d.dart = sprite_items::darts.create_sprite(80, 60, 0);
@@ -756,6 +750,11 @@ static void update_dart_game(game_state &gs)
             gs.stage = G_TALKING;
         }
         break;
+
+    default:
+    {
+        break;
+    }
     }
 
     // Display scores

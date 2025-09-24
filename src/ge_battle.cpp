@@ -969,6 +969,9 @@ int battle_map()
                             bs.choosing_for++;
                             break;
                         }
+                        default: {
+                            break;
+                        }
                     }
 
                     if (!bs.item_menu.is_active())

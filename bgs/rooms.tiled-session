@@ -82,10 +82,10 @@
         },
         "maps/forest_03.tmx": {
             "scale": 1.5,
-            "selectedLayer": 2,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 1253,
-                "y": 293
+                "x": 1751.3333333333333,
+                "y": 379.66666666666663
             }
         },
         "maps/forest_04.tmx": {

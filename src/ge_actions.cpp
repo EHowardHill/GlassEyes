@@ -435,6 +435,22 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case CHAT_ROBIN:
+            {
+                if (global_data_ptr->action_iterations[CHAT_ROBIN] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&scruffys_06);
+                    ch_man->db->init(ch_man);
+                }
+                else
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&scruffys_06b);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
             case JUKEBOX_01:
             {
                 music::stop();
@@ -447,6 +463,12 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 {
                     ch_man->db.emplace();
                     ch_man->db->load(&tollhouse_01);
+                    ch_man->db->init(ch_man);
+                }
+                else
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&tollhouse_01b);
                     ch_man->db->init(ch_man);
                 }
                 break;
@@ -1047,6 +1069,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 {
                     man->bg_ptr.value().set_visible(true);
                 }
+                break;
             }
             case TO_AVALON_TAVERN:
             {

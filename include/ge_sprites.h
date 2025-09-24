@@ -63,7 +63,6 @@ struct v_sprite_ptr
     }
 };
 
-// ... (enum definitions are fine) ...
 enum character_list
 {
     CHAR_DEFAULT,
