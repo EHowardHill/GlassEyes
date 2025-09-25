@@ -73,8 +73,7 @@ enum speed
     SP_DEFAULT,
     SP_SLOW,
     SP_FAST,
-    SP_REALTIME,
-    SP_SHAKE
+    SP_REALTIME
 };
 
 enum emotion
@@ -103,6 +102,18 @@ enum size
     SIZE_LARGE
 };
 
+enum colors
+{
+    COLOR_WHITE,
+    COLOR_RED,
+    COLOR_ORANGE,
+    COLOR_YELLOW,
+    COLOR_GREEN,
+    COLOR_BLUE,
+    COLOR_PINK,
+    COLOR_PURPLE
+};
+
 struct dialogue_line;
 typedef const dialogue_line conversation[128];
 
@@ -115,7 +126,7 @@ struct dialogue_line
     const char *raw_text[3] = {nullptr, nullptr, nullptr};
 
     int branches[3] = {0, 0, 0};
-    bool shake = false;
+    int color = COLOR_WHITE;
     int size = SIZE_DEFAULT;
     int speed = SP_DEFAULT;
 
@@ -134,7 +145,7 @@ struct dialogue_line
         const char *line1 = nullptr,
         const char *line2 = nullptr,
         const char *line3 = nullptr,
-        bool shake_ = false,
+        int color_ = COLOR_WHITE,
         int size_ = SIZE_DEFAULT,
         int speed_ = SP_DEFAULT,
         int index_ = 0,
@@ -146,7 +157,7 @@ struct dialogue_line
                                                 emotion(emotion_),
                                                 action(action_),
                                                 raw_text{line1, line2, line3},
-                                                shake(shake_),
+                                                color(color_),
                                                 size(size_),
                                                 speed(speed_),
                                                 index(index_),
@@ -182,7 +193,7 @@ struct letter
 
     letter(char ch, vector_2 ideal_position_);
 
-    void update(bool shake, int size);
+    void update(int color, int size);
 };
 
 // Forward declare toast before text

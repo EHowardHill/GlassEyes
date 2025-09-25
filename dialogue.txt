@@ -1,4 +1,4 @@
-Name / ID	Portrait	Emotion	Action	Line1	Line2	Line3	Shake	Size	Speed	Index	Anim	Navigate	Branching Dialogue 1	Branching Dialogue 2
+Name / ID	Portrait	Emotion	Action	Line1	Line2	Line3	Color	Size	Speed	Index	Anim	Navigate	Branching Dialogue 1	Branching Dialogue 2
 														
 intro_01														
 				Deep within the	woods of the	"old world,"								

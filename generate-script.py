@@ -85,11 +85,15 @@ def process_csv(filename):
                 validate_line_length(line2, "line2", current_convo, row_num)
                 validate_line_length(line3, "line3", current_convo, row_num)
 
-                shake = (
-                    "true"
-                    if (len(row) > 7 and row[7].strip().lower() == "true")
-                    else "false"
-                )
+                # Parse color field as integer (replacing shake)
+                color = 0  # Default value
+                if len(row) > 7 and row[7].strip():
+                    try:
+                        color = int(row[7].strip())
+                    except ValueError:
+                        print(f"WARNING: Invalid color value '{row[7]}' at row {row_num}, using default 0")
+                        color = 0
+
                 size = (
                     row[8].strip()
                     if (len(row) > 8 and row[8].strip())
@@ -133,7 +137,7 @@ def process_csv(filename):
                     "line1": line1.replace('"', '\\"'),
                     "line2": line2.replace('"', '\\"'),
                     "line3": line3.replace('"', '\\"'),
-                    "shake": shake,
+                    "color": color,
                     "size": size,
                     "speed": speed,
                     "index": index,
@@ -223,14 +227,14 @@ def generate_cpp_content(conversations, sprite_list):
             line = (
                 f'    {{{entry["id"]}, {entry["portrait"]}, {entry["emotion"]}, {entry["action"]}, '
                 f'"{entry["line1"]}", "{entry["line2"]}", "{entry["line3"]}", '
-                f'{entry["shake"]}, {entry["size"]}, {entry["speed"]}, '
+                f'{entry["color"]}, {entry["size"]}, {entry["speed"]}, '
                 f"{index_value}, {anim_value}, "
                 f'{{{entry["nav"][0]}, {entry["nav"][1]}}}, '
                 f"{dlg1_value}, {dlg2_value}}}"
             )
             definitions.append(line + ",")
 
-        eol_line = '    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", false, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)}'
+        eol_line = '    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)}'
         definitions.append(eol_line + "};")
         definitions.append("")
 

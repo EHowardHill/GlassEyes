@@ -75,7 +75,7 @@ letter::letter(char ch, vector_2 ideal_position_) : ideal_position(ideal_positio
     }
 }
 
-void letter::update(bool shake, int size)
+void letter::update(int color, int size)
 {
     if (size == SIZE_LARGE)
     {
@@ -84,32 +84,6 @@ void letter::update(bool shake, int size)
     else if (size == SIZE_SMALL)
     {
         sprite.value().set_scale(0.75, 0.75);
-    }
-
-    if (shake)
-    {
-        temp_position = {
-            ideal_position.x + global_data_ptr->bn_random.get_int(6) - 3,
-            ideal_position.y + global_data_ptr->bn_random.get_int(6) - 3,
-        };
-
-        if (sprite.value().x().integer() < temp_position.x.integer())
-        {
-            sprite.value().set_x(sprite.value().x() + 1);
-        }
-        else if (sprite.value().x() > temp_position.x.integer())
-        {
-            sprite.value().set_x(sprite.value().x() - 1);
-        }
-
-        if (sprite.value().y().integer() < temp_position.y.integer())
-        {
-            sprite.value().set_y(sprite.value().y() + 1);
-        }
-        else if (sprite.value().y().integer() > temp_position.y.integer())
-        {
-            sprite.value().set_y(sprite.value().y() - 1);
-        }
     }
 }
 
@@ -536,7 +510,7 @@ void dialogue_box::update()
     {
         for (auto &letter_ : lines[t].letters)
         {
-            letter_.update(l.shake, l.size);
+            letter_.update(l.color, l.size);
         }
     }
 
