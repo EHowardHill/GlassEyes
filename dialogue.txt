@@ -793,17 +793,17 @@ scruffys_04c
 	db_ch_glompy	EM_DEFAULT		Oh!! Thank you!	"Here, take this,"	I don't need it.								
 				You found:	5G									
 scruffys_05														
-	db_ch_barry	EM_DEFAULT		A human..	They say your kind	is good at darts.								
-	db_ch_barry	EM_DEFAULT		"If you beat me,"	I'll give you 50G.	Deal?								
+	db_ch_sneaker	EM_DEFAULT		A human..	They say your kind	is good at darts.								
+	db_ch_sneaker	EM_DEFAULT		"If you beat me,"	I'll give you 50G.	Deal?								
 				Deal.	No deal.								&scruffys_05_alt_01	
-	db_ch_barry			Let's play!										
+	db_ch_sneaker			Let's play!										
 		ACT_GAME								GAME_DARTS				
 														
 &scruffys_05_alt_01														
-	db_ch_barry	EM_DEFAULT		Too afraid.	I see.									
+	db_ch_sneaker	EM_DEFAULT		Too afraid.	I see.									
 														
 scruffys_05b														
-	db_ch_barry	EM_DEFAULT		I.. I can't..	YOU!	GLABBER!								
+	db_ch_sneaker	EM_DEFAULT		I.. I can't..	YOU!	GLABBER!								
 				I'LL KILL YOU!!										
 														
 tollhouse_01														
@@ -863,4 +863,16 @@ scruffys_06b
 scruffys_06b_alt_01														
 	db_ch_robin	EM_DEFAULT		Your loss.										
 														
-henry_01														
+dart_01														
+	db_ch_sneaker	EM_DEFAULT		"I almost pity you,"	human.									
+	db_ch_sneaker	EM_DEFAULT		My grandfather	INVENTED darts.									
+	db_ch_sneaker	EM_DEFAULT		There is none	alive greater than	I.								
+														
+dart_02														
+	db_ch_sneaker	EM_DEFAULT		Beginner's luck!										
+														
+dart_03														
+	db_ch_sneaker	EM_DEFAULT		I see.. It seems the	gods have given you	a gift.								
+														
+dart_04														
+	db_ch_sneaker	EM_DEFAULT		N-NO!!	IT CAN'T BE!!									

@@ -28,7 +28,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_jelly.h"
 #include "bn_sprite_items_db_ch_horsey.h"
 #include "bn_sprite_items_db_ch_glompy.h"
-#include "bn_sprite_items_db_ch_barry.h"
+#include "bn_sprite_items_db_ch_sneaker.h"
 #include "bn_sprite_items_db_ch_tollman.h"
 #include "bn_sprite_items_db_ch_robin.h"
 
@@ -78,6 +78,10 @@ extern const conversation croke_03;
 extern const conversation croke_04;
 extern const conversation croke_05;
 extern const conversation croke_05_alt_01;
+extern const conversation dart_01;
+extern const conversation dart_02;
+extern const conversation dart_03;
+extern const conversation dart_04;
 extern const conversation doll_guy_01;
 extern const conversation final_msg;
 extern const conversation forest_dlg_01;

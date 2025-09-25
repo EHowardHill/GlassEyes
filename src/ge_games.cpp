@@ -167,134 +167,39 @@ static void update_character_animation(int char_index, game_state &gs)
     int &state = gs.character_states[char_index];
     int &ticker = gs.character_tickers[char_index];
 
-    // Get appropriate sprite item and frame ranges based on character
     const sprite_item *spr_item = nullptr;
-    int idle_start, idle_end, hurt_start, hurt_end, atk_start, atk_end;
-    int intro_frames = 55; // Default intro length
-
-    switch (char_index)
-    {
-    case 0: // Jeremy
-        spr_item = &sprite_items::jeremy_battle;
-        idle_start = JEREMY_IDLE_START;
-        idle_end = JEREMY_IDLE_START; // Single frame idle for Jeremy
-        hurt_start = JEREMY_HURT_START;
-        hurt_end = JEREMY_HURT_END;
-        atk_start = JEREMY_ATK_START;
-        atk_end = JEREMY_ATK_END;
-        break;
-
-    case 1: // Ginger
-        spr_item = &sprite_items::ginger_battle;
-        idle_start = GINGER_IDLE_START;
-        idle_end = GINGER_IDLE_END;
-        hurt_start = GINGER_HURT_START;
-        hurt_end = GINGER_HURT_END;
-        atk_start = GINGER_ATK_START;
-        atk_end = GINGER_ATK_END;
-        intro_frames = 40;
-        break;
-
-    // Add cases for other characters as needed
-    default:
-        return; // Unknown character
-    }
+    spr_item = &sprite_items::spr_jeremy_game_dart_01;
 
     int y_offset = get_character_y_position(char_index) + gs.y_delta;
 
-    switch (state)
+    if (state == 3) // Throwing state
     {
-    case 0:
-    { // INTRO
-        if (ticker < intro_frames)
+        // Animate throwing: frame 1 for first 8 frames, then stay on frame 2
+        if (ticker < 2)
         {
-            // Intro animation
-            if (char_index == 0) // Jeremy has special intro
-            {
-                sprite->set_tiles(spr_item->tiles_item(), ticker / 5);
-            }
-            else if (char_index == 1) // Ginger intro
-            {
-                // Ginger's intro uses frames 0-7 (before idle starts at 8)
-                int frame = ticker / 5;
-                if (frame >= idle_start)
-                {
-                    frame = idle_start - 1;
-                }
-                sprite->set_tiles(spr_item->tiles_item(), frame);
-            }
-            ticker++;
+            sprite->set_tiles(spr_item->tiles_item(), 1);
         }
         else
         {
-            state = 1; // Go to idle
+            sprite->set_tiles(spr_item->tiles_item(), 2);
+        }
+
+        ticker++;
+
+        // Reset state after throw animation completes (optional)
+        // You might want to reset when dart reaches target instead
+        if (ticker > 60) // Adjust timing as needed
+        {
+            state = 0; // Back to idle
             ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
         }
-        break;
     }
-
-    case 1:
-    {                              // IDLE
-        if (idle_end > idle_start) // Animated idle
-        {
-            int frame = idle_start + ((ticker / 8) % (idle_end - idle_start + 1));
-            sprite->set_tiles(spr_item->tiles_item(), frame);
-            ticker++;
-        }
-        else // Static idle
-        {
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
-        }
-        break;
-    }
-
-    case 2: // HURT
+    else
     {
-        constexpr int TICKS_PER_FRAME = 4;
-        int anim_frame_idx = ticker / TICKS_PER_FRAME;
-        int frame = hurt_start + anim_frame_idx;
-
-        if (frame > hurt_end)
-        {
-            state = 1; // Back to idle
-            ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
-        }
-        else
-        {
-            sprite->set_tiles(spr_item->tiles_item(), frame);
-            ticker++;
-        }
-
-        break;
-    }
-
-    case 3: // ATTACK
-    {
-        constexpr int TICKS_PER_FRAME = 3;
-        int anim_frame_idx = ticker / TICKS_PER_FRAME;
-        int frame = atk_start + anim_frame_idx;
-
-        if (frame > atk_end)
-        {
-            state = 1; // Back to idle
-            ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
-        }
-        else
-        {
-            sprite->set_tiles(spr_item->tiles_item(), frame);
-            ticker++;
-        }
-
-        break;
-    }
-
-    default:
-    {
-        break;
-    }
+        // Default idle animation
+        sprite->set_tiles(spr_item->tiles_item(), 0);
+        state = 0;
+        ticker = 0;
     }
 
     sprite->set_position(-96, y_offset);
@@ -320,7 +225,7 @@ static void init_dart_game(game_state &gs)
     for (int i = 0; i < 5; ++i)
     {
         gs.darts.power_meter[i] = sprite_items::battle_squares.create_sprite(
-            -60 + (i * 8), 50, 0);
+            -60 + (i * 8), 32, 0);
         gs.darts.power_meter[i]->set_visible(false);
     }
 
@@ -461,6 +366,10 @@ static void update_dart_power(game_state &gs)
         d.state = DART_THROWING;
         d.throw_timer = 0;
 
+        // Trigger player throwing animation
+        gs.character_states[0] = 3;  // Set first character to throwing state
+        gs.character_tickers[0] = 0; // Reset animation ticker
+
         // Power ranges from 0 to 100 (max_power)
         // Perfect power is 100, worst is 0
         // Calculate accuracy: 1.0 at max power, 0.0 at min power
@@ -474,8 +383,11 @@ static void update_dart_power(game_state &gs)
         fixed actual_error = max_error * error_multiplier;
 
         // Apply random error based on power level
-        d.dart_target_x = d.wobbled_aim_x + gs.rng.get_fixed(-actual_error, actual_error);
-        d.dart_target_y = d.wobbled_aim_y + gs.rng.get_fixed(-actual_error, actual_error);
+        if (actual_error != 0)
+        {
+            d.dart_target_x = d.wobbled_aim_x + gs.rng.get_fixed(-actual_error, actual_error);
+            d.dart_target_y = d.wobbled_aim_y + gs.rng.get_fixed(-actual_error, actual_error);
+        }
 
         // Create dart sprite at starting position (always from left for player)
         d.dart = sprite_items::darts.create_sprite(-80, 60, 0);
@@ -523,6 +435,18 @@ static void update_dart_throwing(game_state &gs)
     {
         d.state = DART_RESULT;
         d.result_timer = 0;
+
+        // Reset throwing animations if still active
+        if (gs.character_states[0] == 3)
+        {
+            gs.character_states[0] = 0;
+            gs.character_tickers[0] = 0;
+        }
+        if (gs.enemy_state == 3)
+        {
+            gs.enemy_state = 0;
+            gs.enemy_ticker = 0;
+        }
 
         // Calculate and store score using the final dart position
         int score = calculate_dart_score(d.dart_target_x, d.dart_target_y);
@@ -648,7 +572,7 @@ static void update_enemy_dart_turn(game_state &gs)
     // Simulate enemy thinking
     if (d.state_timer == 30)
     {
-        // Random position within ~40 pixel radius of the dartboard center
+        // Random position within pixel radius of the dartboard center
         fixed target_x = gs.rng.get_fixed(-24, 24);
         fixed target_y = -16 + gs.rng.get_fixed(-24, 24);
 
@@ -674,8 +598,11 @@ static void update_enemy_dart_turn(game_state &gs)
 
         // Optional: Add some inaccuracy based on enemy skill
         fixed accuracy_error = 10 * (1.0 - d.enemy_accuracy); // Use the enemy_accuracy field
-        d.dart_target_x += gs.rng.get_fixed(-accuracy_error, accuracy_error);
-        d.dart_target_y += gs.rng.get_fixed(-accuracy_error, accuracy_error);
+        if (accuracy_error != 0)
+        {
+            d.dart_target_x += gs.rng.get_fixed(-accuracy_error, accuracy_error);
+            d.dart_target_y += gs.rng.get_fixed(-accuracy_error, accuracy_error);
+        }
 
         // Create dart sprite at starting position (from RIGHT side for enemy)
         d.dart = sprite_items::darts.create_sprite(80, 60, 0);
@@ -793,33 +720,20 @@ int game_map()
 
     switch (global_data_ptr->foe)
     {
-    case FOE_VISKERS_01:
-        gs.enemy_sprite_item = &sprite_items::visker_battle;
-        global_data_ptr->enemy_max_hp[0] = 12;
-        global_data_ptr->enemy_hp[0] = 12;
-
-        // Just Jeremy for this battle
-        gs.party_size = 1;
-        gs.character_sprites[0] = sprite_items::jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
-        gs.character_sprites[0]->set_z_order(0);
-
-        convos[G_FIRST].push_back(&garbage_fight_01);
-        convos[G_UP].push_back(&garbage_fight_02);
-        convos[G_WIN].push_back(&garbage_fight_04);
-        break;
     default:
-        gs.enemy_sprite_item = &sprite_items::visker_battle;
+        gs.enemy_sprite_item = &sprite_items::spr_sneaker_game_dart_01;
         global_data_ptr->enemy_max_hp[0] = 12;
         global_data_ptr->enemy_hp[0] = 12;
 
         // Just Jeremy for this battle
         gs.party_size = 1;
-        gs.character_sprites[0] = sprite_items::jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
+        gs.character_sprites[0] = sprite_items::spr_jeremy_game_dart_01.create_sprite(-96, get_character_y_position(0), 0);
         gs.character_sprites[0]->set_z_order(0);
 
-        convos[G_FIRST].push_back(&garbage_fight_01);
-        convos[G_UP].push_back(&garbage_fight_02);
-        convos[G_WIN].push_back(&garbage_fight_04);
+        convos[G_FIRST].push_back(&dart_01);
+        convos[G_UP].push_back(&dart_02);
+        convos[G_UP].push_back(&dart_02);
+        convos[G_WIN].push_back(&dart_04);
         break;
     }
 
@@ -845,7 +759,35 @@ int game_map()
         // Normal enemy animation for other enemies
         switch (gs.enemy_state)
         {
+        case 3: // Enemy throwing state
+        {
+            // Animate enemy throwing: frame 1 for first 8 frames, then stay on frame 2
+            if (gs.enemy_ticker < 8)
+            {
+                gs.enemy_sprite->set_tiles(gs.enemy_sprite_item->tiles_item(), 1);
+            }
+            else
+            {
+                gs.enemy_sprite->set_tiles(gs.enemy_sprite_item->tiles_item(), 2);
+            }
+
+            gs.enemy_ticker++;
+
+            // Reset state after throw animation completes
+            if (gs.enemy_ticker > 60) // Adjust timing as needed
+            {
+                gs.enemy_state = 0; // Back to idle
+                gs.enemy_ticker = 0;
+                gs.enemy_sprite->set_tiles(gs.enemy_sprite_item->tiles_item(), 0);
+            }
+        }
+        break;
         default:
+            if (gs.enemy_state == 0)
+            {
+                gs.enemy_sprite->set_tiles(gs.enemy_sprite_item->tiles_item(), 0);
+            }
+            break;
             break;
         }
 

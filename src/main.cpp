@@ -363,13 +363,11 @@ int main()
     global_data_ptr->process_stage = AVALON; // BLACK_TO_LAB;
 
     // Test game
-    /*
     global_data_ptr->items[OBJ_LIME] = true;
     global_data_ptr->foe = FOE_TEST;
-    value = game_map(GAME_DARTS);
+    value = game_map();
     core::update();
     value = NEW_CHAPTER;
-    */
 
     // Test battle before game begins
     /*
