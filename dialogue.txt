@@ -879,44 +879,44 @@ dart_04
 														
 henry_01														
 				I don't understand..	I did the ritual	correctly.								
-				Blood isn't enough.	The spirits require	flesh.	RED							
-				You'll need to	give up one of	your eyes.	RED							
+				Blood isn't enough.	The spirits require	flesh.	COLOR_RED							
+				You'll need to	give up one of	your eyes.	COLOR_RED							
 				..and you're certain	that will be enough?									
-				Have I ever given	you a reason not	to trust me?	RED							
+				Have I ever given	you a reason not	to trust me?	COLOR_RED							
 				No.										
 						I'm scared.								
-				It will only	hurt for a moment.		RED							
+				It will only	hurt for a moment.		COLOR_RED							
 														
 henry_02														
 				I'm sorry that	it has to be	this way.								
 				You must be	"terrified,"	poor thing.								
 				My name is	Dr. Henry Erickson.									
 				What is your	name?	If you can remember.								
-						V-Vista.	PURPLE							
+						V-Vista.	COLOR_PURPLE							
 				"Welcome to my home,"	Vista.									
 				You are going to	be part of something	very special.								
 														
 henry_03														
 				"Good morning,"	pumpkin.	Did you sleep well?								
-				"Morning, Henry."	Not really.	Too many thoughts.	PURPLE							
+				"Morning, Henry."	Not really.	Too many thoughts.	COLOR_PURPLE							
 				Do you know what	day it is?									
-				It's.. Thursday?			PURPLE							
+				It's.. Thursday?			COLOR_PURPLE							
 				It's been one year	since you woke up	for the first time.								
 				I made you a cake.	"It's your favorite,"	lemon.								
 				"Go ahead,"	make a wish.									
-				I.. Don't know if	I want to.		PURPLE							
+				I.. Don't know if	I want to.		COLOR_PURPLE							
 				How come?										
-				"I remember, the day"	"you brought me here,"		PURPLE							
-				I thought I wasn't	going to make it.		PURPLE							
-				Back home.. I	couldn't take it	anymore.	PURPLE							
-				And then I woke	up as.. This.		PURPLE							
-				I wanted to escape.	It was a wish.	And..	PURPLE							
-				You've been a	good father to me.		PURPLE							
-				But I gave up so	"many things, things"	I took for granted.	PURPLE							
-				I wish I could see	the sun again.	"I really, really do."	PURPLE							
-				But I'm afraid to	wish because.. 		PURPLE							
-				"..Well, I don't want"	to give up anything	else.	PURPLE							
-				Anything that I	might not be able	to get back.	PURPLE							
+				"I remember, the day"	"you brought me here,"		COLOR_PURPLE							
+				I thought I wasn't	going to make it.		COLOR_PURPLE							
+				Back home.. I	couldn't take it	anymore.	COLOR_PURPLE							
+				And then I woke	up as.. This.		COLOR_PURPLE							
+				I wanted to escape.	It was a wish.	And..	COLOR_PURPLE							
+				You've been a	good father to me.		COLOR_PURPLE							
+				But I gave up so	"many things, things"	I took for granted.	COLOR_PURPLE							
+				I wish I could see	the sun again.	"I really, really do."	COLOR_PURPLE							
+				But I'm afraid to	wish because.. 		COLOR_PURPLE							
+				"..Well, I don't want"	to give up anything	else.	COLOR_PURPLE							
+				Anything that I	might not be able	to get back.	COLOR_PURPLE							
 				I understand.	Once I finish my	research..								
-				We'll be able to	get out of hiding?		PURPLE							
+				We'll be able to	get out of hiding?		COLOR_PURPLE							
 				Oh.. Much more	"than that, Vista."	Much more.								

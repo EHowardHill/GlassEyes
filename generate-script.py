@@ -89,7 +89,7 @@ def process_csv(filename):
                 color = 0  # Default value
                 if len(row) > 7 and row[7].strip():
                     try:
-                        color = int(row[7].strip())
+                        color = row[7].strip()
                     except ValueError:
                         print(f"WARNING: Invalid color value '{row[7]}' at row {row_num}, using default 0")
                         color = 0
