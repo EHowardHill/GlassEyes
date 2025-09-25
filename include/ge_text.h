@@ -190,8 +190,9 @@ struct letter
     vector_2 ideal_position;
     vector_2 temp_position;
     int char_index;
+    int color;
 
-    letter(char ch, vector_2 ideal_position_);
+    letter(char ch, vector_2 ideal_position_, int color);
 
     void update(int color, int size);
 };
@@ -208,6 +209,7 @@ struct text
     bool active = false;
     string<20> reference;
     int size = SIZE_DEFAULT;
+    int color = COLOR_WHITE;
 
     static vector<toast, 16> toasts;
     static void add_toast(string<20> value, vector_2 pos);

@@ -91,7 +91,7 @@ static void update_dialogue(game_state *gs)
     {
         for (auto &letter : gs->dlg_lines[i].letters)
         {
-            letter.update(line.shake, line.size);
+            letter.update(line.color, line.size);
         }
     }
 

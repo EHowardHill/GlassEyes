@@ -876,3 +876,47 @@ dart_03
 														
 dart_04														
 	db_ch_sneaker	EM_DEFAULT		N-NO!!	IT CAN'T BE!!									
+														
+henry_01														
+				I don't understand..	I did the ritual	correctly.								
+				Blood isn't enough.	The spirits require	flesh.	RED							
+				You'll need to	give up one of	your eyes.	RED							
+				..and you're certain	that will be enough?									
+				Have I ever given	you a reason not	to trust me?	RED							
+				No.										
+						I'm scared.								
+				It will only	hurt for a moment.		RED							
+														
+henry_02														
+				I'm sorry that	it has to be	this way.								
+				You must be	"terrified,"	poor thing.								
+				My name is	Dr. Henry Erickson.									
+				What is your	name?	If you can remember.								
+						V-Vista.	PURPLE							
+				"Welcome to my home,"	Vista.									
+				You are going to	be part of something	very special.								
+														
+henry_03														
+				"Good morning,"	pumpkin.	Did you sleep well?								
+				"Morning, Henry."	Not really.	Too many thoughts.	PURPLE							
+				Do you know what	day it is?									
+				It's.. Thursday?			PURPLE							
+				It's been one year	since you woke up	for the first time.								
+				I made you a cake.	"It's your favorite,"	lemon.								
+				"Go ahead,"	make a wish.									
+				I.. Don't know if	I want to.		PURPLE							
+				How come?										
+				"I remember, the day"	"you brought me here,"		PURPLE							
+				I thought I wasn't	going to make it.		PURPLE							
+				Back home.. I	couldn't take it	anymore.	PURPLE							
+				And then I woke	up as.. This.		PURPLE							
+				I wanted to escape.	It was a wish.	And..	PURPLE							
+				You've been a	good father to me.		PURPLE							
+				But I gave up so	"many things, things"	I took for granted.	PURPLE							
+				I wish I could see	the sun again.	"I really, really do."	PURPLE							
+				But I'm afraid to	wish because.. 		PURPLE							
+				"..Well, I don't want"	to give up anything	else.	PURPLE							
+				Anything that I	might not be able	to get back.	PURPLE							
+				I understand.	Once I finish my	research..								
+				We'll be able to	get out of hiding?		PURPLE							
+				Oh.. Much more	"than that, Vista."	Much more.								

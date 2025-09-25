@@ -56,7 +56,7 @@ const conversation *ITEM_CONVOS[ITEMS_SIZE] = {
 
 vector<toast, 16> text::toasts;
 
-letter::letter(char ch, vector_2 ideal_position_) : ideal_position(ideal_position_)
+letter::letter(char ch, vector_2 ideal_position_, int color_) : ideal_position(ideal_position_), color(color_)
 {
     char_index = -1;
 
@@ -71,7 +71,7 @@ letter::letter(char ch, vector_2 ideal_position_) : ideal_position(ideal_positio
 
     if (char_index > -1)
     {
-        sprite = sprite_items::spr_font_01.create_sprite(ideal_position_.x, ideal_position_.y, char_index);
+        sprite = sprite_items::spr_font_01.create_sprite(ideal_position_.x, ideal_position_.y, char_index + (47 * color_));
     }
 }
 
@@ -190,7 +190,7 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
     }
 
     // Create letter at current position
-    letter new_letter = {ch, {start.x + current_x, start.y}};
+    letter new_letter = {ch, {start.x + current_x, start.y}, color};
 
     if (new_letter.char_index > -1)
     {
@@ -239,7 +239,7 @@ void text::render()
         else
         {
             // Create letter at current position
-            letter new_letter = {ch, {start.x + current_x, start.y}};
+            letter new_letter = {ch, {start.x + current_x, start.y}, color};
 
             if (new_letter.char_index > -1)
             {
@@ -329,6 +329,7 @@ void dialogue_box::init(character_manager *ch_man)
             {
                 lines[t].init(line.raw_text[t]);
                 lines[t].size = line.size;
+                lines[t].color = line.color;
                 lines[t].render(); // Instant display for branching
             }
 
@@ -385,6 +386,7 @@ void dialogue_box::init(character_manager *ch_man)
         {
             lines[t].init(line.raw_text[t]);
             lines[t].size = line.size;
+            lines[t].color = line.color;
         }
 
         // Rest of your existing switch statement...
