@@ -134,7 +134,7 @@ static void update_dialogue(battle_state *bs)
     {
         for (auto &letter : bs->dlg_lines[i].letters)
         {
-            letter.update(line.shake, line.size);
+            letter.update(line.color, line.size);
         }
     }
 
