@@ -91,7 +91,9 @@ def process_csv(filename):
                     try:
                         color = row[7].strip()
                     except ValueError:
-                        print(f"WARNING: Invalid color value '{row[7]}' at row {row_num}, using default 0")
+                        print(
+                            f"WARNING: Invalid color value '{row[7]}' at row {row_num}, using default 0"
+                        )
                         color = 0
 
                 size = (
