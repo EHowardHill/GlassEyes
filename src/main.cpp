@@ -451,6 +451,14 @@ int main()
                 global_data_ptr->bg_track = &music_items::forest_01;
                 break;
             }
+            case PIT_01:
+            {
+                global_data_ptr->entry_map = &map_cave_01;
+                global_data_ptr->entry_position = {4, 13};
+                global_data_ptr->ginger_position = {4, 11};
+                global_data_ptr->bg_track = &music_items::cave_01;
+                break;
+            }
             case NEW_BERLIN:
             {
                 typewriter(TYPEWRITER_NEW_BERLIN);

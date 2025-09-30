@@ -24,10 +24,11 @@ enum progress
     GARBAGE_TO_BLACK,
     BLACK_TO_LAB,
     FOREST_01,
-    FINAL_MSG,
+    PIT_01,
     AVALON,
     NEW_BERLIN,
     YOUTUBE_AD,
+    FINAL_MSG,
     TEST_MAP
 };
 

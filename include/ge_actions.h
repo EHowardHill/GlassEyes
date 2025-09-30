@@ -47,8 +47,9 @@ constexpr int is_interactive_array[999] = {
     CHAT_BIRB,
     CHAT_SNEAKER,
     JUKEBOX_01,
-	CHAT_ROBIN,
+    CHAT_ROBIN,
     CHAT_TOLLHOUSE,
     WORM_ACTION,
     NEW_BERLIN_SIGN,
+    TOGORE_TASTIC,
     -1};

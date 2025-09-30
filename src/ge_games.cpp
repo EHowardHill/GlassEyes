@@ -1,4 +1,4 @@
-// ge_battle.cpp
+// ge_games.cpp
 
 #include "bn_core.h"
 #include "bn_keypad.h"
@@ -818,6 +818,14 @@ int game_map()
                 }
                 else
                 {
+                    // Check if the battle is over (win or lose)
+                    if (gs.result == G_WIN || gs.result == G_LOSE)
+                    {
+                        // Battle is complete, return to continue the game
+                        return CONTINUE;
+                    }
+
+                    // Otherwise, go back to playing
                     gs.stage = G_PLAYING;
                 }
             }

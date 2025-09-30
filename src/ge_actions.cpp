@@ -429,6 +429,10 @@ int action_listener(map_manager *man, character_manager *ch_man)
             {
                 if (global_data_ptr->action_iterations[CHAT_SNEAKER] == 1)
                 {
+                    global_data_ptr->entry_position = {13, 3};
+                    global_data_ptr->ginger_position = {14, 3};
+                    global_data_ptr->entry_map = &map_tavern_01;
+
                     ch_man->db.emplace();
                     ch_man->db->load(&scruffys_05);
                     ch_man->db->init(ch_man);
@@ -1051,6 +1055,16 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 global_data_ptr->bg_track = &music_items::bg_avalon;
                 global_data_ptr->bg_track->play(0.5);
                 return NEW_MAP;
+                break;
+            }
+            case CHAT_SNEAKER:
+            {
+                if (global_data_ptr->action_iterations[CHAT_SNEAKER] == 2)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&scruffys_05);
+                    ch_man->db->init(ch_man);
+                }
                 break;
             }
             case FINAL_MSG_ACTION:

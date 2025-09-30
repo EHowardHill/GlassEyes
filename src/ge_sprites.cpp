@@ -273,6 +273,11 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_wormguy_01;
         break;
     }
+    case CHAR_TOGORE:
+    {
+        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_wormguy_01;
+        break;
+    }
     case ITEM_BUTTON:
     {
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_elements;

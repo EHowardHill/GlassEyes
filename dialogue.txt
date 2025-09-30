@@ -838,16 +838,10 @@ worm_action_01_alt_01
 				A considerate	choice.									
 														
 captive_01														
-	db_ch_ginger	EM_DEFAULT		W-WHERE ARE	WE?!									
-				In a cave.	Ow.								&captive_01_alt_01	
-	db_ch_ginger	EM_DEFAULT		I mean..	"Of course, but.."	What did..								
-	db_ch_ginger	EM_DEFAULT		I think we're	trapped down here!!									
-	db_ch_ginger	EM_DEFAULT		I-I knew this was	a bad idea..	I knew								
-	db_ch_ginger	EM_DEFAULT		I-I wasn't	supposed to leave..									
-	db_ch_ginger	EM_DEFAULT		W-We're gonna	die down here..									
-														
-captive_01_alt_01														
-	db_ch_ginger	EM_DEFAULT												
+	db_ch_ginger	EM_WAT		H-HEY!	WAKE UP!					CHAR_JEREMY	&jeremy_lay_down			
+	db_ch_ginger	EM_SAD		"I-I tried to fight,"	but he was	"stronger, and-"								
+	db_ch_ginger	EM_SAD		I-I think he	knocked us out and	dragged us here!								
+	db_ch_ginger	EM_WAT		We've gotta	get out!!									
 														
 scruffys_06														
 	db_ch_robin	EM_DEFAULT		"I'm sorry, we"	haven't gotten any	shipments in								
@@ -856,13 +850,13 @@ scruffys_06
 														
 scruffys_06b														
 	db_ch_robin	EM_DEFAULT		What can I get	for you?									
-	db_ch_robin	EM_DEFAULT		Water.	No water.								&scruffys_06b_alt_01	
+	db_ch_robin	EM_DEFAULT		Water.	No water.									
 	db_ch_robin	EM_DEFAULT		"One water,"	coming right up.									
 	db_ch_robin	EM_DEFAULT		You found:	WATER									
 														
 scruffys_06b_alt_01														
 	db_ch_robin	EM_DEFAULT		Your loss.										
-														
+													&scruffys_06b_alt_01	
 dart_01														
 	db_ch_sneaker	EM_DEFAULT		"I almost pity you,"	human.									
 	db_ch_sneaker	EM_DEFAULT		My grandfather	INVENTED darts.									
@@ -876,6 +870,8 @@ dart_03
 														
 dart_04														
 	db_ch_sneaker	EM_DEFAULT		N-NO!!	IT CAN'T BE!!									
+	db_ch_sneaker	EM_DEFAULT		YOU'LL PAY FOR	"THAT, HUMAN!"									
+			ACT_PROGRESS							PIT_01				
 														
 henry_01														
 				I don't understand..	I did the ritual	correctly.								
@@ -920,3 +916,18 @@ henry_03
 				I understand.	Once I finish my	research..								
 				We'll be able to	get out of hiding?		COLOR_PURPLE							
 				Oh.. Much more	"than that, Vista."	Much more.								
+														
+togore_01														
+	db_ch_ginger	EM_SAD		"Oh dear.. Hey there,"	little buddy.	Are you hurt?								
+	db_ch_ginger	EM_SAD		Did the mean man	from the tavern	kidnap you too?								
+	db_ch_togore	EM_DEFAULT		My papa dthraded	me for a beer so	I'm thtuck here.								
+	db_ch_ginger	EM_SAD		Do you need our	help getting you	out?								
+	db_ch_togore	EM_DEFAULT		No.	Ith nice down here.	Peathful.								
+	db_ch_ginger	EM_SAD		Are you sure?										
+	db_ch_togore	EM_DEFAULT		Yeth.										
+	db_ch_ginger	EM_SAD		Well..	"Okay, then."									
+	db_ch_ginger	EM_SIDE_EYE		I can't stand seeing	kids in pain like this.									
+	db_ch_togore	EM_DEFAULT		Thereth sthoda and	snackth.	And my gameboy.								
+	db_ch_togore	EM_DEFAULT		I'll standth on the	button to let you	guysth out.								
+	db_ch_ginger	EM_SAD		Okay..	If you insist..									
+		EM_SKIP	ACT_WALK							CHAR_TOGORE		"{8, 6}"		

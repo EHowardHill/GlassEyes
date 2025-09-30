@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/forest_03.tmx",
+    "activeFile": "maps/cave_05.tmx",
     "expandedProjectPaths": [
         "tilesets",
         "maps",
@@ -50,10 +50,10 @@
         },
         "maps/cave_05.tmx": {
             "scale": 1.5,
-            "selectedLayer": 2,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 249.66666666666666,
-                "y": 191.66666666666669
+                "x": 236.66666666666669,
+                "y": 179.33333333333331
             }
         },
         "maps/cave_cowbemmie.tmx": {
@@ -84,8 +84,8 @@
             "scale": 1.5,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 1751.3333333333333,
-                "y": 379.66666666666663
+                "x": 1660,
+                "y": 337.66666666666663
             }
         },
         "maps/forest_04.tmx": {
@@ -164,8 +164,8 @@
             "scale": 1.59013671875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 255.9528342443039,
-                "y": 192.12184486888165
+                "x": 438.95596634526805,
+                "y": 192.12184486888168
             }
         },
         "maps/viskers_house.tmx": {
@@ -230,12 +230,13 @@
     "map.tileWidth": 32,
     "map.width": 16,
     "openFiles": [
-        "maps/forest_03.tmx",
-        "maps/tavern_01.tmx"
+        "maps/tavern_01.tmx",
+        "maps/cave_05.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
         "maps/tavern_01.tmx",
+        "maps/cave_05.tmx",
         "maps/forest_03.tmx",
         "maps/cave_02.tmx",
         "maps/cave_03.tmx",
@@ -245,8 +246,7 @@
         "maps/garbage_05.tmx",
         "maps/shop_01.tmx",
         "tilesets/room02.tsx",
-        "maps/lab_01.tmx",
-        "maps/cave_cowbemmie.tmx"
+        "maps/lab_01.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
