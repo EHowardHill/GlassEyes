@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/cave_05.tmx",
+    "activeFile": "maps/forest_03_attack.tmx",
     "expandedProjectPaths": [
-        "tilesets",
+        ".",
         "maps",
-        "."
+        "tilesets"
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -52,8 +52,8 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 236.66666666666669,
-                "y": 179.33333333333331
+                "x": 294.66666666666663,
+                "y": 218.66666666666666
             }
         },
         "maps/cave_cowbemmie.tmx": {
@@ -86,6 +86,14 @@
             "viewCenter": {
                 "x": 1660,
                 "y": 337.66666666666663
+            }
+        },
+        "maps/forest_03_attack.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 1140,
+                "y": 332
             }
         },
         "maps/forest_04.tmx": {
@@ -164,8 +172,8 @@
             "scale": 1.59013671875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 438.95596634526805,
-                "y": 192.12184486888168
+                "x": 438.9559663452681,
+                "y": 192.43628324018914
             }
         },
         "maps/viskers_house.tmx": {
@@ -230,11 +238,11 @@
     "map.tileWidth": 32,
     "map.width": 16,
     "openFiles": [
-        "maps/tavern_01.tmx",
-        "maps/cave_05.tmx"
+        "maps/forest_03_attack.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/forest_03_attack.tmx",
         "maps/tavern_01.tmx",
         "maps/cave_05.tmx",
         "maps/forest_03.tmx",
@@ -245,8 +253,7 @@
         "maps/garbage_03.tmx",
         "maps/garbage_05.tmx",
         "maps/shop_01.tmx",
-        "tilesets/room02.tsx",
-        "maps/lab_01.tmx"
+        "tilesets/room02.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
