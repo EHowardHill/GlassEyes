@@ -31,9 +31,9 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_sneaker.h"
 #include "bn_sprite_items_db_ch_tollman.h"
 #include "bn_sprite_items_db_ch_robin.h"
+#include "bn_sprite_items_db_ch_togore.h"
 
 // Forward declarations for conversations
-extern const conversation &scruffys_05_alt_01;
 extern const conversation avalon_courier_01;
 extern const conversation avalon_courier_02;
 extern const conversation avalon_courier_03;
@@ -62,7 +62,6 @@ extern const conversation avalon_wormguy_01_alt_01;
 extern const conversation avalon_wormguy_02;
 extern const conversation bridge_01;
 extern const conversation captive_01;
-extern const conversation captive_01_alt_01;
 extern const conversation cave_01;
 extern const conversation cave_01_alt_01;
 extern const conversation cave_sign_01;
@@ -157,6 +156,7 @@ extern const conversation scruffys_04;
 extern const conversation scruffys_04b;
 extern const conversation scruffys_04c;
 extern const conversation scruffys_05;
+extern const conversation scruffys_05_alt_01;
 extern const conversation scruffys_05b;
 extern const conversation scruffys_06;
 extern const conversation scruffys_06b;
@@ -170,6 +170,7 @@ extern const conversation temmie_06;
 extern const conversation temmie_07;
 extern const conversation temmie_sign;
 extern const conversation test_convo;
+extern const conversation togore_01;
 extern const conversation tollhouse_01;
 extern const conversation tollhouse_01b;
 extern const conversation tunnel_01;

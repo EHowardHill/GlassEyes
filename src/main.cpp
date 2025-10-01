@@ -149,6 +149,20 @@ int navigate_map()
             }
         }
 
+        else if (current_map.current_map == &map_cave_05)
+        {
+            if (global_data_ptr->action_iterations[TOGORE_TASTIC] > 1)
+            {
+                auto spike1 = char_mgr.find_by_id(1);
+                spike1->is_pressed = false;
+                spike1->idle_animation = &elem_spike_down;
+
+                auto spike2 = char_mgr.find_by_id(2);
+                spike2->is_pressed = false;
+                spike2->idle_animation = &elem_spike_down;
+            }
+        }
+
         // Frame handling
 
         if (handle_frame)
@@ -360,14 +374,16 @@ int main()
 
     // Set for debug
     global_data_ptr = new global_data();
-    global_data_ptr->process_stage = AVALON; // BLACK_TO_LAB;
+    global_data_ptr->process_stage = PIT_01; // BLACK_TO_LAB;
 
     // Test game
+    /*
     global_data_ptr->items[OBJ_LIME] = true;
     global_data_ptr->foe = FOE_TEST;
     value = game_map();
     core::update();
     value = NEW_CHAPTER;
+    */
 
     // Test battle before game begins
     /*
@@ -453,7 +469,11 @@ int main()
             }
             case PIT_01:
             {
-                global_data_ptr->entry_map = &map_cave_01;
+                sound_items::sfx_wack_his_pipis.play();
+                typewriter(TYPEWRITER_BUFFER);
+                music::stop();
+
+                global_data_ptr->entry_map = &map_cave_05;
                 global_data_ptr->entry_position = {4, 13};
                 global_data_ptr->ginger_position = {4, 11};
                 global_data_ptr->bg_track = &music_items::cave_01;

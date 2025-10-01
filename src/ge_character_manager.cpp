@@ -250,6 +250,19 @@ void character_manager::update(map_manager *current_map = nullptr)
                         ch->idle_animation = &elem_button_down;
                         ch->is_pressed = true;
                     }
+
+                    auto togore = find_by_index(CHAR_TOGORE);
+                    if (togore != nullptr)
+                    {
+                        vector_2 t_pos = {togore->v_sprite.bounds.position.x / 32, togore->v_sprite.bounds.position.y / 32};
+
+                        if (t_pos.x.integer() == m_pos.x.integer() && t_pos.y.integer() == m_pos.y.integer())
+                        {
+                            sound_items::snd_alert.play(0.5);
+                            ch->idle_animation = &elem_button_down;
+                            ch->is_pressed = true;
+                        }
+                    }
                 }
             }
 

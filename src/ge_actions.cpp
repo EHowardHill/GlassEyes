@@ -461,6 +461,17 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 music_items::shop.play();
                 break;
             }
+            case TOGORE_TASTIC:
+            {
+                if (global_data_ptr->action_iterations[TOGORE_TASTIC] == 1)
+                {
+
+                    ch_man->db.emplace();
+                    ch_man->db->load(&togore_01);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
             case CHAT_TOLLHOUSE:
             {
                 if (global_data_ptr->action_iterations[CHAT_TOLLHOUSE] == 1)
@@ -483,7 +494,8 @@ int action_listener(map_manager *man, character_manager *ch_man)
             }
             }
         }
-        else if (action != 0 && !action_triggered)
+
+        if (action != 0 && !action_triggered)
         {
             action_triggered = true; // Mark as triggered
 
@@ -1059,10 +1071,23 @@ int action_listener(map_manager *man, character_manager *ch_man)
             }
             case CHAT_SNEAKER:
             {
-                if (global_data_ptr->action_iterations[CHAT_SNEAKER] == 2)
+                BN_LOG("Iterations: ", global_data_ptr->action_iterations[CHAT_SNEAKER]);
+                if (global_data_ptr->action_iterations[CHAT_SNEAKER] > 0)
                 {
+
                     ch_man->db.emplace();
-                    ch_man->db->load(&scruffys_05);
+                    ch_man->db->load(&scruffys_05b);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case PIT_AWAKE:
+            {
+                if (global_data_ptr->action_iterations[PIT_AWAKE] == 1)
+                {
+
+                    ch_man->db.emplace();
+                    ch_man->db->load(&captive_01);
                     ch_man->db->init(ch_man);
                 }
                 break;
@@ -1141,6 +1166,22 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     st->idle_animation = &spamton_anim;
                     st->current_animation = &spamton_anim;
                 }
+                break;
+            }
+            case PIT_TO_01:
+            {
+                global_data_ptr->entry_map = &map_cave_05;
+                global_data_ptr->entry_position = {14, 14};
+                global_data_ptr->ginger_position = {15, 14};
+                return NEW_MAP;
+                break;
+            }
+            case PIT_TO_02:
+            {
+                global_data_ptr->entry_map = &map_cave_05;
+                global_data_ptr->entry_position = {4, 9};
+                global_data_ptr->ginger_position = {5, 9};
+                return NEW_MAP;
                 break;
             }
             default:

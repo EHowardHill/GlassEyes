@@ -794,17 +794,19 @@ scruffys_04c
 				You found:	5G									
 scruffys_05														
 	db_ch_sneaker	EM_DEFAULT		A human..	They say your kind	is good at darts.								
-	db_ch_sneaker	EM_DEFAULT		"If you beat me,"	I'll give you 50G.	Deal?								
+	db_ch_sneaker	EM_DEFAULT		"If you beat me,"	I'll give you 50G.									
+	db_ch_sneaker	EM_DEFAULT		"If I beat YOU,"	then you DIE.	Deal?								
 				Deal.	No deal.								&scruffys_05_alt_01	
 	db_ch_sneaker			Let's play!										
-		ACT_GAME								GAME_DARTS				
+		EM_SKIP	ACT_GAME							GAME_DARTS				
 														
-&scruffys_05_alt_01														
+scruffys_05_alt_01														
 	db_ch_sneaker	EM_DEFAULT		Too afraid.	I see.									
 														
 scruffys_05b														
-	db_ch_sneaker	EM_DEFAULT		I.. I can't..	YOU!	GLABBER!								
-				I'LL KILL YOU!!										
+	db_ch_sneaker	EM_DEFAULT	ACT_MUSIC_FADEOUT	I.. I can't..	YOU!	GLABBER!								
+	db_ch_sneaker	EM_DEFAULT		I'LL KILL YOU!!										
+			ACT_PROGRESS							PIT_01				
 														
 tollhouse_01														
 	db_ch_tollman	EM_DEFAULT		Ask not for	whom the bell	tolls..								
@@ -871,7 +873,7 @@ dart_03
 dart_04														
 	db_ch_sneaker	EM_DEFAULT		N-NO!!	IT CAN'T BE!!									
 	db_ch_sneaker	EM_DEFAULT		YOU'LL PAY FOR	"THAT, HUMAN!"									
-			ACT_PROGRESS							PIT_01				
+														
 														
 henry_01														
 				I don't understand..	I did the ritual	correctly.								
@@ -920,14 +922,14 @@ henry_03
 togore_01														
 	db_ch_ginger	EM_SAD		"Oh dear.. Hey there,"	little buddy.	Are you hurt?								
 	db_ch_ginger	EM_SAD		Did the mean man	from the tavern	kidnap you too?								
-	db_ch_togore	EM_DEFAULT		My papa dthraded	me for a beer so	I'm thtuck here.								
+	db_ch_togore	EM_DEFAULT		My papa twayded	me for a beer. Thso	I'm thtuck heow.								
 	db_ch_ginger	EM_SAD		Do you need our	help getting you	out?								
-	db_ch_togore	EM_DEFAULT		No.	Ith nice down here.	Peathful.								
+	db_ch_togore	EM_DEFAULT		No.	Ith okay down here.									
 	db_ch_ginger	EM_SAD		Are you sure?										
 	db_ch_togore	EM_DEFAULT		Yeth.										
 	db_ch_ginger	EM_SAD		Well..	"Okay, then."									
-	db_ch_ginger	EM_SIDE_EYE		I can't stand seeing	kids in pain like this.									
-	db_ch_togore	EM_DEFAULT		Thereth sthoda and	snackth.	And my gameboy.								
+	db_ch_ginger	EM_SIDE_EYE		I can't stand seeing	kids in pain like	this.								
+	db_ch_togore	EM_DEFAULT		Thereth juith.	And snacks.	And my toyths.								
 	db_ch_togore	EM_DEFAULT		I'll standth on the	button to let you	guysth out.								
 	db_ch_ginger	EM_SAD		Okay..	If you insist..									
 		EM_SKIP	ACT_WALK							CHAR_TOGORE		"{8, 6}"		

@@ -71,7 +71,7 @@ struct dart_game
     // Scoring
     int player_score = 0;
     int enemy_score = 0;
-    int round_scores[6] = {0}; // 3 for player, 3 for enemy
+    int round_scores[24] = {0};
 
     // Aiming system
     fixed aim_x = 0;
