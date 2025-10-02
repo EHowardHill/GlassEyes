@@ -2,6 +2,8 @@
 #include "ge_maps.h"
 #include "ge_character_manager.h"
 
+#include "bn_regular_bg_items_big_bg_forest_01.h"
+
 int action_listener(map_manager *man, character_manager *ch_man);
 
 constexpr int is_interactive_array[999] = {
@@ -52,4 +54,12 @@ constexpr int is_interactive_array[999] = {
     WORM_ACTION,
     NEW_BERLIN_SIGN,
     TOGORE_TASTIC,
+    BROKEN_01,
+    BROKEN_02,
+    BROKEN_03,
+    ID_135,
+    ID_136,
+    ID_142,
+    ID_148,
+    ID_149,
     -1};

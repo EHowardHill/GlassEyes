@@ -488,6 +488,36 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case BROKEN_01:
+            {
+                if (global_data_ptr->action_iterations[BROKEN_01] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&broken_avalon_01);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case BROKEN_02:
+            {
+                if (global_data_ptr->action_iterations[BROKEN_02] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&broken_avalon_02);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case BROKEN_03:
+            {
+                if (global_data_ptr->action_iterations[BROKEN_03] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&broken_avalon_02);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
             default:
             {
                 break;
@@ -1182,6 +1212,28 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 global_data_ptr->entry_position = {4, 9};
                 global_data_ptr->ginger_position = {5, 9};
                 return NEW_MAP;
+                break;
+            }
+            case PIT_TO_03:
+            {
+                global_data_ptr->entry_map = &map_forest_03_attack;
+                global_data_ptr->entry_position = {25, 16};
+                global_data_ptr->ginger_position = {26, 16};
+
+                music::stop();
+                global_data_ptr->bg_track = &music_items::ambient_wind;
+                global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+                return NEW_MAP;
+                break;
+            }
+            case BROKEN_00:
+            {
+                if (global_data_ptr->action_iterations[BROKEN_00] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&broken_avalon_00);
+                    ch_man->db->init(ch_man);
+                }
                 break;
             }
             default:

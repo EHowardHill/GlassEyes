@@ -474,8 +474,8 @@ int main()
                 music::stop();
 
                 global_data_ptr->entry_map = &map_cave_05;
-                global_data_ptr->entry_position = {4, 13};
-                global_data_ptr->ginger_position = {4, 11};
+                global_data_ptr->entry_position = {4, 12};
+                global_data_ptr->ginger_position = {4, 10};
                 global_data_ptr->bg_track = &music_items::cave_01;
                 break;
             }

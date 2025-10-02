@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/forest_03_attack.tmx",
+    "activeFile": "maps/dark_02.tmx",
     "expandedProjectPaths": [
-        ".",
+        "tilesets",
         "maps",
-        "tilesets"
+        "."
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -28,8 +28,8 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 336.3333333333333,
-                "y": 773
+                "x": 512,
+                "y": 512.3333333333334
             }
         },
         "maps/cave_03.tmx": {
@@ -53,7 +53,7 @@
             "selectedLayer": 3,
             "viewCenter": {
                 "x": 294.66666666666663,
-                "y": 218.66666666666666
+                "y": 294.66666666666663
             }
         },
         "maps/cave_cowbemmie.tmx": {
@@ -62,6 +62,30 @@
             "viewCenter": {
                 "x": 261.5,
                 "y": 258.75
+            }
+        },
+        "maps/dark_01.tmx": {
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 400,
+                "y": 347.5
+            }
+        },
+        "maps/dark_02.tmx": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 390,
+                "y": 396.5
+            }
+        },
+        "maps/dark_03.tmx": {
+            "scale": 1.8678385416666665,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 95.8326943185779,
+                "y": 191.93307772743123
             }
         },
         "maps/forest_01.tmx": {
@@ -89,11 +113,11 @@
             }
         },
         "maps/forest_03_attack.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 2,
+            "scale": 1,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 1140,
-                "y": 332
+                "x": 2001,
+                "y": 306
             }
         },
         "maps/forest_04.tmx": {
@@ -185,7 +209,8 @@
             }
         },
         "tilesets/blue-labels.tsx": {
-            "scaleInDock": 2
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "tilesets/cowbemmie01.tsx": {
             "scaleInDock": 2,
@@ -197,6 +222,10 @@
         },
         "tilesets/forest01.tsx": {
             "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "tilesets/forest01_night.tsx": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "tilesets/garbage-cave01.tsx": {
@@ -220,7 +249,8 @@
             "scaleInEditor": 1
         },
         "tilesets/tavern01.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "tilesets/underground01.tsx": {
             "scaleInDock": 1,
@@ -231,29 +261,35 @@
             "scaleInEditor": 1
         }
     },
-    "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes-GBA/bgs/tilesets",
-    "map.height": 16,
+    "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes/bgs/tilesets",
+    "map.height": 12,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 16,
+    "map.width": 6,
     "openFiles": [
-        "maps/forest_03_attack.tmx"
+        "tilesets/forest01_night.tsx",
+        "maps/dark_01.tmx",
+        "maps/dark_02.tmx",
+        "maps/dark_03.tmx",
+        "tilesets/blue-labels.tsx",
+        "maps/cave_02.tmx",
+        "tilesets/tavern01.tsx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "tilesets/forest01_night.tsx",
+        "maps/dark_01.tmx",
+        "tilesets/tavern01.tsx",
+        "maps/cave_02.tmx",
+        "tilesets/blue-labels.tsx",
+        "maps/dark_03.tmx",
+        "maps/dark_02.tmx",
+        "tilesets/forest01.tsx",
+        "maps/cave_05.tmx",
         "maps/forest_03_attack.tmx",
         "maps/tavern_01.tmx",
-        "maps/cave_05.tmx",
-        "maps/forest_03.tmx",
-        "maps/cave_02.tmx",
-        "maps/cave_03.tmx",
-        "maps/garbage_04.tmx",
-        "maps/forest_02.tmx",
-        "maps/garbage_03.tmx",
-        "maps/garbage_05.tmx",
-        "maps/shop_01.tmx",
-        "tilesets/room02.tsx"
+        "maps/forest_03.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

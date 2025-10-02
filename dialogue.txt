@@ -933,3 +933,21 @@ togore_01
 	db_ch_togore	EM_DEFAULT		I'll standth on the	button to let you	guysth out.								
 	db_ch_ginger	EM_SAD		Okay..	If you insist..									
 		EM_SKIP	ACT_WALK							CHAR_TOGORE		"{8, 6}"		
+														
+broken_avalon_00														
+				You are outside	without a jacket.	"However,"								
+				the wind feels	colder than it did	before.								
+				The sun will be	setting soon.									
+														
+broken_avalon_01														
+	db_ch_ginger	EM_DEFAULT		I think that statue	was one of the	oldest.								
+	db_ch_ginger	EM_SULLEN		It had been there	for.. Hmm.. I think	twenty years.								
+				Are you alright?	I'm sorry.								&broken_avalon_01_alt_01	
+	db_ch_ginger	EM_SULLEN		Yes.	I'm glad it's gone.									
+														
+broken_avalon_01_alt_01														
+	db_ch_ginger	EM_SULLEN		You don't need to	apologize.									
+	db_ch_ginger	EM_SULLEN		"Honestly,"	I'm glad it's gone.									
+														
+broken_avalon_02														
+			ACT_SFX_KNOCK	No one seems to	be in right now.									
