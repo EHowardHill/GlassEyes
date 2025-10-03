@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/dark_02.tmx",
+    "activeFile": "maps/dark_01.tmx",
     "expandedProjectPaths": [
+        ".",
         "tilesets",
-        "maps",
-        "."
+        "maps"
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -66,10 +66,10 @@
         },
         "maps/dark_01.tmx": {
             "scale": 1,
-            "selectedLayer": 2,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 400,
-                "y": 347.5
+                "x": 134,
+                "y": 425.5
             }
         },
         "maps/dark_02.tmx": {
@@ -82,10 +82,10 @@
         },
         "maps/dark_03.tmx": {
             "scale": 1.8678385416666665,
-            "selectedLayer": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 95.8326943185779,
-                "y": 191.93307772743123
+                "x": 100.11571976298362,
+                "y": 199.4283722551412
             }
         },
         "maps/forest_01.tmx": {
@@ -279,12 +279,12 @@
     "project": "rooms.tiled-project",
     "recentFiles": [
         "tilesets/forest01_night.tsx",
-        "maps/dark_01.tmx",
         "tilesets/tavern01.tsx",
         "maps/cave_02.tmx",
         "tilesets/blue-labels.tsx",
         "maps/dark_03.tmx",
         "maps/dark_02.tmx",
+        "maps/dark_01.tmx",
         "tilesets/forest01.tsx",
         "maps/cave_05.tmx",
         "maps/forest_03_attack.tmx",
