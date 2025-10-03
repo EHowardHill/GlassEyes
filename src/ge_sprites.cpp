@@ -310,6 +310,16 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     }
 }
 
+bound character::get_collision_bounds() const
+{
+    bound collision_bounds = v_sprite.bounds;
+    collision_bounds.height = 24;
+    collision_bounds.position.y = collision_bounds.position.y + 6;
+    collision_bounds.width = 24;
+
+    return collision_bounds;
+}
+
 void character::update(map_manager *current_map, bool db_inactive)
 {
     vector_2 delta = {0, 0};
@@ -526,10 +536,10 @@ void character::update(map_manager *current_map, bool db_inactive)
     {
         // Pixel-perfect collision detection
         // Check future position for each axis separately
-        bound future_bounds_x = v_sprite.bounds;
+        bound future_bounds_x = get_collision_bounds();
         future_bounds_x.position.x = future_bounds_x.position.x + delta.x;
 
-        bound future_bounds_y = v_sprite.bounds;
+        bound future_bounds_y = get_collision_bounds();
         future_bounds_y.position.y = future_bounds_y.position.y + delta.y;
 
         // Check X movement
@@ -547,7 +557,7 @@ void character::update(map_manager *current_map, bool db_inactive)
         // For diagonal movement, also check the combined movement
         if (delta.x != 0 && delta.y != 0)
         {
-            bound future_bounds_both = v_sprite.bounds;
+            bound future_bounds_both = get_collision_bounds();
             future_bounds_both.position.x = future_bounds_both.position.x + delta.x;
             future_bounds_both.position.y = future_bounds_both.position.y + delta.y;
 

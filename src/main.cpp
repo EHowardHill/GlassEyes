@@ -151,15 +151,128 @@ int navigate_map()
 
         else if (current_map.current_map == &map_cave_05)
         {
-            if (global_data_ptr->action_iterations[TOGORE_TASTIC] > 1)
+            auto spk1 = char_mgr.find_by_id(1);
+            auto spk2 = char_mgr.find_by_id(2);
+            auto btn3 = char_mgr.find_by_id(3);
+            if (btn3 != nullptr && btn3->is_pressed)
             {
-                auto spike1 = char_mgr.find_by_id(1);
-                spike1->is_pressed = false;
-                spike1->idle_animation = &elem_spike_down;
+                spk1->is_pressed = false;
+                spk1->idle_animation = &elem_spike_down;
 
-                auto spike2 = char_mgr.find_by_id(2);
-                spike2->is_pressed = false;
-                spike2->idle_animation = &elem_spike_down;
+                spk2->is_pressed = false;
+                spk2->idle_animation = &elem_spike_down;
+            }
+        }
+
+        else if (current_map.current_map == &map_dark_01)
+        {
+            auto spk1 = char_mgr.find_by_id(1);
+            auto btn2 = char_mgr.find_by_id(2);
+            if (btn2 != nullptr && btn2->is_pressed)
+            {
+                spk1->is_pressed = false;
+                spk1->idle_animation = &elem_spike_down;
+            }
+        }
+
+        else if (current_map.current_map == &map_dark_02)
+        {
+            //
+            auto spk1 = char_mgr.find_by_id(1);
+            auto btn2 = char_mgr.find_by_id(2);
+            if (btn2 != nullptr && btn2->is_pressed)
+            {
+                spk1->is_pressed = true;
+                spk1->idle_animation = &elem_spike_up;
+            }
+            else
+            {
+                spk1->is_pressed = false;
+                spk1->idle_animation = &elem_spike_down;
+            }
+
+            //
+            auto spk3 = char_mgr.find_by_id(3);
+            auto btn4 = char_mgr.find_by_id(4);
+            if (btn4 != nullptr && btn4->is_pressed)
+            {
+                spk3->is_pressed = true;
+                spk3->idle_animation = &elem_spike_up;
+            }
+            else
+            {
+                spk3->is_pressed = false;
+                spk3->idle_animation = &elem_spike_down;
+            }
+
+            //
+            auto spk5 = char_mgr.find_by_id(5);
+            auto btn6 = char_mgr.find_by_id(6);
+            if (btn6 != nullptr && btn6->is_pressed)
+            {
+                spk5->is_pressed = true;
+                spk5->idle_animation = &elem_spike_up;
+            }
+            else
+            {
+                spk5->is_pressed = false;
+                spk5->idle_animation = &elem_spike_down;
+            }
+
+            //
+            auto spk7 = char_mgr.find_by_id(7);
+            auto btn8 = char_mgr.find_by_id(8);
+            if (btn8 != nullptr && btn8->is_pressed)
+            {
+                spk7->is_pressed = true;
+                spk7->idle_animation = &elem_spike_up;
+            }
+            else
+            {
+                spk7->is_pressed = false;
+                spk7->idle_animation = &elem_spike_down;
+            }
+
+            //
+            auto spk9 = char_mgr.find_by_id(9);
+            auto btn10 = char_mgr.find_by_id(10);
+            if (btn10 != nullptr && btn10->is_pressed)
+            {
+                spk9->is_pressed = true;
+                spk9->idle_animation = &elem_spike_up;
+            }
+            else
+            {
+                spk9->is_pressed = false;
+                spk9->idle_animation = &elem_spike_down;
+            }
+
+            //
+            auto spk11 = char_mgr.find_by_id(11);
+            auto btn12 = char_mgr.find_by_id(12);
+            if (btn12 != nullptr && btn12->is_pressed)
+            {
+                spk11->is_pressed = true;
+                spk11->idle_animation = &elem_spike_up;
+            }
+            else
+            {
+                spk11->is_pressed = false;
+                spk11->idle_animation = &elem_spike_down;
+            }
+
+            //
+            auto spk13 = char_mgr.find_by_id(13);
+            auto btn14 = char_mgr.find_by_id(14);
+            if (btn14 != nullptr && btn14->is_pressed)
+            {
+                spk13->is_pressed = false;
+                spk13->idle_animation = &elem_spike_down;
+            }
+            else
+            {
+                spk13->is_pressed = true;
+                spk13->idle_animation = &elem_spike_up;
             }
         }
 

@@ -137,6 +137,8 @@ struct character
     int last_significant_y = 0;
     int face_change_cooldown = 0;
 
+    bound get_collision_bounds() const;
+
     character(int index_, vector_2 start_, character_manager *manager);
 
     void update(map_manager *current_map, bool character_box_ended); // This is also fine now

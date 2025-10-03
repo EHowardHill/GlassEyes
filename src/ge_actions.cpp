@@ -1,6 +1,7 @@
 #include "bn_log.h"
 #include "bn_music.h"
 #include "bn_music_items.h"
+#include "bn_sound_items.h"
 
 #include "ge_globals.h"
 #include "ge_sprites.h"
@@ -459,17 +460,6 @@ int action_listener(map_manager *man, character_manager *ch_man)
             {
                 music::stop();
                 music_items::shop.play();
-                break;
-            }
-            case TOGORE_TASTIC:
-            {
-                if (global_data_ptr->action_iterations[TOGORE_TASTIC] == 1)
-                {
-
-                    ch_man->db.emplace();
-                    ch_man->db->load(&togore_01);
-                    ch_man->db->init(ch_man);
-                }
                 break;
             }
             case CHAT_TOLLHOUSE:
@@ -1234,6 +1224,161 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     ch_man->db->load(&broken_avalon_00);
                     ch_man->db->init(ch_man);
                 }
+                break;
+            }
+            case TOGORE_TASTIC:
+            {
+                if (global_data_ptr->action_iterations[TOGORE_TASTIC] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&togore_01);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case TO_UNKNOWN:
+            {
+                music::stop();
+                global_data_ptr->bg_track = &music_items::bg_sorry;
+                global_data_ptr->entry_map = &map_dark_01;
+                global_data_ptr->entry_position = {0, 10};
+                global_data_ptr->ginger_position = {1, 10};
+                return NEW_MAP;
+                break;
+            }
+            case ID_139:
+            {
+                global_data_ptr->entry_map = &map_dark_02;
+                global_data_ptr->entry_position = {5, 1};
+                global_data_ptr->ginger_position = {6, 1};
+                return NEW_MAP;
+                break;
+            }
+            case ID_140:
+            {
+                global_data_ptr->entry_map = &map_dark_02;
+                global_data_ptr->entry_position = {14, 1};
+                global_data_ptr->ginger_position = {13, 1};
+                return NEW_MAP;
+                break;
+            }
+            case ID_141:
+            {
+                global_data_ptr->entry_map = &map_dark_02;
+                global_data_ptr->entry_position = {20, 1};
+                global_data_ptr->ginger_position = {19, 1};
+                return NEW_MAP;
+                break;
+            }
+            case ID_143:
+            {
+                global_data_ptr->entry_map = &map_dark_01;
+                global_data_ptr->entry_position = {5, 22};
+                global_data_ptr->ginger_position = {6, 22};
+                return NEW_MAP;
+                break;
+            }
+            case ID_144:
+            {
+                global_data_ptr->entry_map = &map_dark_01;
+                global_data_ptr->entry_position = {14, 22};
+                global_data_ptr->ginger_position = {13, 22};
+                return NEW_MAP;
+                break;
+            }
+            case ID_145:
+            {
+                global_data_ptr->entry_map = &map_dark_01;
+                global_data_ptr->entry_position = {20, 22};
+                global_data_ptr->ginger_position = {19, 22};
+                return NEW_MAP;
+                break;
+            }
+            case ID_146:
+            {
+                global_data_ptr->entry_map = &map_dark_02;
+                global_data_ptr->entry_position = {17, 13};
+                global_data_ptr->ginger_position = {16, 13};
+                return NEW_MAP;
+                break;
+            }
+            case ID_147:
+            {
+                global_data_ptr->entry_map = &map_dark_02;
+                global_data_ptr->entry_position = {12, 3};
+                global_data_ptr->ginger_position = {11, 3};
+                return NEW_MAP;
+                break;
+            }
+            case FALLDOWN:
+            {
+                sound_items::snd_cnaut.play(1);
+                auto player = ch_man->player_ptr;
+                if (player != nullptr)
+                {
+                    // Get the initial position of the combined sprite's center.
+                    bn::fixed start_center_x = player->v_sprite.sprite_ptr_raw[1]->x(); // Assuming both have the same X
+                    bn::fixed start_center_y = (player->v_sprite.sprite_ptr_raw[0]->y() + player->v_sprite.sprite_ptr_raw[1]->y()) / 2;
+
+                    // --- 2. Find the Destination Point ---
+
+                    // Get the initial position of the reference sprite (raw[1]).
+                    bn::fixed initial_x1 = player->v_sprite.sprite_ptr_raw[1]->x();
+                    bn::fixed initial_y1 = player->v_sprite.sprite_ptr_raw[1]->y();
+
+                    // Calculate the column and row of the tile it's on.
+                    // Using floor_integer() is safe for negative coordinates.
+                    int tile_col = (initial_x1 / 32).floor_integer();
+                    int tile_row = (initial_y1 / 32).floor_integer();
+
+                    // Calculate the world coordinates of that tile's center.
+                    bn::fixed target_center_x = (tile_col * 32) + 16;
+                    bn::fixed target_center_y = (tile_row * 32) + 16;
+
+                    // --- Animation Loop ---
+
+                    // Get the starting scale to calculate progress.
+                    bn::fixed start_scale = player->v_sprite.sprite_ptr_raw[0]->vertical_scale();
+                    bn::fixed new_size = start_scale;
+
+                    // Loop until the sprite has shrunk.
+                    while (new_size > 0.01) // Using 0.01 to avoid floating point inaccuracies at 0
+                    {
+                        new_size -= 0.05;
+                        if (new_size < 0)
+                            new_size = 0;
+
+                        // Set the new scale for both sprites.
+                        player->v_sprite.sprite_ptr_raw[0]->set_scale(new_size);
+                        player->v_sprite.sprite_ptr_raw[1]->set_scale(new_size);
+
+                        // --- 3. Interpolate the Center Position ---
+
+                        // Calculate animation progress (t) from 0.0 (start) to 1.0 (end).
+                        bn::fixed t = (start_scale - new_size) / start_scale;
+
+                        // Linearly interpolate the center position.
+                        // current = start + (target - start) * t
+                        bn::fixed current_center_x = start_center_x + (target_center_x - start_center_x) * t;
+                        bn::fixed current_center_y = start_center_y + (target_center_y - start_center_y) * t;
+
+                        // --- 4. Position Individual Sprites around the new, moving center ---
+
+                        // Calculate the y_offset based on the new scale.
+                        bn::fixed y_offset = (32 * new_size) / 2;
+
+                        // Set positions relative to the *current* interpolated center.
+                        player->v_sprite.sprite_ptr_raw[0]->set_x(current_center_x);
+                        player->v_sprite.sprite_ptr_raw[1]->set_x(current_center_x);
+
+                        player->v_sprite.sprite_ptr_raw[0]->set_y(current_center_y - y_offset);
+                        player->v_sprite.sprite_ptr_raw[1]->set_y(current_center_y + y_offset);
+
+                        // Update the engine state.
+                        bn::core::update();
+                    }
+                }
+                return NEW_MAP;
                 break;
             }
             default:

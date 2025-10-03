@@ -53,7 +53,6 @@ constexpr int is_interactive_array[999] = {
     CHAT_TOLLHOUSE,
     WORM_ACTION,
     NEW_BERLIN_SIGN,
-    TOGORE_TASTIC,
     BROKEN_01,
     BROKEN_02,
     BROKEN_03,
