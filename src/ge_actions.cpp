@@ -14,6 +14,7 @@
 static vector_2 previous_tile = {-1, -1};
 static bool action_triggered = false;
 static bool buffer_active = false;
+static bool dialogue_just_closed = false;
 
 bool is_interactive(int action)
 {
@@ -62,10 +63,10 @@ int action_listener(map_manager *man, character_manager *ch_man)
             }
         }
 
-        if (is_interactive(action) && keypad::a_pressed() && !buffer_active)
+        if (is_interactive(action) && keypad::a_pressed())
         {
+            core::update();
             global_data_ptr->action_iterations[action]++;
-            buffer_active = true;
 
             switch (action)
             {
@@ -504,6 +505,79 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 {
                     ch_man->db.emplace();
                     ch_man->db->load(&broken_avalon_02);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ID_153:
+            {
+                if (global_data_ptr->action_iterations[ID_153] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&item_153);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ID_154:
+            {
+                if (global_data_ptr->action_iterations[ID_154] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&item_none);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ID_155:
+            {
+                bool ready = (global_data_ptr->items[OBJ_FLINT] &&
+                              global_data_ptr->items[OBJ_STEEL] &&
+                              global_data_ptr->items[OBJ_STICKS] &&
+                              global_data_ptr->items[OBJ_STONES]);
+
+                if (!ready && global_data_ptr->action_iterations[ID_155] < 16)
+                {
+                    global_data_ptr->action_iterations[ID_155] = 16;
+                    ch_man->db.emplace();
+                    ch_man->db->load(&item_155);
+                    ch_man->db->init(ch_man);
+                }
+                else if (global_data_ptr->action_iterations[ID_155] < 32)
+                {
+                    global_data_ptr->action_iterations[ID_155] = 32;
+                    ch_man->db.emplace();
+                    ch_man->db->load(&item_155b);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ID_156:
+            {
+                if (global_data_ptr->action_iterations[ID_156] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&item_156);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ID_157:
+            {
+                if (global_data_ptr->action_iterations[ID_157] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&item_157);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ID_158:
+            {
+                if (global_data_ptr->action_iterations[ID_158] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&item_158);
                     ch_man->db->init(ch_man);
                 }
                 break;
@@ -1379,6 +1453,16 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     }
                 }
                 return NEW_MAP;
+                break;
+            }
+            case ID_152:
+            {
+                if (global_data_ptr->action_iterations[ID_152] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&dark_152);
+                    ch_man->db->init(ch_man);
+                }
                 break;
             }
             default:

@@ -953,47 +953,84 @@ broken_avalon_02
 			ACT_SFX_KNOCK	No one seems to	be in right now.									
 														
 sign_135														
-			CITY LIMITS	AVALON VILLAGE										
-			NO HUMANS	ALLOWED										
+				CITY LIMITS	AVALON VILLAGE									
+				NO HUMANS	ALLOWED									
 														
 sign_136														
-			What are you	doing here?										
-			Go home.											
+				What are you	doing here?									
+				Go home.										
 														
 sign_142														
-			WARNING:	Falling Danger										
-	db_ch_ginger	EM_SIDE_EYE	You might want to	be careful..										
+				WARNING:	Falling Danger									
+	db_ch_ginger	EM_SIDE_EYE		You might want to	be careful..									
 														
 talk_151														
-			You hear quiet	snoring under the	blanket.									
-	db_ch_ginger	EM_SIDE_EYE	..											
-			Ginger?	*yawn*									&talk_151_alt_01	
-	db_ch_ginger	EM_DEFAULT	Yeah?		"Oh, sorry."									
-	db_ch_ginger	EM_SIDE_EYE	"He, uh.."		smells familiar.									
-			Ew.	Okay then									&talk_151_alt_02	
-	db_ch_ginger	EM_DEFAULT	I'm sorry.	Mueto thing.										
-	db_ch_ginger	EM_SIDE_EYE	We shouldn't wake	him up.										
+				You hear quiet	snoring under the	blanket.								
+	db_ch_ginger	EM_SIDE_EYE		..										
+				Ginger?	*yawn*								&talk_151_alt_01	
+	db_ch_ginger	EM_DEFAULT		Yeah?		"Oh, sorry."								
+	db_ch_ginger	EM_SIDE_EYE		"He, uh.."		smells familiar.								
+				Ew.	Okay then								&talk_151_alt_02	
+	db_ch_ginger	EM_DEFAULT		I'm sorry.	Mueto thing.									
+	db_ch_ginger	EM_SIDE_EYE		We shouldn't wake	him up.									
 														
 talk_151_alt_01														
-	db_ch_ginger	EM_DEFAULT	You're right.	We need to find	fire material.									
+	db_ch_ginger	EM_DEFAULT		You're right.	We need to find	fire material.								
 														
 talk_151_alt_02														
-	db_ch_ginger	EM_DEFAULT	"Oh.. Yeah, sorry."	Mueto thing.										
-	db_ch_ginger	EM_SIDE_EYE	We shouldn't wake	him up though.										
-	db_ch_ginger	EM_DEFAULT	"I don't know, I"	just have a	"gut feeling, y'know."									
+	db_ch_ginger	EM_DEFAULT		"Oh.. Yeah, sorry."	Mueto thing.									
+	db_ch_ginger	EM_SIDE_EYE		We shouldn't wake	him up though.									
+	db_ch_ginger	EM_DEFAULT		"I don't know, I"	just have a	"gut feeling, y'know."								
 														
 dark_152														
-	db_ch_ginger	EM_EMBARRASSED	Hey.. Friend.	I think.. Maybe..	We should talk.									
-	db_ch_ginger	EM_ANNOYED	..											
-	db_ch_ginger	EM_DISAPPOINTED	"I'm a mueto,"	"you're a human,"	and.. Well..									
-	db_ch_ginger	EM_DISAPPOINTED	The muetos and	the humans have	been at war for..									
-	db_ch_ginger	EM_DISAPPOINTED	I don't know..		A long time.									
-	db_ch_ginger	EM_ANNOYED	You're probably	confused as to why	I'm so friendly.									
-	db_ch_ginger	EM_EMBARRASSED	I think the muetos	in Avalon are	probably fine.									
-	db_ch_ginger	EM_EMBARRASSED	This happens all	the time. Like	you saw in Berlin.									
-	db_ch_ginger	EM_LAUGH	I guess it's nice we	found a way to leave	without the toll.									
-	db_ch_ginger	EM_SULLEN	..											
-	db_ch_ginger	EM_SULLEN	I'm not what I	"look like, human."										
-	db_ch_ginger	EM_SULLEN	..											
-	db_ch_ginger	EM_SULLEN	..	..	..									
-	db_ch_ginger	EM_DEFAULT	It's cold.	Let's make a fire	and then talk more.									
+	db_ch_ginger	EM_EMBARRASSED		Hey.. Friend.	I think.. Maybe..	We should talk.				CHAR_FIRE	&fire_on			
+	db_ch_ginger	EM_ANNOYED		..										
+	db_ch_ginger	EM_DISAPPOINTED		"I'm a mueto,"	"you're a human,"	and.. Well..								
+	db_ch_ginger	EM_DISAPPOINTED		The muetos and	the humans have	been at war for..								
+	db_ch_ginger	EM_DISAPPOINTED		I don't know..		A long time.								
+	db_ch_ginger	EM_ANNOYED		You're probably	confused as to why	I'm so friendly.								
+	db_ch_ginger	EM_EMBARRASSED		I think the muetos	in Avalon are	probably fine.								
+	db_ch_ginger	EM_EMBARRASSED		This happens all	the time. Like	you saw in Berlin.								
+	db_ch_ginger	EM_LAUGH		I guess it's nice we	found a way to leave	without the toll.								
+	db_ch_ginger	EM_SULLEN		..										
+	db_ch_ginger	EM_SULLEN		I'm not what I	"look like, human."									
+	db_ch_ginger	EM_SULLEN		..										
+	db_ch_ginger	EM_SULLEN		..	..	..								
+	db_ch_ginger	EM_DEFAULT		It's cold.	Let's make a fire	and then talk more.								
+														
+dark_info														
+	db_ch_ginger	EM_DEFAULT		Hey.. Whenever	you see the snow	"like this,"								
+	db_ch_ginger	EM_DEFAULT		There's a good	chance someone	dropped something.								
+	db_ch_ginger	EM_SIDE_EYE		Might be useful.										
+														
+item_153														
+				You found:	A STICK!									
+				"It's a great stick,"	too.									
+		EM_SKIP	ACT_ITEM							OBJ_STICKS				
+														
+item_156														
+				You found:	FLINT!									
+				What's it doing	out here?									
+		EM_SKIP	ACT_ITEM							OBJ_FLINT				
+														
+item_157														
+				You found:	A STEEL!									
+				"Completely free,"	off the ground.	What a steel.								
+		EM_SKIP	ACT_ITEM							OBJ_STEEL				
+														
+item_158														
+				You found:	SOME STONES!									
+				Stone is common.	"LIFTABLE stone,"	on the other hand..								
+		EM_SKIP	ACT_ITEM							OBJ_STONES				
+														
+item_155														
+				This would be a	great spot for a	campfire.								
+				You still need some	things before you	can make one.								
+														
+item_155b														
+		EM_SKIP	ACT_SFX_FIRE											
+	db_ch_ginger	EM_HAPPY	ACT_MUSIC_FADEOUT	Ahh..	There we go.	Much better.				CHAR_FIRE	&fire_on			
+														
+														
+item_none														
+				Doesn't seem to	be anything here.	Sorry.								

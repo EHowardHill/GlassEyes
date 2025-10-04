@@ -89,6 +89,7 @@ enum character_list
     CHAR_TOLLBOOTH,
     CHAR_SPAMTON,
     CHAR_TOGORE,
+    CHAR_FIRE,
     CHAR_SIZE,
     CHAR_TYPEWRITER
 };

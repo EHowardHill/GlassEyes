@@ -60,6 +60,7 @@ enum actions
     ACT_ITEM,
     ACT_CUE_GINGER,
     ACT_SFX_KNOCK,
+    ACT_SFX_FIRE,
     ACT_HP,
     ACT_GAME,
     ACT_GOLD,
@@ -178,6 +179,10 @@ enum ITEMS
     OBJ_PHOTO,
     OBJ_DOCUMENT,
     OBJ_TICKET,
+    OBJ_FLINT,
+    OBJ_STEEL,
+    OBJ_STICKS,
+    OBJ_STONES,
     ITEMS_SIZE
 };
 

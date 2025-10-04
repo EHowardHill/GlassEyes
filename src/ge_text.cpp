@@ -43,10 +43,20 @@ constexpr char alphabet[] = {
 const char *ITEM_LABELS[ITEMS_SIZE] = {
     "Lime",
     "Photo (Croke)",
-    "Document"};
+    "Document",
+    "Ticket",
+    "Flint",
+    "Steel",
+    "Sticks",
+    "Stones"};
 
 const bool ITEM_DROP[ITEMS_SIZE] = {
     true,
+    false,
+    false,
+    false,
+    false,
+    false,
     false,
     false};
 
@@ -400,6 +410,11 @@ void dialogue_box::init(character_manager *ch_man)
         case ACT_SFX_KNOCK:
         {
             sound_items::sfx_knock.play();
+            break;
+        }
+        case ACT_SFX_FIRE:
+        {
+            sound_items::sfx_fire.play();
             break;
         }
         case ACT_MUSIC_VISKER:

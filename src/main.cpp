@@ -166,12 +166,22 @@ int navigate_map()
 
         else if (current_map.current_map == &map_dark_01)
         {
+            //
             auto spk1 = char_mgr.find_by_id(1);
             auto btn2 = char_mgr.find_by_id(2);
             if (btn2 != nullptr && btn2->is_pressed)
             {
                 spk1->is_pressed = false;
                 spk1->idle_animation = &elem_spike_down;
+            }
+
+            //
+            auto spk3 = char_mgr.find_by_id(3);
+            auto btn4 = char_mgr.find_by_id(4);
+            if (btn4 != nullptr && btn4->is_pressed)
+            {
+                spk3->is_pressed = false;
+                spk3->idle_animation = &elem_spike_down;
             }
         }
 

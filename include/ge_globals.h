@@ -170,6 +170,11 @@ enum action_list
 	ID_153,
 	ID_154,
 	ID_155,
+	ID_156,
+	ID_157,
+	ID_158,
+	ID_159,
+	ID_160,
 	FALLDOWN,
 	ACTIONS_SIZE
 };

@@ -23,6 +23,7 @@
 #include "bn_sprite_items_spr_spamton_01.h"
 #include "bn_sprite_items_spr_wormguy_01.h"
 #include "bn_sprite_items_spr_togore_01.h"
+#include "bn_sprite_items_spr_fire.h"
 #include "bn_sprite_items_spr_elements.h"
 
 #include "ge_structs.h"
@@ -277,6 +278,11 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     case CHAR_TOGORE:
     {
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_togore_01;
+        break;
+    }
+    case CHAR_FIRE:
+    {
+        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_fire;
         break;
     }
     case ITEM_BUTTON:
