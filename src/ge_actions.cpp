@@ -1465,6 +1465,16 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case DARK_INSTA:
+            {
+                if (global_data_ptr->action_iterations[DARK_INSTA] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&dark_talk);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
             default:
             {
                 break;

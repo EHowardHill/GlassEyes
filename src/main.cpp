@@ -623,6 +623,17 @@ int main()
                 global_data_ptr->bg_track = &music_items::bg_avalon;
                 break;
             }
+            case DARK_TO_DARK:
+            {
+                typewriter(TYPEWRITER_BUFFER);
+                music::stop();
+
+                global_data_ptr->entry_map = &map_dark_04;
+                global_data_ptr->entry_position = {3, 22};
+                global_data_ptr->ginger_position = {5, 22};
+                global_data_ptr->bg_track = &music_items::ambient_wind;
+                break;
+            }
             case FINAL_MSG:
             {
                 typewriter(TYPEWRITER_BUFFER);

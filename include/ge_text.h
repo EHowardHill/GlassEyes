@@ -26,6 +26,7 @@ enum progress
     FOREST_01,
     PIT_01,
     AVALON,
+    DARK_TO_DARK,
     NEW_BERLIN,
     YOUTUBE_AD,
     FINAL_MSG,

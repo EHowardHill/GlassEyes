@@ -175,6 +175,8 @@ enum action_list
 	ID_158,
 	ID_159,
 	ID_160,
+	DARK_INSTA,
+	TO_SEBELLUS,
 	FALLDOWN,
 	ACTIONS_SIZE
 };

@@ -24,6 +24,7 @@
 #include "bn_sprite_items_spr_wormguy_01.h"
 #include "bn_sprite_items_spr_togore_01.h"
 #include "bn_sprite_items_spr_fire.h"
+#include "bn_sprite_items_spr_sebellus.h"
 #include "bn_sprite_items_spr_elements.h"
 
 #include "ge_structs.h"
@@ -285,6 +286,11 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_fire;
         break;
     }
+    case CHAR_SEBELLUS:
+    {
+        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_sebellus;
+        break;
+    }
     case ITEM_BUTTON:
     {
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_elements;
@@ -480,7 +486,7 @@ void character::update(map_manager *current_map, bool db_inactive)
     {
         // For following characters, only update direction if cooldown is done
         // and movement is significant
-        if (is_follow)
+        if (is_follow && !ch_man->db.has_value())
         {
             if (face_change_cooldown == 0)
             {

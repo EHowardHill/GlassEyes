@@ -983,7 +983,7 @@ talk_151_alt_02
 	db_ch_ginger	EM_DEFAULT		"I don't know, I"	just have a	"gut feeling, y'know."								
 														
 dark_152														
-	db_ch_ginger	EM_EMBARRASSED		Hey.. Friend.	I think.. Maybe..	We should talk.				CHAR_FIRE	&fire_on			
+	db_ch_ginger	EM_EMBARRASSED		Hey.. Friend.	I think.. Maybe..	We should talk.								
 	db_ch_ginger	EM_ANNOYED		..										
 	db_ch_ginger	EM_DISAPPOINTED		"I'm a mueto,"	"you're a human,"	and.. Well..								
 	db_ch_ginger	EM_DISAPPOINTED		The muetos and	the humans have	been at war for..								
@@ -1030,7 +1030,83 @@ item_155
 item_155b														
 		EM_SKIP	ACT_SFX_FIRE											
 	db_ch_ginger	EM_HAPPY	ACT_MUSIC_FADEOUT	Ahh..	There we go.	Much better.				CHAR_FIRE	&fire_on			
-														
+			ACT_PROGRESS							DARK_TO_DARK				
 														
 item_none														
 				Doesn't seem to	be anything here.	Sorry.								
+														
+dark_talk														
+		EM_SKIP								CHAR_JEREMY	&jeremy_lay_down			
+		EM_SKIP								CHAR_GINGER	&ginger_sit_sad			
+		EM_SKIP								CHAR_FIRE	&fire_on			
+	db_ch_ginger	EM_SAD		"Hey, uh.."	Now that we're	"settled,"								
+	db_ch_ginger	EM_DEFAULT		I imagine you	probably have	questions.								
+				No not really	Yeah								&dark_talk_alt_01	
+	db_ch_ginger	EM_SAD		Well.. Here goes.	Muetos aren't what	we might seem.								
+	db_ch_ginger	EM_SULLEN		I don't know how	much you know	"about us, but.."								
+	db_ch_ginger	EM_SULLEN		Our life cycle	"goes like this,"	right?								
+	db_ch_ginger	EM_SULLEN		We pop out of	tunnels in the	"ground,"								
+	db_ch_ginger	EM_SULLEN		Already knowing	how to talk and	"all that,"								
+	db_ch_ginger	EM_SULLEN		Then we find a	village and live	"for a couple years,"								
+	db_ch_ginger	EM_SULLEN		Until we die.	Then they throw	our bodies into								
+	db_ch_ginger	EM_SULLEN		"the tunnels, where"	it starts over	again.								
+	db_ch_ginger	EM_SAD		"""Where do the"	"bodies come from,"""	you might ask.								
+				I won't ask	Right								&dark_talk_alt_02	
+	db_ch_ginger	EM_SULLEN		Canterbury.	"There's a man there,"	Dr. Henry Erickson.								
+	db_ch_ginger	EM_SIDE_EYE		You might have	heard of him	before.								
+	db_ch_ginger	EM_SULLEN		Well.. He's still	alive. And he makes	us. In a lab.								
+	db_ch_ginger	EM_SAD		But that's not even	the worst part of it	all.								
+	db_ch_ginger	EM_SAD		Every mueto you	meet.. Has the piece	of a human soul								
+	db_ch_ginger	EM_SAD		inside of them.	Slowly killing the	"human ""donor""."								
+	db_ch_ginger	EM_SAD		You know how	all the humans in	the city act..								
+	db_ch_ginger	EM_SAD		Off? Lethargic.	Distressed.	Paranoid.								
+	db_ch_ginger	EM_SAD		It's because Henry	is using evil magic	to siphon souls								
+	db_ch_ginger	EM_SAD		into these meat	puppets. I don't	know his goal.								
+	db_ch_ginger	EM_SULLEN		And how do I	know all this?									
+				I don't care	How?								&dark_talk_alt_03	
+	db_ch_ginger	EM_DEFAULT		Because I'm one	of only two muetos	in the world								
+	db_ch_ginger	EM_DEFAULT		Who had an	ENTIRE human soul	moved over.								
+	db_ch_ginger	EM_SULLEN		I was a human	not even that	long ago.								
+	db_ch_ginger	EM_SAD		I've been told my	human body is	in a coma.								
+	db_ch_ginger	EM_SULLEN		Anyways.. I want	to get to Canterbury	to stop this.								
+	db_ch_ginger	EM_SULLEN		"Something very,"	very wrong is	happening.								
+	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	"H-Hey,"	what was that??					CHAR_GINGER	&ginger_sit_alert			
+		EM_SKIP								CHAR_GINGER	&anim_stand			
+														
+dark_talk_alt_01														
+	db_ch_ginger	EM_DEFAULT		Like what?										
+				Who are you?	Why are you so green								&dark_talk_alt_04	
+	db_ch_ginger	EM_LAUGH		You're not gonna	"believe this, but.."									
+	db_ch_ginger	EM_SAD		"I'm, uh.."	Princess Selari.									
+	db_ch_ginger	EM_EMBARRASSED		I ran away from	home because of..	personal reasons.								
+	db_ch_ginger	EM_DEFAULT		There's someone	I need to see in	Canterbury.								
+	db_ch_ginger	EM_DEFAULT		It's the best way	for you to get home	"too, though, so.."								
+	db_ch_ginger	EM_DEFAULT		I'm not putting	you out or anything	like that.								
+	db_ch_ginger	EM_HAPPY		I'm very happy I	"bumped into you,"	I wouldn't have								
+	db_ch_ginger	EM_HAPPY		been able to get	this far without	you.								
+	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	"H-Hey,"	what was that??					CHAR_GINGER	&ginger_sit_alert			
+		EM_SKIP								CHAR_GINGER	&anim_stand			
+														
+dark_talk_alt_04														
+	db_ch_ginger	EM_LAUGH		The limes.	You are what you	eat and all that.								
+	db_ch_ginger	EM_SULLEN		But seriously..	I'm a Marelon.	"We, uh.."								
+	db_ch_ginger	EM_DEFAULT		We're a special	kind of mueto that	is very rare.								
+	db_ch_ginger	EM_SIDE_EYE		There are only	three of us in the	whole world.								
+	db_ch_ginger	EM_DEFAULT		"We're green, and.."	"well.. We, uh.. Play"	a certain role								
+	db_ch_ginger	EM_DEFAULT		in the kingdom.										
+	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	"H-Hey,"	what was that??					CHAR_GINGER	&ginger_sit_alert			
+		EM_SKIP								CHAR_GINGER	&anim_stand			
+														
+dark_talk_alt_02														
+	db_ch_ginger	EM_EMBARRASSED		It's uh..	"pretty gross, but.."	Well..								
+	db_ch_ginger	EM_SULLEN		All I'll say for now	is that we come	"from Canterbury,"								
+	db_ch_ginger	EM_SULLEN		"and there's a, uh.."	reason I want to go.									
+	db_ch_ginger	EM_SULLEN		It's the best way	for you to get home	"too, though, so.."								
+	db_ch_ginger	EM_DEFAULT		I'm not putting	you out or anything.	It's serendipitous.								
+	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	"H-Hey,"	what was that??					CHAR_GINGER	&ginger_sit_alert			
+		EM_SKIP								CHAR_GINGER	&anim_stand			
+														
+dark_talk_alt_03														
+	db_ch_ginger	EM_DEFAULT		"It's because, I'm.."	uh..									
+	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	"H-Hey,"	what was that??					CHAR_GINGER	&ginger_sit_alert			
+		EM_SKIP								CHAR_GINGER	&anim_stand			

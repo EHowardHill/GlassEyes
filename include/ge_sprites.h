@@ -90,6 +90,7 @@ enum character_list
     CHAR_SPAMTON,
     CHAR_TOGORE,
     CHAR_FIRE,
+    CHAR_SEBELLUS,
     CHAR_SIZE,
     CHAR_TYPEWRITER
 };
