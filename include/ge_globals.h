@@ -177,6 +177,11 @@ enum action_list
 	ID_160,
 	DARK_INSTA,
 	TO_SEBELLUS,
+	SEB_PREPARE,
+	SEB_CHAT_01,
+	TO_DARK_PUZZLE_01,
+	SEB_CHAT_02,
+	TO_BUNKER,
 	FALLDOWN,
 	ACTIONS_SIZE
 };
@@ -195,6 +200,7 @@ struct global_data
 	const regular_bg_item *bg = nullptr;
 	vector_2 entry_position = {0, 0};
 	vector_2 ginger_position = {0, 0};
+	vector_2 sebellus_position = {0, 0};
 	int entry_direction = DIR_RIGHT;
 	int foe = 0;
 	int hp[4] = {20, 20, 20, 20};

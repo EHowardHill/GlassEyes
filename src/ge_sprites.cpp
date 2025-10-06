@@ -25,6 +25,7 @@
 #include "bn_sprite_items_spr_togore_01.h"
 #include "bn_sprite_items_spr_fire.h"
 #include "bn_sprite_items_spr_sebellus.h"
+#include "bn_sprite_items_spr_special_sebellus_01.h"
 #include "bn_sprite_items_spr_elements.h"
 
 #include "ge_structs.h"
@@ -153,7 +154,7 @@ void v_sprite_ptr::update(bool dialogue_box_ended)
                 }
 
                 // Always update both sprites (tall sprites)
-                item->sprite_ptr_raw[0].value().set_position(bounds.position.x, bounds.position.y - 32);
+                item->sprite_ptr_raw[0].value().set_position(bounds.position.x, bounds.position.y - item->sprite_item_ptr->shape_size().width());
                 item->sprite_ptr_raw[0].value().set_tiles(item->sprite_item_ptr->tiles_item(), item->frame * 2);
 
                 if (item->sprite_ptr_raw[1].has_value())
@@ -289,6 +290,11 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     case CHAR_SEBELLUS:
     {
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_sebellus;
+        break;
+    }
+    case CHAR_SEBELLUS_MONSTER:
+    {
+        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_special_sebellus_01;
         break;
     }
     case ITEM_BUTTON:

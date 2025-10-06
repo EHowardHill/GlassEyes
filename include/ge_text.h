@@ -60,6 +60,7 @@ enum actions
     ACT_PROGRESS,
     ACT_ITEM,
     ACT_CUE_GINGER,
+    ACT_CUE_SEBELLUS,
     ACT_SFX_KNOCK,
     ACT_SFX_FIRE,
     ACT_HP,
@@ -67,6 +68,9 @@ enum actions
     ACT_GOLD,
     ACT_MUSIC_VISKER,
     ACT_MUSIC_GINGER,
+    ACT_MUSIC_BORED,
+    ACT_MUSIC_SORRY,
+    ACT_MUSIC_WIND,
     ACT_MUSIC_FADEOUT,
     ACT_MUSIC_RESET,
 };

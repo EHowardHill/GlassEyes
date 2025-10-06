@@ -961,7 +961,7 @@ sign_136
 				Go home.										
 														
 sign_142														
-				WARNING:	Falling Danger									
+				WARNING:	Don't get stuck.									
 	db_ch_ginger	EM_SIDE_EYE		You might want to	be careful..									
 														
 talk_151														
@@ -1110,3 +1110,36 @@ dark_talk_alt_03
 	db_ch_ginger	EM_DEFAULT		"It's because, I'm.."	uh..									
 	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	"H-Hey,"	what was that??					CHAR_GINGER	&ginger_sit_alert			
 		EM_SKIP								CHAR_GINGER	&anim_stand			
+														
+sebellus_00														
+		EM_SKIP								CHAR_SEBELLUS	&sebellus_hide			
+														
+sebellus_01														
+	db_ch_ginger	EM_WAT		S-SEBELLUS??										
+	db_ch_sebellus	EM_DEFAULT	ACT_MUSIC_BORED	Oh! Hi!!	And there's a	human!				CHAR_SEBELLUS_MONSTER	&sm_stab_02			
+	db_ch_sebellus	EM_DEFAULT		I swear this is not	what it looks like.					CHAR_SEBELLUS_MONSTER	&sm_stab_01			
+	db_ch_ginger	EM_DEFAULT		Uh.. What do you	mean?									
+	db_ch_sebellus	EM_DEFAULT		I have indeed	slain this mighty	bug.								
+	db_ch_ginger	EM_DEFAULT		Yeah.. What do you	think it looks like?									
+	db_ch_sebellus	EM_SIDE_EYE		"Well, you know."										
+	db_ch_ginger	EM_DEFAULT		..No I don't.										
+	db_ch_ginger	EM_SIDE_EYE		"This is Sebellus,"	he's my older	brother.								
+	db_ch_ginger	EM_DEFAULT		I'm not sure how	he got all the way	out here.								
+	db_ch_sebellus	EM_DEFAULT		How *I* got out	"here, how did YOU"	get out here?								
+	db_ch_sebellus	EM_DEFAULT		They are so	worried about you	back home!								
+	db_ch_ginger	EM_SAD		I know.			COLOR_PURPLE							
+	db_ch_sebellus	EM_DEFAULT		"Did, the, uh,"	human kidnap you?	Do I need to kill-								
+	db_ch_ginger	EM_WAT		NO! I-I rescued him.										
+	db_ch_ginger	EM_SULLEN		I'm.. Here of my	own volition.									
+	db_ch_sebellus	EM_DEFAULT		She runs away	"all the time, this"	is normal.								
+	db_ch_sebellus	EM_SIDE_EYE		Hey.. I saw a house	not far from here.	We can stay there!								
+	db_ch_ginger	EM_DEFAULT		I.. Uh.. Sebellus.	"I don't think, uh.."	I'm not going-								
+	db_ch_sebellus	EM_DEFAULT		It'll be fun!										
+	db_ch_ginger	EM_SIDE_EYE		..I guess we're a	"party of three, now."									
+		EM_SKIP	ACT_MUSIC_WIND							CHAR_SEBELLUS_MONSTER	&sm_dead			
+		EM_SKIP	ACT_CUE_SEBELLUS											
+														
+sebellus_02														
+	db_ch_sebellus	EM_SIDE_EYE		"Oh.. Duh, forgot"	to tell you.									
+	db_ch_sebellus	EM_DEFAULT		It's very well-	"guarded, there are"	all these puzzles.								
+	db_ch_sebellus	EM_LAUGH		"See, I'm not so"	smart though..									

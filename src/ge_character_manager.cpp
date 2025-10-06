@@ -13,6 +13,7 @@
 #include "ge_maps.h"
 #include "ge_globals.h"
 #include "ge_animations.h"
+#include "ge_map_data.h"
 
 #include "bn_sprite_items_hearts.h"
 
@@ -20,6 +21,23 @@ using namespace bn;
 
 character_manager::character_manager() : player_ptr(nullptr)
 {
+}
+
+void character_manager::toggle_button(int id)
+{
+    auto btn = find_by_id(id);
+    if (btn != nullptr)
+    {
+        btn->is_pressed = !btn->is_pressed;
+        if (btn->is_pressed)
+        {
+            btn->idle_animation = &elem_button_down;
+        }
+        else
+        {
+            btn->idle_animation = &elem_button_up;
+        }
+    }
 }
 
 character *character_manager::add_character(int index, vector_2 position, int id)
@@ -244,24 +262,61 @@ void character_manager::update(map_manager *current_map = nullptr)
                     vector_2 f_pos = {player_ptr->v_sprite.bounds.position.x / 32, player_ptr->v_sprite.bounds.position.y / 32};
                     vector_2 m_pos = {ch->v_sprite.bounds.position.x / 32, ch->v_sprite.bounds.position.y / 32};
 
-                    if (f_pos.x.integer() == m_pos.x.integer() && f_pos.y.integer() == m_pos.y.integer())
+                    if (current_map->current_map == &map_cave_05)
                     {
-                        sound_items::snd_alert.play(0.5);
-                        ch->idle_animation = &elem_button_down;
-                        ch->is_pressed = true;
+                        auto togore = find_by_index(CHAR_TOGORE);
+                        if (togore != nullptr)
+                        {
+                            vector_2 t_pos = {togore->v_sprite.bounds.position.x / 32, togore->v_sprite.bounds.position.y / 32};
+
+                            if (t_pos.x.integer() == m_pos.x.integer() && t_pos.y.integer() == m_pos.y.integer())
+                            {
+                                sound_items::snd_alert.play(0.5);
+                                ch->idle_animation = &elem_button_down;
+                                ch->is_pressed = true;
+                            }
+                        }
                     }
 
-                    auto togore = find_by_index(CHAR_TOGORE);
-                    if (togore != nullptr)
+                    // Puzzle Room
+                    else if (current_map->current_map == &map_dark_06)
                     {
-                        vector_2 t_pos = {togore->v_sprite.bounds.position.x / 32, togore->v_sprite.bounds.position.y / 32};
-
-                        if (t_pos.x.integer() == m_pos.x.integer() && t_pos.y.integer() == m_pos.y.integer())
+                        if (f_pos.x.integer() == m_pos.x.integer() && f_pos.y.integer() == m_pos.y.integer())
                         {
                             sound_items::snd_alert.play(0.5);
                             ch->idle_animation = &elem_button_down;
                             ch->is_pressed = true;
+
+                            int pressed_id = ch->id;
+
+                            if (pressed_id > 3)
+                            {
+                                toggle_button(pressed_id - 3);
+                            }
+
+                            if (pressed_id < 7)
+                            {
+                                toggle_button(pressed_id + 3);
+                            }
+
+                            if (pressed_id % 3 != 1)
+                            {
+                                toggle_button(pressed_id - 1);
+                            }
+
+                            if (pressed_id % 3 != 0)
+                            {
+                                toggle_button(pressed_id + 1);
+                            }
                         }
+                    }
+
+                    // Otherwise
+                    else if (f_pos.x.integer() == m_pos.x.integer() && f_pos.y.integer() == m_pos.y.integer())
+                    {
+                        sound_items::snd_alert.play(0.5);
+                        ch->idle_animation = &elem_button_down;
+                        ch->is_pressed = true;
                     }
                 }
             }

@@ -81,7 +81,7 @@ letter::letter(char ch, vector_2 ideal_position_, int color_) : ideal_position(i
 
     if (char_index > -1)
     {
-        sprite = sprite_items::spr_font_01.create_sprite(ideal_position_.x, ideal_position_.y, char_index + (47 * color_));
+        sprite = sprite_items::spr_font_01.create_sprite(ideal_position_.x, ideal_position_.y, char_index + (94 * color_));
     }
 }
 
@@ -429,6 +429,24 @@ void dialogue_box::init(character_manager *ch_man)
             music_items::theme_ginger.play(0.75);
             break;
         }
+        case ACT_MUSIC_SORRY:
+        {
+            music::stop();
+            music_items::bg_sorry.play(0.75);
+            break;
+        }
+        case ACT_MUSIC_BORED:
+        {
+            music::stop();
+            music_items::bg_bored.play(0.75);
+            break;
+        }
+        case ACT_MUSIC_WIND:
+        {
+            music::stop();
+            music_items::ambient_wind.play(0.75);
+            break;
+        }
         case ACT_MUSIC_FADEOUT:
         {
             ch_man->music_fadeout = true;
@@ -486,6 +504,15 @@ void dialogue_box::init(character_manager *ch_man)
             auto ginger = ch_man->find_by_index(CHAR_GINGER);
             ginger->is_follow = true;
             ginger->follow_id = CHAR_JEREMY;
+            break;
+        }
+        case ACT_CUE_SEBELLUS:
+        {
+            auto seb = ch_man->find_by_index(CHAR_SEBELLUS);
+            seb->is_follow = true;
+            seb->follow_id = CHAR_GINGER;
+            seb->current_animation = &anim_stand;
+            seb->idle_animation = &anim_stand;
             break;
         }
         default:

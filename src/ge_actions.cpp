@@ -1475,6 +1475,62 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case TO_SEBELLUS:
+            {
+                global_data_ptr->entry_map = &map_dark_05;
+                global_data_ptr->entry_position = {1, 30};
+                global_data_ptr->ginger_position = {1, 29};
+
+                music::stop();
+                global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+                return NEW_MAP;
+                break;
+            }
+            case SEB_PREPARE:
+            {
+                if (global_data_ptr->action_iterations[SEB_PREPARE] == 1)
+                {
+                    auto seb = ch_man->find_by_index(CHAR_SEBELLUS);
+                    if (seb != nullptr)
+                    {
+                        seb->current_animation = &sebellus_hide;
+                        seb->idle_animation = &sebellus_hide;
+                    }
+                }
+                break;
+            }
+            case SEB_CHAT_01:
+            {
+                if (global_data_ptr->action_iterations[SEB_CHAT_01] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&sebellus_01);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case TO_DARK_PUZZLE_01:
+            {
+                global_data_ptr->entry_map = &map_dark_06;
+                global_data_ptr->entry_position = {2, 18};
+                global_data_ptr->ginger_position = {2, 17};
+                global_data_ptr->ginger_position = {1, 18};
+
+                music::stop();
+                global_data_ptr->bg_track = &music_items::bg_sorry;
+                return NEW_MAP;
+                break;
+            }
+            case SEB_CHAT_02:
+            {
+                if (global_data_ptr->action_iterations[SEB_CHAT_02] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&sebellus_02);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
             default:
             {
                 break;

@@ -6,8 +6,11 @@
 #include "bn_list.h"
 #include "bn_unique_ptr.h"
 #include "bn_optional.h"
+
 #include "ge_sprites.h"
 #include "ge_text.h"
+#include "ge_maps.h"
+
 #include "main.h"
 
 // Forward declarations to break circular dependencies
@@ -38,6 +41,7 @@ struct character_manager
     int size() const { return characters.size(); }
 
     bool music_fadeout = false;
+    void toggle_button(int id);
 
     template <typename Func>
     void for_each(Func func)

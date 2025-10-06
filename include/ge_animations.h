@@ -22,6 +22,12 @@ const animation ginger_eat_lime = {{9}, 1, SP_DEFAULT, true};
 const animation ginger_sit_alert = {{10}, 1, SP_DEFAULT, true};
 const animation ginger_sit_sad = {{11}, 1, SP_DEFAULT, true};
 
+// Sebellus
+const animation sebellus_hide = {{9}, 1, SP_DEFAULT, true};
+const animation sm_stab_01 = {{0}, 1, SP_DEFAULT, true};
+const animation sm_stab_02 = {{1}, 1, SP_DEFAULT, true};
+const animation sm_dead = {{2}, 1, SP_DEFAULT, true};
+
 // Croke
 const animation croke_accuse = {{9}, 1, SP_DEFAULT, true};
 const animation croke_lay_down = {{10}, 1, SP_DEFAULT, true};
