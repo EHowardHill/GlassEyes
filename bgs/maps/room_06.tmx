@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="../tilesets/room03.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,111,113,116,105,108,111,0,
+0,112,114,117,106,109,112,0,
+0,104,115,118,107,110,119,0,
+0,104,104,104,104,104,120,0,
+0,104,104,104,104,104,104,0,
+0,0,0,104,104,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
