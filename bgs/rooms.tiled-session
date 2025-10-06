@@ -28,8 +28,8 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 512,
-                "y": 512.3333333333334
+                "x": 511.99999999999994,
+                "y": 512.3333333333333
             }
         },
         "maps/cave_03.tmx": {
@@ -68,24 +68,24 @@
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 134,
-                "y": 425.5
+                "x": 330,
+                "y": 414.5
             }
         },
         "maps/dark_02.tmx": {
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 390,
-                "y": 396.5
+                "x": 448,
+                "y": 448.5
             }
         },
         "maps/dark_03.tmx": {
             "scale": 1.8678385416666665,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 100.11571976298362,
-                "y": 199.4283722551412
+                "x": 95.8326943185779,
+                "y": 191.93307772743117
             }
         },
         "maps/forest_01.tmx": {
