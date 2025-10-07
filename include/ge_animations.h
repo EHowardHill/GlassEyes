@@ -29,6 +29,9 @@ const animation sebellus_hide = {{9}, 1, SP_DEFAULT, true};
 const animation sm_stab_01 = {{0}, 1, SP_DEFAULT, true};
 const animation sm_stab_02 = {{1}, 1, SP_DEFAULT, true};
 const animation sm_dead = {{2}, 1, SP_DEFAULT, true};
+const animation sebellus_sleep_01 = {{10}, 1, SP_DEFAULT, true};
+const animation sebellus_sleep_02 = {{11}, 1, SP_DEFAULT, true};
+const animation sebellus_sleep_03 = {{12, 13}, 2, SP_SLOW, true};
 
 // Croke
 const animation croke_accuse = {{9}, 1, SP_DEFAULT, true};

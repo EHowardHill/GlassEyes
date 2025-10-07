@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/room_hallway.tmx",
+    "activeFile": "maps/room_04.tmx",
     "expandedProjectPaths": [
+        ".",
         "tilesets",
-        "maps",
-        "."
+        "maps"
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -196,15 +196,15 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 322.5,
+                "x": 322,
                 "y": 235
             }
         },
         "maps/room_04.tmx": {
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 125.75,
+                "x": 125.5,
                 "y": 172
             }
         },
@@ -228,7 +228,7 @@
             "scale": 1.9296875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 63.7408906882591,
+                "x": 94.83400809716599,
                 "y": 191.7408906882591
             }
         },
@@ -319,11 +319,14 @@
     "map.tileWidth": 32,
     "map.width": 4,
     "openFiles": [
-        "maps/room_hallway.tmx",
-        "tilesets/tavern01.tsx"
+        "maps/room_04.tmx",
+        "maps/room_02.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/room_02.tmx",
+        "maps/room_04.tmx",
+        "maps/room_03.tmx",
         "tilesets/tavern01.tsx",
         "maps/room_hallway.tmx",
         "tilesets/forest01_night.tsx",
@@ -332,9 +335,6 @@
         "maps/dark_03.tmx",
         "tilesets/blue-labels.tsx",
         "maps/cave_02.tmx",
-        "maps/room_03.tmx",
-        "maps/room_02.tmx",
-        "maps/room_04.tmx",
         "maps/room_05.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",

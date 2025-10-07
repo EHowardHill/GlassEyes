@@ -1299,8 +1299,9 @@ const conversation talk_189 = {
 
 const conversation talk_190 = {
     {0, &sprite_items::db_ch_sebellus, EM_DEFAULT, ACT_DEFAULT, "I'm glad you were", "nice to my little", "sister, Ginger.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)},
-    {0, &sprite_items::db_ch_sebellus, EM_LAUGH, ACT_DEFAULT, "I would have killed", "you otherwise,", "you know.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)},
-    {0, &sprite_items::db_ch_sebellus, EM_DEFAULT, ACT_DEFAULT, "Anyways, I'm", "going to get some", "sleep now.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)},
+    {0, &sprite_items::db_ch_sebellus, EM_LAUGH, ACT_DEFAULT, "I would have killed", "you otherwise,", "you know.", 0, SIZE_DEFAULT, SP_DEFAULT, CHAR_SEBELLUS, &sebellus_sleep_02, {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)},
+    {0, &sprite_items::db_ch_sebellus, EM_DEFAULT, ACT_DEFAULT, "Anyways, I'm", "going to get some", "sleep now.", 0, SIZE_DEFAULT, SP_DEFAULT, CHAR_SEBELLUS, &sebellus_sleep_01, {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)},
+    {0, nullptr, EM_SKIP, ACT_DEFAULT, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, CHAR_SEBELLUS, &sebellus_sleep_03, {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)}};
 
 const conversation talk_190b = {

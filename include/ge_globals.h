@@ -207,7 +207,9 @@ enum action_list
 	ITEM_190,
 	ITEM_191,
 	ITEM_192,
-	FALLDOWN,
+	ROOM_04_INIT,
+	ITEM_194,
+	BUFFER_190b,
 	ACTIONS_SIZE
 };
 

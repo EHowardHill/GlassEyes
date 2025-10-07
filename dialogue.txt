@@ -1172,8 +1172,9 @@ talk_189
 														
 talk_190														
 	db_ch_sebellus	EM_DEFAULT		I'm glad you were	nice to my little	"sister, Ginger."								
-	db_ch_sebellus	EM_LAUGH		I would have killed	"you otherwise,"	you know.								
-	db_ch_sebellus	EM_DEFAULT		"Anyways, I'm"	going to get some	sleep now.								
+	db_ch_sebellus	EM_LAUGH		I would have killed	"you otherwise,"	you know.				CHAR_SEBELLUS	&sebellus_sleep_02			
+	db_ch_sebellus	EM_DEFAULT		"Anyways, I'm"	going to get some	sleep now.				CHAR_SEBELLUS	&sebellus_sleep_01			
+		EM_SKIP								CHAR_SEBELLUS	&sebellus_sleep_03			
 														
 talk_175														
 				Much to your	"surprise, it's"	full of food.								

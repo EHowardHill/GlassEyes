@@ -67,4 +67,5 @@ constexpr int is_interactive_array[999] = {
     ID_156,
     ID_157,
     ID_158,
+    ITEM_181,
     -1};

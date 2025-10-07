@@ -582,6 +582,17 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case ITEM_181:
+            {
+                if (global_data_ptr->action_iterations[BUFFER_190b] == 0)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&talk_190);
+                    ch_man->db->init(ch_man);
+                    global_data_ptr->action_iterations[BUFFER_190b]++;
+                }
+                break;
+            }
             default:
             {
                 break;
@@ -1384,77 +1395,6 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 return NEW_MAP;
                 break;
             }
-            case FALLDOWN:
-            {
-                sound_items::snd_cnaut.play(1);
-                auto player = ch_man->player_ptr;
-                if (player != nullptr)
-                {
-                    // Get the initial position of the combined sprite's center.
-                    bn::fixed start_center_x = player->v_sprite.sprite_ptr_raw[1]->x(); // Assuming both have the same X
-                    bn::fixed start_center_y = (player->v_sprite.sprite_ptr_raw[0]->y() + player->v_sprite.sprite_ptr_raw[1]->y()) / 2;
-
-                    // --- 2. Find the Destination Point ---
-
-                    // Get the initial position of the reference sprite (raw[1]).
-                    bn::fixed initial_x1 = player->v_sprite.sprite_ptr_raw[1]->x();
-                    bn::fixed initial_y1 = player->v_sprite.sprite_ptr_raw[1]->y();
-
-                    // Calculate the column and row of the tile it's on.
-                    // Using floor_integer() is safe for negative coordinates.
-                    int tile_col = (initial_x1 / 32).floor_integer();
-                    int tile_row = (initial_y1 / 32).floor_integer();
-
-                    // Calculate the world coordinates of that tile's center.
-                    bn::fixed target_center_x = (tile_col * 32) + 16;
-                    bn::fixed target_center_y = (tile_row * 32) + 16;
-
-                    // --- Animation Loop ---
-
-                    // Get the starting scale to calculate progress.
-                    bn::fixed start_scale = player->v_sprite.sprite_ptr_raw[0]->vertical_scale();
-                    bn::fixed new_size = start_scale;
-
-                    // Loop until the sprite has shrunk.
-                    while (new_size > 0.01) // Using 0.01 to avoid floating point inaccuracies at 0
-                    {
-                        new_size -= 0.05;
-                        if (new_size < 0)
-                            new_size = 0;
-
-                        // Set the new scale for both sprites.
-                        player->v_sprite.sprite_ptr_raw[0]->set_scale(new_size);
-                        player->v_sprite.sprite_ptr_raw[1]->set_scale(new_size);
-
-                        // --- 3. Interpolate the Center Position ---
-
-                        // Calculate animation progress (t) from 0.0 (start) to 1.0 (end).
-                        bn::fixed t = (start_scale - new_size) / start_scale;
-
-                        // Linearly interpolate the center position.
-                        // current = start + (target - start) * t
-                        bn::fixed current_center_x = start_center_x + (target_center_x - start_center_x) * t;
-                        bn::fixed current_center_y = start_center_y + (target_center_y - start_center_y) * t;
-
-                        // --- 4. Position Individual Sprites around the new, moving center ---
-
-                        // Calculate the y_offset based on the new scale.
-                        bn::fixed y_offset = (32 * new_size) / 2;
-
-                        // Set positions relative to the *current* interpolated center.
-                        player->v_sprite.sprite_ptr_raw[0]->set_x(current_center_x);
-                        player->v_sprite.sprite_ptr_raw[1]->set_x(current_center_x);
-
-                        player->v_sprite.sprite_ptr_raw[0]->set_y(current_center_y - y_offset);
-                        player->v_sprite.sprite_ptr_raw[1]->set_y(current_center_y + y_offset);
-
-                        // Update the engine state.
-                        bn::core::update();
-                    }
-                }
-                return NEW_MAP;
-                break;
-            }
             case ID_152:
             {
                 if (global_data_ptr->action_iterations[ID_152] == 1)
@@ -1634,6 +1574,26 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 {
                     s->idle_animation = &sebellus_hide;
                     s->current_animation = &sebellus_hide;
+                }
+                break;
+            }
+            case ROOM_04_INIT:
+            {
+                if (global_data_ptr->action_iterations[ITEM_181] < 2)
+                {
+                    auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                    if (s != nullptr) {
+                        s->idle_animation = &sebellus_sleep_01;
+                        s->current_animation = &sebellus_sleep_01;
+                    }
+                } else
+                {
+                    auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                    if (s != nullptr) {
+                        s->idle_animation = &sebellus_sleep_03;
+                        s->current_animation = &sebellus_sleep_03;
+                    }
+
                 }
                 break;
             }
