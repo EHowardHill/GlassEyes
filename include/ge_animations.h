@@ -22,7 +22,7 @@ const animation ginger_eat_lime = {{9}, 1, SP_DEFAULT, true};
 const animation ginger_sit_alert = {{10}, 1, SP_DEFAULT, true};
 const animation ginger_sit_sad = {{11}, 1, SP_DEFAULT, true};
 const animation ginger_sit_chair = {{12}, 1, SP_DEFAULT, true};
-const animation ginger_hide = {{12}, 1, SP_DEFAULT, true};
+const animation ginger_hide = {{13}, 1, SP_DEFAULT, true};
 
 // Sebellus
 const animation sebellus_hide = {{9}, 1, SP_DEFAULT, true};

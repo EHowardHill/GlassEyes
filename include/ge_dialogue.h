@@ -194,6 +194,7 @@ extern const conversation talk_168;
 extern const conversation talk_175;
 extern const conversation talk_177;
 extern const conversation talk_177_alt_01;
+extern const conversation talk_177_alt_02;
 extern const conversation talk_177a;
 extern const conversation talk_177a_alt_01;
 extern const conversation talk_189;

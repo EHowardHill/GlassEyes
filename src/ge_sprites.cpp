@@ -179,7 +179,7 @@ void v_sprite_ptr::update(bool dialogue_box_ended)
 
 character::character(int index_, vector_2 start_, character_manager *manager) : index(index_), ch_man(manager)
 {
-    v_sprite.bounds.position = {(start_.x * 32) + 16, (start_.y * 32) + 16};
+    v_sprite.bounds.position = {(start_.x * 32) + 16, (start_.y * 32) + 14};
     v_sprite.bounds.width = 28;
     v_sprite.bounds.height = 28;
     idle_animation = nullptr;

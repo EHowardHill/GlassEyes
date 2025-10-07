@@ -1182,7 +1182,7 @@ talk_175
 talk_177														
 	db_ch_ginger	EM_SIDE_EYE		"So, uh.."	That's my brother.									
 	db_ch_ginger	EM_DEFAULT		What do you	think about him?									
-				He's chill	What the heck man									
+				He's chill	What the heck man								&talk_177_alt_02	
 	db_ch_ginger	EM_LAUGH		"Oh, whew.."	I was a bit worried.	He's a lot.								
 	db_ch_ginger	EM_SIDE_EYE		You probably	noticed his.. Uh..	His eyes.								
 	db_ch_ginger	EM_DEFAULT		He has what they	"call ""Glass Eyes""."									
@@ -1195,7 +1195,7 @@ talk_177
 				"""It's ok I don't"	care if you talk	"about it!"""								
 	db_ch_ginger	EM_SULLEN		"No, it's fine!"										
 				"""Do it!"""										
-	db_ch_ginger	EM_DEFAULT		Ugh..	"So, Sebellus is"	"a ""half-life""."								
+	db_ch_ginger	EM_DEFAULT			..Sebellus only has	a few years left.								
 	db_ch_ginger	EM_DEFAULT		He probably won't	live to be older	than ten.								
 	db_ch_ginger	EM_SAD		He doesn't take	it very seriously.									
 	db_ch_ginger	EM_SAD		..										
@@ -1210,7 +1210,7 @@ talk_177
 	db_ch_ginger	EM_SAD		Think about	some things.		COLOR_PURPLE							
 														
 talk_177_alt_01														
-	db_ch_ginger	EM_HAPPY		Alright..	Duly noted.									
+	db_ch_ginger	EM_HAPPY		"Aw, that's my"	favorite.									
 	db_ch_ginger	EM_SIDE_EYE		Anyways..	That's all I have	to say.								
 	db_ch_ginger	EM_SAD		I need some	"time to, uh.."									
 	db_ch_ginger	EM_SAD		Think about	some things.		COLOR_PURPLE							
@@ -1232,3 +1232,30 @@ talk_190b
 				Our hero	"is snoring so loud,"									
 				the floor is	shaking slightly.									
 				Just how does	he do it?									
+														
+talk_177_alt_02														
+	db_ch_ginger	EM_LAUGH		Yeah..	He's a lot.									
+	db_ch_ginger	EM_SIDE_EYE		You probably	noticed his.. Uh..	His eyes.								
+	db_ch_ginger	EM_DEFAULT		He has what they	"call ""Glass Eyes""."									
+	db_ch_ginger	EM_DEFAULT		He can see things	other people	can't.								
+	db_ch_ginger	EM_DEFAULT		It was to	compensate for..	other things.								
+	db_ch_ginger	EM_SIDE_EYE		I'm glad he's in	there.. I don't want	to talk about								
+	db_ch_ginger	EM_SIDE_EYE		this in front	of him.									
+				"""I can hear you"	"by the way!"""									
+	db_ch_ginger	EM_EMBARRASSED		Crap-										
+				"""It's ok I don't"	care if you talk	"about it!"""								
+	db_ch_ginger	EM_SULLEN		"No, it's fine!"										
+				"""Do it!"""		"""I love you!"""								
+	db_ch_ginger	EM_DEFAULT			..Sebellus only has	a few years left.								
+	db_ch_ginger	EM_DEFAULT		He probably won't	live to be older	than ten.								
+	db_ch_ginger	EM_SAD		He doesn't take	it very seriously.									
+	db_ch_ginger	EM_SAD		..										
+	db_ch_ginger	EM_SAD		..	..									
+	db_ch_ginger	EM_SULLEN		..Changing the	subject..									
+	db_ch_ginger	EM_HAPPY		If you had to pick	"a flavor, which"	is better?								
+	db_ch_ginger	EM_HAPPY		Butterscotch	or Cinnamon?									
+				Butterscotch	Cinnamon								&talk_177_alt_01	
+	db_ch_ginger	EM_HAPPY		Alright..	Duly noted.									
+	db_ch_ginger	EM_SIDE_EYE		Anyways..	That's all I have	to say.								
+	db_ch_ginger	EM_SAD		I need some	"time to, uh.."									
+	db_ch_ginger	EM_SAD		Think about	some things.		COLOR_PURPLE							

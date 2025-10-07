@@ -206,6 +206,7 @@ enum action_list
 	ITEM_189,
 	ITEM_190,
 	ITEM_191,
+	ITEM_192,
 	FALLDOWN,
 	ACTIONS_SIZE
 };

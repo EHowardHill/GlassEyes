@@ -1535,24 +1535,41 @@ int action_listener(map_manager *man, character_manager *ch_man)
             {
                 global_data_ptr->entry_map = &map_room_04;
                 global_data_ptr->entry_position = {4, 6};
+                return NEW_MAP;
                 break;
             }
             case ITEM_172:
             {
                 global_data_ptr->entry_map = &map_room_05;
                 global_data_ptr->entry_position = {4, 8};
+                return NEW_MAP;
                 break;
             }
             case ITEM_173:
             {
                 global_data_ptr->entry_map = &map_room_03;
                 global_data_ptr->entry_position = {1, 4};
+                return NEW_MAP;
                 break;
             }
             case ITEM_176:
             {
+                global_data_ptr->bg_track = &music_items::ambient_wind;
+                music::stop();
+
                 global_data_ptr->entry_map = &map_room_garden;
                 global_data_ptr->entry_position = {6, 10};
+                return NEW_MAP;
+                break;
+            }
+            case ITEM_186:
+            {
+                global_data_ptr->bg_track = &music_items::theme_anata;
+                music::stop();
+
+                global_data_ptr->entry_map = &map_room_03;
+                global_data_ptr->entry_position = {15, 4};
+                return NEW_MAP;
                 break;
             }
             case ITEM_190:
@@ -1572,6 +1589,13 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case ITEM_178:
+            {
+                global_data_ptr->entry_map = &map_room_02;
+                global_data_ptr->entry_position = {16, 6};
+                return NEW_MAP;
+                break;
+            }
             case ITEM_179:
             {
                 global_data_ptr->entry_map = &map_room_02;
@@ -1584,6 +1608,33 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 global_data_ptr->entry_map = &map_room_02;
                 global_data_ptr->entry_position = {12, 4};
                 return NEW_MAP;
+                break;
+            }
+            case ITEM_189:
+            {
+                if (global_data_ptr->action_iterations[ITEM_189] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&talk_189);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ITEM_192:
+            {
+                auto g = ch_man->find_by_index(CHAR_GINGER);
+                if (g != nullptr)
+                {
+                    g->idle_animation = &ginger_hide;
+                    g->current_animation = &ginger_hide;
+                }
+
+                auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                if (s != nullptr)
+                {
+                    s->idle_animation = &sebellus_hide;
+                    s->current_animation = &sebellus_hide;
+                }
                 break;
             }
             default:

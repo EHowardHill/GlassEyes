@@ -50,12 +50,14 @@ character *character_manager::add_character(int index, vector_2 position, int id
     character *new_char = characters.back().get();
     new_char->id = id;
 
-    if (global_data_ptr->process_stage != GARBAGE_TO_BLACK)
+    if (index == CHAR_GINGER && global_data_ptr->ginger_position.x != 0 && global_data_ptr->ginger_position.y != 0)
     {
-        if (index == CHAR_GINGER)
-        {
-            new_char->is_follow = true;
-        }
+        new_char->is_follow = true;
+    }
+
+    if (index == CHAR_SEBELLUS && global_data_ptr->sebellus_position.x != 0 && global_data_ptr->sebellus_position.y != 0)
+    {
+        new_char->is_follow = true;
     }
 
     // Track player

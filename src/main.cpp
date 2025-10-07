@@ -536,7 +536,7 @@ int main()
                 */
 
                 global_data_ptr->entry_map = &map_room_02;
-                global_data_ptr->entry_position = {2, 18};
+                global_data_ptr->entry_position = {9, 11};
 
                 music::stop();
                 global_data_ptr->bg_track = &music_items::theme_anata;
