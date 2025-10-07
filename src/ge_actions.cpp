@@ -1531,6 +1531,61 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case ITEM_171:
+            {
+                global_data_ptr->entry_map = &map_room_04;
+                global_data_ptr->entry_position = {4, 6};
+                break;
+            }
+            case ITEM_172:
+            {
+                global_data_ptr->entry_map = &map_room_05;
+                global_data_ptr->entry_position = {4, 8};
+                break;
+            }
+            case ITEM_173:
+            {
+                global_data_ptr->entry_map = &map_room_03;
+                global_data_ptr->entry_position = {1, 4};
+                break;
+            }
+            case ITEM_176:
+            {
+                global_data_ptr->entry_map = &map_room_garden;
+                global_data_ptr->entry_position = {6, 10};
+                break;
+            }
+            case ITEM_190:
+            {
+                auto g = ch_man->find_by_index(CHAR_GINGER);
+                g->idle_animation = &ginger_sit_chair;
+                g->current_animation = &ginger_sit_chair;
+                break;
+            }
+            case ITEM_177:
+            {
+                if (global_data_ptr->action_iterations[ITEM_177] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&talk_177);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ITEM_179:
+            {
+                global_data_ptr->entry_map = &map_room_02;
+                global_data_ptr->entry_position = {7, 4};
+                return NEW_MAP;
+                break;
+            }
+            case ITEM_183:
+            {
+                global_data_ptr->entry_map = &map_room_02;
+                global_data_ptr->entry_position = {12, 4};
+                return NEW_MAP;
+                break;
+            }
             default:
             {
                 break;

@@ -526,12 +526,20 @@ int main()
                 global_data_ptr->bg_track = &music_items::bg_sorry;
                 */
 
+                /*
                 global_data_ptr->entry_map = &map_dark_05;
                 global_data_ptr->entry_position = {1, 30};
                 global_data_ptr->ginger_position = {1, 29};
 
                 music::stop();
                 global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+                */
+
+                global_data_ptr->entry_map = &map_room_02;
+                global_data_ptr->entry_position = {2, 18};
+
+                music::stop();
+                global_data_ptr->bg_track = &music_items::theme_anata;
                 break;
             }
             case CUTSCENE_01:

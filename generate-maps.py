@@ -164,6 +164,9 @@ $definitions
 """
 
 for map in maps:
+
+    print(map)
+
     with open(os.path.join(map_dir, map), "r") as f:
         xml_data = f.read()
 

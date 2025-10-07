@@ -1143,3 +1143,92 @@ sebellus_02
 	db_ch_sebellus	EM_SIDE_EYE		"Oh.. Duh, forgot"	to tell you.									
 	db_ch_sebellus	EM_DEFAULT		It's very well-	"guarded, there are"	all these puzzles.								
 	db_ch_sebellus	EM_LAUGH		"See, I'm not so"	smart though..									
+														
+talk_168														
+	db_ch_ginger	EM_DEFAULT		Hey- What does	the note say?									
+				"""EVICTION NOTICE,"	VACATE PREMISES	"IMMEDIATELY."""								
+				Tell her	Don't tell her								&item_168_alt_01	
+	db_ch_ginger	EM_DEFAULT		That's all it says?	"""Tell her""?"									
+	db_ch_ginger	EM_SIDE_EYE		Well that's kinda..	weird.									
+														
+item_168_alt_01														
+	db_ch_ginger	EM_DEFAULT		That's all it says?	"""Don't tell her""?"									
+	db_ch_ginger	EM_SIDE_EYE		Well that's kinda..	weird.									
+														
+talk_189														
+	db_ch_ginger	EM_HAPPY		Whoa.. It's so nice	in here!									
+	db_ch_ginger	EM_SIDE_EYE		I'm a little	suspicious though..									
+	db_ch_ginger	EM_DEFAULT		Something doesn't	feel right.									
+	db_ch_sebellus	EM_DEFAULT		"You can say that,"	but that couch is	MINE.								
+	db_ch_ginger	EM_SIDE_EYE		Very well..	I'll check out the	kitchen.								
+	db_ch_sebellus	EM_LAUGH		Hehe.. She likes the	kitchen because	she's a girl.								
+	db_ch_ginger	EM_ANGRY		Sebellus!										
+	db_ch_sebellus	EM_SIDE_EYE		I wanted to clarify	for human because	I don't know if								
+	db_ch_sebellus	EM_SIDE_EYE		humans can tell	boys and girls	apart.								
+	db_ch_sebellus	EM_DEFAULT		"So, human,"	"Ginger is a girl,"	by the way.								
+	db_ch_ginger	EM_SIDE_EYE		Ughh										
+		EM_SKIP	ACT_WALK							CHAR_GINGER	&ginger_hide	"{17, 6}"		
+		EM_SKIP	ACT_WALK							CHAR_SEBELLUS	&sebellus_hide	"{6, 3}"		
+														
+talk_190														
+	db_ch_sebellus	EM_DEFAULT		I'm glad you were	nice to my little	"sister, Ginger."								
+	db_ch_sebellus	EM_LAUGH		I would have killed	"you otherwise,"	you know.								
+	db_ch_sebellus	EM_DEFAULT		"Anyways, I'm"	going to get some	sleep now.								
+														
+talk_175														
+				Much to your	"surprise, it's"	full of food.								
+				Strange.										
+														
+talk_177														
+	db_ch_ginger	EM_SIDE_EYE		"So, uh.."	That's my brother.									
+	db_ch_ginger	EM_DEFAULT		What do you	think about him?									
+				He's chill	What the heck man									
+	db_ch_ginger	EM_LAUGH		"Oh, whew.."	I was a bit worried.	He's a lot.								
+	db_ch_ginger	EM_SIDE_EYE		You probably	noticed his.. Uh..	His eyes.								
+	db_ch_ginger	EM_DEFAULT		He has what they	"call ""Glass Eyes""."									
+	db_ch_ginger	EM_DEFAULT		He can see things	other people	can't.								
+	db_ch_ginger	EM_DEFAULT		It was to	compensate for..	other things.								
+	db_ch_ginger	EM_SIDE_EYE		I'm glad he's in	there.. I don't want	to talk about								
+	db_ch_ginger	EM_SIDE_EYE		this in front	of him.									
+				"""I can hear you"	"by the way!"""									
+	db_ch_ginger	EM_EMBARRASSED		Crap-										
+				"""It's ok I don't"	care if you talk	"about it!"""								
+	db_ch_ginger	EM_SULLEN		"No, it's fine!"										
+				"""Do it!"""										
+	db_ch_ginger	EM_DEFAULT		Ugh..	"So, Sebellus is"	"a ""half-life""."								
+	db_ch_ginger	EM_DEFAULT		He probably won't	live to be older	than ten.								
+	db_ch_ginger	EM_SAD		He doesn't take	it very seriously.									
+	db_ch_ginger	EM_SAD		..										
+	db_ch_ginger	EM_SAD		..	..									
+	db_ch_ginger	EM_SULLEN		..Changing the	subject..									
+	db_ch_ginger	EM_HAPPY		If you had to pick	"a flavor, which"	is better?								
+	db_ch_ginger	EM_HAPPY		Butterscotch	or Cinnamon?									
+				Butterscotch	Cinnamon								&talk_177_alt_01	
+	db_ch_ginger	EM_HAPPY		Alright..	Duly noted.									
+	db_ch_ginger	EM_SIDE_EYE		Anyways..	That's all I have	to say.								
+	db_ch_ginger	EM_SAD		I need some	"time to, uh.."									
+	db_ch_ginger	EM_SAD		Think about	some things.		COLOR_PURPLE							
+														
+talk_177_alt_01														
+	db_ch_ginger	EM_HAPPY		Alright..	Duly noted.									
+	db_ch_ginger	EM_SIDE_EYE		Anyways..	That's all I have	to say.								
+	db_ch_ginger	EM_SAD		I need some	"time to, uh.."									
+	db_ch_ginger	EM_SAD		Think about	some things.		COLOR_PURPLE							
+														
+talk_177a														
+	db_ch_ginger	EM_DEFAULT		Mm-hmm?										
+				What now	Nevermind								&talk_177a_alt_01	
+	db_ch_ginger	EM_DEFAULT		Well.. I guess	it's probably a	good time to								
+	db_ch_ginger	EM_DEFAULT		get some sleep.	I still don't trust	this place..								
+	db_ch_ginger	EM_SIDE_EYE		But it's better	than outside.									
+	db_ch_ginger	EM_SIDE_EYE		Running water and	all that.	Food.								
+	db_ch_ginger	EM_DEFAULT		"Anyway, enough"	me. I'm just gonna	sit here a moment.								
+														
+talk_177a_alt_01														
+	db_ch_ginger	EM_DEFAULT		Oh.. Okay.										
+	db_ch_ginger	EM_DEFAULT		*yawn*	I'm probably gonna	get sleep soon.								
+														
+talk_190b														
+				Our hero	"is snoring so loud,"									
+				the floor is	shaking slightly.									
+				Just how does	he do it?									
