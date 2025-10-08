@@ -8,6 +8,8 @@
 #include "ge_sprites.h"
 #include "ge_animations.h"
 
+#include "bn_regular_bg_item.h"
+
 using namespace bn;
 
 typedef const dialogue_line conversation[128];
@@ -33,6 +35,13 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_robin.h"
 #include "bn_sprite_items_db_ch_togore.h"
 #include "bn_sprite_items_db_ch_sebellus.h"
+#include "bn_regular_bg_items_scene_cabin01.h"
+#include "bn_regular_bg_items_scene_berlin01.h"
+#include "bn_regular_bg_items_scene_tv_02.h"
+#include "bn_regular_bg_items_scene_tv_03.h"
+#include "bn_regular_bg_items_scene_tv_04.h"
+#include "bn_regular_bg_items_scene_tv_05.h"
+#include "bn_regular_bg_items_scene_tv_01.h"
 
 // Forward declarations for conversations
 extern const conversation avalon_courier_01;
@@ -93,6 +102,7 @@ extern const conversation dart_01;
 extern const conversation dart_02;
 extern const conversation dart_03;
 extern const conversation dart_04;
+extern const conversation dog_and_pony;
 extern const conversation doll_guy_01;
 extern const conversation final_msg;
 extern const conversation forest_dlg_01;
@@ -187,6 +197,8 @@ extern const conversation sebellus_02;
 extern const conversation sign_135;
 extern const conversation sign_136;
 extern const conversation sign_142;
+extern const conversation sleep_01;
+extern const conversation sleep_01_alt_01;
 extern const conversation talk_151;
 extern const conversation talk_151_alt_01;
 extern const conversation talk_151_alt_02;
@@ -197,6 +209,7 @@ extern const conversation talk_177_alt_01;
 extern const conversation talk_177_alt_02;
 extern const conversation talk_177a;
 extern const conversation talk_177a_alt_01;
+extern const conversation talk_184;
 extern const conversation talk_189;
 extern const conversation talk_190;
 extern const conversation talk_190b;
@@ -216,8 +229,8 @@ extern const conversation tunnel_01;
 extern const conversation visker_h_01;
 extern const conversation visker_h_02;
 extern const conversation visker_h_03;
+extern const conversation wakeup_01;
 extern const conversation worm_action_01;
 extern const conversation worm_action_01_alt_01;
-extern const conversation youtube_ad;
 
 #endif // GE_DIALOGUE_H

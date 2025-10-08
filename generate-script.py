@@ -23,6 +23,7 @@ def parse_navigate_coords(nav_str):
 
 
 sprites = []
+bg_items = []  # List to store unique background item names
 
 
 def validate_line_length(line, line_name, convo_name, row_num):
@@ -85,7 +86,7 @@ def process_csv(filename):
                 validate_line_length(line2, "line2", current_convo, row_num)
                 validate_line_length(line3, "line3", current_convo, row_num)
 
-                # Parse color field as integer (replacing shake)
+                # Parse color field as integer
                 color = 0  # Default value
                 if len(row) > 7 and row[7].strip():
                     try:
@@ -125,11 +126,22 @@ def process_csv(filename):
                     else "nullptr"
                 )
 
+                bg_ref = (
+                    row[15].strip() if len(row) > 15 and row[15].strip() else "nullptr"
+                )
+
                 if portrait != "nullptr" and portrait not in sprites:
                     sprites.append(portrait)
 
                 if portrait != "nullptr":
                     portrait = "&sprite_items::" + portrait
+
+                # Collect unique bg_items and prefix for C++ code
+                if bg_ref != "nullptr" and bg_ref not in bg_items:
+                    bg_items.append(bg_ref)
+
+                if bg_ref != "nullptr":
+                    bg_ref = "&regular_bg_items::" + bg_ref
 
                 entry = {
                     "id": name_id,
@@ -147,6 +159,7 @@ def process_csv(filename):
                     "nav": nav_coords,
                     "dlg1": dlg_opt_1,
                     "dlg2": dlg_opt_2,
+                    "bg_ref": bg_ref,
                 }
                 current_entries.append(entry)
 
@@ -156,12 +169,21 @@ def process_csv(filename):
     return conversations
 
 
-# --- NEW: Function to generate header file content ---
-def generate_header_content(conversations, sprite_list):
+# --- Function to generate header file content ---
+def generate_header_content(conversations, sprite_list, bg_item_list):
     """Generates the content for the .h file with only extern declarations."""
 
     sprite_includes = "\n".join(
         [f'#include "bn_sprite_items_{s}.h"' for s in sprite_list if s != "nullptr"]
+    )
+
+    # Generate includes for background items
+    bg_item_includes = "\n".join(
+        [
+            f'#include "bn_regular_bg_items_{s}.h"'
+            for s in bg_item_list
+            if s != "nullptr"
+        ]
     )
 
     declarations = ["// Forward declarations for conversations"]
@@ -178,11 +200,14 @@ def generate_header_content(conversations, sprite_list):
 #include "ge_sprites.h"
 #include "ge_animations.h"
 
+#include "bn_regular_bg_item.h"
+
 using namespace bn;
 
 typedef const dialogue_line conversation[128];
 
 {sprite_includes}
+{bg_item_includes}
 
 {'\n'.join(declarations)}
 
@@ -191,12 +216,20 @@ typedef const dialogue_line conversation[128];
     return template_h
 
 
-# --- Corrected function to generate source file content ---
-def generate_cpp_content(conversations, sprite_list):
+# --- Function to generate source file content ---
+def generate_cpp_content(conversations, sprite_list, bg_item_list):
     """Generates the content for the .cpp file with the actual definitions."""
 
     sprite_includes = "\n".join(
         [f'#include "bn_sprite_items_{s}.h"' for s in sprite_list if s != "nullptr"]
+    )
+
+    bg_item_includes = "\n".join(
+        [
+            f'#include "bn_regular_bg_items_{s}.h"'
+            for s in bg_item_list
+            if s != "nullptr"
+        ]
     )
 
     definitions = []
@@ -207,7 +240,6 @@ def generate_cpp_content(conversations, sprite_list):
         for entry in entries:
             index_value = entry["index"] if entry["index"] else "0"
 
-            # --- FIX #1: Use a single '&' for variable addresses ---
             anim_value = (
                 f'{entry["anim"]}'
                 if entry["anim"] != "nullptr"
@@ -225,18 +257,30 @@ def generate_cpp_content(conversations, sprite_list):
                 else "static_cast<const conversation*>(nullptr)"
             )
 
-            # --- FIX #2: Removed extra '}' at the very end of the line ---
+            # Fixed: Check for regular_bg_items and use correct type
+            bg_ref_value = (
+                entry["bg_ref"]
+                if "regular_bg_items" in entry["bg_ref"]  # Fixed check
+                else "static_cast<const regular_bg_item*>(nullptr)"  # Fixed type
+            )
+
             line = (
                 f'    {{{entry["id"]}, {entry["portrait"]}, {entry["emotion"]}, {entry["action"]}, '
                 f'"{entry["line1"]}", "{entry["line2"]}", "{entry["line3"]}", '
                 f'{entry["color"]}, {entry["size"]}, {entry["speed"]}, '
                 f"{index_value}, {anim_value}, "
                 f'{{{entry["nav"][0]}, {entry["nav"][1]}}}, '
-                f"{dlg1_value}, {dlg2_value}}}"
+                f"{dlg1_value}, {dlg2_value}, {bg_ref_value}}}"
             )
             definitions.append(line + ",")
 
-        eol_line = '    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr)}'
+        # Fixed: End-of-line marker with correct type for bg_item
+        eol_line = (
+            '    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, '
+            "static_cast<const animation*>(nullptr), {0, 0}, "
+            "static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), "
+            "static_cast<const regular_bg_item*>(nullptr)}"  # Fixed type
+        )
         definitions.append(eol_line + "};")
         definitions.append("")
 
@@ -246,6 +290,7 @@ def generate_cpp_content(conversations, sprite_list):
 #include "ge_dialogue.h"
 
 {sprite_includes}
+{bg_item_includes}
 
 {'\n'.join(definitions)}
 """
@@ -276,9 +321,9 @@ if __name__ == "__main__":
         print(f"ERROR: An unexpected error occurred: {e}")
         sys.exit(1)
 
-    # Generate content for both files
-    header_file_content = generate_header_content(conversations, sprites)
-    cpp_file_content = generate_cpp_content(conversations, sprites)
+    # Pass the bg_items list to the generation functions
+    header_file_content = generate_header_content(conversations, sprites, bg_items)
+    cpp_file_content = generate_cpp_content(conversations, sprites, bg_items)
 
     # Write the header file
     with open(output_header_path, "w", encoding="utf-8") as f:

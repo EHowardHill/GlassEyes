@@ -582,6 +582,16 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case ITEM_175:
+            {
+                if (global_data_ptr->action_iterations[ITEM_175] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&talk_175);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
             case ITEM_181:
             {
                 if (global_data_ptr->action_iterations[BUFFER_190b] == 0)
@@ -593,6 +603,29 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case ITEM_184:
+            {
+                if (global_data_ptr->action_iterations[ITEM_184] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&talk_184);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case ITEM_180:
+            {
+                global_data_ptr->process_stage = DOG_AND_PONY;
+                return NEW_CHAPTER;
+                break;
+            }
+            case ITEM_182:
+            {
+                ch_man->db.emplace();
+                ch_man->db->load(&sleep_01);
+                ch_man->db->init(ch_man);
+                break;
+            }
             default:
             {
                 break;
@@ -600,6 +633,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
             }
         }
 
+        // AUTOMATIC
         if (action != 0 && !action_triggered)
         {
             action_triggered = true; // Mark as triggered
@@ -1577,24 +1611,52 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case ITEM_180:
             case ROOM_04_INIT:
             {
                 if (global_data_ptr->action_iterations[ITEM_181] < 2)
                 {
                     auto s = ch_man->find_by_index(CHAR_SEBELLUS);
-                    if (s != nullptr) {
+                    if (s != nullptr)
+                    {
                         s->idle_animation = &sebellus_sleep_01;
                         s->current_animation = &sebellus_sleep_01;
                     }
-                } else
+                }
+                else
                 {
                     auto s = ch_man->find_by_index(CHAR_SEBELLUS);
-                    if (s != nullptr) {
+                    if (s != nullptr)
+                    {
                         s->idle_animation = &sebellus_sleep_03;
                         s->current_animation = &sebellus_sleep_03;
                     }
-
                 }
+                break;
+            }
+            case TO_BATHROOM:
+            {
+                global_data_ptr->entry_map = &map_room_06;
+                global_data_ptr->entry_position = {4, 5};
+                return NEW_MAP;
+                break;
+            }
+            case FROM_BATHROOM:
+            {
+                global_data_ptr->entry_map = &map_room_05;
+                global_data_ptr->entry_position = {5, 2};
+                return NEW_MAP;
+                break;
+            }
+            case INIT_WAKEUP:
+            {
+                if (global_data_ptr->action_iterations[INIT_WAKEUP] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&wakeup_01);
+                    ch_man->db->init(ch_man);
+                }
+                break;
                 break;
             }
             default:

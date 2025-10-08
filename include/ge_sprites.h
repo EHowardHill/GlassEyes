@@ -92,6 +92,7 @@ enum character_list
     CHAR_FIRE,
     CHAR_SEBELLUS,
     CHAR_SEBELLUS_MONSTER,
+    ITEM_PIE,
     CHAR_SIZE,
     CHAR_TYPEWRITER
 };

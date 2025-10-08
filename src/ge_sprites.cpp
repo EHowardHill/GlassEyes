@@ -28,6 +28,8 @@
 #include "bn_sprite_items_spr_special_sebellus_01.h"
 #include "bn_sprite_items_spr_elements.h"
 
+#include "bn_sprite_items_spr_item_pie.h"
+
 #include "ge_structs.h"
 #include "ge_text.h"
 #include "ge_sprites.h"
@@ -308,6 +310,11 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_elements;
         idle_animation = &elem_spike_up;
         is_pressed = true;
+        break;
+    }
+    case ITEM_PIE:
+    {
+        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_item_pie;
         break;
     }
 

@@ -28,6 +28,8 @@ enum progress
     AVALON,
     DARK_TO_DARK,
     NEW_BERLIN,
+    DOG_AND_PONY,
+    WAKEY_WAKEY,
     YOUTUBE_AD,
     FINAL_MSG,
     TEST_MAP
@@ -144,6 +146,8 @@ struct dialogue_line
     const conversation *dlg01 = nullptr;
     const conversation *dlg02 = nullptr;
 
+    const regular_bg_item *bg_item = nullptr;
+
     constexpr dialogue_line(
         int id_ = 0,
         const sprite_item *char_ = nullptr,
@@ -159,19 +163,21 @@ struct dialogue_line
         const animation *anim_ = nullptr,
         vector_2 navigate_ = {0, 0},
         const conversation *dlg01_ = nullptr,
-        const conversation *dlg02_ = nullptr) : id(id_),
-                                                portrait(char_),
-                                                emotion(emotion_),
-                                                action(action_),
-                                                raw_text{line1, line2, line3},
-                                                color(color_),
-                                                size(size_),
-                                                speed(speed_),
-                                                index(index_),
-                                                anim(anim_),
-                                                navigate(navigate_),
-                                                dlg01(dlg01_),
-                                                dlg02(dlg02_)
+        const conversation *dlg02_ = nullptr,
+        const regular_bg_item *bg_item_ = nullptr) : id(id_),
+                              portrait(char_),
+                              emotion(emotion_),
+                              action(action_),
+                              raw_text{line1, line2, line3},
+                              color(color_),
+                              size(size_),
+                              speed(speed_),
+                              index(index_),
+                              anim(anim_),
+                              navigate(navigate_),
+                              dlg01(dlg01_),
+                              dlg02(dlg02_),
+                              bg_item(bg_item_)
     {
     }
 };

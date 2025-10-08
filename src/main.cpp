@@ -291,9 +291,9 @@ enum TYPEWRITER_SCENES
     TYPEWRITER_GARBAGE,
     TYPEWRITER_MSG,
     TYPEWRITER_NEW_BERLIN,
+    TYPEWRITER_DOG_AND_PONY,
     TYPEWRITER_GAME_OVER,
-    TYPEWRITER_BUFFER,
-    TYPEWRITER_YT_AD
+    TYPEWRITER_BUFFER
 };
 
 enum TYPEWRITER_TYPE
@@ -318,7 +318,6 @@ void typewriter(int scene)
     {
     case TYPEWRITER_INTRO:
     {
-        frame = regular_bg_items::scene_cabin01.create_bg(0, 0);
         current_conversation = &intro_01;
         music_items::intro.play(1);
         type = TYPE_TEXT;
@@ -360,8 +359,14 @@ void typewriter(int scene)
     case TYPEWRITER_NEW_BERLIN:
     {
         music::stop();
-        frame = regular_bg_items::scene_berlin01.create_bg(0, 0);
         current_conversation = &new_berlin_sign;
+        type = TYPE_TEXT;
+        break;
+    }
+    case TYPEWRITER_DOG_AND_PONY:
+    {
+        music_items::z02_the_champ.play();
+        current_conversation = &dog_and_pony;
         type = TYPE_TEXT;
         break;
     }
@@ -382,13 +387,6 @@ void typewriter(int scene)
 
         break;
     }
-    case TYPEWRITER_YT_AD:
-    {
-        frame = regular_bg_items::scene_cabin01.create_bg(0, 0);
-        current_conversation = &youtube_ad;
-        type = TYPE_TEXT;
-        break;
-    }
     default:
     {
         type = TYPE_IMG;
@@ -399,13 +397,28 @@ void typewriter(int scene)
 
     if (type == TYPE_TEXT)
     {
-        // Initialize with first dialogue
-        lines[0] = {(*current_conversation)[index].raw_text[0], {-71 + 16, 36}};
-        lines[1] = {(*current_conversation)[index].raw_text[1], {-71 + 16, 36 + 16}};
-        lines[2] = {(*current_conversation)[index].raw_text[2], {-71 + 16, 36 + 32}};
+        // Initialize with first dialogue including color
+        const dialogue_line &first_line = (*current_conversation)[index];
+
+        lines[0] = {first_line.raw_text[0], {-71 + 16, 36}};
+        lines[1] = {first_line.raw_text[1], {-71 + 16, 36 + 16}};
+        lines[2] = {first_line.raw_text[2], {-71 + 16, 36 + 32}};
+
+        // Set color for each line
+        lines[0].color = first_line.color;
+        lines[1].color = first_line.color;
+        lines[2].color = first_line.color;
 
         while ((*current_conversation)[index].action != ACT_END)
         {
+            const dialogue_line &current_line = (*current_conversation)[index];
+
+            if (current_line.bg_item != nullptr)
+            {
+                frame.reset();
+                frame = current_line.bg_item->create_bg(0, 0);
+            }
+
             if (keypad::a_pressed())
             {
                 index++;
@@ -413,6 +426,8 @@ void typewriter(int scene)
                 // Check if we've reached the end
                 if ((*current_conversation)[index].action == ACT_END)
                     break;
+
+                const dialogue_line &next_line = (*current_conversation)[index];
 
                 // Clear existing letters
                 lines[0].letters.clear();
@@ -425,11 +440,17 @@ void typewriter(int scene)
                 lines[2].index = 0;
 
                 // Reinitialize with new text
-                lines[0].init((*current_conversation)[index].raw_text[0]);
-                lines[1].init((*current_conversation)[index].raw_text[1]);
-                lines[2].init((*current_conversation)[index].raw_text[2]);
+                lines[0].init(next_line.raw_text[0]);
+                lines[1].init(next_line.raw_text[1]);
+                lines[2].init(next_line.raw_text[2]);
+
+                // Set color for new text
+                lines[0].color = next_line.color;
+                lines[1].color = next_line.color;
+                lines[2].color = next_line.color;
             }
 
+            // Update letters with color
             if (ticker % 5 == 0)
             {
                 if (lines[0].is_ended())
@@ -446,6 +467,15 @@ void typewriter(int scene)
                 else
                 {
                     lines[0].update(nullptr, true);
+                }
+            }
+
+            // Apply color to all displayed letters
+            for (int t = 0; t < 3; t++)
+            {
+                for (auto &letter_ : lines[t].letters)
+                {
+                    letter_.update(current_line.color, current_line.size);
                 }
             }
 
@@ -612,6 +642,27 @@ int main()
                 global_data_ptr->bg_track = &music_items::forest_01;
                 break;
             }
+            case DOG_AND_PONY:
+            {
+                typewriter(TYPEWRITER_DOG_AND_PONY);
+
+                // Return
+                music::stop();
+                global_data_ptr->entry_map = &map_room_04;
+                global_data_ptr->entry_position = {4, 6};
+                global_data_ptr->bg_track = &music_items::theme_anata;
+                break;
+            }
+            case WAKEY_WAKEY:
+            {
+                typewriter(TYPEWRITER_BUFFER);
+                music::stop();
+
+                global_data_ptr->entry_map = &map_room_05b;
+                global_data_ptr->entry_position = {3, 3};
+                global_data_ptr->bg_track = &music_items::ambient_wind;
+                break;
+            }
             case AVALON:
             {
                 global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
@@ -640,11 +691,6 @@ int main()
                 {
                     core::update();
                 }
-                break;
-            }
-            case YOUTUBE_AD:
-            {
-                typewriter(TYPEWRITER_YT_AD);
                 break;
             }
             default:
