@@ -875,49 +875,49 @@ dart_04
 	db_ch_sneaker	EM_DEFAULT		YOU'LL PAY FOR	"THAT, HUMAN!"										
 															
 															
-henry_01															
-				I don't understand..	I did the ritual	correctly.									
-				Blood isn't enough.	The spirits require	flesh.	COLOR_RED								
-				You'll need to	give up one of	your eyes.	COLOR_RED								
-				..and you're certain	that will be enough?										
-				Have I ever given	you a reason not	to trust me?	COLOR_RED								
-				No.											
-						I'm scared.									
-				It will only	hurt for a moment.		COLOR_RED								
 															
-henry_02															
-				I'm sorry that	it has to be	this way.									
-				You must be	"terrified,"	poor thing.									
-				My name is	Dr. Henry Erickson.										
-				What is your	name?	If you can remember.									
-						V-Vista.	COLOR_PURPLE								
-				"Welcome to my home,"	Vista.										
-				You are going to	be part of something	very special.									
 															
-henry_03															
-				"Good morning,"	pumpkin.	Did you sleep well?									
-				"Morning, Henry."	Not really.	Too many thoughts.	COLOR_PURPLE								
-				Do you know what	day it is?										
-				It's.. Thursday?			COLOR_PURPLE								
-				It's been one year	since you woke up	for the first time.									
-				I made you a cake.	"It's your favorite,"	lemon.									
-				"Go ahead,"	make a wish.										
-				I.. Don't know if	I want to.		COLOR_PURPLE								
-				How come?											
-				"I remember, the day"	"you brought me here,"		COLOR_PURPLE								
-				I thought I wasn't	going to make it.		COLOR_PURPLE								
-				Back home.. I	couldn't take it	anymore.	COLOR_PURPLE								
-				And then I woke	up as.. This.		COLOR_PURPLE								
-				I wanted to escape.	It was a wish.	And..	COLOR_PURPLE								
-				You've been a	good father to me.		COLOR_PURPLE								
-				But I gave up so	"many things, things"	I took for granted.	COLOR_PURPLE								
-				I wish I could see	the sun again.	"I really, really do."	COLOR_PURPLE								
-				But I'm afraid to	wish because.. 		COLOR_PURPLE								
-				"..Well, I don't want"	to give up anything	else.	COLOR_PURPLE								
-				Anything that I	might not be able	to get back.	COLOR_PURPLE								
-				I understand.	Once I finish my	research..									
-				We'll be able to	get out of hiding?		COLOR_PURPLE								
-				Oh.. Much more	"than that, Vista."	Much more.									
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
+															
 															
 togore_01															
 	db_ch_ginger	EM_SAD		"Oh dear.. Hey there,"	little buddy.	Are you hurt?									
@@ -1290,3 +1290,105 @@ sleep_01_alt_01
 wakeup_01															
 			ACT_SFX_KNOCK	"""HEY!! WAKE UP!!"	"SOMETHING'S COMING,"	"WE GOTTA GO!!"""									
 		EM_SKIP	ACT_TELEPORT							CHAR_JEREMY		"{3, 5}"			
+															
+f_cutscene_01															
+				Dr. Erickson?	Dr. Erickson.. Do you	have a moment?	COLOR_BLUE								
+				Do you need me to	direct you to the	tutoring department?									
+				I read your paper on	Pleiotropic genes.	It was.. Inspired.	COLOR_BLUE								
+				"Please, let me treat"	you to lunch.		COLOR_BLUE								
+				It's not really any	"of your business,"	but..									
+				It's cruel irony..	Really.. This city has	some of the best									
+				"minds, equipment.."	in the world.	And yet.									
+				They have a	crippling fear of	change.									
+				They know they're	"blessed, but they"	"don't know why,"									
+				And they think that	if anything changes..	It might go away.									
+				That's an amazing	"observation,"	Dr. Erickson.	COLOR_BLUE								
+				You can keep a	"secret, can't you, kid?"										
+				"Yes, sir."			COLOR_BLUE								
+				They're pulling my	funding at the end	of the semester.									
+				I have a few months	to get my..	No.									
+				Do you need my	"assistance, sir?"		COLOR_BLUE								
+				I'll tell you what.	Come to my lab	this Friday. 9 PM.									
+				"It'd be an honor, sir."			COLOR_BLUE								
+				I appreciate it.	We'll see what	you've got.									
+															
+f_cutscene_02															
+				I don't understand it..	The ritual calls for	"blood, doesn't it?"									
+				It's not enough for	"what you want to do,"	Dr. Erickson.	COLOR_BLUE								
+				You have to give up	something more	substantial.	COLOR_BLUE								
+				The eyes are the	windows to the soul.		COLOR_BLUE								
+				Of course..	Of course.	Thank you.									
+				..and you're certain	that will be enough?										
+				Have I ever given	you a reason not	to trust me?	COLOR_RED								
+				No.											
+						I'm scared.									
+				It will only	hurt for a moment.		COLOR_RED								
+															
+															
+				I'm sorry that	it has to be	this way.									
+				You must be	"terrified,"	poor thing.									
+				My name is	Dr. Henry Erickson.										
+				What is your	name?	If you can remember.									
+						V-Vista.	COLOR_PURPLE								
+				"Welcome to my home,"	Vista.										
+				You are going to	be part of something	very special.									
+															
+f_cutscene_03															
+				"Good morning,"	pumpkin.	Did you sleep well?									
+				"Morning, Henry."	Not really.	Too many thoughts.	COLOR_PURPLE								
+				Do you know what	day it is?										
+				It's.. Thursday?			COLOR_PURPLE								
+				It's been one year	since you woke up	for the first time.									
+				I made you a cake.	"It's your favorite,"	lemon.									
+				"Go ahead,"	make a wish.										
+				I.. Don't know if	I want to.		COLOR_PURPLE								
+				How come?											
+				"I remember, the day"	"you brought me here,"		COLOR_PURPLE								
+				I thought I wasn't	going to make it.		COLOR_PURPLE								
+				Back home.. I	couldn't take it	anymore.	COLOR_PURPLE								
+				And then I woke	up as.. This.		COLOR_PURPLE								
+				I wanted to escape.	It was a wish.	And..	COLOR_PURPLE								
+				You've been a	good father to me.		COLOR_PURPLE								
+				But I gave up so	"many things, things"	I took for granted.	COLOR_PURPLE								
+				I wish I could see	the sun again.	"I really, really do."	COLOR_PURPLE								
+				But I'm afraid to	wish because.. 		COLOR_PURPLE								
+				"..Well, I don't want"	to give up anything	else.	COLOR_PURPLE								
+				Anything that I	might not be able	to get back.	COLOR_PURPLE								
+				I understand.	Once I finish my	research..									
+				We'll be able to	get out of hiding?		COLOR_PURPLE								
+				Oh.. Much more	"than that, Vista."	Much more.									
+															
+f_cutscene_04															
+				EVICTION NOTICE:	PROPERTY MUST BE	VACATED									
+				Henry.. I've been	"thinking, and I don't"	know if the	COLOR_PURPLE								
+				machine will be	able to survive the	fall.	COLOR_PURPLE								
+				If something breaks..	I'll fix it.	I'll find a way.									
+				"Here, you all in"	first. Easy. It won't	hurt you.									
+				Dad- ..Henry..	"..I-I'm scared,"	the fall-									
+				Are the others	through the chute?										
+				Yes.											
+				Vista.	I have been keeping	a secret from you.									
+				..y-you have?											
+				You are different	from the others.										
+				How do I create a	"""mueto""?"										
+				"Well, you let out"	"some blood, and"	the magic takes									
+				a piece of a human	soul and fuses it to	"a mueto body, yes?"									
+				That was not how	"I created you,"	Vista.									
+				You have an *entire*	soul within you.										
+				The others will not	live more than a	couple years.									
+				But you? You could	live forever.										
+				W-What happened	to my old body?!										
+				You can visit it.	It is comatose at	the hospital.									
+				You have a choice.	You can live forever.	Or you can go home.									
+				You don't need to	decide now. But it	must be soon.									
+				Vista.. I have plans.	I will make more	muetos. Many more.									
+				I will make them	in spite of this	awful city.									
+				And I want you	to be their queen.										
+				W-what does that	mean..?										
+				Whatever you want	it to mean.										
+						..why me?									
+				You're who the	spirits chose.										
+				Do you trust me?											
+						No.									
+				I'm scared.											
+				It will only	be scary for a	moment.									

@@ -240,6 +240,7 @@ struct global_data
 	int process_stage = 0;
 	bool items[ITEMS_SIZE] = {0};
 	int gold = 0;
+	bool shake = false;
 
 	const music_item *bg_track;
 };

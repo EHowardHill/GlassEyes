@@ -493,6 +493,16 @@ void dialogue_box::init(character_manager *ch_man)
             ch_man->alert(GAME);
             break;
         }
+        case ACT_SHAKE_ON:
+        {
+            global_data_ptr->shake = true;
+            break;
+        }
+        case ACT_SHAKE_OFF:
+        {
+            global_data_ptr->shake = false;
+            break;
+        }
         case ACT_PROGRESS:
         {
             global_data_ptr->process_stage = line.index;

@@ -24,6 +24,17 @@ void map_manager::update()
 {
     vector_2 *cam = &v_sprite_ptr::camera;
 
+    if (global_data_ptr->shake) {
+        ticker++;
+        if (ticker % 3 == 0) {
+            if ((ticker / 3) % 2 == 0) {
+                cam->y -= 2;
+            } else {
+                cam->y += 2;
+            }
+        }
+    }
+
     vector_2 offset = {
         current_map->raw_size.x / 2,
         current_map->raw_size.y / 2};

@@ -50,6 +50,8 @@ struct map_manager
   optional<regular_bg_ptr> collider_ptr;
   const map *current_map;
 
+  int ticker = 0;
+
   map_manager(const map *current_map_);
 
   void update();
