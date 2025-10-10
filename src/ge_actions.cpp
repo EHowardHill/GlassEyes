@@ -1657,6 +1657,80 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     ch_man->db->init(ch_man);
                 }
                 break;
+            }
+            case TO_LIVING_WAKEUP:
+            {
+                global_data_ptr->entry_map = &map_room_02b;
+                global_data_ptr->entry_position = {13, 4};
+                global_data_ptr->ginger_position = {15, 4};
+                global_data_ptr->sebellus_position = {15, 5};
+                return NEW_MAP;
+                break;
+            }
+            case LIVING_WAKEUP_INIT:
+            {
+                if (global_data_ptr->action_iterations[LIVING_WAKEUP_INIT] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&have_to_go);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case TO_KITCHEN_WAKEUP:
+            {
+                global_data_ptr->entry_map = &map_room_03b;
+                global_data_ptr->entry_position = {3, 5};
+                global_data_ptr->ginger_position = {2, 5};
+                global_data_ptr->sebellus_position = {1, 4};
+                return NEW_MAP;
+                break;
+            }
+            case TO_GARDEN_WAKEUP:
+            {
+                global_data_ptr->entry_map = &map_room_garden_b;
+                global_data_ptr->entry_position = {6, 10};
+                global_data_ptr->ginger_position = {5, 10};
+                global_data_ptr->sebellus_position = {4, 10};
+                return NEW_MAP;
+                break;
+            }
+            case TO_SHED_WAKEUP:
+            {
+                global_data_ptr->entry_map = &map_room_hallway;
+                global_data_ptr->entry_position = {2, 9};
+                global_data_ptr->ginger_position = {2, 10};
+                global_data_ptr->sebellus_position = {1, 10};
+                return NEW_MAP;
+                break;
+            }
+            case SHED_INIT:
+            {
+                if (global_data_ptr->action_iterations[SHED_INIT] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&have_to_go_2);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
+            case TO_BASEMENT_WAKEUP:
+            {
+                global_data_ptr->entry_map = &map_room_basement;
+                global_data_ptr->entry_position = {12, 9};
+                global_data_ptr->ginger_position = {12, 10};
+                global_data_ptr->sebellus_position = {11, 10};
+                return NEW_MAP;
+                break;
+            }
+            case BASEMENT_INIT:
+            {
+                if (global_data_ptr->action_iterations[BASEMENT_INIT] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&have_to_go_2);
+                    ch_man->db->init(ch_man);
+                }
                 break;
             }
             default:

@@ -103,6 +103,9 @@ enum emotion
     EM_WAT,
     EM_CONFUSED,
     EM_PAIN,
+    EM_SCARED,
+    EM_WEEP,
+    EM_CRY,
     EM_SKIP
 };
 
