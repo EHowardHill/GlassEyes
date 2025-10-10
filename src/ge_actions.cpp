@@ -1663,7 +1663,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 global_data_ptr->entry_map = &map_room_02b;
                 global_data_ptr->entry_position = {13, 4};
                 global_data_ptr->ginger_position = {15, 4};
-                global_data_ptr->sebellus_position = {15, 5};
+                global_data_ptr->sebellus_position = {14, 6};
                 return NEW_MAP;
                 break;
             }
@@ -1728,7 +1728,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 if (global_data_ptr->action_iterations[BASEMENT_INIT] == 1)
                 {
                     ch_man->db.emplace();
-                    ch_man->db->load(&have_to_go_2);
+                    ch_man->db->load(&have_to_go_3);
                     ch_man->db->init(ch_man);
                 }
                 break;

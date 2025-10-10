@@ -292,6 +292,7 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     case CHAR_SEBELLUS:
     {
         v_sprite.sprite_item_ptr = &bn::sprite_items::spr_sebellus;
+        follow_id = CHAR_GINGER;
         break;
     }
     case CHAR_SEBELLUS_MONSTER:

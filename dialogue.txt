@@ -1282,7 +1282,7 @@ dog_and_pony
 sleep_01															
 				Are you ready to	get some sleep?										
 				Oh yeah	No								&sleep_01_alt_01		
-			ACT_PROGRESS							WAKEY_WAKEY					
+		EM_SKIP	ACT_PROGRESS							WAKEY_WAKEY					
 															
 sleep_01_alt_01															
 				Very well.											
@@ -1295,20 +1295,20 @@ wakeup_01
 have_to_go															
 	db_ch_ginger	EM_WEEP		W-We h-have to	g-go!! I knew it	felt wrong!!									
 	db_ch_ginger	EM_SCARED		"B-Bloodflood, t-the"	dragon!!	He's coming!!									
-	db_ch_sebellus	EM_SIDE_EYE		Why are you	"crying, it's scary,"	not sad.									
-	db_ch_sebellus	EM_DEFAULT		Anyway- I found a	key to the shed out	back.									
+	db_ch_sebellus	EM_DEFAULT		I found a	key to the shed out	back.									
 	db_ch_sebellus	EM_DEFAULT		We should be	safe in there.										
-	db_ch_sebellus	EM_SIDE_EYE		"No need to cry,"	"Ginger, it's just a"	dragon. Geez.									
 	db_ch_ginger	EM_WEEP		I-It's all m-my	"fault, I-I.."		COLOR_PURPLE								
 	db_ch_sebellus	EM_DEFAULT		"See, I would've"	thought it was the	dragon's fault.									
-	db_ch_ginger	EM_ANGRY		SEBELLUS!											
+	db_ch_ginger	EM_CONFUSED		SEBELLUS!											
 	db_ch_sebellus	EM_SIDE_EYE		"Okay, okay,"	whatever.										
+															
+															
 															
 have_to_go_2															
 	db_ch_ginger	EM_DEFAULT		"..This isn't a shed,"	is it?										
 															
 have_to_go_3															
-	db_ch_ginger	EM_PAIN	ACT_SHAKE_OFF	Ugh.. It stinks	down here.										
+	db_ch_ginger	EM_DISAPPOINTED	ACT_SHAKE_OFF	Ugh.. It stinks	down here.										
 	db_ch_sebellus	EM_SIDE_EYE		It's always	"something with you,"	isn't it.									
 	db_ch_ginger	EM_ANGRY		"Sebellus, you're"	not being funny.										
 	db_ch_sebellus	EM_DEFAULT		Why don't we	leave that up to	the human.									
