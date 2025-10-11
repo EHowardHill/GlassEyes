@@ -1320,6 +1320,7 @@ have_to_go_3_alt_01
 	db_ch_sebellus	EM_DEFAULT		See? I've still	got it in me.										
 															
 have_to_go_4															
+		ACT_SFX_EXPLOSION													
 	db_ch_ginger	EM_WAT	ACT_SHAKE_ON	!!											
 	db_ch_ginger	EM_SCARED	ACT_SHAKE_OFF	T-That was the	"shed, wasn't it?"										
 	db_ch_sebellus	EM_DEFAULT		Most likely yes.											
@@ -1327,40 +1328,39 @@ have_to_go_4
 	db_ch_sebellus	EM_SIDE_EYE		Not unless the	human finds a way	to get us out.									
 	db_ch_sebellus	EM_DEFAULT		"Isn't that right,"	human?										
 															
+bm_fridge															
+				You found:	WATER BOTTLE										
+		EM_SKIP	ACT_ITEM							OBJ_WATER					
 															
+chat_197															
+				You found:	SLICE OF PIE										
+				Huh.	Wonder how that	got there.									
+		EM_SKIP	ACT_ITEM							OBJ_PIE					
 															
+visker_final															
+				"Hello, Visker."	Uggggggggggggh								&visker_final_alt_01		
+	db_ch_visker	EM_DEFAULT		HUMAN!	You're alive?!										
+	db_ch_ginger	EM_DEFAULT		Y-You two know	each other?										
+	db_ch_visker	EM_SULLEN		It seems human	fared better than	previous home owner.									
+	db_ch_ginger	EM_WAT		W-What happened to	the people inside	the house?									
+	db_ch_visker	EM_SIDE_EYE		House humans	tasted.. Not so	good.									
+	db_ch_ginger	EM_SCARED		..You..	*ate* them?										
+	db_ch_visker	EM_ANGRY		Visker not kill	humans.										
+	db_ch_visker	EM_SIDE_EYE		Visker did eat	humans.										
+	db_ch_visker	EM_DEFAULT		Visker not know	who killed humans.										
+	db_ch_sebellus	EM_DEFAULT		Why don't you	just let us	"through, pal."									
+	db_ch_visker	EM_ANGRY		Visker want to	eat THAT human.	But..									
+	db_ch_visker	EM_DEFAULT		Visker is patient	and will wait for	human to die.									
+	db_ch_sebellus	EM_DEFAULT		Thank you.											
 															
+visker_final_alt_01															
+	db_ch_visker	EM_ANGRY		Human forgot	turkey!										
+	db_ch_visker	EM_DEFAULT		Turkey was	SPECIFICALLY	requested!									
+	db_ch_ginger	EM_SIDE_EYE		What is he	talking about??										
+	db_ch_visker	EM_ANGRY		"SILENCE, GREEN"	THING! Visker	will FIGHT NOW!									
 															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
+visker_final_02															
+				He hasn't blinked	since he showed	up here.									
 															
 															
 															

@@ -197,6 +197,8 @@ enum ITEMS
     OBJ_STEEL,
     OBJ_STICKS,
     OBJ_STONES,
+    OBJ_PIE,
+    OBJ_WATER,
     ITEMS_SIZE
 };
 

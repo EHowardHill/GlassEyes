@@ -48,7 +48,9 @@ const char *ITEM_LABELS[ITEMS_SIZE] = {
     "Flint",
     "Steel",
     "Sticks",
-    "Stones"};
+    "Stones",
+    "Slice of Pie",
+    "Water Bottle"};
 
 const bool ITEM_DROP[ITEMS_SIZE] = {
     true,

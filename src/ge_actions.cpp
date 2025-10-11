@@ -626,6 +626,16 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 ch_man->db->init(ch_man);
                 break;
             }
+            case ITEM_197:
+            {
+                if (global_data_ptr->action_iterations[ITEM_197] == 1)
+                {
+                    ch_man->db.emplace();
+                    ch_man->db->load(&chat_197);
+                    ch_man->db->init(ch_man);
+                }
+                break;
+            }
             default:
             {
                 break;
