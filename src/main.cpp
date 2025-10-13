@@ -83,7 +83,7 @@ int main()
             {
                 /*
                 global_data_ptr->entry_map = &map_dark_06;
-                global_data_ptr->entry_position = {2, 18};
+                global_data_ptr->jeremy_position = {2, 18};
                 global_data_ptr->ginger_position = {2, 17};
                 global_data_ptr->sebellus_position = {1, 18};
 
@@ -93,7 +93,7 @@ int main()
 
                 /*
                 global_data_ptr->entry_map = &map_dark_05;
-                global_data_ptr->entry_position = {1, 30};
+                global_data_ptr->jeremy_position = {1, 30};
                 global_data_ptr->ginger_position = {1, 29};
 
                 music::stop();
@@ -102,14 +102,14 @@ int main()
 
                 /*
                 global_data_ptr->entry_map = &map_room_02;
-                global_data_ptr->entry_position = {9, 11};
+                global_data_ptr->jeremy_position = {9, 11};
 
                 music::stop();
                 global_data_ptr->bg_track = &music_items::theme_anata;
                 */
 
                 global_data_ptr->entry_map = &map_beach_01;
-                global_data_ptr->entry_position = {26, 4};
+                global_data_ptr->jeremy_position = {26, 4};
                 global_data_ptr->ginger_position = {27, 4};
                 global_data_ptr->sebellus_position = {25, 4};
                 global_data_ptr->bg_track = &music_items::intro_guitar;
@@ -119,7 +119,7 @@ int main()
             {
                 typewriter(TYPEWRITER_INTRO);
                 global_data_ptr->entry_map = &map_room01;
-                global_data_ptr->entry_position = {9, 2};
+                global_data_ptr->jeremy_position = {9, 2};
                 break;
             }
             case CUTSCENE_TO_GARBAGE:
@@ -132,7 +132,7 @@ int main()
                 typewriter(TYPEWRITER_BUFFER);
 
                 global_data_ptr->entry_map = &map_garbage_01;
-                global_data_ptr->entry_position = {9, 5};
+                global_data_ptr->jeremy_position = {9, 5};
                 global_data_ptr->bg_track = &music_items::bg_garbage;
                 break;
             }
@@ -141,14 +141,14 @@ int main()
                 global_data_ptr->hp[0] = 20;
                 typewriter(TYPEWRITER_GARBAGE);
                 global_data_ptr->entry_map = &map_lab_01;
-                global_data_ptr->entry_position = {4, 5};
+                global_data_ptr->jeremy_position = {4, 5};
                 global_data_ptr->bg_track = &music_items::bg_office;
                 break;
             }
             case BLACK_TO_LAB:
             {
                 global_data_ptr->entry_map = &map_lab_01;
-                global_data_ptr->entry_position = {4, 5};
+                global_data_ptr->jeremy_position = {4, 5};
                 global_data_ptr->bg_track = &music_items::bg_office;
                 break;
             }
@@ -156,7 +156,7 @@ int main()
             {
                 global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
                 global_data_ptr->entry_map = &map_forest_01;
-                global_data_ptr->entry_position = {6, 8};
+                global_data_ptr->jeremy_position = {6, 8};
                 global_data_ptr->ginger_position = {5, 8};
                 global_data_ptr->bg_track = &music_items::forest_01;
                 break;
@@ -168,7 +168,7 @@ int main()
                 music::stop();
 
                 global_data_ptr->entry_map = &map_cave_05;
-                global_data_ptr->entry_position = {4, 12};
+                global_data_ptr->jeremy_position = {4, 12};
                 global_data_ptr->ginger_position = {4, 10};
                 global_data_ptr->bg_track = &music_items::cave_01;
                 break;
@@ -180,7 +180,7 @@ int main()
                 // Return
                 global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
                 global_data_ptr->entry_map = &map_forest_02;
-                global_data_ptr->entry_position = {15, 5};
+                global_data_ptr->jeremy_position = {15, 5};
                 global_data_ptr->ginger_position = {14, 5};
                 global_data_ptr->bg_track = &music_items::forest_01;
                 break;
@@ -192,7 +192,7 @@ int main()
                 // Return
                 music::stop();
                 global_data_ptr->entry_map = &map_room_04;
-                global_data_ptr->entry_position = {4, 6};
+                global_data_ptr->jeremy_position = {4, 6};
                 global_data_ptr->bg_track = &music_items::theme_anata;
                 break;
             }
@@ -202,7 +202,7 @@ int main()
                 music::stop();
 
                 global_data_ptr->entry_map = &map_room_05b;
-                global_data_ptr->entry_position = {3, 3};
+                global_data_ptr->jeremy_position = {3, 3};
                 global_data_ptr->bg_track = &music_items::ambient_wind;
                 break;
             }
@@ -210,7 +210,7 @@ int main()
             {
                 global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
                 global_data_ptr->entry_map = &map_forest_03;
-                global_data_ptr->entry_position = {15, 15};
+                global_data_ptr->jeremy_position = {15, 15};
                 global_data_ptr->ginger_position = {14, 15};
                 global_data_ptr->bg_track = &music_items::bg_avalon;
                 break;
@@ -221,7 +221,7 @@ int main()
                 music::stop();
 
                 global_data_ptr->entry_map = &map_dark_04;
-                global_data_ptr->entry_position = {3, 22};
+                global_data_ptr->jeremy_position = {3, 22};
                 global_data_ptr->ginger_position = {5, 22};
                 global_data_ptr->bg_track = &music_items::ambient_wind;
                 break;
@@ -239,7 +239,7 @@ int main()
             default:
             {
                 global_data_ptr->entry_map = &map_garbage_01;
-                global_data_ptr->entry_position = {9, 5};
+                global_data_ptr->jeremy_position = {9, 5};
                 global_data_ptr->bg_track = &music_items::bg_garbage;
                 break;
             }

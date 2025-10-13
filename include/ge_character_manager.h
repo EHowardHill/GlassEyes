@@ -40,6 +40,8 @@ struct character_manager
     void alert(int status);
     int size() const { return characters.size(); }
 
+    void load(conversation *convo);
+
     bool music_fadeout = false;
     void toggle_button(int id);
 

@@ -93,6 +93,7 @@ const animation *resolve_sprite_idle_animation(int character)
     {
 	case CHAR_BUTTON: { return &elem_button_up; break; }
 	case CHAR_SPIKE: { return &elem_spike_up; break; }
+	case CHAR_SPAMTON: { return &npcs_spamton_anim; break; }
 	case CHAR_MCWEBB: { return &mcwebb_play; break; }
     default:
     {

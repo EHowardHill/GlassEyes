@@ -242,7 +242,7 @@ struct global_data
 	int action_iterations[ACTIONS_SIZE] = {0};
 	const map *entry_map = nullptr;
 	const regular_bg_item *bg = nullptr;
-	vector_2 entry_position = {0, 0};
+	vector_2 jeremy_position = {0, 0};
 	vector_2 ginger_position = {0, 0};
 	vector_2 sebellus_position = {0, 0};
 	int entry_direction = DIR_RIGHT;

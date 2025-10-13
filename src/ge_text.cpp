@@ -454,7 +454,7 @@ void dialogue_box::init(character_manager *ch_man)
             }
 
             auto pos = ch_man->player_ptr->v_sprite.bounds.position;
-            global_data_ptr->entry_position = {pos.x.integer() / 32, pos.y.integer() / 32};
+            global_data_ptr->jeremy_position = {pos.x.integer() / 32, pos.y.integer() / 32};
             global_data_ptr->foe = line.index;
             ch_man->alert(BATTLE);
             break;
@@ -469,7 +469,7 @@ void dialogue_box::init(character_manager *ch_man)
             }
 
             auto pos = ch_man->player_ptr->v_sprite.bounds.position;
-            global_data_ptr->entry_position = {pos.x.integer() / 32, pos.y.integer() / 32};
+            global_data_ptr->jeremy_position = {pos.x.integer() / 32, pos.y.integer() / 32};
             global_data_ptr->foe = line.index;
             ch_man->alert(GAME);
             break;

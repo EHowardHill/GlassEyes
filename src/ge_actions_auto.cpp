@@ -1,0 +1,1158 @@
+#include "bn_music.h"
+#include "bn_music_items.h"
+
+#include "bn_regular_bg_items_big_bg_forest_01.h"
+
+#include "ge_globals.h"
+#include "ge_dialogue.h"
+#include "ge_character_manager.h"
+#include "ge_actions_auto.h"
+#include "ge_map_data.h"
+
+using namespace bn;
+
+int perform_action_interactive(int index, character_manager *ch_man)
+{
+    switch (index)
+    {	case 6:
+	{
+		if (global_data_ptr->action_iterations[6] == 1) { ch_man->load(&garbage_sign01); } else
+		if (global_data_ptr->action_iterations[6] == 2) { ch_man->load(&garbage_sign01b); } else
+		{ };
+		break;
+	}
+	case 10:
+	{
+		ch_man->load(&garbage_sign02);
+		break;
+	}
+	case 14:
+	{
+		ch_man->load(&garbage_sign03);
+		break;
+	}
+	case 16:
+	{
+		ch_man->load(&garbage_05b);
+		break;
+	}
+	case 23:
+	{
+		ch_man->load(&garbage_sign04);
+		break;
+	}
+	case 25:
+	{
+		ch_man->load(&garbage_sign05);
+		break;
+	}
+	case 29:
+	{
+		ch_man->load(&lab_03);
+		break;
+	}
+	case 37:
+	{
+		ch_man->load(&forest_dlg_sign_01);
+		break;
+	}
+	case 40:
+	{
+		ch_man->load(&forest_dlg_sign_02);
+		break;
+	}
+	case 42:
+	{
+		ch_man->load(&forest_dlg_sign_02);
+		break;
+	}
+	case 54:
+	{
+		ch_man->load(&cave_sign_01);
+		break;
+	}
+	case 70:
+	{
+		ch_man->load(&temmie_sign);
+		break;
+	}
+	case 72:
+	{
+		ch_man->load(&temmie_01);
+		break;
+	}
+	case 73:
+	{
+		ch_man->load(&temmie_02);
+		break;
+	}
+	case 74:
+	{
+		ch_man->load(&temmie_03);
+		break;
+	}
+	case 75:
+	{
+		ch_man->load(&temmie_04);
+		break;
+	}
+	case 76:
+	{
+		ch_man->load(&temmie_05);
+		break;
+	}
+	case 77:
+	{
+		ch_man->load(&temmie_06);
+		break;
+	}
+	case 78:
+	{
+		ch_man->load(&temmie_07);
+		break;
+	}
+	case 80:
+	{
+		ch_man->load(&cave_sign_02);
+		break;
+	}
+	case 85:
+	{
+		global_data_ptr->process_stage = NEW_BERLIN;
+		return NEW_CHAPTER;
+		break;
+	}
+	case 87:
+	{
+		ch_man->load(&avalon_sign_01);
+		break;
+	}
+	case 88:
+	{
+		ch_man->load(&avalon_sign_02);
+		break;
+	}
+	case 90:
+	{
+		ch_man->load(&avalon_sign_03);
+		break;
+	}
+	case 91:
+	{
+		ch_man->load(&avalon_sign_04);
+		break;
+	}
+	case 92:
+	{
+		ch_man->load(&avalon_sign_05);
+		break;
+	}
+	case 94:
+	{
+		ch_man->load(&avalon_sign_06);
+		break;
+	}
+	case 97:
+	{
+		if (global_data_ptr->action_iterations[97] == 1) { ch_man->load(&avalon_guy_01); } else
+		{ ch_man->load(&avalon_guy_01); }
+		break;
+	}
+	case 98:
+	{
+		if (global_data_ptr->action_iterations[98] == 1) { ch_man->load(&avalon_grandma_01); } else
+		{ ch_man->load(&avalon_grandma_01); }
+		break;
+	}
+	case 99:
+	{
+		if (global_data_ptr->action_iterations[99] == 1) { ch_man->load(&avalon_courier_01); } else
+		{ ch_man->load(&avalon_courier_01); }
+		break;
+	}
+	case 100:
+	{
+		if (global_data_ptr->action_iterations[100] == 1) { ch_man->load(&avalon_shop_01); } else
+		{ ch_man->load(&avalon_shop_01); }
+		break;
+	}
+	case 101:
+	{
+		if (global_data_ptr->action_iterations[101] == 1) { ch_man->load(&avalon_wormguy_01); } else
+		{ ch_man->load(&avalon_wormguy_01); }
+		break;
+	}
+	case 103:
+	{
+		if (global_data_ptr->action_iterations[103] == 1) { ch_man->load(&doll_guy_01); } else
+		{ };
+		break;
+	}
+	case 104:
+	{
+		if (global_data_ptr->action_iterations[104] == 1) { ch_man->load(&item_tire_01); } else
+		{ };
+		break;
+	}
+	case 105:
+	{
+		if (global_data_ptr->action_iterations[105] == 1) { ch_man->load(&item_enoki_01); } else
+		{ };
+		break;
+	}
+	case 107:
+	{
+		if (global_data_ptr->action_iterations[107] == 1) { ch_man->load(&item_lime_01); } else
+		{ };
+		break;
+	}
+	case 108:
+	{
+		if (global_data_ptr->action_iterations[108] == 1) { ch_man->load(&scruffys_01); } else
+		{ };
+		break;
+	}
+	case 109:
+	{
+		if (global_data_ptr->action_iterations[109] == 1) { ch_man->load(&scruffys_02); } else
+		{ };
+		break;
+	}
+	case 110:
+	{
+		if (global_data_ptr->action_iterations[110] == 1) { ch_man->load(&scruffys_03); } else
+		{ };
+		break;
+	}
+	case 111:
+	{
+		if (global_data_ptr->action_iterations[111] == 1) { ch_man->load(&scruffys_04); } else
+		{ };
+		break;
+	}
+	case 113:
+	{
+		music_items::shop.play();
+		break;
+	}
+	case 114:
+	{
+		if (global_data_ptr->action_iterations[114] == 1) { ch_man->load(&scruffys_06); } else
+		{ ch_man->load(&scruffys_06); }
+		break;
+	}
+	case 115:
+	{
+		if (global_data_ptr->action_iterations[115] == 1) { ch_man->load(&tollhouse_01); } else
+		{ ch_man->load(&tollhouse_01); }
+		break;
+	}
+	case 132:
+	{
+		if (global_data_ptr->action_iterations[132] == 1) { ch_man->load(&broken_avalon_01); } else
+		{ };
+		break;
+	}
+	case 133:
+	{
+		if (global_data_ptr->action_iterations[133] == 1) { ch_man->load(&broken_avalon_02); } else
+		{ };
+		break;
+	}
+	case 134:
+	{
+		if (global_data_ptr->action_iterations[134] == 1) { ch_man->load(&broken_avalon_02); } else
+		{ };
+		break;
+	}
+	case 153:
+	{
+		if (global_data_ptr->action_iterations[153] == 1) { ch_man->load(&item_153); } else
+		{ };
+		break;
+	}
+	case 154:
+	{
+		if (global_data_ptr->action_iterations[154] == 1) { ch_man->load(&item_none); } else
+		{ };
+		break;
+	}
+	case 156:
+	{
+		if (global_data_ptr->action_iterations[156] == 1) { ch_man->load(&item_156); } else
+		{ };
+		break;
+	}
+	case 157:
+	{
+		if (global_data_ptr->action_iterations[157] == 1) { ch_man->load(&item_157); } else
+		{ };
+		break;
+	}
+	case 158:
+	{
+		if (global_data_ptr->action_iterations[158] == 1) { ch_man->load(&item_158); } else
+		{ };
+		break;
+	}
+	case 175:
+	{
+		if (global_data_ptr->action_iterations[175] == 1) { ch_man->load(&talk_175); } else
+		{ };
+		break;
+	}
+	case 180:
+	{
+		global_data_ptr->process_stage = DOG_AND_PONY;
+		return NEW_CHAPTER;
+		break;
+	}
+	case 182:
+	{
+		ch_man->load(&sleep_01);
+		break;
+	}
+	case 184:
+	{
+		if (global_data_ptr->action_iterations[184] == 1) { ch_man->load(&talk_184); } else
+		{ };
+		break;
+	}
+	case 197:
+	{
+		if (global_data_ptr->action_iterations[197] == 1) { ch_man->load(&chat_197); } else
+		{ };
+		break;
+	}
+	}
+}
+
+int perform_action_automatic(int index, character_manager *ch_man)
+{
+    switch (index)
+    {	case 1:
+	{
+		ch_man->load(&test_convo);
+		break;
+	}
+	case 2:
+	{
+		if (global_data_ptr->action_iterations[2] == 1) { ch_man->load(&garbage_01); } else
+		{ };
+		break;
+	}
+	case 3:
+	{
+		if (global_data_ptr->action_iterations[3] == 1) { ch_man->load(&garbage_02); } else
+		{ };
+		break;
+	}
+	case 4:
+	{
+		if (global_data_ptr->action_iterations[4] == 1) { ch_man->load(&garbage_03); } else
+		{ };
+		break;
+	}
+	case 5:
+	{
+		global_data_ptr->entry_map = &map_garbage_02;
+		global_data_ptr->jeremy_position = {2, 6};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 7:
+	{
+		global_data_ptr->entry_map = &map_viskers_house;
+		global_data_ptr->jeremy_position = {3, 5};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 8:
+	{
+		global_data_ptr->entry_map = &map_garbage_03;
+		global_data_ptr->jeremy_position = {1, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 9:
+	{
+		global_data_ptr->entry_map = &map_garbage_02;
+		global_data_ptr->jeremy_position = {13, 2};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 11:
+	{
+		if (global_data_ptr->action_iterations[11] == 1) { ch_man->load(&visker_h_03); } else
+		{ };
+		break;
+	}
+	case 12:
+	{
+		if (global_data_ptr->action_iterations[12] == 1) { ch_man->load(&visker_h_02); } else
+		{ };
+		break;
+	}
+	case 13:
+	{
+		if (global_data_ptr->action_iterations[13] == 1) { ch_man->load(&visker_h_01); } else
+		{ };
+		break;
+	}
+	case 15:
+	{
+		if (global_data_ptr->action_iterations[15] == 1) { ch_man->load(&garbage_04); } else
+		if (global_data_ptr->action_iterations[15] == 2) { ch_man->load(&garbage_05); } else
+		{ };
+		break;
+	}
+	case 17:
+	{
+		global_data_ptr->entry_map = &map_garbage_04;
+		global_data_ptr->jeremy_position = {29, 4};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 19:
+	{
+		global_data_ptr->entry_map = &map_garbage_04;
+		global_data_ptr->jeremy_position = {10, 12};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 20:
+	{
+		global_data_ptr->entry_map = &map_garbage_04;
+		global_data_ptr->jeremy_position = {2, 20};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 21:
+	{
+		global_data_ptr->entry_map = &map_garbage_04;
+		global_data_ptr->jeremy_position = {29, 12};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 22:
+	{
+		global_data_ptr->entry_map = &map_garbage_04;
+		global_data_ptr->jeremy_position = {29, 20};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 26:
+	{
+		if (global_data_ptr->action_iterations[26] == 1) { ch_man->load(&garbage_06); } else
+		{ ch_man->load(&garbage_06); }
+		break;
+	}
+	case 27:
+	{
+		if (global_data_ptr->action_iterations[27] == 1) { ch_man->load(&lab_01); } else
+		{ };
+		break;
+	}
+	case 28:
+	{
+		if (global_data_ptr->action_iterations[28] == 1) { ch_man->load(&lab_02); } else
+		if (global_data_ptr->action_iterations[28] == 2) { ch_man->load(&lab_02b); } else
+		{ };
+		break;
+	}
+	case 31:
+	{
+		if (global_data_ptr->action_iterations[31] == 1) { ch_man->load(&lab_05); } else
+		{ };
+		break;
+	}
+	case 32:
+	{
+		if (global_data_ptr->action_iterations[32] == 1) { ch_man->load(&lab_06); } else
+		{ };
+		break;
+	}
+	case 33:
+	{
+		if (global_data_ptr->action_iterations[33] == 1) { ch_man->load(&lab_07); } else
+		{ };
+		break;
+	}
+	case 34:
+	{
+		if (global_data_ptr->action_iterations[34] == 1) { ch_man->load(&lab_08); } else
+		{ };
+		break;
+	}
+	case 35:
+	{
+		ch_man->load(&leaving_lab);
+		break;
+	}
+	case 36:
+	{
+		if (global_data_ptr->action_iterations[36] == 1) { ch_man->load(&forest_dlg_02); } else
+		{ };
+		break;
+	}
+	case 38:
+	{
+		if (global_data_ptr->action_iterations[38] == 1) { ch_man->load(&forest_dlg_01); } else
+		{ };
+		break;
+	}
+	case 39:
+	{
+		if (global_data_ptr->action_iterations[39] == 1) { ch_man->load(&croke_01); } else
+		if (global_data_ptr->action_iterations[39] == 2) { ch_man->load(&croke_05); } else
+		{ };
+		break;
+	}
+	case 41:
+	{
+		global_data_ptr->entry_map = &map_cave_01;
+		global_data_ptr->bg_track = &music_items::cave_01;
+		global_data_ptr->jeremy_position = {7, 12};
+		global_data_ptr->ginger_position = {6, 12};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 43:
+	{
+		if (global_data_ptr->action_iterations[43] == 1) { ch_man->load(&forest_dlg_03); } else
+		{ };
+		break;
+	}
+	case 46:
+	{
+		if (global_data_ptr->action_iterations[46] == 1) { ch_man->load(&bridge_01); } else
+		{ };
+		break;
+	}
+	case 48:
+	{
+		global_data_ptr->entry_map = &map_cave_02;
+		global_data_ptr->jeremy_position = {3, 30};
+		global_data_ptr->ginger_position = {2, 30};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 51:
+	{
+		global_data_ptr->entry_map = &map_forest_01;
+		global_data_ptr->bg_track = &music_items::forest_01;
+		global_data_ptr->jeremy_position = {67, 3};
+		global_data_ptr->ginger_position = {66, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 52:
+	{
+		if (global_data_ptr->action_iterations[52] == 1) { ch_man->load(&cave_01); } else
+		{ };
+		break;
+	}
+	case 55:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {19, 30};
+		global_data_ptr->ginger_position = {20, 30};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 56:
+	{
+		global_data_ptr->entry_map = &map_cave_02;
+		global_data_ptr->jeremy_position = {28, 3};
+		global_data_ptr->ginger_position = {29, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 57:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {16, 4};
+		global_data_ptr->ginger_position = {15, 4};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 58:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {16, 16};
+		global_data_ptr->ginger_position = {15, 16};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 59:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {30, 19};
+		global_data_ptr->ginger_position = {31, 19};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 60:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {29, 3};
+		global_data_ptr->ginger_position = {30, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 61:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {12, 11};
+		global_data_ptr->ginger_position = {11, 11};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 62:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {12, 21};
+		global_data_ptr->ginger_position = {11, 21};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 63:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {4, 3};
+		global_data_ptr->ginger_position = {5, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 64:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {28, 11};
+		global_data_ptr->ginger_position = {29, 11};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 65:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {2, 24};
+		global_data_ptr->ginger_position = {2, 23};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 66:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {13, 8};
+		global_data_ptr->ginger_position = {13, 7};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 67:
+	{
+		global_data_ptr->entry_map = &map_cave_cowbemmie;
+		global_data_ptr->bg_track = &music_items::bg_dixieland;
+		global_data_ptr->jeremy_position = {2, 3};
+		global_data_ptr->ginger_position = {1, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 68:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->bg_track = &music_items::forest_01;
+		global_data_ptr->jeremy_position = {5, 23};
+		global_data_ptr->ginger_position = {6, 23};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 71:
+	{
+		global_data_ptr->entry_map = &map_forest_01;
+		global_data_ptr->jeremy_position = {105, 3};
+		global_data_ptr->ginger_position = {104, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 79:
+	{
+		global_data_ptr->entry_map = &map_forest_02;
+		global_data_ptr->jeremy_position = {27, 3};
+		global_data_ptr->ginger_position = {26, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 81:
+	{
+		global_data_ptr->entry_map = &map_forest_03;
+		global_data_ptr->bg_track = &music_items::bg_avalon;
+		global_data_ptr->jeremy_position = {14, 15};
+		global_data_ptr->ginger_position = {15, 15};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 82:
+	{
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->jeremy_position = {5, 15};
+		global_data_ptr->ginger_position = {4, 15};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 83:
+	{
+		global_data_ptr->entry_map = &map_cave_04;
+		global_data_ptr->jeremy_position = {16, 3};
+		global_data_ptr->ginger_position = {15, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 84:
+	{
+		global_data_ptr->entry_map = &map_forest_02;
+		global_data_ptr->jeremy_position = {2, 3};
+		global_data_ptr->ginger_position = {1, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 89:
+	{
+		global_data_ptr->entry_map = &map_tavern_01;
+		global_data_ptr->bg_track = &music_items::theme_visker;
+		global_data_ptr->jeremy_position = {8, 10};
+		global_data_ptr->ginger_position = {7, 10};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 95:
+	{
+		global_data_ptr->entry_map = &map_shop_01;
+		global_data_ptr->bg_track = &music_items::shop;
+		global_data_ptr->jeremy_position = {5, 8};
+		global_data_ptr->ginger_position = {4, 8};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 102:
+	{
+		global_data_ptr->entry_map = &map_forest_03;
+		global_data_ptr->bg_track = &music_items::bg_avalon;
+		global_data_ptr->jeremy_position = {47, 8};
+		global_data_ptr->ginger_position = {46, 8};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 117:
+	{
+		global_data_ptr->entry_map = &map_forest_03;
+		global_data_ptr->bg_track = &music_items::bg_avalon;
+		global_data_ptr->jeremy_position = {24, 14};
+		global_data_ptr->ginger_position = {23, 14};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 118:
+	{
+		global_data_ptr->entry_map = &map_forest_04;
+		global_data_ptr->bg_track = &music_items::bg_spamton;
+		global_data_ptr->jeremy_position = {4, 7};
+		global_data_ptr->ginger_position = {3, 7};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 119:
+	{
+		global_data_ptr->entry_map = &map_forest_03;
+		global_data_ptr->bg_track = &music_items::bg_avalon;
+		global_data_ptr->jeremy_position = {6, 2};
+		global_data_ptr->ginger_position = {6, 1};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 122:
+	{
+		if (global_data_ptr->action_iterations[122] == 1) { ch_man->load(&final_msg); } else
+		{ };
+		break;
+	}
+	case 125:
+	{
+		if (global_data_ptr->action_iterations[125] == 1) { ch_man->load(&captive_01); } else
+		{ };
+		break;
+	}
+	case 126:
+	{
+		if (global_data_ptr->action_iterations[126] == 1) { ch_man->load(&togore_01); } else
+		{ };
+		break;
+	}
+	case 127:
+	{
+		global_data_ptr->entry_map = &map_cave_05;
+		global_data_ptr->jeremy_position = {14, 14};
+		global_data_ptr->ginger_position = {15, 14};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 128:
+	{
+		global_data_ptr->entry_map = &map_cave_05;
+		global_data_ptr->jeremy_position = {4, 9};
+		global_data_ptr->ginger_position = {5, 9};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 129:
+	{
+		global_data_ptr->entry_map = &map_forest_03_attack;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {25, 16};
+		global_data_ptr->ginger_position = {26, 16};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 130:
+	{
+		if (global_data_ptr->action_iterations[130] == 1) { ch_man->load(&broken_avalon_00); } else
+		{ };
+		break;
+	}
+	case 131:
+	{
+		global_data_ptr->entry_map = &map_dark_01;
+		global_data_ptr->bg_track = &music_items::bg_sorry;
+		global_data_ptr->jeremy_position = {0, 10};
+		global_data_ptr->ginger_position = {1, 10};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 139:
+	{
+		global_data_ptr->entry_map = &map_dark_02;
+		global_data_ptr->jeremy_position = {5, 1};
+		global_data_ptr->ginger_position = {6, 1};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 140:
+	{
+		global_data_ptr->entry_map = &map_dark_02;
+		global_data_ptr->jeremy_position = {14, 1};
+		global_data_ptr->ginger_position = {13, 1};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 141:
+	{
+		global_data_ptr->entry_map = &map_dark_02;
+		global_data_ptr->jeremy_position = {20, 1};
+		global_data_ptr->ginger_position = {19, 1};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 143:
+	{
+		global_data_ptr->entry_map = &map_dark_01;
+		global_data_ptr->jeremy_position = {5, 22};
+		global_data_ptr->ginger_position = {6, 22};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 144:
+	{
+		global_data_ptr->entry_map = &map_dark_01;
+		global_data_ptr->jeremy_position = {14, 22};
+		global_data_ptr->ginger_position = {13, 22};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 145:
+	{
+		global_data_ptr->entry_map = &map_dark_01;
+		global_data_ptr->jeremy_position = {20, 22};
+		global_data_ptr->ginger_position = {19, 22};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 146:
+	{
+		global_data_ptr->entry_map = &map_dark_02;
+		global_data_ptr->jeremy_position = {17, 13};
+		global_data_ptr->ginger_position = {16, 13};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 147:
+	{
+		global_data_ptr->entry_map = &map_dark_02;
+		global_data_ptr->jeremy_position = {12, 3};
+		global_data_ptr->ginger_position = {11, 3};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 152:
+	{
+		if (global_data_ptr->action_iterations[152] == 1) { ch_man->load(&dark_152); } else
+		{ };
+		break;
+	}
+	case 161:
+	{
+		if (global_data_ptr->action_iterations[161] == 1) { ch_man->load(&dark_talk); } else
+		{ };
+		break;
+	}
+	case 162:
+	{
+		global_data_ptr->entry_map = &map_dark_05;
+		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+		global_data_ptr->jeremy_position = {1, 30};
+		global_data_ptr->ginger_position = {1, 29};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 164:
+	{
+		if (global_data_ptr->action_iterations[164] == 1) { ch_man->load(&sebellus_01); } else
+		{ };
+		break;
+	}
+	case 165:
+	{
+		global_data_ptr->entry_map = &map_dark_06;
+		global_data_ptr->bg_track = &music_items::bg_sorry;
+		global_data_ptr->jeremy_position = {2, 18};
+		global_data_ptr->ginger_position = {1, 18};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 166:
+	{
+		if (global_data_ptr->action_iterations[166] == 1) { ch_man->load(&sebellus_02); } else
+		{ };
+		break;
+	}
+	case 171:
+	{
+		global_data_ptr->entry_map = &map_room_04;
+		global_data_ptr->jeremy_position = {4, 6};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 172:
+	{
+		global_data_ptr->entry_map = &map_room_05;
+		global_data_ptr->jeremy_position = {4, 8};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 173:
+	{
+		global_data_ptr->entry_map = &map_room_03;
+		global_data_ptr->jeremy_position = {1, 4};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 176:
+	{
+		global_data_ptr->entry_map = &map_room_garden;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		global_data_ptr->jeremy_position = {6, 10};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 177:
+	{
+		if (global_data_ptr->action_iterations[177] == 1) { ch_man->load(&talk_177); } else
+		{ };
+		break;
+	}
+	case 178:
+	{
+		global_data_ptr->entry_map = &map_room_02;
+		global_data_ptr->jeremy_position = {16, 6};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 179:
+	{
+		global_data_ptr->entry_map = &map_room_02;
+		global_data_ptr->jeremy_position = {7, 4};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 183:
+	{
+		global_data_ptr->entry_map = &map_room_02;
+		global_data_ptr->jeremy_position = {12, 4};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 185:
+	{
+		global_data_ptr->entry_map = &map_room_05;
+		global_data_ptr->jeremy_position = {5, 2};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 186:
+	{
+		global_data_ptr->entry_map = &map_room_03;
+		global_data_ptr->bg_track = &music_items::theme_anata;
+		global_data_ptr->jeremy_position = {15, 4};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 189:
+	{
+		if (global_data_ptr->action_iterations[189] == 1) { ch_man->load(&talk_189); } else
+		{ };
+		break;
+	}
+	case 195:
+	{
+		global_data_ptr->entry_map = &map_room_06;
+		global_data_ptr->jeremy_position = {4, 5};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 196:
+	{
+		if (global_data_ptr->action_iterations[196] == 1) { ch_man->load(&wakeup_01); } else
+		{ };
+		break;
+	}
+	case 198:
+	{
+		global_data_ptr->entry_map = &map_room_02b;
+		global_data_ptr->jeremy_position = {13, 4};
+		global_data_ptr->ginger_position = {15, 4};
+		global_data_ptr->sebellus_position = {14, 6};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 199:
+	{
+		if (global_data_ptr->action_iterations[199] == 1) { ch_man->load(&have_to_go); } else
+		{ };
+		break;
+	}
+	case 200:
+	{
+		global_data_ptr->entry_map = &map_room_03b;
+		global_data_ptr->jeremy_position = {3, 5};
+		global_data_ptr->ginger_position = {2, 5};
+		global_data_ptr->sebellus_position = {1, 4};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 201:
+	{
+		global_data_ptr->entry_map = &map_room_garden_b;
+		global_data_ptr->jeremy_position = {6, 10};
+		global_data_ptr->ginger_position = {5, 10};
+		global_data_ptr->sebellus_position = {4, 10};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 202:
+	{
+		global_data_ptr->entry_map = &map_room_hallway;
+		global_data_ptr->jeremy_position = {2, 9};
+		global_data_ptr->ginger_position = {2, 10};
+		global_data_ptr->sebellus_position = {1, 10};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 203:
+	{
+		if (global_data_ptr->action_iterations[203] == 1) { ch_man->load(&have_to_go_2); } else
+		{ };
+		break;
+	}
+	case 204:
+	{
+		global_data_ptr->entry_map = &map_room_basement;
+		global_data_ptr->jeremy_position = {12, 9};
+		global_data_ptr->ginger_position = {12, 10};
+		global_data_ptr->sebellus_position = {11, 10};
+		music::stop();
+		return NEW_MAP;
+		break;
+	}
+	case 205:
+	{
+		if (global_data_ptr->action_iterations[205] == 1) { ch_man->load(&have_to_go_3); } else
+		{ };
+		break;
+	}
+	}
+}

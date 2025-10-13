@@ -166,37 +166,6 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     follow_id = resolve_sprite_id(index_);
     idle_animation = resolve_sprite_idle_animation(index_);
 
-
-    switch (index_)
-    {
-    case CHAR_SEBELLUS:
-    {
-        follow_id = CHAR_GINGER;
-        break;
-    }
-    case CHAR_BUTTON:
-    {
-        idle_animation = &elem_button_up;
-        break;
-    }
-    case CHAR_SPIKE:
-    {
-        idle_animation = &elem_spike_up;
-        is_pressed = true;
-        break;
-    }
-    case CHAR_MCWEBB:
-    {
-        idle_animation = &mcwebb_play;
-        break;
-    }
-
-    default:
-    {
-        break;
-    }
-    }
-
     // Reset sprites
     v_sprite.sprite_ptr_raw[0].reset();
     v_sprite.sprite_ptr_raw[1].reset();

@@ -55,7 +55,7 @@ int navigate_map()
 
     if (global_data_ptr->entry_map != &map_room01)
     {
-        char_mgr.add_character(CHAR_JEREMY, global_data_ptr->entry_position, 0);
+        char_mgr.add_character(CHAR_JEREMY, global_data_ptr->jeremy_position, 0);
     }
 
     if (global_data_ptr->ginger_position.x != 0 && global_data_ptr->ginger_position.y != 0)
@@ -81,8 +81,8 @@ int navigate_map()
     }
 
     vector_2 spawn_pos = {
-        global_data_ptr->entry_position.x * 32,
-        global_data_ptr->entry_position.y * 32};
+        global_data_ptr->jeremy_position.x * 32,
+        global_data_ptr->jeremy_position.y * 32};
     int spawn_action = current_map.action(spawn_pos);
 
     if (spawn_action == NEW_BERLIN_SIGN)

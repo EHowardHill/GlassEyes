@@ -369,7 +369,9 @@
         "Robin": {},
         "Sneaker": {},
         "Tollbooth": {},
-        "Spamton": {},
+        "Spamton": {
+            "idle_animation": "npcs_spamton_anim"
+        },
         "Togore": {},
         "Fire": {},
         "Sebellus": {
@@ -426,5 +428,1388 @@
             "type": "popup"
         },
         "Buffer": {}
+    },
+    "actions": {
+        "interactable": {
+            "6": {
+                "sequence": [
+                    "garbage_sign01",
+                    "garbage_sign01b"
+                ]
+            },
+            "10": {
+                "auto": "garbage_sign02"
+            },
+            "14": {
+                "auto": "garbage_sign03"
+            },
+            "16": {
+                "auto": "garbage_05b"
+            },
+            "23": {
+                "auto": "garbage_sign04"
+            },
+            "25": {
+                "auto": "garbage_sign05"
+            },
+            "29": {
+                "auto": "lab_03"
+            },
+            "37": {
+                "auto": "forest_dlg_sign_01"
+            },
+            "40": {
+                "auto": "forest_dlg_sign_02"
+            },
+            "42": {
+                "auto": "forest_dlg_sign_02"
+            },
+            "54": {
+                "auto": "cave_sign_01"
+            },
+            "70": {
+                "auto": "temmie_sign"
+            },
+            "72": {
+                "auto": "temmie_01"
+            },
+            "73": {
+                "auto": "temmie_02"
+            },
+            "74": {
+                "auto": "temmie_03"
+            },
+            "75": {
+                "auto": "temmie_04"
+            },
+            "76": {
+                "auto": "temmie_05"
+            },
+            "77": {
+                "auto": "temmie_06"
+            },
+            "78": {
+                "auto": "temmie_07"
+            },
+            "80": {
+                "auto": "cave_sign_02"
+            },
+            "85": {
+                "stage": "NEW_BERLIN"
+            },
+            "87": {
+                "auto": "avalon_sign_01"
+            },
+            "88": {
+                "auto": "avalon_sign_02"
+            },
+            "90": {
+                "auto": "avalon_sign_03"
+            },
+            "91": {
+                "auto": "avalon_sign_04"
+            },
+            "92": {
+                "auto": "avalon_sign_05"
+            },
+            "94": {
+                "auto": "avalon_sign_06"
+            },
+            "97": {
+                "sequence": [
+                    "avalon_guy_01"
+                ],
+                "auto": "avalon_guy_02"
+            },
+            "98": {
+                "sequence": [
+                    "avalon_grandma_01"
+                ],
+                "auto": "avalon_grandma_02"
+            },
+            "99": {
+                "sequence": [
+                    "avalon_courier_01"
+                ],
+                "auto": "avalon_courier_02"
+            },
+            "100": {
+                "sequence": [
+                    "avalon_shop_01"
+                ],
+                "auto": "avalon_shop_02"
+            },
+            "101": {
+                "sequence": [
+                    "avalon_wormguy_01"
+                ],
+                "auto": "avalon_wormguy_02"
+            },
+            "103": {
+                "sequence": [
+                    "doll_guy_01"
+                ]
+            },
+            "104": {
+                "sequence": [
+                    "item_tire_01"
+                ]
+            },
+            "105": {
+                "sequence": [
+                    "item_enoki_01"
+                ]
+            },
+            "107": {
+                "sequence": [
+                    "item_lime_01"
+                ]
+            },
+            "108": {
+                "sequence": [
+                    "scruffys_01"
+                ]
+            },
+            "109": {
+                "sequence": [
+                    "scruffys_02"
+                ]
+            },
+            "110": {
+                "sequence": [
+                    "scruffys_03"
+                ]
+            },
+            "111": {
+                "sequence": [
+                    "scruffys_04"
+                ]
+            },
+            "113": {
+                "music": "shop"
+            },
+            "114": {
+                "sequence": [
+                    "scruffys_06"
+                ],
+                "auto": "scruffys_06b"
+            },
+            "115": {
+                "sequence": [
+                    "tollhouse_01"
+                ],
+                "auto": "tollhouse_01b"
+            },
+            "132": {
+                "sequence": [
+                    "broken_avalon_01"
+                ]
+            },
+            "133": {
+                "sequence": [
+                    "broken_avalon_02"
+                ]
+            },
+            "134": {
+                "sequence": [
+                    "broken_avalon_02"
+                ]
+            },
+            "153": {
+                "sequence": [
+                    "item_153"
+                ]
+            },
+            "154": {
+                "sequence": [
+                    "item_none"
+                ]
+            },
+            "156": {
+                "sequence": [
+                    "item_156"
+                ]
+            },
+            "157": {
+                "sequence": [
+                    "item_157"
+                ]
+            },
+            "158": {
+                "sequence": [
+                    "item_158"
+                ]
+            },
+            "175": {
+                "sequence": [
+                    "talk_175"
+                ]
+            },
+            "180": {
+                "stage": "DOG_AND_PONY"
+            },
+            "182": {
+                "auto": "sleep_01"
+            },
+            "184": {
+                "sequence": [
+                    "talk_184"
+                ]
+            },
+            "197": {
+                "sequence": [
+                    "chat_197"
+                ]
+            }
+        },
+        "automatic": {
+            "1": {
+                "auto": "test_convo"
+            },
+            "2": {
+                "sequence": [
+                    "garbage_01"
+                ]
+            },
+            "3": {
+                "sequence": [
+                    "garbage_02"
+                ]
+            },
+            "4": {
+                "sequence": [
+                    "garbage_03"
+                ]
+            },
+            "5": {
+                "new_map": {
+                    "map": "garbage_02",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            6
+                        ]
+                    }
+                }
+            },
+            "7": {
+                "new_map": {
+                    "map": "viskers_house",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            5
+                        ]
+                    }
+                }
+            },
+            "8": {
+                "new_map": {
+                    "map": "garbage_03",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            3
+                        ]
+                    }
+                }
+            },
+            "9": {
+                "new_map": {
+                    "map": "garbage_02",
+                    "positions": {
+                        "jeremy": [
+                            13,
+                            2
+                        ]
+                    }
+                }
+            },
+            "11": {
+                "sequence": [
+                    "visker_h_03"
+                ]
+            },
+            "12": {
+                "sequence": [
+                    "visker_h_02"
+                ]
+            },
+            "13": {
+                "sequence": [
+                    "visker_h_01"
+                ]
+            },
+            "15": {
+                "sequence": [
+                    "garbage_04",
+                    "garbage_05"
+                ]
+            },
+            "17": {
+                "new_map": {
+                    "map": "garbage_04",
+                    "positions": {
+                        "jeremy": [
+                            29,
+                            4
+                        ]
+                    }
+                }
+            },
+            "19": {
+                "new_map": {
+                    "map": "garbage_04",
+                    "positions": {
+                        "jeremy": [
+                            10,
+                            12
+                        ]
+                    }
+                }
+            },
+            "20": {
+                "new_map": {
+                    "map": "garbage_04",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            20
+                        ]
+                    }
+                }
+            },
+            "21": {
+                "new_map": {
+                    "map": "garbage_04",
+                    "positions": {
+                        "jeremy": [
+                            29,
+                            12
+                        ]
+                    }
+                }
+            },
+            "22": {
+                "new_map": {
+                    "map": "garbage_04",
+                    "positions": {
+                        "jeremy": [
+                            29,
+                            20
+                        ]
+                    }
+                }
+            },
+            "26": {
+                "sequence": [
+                    "garbage_06"
+                ],
+                "auto": "garbage_06b"
+            },
+            "27": {
+                "sequence": [
+                    "lab_01"
+                ]
+            },
+            "28": {
+                "sequence": [
+                    "lab_02",
+                    "lab_02b"
+                ]
+            },
+            "31": {
+                "sequence": [
+                    "lab_05"
+                ]
+            },
+            "32": {
+                "sequence": [
+                    "lab_06"
+                ]
+            },
+            "33": {
+                "sequence": [
+                    "lab_07"
+                ]
+            },
+            "34": {
+                "sequence": [
+                    "lab_08"
+                ]
+            },
+            "35": {
+                "auto": "leaving_lab"
+            },
+            "36": {
+                "sequence": [
+                    "forest_dlg_02"
+                ]
+            },
+            "38": {
+                "sequence": [
+                    "forest_dlg_01"
+                ]
+            },
+            "39": {
+                "sequence": [
+                    "croke_01",
+                    "croke_05"
+                ]
+            },
+            "41": {
+                "new_map": {
+                    "map": "cave_01",
+                    "bg_track": "cave_01",
+                    "positions": {
+                        "jeremy": [
+                            7,
+                            12
+                        ],
+                        "ginger": [
+                            6,
+                            12
+                        ]
+                    }
+                }
+            },
+            "43": {
+                "sequence": [
+                    "forest_dlg_03"
+                ]
+            },
+            "46": {
+                "sequence": [
+                    "bridge_01"
+                ]
+            },
+            "48": {
+                "new_map": {
+                    "map": "cave_02",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            30
+                        ],
+                        "ginger": [
+                            2,
+                            30
+                        ]
+                    }
+                }
+            },
+            "51": {
+                "new_map": {
+                    "map": "forest_01",
+                    "bg_track": "forest_01",
+                    "positions": {
+                        "jeremy": [
+                            67,
+                            3
+                        ],
+                        "ginger": [
+                            66,
+                            3
+                        ]
+                    }
+                }
+            },
+            "52": {
+                "sequence": [
+                    "cave_01"
+                ]
+            },
+            "55": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            19,
+                            30
+                        ],
+                        "ginger": [
+                            20,
+                            30
+                        ]
+                    }
+                }
+            },
+            "56": {
+                "new_map": {
+                    "map": "cave_02",
+                    "positions": {
+                        "jeremy": [
+                            28,
+                            3
+                        ],
+                        "ginger": [
+                            29,
+                            3
+                        ]
+                    }
+                }
+            },
+            "57": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            16,
+                            4
+                        ],
+                        "ginger": [
+                            15,
+                            4
+                        ]
+                    }
+                }
+            },
+            "58": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            16,
+                            16
+                        ],
+                        "ginger": [
+                            15,
+                            16
+                        ]
+                    }
+                }
+            },
+            "59": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            30,
+                            19
+                        ],
+                        "ginger": [
+                            31,
+                            19
+                        ]
+                    }
+                }
+            },
+            "60": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            29,
+                            3
+                        ],
+                        "ginger": [
+                            30,
+                            3
+                        ]
+                    }
+                }
+            },
+            "61": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            12,
+                            11
+                        ],
+                        "ginger": [
+                            11,
+                            11
+                        ]
+                    }
+                }
+            },
+            "62": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            12,
+                            21
+                        ],
+                        "ginger": [
+                            11,
+                            21
+                        ]
+                    }
+                }
+            },
+            "63": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            3
+                        ],
+                        "ginger": [
+                            5,
+                            3
+                        ]
+                    }
+                }
+            },
+            "64": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            28,
+                            11
+                        ],
+                        "ginger": [
+                            29,
+                            11
+                        ]
+                    }
+                }
+            },
+            "65": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            24
+                        ],
+                        "ginger": [
+                            2,
+                            23
+                        ]
+                    }
+                }
+            },
+            "66": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            13,
+                            8
+                        ],
+                        "ginger": [
+                            13,
+                            7
+                        ]
+                    }
+                }
+            },
+            "67": {
+                "new_map": {
+                    "map": "cave_cowbemmie",
+                    "bg_track": "bg_dixieland",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            3
+                        ],
+                        "ginger": [
+                            1,
+                            3
+                        ]
+                    }
+                }
+            },
+            "68": {
+                "new_map": {
+                    "map": "cave_03",
+                    "bg_track": "forest_01",
+                    "positions": {
+                        "jeremy": [
+                            5,
+                            23
+                        ],
+                        "ginger": [
+                            6,
+                            23
+                        ]
+                    }
+                }
+            },
+            "71": {
+                "new_map": {
+                    "map": "forest_01",
+                    "positions": {
+                        "jeremy": [
+                            105,
+                            3
+                        ],
+                        "ginger": [
+                            104,
+                            3
+                        ]
+                    }
+                }
+            },
+            "79": {
+                "new_map": {
+                    "map": "forest_02",
+                    "positions": {
+                        "jeremy": [
+                            27,
+                            3
+                        ],
+                        "ginger": [
+                            26,
+                            3
+                        ]
+                    }
+                }
+            },
+            "81": {
+                "new_map": {
+                    "map": "forest_03",
+                    "bg_track": "bg_avalon",
+                    "positions": {
+                        "jeremy": [
+                            14,
+                            15
+                        ],
+                        "ginger": [
+                            15,
+                            15
+                        ]
+                    }
+                }
+            },
+            "82": {
+                "new_map": {
+                    "map": "cave_03",
+                    "positions": {
+                        "jeremy": [
+                            5,
+                            15
+                        ],
+                        "ginger": [
+                            4,
+                            15
+                        ]
+                    }
+                }
+            },
+            "83": {
+                "new_map": {
+                    "map": "cave_04",
+                    "positions": {
+                        "jeremy": [
+                            16,
+                            3
+                        ],
+                        "ginger": [
+                            15,
+                            3
+                        ]
+                    }
+                }
+            },
+            "84": {
+                "new_map": {
+                    "map": "forest_02",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            3
+                        ],
+                        "ginger": [
+                            1,
+                            3
+                        ]
+                    }
+                }
+            },
+            "89": {
+                "new_map": {
+                    "map": "tavern_01",
+                    "bg_track": "theme_visker",
+                    "positions": {
+                        "jeremy": [
+                            8,
+                            10
+                        ],
+                        "ginger": [
+                            7,
+                            10
+                        ]
+                    }
+                }
+            },
+            "95": {
+                "new_map": {
+                    "map": "shop_01",
+                    "bg_track": "shop",
+                    "positions": {
+                        "jeremy": [
+                            5,
+                            8
+                        ],
+                        "ginger": [
+                            4,
+                            8
+                        ]
+                    }
+                }
+            },
+            "102": {
+                "new_map": {
+                    "map": "forest_03",
+                    "bg_track": "bg_avalon",
+                    "positions": {
+                        "jeremy": [
+                            47,
+                            8
+                        ],
+                        "ginger": [
+                            46,
+                            8
+                        ]
+                    }
+                }
+            },
+            "117": {
+                "new_map": {
+                    "map": "forest_03",
+                    "bg_track": "bg_avalon",
+                    "positions": {
+                        "jeremy": [
+                            24,
+                            14
+                        ],
+                        "ginger": [
+                            23,
+                            14
+                        ]
+                    }
+                }
+            },
+            "118": {
+                "new_map": {
+                    "map": "forest_04",
+                    "bg_track": "bg_spamton",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            7
+                        ],
+                        "ginger": [
+                            3,
+                            7
+                        ]
+                    }
+                }
+            },
+            "119": {
+                "new_map": {
+                    "map": "forest_03",
+                    "bg_track": "bg_avalon",
+                    "positions": {
+                        "jeremy": [
+                            6,
+                            2
+                        ],
+                        "ginger": [
+                            6,
+                            1
+                        ]
+                    }
+                }
+            },
+            "122": {
+                "sequence": [
+                    "final_msg"
+                ]
+            },
+            "125": {
+                "sequence": [
+                    "captive_01"
+                ]
+            },
+            "126": {
+                "sequence": [
+                    "togore_01"
+                ]
+            },
+            "127": {
+                "new_map": {
+                    "map": "cave_05",
+                    "positions": {
+                        "jeremy": [
+                            14,
+                            14
+                        ],
+                        "ginger": [
+                            15,
+                            14
+                        ]
+                    }
+                }
+            },
+            "128": {
+                "new_map": {
+                    "map": "cave_05",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            9
+                        ],
+                        "ginger": [
+                            5,
+                            9
+                        ]
+                    }
+                }
+            },
+            "129": {
+                "new_map": {
+                    "map": "forest_03_attack",
+                    "bg": "big_bg_forest_01",
+                    "bg_track": "ambient_wind",
+                    "positions": {
+                        "jeremy": [
+                            25,
+                            16
+                        ],
+                        "ginger": [
+                            26,
+                            16
+                        ]
+                    }
+                }
+            },
+            "130": {
+                "sequence": [
+                    "broken_avalon_00"
+                ]
+            },
+            "131": {
+                "new_map": {
+                    "map": "dark_01",
+                    "bg_track": "bg_sorry",
+                    "positions": {
+                        "jeremy": [
+                            0,
+                            10
+                        ],
+                        "ginger": [
+                            1,
+                            10
+                        ]
+                    }
+                }
+            },
+            "139": {
+                "new_map": {
+                    "map": "dark_02",
+                    "positions": {
+                        "jeremy": [
+                            5,
+                            1
+                        ],
+                        "ginger": [
+                            6,
+                            1
+                        ]
+                    }
+                }
+            },
+            "140": {
+                "new_map": {
+                    "map": "dark_02",
+                    "positions": {
+                        "jeremy": [
+                            14,
+                            1
+                        ],
+                        "ginger": [
+                            13,
+                            1
+                        ]
+                    }
+                }
+            },
+            "141": {
+                "new_map": {
+                    "map": "dark_02",
+                    "positions": {
+                        "jeremy": [
+                            20,
+                            1
+                        ],
+                        "ginger": [
+                            19,
+                            1
+                        ]
+                    }
+                }
+            },
+            "143": {
+                "new_map": {
+                    "map": "dark_01",
+                    "positions": {
+                        "jeremy": [
+                            5,
+                            22
+                        ],
+                        "ginger": [
+                            6,
+                            22
+                        ]
+                    }
+                }
+            },
+            "144": {
+                "new_map": {
+                    "map": "dark_01",
+                    "positions": {
+                        "jeremy": [
+                            14,
+                            22
+                        ],
+                        "ginger": [
+                            13,
+                            22
+                        ]
+                    }
+                }
+            },
+            "145": {
+                "new_map": {
+                    "map": "dark_01",
+                    "positions": {
+                        "jeremy": [
+                            20,
+                            22
+                        ],
+                        "ginger": [
+                            19,
+                            22
+                        ]
+                    }
+                }
+            },
+            "146": {
+                "new_map": {
+                    "map": "dark_02",
+                    "positions": {
+                        "jeremy": [
+                            17,
+                            13
+                        ],
+                        "ginger": [
+                            16,
+                            13
+                        ]
+                    }
+                }
+            },
+            "147": {
+                "new_map": {
+                    "map": "dark_02",
+                    "positions": {
+                        "jeremy": [
+                            12,
+                            3
+                        ],
+                        "ginger": [
+                            11,
+                            3
+                        ]
+                    }
+                }
+            },
+            "152": {
+                "sequence": [
+                    "dark_152"
+                ]
+            },
+            "161": {
+                "sequence": [
+                    "dark_talk"
+                ]
+            },
+            "162": {
+                "new_map": {
+                    "map": "dark_05",
+                    "bg_track": "ambient_heartbeat",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            30
+                        ],
+                        "ginger": [
+                            1,
+                            29
+                        ]
+                    }
+                }
+            },
+            "164": {
+                "sequence": [
+                    "sebellus_01"
+                ]
+            },
+            "165": {
+                "new_map": {
+                    "map": "dark_06",
+                    "bg_track": "bg_sorry",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            18
+                        ],
+                        "ginger": [
+                            1,
+                            18
+                        ]
+                    }
+                }
+            },
+            "166": {
+                "sequence": [
+                    "sebellus_02"
+                ]
+            },
+            "171": {
+                "new_map": {
+                    "map": "room_04",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            6
+                        ]
+                    }
+                }
+            },
+            "172": {
+                "new_map": {
+                    "map": "room_05",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            8
+                        ]
+                    }
+                }
+            },
+            "173": {
+                "new_map": {
+                    "map": "room_03",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            4
+                        ]
+                    }
+                }
+            },
+            "176": {
+                "new_map": {
+                    "map": "room_garden",
+                    "bg_track": "ambient_wind",
+                    "positions": {
+                        "jeremy": [
+                            6,
+                            10
+                        ]
+                    }
+                }
+            },
+            "177": {
+                "sequence": [
+                    "talk_177"
+                ]
+            },
+            "178": {
+                "new_map": {
+                    "map": "room_02",
+                    "positions": {
+                        "jeremy": [
+                            16,
+                            6
+                        ]
+                    }
+                }
+            },
+            "179": {
+                "new_map": {
+                    "map": "room_02",
+                    "positions": {
+                        "jeremy": [
+                            7,
+                            4
+                        ]
+                    }
+                }
+            },
+            "183": {
+                "new_map": {
+                    "map": "room_02",
+                    "positions": {
+                        "jeremy": [
+                            12,
+                            4
+                        ]
+                    }
+                }
+            },
+            "185": {
+                "new_map": {
+                    "map": "room_05",
+                    "positions": {
+                        "jeremy": [
+                            5,
+                            2
+                        ]
+                    }
+                }
+            },
+            "186": {
+                "new_map": {
+                    "map": "room_03",
+                    "bg_track": "theme_anata",
+                    "positions": {
+                        "jeremy": [
+                            15,
+                            4
+                        ]
+                    }
+                }
+            },
+            "189": {
+                "sequence": [
+                    "talk_189"
+                ]
+            },
+            "195": {
+                "new_map": {
+                    "map": "room_06",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            5
+                        ]
+                    }
+                }
+            },
+            "196": {
+                "sequence": [
+                    "wakeup_01"
+                ]
+            },
+            "198": {
+                "new_map": {
+                    "map": "room_02b",
+                    "positions": {
+                        "jeremy": [
+                            13,
+                            4
+                        ],
+                        "ginger": [
+                            15,
+                            4
+                        ],
+                        "sebellus": [
+                            14,
+                            6
+                        ]
+                    }
+                }
+            },
+            "199": {
+                "sequence": [
+                    "have_to_go"
+                ]
+            },
+            "200": {
+                "new_map": {
+                    "map": "room_03b",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            5
+                        ],
+                        "ginger": [
+                            2,
+                            5
+                        ],
+                        "sebellus": [
+                            1,
+                            4
+                        ]
+                    }
+                }
+            },
+            "201": {
+                "new_map": {
+                    "map": "room_garden_b",
+                    "positions": {
+                        "jeremy": [
+                            6,
+                            10
+                        ],
+                        "ginger": [
+                            5,
+                            10
+                        ],
+                        "sebellus": [
+                            4,
+                            10
+                        ]
+                    }
+                }
+            },
+            "202": {
+                "new_map": {
+                    "map": "room_hallway",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            9
+                        ],
+                        "ginger": [
+                            2,
+                            10
+                        ],
+                        "sebellus": [
+                            1,
+                            10
+                        ]
+                    }
+                }
+            },
+            "203": {
+                "sequence": [
+                    "have_to_go_2"
+                ]
+            },
+            "204": {
+                "new_map": {
+                    "map": "room_basement",
+                    "positions": {
+                        "jeremy": [
+                            12,
+                            9
+                        ],
+                        "ginger": [
+                            12,
+                            10
+                        ],
+                        "sebellus": [
+                            11,
+                            10
+                        ]
+                    }
+                }
+            },
+            "205": {
+                "sequence": [
+                    "have_to_go_3"
+                ]
+            }
+        }
     }
 }

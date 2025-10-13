@@ -23,6 +23,13 @@ character_manager::character_manager() : player_ptr(nullptr)
 {
 }
 
+void character_manager::load(conversation *convo)
+{
+    db.emplace();
+    db->load(convo);
+    db->init(this);
+}
+
 void character_manager::toggle_button(int id)
 {
     auto btn = find_by_id(id);
