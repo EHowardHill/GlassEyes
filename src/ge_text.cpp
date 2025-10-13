@@ -40,32 +40,6 @@ constexpr char alphabet[] = {
     '[', ']', '\\', '{', '}', '|', ';', '\'', ':', '"', ',', '.', '/',
     '<', '>', '?'};
 
-const char *ITEM_LABELS[ITEMS_SIZE] = {
-    "Lime",
-    "Photo (Croke)",
-    "Document",
-    "Ticket",
-    "Flint",
-    "Steel",
-    "Sticks",
-    "Stones",
-    "Slice of Pie",
-    "Water Bottle"};
-
-const bool ITEM_DROP[ITEMS_SIZE] = {
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false};
-
-const conversation *ITEM_CONVOS[ITEMS_SIZE] = {
-    &convo_lime,
-    &convo_photo};
-
 vector<toast, 16> text::toasts;
 
 letter::letter(char ch, vector_2 ideal_position_, int color_) : ideal_position(ideal_position_), color(color_)
@@ -417,6 +391,11 @@ void dialogue_box::init(character_manager *ch_man)
         case ACT_SFX_FIRE:
         {
             sound_items::sfx_fire.play();
+            break;
+        }
+        case ACT_SFX_EXPLOSION:
+        {
+            sound_items::snd_explosion.play();
             break;
         }
         case ACT_MUSIC_VISKER:

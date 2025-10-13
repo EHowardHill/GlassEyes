@@ -11,7 +11,6 @@
 #include "bn_keypad.h"
 #include "bn_list.h"
 
-// Do NOT include ge_character_manager.h or ge_maps.h here
 #include "ge_structs.h"
 
 using namespace bn;
@@ -28,6 +27,8 @@ struct animation
     int speed = 1;
     bool loop = true;
 };
+
+#include "ge_sprites_auto.h"
 
 #define MAX_V_SPRITES 32
 
@@ -61,40 +62,6 @@ struct v_sprite_ptr
         }
         manager.clear();
     }
-};
-
-enum character_list
-{
-    CHAR_DEFAULT,
-    CHAR_VISTA,
-    CHAR_JEREMY,
-    CHAR_VISKER,
-    CHAR_VISKER_WIFE,
-    CHAR_GINGER,
-    CHAR_CROKE,
-    ITEM_BUTTON,
-    ITEM_SPIKE,
-    ITEM_X,
-    CHAR_NOODLE,
-    CHAR_GRANDMA,
-    CHAR_WORMDUDE,
-    CHAR_COURIER,
-    CHAR_PRIMARY,
-    CHAR_GOAT,
-    CHAR_BEAR,
-    CHAR_BIRB,
-    CHAR_HONSE,
-    CHAR_ROBIN,
-    CHAR_SNEAKER,
-    CHAR_TOLLBOOTH,
-    CHAR_SPAMTON,
-    CHAR_TOGORE,
-    CHAR_FIRE,
-    CHAR_SEBELLUS,
-    CHAR_SEBELLUS_MONSTER,
-    ITEM_PIE,
-    CHAR_SIZE,
-    CHAR_TYPEWRITER
 };
 
 enum facing

@@ -61,7 +61,7 @@ int map_manager::collision(vector_2 location, character_manager *ch_man)
     int collision_value = current_map->collisions[tile_index];
 
     // 2. Check for a spike to override the default.
-    if (current_map->characters[tile_index] - 1 == ITEM_SPIKE)
+    if (current_map->characters[tile_index] - 1 == CHAR_SPIKE)
     {
         // Find the character at this tile position
         vector_2 tile_pos = {tile_x * 32 + 16, tile_y * 32 + 16}; // Center of tile
@@ -71,7 +71,7 @@ int map_manager::collision(vector_2 location, character_manager *ch_man)
             // Look for a spike character at this position
             for (auto &ch : ch_man->characters)
             {
-                if (ch && ch->index == ITEM_SPIKE)
+                if (ch && ch->index == CHAR_SPIKE)
                 {
                     // Check if this spike is at the current tile
                     int ch_tile_x = ch->v_sprite.bounds.position.x.integer() / 32;

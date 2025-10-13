@@ -1,0 +1,116 @@
+#include "bn_sprites.h"
+#include "bn_sprite_item.h"
+
+#include "ge_animations.h"
+#include "ge_sprites_auto.h"
+
+#include "bn_sprite_items_spr_vista.h"
+#include "bn_sprite_items_spr_jeremy.h"
+#include "bn_sprite_items_spr_visker.h"
+#include "bn_sprite_items_spr_visker_wife.h"
+#include "bn_sprite_items_spr_ginger.h"
+#include "bn_sprite_items_spr_croke.h"
+#include "bn_sprite_items_spr_button.h"
+#include "bn_sprite_items_spr_spike.h"
+#include "bn_sprite_items_spr_noodle.h"
+#include "bn_sprite_items_spr_grandma.h"
+#include "bn_sprite_items_spr_wormguy.h"
+#include "bn_sprite_items_spr_courier.h"
+#include "bn_sprite_items_spr_primary.h"
+#include "bn_sprite_items_spr_goat.h"
+#include "bn_sprite_items_spr_bear.h"
+#include "bn_sprite_items_spr_birb.h"
+#include "bn_sprite_items_spr_honse.h"
+#include "bn_sprite_items_spr_robin.h"
+#include "bn_sprite_items_spr_sneaker.h"
+#include "bn_sprite_items_spr_tollbooth.h"
+#include "bn_sprite_items_spr_spamton.h"
+#include "bn_sprite_items_spr_togore.h"
+#include "bn_sprite_items_spr_fire.h"
+#include "bn_sprite_items_spr_sebellus.h"
+#include "bn_sprite_items_spr_sebellus_monster.h"
+#include "bn_sprite_items_spr_pie.h"
+#include "bn_sprite_items_spr_mcwebb.h"
+
+using namespace bn;
+
+const sprite_item *resolve_sprite_item(int character)
+{
+    switch (character)
+    {
+	case CHAR_VISTA: { return &sprite_items::spr_vista; break; }
+	case CHAR_JEREMY: { return &sprite_items::spr_jeremy; break; }
+	case CHAR_VISKER: { return &sprite_items::spr_visker; break; }
+	case CHAR_VISKER_WIFE: { return &sprite_items::spr_visker_wife; break; }
+	case CHAR_GINGER: { return &sprite_items::spr_ginger; break; }
+	case CHAR_CROKE: { return &sprite_items::spr_croke; break; }
+	case CHAR_BUTTON: { return &sprite_items::spr_button; break; }
+	case CHAR_SPIKE: { return &sprite_items::spr_spike; break; }
+	case CHAR_NOODLE: { return &sprite_items::spr_noodle; break; }
+	case CHAR_GRANDMA: { return &sprite_items::spr_grandma; break; }
+	case CHAR_WORMGUY: { return &sprite_items::spr_wormguy; break; }
+	case CHAR_COURIER: { return &sprite_items::spr_courier; break; }
+	case CHAR_PRIMARY: { return &sprite_items::spr_primary; break; }
+	case CHAR_GOAT: { return &sprite_items::spr_goat; break; }
+	case CHAR_BEAR: { return &sprite_items::spr_bear; break; }
+	case CHAR_BIRB: { return &sprite_items::spr_birb; break; }
+	case CHAR_HONSE: { return &sprite_items::spr_honse; break; }
+	case CHAR_ROBIN: { return &sprite_items::spr_robin; break; }
+	case CHAR_SNEAKER: { return &sprite_items::spr_sneaker; break; }
+	case CHAR_TOLLBOOTH: { return &sprite_items::spr_tollbooth; break; }
+	case CHAR_SPAMTON: { return &sprite_items::spr_spamton; break; }
+	case CHAR_TOGORE: { return &sprite_items::spr_togore; break; }
+	case CHAR_FIRE: { return &sprite_items::spr_fire; break; }
+	case CHAR_SEBELLUS: { return &sprite_items::spr_sebellus; break; }
+	case CHAR_SEBELLUS_MONSTER: { return &sprite_items::spr_sebellus_monster; break; }
+	case CHAR_PIE: { return &sprite_items::spr_pie; break; }
+	case CHAR_MCWEBB: { return &sprite_items::spr_mcwebb; break; }
+    default:
+    {
+        return &sprite_items::spr_vista;
+        break;
+    }
+    }
+}
+
+int resolve_sprite_id(int character)
+{
+    switch (character)
+    {
+	case CHAR_GINGER: { return CHAR_JEREMY; break; }
+	case CHAR_SEBELLUS: { return CHAR_GINGER; break; }
+    default:
+    {
+        return 0;
+        break;
+    }
+    }
+}
+
+const animation *resolve_sprite_idle_animation(int character)
+{
+    switch (character)
+    {
+	case CHAR_BUTTON: { return &elem_button_up; break; }
+	case CHAR_SPIKE: { return &elem_spike_up; break; }
+	case CHAR_MCWEBB: { return &mcwebb_play; break; }
+    default:
+    {
+        return nullptr;
+        break;
+    }
+    }
+}
+
+const bool resolve_sprite_is_pressed(int character)
+{
+    switch (character)
+    {
+	case CHAR_SPIKE: { return true; break; }
+    default:
+    {
+        return false;
+        break;
+    }
+    }
+}

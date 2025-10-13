@@ -3,38 +3,14 @@
 #include "bn_sprite_item.h"
 #include "bn_sprite_ptr.h"
 
-// Body Sprites
-#include "bn_sprite_items_spr_vista_01.h"
-#include "bn_sprite_items_spr_jeremy_01.h"
-#include "bn_sprite_items_spr_visker_01.h"
-#include "bn_sprite_items_spr_visker_wife_01.h"
-#include "bn_sprite_items_spr_ginger_01.h"
-#include "bn_sprite_items_spr_croke_01.h"
-#include "bn_sprite_items_spr_deadguy_01.h"
-#include "bn_sprite_items_spr_grandma_01.h"
-#include "bn_sprite_items_spr_primary_01.h"
-#include "bn_sprite_items_spr_tavern_goat.h"
-#include "bn_sprite_items_spr_tavern_bear.h"
-#include "bn_sprite_items_spr_tavern_birb.h"
-#include "bn_sprite_items_spr_tavern_honse.h"
-#include "bn_sprite_items_spr_tavern_robin.h"
-#include "bn_sprite_items_spr_sneaker_01.h"
-#include "bn_sprite_items_spr_tower_01.h"
-#include "bn_sprite_items_spr_spamton_01.h"
-#include "bn_sprite_items_spr_wormguy_01.h"
-#include "bn_sprite_items_spr_togore_01.h"
-#include "bn_sprite_items_spr_fire.h"
-#include "bn_sprite_items_spr_sebellus.h"
-#include "bn_sprite_items_spr_special_sebellus_01.h"
-#include "bn_sprite_items_spr_elements.h"
-
-#include "bn_sprite_items_spr_item_pie.h"
-
 #include "ge_structs.h"
 #include "ge_text.h"
 #include "ge_sprites.h"
+#include "ge_sprites_auto.h"
 #include "ge_maps.h"
 #include "ge_animations.h"
+
+#include "bn_sprite_items_spr_elements.h"
 
 using namespace bn;
 
@@ -186,136 +162,32 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     v_sprite.bounds.height = 28;
     idle_animation = nullptr;
     current_animation = &anim_stand;
+    v_sprite.sprite_item_ptr = resolve_sprite_item(index_);
+    follow_id = resolve_sprite_id(index_);
+    idle_animation = resolve_sprite_idle_animation(index_);
+
 
     switch (index_)
     {
-    case CHAR_VISTA:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_vista_01;
-        break;
-    }
-    case CHAR_JEREMY:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_jeremy_01;
-        break;
-    }
-    case CHAR_VISKER:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_visker_01;
-        break;
-    }
-    case CHAR_VISKER_WIFE:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_visker_wife_01;
-        break;
-    }
-    case CHAR_GINGER:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_ginger_01;
-        break;
-    }
-    case CHAR_CROKE:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_croke_01;
-        break;
-    }
-    case CHAR_NOODLE:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_deadguy_01;
-        break;
-    }
-    case CHAR_GRANDMA:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_grandma_01;
-        break;
-    }
-    case CHAR_PRIMARY:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_primary_01;
-        break;
-    }
-    case CHAR_GOAT:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_tavern_goat;
-        break;
-    }
-    case CHAR_BEAR:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_tavern_bear;
-        break;
-    }
-    case CHAR_BIRB:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_tavern_birb;
-        break;
-    }
-    case CHAR_HONSE:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_tavern_honse;
-        break;
-    }
-    case CHAR_ROBIN:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_tavern_robin;
-        break;
-    }
-    case CHAR_SNEAKER:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_sneaker_01;
-        break;
-    }
-    case CHAR_TOLLBOOTH:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_tower_01;
-        break;
-    }
-    case CHAR_SPAMTON:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_spamton_01;
-        break;
-    }
-    case CHAR_WORMDUDE:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_wormguy_01;
-        break;
-    }
-    case CHAR_TOGORE:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_togore_01;
-        break;
-    }
-    case CHAR_FIRE:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_fire;
-        break;
-    }
     case CHAR_SEBELLUS:
     {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_sebellus;
         follow_id = CHAR_GINGER;
         break;
     }
-    case CHAR_SEBELLUS_MONSTER:
+    case CHAR_BUTTON:
     {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_special_sebellus_01;
-        break;
-    }
-    case ITEM_BUTTON:
-    {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_elements;
         idle_animation = &elem_button_up;
         break;
     }
-    case ITEM_SPIKE:
+    case CHAR_SPIKE:
     {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_elements;
         idle_animation = &elem_spike_up;
         is_pressed = true;
         break;
     }
-    case ITEM_PIE:
+    case CHAR_MCWEBB:
     {
-        v_sprite.sprite_item_ptr = &bn::sprite_items::spr_item_pie;
+        idle_animation = &mcwebb_play;
         break;
     }
 

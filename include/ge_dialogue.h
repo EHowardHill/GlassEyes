@@ -35,6 +35,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_robin.h"
 #include "bn_sprite_items_db_ch_togore.h"
 #include "bn_sprite_items_db_ch_sebellus.h"
+#include "bn_sprite_items_db_ch_mcwebb.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -70,6 +71,7 @@ extern const conversation avalon_sign_06;
 extern const conversation avalon_wormguy_01;
 extern const conversation avalon_wormguy_01_alt_01;
 extern const conversation avalon_wormguy_02;
+extern const conversation bm_fridge;
 extern const conversation bridge_01;
 extern const conversation broken_avalon_00;
 extern const conversation broken_avalon_01;
@@ -80,9 +82,18 @@ extern const conversation cave_01;
 extern const conversation cave_01_alt_01;
 extern const conversation cave_sign_01;
 extern const conversation cave_sign_02;
-extern const conversation convo_document;
-extern const conversation convo_lime;
-extern const conversation convo_photo;
+extern const conversation chat_197;
+extern const conversation chat_mcwebb;
+extern const conversation convo_obj_document;
+extern const conversation convo_obj_flint;
+extern const conversation convo_obj_lime;
+extern const conversation convo_obj_photograph;
+extern const conversation convo_obj_pie;
+extern const conversation convo_obj_steel;
+extern const conversation convo_obj_sticks;
+extern const conversation convo_obj_stones;
+extern const conversation convo_obj_ticket;
+extern const conversation convo_obj_water_bottle;
 extern const conversation croke_01;
 extern const conversation croke_01_alt_01;
 extern const conversation croke_01_alt_02;
@@ -232,6 +243,14 @@ extern const conversation togore_01;
 extern const conversation tollhouse_01;
 extern const conversation tollhouse_01b;
 extern const conversation tunnel_01;
+extern const conversation vf_01;
+extern const conversation vf_02;
+extern const conversation vf_03;
+extern const conversation vf_04;
+extern const conversation visker_final;
+extern const conversation visker_final_02;
+extern const conversation visker_final_03;
+extern const conversation visker_final_alt_01;
 extern const conversation visker_h_01;
 extern const conversation visker_h_02;
 extern const conversation visker_h_03;

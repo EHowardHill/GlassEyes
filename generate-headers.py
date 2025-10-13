@@ -1,0 +1,260 @@
+import os
+import json
+
+data = {}
+
+try:
+    with open("headers.json", "r") as f:
+        data = json.load(f)
+except FileNotFoundError:
+    print("Error: headers.json not found.")
+    exit()
+except json.JSONDecodeError:
+    print("Error: Could not decode JSON from headers.json.")
+    exit()
+
+
+# Animation
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+animation_data = """#ifndef GE_ANIMATIONS_H
+#define GE_ANIMATIONS_H
+
+#include "ge_text.h"
+#include "ge_sprites.h"
+
+"""
+
+# Check if the required keys exist before processing
+if "animations" in data:
+    for category in data["animations"]:
+        for animation in data["animations"][category]:
+            dat = data["animations"][category][animation]
+
+            # 1. Convert frame numbers to strings before joining
+            frame_strings = [str(f) for f in dat["frames"]]
+
+            val = (
+                "const animation "
+                + category
+                + "_"
+                + animation
+                + " = {{"
+                + ",".join(frame_strings)
+                + "}, "
+                + str(len(dat["frames"]))
+                + ", "
+                + str(dat["speed"])
+                + ", "
+                + ("true" if dat["loop"] else "false")  # Simplified the boolean check
+                + "};\n"  # 2. Added semicolon and newline for proper C++ formatting
+            )
+
+            # 3. Use += to append to a string
+            animation_data += val
+
+animation_data += "\n#endif"
+
+with open("include/ge_animations.h", "w") as f:
+    f.write(animation_data)
+
+# Items
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+text_h_data = """#ifndef GE_TEXT_AUTO_H
+#define GE_TEXT_AUTO_H
+
+enum ITEMS
+{"""
+
+h_labels = "const char *ITEM_LABELS[ITEMS_SIZE] = {\n"
+h_drop = "const bool ITEM_DROP[ITEMS_SIZE] = {\n"
+h_convos = "const conversation *ITEM_CONVOS[ITEMS_SIZE] = {\n"
+
+labels = []
+drop = []
+
+if "items" in data:
+    for item in data["items"].keys():
+        h_labels += '\t"' + item + '",\n'
+
+        name = item.upper().replace(" ", "_")
+        text_h_data += "\tOBJ_" + name + ",\n"
+
+        if "drop" in data["items"].keys():
+            h_drop += (
+                "\t" + ("true" if data["items"][item]["drop"] else "false") + ",\n"
+            )
+        else:
+            h_drop += "\tfalse,\n"
+
+        h_convos += "\t&convo_obj_" + name.lower() + ",\n"
+
+    text_h_data += "\tITEMS_SIZE\n};\n\n#endif"
+    h_labels += "};"
+    h_drop += "};"
+    h_convos += "};"
+
+with open("include/ge_text_auto.h", "w") as f:
+    f.write(text_h_data)
+
+with open("src/ge_text_auto.cpp", "w") as f:
+    f.write(
+        f"""#include "ge_dialogue.h"
+#include "ge_text.h"
+#include "ge_text_auto.h"
+
+{h_labels}
+
+{h_drop}
+
+{h_convos}
+"""
+    )
+
+# Objects
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+sprites_h_data = """#ifndef GE_SPRITES_AUTO_H
+#define GE_SPRITES_AUTO_H
+
+#include "bn_sprite_item.h"
+#include "ge_sprites.h"
+
+enum character_list
+{
+    CHAR_DEFAULT,
+"""
+
+spr_includes = ""
+spr_switch = ""
+spr_follow_id = ""
+spr_animation = ""
+spr_pressed = ""
+
+if "objects" in data:
+    for object in data["objects"].keys():
+        fixed = object.replace(" ", "_").upper()
+
+        sprites_h_data += "\tCHAR_" + fixed + ",\n"
+        spr_includes += '#include "bn_sprite_items_spr_' + fixed.lower() + '.h"\n'
+        spr_switch += (
+            "\tcase CHAR_"
+            + fixed
+            + ": { return &sprite_items::spr_"
+            + fixed.lower()
+            + "; break; }\n"
+        )
+
+        dat = data["objects"][object]
+        if "follow" in dat.keys():
+            spr_follow_id += (
+                "\tcase CHAR_"
+                + object.upper()
+                + ": { return CHAR_"
+                + dat["follow"].upper().replace(" ", "_")
+                + "; break; }\n"
+            )
+
+        if "idle_animation" in dat.keys():
+            spr_animation += (
+                "\tcase CHAR_"
+                + object.upper()
+                + ": { return &"
+                + dat["idle_animation"]
+                + "; break; }\n"
+            )
+
+        if "is_pressed" in dat.keys():
+            spr_pressed += (
+                "\tcase CHAR_"
+                + object.upper()
+                + ": { return "
+                + ("true" if dat["is_pressed"] else "false")
+                + "; break; }\n"
+            )
+
+sprites_h_data += """\tCHAR_SIZE,
+\tCHAR_TYPEWRITER
+};
+
+const bn::sprite_item *resolve_sprite_item(int character);
+int resolve_sprite_id(int character);
+const animation *resolve_sprite_idle_animation(int character);
+const bool resolve_sprite_is_pressed(int character);
+
+#endif"""
+
+with open("include/ge_sprites_auto.h", "w") as f:
+    f.write(sprites_h_data)
+
+with open("src/ge_sprites_auto.cpp", "w") as f:
+    f.write(
+        """#include "bn_sprites.h"
+#include "bn_sprite_item.h"
+
+#include "ge_animations.h"
+#include "ge_sprites_auto.h"
+
+"""
+        + spr_includes
+        + """
+using namespace bn;
+
+const sprite_item *resolve_sprite_item(int character)
+{
+    switch (character)
+    {
+"""
+        + spr_switch
+        + """    default:
+    {
+        return &sprite_items::spr_vista;
+        break;
+    }
+    }
+}
+
+int resolve_sprite_id(int character)
+{
+    switch (character)
+    {
+"""
+        + spr_follow_id
+        + """    default:
+    {
+        return 0;
+        break;
+    }
+    }
+}
+
+const animation *resolve_sprite_idle_animation(int character)
+{
+    switch (character)
+    {
+"""
+        + spr_animation
+        + """    default:
+    {
+        return nullptr;
+        break;
+    }
+    }
+}
+
+const bool resolve_sprite_is_pressed(int character)
+{
+    switch (character)
+    {
+"""
+        + spr_pressed
+        + """    default:
+    {
+        return false;
+        break;
+    }
+    }
+}
+"""
+    )

@@ -257,7 +257,7 @@ void character_manager::update(map_manager *current_map = nullptr)
         {
             ch->update(current_map, allow_movement);
 
-            if (ch->index == ITEM_BUTTON)
+            if (ch->index == CHAR_BUTTON)
             {
                 if (ch->idle_animation != &elem_button_down)
                 {

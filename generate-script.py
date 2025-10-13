@@ -288,6 +288,7 @@ def generate_cpp_content(conversations, sprite_list, bg_item_list):
 // THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT.
 
 #include "ge_dialogue.h"
+#include "ge_text_auto.h"
 
 {sprite_includes}
 {bg_item_includes}

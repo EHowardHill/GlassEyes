@@ -405,12 +405,12 @@ croke_05
 				No	On second thought..								&croke_05_alt_01		
 	db_ch_ginger	EM_SIDE_EYE		I guess it's fine if	he has something we	need to survive..									
 				You found:	PHOTOGRAPH										
-		EM_SKIP	ACT_ITEM							OBJ_PHOTO					
+		EM_SKIP	ACT_ITEM							OBJ_PHOTOGRAPH					
 															
 croke_05_alt_01															
 	db_ch_ginger	EM_DEFAULT		Rest in peace..	Whoever you were..										
 															
-convo_photo															
+convo_obj_photograph															
 				It just seems to	be a photo of	himself.									
 															
 forest_dlg_sign_01															
@@ -586,18 +586,18 @@ avalon_sign_06
 	db_ch_ginger	EM_SIDE_EYE		All the blood	all over the ground	"is really, uh.."									
 	db_ch_ginger	EM_DEFAULT		Giving me a warm	"fuzzy feeling,"	though.									
 															
-convo_lime															
+convo_obj_lime															
 				It tastes sour.	"Lots of Vitamin C,"	though.									
 				HP INCREASED	BY 5										
 		EM_SKIP	ACT_HP							5					
 															
-convo_document															
+convo_obj_document															
 				None of this	makes any sense.										
 															
 avalon_guy_01															
 	db_ch_ginger	EM_SAD		I-Is he dead?!											
 	db_ch_deadguy	EM_DEFAULT		"Nope, I just like"	sleeping face-down	in the snow.									
-	db_ch_deadguy	EM_DEFAULT		"It's nice, you"	should try it	sometime.				CHAR_NOODLE	&noodle_go				
+	db_ch_deadguy	EM_DEFAULT		"It's nice, you"	should try it	sometime.				CHAR_NOODLE	&npcs_noodle_go				
 	db_ch_ginger	EM_DEFAULT		Do you know	how to get to	Canterbury?									
 	db_ch_deadguy	EM_DEFAULT		zzzzzzzzzzz											
 	db_ch_ginger	EM_SIDE_EYE		Time to ask	"around, I suppose."										
@@ -1330,7 +1330,7 @@ have_to_go_4
 															
 bm_fridge															
 				You found:	WATER BOTTLE										
-		EM_SKIP	ACT_ITEM							OBJ_WATER					
+		EM_SKIP	ACT_ITEM							OBJ_WATER_BOTTLE					
 															
 chat_197															
 				You found:	SLICE OF PIE										
@@ -1361,39 +1361,34 @@ visker_final_alt_01
 															
 visker_final_02															
 				He hasn't blinked	since he showed	up here.									
+				On second thought..	You've never seen	him blink before.									
 															
+vf_01															
+				Time to finish	annoying human	ONCE and for ALL									
 															
+vf_02															
+				Visker sees your	offer to SPARE as	"offensive,"									
+				since it implies	that you are the	stronger one.									
 															
+vf_03															
+				Visker is	continuing to	fight on principle.									
 															
+vf_04															
+				"Look, I don't"	know what to	"tell you, man."									
 															
+visker_final_03															
+				Visker.. Will	stay here to	recover..									
+				Will live to	fight human..	Another day..									
 															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
-															
+chat_mcwebb															
+	db_ch_mcwebb	EM_DEFAULT		"Well, howdy."	I don't figure that	was Y'ALL's dragon?									
+	db_ch_ginger	EM_DEFAULT		Uh.. Well.. No-											
+	db_ch_mcwebb	EM_LAUGH		"Haha, no worries."	I know who you	both are.									
+	db_ch_mcwebb	EM_DEFAULT		I don't have long	in this world left.	I don't mind.									
+	db_ch_mcwebb	EM_DEFAULT		Typically I sell	ferry rides over	"the channel, but.."									
+	db_ch_mcwebb	EM_SIDE_EYE	ACT_MUSIC_FADEOUT	I'm not keen to	being killed by	"a dragon, you see."									
+	db_ch_mcwebb	EM_DEFAULT		"Well, go ahead."	On you git.					CHAR_MCWEBB	&mcwebb_dont				
+			ACT_PROGRESS			FERRY									
 															
 f_cutscene_01															
 				Dr. Erickson?	Dr. Erickson- Do you	have a moment?	COLOR_BLUE								
@@ -1496,3 +1491,30 @@ f_cutscene_04
 						No.									
 				I'm scared.											
 				It will only	be scary for a	moment.									
+															
+convo_obj_ticket															
+				You've got the	golden ticket!										
+															
+convo_obj_flint															
+				A nice rock.	Intentionally cut.	Looks like glass.									
+															
+convo_obj_steel															
+				A steel tool that	resembles the	"letter ""C""."									
+				It could only be	used for one thing.										
+															
+convo_obj_sticks															
+				Very nice sticks.	Quite flamable.										
+															
+convo_obj_stones															
+				Stones rock.											
+															
+convo_obj_pie															
+				A delicious slice	of Cinnamon-	Butterscotch pie.									
+				Tastes great.											
+				HP INCREASED	BY 5										
+		EM_SKIP	ACT_HP							5					
+															
+convo_obj_water_bottle															
+				"Nice, fresh"	water hits the	spot.									
+				HP INCREASED	BY 5										
+		EM_SKIP	ACT_HP							5					

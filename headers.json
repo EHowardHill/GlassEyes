@@ -1,0 +1,384 @@
+{
+    "animations": {
+        "anim": {
+            "walk": {
+                "frames": [
+                    0,
+                    1,
+                    0,
+                    2
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "stand": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": false
+            }
+        },
+        "vista": {
+            "reminisce": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "pickup": {
+                "frames": [
+                    6,
+                    10,
+                    6,
+                    11
+                ],
+                "speed": 1,
+                "loop": false
+            }
+        },
+        "visker": {
+            "poke": {
+                "frames": [
+                    9,
+                    10
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "jeremy": {
+            "lay_down": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "ginger": {
+            "eat_lime": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "sit_alert": {
+                "frames": [
+                    10
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "sit_sad": {
+                "frames": [
+                    11
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "sit_chair": {
+                "frames": [
+                    12
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "hide": {
+                "frames": [
+                    13
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "sebellus": {
+            "hide": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "sleep_01": {
+                "frames": [
+                    10
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "sleep_02": {
+                "frames": [
+                    11
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "sleep_03": {
+                "frames": [
+                    12,
+                    13
+                ],
+                "speed": 1,
+                "loop": true
+            }
+        },
+        "sm": {
+            "stab_01": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "stab_02": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "dead": {
+                "frames": [
+                    2
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "croke": {
+            "accuse": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "lay_down": {
+                "frames": [
+                    10
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "mcwebb": {
+            "play": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "speed": 1,
+                "loop": true
+            },
+            "dont": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "npcs": {
+            "noodle_go": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "spamton_anim": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "elem": {
+            "button_up": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "button_down": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "spike_up": {
+                "frames": [
+                    3
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "spike_down": {
+                "frames": [
+                    2
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        },
+        "fire": {
+            "out": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "on": {
+                "frames": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "speed": 0,
+                "loop": true
+            }
+        }
+    },
+    "items": {
+        "Lime": {
+            "drop": true
+        },
+        "Photograph": {},
+        "Document": {},
+        "Ticket": {},
+        "Flint": {},
+        "Steel": {},
+        "Sticks": {},
+        "Stones": {},
+        "Pie": {
+            "drop": true
+        },
+        "Water Bottle": {
+            "drop": true
+        }
+    },
+    "objects": {
+        "Vista": {},
+        "Jeremy": {},
+        "Visker": {},
+        "Visker Wife": {},
+        "Ginger": {
+            "follow": "Jeremy"
+        },
+        "Croke": {},
+        "Button": {
+            "idle_animation": "elem_button_up"
+        },
+        "Spike": {
+            "idle_animation": "elem_spike_up",
+            "is_pressed": true
+        },
+        "Noodle": {},
+        "Grandma": {},
+        "Wormguy": {},
+        "Courier": {},
+        "Primary": {},
+        "Goat": {},
+        "Bear": {},
+        "Birb": {},
+        "Honse": {},
+        "Robin": {},
+        "Sneaker": {},
+        "Tollbooth": {},
+        "Spamton": {},
+        "Togore": {},
+        "Fire": {},
+        "Sebellus": {
+            "follow": "Ginger"
+        },
+        "Sebellus Monster": {},
+        "Pie": {},
+        "McWebb": {
+            "idle_animation": "mcwebb_play"
+        }
+    }
+}

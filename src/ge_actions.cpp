@@ -1312,8 +1312,8 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 auto st = ch_man->find_by_index(CHAR_SPAMTON);
                 if (st != nullptr)
                 {
-                    st->idle_animation = &spamton_anim;
-                    st->current_animation = &spamton_anim;
+                    st->idle_animation = &npcs_spamton_anim;
+                    st->current_animation = &npcs_spamton_anim;
                 }
                 break;
             }

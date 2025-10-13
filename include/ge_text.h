@@ -10,6 +10,7 @@
 
 #include "ge_structs.h"
 #include "ge_sprites.h"
+#include "ge_text_auto.h"
 
 // Forward declaration to avoid circular dependency
 struct character_manager;
@@ -65,6 +66,7 @@ enum actions
     ACT_CUE_SEBELLUS,
     ACT_SFX_KNOCK,
     ACT_SFX_FIRE,
+    ACT_SFX_EXPLOSION,
     ACT_HP,
     ACT_GAME,
     ACT_GOLD,
@@ -186,21 +188,6 @@ struct dialogue_line
 };
 
 typedef const dialogue_line conversation[128];
-
-enum ITEMS
-{
-    OBJ_LIME,
-    OBJ_PHOTO,
-    OBJ_DOCUMENT,
-    OBJ_TICKET,
-    OBJ_FLINT,
-    OBJ_STEEL,
-    OBJ_STICKS,
-    OBJ_STONES,
-    OBJ_PIE,
-    OBJ_WATER,
-    ITEMS_SIZE
-};
 
 extern const char *ITEM_LABELS[ITEMS_SIZE];
 extern const bool ITEM_DROP[ITEMS_SIZE];
