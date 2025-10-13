@@ -28,6 +28,7 @@
 #include "ge_games.h"
 #include "ge_map_data.h"
 #include "ge_typewriter.h"
+#include "ge_typewriter_auto.h"
 
 using namespace bn;
 

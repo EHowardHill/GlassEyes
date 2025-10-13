@@ -380,5 +380,51 @@
         "McWebb": {
             "idle_animation": "mcwebb_play"
         }
+    },
+    "cutscenes": {
+        "Intro": {
+            "conversation": "intro_01",
+            "music": "intro",
+            "type": "text"
+        },
+        "Intro2": {
+            "conversation": "intro_02",
+            "music": false,
+            "type": "text"
+        },
+        "Intro3": {
+            "conversation": "intro_03",
+            "type": "text"
+        },
+        "Title": {
+            "bg": "scene_title01",
+            "sfx": "snd_intro",
+            "music": false
+        },
+        "Garbage": {
+            "sfx": "sfx_drag",
+            "music": false
+        },
+        "Msg": {
+            "conversation": "final_msg",
+            "music": false,
+            "type": "text"
+        },
+        "New Berlin": {
+            "conversation": "new_berlin_sign",
+            "music": false,
+            "type": "text"
+        },
+        "Dog and Pony": {
+            "conversation": "dog_and_pony",
+            "music": "z02_the_champ",
+            "type": "text"
+        },
+        "Game Over": {
+            "bg": "bg_gameover",
+            "music": "intro",
+            "type": "popup"
+        },
+        "Buffer": {}
     }
 }

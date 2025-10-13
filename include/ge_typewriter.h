@@ -1,27 +1,18 @@
 #ifndef GE_TYPEWRITER_H
 #define GE_TYPEWRITER_H
 
-enum TYPEWRITER_SCENES
-{
-    TYPEWRITER_INTRO,
-    TYPEWRITER_CREDITS,
-    TYPEWRITER_INTRO2,
-    TYPEWRITER_INTRO3,
-    TYPEWRITER_TITLE,
-    TYPEWRITER_GARBAGE,
-    TYPEWRITER_MSG,
-    TYPEWRITER_NEW_BERLIN,
-    TYPEWRITER_DOG_AND_PONY,
-    TYPEWRITER_GAME_OVER,
-    TYPEWRITER_BUFFER
-};
-
 enum TYPEWRITER_TYPE
 {
     TYPE_TEXT,
-    TYPE_IMG
+    TYPE_IMG,
+    TYPE_POPUP
 };
 
 void typewriter(int scene);
+
+const music_item *resolve_typewriter_music(int scene);
+const conversation *resolve_typewriter_conversation(int scene);
+const sound_item *resolve_typewriter_sfx(int scene);
+int resolve_typewriter_type(int scene);
 
 #endif

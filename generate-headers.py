@@ -258,3 +258,142 @@ const bool resolve_sprite_is_pressed(int character)
 }
 """
     )
+
+# Typewriter
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+typewriters = ""
+typewriter_type = ""
+typewriter_sfx = ""
+typewriter_conversation = ""
+typewriter_music = ""
+
+if "cutscenes" in data:
+    for cutscene in data["cutscenes"].keys():
+        title = cutscene.upper().replace(" ", "_")
+        typewriters += "\tTYPEWRITER_" + title + ",\n"
+        dat = data["cutscenes"][cutscene]
+
+        if "conversation" in dat.keys():
+            typewriter_conversation += (
+                "\tcase TYPEWRITER_"
+                + title
+                + ": { return &"
+                + dat["conversation"]
+                + "; break; }\n"
+            )
+
+        if "music" in dat.keys():
+            typewriter_music += "\tcase TYPEWRITER_" + title + ": {"
+
+            if dat["music"] == False:
+                typewriter_music += "return nullptr; break; }\n"
+
+            else:
+                typewriter_music += (
+                    "return &music_items::" + dat["music"] + "; break; }\n"
+                )
+
+        if "sfx" in dat.keys():
+            typewriter_sfx += "\tcase TYPEWRITER_" + title + ": {"
+
+            if dat["sfx"] == False:
+                typewriter_sfx += "return nullptr; break; }\n"
+
+            else:
+                typewriter_sfx += "return &sound_items::" + dat["sfx"] + "; break; }\n"
+
+        if "type" in dat.keys():
+            if dat["type"] == "text":
+                typewriter_type += (
+                    "\tcase TYPEWRITER_"
+                    + title
+                    + ": { return TYPE_"
+                    + dat["type"].upper()
+                    + "; break; }\n"
+                )
+
+with open("include/ge_typewriter_auto.h", "w") as f:
+    f.write("""#ifndef GE_TYPEWRITER_AUTO_H
+#define GE_TYPEWRITER_AUTO_H
+
+enum TYPEWRITER_SCENES
+{
+""" + typewriters + """};\n\n#endif""")
+
+with open("src/ge_typewriter_auto.cpp", "w") as f:
+    f.write(
+        """#include "bn_music.h"
+#include "bn_music_items.h"
+#include "bn_music_items_info.h"
+#include "bn_sound_item.h"
+#include "bn_sound_items.h"
+
+#include "ge_text.h"
+#include "ge_dialogue.h"
+#include "ge_typewriter.h"
+#include "ge_typewriter_auto.h"
+
+using namespace bn;
+
+int resolve_typewriter_type(int scene)
+{
+    switch (scene)
+    {
+"""
+        + typewriter_type
+        + """
+    default:
+    {
+        return TYPE_IMG;
+        break;
+    }
+    }
+}
+
+const sound_item *resolve_typewriter_sfx(int scene)
+{
+    switch (scene)
+    {
+"""
+        + typewriter_sfx
+        + """
+    default:
+    {
+        return nullptr;
+        break;
+    }
+    }
+}
+
+const conversation *resolve_typewriter_conversation(int scene)
+{
+    switch (scene)
+    {
+"""
+        + typewriter_conversation
+        + """
+    default:
+    {
+        return nullptr;
+        break;
+    }
+    }
+}
+
+const music_item *resolve_typewriter_music(int scene)
+{
+    switch (scene)
+    {
+"""
+        + typewriter_music
+        + """
+    default:
+    {
+        return nullptr;
+        break;
+    }
+    }
+}
+"""
+    )
