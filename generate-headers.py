@@ -150,7 +150,7 @@ if "objects" in data:
         if "follow" in dat.keys():
             spr_follow_id += (
                 "\tcase CHAR_"
-                + object.upper()
+                + object.upper().replace(" ", "_")
                 + ": { return CHAR_"
                 + dat["follow"].upper().replace(" ", "_")
                 + "; break; }\n"
@@ -159,7 +159,7 @@ if "objects" in data:
         if "idle_animation" in dat.keys():
             spr_animation += (
                 "\tcase CHAR_"
-                + object.upper()
+                + object.upper().replace(" ", "_")
                 + ": { return &"
                 + dat["idle_animation"]
                 + "; break; }\n"
@@ -168,7 +168,7 @@ if "objects" in data:
         if "is_pressed" in dat.keys():
             spr_pressed += (
                 "\tcase CHAR_"
-                + object.upper()
+                + object.upper().replace(" ", "_")
                 + ": { return "
                 + ("true" if dat["is_pressed"] else "false")
                 + "; break; }\n"
@@ -314,12 +314,16 @@ if "cutscenes" in data:
                 )
 
 with open("include/ge_typewriter_auto.h", "w") as f:
-    f.write("""#ifndef GE_TYPEWRITER_AUTO_H
+    f.write(
+        """#ifndef GE_TYPEWRITER_AUTO_H
 #define GE_TYPEWRITER_AUTO_H
 
 enum TYPEWRITER_SCENES
 {
-""" + typewriters + """};\n\n#endif""")
+"""
+        + typewriters
+        + """};\n\n#endif"""
+    )
 
 with open("src/ge_typewriter_auto.cpp", "w") as f:
     f.write(
@@ -401,17 +405,18 @@ const music_item *resolve_typewriter_music(int scene)
 # Actions
 # ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-interactive_block = """int perform_action_interactive(int index, character_manager *ch_man)
+interactive_block = """int perform_action_interactive(int index, character_manager &ch_man)
 {
     switch (index)
     {"""
 
-automatic_block = """int perform_action_automatic(int index, character_manager *ch_man)
+automatic_block = """int perform_action_automatic(int index, character_manager &ch_man)
 {
     switch (index)
     {"""
 
 references = ""
+
 
 def handle_action(dat):
     global references
@@ -436,29 +441,51 @@ def handle_action(dat):
             if "map" in datt.keys():
                 block += "\t\tglobal_data_ptr->entry_map = &map_" + datt["map"] + ";\n"
             if "bg_track" in datt.keys():
-                block += "\t\tglobal_data_ptr->bg_track = &music_items::" + datt["bg_track"] + ";\n"
+                block += (
+                    "\t\tglobal_data_ptr->bg_track = &music_items::"
+                    + datt["bg_track"]
+                    + ";\n"
+                )
             if "bg" in datt.keys():
-                block += "\t\tglobal_data_ptr->bg = &regular_bg_items::" + datt["bg"] + ";\n"
-                references += "#include \"bn_regular_bg_items_" + datt["bg"] + ".h\"\n"
+                block += (
+                    "\t\tglobal_data_ptr->bg = &regular_bg_items::" + datt["bg"] + ";\n"
+                )
+                references += '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
+                block += "\t\tmusic::stop();\n"
             if "positions" in datt.keys():
                 characters = datt["positions"]
                 for c_key in characters.keys():
-                    block += "\t\tglobal_data_ptr->" + c_key + "_position = {" + str(characters[c_key][0]) + ", " + str(characters[c_key][1]) + "};\n"
-            block += "\t\tmusic::stop();\n"
+                    block += (
+                        "\t\tglobal_data_ptr->"
+                        + c_key
+                        + "_position = {"
+                        + str(characters[c_key][0])
+                        + ", "
+                        + str(characters[c_key][1])
+                        + "};\n"
+                    )
             return_type = "NEW_MAP"
 
         if "sequence" in entry_keys:
             t = 1
             for line in entry["sequence"]:
-                block += "\t\tif (global_data_ptr->action_iterations[" + key + "] == " + str(t) + ") { ch_man->load(&" + line + "); } else\n"
+                block += (
+                    "\t\tif (global_data_ptr->action_iterations["
+                    + key
+                    + "] == "
+                    + str(t)
+                    + ") { ch_man.load(&"
+                    + line
+                    + "); } else\n"
+                )
                 t += 1
             if "auto" in entry_keys:
-                block += "\t\t{ ch_man->load(&" + line + "); }\n"
+                block += "\t\t{ ch_man.load(&" + line + "); }\n"
             else:
                 block += "\t\t{ };\n"
 
         elif "auto" in entry_keys:
-            block += "\t\tch_man->load(&" + entry["auto"] + ");\n"
+            block += "\t\tch_man.load(&" + entry["auto"] + ");\n"
 
         if return_type != None:
             block += "\t\treturn " + return_type + ";\n"
@@ -466,6 +493,7 @@ def handle_action(dat):
         block += "\t\tbreak;\n\t}\n"
         full_block += block
     return full_block
+
 
 if "actions" in data:
     if "interactable" in data["actions"]:
@@ -476,8 +504,8 @@ if "actions" in data:
         dat = data["actions"]["automatic"]
         automatic_block += handle_action(dat)
 
-interactive_block += "\t}\n}"
-automatic_block += "\t}\n}"
+interactive_block += "\t}\n\treturn -1;\n}"
+automatic_block += "\t}\n\treturn -1;\n}"
 
 ge_actions_cpp = f"""#include "bn_music.h"
 #include "bn_music_items.h"

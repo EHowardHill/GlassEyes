@@ -65,64 +65,6 @@ int action_listener(map_manager *man, character_manager *ch_man)
             }
         }
 
-        if (is_interactive(action) && keypad::a_pressed())
-        {
-            core::update();
-            global_data_ptr->action_iterations[action]++;
-
-            switch (action)
-            {
-            case 155:
-            {
-                bool ready = (global_data_ptr->items[OBJ_FLINT] &&
-                              global_data_ptr->items[OBJ_STEEL] &&
-                              global_data_ptr->items[OBJ_STICKS] &&
-                              global_data_ptr->items[OBJ_STONES]);
-
-                if (!ready && global_data_ptr->action_iterations[155] < 16)
-                {
-                    global_data_ptr->action_iterations[155] = 16;
-                    ch_man->load(&item_155);
-                }
-                else if (global_data_ptr->action_iterations[155] < 32)
-                {
-                    global_data_ptr->action_iterations[155] = 32;
-                    ch_man->load(&item_155b);
-                }
-                break;
-            }
-
-            case 181:
-            {
-                if (global_data_ptr->action_iterations[BUFFER_190b] == 0)
-                {
-                    ch_man->load(&talk_190);
-
-                    global_data_ptr->action_iterations[BUFFER_190b]++;
-                }
-                break;
-            }
-
-            case 112:
-            {
-                if (global_data_ptr->action_iterations[112] == 1)
-                {
-                    global_data_ptr->jeremy_position = {13, 3};
-                    global_data_ptr->ginger_position = {14, 3};
-                    global_data_ptr->entry_map = &map_tavern_01;
-
-                    ch_man->load(&scruffys_05);
-                }
-                break;
-            }
-            default:
-            {
-                perform_action_interactive(action, ch_man);
-                break;
-            }
-            }
-        }
-
         // AUTOMATIC
         if (action != 0 && !action_triggered)
         {
@@ -264,9 +206,68 @@ int action_listener(map_manager *man, character_manager *ch_man)
             }
             default:
             {
-                perform_action_interactive(action, ch_man);
+                int ret = perform_action_automatic(action, *ch_man);
+                if (ret != -1) return ret;
                 break;
             }
+            }
+
+            if (keypad::a_pressed())
+            {
+                global_data_ptr->action_iterations[action]++;
+
+                switch (action)
+                {
+                case 155:
+                {
+                    bool ready = (global_data_ptr->items[OBJ_FLINT] &&
+                                  global_data_ptr->items[OBJ_STEEL] &&
+                                  global_data_ptr->items[OBJ_STICKS] &&
+                                  global_data_ptr->items[OBJ_STONES]);
+
+                    if (!ready && global_data_ptr->action_iterations[155] < 16)
+                    {
+                        global_data_ptr->action_iterations[155] = 16;
+                        ch_man->load(&item_155);
+                    }
+                    else if (global_data_ptr->action_iterations[155] < 32)
+                    {
+                        global_data_ptr->action_iterations[155] = 32;
+                        ch_man->load(&item_155b);
+                    }
+                    break;
+                }
+
+                case 181:
+                {
+                    if (global_data_ptr->action_iterations[BUFFER_190b] == 0)
+                    {
+                        ch_man->load(&talk_190);
+
+                        global_data_ptr->action_iterations[BUFFER_190b]++;
+                    }
+                    break;
+                }
+
+                case 112:
+                {
+                    if (global_data_ptr->action_iterations[112] == 1)
+                    {
+                        global_data_ptr->jeremy_position = {13, 3};
+                        global_data_ptr->ginger_position = {14, 3};
+                        global_data_ptr->entry_map = &map_tavern_01;
+
+                        ch_man->load(&scruffys_05);
+                    }
+                    break;
+                }
+                default:
+                {
+                    int ret = perform_action_interactive(action, *ch_man);
+                    if (ret != -1) return ret;
+                    break;
+                }
+                }
             }
         }
         else

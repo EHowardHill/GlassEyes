@@ -53,7 +53,7 @@ int navigate_map()
         }
     }
 
-    if (global_data_ptr->entry_map != &map_room01)
+    if (global_data_ptr->jeremy_position.x != 0 && global_data_ptr->jeremy_position.y != 0)
     {
         char_mgr.add_character(CHAR_JEREMY, global_data_ptr->jeremy_position, 0);
     }
@@ -93,6 +93,21 @@ int navigate_map()
         }
     }
 
+    // Auto-loaded conversations
+    if (global_data_ptr->entry_map == &map_room01)
+    {
+        char_mgr.load(&test_convo);
+    }
+    else if (global_data_ptr->entry_map == &map_cutscene_channel)
+    {
+        char_mgr.load(&chat_mcwebb_02);
+        v_sprite_ptr::camera.x = global_data_ptr->entry_map->raw_size.x / 2;
+        v_sprite_ptr::camera.y = global_data_ptr->entry_map->raw_size.y / 4;
+        global_data_ptr->shake = true;
+        current_map.bg_ptr.value().set_visible(true);
+    }
+
+    // Main loop
     int loop_value = 0;
     bool handle_frame = true;
     while (loop_value == CONTINUE && char_mgr.status == CONTINUE)
@@ -105,7 +120,14 @@ int navigate_map()
 
         if (current_map.bg_ptr.has_value())
         {
-            current_map.bg_ptr.value().set_x(v_sprite_ptr::camera.x / -5);
+            if (global_data_ptr->entry_map == &map_cutscene_channel)
+            {
+                current_map.bg_ptr.value().set_x(current_map.bg_ptr.value().x() - 5);
+            }
+            else
+            {
+                current_map.bg_ptr.value().set_x(v_sprite_ptr::camera.x / -5);
+            }
         }
 
         // Handle map-specific puzzle logic

@@ -34,5 +34,6 @@ const animation elem_spike_up = {{3}, 1, 0, true};
 const animation elem_spike_down = {{2}, 1, 0, true};
 const animation fire_out = {{9}, 1, 0, true};
 const animation fire_on = {{1,2,3,4,5,6,7,8,9,10,11,12}, 12, 0, true};
+const animation boat_exhaust = {{0,1,2,3}, 4, 0, true};
 
 #endif

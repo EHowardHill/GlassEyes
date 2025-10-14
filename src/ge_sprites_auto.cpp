@@ -31,6 +31,7 @@
 #include "bn_sprite_items_spr_sebellus_monster.h"
 #include "bn_sprite_items_spr_pie.h"
 #include "bn_sprite_items_spr_mcwebb.h"
+#include "bn_sprite_items_spr_boat_exhaust.h"
 
 using namespace bn;
 
@@ -65,6 +66,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_SEBELLUS_MONSTER: { return &sprite_items::spr_sebellus_monster; break; }
 	case CHAR_PIE: { return &sprite_items::spr_pie; break; }
 	case CHAR_MCWEBB: { return &sprite_items::spr_mcwebb; break; }
+	case CHAR_BOAT_EXHAUST: { return &sprite_items::spr_boat_exhaust; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -95,6 +97,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_SPIKE: { return &elem_spike_up; break; }
 	case CHAR_SPAMTON: { return &npcs_spamton_anim; break; }
 	case CHAR_MCWEBB: { return &mcwebb_play; break; }
+	case CHAR_BOAT_EXHAUST: { return &boat_exhaust; break; }
     default:
     {
         return nullptr;

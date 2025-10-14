@@ -239,7 +239,7 @@ enum response_list
 struct global_data
 {
 	random bn_random;
-	int action_iterations[ACTIONS_SIZE] = {0};
+	int action_iterations[1024] = {0};
 	const map *entry_map = nullptr;
 	const regular_bg_item *bg = nullptr;
 	vector_2 jeremy_position = {0, 0};

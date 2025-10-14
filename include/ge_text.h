@@ -31,6 +31,7 @@ enum progress
     NEW_BERLIN,
     DOG_AND_PONY,
     WAKEY_WAKEY,
+    CUTSCENE_CHANNEL,
     YOUTUBE_AD,
     FINAL_MSG,
     TEST_MAP

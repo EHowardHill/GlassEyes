@@ -31,6 +31,8 @@
 #include "ge_typewriter_auto.h"
 #include "ge_navigate.h"
 
+#include "bn_regular_bg_items_bg_cutscene_channel.h"
+
 using namespace bn;
 
 int main()
@@ -41,7 +43,7 @@ int main()
 
     // Set for debug
     global_data_ptr = new global_data();
-    global_data_ptr->process_stage = CUTSCENE_01; // BLACK_TO_LAB;
+    global_data_ptr->process_stage = CUTSCENE_CHANNEL; // BLACK_TO_LAB;
 
     // Test game
     /*
@@ -223,6 +225,13 @@ int main()
                 global_data_ptr->entry_map = &map_dark_04;
                 global_data_ptr->jeremy_position = {3, 22};
                 global_data_ptr->ginger_position = {5, 22};
+                global_data_ptr->bg_track = &music_items::ambient_wind;
+                break;
+            }
+            case CUTSCENE_CHANNEL:
+            {
+                global_data_ptr->bg = &regular_bg_items::bg_cutscene_channel;
+                global_data_ptr->entry_map = &map_cutscene_channel;
                 global_data_ptr->bg_track = &music_items::ambient_wind;
                 break;
             }

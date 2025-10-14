@@ -321,6 +321,18 @@
                 "speed": 0,
                 "loop": true
             }
+        },
+        "boat": {
+            "exhaust": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "speed": 0,
+                "loop": true
+            }
         }
     },
     "items": {
@@ -381,6 +393,9 @@
         "Pie": {},
         "McWebb": {
             "idle_animation": "mcwebb_play"
+        },
+        "Boat Exhaust": {
+            "idle_animation": "boat_exhaust"
         }
     },
     "cutscenes": {
@@ -660,6 +675,9 @@
                 "sequence": [
                     "chat_197"
                 ]
+            },
+            "206": {
+                "auto": "chat_mcwebb"
             }
         },
         "automatic": {

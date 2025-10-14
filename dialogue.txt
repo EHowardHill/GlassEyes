@@ -1388,7 +1388,7 @@ chat_mcwebb
 	db_ch_mcwebb	EM_DEFAULT		Typically I sell	ferry rides over	"the channel, but.."									
 	db_ch_mcwebb	EM_SIDE_EYE	ACT_MUSIC_FADEOUT	I'm not keen to	being killed by	"a dragon, you see."									
 	db_ch_mcwebb	EM_DEFAULT		"Well, go ahead."	On you git.					CHAR_MCWEBB	&mcwebb_dont				
-			ACT_PROGRESS			FERRY									
+			ACT_PROGRESS			CUTSCENE_CHANNEL									
 															
 f_cutscene_01															
 				Dr. Erickson?	Dr. Erickson- Do you	have a moment?	COLOR_BLUE								
@@ -1518,3 +1518,34 @@ convo_obj_water_bottle
 				"Nice, fresh"	water hits the	spot.									
 				HP INCREASED	BY 5										
 		EM_SKIP	ACT_HP							5					
+															
+chat_mcwebb_02															
+	db_ch_mcwebb	EM_DEFAULT		It's quite tranquil	out here tonight.										
+	db_ch_mcwebb	EM_DEFAULT		Not usually this	peaceful on the	water.									
+	db_ch_mcwebb	EM_DEFAULT		I'd be fine if this	was how I went.										
+				Because of them?	Morbid.								&chat_mcwebb_02_alt_01		
+	db_ch_mcwebb	EM_DEFAULT		Sort of.	Not because they're	"royalty, though."									
+	db_ch_mcwebb	EM_DEFAULT		Three people and	a human? That's	heavy right there.									
+	db_ch_mcwebb	EM_DEFAULT		But you do make	a fair point.										
+	db_ch_mcwebb	EM_DEFAULT		If the dragon is	"out, the queen is"	not far behind.									
+	db_ch_mcwebb	EM_DEFAULT		"I advise you,"	human.										
+	db_ch_mcwebb	EM_DEFAULT		Keep both your	eyes open when	you two meet.									
+	db_ch_mcwebb	EM_DEFAULT		Because you	surely will meet.										
+	db_ch_mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when that happens.									
+	db_ch_mcwebb	EM_DEFAULT		Y'all never did	"business with me,"	understood?									
+															
+chat_mcwebb_02_alt_01															
+	db_ch_mcwebb	EM_DEFAULT		"Oh, I don't mean"	"in that sense,"	human.									
+	db_ch_mcwebb	EM_DEFAULT		I'm likely going	to retire soon.										
+	db_ch_mcwebb	EM_DEFAULT		But it's true.	Death may not be	far from me.									
+	db_ch_mcwebb	EM_DEFAULT		Human.											
+	db_ch_mcwebb	EM_DEFAULT		I'm sure the prince	can back me up	on this.									
+	db_ch_mcwebb	EM_DEFAULT		You made a	mistake associating	with these two.									
+	db_ch_sebellus	EM_DEFAULT		Pardon?											
+	db_ch_mcwebb	EM_DEFAULT		I'm sure the human	is going to meet	your mother soon.									
+	db_ch_sebellus	EM_SIDE_EYE		Oh.	Right.										
+	db_ch_mcwebb	EM_DEFAULT		I've heard our	princess has a heart	of gold.									
+	db_ch_mcwebb	EM_DEFAULT		It's probably best	that she get some	sleep before..									
+	db_ch_mcwebb	EM_DEFAULT		Well.. I don't want	"to spoil the fun,"	now do I.									
+	db_ch_mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when y'all meet.									
+	db_ch_mcwebb	EM_DEFAULT		Y'all never did	"business with me,"	understood?									

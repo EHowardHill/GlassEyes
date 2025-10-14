@@ -84,6 +84,8 @@ extern const conversation cave_sign_01;
 extern const conversation cave_sign_02;
 extern const conversation chat_197;
 extern const conversation chat_mcwebb;
+extern const conversation chat_mcwebb_02;
+extern const conversation chat_mcwebb_02_alt_01;
 extern const conversation convo_obj_document;
 extern const conversation convo_obj_flint;
 extern const conversation convo_obj_lime;
