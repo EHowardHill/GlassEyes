@@ -1,8 +1,6 @@
-// ge_dialogue.cpp
-// THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT.
-
 #include "ge_dialogue.h"
 #include "ge_text_auto.h"
+#include "main_auto.h"
 
 #include "bn_sprite_items_db_ch_vista.h"
 #include "bn_sprite_items_db_ch_visker.h"

@@ -1829,5 +1829,199 @@
                 ]
             }
         }
+    },
+    "chapters": {
+        "TEST_MAP": {
+            "map": "beach_01",
+            "bg_track": "intro_guitar",
+            "positions": {
+                "jeremy": [
+                    26,
+                    4
+                ],
+                "ginger": [
+                    27,
+                    4
+                ],
+                "sebellus": [
+                    25,
+                    4
+                ]
+            }
+        },
+        "CUTSCENE_01": {
+            "cutscenes": [
+                "Intro"
+            ],
+            "map": "room01",
+            "positions": {
+                "jeremy": [
+                    9,
+                    2
+                ]
+            }
+        },
+        "CUTSCENE_TO_GARBAGE": {
+            "cutscenes": [
+                "Intro2",
+                "Buffer",
+                "Intro3",
+                "Buffer",
+                "Title",
+                "Buffer"
+            ],
+            "map": "garbage_01",
+            "positions": {
+                "jeremy": [
+                    9,
+                    5
+                ]
+            },
+            "bg_track": "bg_garbage"
+        },
+        "GARBAGE_TO_BLACK": {
+            "reset_health": true,
+            "cutscenes": [
+                "Garbage"
+            ],
+            "map": "lab_01",
+            "positions": {
+                "jeremy": [
+                    4,
+                    5
+                ]
+            },
+            "bg_track": "bg_office"
+        },
+        "BLACK_TO_LAB": {
+            "map": "lab_01",
+            "positions": {
+                "jeremy": [
+                    4,
+                    5
+                ]
+            },
+            "bg_track": "bg_office"
+        },
+        "FOREST_01": {
+            "bg": "big_bg_forest_01",
+            "map": "forest_01",
+            "positions": {
+                "jeremy": [
+                    6,
+                    8
+                ],
+                "ginger": [
+                    5,
+                    8
+                ]
+            },
+            "bg_track": "forest_01"
+        },
+        "PIT_01": {
+            "sfx": "sfx_wack_his_pipis",
+            "cutscenes": [
+                "Buffer"
+            ],
+            "map": "cave_05",
+            "positions": {
+                "jeremy": [
+                    4,
+                    12
+                ],
+                "ginger": [
+                    4,
+                    10
+                ]
+            },
+            "bg_track": "cave_01"
+        },
+        "NEW_BERLIN": {
+            "cutscenes": [
+                "New Berlin"
+            ],
+            "bg": "big_bg_forest_01",
+            "map": "forest_02",
+            "positions": {
+                "jeremy": [
+                    15,
+                    5
+                ],
+                "ginger": [
+                    14,
+                    5
+                ]
+            },
+            "bg_track": "forest_01"
+        },
+        "DOG_AND_PONY": {
+            "cutscenes": [
+                "Dog and Pony"
+            ],
+            "map": "room_04",
+            "positions": {
+                "jeremy": [
+                    4,
+                    6
+                ]
+            },
+            "bg_track": "theme_anata"
+        },
+        "WAKEY_WAKEY": {
+            "cutscenes": [
+                "Buffer"
+            ],
+            "map": "room_05b",
+            "positions": {
+                "jeremy": [
+                    3,
+                    3
+                ]
+            },
+            "bg_track": "ambient_wind"
+        },
+        "AVALON": {
+            "bg": "big_bg_forest_01",
+            "map": "forest_03",
+            "positions": {
+                "jeremy": [
+                    15,
+                    15
+                ],
+                "ginger": [
+                    14,
+                    15
+                ]
+            },
+            "bg_track": "bg_avalon"
+        },
+        "DARK_TO_DARK": {
+            "cutscenes": [
+                "Buffer"
+            ],
+            "map": "dark_04",
+            "positions": {
+                "jeremy": [
+                    3,
+                    22
+                ],
+                "ginger": [
+                    5,
+                    22
+                ]
+            },
+            "bg_track": "ambient_wind"
+        },
+        "CUTSCENE_CHANNEL": {
+            "bg": "bg_cutscene_channel",
+            "map": "cutscene_channel",
+            "bg_track": "ambient_wind"
+        },
+        "FINAL_MSG": {
+            "cutscenes": [
+                "Buffer",
+                "Msg"
+            ]
+        }
     }
 }

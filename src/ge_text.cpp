@@ -5,6 +5,7 @@
 #include "bn_sound_items_info.h"
 #include "bn_random.h"
 
+#include "main_auto.h"
 #include "ge_sprites.h"
 #include "ge_globals.h"
 #include "ge_text.h"

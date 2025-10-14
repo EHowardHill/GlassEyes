@@ -511,6 +511,7 @@ ge_actions_cpp = f"""#include "bn_music.h"
 #include "bn_music_items.h"
 
 {references}
+#include "main_auto.h"
 #include "ge_globals.h"
 #include "ge_dialogue.h"
 #include "ge_character_manager.h"

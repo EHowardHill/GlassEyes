@@ -3,6 +3,7 @@
 
 #include "bn_regular_bg_items_big_bg_forest_01.h"
 
+#include "main_auto.h"
 #include "ge_globals.h"
 #include "ge_dialogue.h"
 #include "ge_character_manager.h"

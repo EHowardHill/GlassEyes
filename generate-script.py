@@ -284,11 +284,9 @@ def generate_cpp_content(conversations, sprite_list, bg_item_list):
         definitions.append(eol_line + "};")
         definitions.append("")
 
-    template_cpp = f"""// ge_dialogue.cpp
-// THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT.
-
-#include "ge_dialogue.h"
+    template_cpp = f"""#include "ge_dialogue.h"
 #include "ge_text_auto.h"
+#include "main_auto.h"
 
 {sprite_includes}
 {bg_item_includes}
