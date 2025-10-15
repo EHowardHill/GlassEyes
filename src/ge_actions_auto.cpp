@@ -1106,17 +1106,17 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->entry_map = &map_beach_cave;
 		global_data_ptr->jeremy_position = {6, 3};
 		global_data_ptr->ginger_position = {6, 4};
-		global_data_ptr->sebellus_position = {6, 5};
+		global_data_ptr->sebellus_position = {5, 5};
 		return NEW_MAP;
 		break;
 	}
 	case 209:
 	{
 		music_items::forest_01.play();
-		global_data_ptr->entry_map = &map_beach_02;
-		global_data_ptr->jeremy_position = {19, 2};
-		global_data_ptr->ginger_position = {19, 3};
-		global_data_ptr->sebellus_position = {19, 4};
+		global_data_ptr->entry_map = &map_beach_02b;
+		global_data_ptr->jeremy_position = {20, 2};
+		global_data_ptr->ginger_position = {20, 3};
+		global_data_ptr->sebellus_position = {20, 4};
 		return NEW_MAP;
 		break;
 	}

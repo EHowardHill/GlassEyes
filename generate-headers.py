@@ -417,7 +417,6 @@ automatic_block = """int perform_action_automatic(int index, character_manager &
 
 references = ""
 
-
 def handle_action(dat):
     global references
 
@@ -450,7 +449,8 @@ def handle_action(dat):
                 block += (
                     "\t\tglobal_data_ptr->bg = &regular_bg_items::" + datt["bg"] + ";\n"
                 )
-                references += '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
+                if datt["bg"] not in references:
+                    references += '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
                 block += "\t\tmusic::stop();\n"
             if "positions" in datt.keys():
                 characters = datt["positions"]
@@ -526,3 +526,94 @@ using namespace bn;
 
 with open("src/ge_actions_auto.cpp", "w") as f:
     f.write(ge_actions_cpp)
+
+# Main
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+references = """#include "bn_music.h"
+#include "bn_music_items.h"
+#include "bn_sound_items.h"
+
+#include "main_auto.h"
+#include "ge_globals.h"
+#include "ge_map_data.h"
+#include "ge_typewriter.h"
+#include "ge_typewriter_auto.h"
+
+"""
+
+block = """void resolve_chapter()
+{
+    switch (global_data_ptr->process_stage)
+    {
+"""
+
+main_auto_h = """// main_auto.h
+
+#ifndef MAIN_AUTO_H
+#define MAIN_AUTO_H
+
+enum progress
+{
+"""
+
+if "chapters" in data.keys():
+    for chapter in data["chapters"]:
+        main_auto_h += "\t" + chapter.upper().replace(" ", "_") + ",\n"
+
+        datt = data["chapters"][chapter]
+        block += "\tcase " + chapter + ": {\n"
+
+        if "sfx" in datt.keys():
+            block += "\t\tsound_items::" + datt["sfx"] + ".play();\n"
+
+        if "cutscenes" in datt.keys():
+            for cutscene in datt["cutscenes"]:
+                block += "\t\ttypewriter(TYPEWRITER_" + cutscene.upper().replace(" ", "_") + ");\n"
+
+        if "map" in datt.keys():
+            block += "\t\tglobal_data_ptr->entry_map = &map_" + datt["map"] + ";\n"
+
+        if "bg_track" in datt.keys():
+            block += (
+                "\t\tglobal_data_ptr->bg_track = &music_items::"
+                + datt["bg_track"]
+                + ";\n"
+            )
+
+        if "bg" in datt.keys():
+            block += (
+                "\t\tglobal_data_ptr->bg = &regular_bg_items::" + datt["bg"] + ";\n"
+            )
+            if datt["bg"] not in references:
+                references += '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
+            block += "\t\tmusic::stop();\n"
+
+        if "positions" in datt.keys():
+            characters = datt["positions"]
+            for c_key in characters.keys():
+                block += (
+                    "\t\tglobal_data_ptr->"
+                    + c_key
+                    + "_position = {"
+                    + str(characters[c_key][0])
+                    + ", "
+                    + str(characters[c_key][1])
+                    + "};\n"
+                )
+
+        block += "\t\tbreak;\t\t}\n"
+
+references += "\n"
+block += "\tdefault: { break; }\n\t}\n}"
+main_auto_h += """};
+
+void resolve_chapter();
+
+#endif"""
+
+with open("src/main_auto.cpp", "w") as f:
+    f.write(references + block)
+
+with open("include/main_auto.h", "w") as f:
+    f.write(main_auto_h)

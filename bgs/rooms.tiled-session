@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/beach_cave.tmx",
+    "activeFile": "maps/to_flay_01.tmx",
     "expandedProjectPaths": [
+        "maps",
         "tilesets",
-        ".",
-        "maps"
+        "."
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -20,16 +20,16 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 546,
-                "y": 166.5
+                "x": 384,
+                "y": 191.5
             }
         },
         "maps/beach_cave.tmx": {
             "scale": 1.6105468749999998,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 127.90686393402862,
-                "y": 192.1707494542809
+                "x": 335.28983749696823,
+                "y": 111.45282561241815
             }
         },
         "maps/cave_01.tmx": {
@@ -264,6 +264,14 @@
                 "y": 192.43628324018914
             }
         },
+        "maps/to_flay_01.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 525,
+                "y": 380.5
+            }
+        },
         "maps/viskers_house.tmx": {
             "scale": 1.8356770833333333,
             "selectedLayer": 2,
@@ -329,31 +337,32 @@
         }
     },
     "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes/bgs/tilesets",
-    "map.height": 12,
+    "map.height": 24,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 8,
+    "map.width": 32,
     "openFiles": [
         "maps/beach_02.tmx",
         "tilesets/forest01.tsx",
         "maps/beach_cave.tmx",
-        "tilesets/underground02.tsx"
+        "tilesets/underground02.tsx",
+        "maps/to_flay_01.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
         "maps/beach_02.tmx",
         "tilesets/forest01.tsx",
-        "tilesets/underground02.tsx",
         "maps/beach_cave.tmx",
+        "tilesets/underground02.tsx",
+        "maps/to_flay_01.tmx",
         "maps/cave_01.tmx",
         "maps/cave_02.tmx",
         "maps/room_04.tmx",
         "maps/room_02.tmx",
         "maps/room_03.tmx",
         "tilesets/tavern01.tsx",
-        "maps/room_hallway.tmx",
-        "tilesets/forest01_night.tsx"
+        "maps/room_hallway.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
