@@ -204,10 +204,24 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 break;
             }
+            case 210:
+            {
+                if (global_data_ptr->action_iterations[210] < 2)
+                {
+                    for (int t = 0; t < ITEMS_SIZE; t++)
+                    {
+                        global_data_ptr->items[t] = 0;
+                    }
+
+                    ch_man->load(&naomi_fortune_01);
+                }
+                break;
+            }
             default:
             {
                 int ret = perform_action_automatic(action, *ch_man);
-                if (ret != -1) return ret;
+                if (ret != -1)
+                    return ret;
                 break;
             }
             }
@@ -264,7 +278,8 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 default:
                 {
                     int ret = perform_action_interactive(action, *ch_man);
-                    if (ret != -1) return ret;
+                    if (ret != -1)
+                        return ret;
                     break;
                 }
                 }

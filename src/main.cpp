@@ -36,7 +36,7 @@ int main()
 
     // Set for debug
     global_data_ptr = new global_data();
-    global_data_ptr->process_stage = CUTSCENE_CHANNEL; // BLACK_TO_LAB;
+    global_data_ptr->process_stage = TEST_MAP; // BLACK_TO_LAB;
 
     // Test game
     /*

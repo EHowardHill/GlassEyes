@@ -333,6 +333,18 @@
                 "speed": 0,
                 "loop": true
             }
+        },
+        "naomi": {
+            "disappear": {
+                "frames": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "speed": 0,
+                "loop": false
+            }
         }
     },
     "items": {
@@ -396,7 +408,9 @@
         },
         "Boat Exhaust": {
             "idle_animation": "boat_exhaust"
-        }
+        },
+        "Naomi_Cooking": {},
+        "Naomi_Fortune": {}
     },
     "cutscenes": {
         "Intro": {
@@ -678,6 +692,9 @@
             },
             "206": {
                 "auto": "chat_mcwebb"
+            },
+            "207": {
+                "auto": "beach_sign"
             }
         },
         "automatic": {
@@ -1827,6 +1844,46 @@
                 "sequence": [
                     "have_to_go_3"
                 ]
+            },
+            "208": {
+                "music": "cave_01",
+                "new_map": {
+                    "map": "beach_cave",
+                    "positions": {
+                        "jeremy": [
+                            6,
+                            3
+                        ],
+                        "ginger": [
+                            6,
+                            4
+                        ],
+                        "sebellus": [
+                            5,
+                            5
+                        ]
+                    }
+                }
+            },
+            "209": {
+                "music": "forest_01",
+                "new_map": {
+                    "map": "beach_02b",
+                    "positions": {
+                        "jeremy": [
+                            20,
+                            2
+                        ],
+                        "ginger": [
+                            20,
+                            3
+                        ],
+                        "sebellus": [
+                            20,
+                            4
+                        ]
+                    }
+                }
             }
         }
     },

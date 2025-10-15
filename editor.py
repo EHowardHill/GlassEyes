@@ -1208,7 +1208,9 @@ class HeadersEditor:
             row=row, column=0, sticky="w", padx=5, pady=5
         )
         reset_health_var = tk.BooleanVar()
-        reset_health_check = ttk.Checkbutton(scrollable_frame, variable=reset_health_var)
+        reset_health_check = ttk.Checkbutton(
+            scrollable_frame, variable=reset_health_var
+        )
         reset_health_check.grid(row=row, column=1, sticky="w", padx=5, pady=5)
         row += 1
 
@@ -1217,9 +1219,9 @@ class HeadersEditor:
         )
         row += 1
 
-        ttk.Label(
-            scrollable_frame, text="Cutscenes:", font=("Arial", 9, "bold")
-        ).grid(row=row, column=0, columnspan=2, sticky="w", padx=5, pady=5)
+        ttk.Label(scrollable_frame, text="Cutscenes:", font=("Arial", 9, "bold")).grid(
+            row=row, column=0, columnspan=2, sticky="w", padx=5, pady=5
+        )
         row += 1
 
         cutscenes_frame = ttk.Frame(scrollable_frame)
@@ -1251,9 +1253,9 @@ class HeadersEditor:
             ttk.Label(cs_dialog, text="Select Cutscene:").grid(
                 row=0, column=0, sticky="w", padx=5, pady=5
             )
-            
+
             cutscene_combo = ttk.Combobox(cs_dialog, width=25, state="readonly")
-            cutscene_combo['values'] = list(self.data.get("cutscenes", {}).keys())
+            cutscene_combo["values"] = list(self.data.get("cutscenes", {}).keys())
             cutscene_combo.grid(row=0, column=1, padx=5, pady=5)
 
             def save_cutscene():
@@ -1286,9 +1288,9 @@ class HeadersEditor:
             ttk.Label(cs_dialog, text="Select Cutscene:").grid(
                 row=0, column=0, sticky="w", padx=5, pady=5
             )
-            
+
             cutscene_combo = ttk.Combobox(cs_dialog, width=25, state="readonly")
-            cutscene_combo['values'] = list(self.data.get("cutscenes", {}).keys())
+            cutscene_combo["values"] = list(self.data.get("cutscenes", {}).keys())
             cutscene_combo.set(current_cutscene)
             cutscene_combo.grid(row=0, column=1, padx=5, pady=5)
 
@@ -1313,7 +1315,9 @@ class HeadersEditor:
                 return
 
             idx = selection[0]
-            if messagebox.askyesno("Confirm", f"Delete cutscene '{cutscenes_data[idx]}'?"):
+            if messagebox.askyesno(
+                "Confirm", f"Delete cutscene '{cutscenes_data[idx]}'?"
+            ):
                 del cutscenes_data[idx]
                 refresh_cutscenes_list()
 
@@ -1321,14 +1325,16 @@ class HeadersEditor:
 
         cutscenes_btn_frame = ttk.Frame(scrollable_frame)
         cutscenes_btn_frame.grid(row=row, column=0, columnspan=2, pady=5)
-        ttk.Button(cutscenes_btn_frame, text="Add Cutscene", command=add_cutscene_to_list).pack(
-            side="left", padx=2
-        )
+        ttk.Button(
+            cutscenes_btn_frame, text="Add Cutscene", command=add_cutscene_to_list
+        ).pack(side="left", padx=2)
         ttk.Button(
             cutscenes_btn_frame, text="Edit Cutscene", command=edit_cutscene_in_list
         ).pack(side="left", padx=2)
         ttk.Button(
-            cutscenes_btn_frame, text="Delete Cutscene", command=delete_cutscene_from_list
+            cutscenes_btn_frame,
+            text="Delete Cutscene",
+            command=delete_cutscene_from_list,
         ).pack(side="left", padx=2)
         row += 1
 

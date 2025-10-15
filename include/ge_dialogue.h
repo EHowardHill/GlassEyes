@@ -36,6 +36,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_togore.h"
 #include "bn_sprite_items_db_ch_sebellus.h"
 #include "bn_sprite_items_db_ch_mcwebb.h"
+#include "bn_sprite_items_db_ch_naomi.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -71,6 +72,7 @@ extern const conversation avalon_sign_06;
 extern const conversation avalon_wormguy_01;
 extern const conversation avalon_wormguy_01_alt_01;
 extern const conversation avalon_wormguy_02;
+extern const conversation beach_sign;
 extern const conversation bm_fridge;
 extern const conversation bridge_01;
 extern const conversation broken_avalon_00;
@@ -195,6 +197,8 @@ extern const conversation leaving_lab;
 extern const conversation leaving_lab_alt_01;
 extern const conversation leaving_lab_alt_02;
 extern const conversation leaving_lab_alt_03;
+extern const conversation naomi_fortune_01;
+extern const conversation naomi_fortune_01_alt_01;
 extern const conversation new_berlin_sign;
 extern const conversation scruffys_01;
 extern const conversation scruffys_01_alt_01;

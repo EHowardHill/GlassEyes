@@ -17,11 +17,11 @@ void resolve_chapter()
     {
     case TEST_MAP:
     {
-        global_data_ptr->entry_map = &map_beach_01;
-        global_data_ptr->jeremy_position = {26, 4};
-        global_data_ptr->ginger_position = {27, 4};
-        global_data_ptr->sebellus_position = {25, 4};
-        global_data_ptr->bg_track = &music_items::intro_guitar;
+        global_data_ptr->entry_map = &map_beach_02;
+        global_data_ptr->jeremy_position = {2, 5};
+        global_data_ptr->ginger_position = {2, 4};
+        global_data_ptr->sebellus_position = {2, 3};
+        global_data_ptr->bg_track = &music_items::forest_01;
         break;
     }
     case CUTSCENE_01:
@@ -148,10 +148,6 @@ void resolve_chapter()
     {
         typewriter(TYPEWRITER_BUFFER);
         typewriter(TYPEWRITER_MSG);
-        while (true)
-        {
-            core::update();
-        }
         break;
     }
     default:

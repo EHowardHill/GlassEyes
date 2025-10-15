@@ -1549,3 +1549,23 @@ chat_mcwebb_02_alt_01
 	db_ch_mcwebb	EM_DEFAULT		Well.. I don't want	"to spoil the fun,"	now do I.									
 	db_ch_mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when y'all meet.									
 	db_ch_mcwebb	EM_DEFAULT		Y'all never did	"business with me,"	understood?									
+															
+beach_sign															
+				FLAYITHRO	VILLAGE:	ROAD AHEAD									
+															
+naomi_fortune_01															
+	db_ch_naomi	EM_DEFAULT		"Hyelo there,"	have we met	before?									
+	db_ch_sebellus	EM_SIDE_EYE		The fairy girl..	I've heard of you.										
+	db_ch_sebellus	EM_DEFAULT		You're not going	to cause us any	"trouble, are you?"									
+	db_ch_naomi	EM_HAPPY		"No, hehe."	I'm running an	HONEST business.									
+	db_ch_naomi	EM_DEFAULT		How about a	fortune read?										
+				Yes.	No.								&naomi_fortune_01_alt_01		
+	db_ch_naomi	EM_DEFAULT		I'm looking..	I'm looking..	..yes!									
+	db_ch_naomi	EM_HAPPY		I see..	Poverty.	Lots of poverty.									
+	db_ch_ginger	EM_WAT		..H-HEY!!	My stuff is	missing!				CHAR_NAOMI_FORTUNE	&naomi_disappear				
+	db_ch_sebellus	EM_DEFAULT		That dirty little-	..	If I see her again..									
+															
+naomi_fortune_01_alt_01															
+	db_ch_naomi	EM_HAPPY		"Oh.. C'mon,"	that's no fun.										
+	db_ch_ginger	EM_WAT		..H-HEY!!	My stuff is	missing!				CHAR_NAOMI_FORTUNE	&naomi_disappear				
+	db_ch_sebellus	EM_DEFAULT		That dirty little-	..	If I see her again..									

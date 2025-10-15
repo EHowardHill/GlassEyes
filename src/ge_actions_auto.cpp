@@ -330,6 +330,11 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&chat_mcwebb);
 		break;
 	}
+	case 207:
+	{
+		ch_man.load(&beach_sign);
+		break;
+	}
 	}
 	return -1;
 }
@@ -1093,6 +1098,26 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[205] == 1) { ch_man.load(&have_to_go_3); } else
 		{ };
+		break;
+	}
+	case 208:
+	{
+		music_items::cave_01.play();
+		global_data_ptr->entry_map = &map_beach_cave;
+		global_data_ptr->jeremy_position = {6, 3};
+		global_data_ptr->ginger_position = {6, 4};
+		global_data_ptr->sebellus_position = {6, 5};
+		return NEW_MAP;
+		break;
+	}
+	case 209:
+	{
+		music_items::forest_01.play();
+		global_data_ptr->entry_map = &map_beach_02;
+		global_data_ptr->jeremy_position = {19, 2};
+		global_data_ptr->ginger_position = {19, 3};
+		global_data_ptr->sebellus_position = {19, 4};
+		return NEW_MAP;
 		break;
 	}
 	}
