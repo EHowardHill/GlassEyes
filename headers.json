@@ -17,6 +17,16 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "falling": {
+                "frames": [
+                    0,
+                    3,
+                    6,
+                    9
+                ],
+                "speed": 1,
+                "loop": true
             }
         },
         "vista": {
@@ -293,6 +303,20 @@
                 ],
                 "speed": 0,
                 "loop": true
+            },
+            "leaves_fresh": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "leaves_stepped": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "fire": {
@@ -410,7 +434,8 @@
             "idle_animation": "boat_exhaust"
         },
         "Naomi_Cooking": {},
-        "Naomi_Fortune": {}
+        "Naomi_Fortune": {},
+        "Leaves": {}
     },
     "cutscenes": {
         "Intro": {
@@ -695,6 +720,11 @@
             },
             "207": {
                 "auto": "beach_sign"
+            },
+            "214": {
+                "sequence": [
+                    "chat_mcwebb_03"
+                ]
             }
         },
         "automatic": {
@@ -1884,6 +1914,65 @@
                         ]
                     }
                 }
+            },
+            "211": {
+                "new_map": {
+                    "map": "to_flay_01",
+                    "positions": {
+                        "jeremy": [
+                            28,
+                            21
+                        ],
+                        "ginger": [
+                            28,
+                            22
+                        ],
+                        "sebellus": [
+                            27,
+                            22
+                        ]
+                    }
+                }
+            },
+            "212": {
+                "new_map": {
+                    "map": "to_flay_01b",
+                    "bg_track": "cave_01",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            13
+                        ],
+                        "ginger": [
+                            3,
+                            13
+                        ],
+                        "sebellus": [
+                            2,
+                            13
+                        ]
+                    }
+                }
+            },
+            "213": {
+                "new_map": {
+                    "map": "to_flay_01",
+                    "bg_track": "forest_01",
+                    "positions": {
+                        "jeremy": [
+                            11,
+                            18
+                        ],
+                        "ginger": [
+                            12,
+                            18
+                        ],
+                        "sebellus": [
+                            13,
+                            18
+                        ]
+                    }
+                }
             }
         }
     },
@@ -2079,6 +2168,25 @@
                 "Buffer",
                 "Msg"
             ]
+        },
+        "BLACK_TO_BEACH": {
+            "map": "beach_02",
+            "bg_track": "forest_01",
+            "reset_health": true,
+            "positions": {
+                "jeremy": [
+                    2,
+                    5
+                ],
+                "ginger": [
+                    2,
+                    4
+                ],
+                "sebellus": [
+                    2,
+                    3
+                ]
+            }
         }
     }
 }

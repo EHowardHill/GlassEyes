@@ -1549,6 +1549,7 @@ chat_mcwebb_02_alt_01
 	db_ch_mcwebb	EM_DEFAULT		Well.. I don't want	"to spoil the fun,"	now do I.									
 	db_ch_mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when y'all meet.									
 	db_ch_mcwebb	EM_DEFAULT		Y'all never did	"business with me,"	understood?									
+			ACT_PROGRESS							BLACK_TO_BEACH					
 															
 beach_sign															
 				FLAYITHRO	VILLAGE:	ROAD AHEAD									
@@ -1569,3 +1570,9 @@ naomi_fortune_01_alt_01
 	db_ch_naomi	EM_HAPPY		"Oh.. C'mon,"	that's no fun.										
 	db_ch_ginger	EM_WAT		..H-HEY!!	My stuff is	missing!				CHAR_NAOMI_FORTUNE	&naomi_disappear				
 	db_ch_sebellus	EM_DEFAULT		That dirty little-	..	If I see her again..									
+															
+chat_mcwebb_03															
+	db_ch_mcwebb	EM_DEFAULT		So..	Do I know you?	*wink*									
+															
+fall_down															
+				Ow.						CHAR_JEREMY	&jeremy_lay_down				

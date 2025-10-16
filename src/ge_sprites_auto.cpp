@@ -34,6 +34,7 @@
 #include "bn_sprite_items_spr_boat_exhaust.h"
 #include "bn_sprite_items_spr_naomi_cooking.h"
 #include "bn_sprite_items_spr_naomi_fortune.h"
+#include "bn_sprite_items_spr_leaves.h"
 
 using namespace bn;
 
@@ -71,6 +72,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_BOAT_EXHAUST: { return &sprite_items::spr_boat_exhaust; break; }
 	case CHAR_NAOMI_COOKING: { return &sprite_items::spr_naomi_cooking; break; }
 	case CHAR_NAOMI_FORTUNE: { return &sprite_items::spr_naomi_fortune; break; }
+	case CHAR_LEAVES: { return &sprite_items::spr_leaves; break; }
     default:
     {
         return &sprite_items::spr_vista;

@@ -19,6 +19,7 @@ enum progress
 	DARK_TO_DARK,
 	CUTSCENE_CHANNEL,
 	FINAL_MSG,
+	BLACK_TO_BEACH,
 };
 
 void resolve_chapter();

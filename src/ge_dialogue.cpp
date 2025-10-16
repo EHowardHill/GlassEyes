@@ -343,6 +343,11 @@ const conversation chat_mcwebb_02_alt_01 = {
     {0, &sprite_items::db_ch_mcwebb, EM_DEFAULT, ACT_DEFAULT, "Well.. I don't want", "to spoil the fun,", "now do I.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, &sprite_items::db_ch_mcwebb, EM_DEFAULT, ACT_DEFAULT, "I plan to be back", "on safe shores", "when y'all meet.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, &sprite_items::db_ch_mcwebb, EM_DEFAULT, ACT_DEFAULT, "Y'all never did", "business with me,", "understood?", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_PROGRESS, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, BLACK_TO_BEACH, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
+const conversation chat_mcwebb_03 = {
+    {0, &sprite_items::db_ch_mcwebb, EM_DEFAULT, ACT_DEFAULT, "So..", "Do I know you?", "*wink*", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
 const conversation convo_obj_document = {
@@ -702,6 +707,10 @@ const conversation f_cutscene_04 = {
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "", "", "No.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "I'm scared.", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "It will only", "be scary for a", "moment.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
+const conversation fall_down = {
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "Ow.", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, CHAR_JEREMY, &jeremy_lay_down, {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
 const conversation final_msg = {

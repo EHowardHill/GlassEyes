@@ -335,6 +335,12 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&beach_sign);
 		break;
 	}
+	case 214:
+	{
+		if (global_data_ptr->action_iterations[214] == 1) { ch_man.load(&chat_mcwebb_03); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -1117,6 +1123,35 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->jeremy_position = {20, 2};
 		global_data_ptr->ginger_position = {20, 3};
 		global_data_ptr->sebellus_position = {20, 4};
+		return NEW_MAP;
+		break;
+	}
+	case 211:
+	{
+		global_data_ptr->entry_map = &map_to_flay_01;
+		global_data_ptr->jeremy_position = {28, 21};
+		global_data_ptr->ginger_position = {28, 22};
+		global_data_ptr->sebellus_position = {27, 22};
+		return NEW_MAP;
+		break;
+	}
+	case 212:
+	{
+		global_data_ptr->entry_map = &map_to_flay_01b;
+		global_data_ptr->bg_track = &music_items::cave_01;
+		global_data_ptr->jeremy_position = {4, 13};
+		global_data_ptr->ginger_position = {3, 13};
+		global_data_ptr->sebellus_position = {2, 13};
+		return NEW_MAP;
+		break;
+	}
+	case 213:
+	{
+		global_data_ptr->entry_map = &map_to_flay_01;
+		global_data_ptr->bg_track = &music_items::forest_01;
+		global_data_ptr->jeremy_position = {11, 18};
+		global_data_ptr->ginger_position = {12, 18};
+		global_data_ptr->sebellus_position = {13, 18};
 		return NEW_MAP;
 		break;
 	}

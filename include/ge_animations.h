@@ -6,6 +6,7 @@
 
 const animation anim_walk = {{0,1,0,2}, 4, 0, true};
 const animation anim_stand = {{0}, 1, 0, false};
+const animation anim_falling = {{0,3,6,9}, 4, 1, true};
 const animation vista_reminisce = {{9}, 1, 0, true};
 const animation vista_pickup = {{6,10,6,11}, 4, 1, false};
 const animation visker_poke = {{9,10}, 2, 0, true};
@@ -32,6 +33,8 @@ const animation elem_button_up = {{0}, 1, 0, true};
 const animation elem_button_down = {{1}, 1, 0, true};
 const animation elem_spike_up = {{3}, 1, 0, true};
 const animation elem_spike_down = {{2}, 1, 0, true};
+const animation elem_leaves_fresh = {{0}, 1, 0, false};
+const animation elem_leaves_stepped = {{1}, 1, 0, false};
 const animation fire_out = {{9}, 1, 0, true};
 const animation fire_on = {{1,2,3,4,5,6,7,8,9,10,11,12}, 12, 0, true};
 const animation boat_exhaust = {{0,1,2,3}, 4, 0, true};

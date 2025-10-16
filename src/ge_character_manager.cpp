@@ -5,6 +5,7 @@
 #include "bn_unique_ptr.h"
 #include "bn_optional.h"
 #include "bn_music.h"
+#include "bn_music_items.h"
 #include "bn_sound_items.h"
 
 #include "ge_sprites.h"
@@ -326,6 +327,29 @@ void character_manager::update(map_manager *current_map = nullptr)
                         sound_items::snd_alert.play(0.5);
                         ch->idle_animation = &elem_button_down;
                         ch->is_pressed = true;
+                    }
+                }
+            }
+            else if (ch->index == CHAR_LEAVES)
+            {
+                if (ch->idle_animation != &elem_leaves_stepped)
+                {
+                    vector_2 f_pos = {player_ptr->v_sprite.bounds.position.x / 32, player_ptr->v_sprite.bounds.position.y / 32};
+                    vector_2 m_pos = {ch->v_sprite.bounds.position.x / 32, ch->v_sprite.bounds.position.y / 32};
+
+                    if (f_pos.x.integer() == m_pos.x.integer() && f_pos.y.integer() == m_pos.y.integer())
+                    {
+                        sound_items::sfx_fall.play(0.5);
+                        ch->idle_animation = &elem_leaves_stepped;
+                        player_ptr->toggle_falling(true);
+                        player_ptr->idle_animation = &anim_stand;
+                        player_ptr->current_animation = &anim_stand;
+
+                        global_data_ptr->bg_track = &music_items::cave_01;
+                        global_data_ptr->entry_map = &map_to_flay_01b;
+                        global_data_ptr->jeremy_position = {19, 4};
+                        global_data_ptr->ginger_position = {0, 0};
+                        global_data_ptr->sebellus_position = {0, 0};
                     }
                 }
             }

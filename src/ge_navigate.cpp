@@ -1,4 +1,6 @@
-// main.cpp
+// ge_navigate.cpp
+
+#include "bn_log.h"
 #include "bn_core.h"
 #include "bn_regular_bg_item.h"
 #include "bn_string.h"
@@ -284,8 +286,14 @@ int navigate_map()
             }
         }
 
-        // Frame handling
+        // If fallen off-map
+        if (char_mgr.player_ptr->is_falling && !char_mgr.player_ptr->v_sprite.sprite_ptr_raw[0].has_value())
+        {
+            loop_value = NEW_MAP;
+            char_mgr.status = NEW_MAP;
+        }
 
+        // Frame handling
         if (handle_frame)
         {
             handle_frame = false;
@@ -297,5 +305,5 @@ int navigate_map()
     }
 
     v_sprite_ptr::clear_all();
-    return loop_value + char_mgr.status;
+    return (loop_value != CONTINUE) ? loop_value : char_mgr.status;
 }

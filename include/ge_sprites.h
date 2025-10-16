@@ -102,6 +102,7 @@ struct character
 
     bool is_sticky = false;
     bool is_pressed = false;
+    bool is_falling = false;
 
     int face_lock_timer = 0;
     int last_significant_x = 0;
@@ -130,6 +131,8 @@ struct character
     }
 
     static void add(list<character, 32> *characters, int character_id, vector_2 location, character_manager *manager);
+
+    void toggle_falling(bool should_be_falling);
 };
 
 #endif // GE_SPRITES_H

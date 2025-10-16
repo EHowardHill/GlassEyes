@@ -111,6 +111,13 @@ void resolve_chapter()
 		typewriter(TYPEWRITER_BUFFER);
 		typewriter(TYPEWRITER_MSG);
 		break;		}
+	case BLACK_TO_BEACH: {
+		global_data_ptr->entry_map = &map_beach_02;
+		global_data_ptr->bg_track = &music_items::forest_01;
+		global_data_ptr->jeremy_position = {2, 5};
+		global_data_ptr->ginger_position = {2, 4};
+		global_data_ptr->sebellus_position = {2, 3};
+		break;		}
 	default: { break; }
 	}
 }

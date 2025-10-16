@@ -1,3 +1,5 @@
+// ge_actions.cpp
+
 #include "bn_log.h"
 #include "bn_music.h"
 #include "bn_music_items.h"
@@ -14,25 +16,8 @@
 #include "ge_actions_auto.h"
 
 static vector_2 previous_tile = {-1, -1};
-static bool action_triggered = false;
-static bool buffer_active = false;
 static bool dialogue_just_closed = false;
-
-bool is_interactive(int action)
-{
-    for (int t = 0; t < 999; t++)
-    {
-        if (is_interactive_array[t] == -1)
-        {
-            return false;
-        }
-        else if (is_interactive_array[t] == action)
-        {
-            return true;
-        }
-    }
-    return false;
-}
+static bool cooldown = false;
 
 int action_listener(map_manager *man, character_manager *ch_man)
 {
@@ -56,176 +41,173 @@ int action_listener(map_manager *man, character_manager *ch_man)
         // Reset action_triggered flag when entering a new tile
         if (new_tile)
         {
-            action_triggered = false;
             previous_tile = current_tile;
-
-            if (action != 0 && !is_interactive(action))
-            {
-                global_data_ptr->action_iterations[action]++;
-            }
         }
 
-        // AUTOMATIC
-        if (action != 0 && !action_triggered)
+        if (action != 0 && cooldown == false)
         {
-            action_triggered = true; // Mark as triggered
-
-            switch (action)
+            // AUTOMATIC
+            if (new_tile)
             {
-            case 18:
-            {
-                if (global_data_ptr->action_iterations[23] == 0)
+                switch (action)
                 {
-                    global_data_ptr->entry_map = &map_garbage_03;
-                    global_data_ptr->jeremy_position = {2, 8};
-                    return NEW_MAP;
-                }
-                else
+                case 18:
                 {
-                    global_data_ptr->entry_map = &map_garbage_05;
-                    global_data_ptr->jeremy_position = {4, 45};
-                    return NEW_MAP;
-                }
-                break;
-            }
-
-            case 24:
-            {
-                ch_man->music_fadeout = true;
-                break;
-            }
-
-            case 53:
-            {
-                auto croke = ch_man->find_by_index(CHAR_CROKE);
-                if (croke != nullptr)
-                {
-                    ch_man->remove_character(croke);
-                }
-                break;
-            }
-
-            case 49:
-            {
-                if (man->bg_ptr.has_value())
-                {
-                    man->bg_ptr.value().set_visible(true);
-                }
-                break;
-            }
-            case 50:
-            {
-                if (man->bg_ptr.has_value())
-                {
-                    man->bg_ptr.value().set_visible(false);
-                }
-                break;
-            }
-
-            case CHAT_SNEAKER:
-            {
-                BN_LOG("Iterations: ", global_data_ptr->action_iterations[CHAT_SNEAKER]);
-                if (global_data_ptr->action_iterations[CHAT_SNEAKER] > 0)
-                {
-                    ch_man->load(&scruffys_05b);
-                }
-                break;
-            }
-
-            case 85:
-            {
-                if (man->bg_ptr.has_value())
-                {
-                    man->bg_ptr.value().set_visible(true);
-                }
-                break;
-            }
-
-            case 163:
-            {
-                if (global_data_ptr->action_iterations[163] == 1)
-                {
-                    auto seb = ch_man->find_by_index(CHAR_SEBELLUS);
-                    if (seb != nullptr)
+                    if (global_data_ptr->action_iterations[23] == 0)
                     {
-                        seb->current_animation = &sebellus_hide;
-                        seb->idle_animation = &sebellus_hide;
+                        global_data_ptr->entry_map = &map_garbage_03;
+                        global_data_ptr->jeremy_position = {2, 8};
+                        return NEW_MAP;
                     }
-                }
-                break;
-            }
-
-            case 190:
-            {
-                auto g = ch_man->find_by_index(CHAR_GINGER);
-                g->idle_animation = &ginger_sit_chair;
-                g->current_animation = &ginger_sit_chair;
-                break;
-            }
-
-            case 192:
-            {
-                auto g = ch_man->find_by_index(CHAR_GINGER);
-                if (g != nullptr)
-                {
-                    g->idle_animation = &ginger_hide;
-                    g->current_animation = &ginger_hide;
+                    else
+                    {
+                        global_data_ptr->entry_map = &map_garbage_05;
+                        global_data_ptr->jeremy_position = {4, 45};
+                        return NEW_MAP;
+                    }
+                    break;
                 }
 
-                auto s = ch_man->find_by_index(CHAR_SEBELLUS);
-                if (s != nullptr)
+                case 24:
                 {
-                    s->idle_animation = &sebellus_hide;
-                    s->current_animation = &sebellus_hide;
+                    ch_man->music_fadeout = true;
+                    break;
                 }
-                break;
-            }
 
-            case 180:
-            case 193:
-            {
-                if (global_data_ptr->action_iterations[ITEM_181] < 2)
+                case 53:
                 {
+                    auto croke = ch_man->find_by_index(CHAR_CROKE);
+                    if (croke != nullptr)
+                    {
+                        ch_man->remove_character(croke);
+                    }
+                    break;
+                }
+
+                case 49:
+                {
+                    if (man->bg_ptr.has_value())
+                    {
+                        man->bg_ptr.value().set_visible(true);
+                    }
+                    break;
+                }
+                case 50:
+                {
+                    if (man->bg_ptr.has_value())
+                    {
+                        man->bg_ptr.value().set_visible(false);
+                    }
+                    break;
+                }
+
+                case CHAT_SNEAKER:
+                {
+                    BN_LOG("Iterations: ", global_data_ptr->action_iterations[CHAT_SNEAKER]);
+                    if (global_data_ptr->action_iterations[CHAT_SNEAKER] > 0)
+                    {
+                        ch_man->load(&scruffys_05b);
+                    }
+                    break;
+                }
+
+                case 85:
+                {
+                    if (man->bg_ptr.has_value())
+                    {
+                        man->bg_ptr.value().set_visible(true);
+                    }
+                    break;
+                }
+
+                case 163:
+                {
+                    if (global_data_ptr->action_iterations[163] == 1)
+                    {
+                        auto seb = ch_man->find_by_index(CHAR_SEBELLUS);
+                        if (seb != nullptr)
+                        {
+                            seb->current_animation = &sebellus_hide;
+                            seb->idle_animation = &sebellus_hide;
+                        }
+                    }
+                    break;
+                }
+
+                case 190:
+                {
+                    auto g = ch_man->find_by_index(CHAR_GINGER);
+                    g->idle_animation = &ginger_sit_chair;
+                    g->current_animation = &ginger_sit_chair;
+                    break;
+                }
+
+                case 192:
+                {
+                    auto g = ch_man->find_by_index(CHAR_GINGER);
+                    if (g != nullptr)
+                    {
+                        g->idle_animation = &ginger_hide;
+                        g->current_animation = &ginger_hide;
+                    }
+
                     auto s = ch_man->find_by_index(CHAR_SEBELLUS);
                     if (s != nullptr)
                     {
-                        s->idle_animation = &sebellus_sleep_01;
-                        s->current_animation = &sebellus_sleep_01;
+                        s->idle_animation = &sebellus_hide;
+                        s->current_animation = &sebellus_hide;
                     }
+                    break;
                 }
-                else
-                {
-                    auto s = ch_man->find_by_index(CHAR_SEBELLUS);
-                    if (s != nullptr)
-                    {
-                        s->idle_animation = &sebellus_sleep_03;
-                        s->current_animation = &sebellus_sleep_03;
-                    }
-                }
-                break;
-            }
-            case 210:
-            {
-                if (global_data_ptr->action_iterations[210] < 2)
-                {
-                    for (int t = 0; t < ITEMS_SIZE; t++)
-                    {
-                        global_data_ptr->items[t] = 0;
-                    }
 
-                    ch_man->load(&naomi_fortune_01);
+                case 180:
+                case 193:
+                {
+                    if (global_data_ptr->action_iterations[ITEM_181] < 2)
+                    {
+                        auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                        if (s != nullptr)
+                        {
+                            s->idle_animation = &sebellus_sleep_01;
+                            s->current_animation = &sebellus_sleep_01;
+                        }
+                    }
+                    else
+                    {
+                        auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                        if (s != nullptr)
+                        {
+                            s->idle_animation = &sebellus_sleep_03;
+                            s->current_animation = &sebellus_sleep_03;
+                        }
+                    }
+                    break;
                 }
-                break;
-            }
-            default:
-            {
-                int ret = perform_action_automatic(action, *ch_man);
-                if (ret != -1)
-                    return ret;
-                break;
-            }
+                case 210:
+                {
+                    if (global_data_ptr->action_iterations[210] < 1)
+                    {
+                        for (int t = 0; t < ITEMS_SIZE; t++)
+                        {
+                            global_data_ptr->items[t] = 0;
+                        }
+
+                        ch_man->load(&naomi_fortune_01);
+                        global_data_ptr->action_iterations[210]++;
+                    }
+                    break;
+                }
+                default:
+                {
+                    int ret = perform_action_automatic(action, *ch_man);
+                    if (ret != -1)
+                        return ret;
+                    break;
+                }
+                }
             }
 
+            // INTERACTIVE
             if (keypad::a_pressed())
             {
                 global_data_ptr->action_iterations[action]++;
@@ -285,10 +267,13 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
             }
         }
-        else
-        {
-            buffer_active = false;
-        }
+
+        if (cooldown)
+            cooldown = false;
+    }
+    else
+    {
+        cooldown = true;
     }
 
     return NONE;
