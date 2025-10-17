@@ -355,19 +355,19 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 2:
 	{
-		if (global_data_ptr->action_iterations[2] == 1) { ch_man.load(&garbage_01); } else
+		if (global_data_ptr->action_iterations[2] == 0) { ch_man.load(&garbage_01); global_data_ptr->action_iterations[2] += 1; } else
 		{ };
 		break;
 	}
 	case 3:
 	{
-		if (global_data_ptr->action_iterations[3] == 1) { ch_man.load(&garbage_02); } else
+		if (global_data_ptr->action_iterations[3] == 0) { ch_man.load(&garbage_02); global_data_ptr->action_iterations[3] += 1; } else
 		{ };
 		break;
 	}
 	case 4:
 	{
-		if (global_data_ptr->action_iterations[4] == 1) { ch_man.load(&garbage_03); } else
+		if (global_data_ptr->action_iterations[4] == 0) { ch_man.load(&garbage_03); global_data_ptr->action_iterations[4] += 1; } else
 		{ };
 		break;
 	}
@@ -401,26 +401,26 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 11:
 	{
-		if (global_data_ptr->action_iterations[11] == 1) { ch_man.load(&visker_h_03); } else
+		if (global_data_ptr->action_iterations[11] == 0) { ch_man.load(&visker_h_03); global_data_ptr->action_iterations[11] += 1; } else
 		{ };
 		break;
 	}
 	case 12:
 	{
-		if (global_data_ptr->action_iterations[12] == 1) { ch_man.load(&visker_h_02); } else
+		if (global_data_ptr->action_iterations[12] == 0) { ch_man.load(&visker_h_02); global_data_ptr->action_iterations[12] += 1; } else
 		{ };
 		break;
 	}
 	case 13:
 	{
-		if (global_data_ptr->action_iterations[13] == 1) { ch_man.load(&visker_h_01); } else
+		if (global_data_ptr->action_iterations[13] == 0) { ch_man.load(&visker_h_01); global_data_ptr->action_iterations[13] += 1; } else
 		{ };
 		break;
 	}
 	case 15:
 	{
-		if (global_data_ptr->action_iterations[15] == 1) { ch_man.load(&garbage_04); } else
-		if (global_data_ptr->action_iterations[15] == 2) { ch_man.load(&garbage_05); } else
+		if (global_data_ptr->action_iterations[15] == 0) { ch_man.load(&garbage_04); global_data_ptr->action_iterations[15] += 1; } else
+		if (global_data_ptr->action_iterations[15] == 1) { ch_man.load(&garbage_05); global_data_ptr->action_iterations[15] += 1; } else
 		{ };
 		break;
 	}
@@ -461,44 +461,44 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 26:
 	{
-		if (global_data_ptr->action_iterations[26] == 1) { ch_man.load(&garbage_06); } else
+		if (global_data_ptr->action_iterations[26] == 0) { ch_man.load(&garbage_06); global_data_ptr->action_iterations[26] += 1; } else
 		{ ch_man.load(&garbage_06); }
 		break;
 	}
 	case 27:
 	{
-		if (global_data_ptr->action_iterations[27] == 1) { ch_man.load(&lab_01); } else
+		if (global_data_ptr->action_iterations[27] == 0) { ch_man.load(&lab_01); global_data_ptr->action_iterations[27] += 1; } else
 		{ };
 		break;
 	}
 	case 28:
 	{
-		if (global_data_ptr->action_iterations[28] == 1) { ch_man.load(&lab_02); } else
-		if (global_data_ptr->action_iterations[28] == 2) { ch_man.load(&lab_02b); } else
+		if (global_data_ptr->action_iterations[28] == 0) { ch_man.load(&lab_02); global_data_ptr->action_iterations[28] += 1; } else
+		if (global_data_ptr->action_iterations[28] == 1) { ch_man.load(&lab_02b); global_data_ptr->action_iterations[28] += 1; } else
 		{ };
 		break;
 	}
 	case 31:
 	{
-		if (global_data_ptr->action_iterations[31] == 1) { ch_man.load(&lab_05); } else
+		if (global_data_ptr->action_iterations[31] == 0) { ch_man.load(&lab_05); global_data_ptr->action_iterations[31] += 1; } else
 		{ };
 		break;
 	}
 	case 32:
 	{
-		if (global_data_ptr->action_iterations[32] == 1) { ch_man.load(&lab_06); } else
+		if (global_data_ptr->action_iterations[32] == 0) { ch_man.load(&lab_06); global_data_ptr->action_iterations[32] += 1; } else
 		{ };
 		break;
 	}
 	case 33:
 	{
-		if (global_data_ptr->action_iterations[33] == 1) { ch_man.load(&lab_07); } else
+		if (global_data_ptr->action_iterations[33] == 0) { ch_man.load(&lab_07); global_data_ptr->action_iterations[33] += 1; } else
 		{ };
 		break;
 	}
 	case 34:
 	{
-		if (global_data_ptr->action_iterations[34] == 1) { ch_man.load(&lab_08); } else
+		if (global_data_ptr->action_iterations[34] == 0) { ch_man.load(&lab_08); global_data_ptr->action_iterations[34] += 1; } else
 		{ };
 		break;
 	}
@@ -509,20 +509,20 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 36:
 	{
-		if (global_data_ptr->action_iterations[36] == 1) { ch_man.load(&forest_dlg_02); } else
+		if (global_data_ptr->action_iterations[36] == 0) { ch_man.load(&forest_dlg_02); global_data_ptr->action_iterations[36] += 1; } else
 		{ };
 		break;
 	}
 	case 38:
 	{
-		if (global_data_ptr->action_iterations[38] == 1) { ch_man.load(&forest_dlg_01); } else
+		if (global_data_ptr->action_iterations[38] == 0) { ch_man.load(&forest_dlg_01); global_data_ptr->action_iterations[38] += 1; } else
 		{ };
 		break;
 	}
 	case 39:
 	{
-		if (global_data_ptr->action_iterations[39] == 1) { ch_man.load(&croke_01); } else
-		if (global_data_ptr->action_iterations[39] == 2) { ch_man.load(&croke_05); } else
+		if (global_data_ptr->action_iterations[39] == 0) { ch_man.load(&croke_01); global_data_ptr->action_iterations[39] += 1; } else
+		if (global_data_ptr->action_iterations[39] == 1) { ch_man.load(&croke_05); global_data_ptr->action_iterations[39] += 1; } else
 		{ };
 		break;
 	}
@@ -537,13 +537,13 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 43:
 	{
-		if (global_data_ptr->action_iterations[43] == 1) { ch_man.load(&forest_dlg_03); } else
+		if (global_data_ptr->action_iterations[43] == 0) { ch_man.load(&forest_dlg_03); global_data_ptr->action_iterations[43] += 1; } else
 		{ };
 		break;
 	}
 	case 46:
 	{
-		if (global_data_ptr->action_iterations[46] == 1) { ch_man.load(&bridge_01); } else
+		if (global_data_ptr->action_iterations[46] == 0) { ch_man.load(&bridge_01); global_data_ptr->action_iterations[46] += 1; } else
 		{ };
 		break;
 	}
@@ -566,7 +566,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 52:
 	{
-		if (global_data_ptr->action_iterations[52] == 1) { ch_man.load(&cave_01); } else
+		if (global_data_ptr->action_iterations[52] == 0) { ch_man.load(&cave_01); global_data_ptr->action_iterations[52] += 1; } else
 		{ };
 		break;
 	}
@@ -789,19 +789,19 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 122:
 	{
-		if (global_data_ptr->action_iterations[122] == 1) { ch_man.load(&final_msg); } else
+		if (global_data_ptr->action_iterations[122] == 0) { ch_man.load(&final_msg); global_data_ptr->action_iterations[122] += 1; } else
 		{ };
 		break;
 	}
 	case 125:
 	{
-		if (global_data_ptr->action_iterations[125] == 1) { ch_man.load(&captive_01); } else
+		if (global_data_ptr->action_iterations[125] == 0) { ch_man.load(&captive_01); global_data_ptr->action_iterations[125] += 1; } else
 		{ };
 		break;
 	}
 	case 126:
 	{
-		if (global_data_ptr->action_iterations[126] == 1) { ch_man.load(&togore_01); } else
+		if (global_data_ptr->action_iterations[126] == 0) { ch_man.load(&togore_01); global_data_ptr->action_iterations[126] += 1; } else
 		{ };
 		break;
 	}
@@ -834,7 +834,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 130:
 	{
-		if (global_data_ptr->action_iterations[130] == 1) { ch_man.load(&broken_avalon_00); } else
+		if (global_data_ptr->action_iterations[130] == 0) { ch_man.load(&broken_avalon_00); global_data_ptr->action_iterations[130] += 1; } else
 		{ };
 		break;
 	}
@@ -913,13 +913,13 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 152:
 	{
-		if (global_data_ptr->action_iterations[152] == 1) { ch_man.load(&dark_152); } else
+		if (global_data_ptr->action_iterations[152] == 0) { ch_man.load(&dark_152); global_data_ptr->action_iterations[152] += 1; } else
 		{ };
 		break;
 	}
 	case 161:
 	{
-		if (global_data_ptr->action_iterations[161] == 1) { ch_man.load(&dark_talk); } else
+		if (global_data_ptr->action_iterations[161] == 0) { ch_man.load(&dark_talk); global_data_ptr->action_iterations[161] += 1; } else
 		{ };
 		break;
 	}
@@ -934,7 +934,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 164:
 	{
-		if (global_data_ptr->action_iterations[164] == 1) { ch_man.load(&sebellus_01); } else
+		if (global_data_ptr->action_iterations[164] == 0) { ch_man.load(&sebellus_01); global_data_ptr->action_iterations[164] += 1; } else
 		{ };
 		break;
 	}
@@ -949,7 +949,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 166:
 	{
-		if (global_data_ptr->action_iterations[166] == 1) { ch_man.load(&sebellus_02); } else
+		if (global_data_ptr->action_iterations[166] == 0) { ch_man.load(&sebellus_02); global_data_ptr->action_iterations[166] += 1; } else
 		{ };
 		break;
 	}
@@ -984,7 +984,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 177:
 	{
-		if (global_data_ptr->action_iterations[177] == 1) { ch_man.load(&talk_177); } else
+		if (global_data_ptr->action_iterations[177] == 0) { ch_man.load(&talk_177); global_data_ptr->action_iterations[177] += 1; } else
 		{ };
 		break;
 	}
@@ -1026,7 +1026,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 189:
 	{
-		if (global_data_ptr->action_iterations[189] == 1) { ch_man.load(&talk_189); } else
+		if (global_data_ptr->action_iterations[189] == 0) { ch_man.load(&talk_189); global_data_ptr->action_iterations[189] += 1; } else
 		{ };
 		break;
 	}
@@ -1039,7 +1039,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 196:
 	{
-		if (global_data_ptr->action_iterations[196] == 1) { ch_man.load(&wakeup_01); } else
+		if (global_data_ptr->action_iterations[196] == 0) { ch_man.load(&wakeup_01); global_data_ptr->action_iterations[196] += 1; } else
 		{ };
 		break;
 	}
@@ -1054,7 +1054,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 199:
 	{
-		if (global_data_ptr->action_iterations[199] == 1) { ch_man.load(&have_to_go); } else
+		if (global_data_ptr->action_iterations[199] == 0) { ch_man.load(&have_to_go); global_data_ptr->action_iterations[199] += 1; } else
 		{ };
 		break;
 	}
@@ -1087,7 +1087,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 203:
 	{
-		if (global_data_ptr->action_iterations[203] == 1) { ch_man.load(&have_to_go_2); } else
+		if (global_data_ptr->action_iterations[203] == 0) { ch_man.load(&have_to_go_2); global_data_ptr->action_iterations[203] += 1; } else
 		{ };
 		break;
 	}
@@ -1102,7 +1102,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 205:
 	{
-		if (global_data_ptr->action_iterations[205] == 1) { ch_man.load(&have_to_go_3); } else
+		if (global_data_ptr->action_iterations[205] == 0) { ch_man.load(&have_to_go_3); global_data_ptr->action_iterations[205] += 1; } else
 		{ };
 		break;
 	}
@@ -1153,6 +1153,21 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->ginger_position = {12, 18};
 		global_data_ptr->sebellus_position = {13, 18};
 		return NEW_MAP;
+		break;
+	}
+	case 215:
+	{
+		global_data_ptr->entry_map = &map_to_flay_02;
+		global_data_ptr->jeremy_position = {2, 3};
+		global_data_ptr->ginger_position = {1, 3};
+		global_data_ptr->sebellus_position = {1, 3};
+		return NEW_MAP;
+		break;
+	}
+	case 216:
+	{
+		if (global_data_ptr->action_iterations[216] == 0) { ch_man.load(&ghost_01); global_data_ptr->action_iterations[216] += 1; } else
+		{ };
 		break;
 	}
 	}

@@ -417,7 +417,7 @@ automatic_block = """int perform_action_automatic(int index, character_manager &
 
 references = ""
 
-def handle_action(dat):
+def handle_action(dat, automatic=False):
     global references
 
     full_block = ""
@@ -466,26 +466,51 @@ def handle_action(dat):
                     )
             return_type = "NEW_MAP"
 
-        if "sequence" in entry_keys:
-            t = 1
-            for line in entry["sequence"]:
-                block += (
-                    "\t\tif (global_data_ptr->action_iterations["
-                    + key
-                    + "] == "
-                    + str(t)
-                    + ") { ch_man.load(&"
-                    + line
-                    + "); } else\n"
-                )
-                t += 1
-            if "auto" in entry_keys:
-                block += "\t\t{ ch_man.load(&" + line + "); }\n"
-            else:
-                block += "\t\t{ };\n"
+        if automatic:
+            if "sequence" in entry_keys:
+                t = 0
+                for line in entry["sequence"]:
+                    block += (
+                        "\t\tif (global_data_ptr->action_iterations["
+                        + key
+                        + "] == "
+                        + str(t)
+                        + ") { ch_man.load(&"
+                        + line
+                        + "); global_data_ptr->action_iterations["
+                        + key
+                        + "] += 1; } else\n"
+                    )
+                    t += 1
+                if "auto" in entry_keys:
+                    block += "\t\t{ ch_man.load(&" + line + "); }\n"
+                else:
+                    block += "\t\t{ };\n"
 
-        elif "auto" in entry_keys:
-            block += "\t\tch_man.load(&" + entry["auto"] + ");\n"
+            elif "auto" in entry_keys:
+                block += "\t\tch_man.load(&" + entry["auto"] + ");\n"
+
+        else:
+            if "sequence" in entry_keys:
+                t = 1
+                for line in entry["sequence"]:
+                    block += (
+                        "\t\tif (global_data_ptr->action_iterations["
+                        + key
+                        + "] == "
+                        + str(t)
+                        + ") { ch_man.load(&"
+                        + line
+                        + "); } else\n"
+                    )
+                    t += 1
+                if "auto" in entry_keys:
+                    block += "\t\t{ ch_man.load(&" + line + "); }\n"
+                else:
+                    block += "\t\t{ };\n"
+
+            elif "auto" in entry_keys:
+                block += "\t\tch_man.load(&" + entry["auto"] + ");\n"
 
         if return_type != None:
             block += "\t\treturn " + return_type + ";\n"
@@ -498,11 +523,11 @@ def handle_action(dat):
 if "actions" in data:
     if "interactable" in data["actions"]:
         dat = data["actions"]["interactable"]
-        interactive_block += handle_action(dat)
+        interactive_block += handle_action(dat, automatic=False)
 
     if "automatic" in data["actions"]:
         dat = data["actions"]["automatic"]
-        automatic_block += handle_action(dat)
+        automatic_block += handle_action(dat, automatic=True)
 
 interactive_block += "\t}\n\treturn -1;\n}"
 automatic_block += "\t}\n\treturn -1;\n}"

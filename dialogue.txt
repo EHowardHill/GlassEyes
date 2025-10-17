@@ -1576,3 +1576,35 @@ chat_mcwebb_03
 															
 fall_down															
 				Ow.						CHAR_JEREMY	&jeremy_lay_down				
+															
+ghost_01															
+		EM_SKIP	ACT_VARIABLE						1	GHOST_TALK					
+	db_ch_ginger	EM_WAT		H-Hey you guys..	Stay calm..	Don't move..									
+	db_ch_sebellus	EM_SIDE_EYE		It's just a ghost.	The human's probably	seen lots of those.									
+	db_ch_sebellus	EM_DEFAULT		It's a good thing I	know how to speak	ghost.									
+	db_ch_ghost	EM_DEFAULT		ooooo ooo oooo	oo oooooo	oooo oooo oooo oo									
+	db_ch_sebellus	EM_DEFAULT		ooo? Ooo ooo	ooo oo oo oooo	oooooooo									
+	db_ch_ginger	EM_ANGRY		Sebellus!!	Cut it out!										
+	db_ch_sebellus	EM_SIDE_EYE		He said he'll	let us through if	we solve a riddle.									
+	db_ch_sebellus	EM_DEFAULT		"Alright, here's the"	question:	Which do you prefer?									
+				oo oooo ooooo o	oo oo o o o oooo	ooooooo oooooo							&ghost_01_alt_01	&ghost_01_alt_02	
+	db_ch_ghost	EM_DEFAULT		ooo ooooo ooo											
+	db_ch_sebellus	EM_HAPPY		"Great job, human!"	He said it was	correct!				CHAR_GHOST	&ghost_disappear				
+	db_ch_sebellus	EM_SIDE_EYE		"See, nothing to"	worry about.										
+	db_ch_ginger	EM_SIDE_EYE		..You can't blame	me for being	worried..									
+	db_ch_ginger	EM_DEFAULT		I don't want you	"talking to spirits,"	Sebellus.									
+															
+ghost_01_alt_01															
+	db_ch_ghost	EM_DEFAULT		ooo ooooo ooo											
+	db_ch_sebellus	EM_HAPPY		"Great job, human!"	He said it was	correct!				CHAR_GHOST	&ghost_disappear				
+	db_ch_sebellus	EM_SIDE_EYE		"See, nothing to"	worry about.										
+	db_ch_ginger	EM_SIDE_EYE		..You can't blame	me for being	worried..									
+	db_ch_ginger	EM_DEFAULT		I don't want you	"talking to spirits,"	Sebellus.									
+															
+															
+ghost_01_alt_02															
+	db_ch_ghost	EM_DEFAULT		ooo ooooo ooo											
+	db_ch_sebellus	EM_HAPPY		"Great job, human!"	He said it was	correct!				CHAR_GHOST	&ghost_disappear				
+	db_ch_sebellus	EM_SIDE_EYE		"See, nothing to"	worry about.										
+	db_ch_ginger	EM_SIDE_EYE		..You can't blame	me for being	worried..									
+	db_ch_ginger	EM_DEFAULT		I don't want you	"talking to spirits,"	Sebellus.									

@@ -8,6 +8,7 @@
 #include "ge_maps.h"
 #include "ge_sprites.h"
 #include "ge_text.h"
+#include "ge_variables.h"
 
 using namespace bn;
 
@@ -254,6 +255,7 @@ struct global_data
 	bool progress_cue = false;
 	int process_stage = 0;
 	bool items[ITEMS_SIZE] = {0};
+	bool variables[VARIABLES_SIZE] = {0};
 	int gold = 0;
 	bool shake = false;
 

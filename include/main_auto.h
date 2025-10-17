@@ -5,7 +5,6 @@
 
 enum progress
 {
-	TEST_MAP,
 	CUTSCENE_01,
 	CUTSCENE_TO_GARBAGE,
 	GARBAGE_TO_BLACK,
@@ -20,6 +19,7 @@ enum progress
 	CUTSCENE_CHANNEL,
 	FINAL_MSG,
 	BLACK_TO_BEACH,
+	TEST_MAP,
 };
 
 void resolve_chapter();

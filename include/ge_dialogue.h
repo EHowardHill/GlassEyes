@@ -7,6 +7,7 @@
 #include "ge_text.h"
 #include "ge_sprites.h"
 #include "ge_animations.h"
+#include "ge_variables.h"
 
 #include "bn_regular_bg_item.h"
 
@@ -37,6 +38,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_sebellus.h"
 #include "bn_sprite_items_db_ch_mcwebb.h"
 #include "bn_sprite_items_db_ch_naomi.h"
+#include "bn_sprite_items_db_ch_ghost.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -161,6 +163,9 @@ extern const conversation garbage_sign03;
 extern const conversation garbage_sign04;
 extern const conversation garbage_sign05;
 extern const conversation garbage_spare;
+extern const conversation ghost_01;
+extern const conversation ghost_01_alt_01;
+extern const conversation ghost_01_alt_02;
 extern const conversation have_to_go;
 extern const conversation have_to_go_2;
 extern const conversation have_to_go_3;

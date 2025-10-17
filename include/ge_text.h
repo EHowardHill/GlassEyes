@@ -51,6 +51,7 @@ enum actions
     ACT_HP,
     ACT_GAME,
     ACT_GOLD,
+    ACT_VARIABLE,
     ACT_SHAKE_ON,
     ACT_SHAKE_OFF,
     ACT_MUSIC_VISKER,

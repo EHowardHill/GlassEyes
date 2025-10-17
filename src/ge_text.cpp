@@ -475,6 +475,11 @@ void dialogue_box::init(character_manager *ch_man)
             ch_man->alert(GAME);
             break;
         }
+        case ACT_VARIABLE:
+        {
+            global_data_ptr->variables[line.index] = line.size;
+            break;
+        }
         case ACT_SHAKE_ON:
         {
             global_data_ptr->shake = true;

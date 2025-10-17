@@ -15,13 +15,6 @@ void resolve_chapter()
 {
     switch (global_data_ptr->process_stage)
     {
-	case TEST_MAP: {
-		global_data_ptr->entry_map = &map_beach_01;
-		global_data_ptr->bg_track = &music_items::intro_guitar;
-		global_data_ptr->jeremy_position = {26, 4};
-		global_data_ptr->ginger_position = {27, 4};
-		global_data_ptr->sebellus_position = {25, 4};
-		break;		}
 	case CUTSCENE_01: {
 		typewriter(TYPEWRITER_INTRO);
 		global_data_ptr->entry_map = &map_room01;
@@ -117,6 +110,11 @@ void resolve_chapter()
 		global_data_ptr->jeremy_position = {2, 5};
 		global_data_ptr->ginger_position = {2, 4};
 		global_data_ptr->sebellus_position = {2, 3};
+		break;		}
+	case TEST_MAP: {
+		global_data_ptr->entry_map = &map_to_flay_02;
+		global_data_ptr->bg_track = &music_items::forest_01;
+		global_data_ptr->ginger_position = {2, 3};
 		break;		}
 	default: { break; }
 	}

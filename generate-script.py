@@ -199,6 +199,7 @@ def generate_header_content(conversations, sprite_list, bg_item_list):
 #include "ge_text.h"
 #include "ge_sprites.h"
 #include "ge_animations.h"
+#include "ge_variables.h"
 
 #include "bn_regular_bg_item.h"
 

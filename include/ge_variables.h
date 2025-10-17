@@ -1,0 +1,10 @@
+#ifndef GE_VARIABLES_H
+#define GE_VARIABLES_H
+
+enum VARIABLES
+{
+    GHOST_TALK,
+    VARIABLES_SIZE
+};
+
+#endif

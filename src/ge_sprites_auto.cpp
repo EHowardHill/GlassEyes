@@ -35,6 +35,7 @@
 #include "bn_sprite_items_spr_naomi_cooking.h"
 #include "bn_sprite_items_spr_naomi_fortune.h"
 #include "bn_sprite_items_spr_leaves.h"
+#include "bn_sprite_items_spr_ghost.h"
 
 using namespace bn;
 
@@ -73,6 +74,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_NAOMI_COOKING: { return &sprite_items::spr_naomi_cooking; break; }
 	case CHAR_NAOMI_FORTUNE: { return &sprite_items::spr_naomi_fortune; break; }
 	case CHAR_LEAVES: { return &sprite_items::spr_leaves; break; }
+	case CHAR_GHOST: { return &sprite_items::spr_ghost; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -104,6 +106,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_SPAMTON: { return &npcs_spamton_anim; break; }
 	case CHAR_MCWEBB: { return &mcwebb_play; break; }
 	case CHAR_BOAT_EXHAUST: { return &boat_exhaust; break; }
+	case CHAR_GHOST: { return &ghost_spook; break; }
     default:
     {
         return nullptr;
