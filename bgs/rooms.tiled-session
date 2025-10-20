@@ -5,8 +5,8 @@
     },
     "activeFile": "maps/flayithro_02.tmx",
     "expandedProjectPaths": [
-        "maps",
         ".",
+        "maps",
         "tilesets"
     ],
     "exportAsImage.includeBackgroundColor": true,
@@ -28,8 +28,8 @@
             "scale": 1.6105468749999998,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 239.6701430996847,
-                "y": 223.83701188455012
+                "x": 223.83701188455007,
+                "y": 223.8370118845501
             }
         },
         "maps/cave_01.tmx": {
@@ -108,8 +108,8 @@
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 86.5,
-                "y": 569.5
+                "x": 512.5,
+                "y": 576.5
             }
         },
         "maps/flayithro_02.tmx": {
@@ -284,8 +284,8 @@
             "scale": 1,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
-                "y": 384.5
+                "x": 512.5,
+                "y": 383.5
             }
         },
         "maps/viskers_house.tmx": {
