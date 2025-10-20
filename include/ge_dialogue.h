@@ -128,6 +128,7 @@ extern const conversation f_cutscene_03;
 extern const conversation f_cutscene_04;
 extern const conversation fall_down;
 extern const conversation final_msg;
+extern const conversation flayithro_sign;
 extern const conversation forest_dlg_01;
 extern const conversation forest_dlg_01_alt_01;
 extern const conversation forest_dlg_02;

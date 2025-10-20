@@ -2,6 +2,38 @@ import os
 import xml.etree.ElementTree as ET
 from PIL import Image
 import math
+import json  # Add this import
+
+# Process existing BMPs without JSON files
+graphics_dir = "graphics"
+if os.path.exists(graphics_dir):
+    for filename in os.listdir(graphics_dir):
+        if filename.lower().endswith(".bmp"):
+            bmp_path = os.path.join(graphics_dir, filename)
+            json_filename = filename[:-4] + ".json"
+            json_path = os.path.join(graphics_dir, json_filename)
+
+            # Check if JSON already exists
+            if not os.path.exists(json_path):
+                # Open BMP to get dimensions
+                try:
+                    img = Image.open(bmp_path)
+                    width, height = img.size
+                    img.close()
+
+                    # Create appropriate JSON based on width
+                    if width <= 64:
+                        json_content = {"type": "sprite", "height": width}
+                    else:
+                        json_content = {"type": "regular_bg"}
+
+                    # Write JSON file
+                    with open(json_path, "w") as f:
+                        json.dump(json_content, f, indent=4)
+
+                    print(f"Created {json_filename} for {filename}")
+                except Exception as e:
+                    print(f"Error processing {filename}: {e}")
 
 
 def process_bmp(input_path, output_path):

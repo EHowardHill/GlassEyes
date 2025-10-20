@@ -110,7 +110,7 @@ int navigate_map()
         current_map.bg_ptr.value().set_visible(true);
     }
 
-    // FADE IN BACKGROUNDS AND SPRITES
+    // SETUP FADE IN
     blending::set_transparency_alpha(0);
 
     if (current_map.collider_ptr.has_value())
@@ -128,43 +128,49 @@ int navigate_map()
             spr->sprite_ptr_raw[1]->set_blending_enabled(true);
     }
 
-    for (int t = 0; t < 48; t++)
-    {
-        auto new_alpha = blending::transparency_alpha() + 0.05;
-
-        if (new_alpha < 1)
-        {
-            blending::set_transparency_alpha(new_alpha);
-        }
-        else
-        {
-            blending::set_transparency_alpha(1);
-        }
-
-        core::update();
-    }
-
-    // Disable blending after fade-in completes
-    if (current_map.collider_ptr.has_value())
-        current_map.collider_ptr->set_blending_enabled(false);
-
-    if (current_map.bg_ptr.has_value())
-        current_map.bg_ptr->set_blending_enabled(false);
-
-    for (auto &spr : v_sprite_ptr::manager)
-    {
-        if (spr->sprite_ptr_raw[0].has_value())
-            spr->sprite_ptr_raw[0]->set_blending_enabled(false);
-
-        if (spr->sprite_ptr_raw[1].has_value())
-            spr->sprite_ptr_raw[1]->set_blending_enabled(false);
-    }
-
     // Main loop
     int loop_value = 0;
     bool handle_frame = true;
+    int fade_ticker = 0;
+
     while (loop_value == CONTINUE && char_mgr.status == CONTINUE)
     {
+        // FADE IN using ticker
+        if (fade_ticker < 48)
+        {
+            auto new_alpha = blending::transparency_alpha() + 0.05;
+
+            if (new_alpha < 1)
+            {
+                blending::set_transparency_alpha(new_alpha);
+            }
+            else
+            {
+                blending::set_transparency_alpha(1);
+            }
+
+            fade_ticker++;
+
+            // Disable blending after fade-in completes
+            if (fade_ticker >= 48)
+            {
+                if (current_map.collider_ptr.has_value())
+                    current_map.collider_ptr->set_blending_enabled(false);
+
+                if (current_map.bg_ptr.has_value())
+                    current_map.bg_ptr->set_blending_enabled(false);
+
+                for (auto &spr : v_sprite_ptr::manager)
+                {
+                    if (spr->sprite_ptr_raw[0].has_value())
+                        spr->sprite_ptr_raw[0]->set_blending_enabled(false);
+
+                    if (spr->sprite_ptr_raw[1].has_value())
+                        spr->sprite_ptr_raw[1]->set_blending_enabled(false);
+                }
+            }
+        }
+
         char_mgr.update(&current_map);
         loop_value = action_listener(&current_map, &char_mgr);
         current_map.update();

@@ -341,6 +341,11 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 217:
+	{
+		ch_man.load(&flayithro_sign);
+		break;
+	}
 	}
 	return -1;
 }
@@ -1168,6 +1173,17 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[216] == 0) { ch_man.load(&ghost_01); global_data_ptr->action_iterations[216] += 1; } else
 		{ };
+		break;
+	}
+	case 218:
+	{
+		music_items::bg_flayithro.play();
+		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->bg_track = &music_items::bg_flayithro;
+		global_data_ptr->jeremy_position = {3, 4};
+		global_data_ptr->ginger_position = {2, 4};
+		global_data_ptr->sebellus_position = {1, 4};
+		return NEW_MAP;
 		break;
 	}
 	}

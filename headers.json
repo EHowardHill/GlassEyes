@@ -397,7 +397,8 @@
                 "speed": 0,
                 "loop": false
             }
-        }
+        },
+        "dima": {}
     },
     "items": {
         "Lime": {
@@ -466,7 +467,10 @@
         "Leaves": {},
         "Ghost": {
             "idle_animation": "ghost_spook"
-        }
+        },
+        "Dima": {},
+        "Kathy": {},
+        "Pringle": {}
     },
     "cutscenes": {
         "Intro": {
@@ -756,6 +760,9 @@
                 "sequence": [
                     "chat_mcwebb_03"
                 ]
+            },
+            "217": {
+                "auto": "flayithro_sign"
             }
         },
         "automatic": {
@@ -2028,6 +2035,27 @@
                 "sequence": [
                     "ghost_01"
                 ]
+            },
+            "218": {
+                "music": "bg_flayithro",
+                "new_map": {
+                    "map": "flayithro_01",
+                    "bg_track": "bg_flayithro",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            4
+                        ],
+                        "ginger": [
+                            2,
+                            4
+                        ],
+                        "sebellus": [
+                            1,
+                            4
+                        ]
+                    }
+                }
             }
         }
     },

@@ -36,6 +36,9 @@
 #include "bn_sprite_items_spr_naomi_fortune.h"
 #include "bn_sprite_items_spr_leaves.h"
 #include "bn_sprite_items_spr_ghost.h"
+#include "bn_sprite_items_spr_dima.h"
+#include "bn_sprite_items_spr_kathy.h"
+#include "bn_sprite_items_spr_pringle.h"
 
 using namespace bn;
 
@@ -75,6 +78,9 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_NAOMI_FORTUNE: { return &sprite_items::spr_naomi_fortune; break; }
 	case CHAR_LEAVES: { return &sprite_items::spr_leaves; break; }
 	case CHAR_GHOST: { return &sprite_items::spr_ghost; break; }
+	case CHAR_DIMA: { return &sprite_items::spr_dima; break; }
+	case CHAR_KATHY: { return &sprite_items::spr_kathy; break; }
+	case CHAR_PRINGLE: { return &sprite_items::spr_pringle; break; }
     default:
     {
         return &sprite_items::spr_vista;

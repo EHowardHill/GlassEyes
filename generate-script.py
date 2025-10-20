@@ -39,7 +39,7 @@ def validate_line_length(line, line_name, convo_name, row_num):
 
 
 def process_csv(filename):
-    """Processes the dialogue.txt file into a dictionary of conversations."""
+    """Processes the dialogue file into a dictionary of conversations."""
     conversations = {}
     current_convo = None
     current_entries = []
@@ -299,7 +299,7 @@ def generate_cpp_content(conversations, sprite_list, bg_item_list):
 
 # --- Main Execution Logic ---
 if __name__ == "__main__":
-    input_file = "dialogue.txt"
+    input_file = "dialogue.tsv"
 
     # Create output directories if they don't exist
     if not os.path.exists("include"):

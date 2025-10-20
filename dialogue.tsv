@@ -57,7 +57,7 @@ garbage_02
 	db_ch_visker			Dead human fall..		Any moment now..									
 															
 garbage_02b															
-	db_ch_visker			Aaaany day now…											
+	db_ch_visker			Aaaany day nowï¿½											
 															
 garbage_03															
 	db_ch_visker	EM_SKIP	ACT_TELEPORT							CHAR_VISKER		"{14, 5}"			
@@ -233,7 +233,7 @@ lab_05
 				NO?!	Yes. Of course.	..							&lab_05_alt_01		
 	db_ch_ginger	EM_DEFAULT		Oh.		Uh..									
 	db_ch_ginger	EM_DEFAULT				You want a lime?									
-				Yes.	…Yes.								&lab_05_alt_02		
+				Yes.	ï¿½Yes.								&lab_05_alt_02		
 				LIME has been	added to your	inventory!									
 				Press START	to view your	inventory items.									
 		EM_SKIP	ACT_ITEM							OBJ_LIME					
@@ -253,7 +253,7 @@ lab_05
 lab_05_alt_01															
 	db_ch_ginger	EM_HAPPY		Whew..	Thank goodness!										
 	db_ch_ginger	EM_DEFAULT		So..		You want a lime?									
-				Yes.	…Yes.								&lab_05_alt_02		
+				Yes.	ï¿½Yes.								&lab_05_alt_02		
 				LIME has been	added to your	inventory!									
 				Press START	to view your	inventory items.									
 		EM_SKIP	ACT_ITEM							OBJ_LIME					
@@ -1585,7 +1585,7 @@ ghost_01
 	db_ch_ghost	EM_DEFAULT		ooooo ooo oooo	oo oooooo	oooo oooo oooo oo									
 	db_ch_sebellus	EM_DEFAULT		ooo? Ooo ooo	ooo oo oo oooo	oooooooo									
 	db_ch_ginger	EM_ANGRY		Sebellus!!	Cut it out!										
-	db_ch_sebellus	EM_SIDE_EYE		He said he'll	let us through if	we solve a riddle.									
+	db_ch_sebellus	EM_SIDE_EYE		He said he won't	haunt us if	we solve a riddle.									
 	db_ch_sebellus	EM_DEFAULT		"Alright, here's the"	question:	Which do you prefer?									
 				oo oooo ooooo o	oo oo o o o oooo	ooooooo oooooo							&ghost_01_alt_01	&ghost_01_alt_02	
 	db_ch_ghost	EM_DEFAULT		ooo ooooo ooo											
@@ -1593,18 +1593,28 @@ ghost_01
 	db_ch_sebellus	EM_SIDE_EYE		"See, nothing to"	worry about.										
 	db_ch_ginger	EM_SIDE_EYE		..You can't blame	me for being	worried..									
 	db_ch_ginger	EM_DEFAULT		I don't want you	"talking to spirits,"	Sebellus.									
-															
+	db_ch_sebellus	EM_SIDE_EYE		I can't believe	you're letting him	"haunt you, hehe."									
 ghost_01_alt_01															
+															
 	db_ch_ghost	EM_DEFAULT		ooo ooooo ooo											
 	db_ch_sebellus	EM_HAPPY		"Great job, human!"	He said it was	correct!				CHAR_GHOST	&ghost_disappear				
 	db_ch_sebellus	EM_SIDE_EYE		"See, nothing to"	worry about.										
 	db_ch_ginger	EM_SIDE_EYE		..You can't blame	me for being	worried..									
 	db_ch_ginger	EM_DEFAULT		I don't want you	"talking to spirits,"	Sebellus.									
-															
-															
+	db_ch_sebellus	EM_SIDE_EYE		I can't believe	you're letting him	"haunt you, hehe."									
 ghost_01_alt_02															
+															
+															
 	db_ch_ghost	EM_DEFAULT		ooo ooooo ooo											
 	db_ch_sebellus	EM_HAPPY		"Great job, human!"	He said it was	correct!				CHAR_GHOST	&ghost_disappear				
 	db_ch_sebellus	EM_SIDE_EYE		"See, nothing to"	worry about.										
 	db_ch_ginger	EM_SIDE_EYE		..You can't blame	me for being	worried..									
 	db_ch_ginger	EM_DEFAULT		I don't want you	"talking to spirits,"	Sebellus.									
+	db_ch_sebellus	EM_SIDE_EYE		I can't believe	you're letting him	"haunt you, hehe."									
+															
+flayithro_sign															
+				WELCOME TO	FLAYITHRO										
+				PLEASE RESPECT	FESTIVAL RULES	THANK YOU									
+	db_ch_ginger	EM_DEFAULT		I don't know what	"""festival rules"" are"										
+	db_ch_sebellus	EM_SIDE_EYE		Only one way	to find out.	By breaking them.									
+	db_ch_ginger	EM_SIDE_EYE		I don't know if	I agree with that.										
