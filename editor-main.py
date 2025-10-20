@@ -1,12 +1,10 @@
-# app.py
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 import json
 import os
 import csv
 
-# Import the new tab classes
+# Import the tab classes
 from tabs.animations import AnimationsTab
 from tabs.items import ItemsTab
 from tabs.objects import ObjectsTab
@@ -14,6 +12,7 @@ from tabs.cutscenes import CutscenesTab
 from tabs.actions import ActionsTab
 from tabs.chapters import ChaptersTab
 from tabs.dialogue import DialogueTab
+from tabs.maps import MapsTab  # This import is correct
 
 full_source = ""
 
@@ -66,6 +65,15 @@ class HeadersEditor:
         self.tabs.append(ActionsTab(self.notebook, self))
         self.tabs.append(ChaptersTab(self.notebook, self))
         self.tabs.append(DialogueTab(self.notebook, self))
+        self.tabs.append(MapsTab(self.notebook, self))  # Add the Maps tab
+
+        # --- MODIFICATION: Find the MapsTab instance ---
+        self.maps_tab_instance = None
+        for tab in self.tabs:
+            if isinstance(tab, MapsTab):
+                self.maps_tab_instance = tab
+                break
+        # ----------------------------------------------
 
     # --- Data Access Methods (for tabs) ---
 
@@ -96,6 +104,9 @@ class HeadersEditor:
                 "cutscenes": {},
                 "actions": {"interactable": {}, "automatic": {}},
                 "chapters": {},
+                # --- MODIFICATION: Removed "maps" key ---
+                # "maps": {},
+                # ----------------------------------------
             }
 
     def load_dialogue_data(self):
@@ -160,7 +171,7 @@ class HeadersEditor:
             return []
 
     def save_all_data(self):
-        """Save data to headers.json and dialogue.tsv"""
+        """Save data to headers.json, dialogue.tsv, and individual map files"""
         try:
             # Save JSON data
             with open(self.filename, "w") as f:
@@ -215,6 +226,11 @@ class HeadersEditor:
                             ]
                         )
 
+            # --- MODIFICATION: Tell MapsTab to save its files ---
+            if self.maps_tab_instance and hasattr(self.maps_tab_instance, 'save_all_maps_to_files'):
+                self.maps_tab_instance.save_all_maps_to_files()
+            # ----------------------------------------------------
+
             self.dialogue_modified = False
             messagebox.showinfo("Success", "All files saved successfully!")
 
@@ -222,9 +238,15 @@ class HeadersEditor:
             messagebox.showerror("Error", f"Failed to save files: {str(e)}")
 
     def reload_all_data(self):
-        """Reload data from both files"""
+        """Reload data from all files"""
         self.data = self.load_json_data()
         self.dialogue_data = self.load_dialogue_data()
+        
+        # --- MODIFICATION: Tell MapsTab to reload its files ---
+        if self.maps_tab_instance and hasattr(self.maps_tab_instance, 'load_all_maps_from_files'):
+            self.maps_tab_instance.load_all_maps_from_files()
+        # ------------------------------------------------------
+        
         self.refresh_all_tabs()
         messagebox.showinfo("Success", "Data reloaded!")
 

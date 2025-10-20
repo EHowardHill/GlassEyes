@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/flayithro_01.tmx",
+    "activeFile": "maps/flayithro_02.tmx",
     "expandedProjectPaths": [
-        "tilesets",
+        "maps",
         ".",
-        "maps"
+        "tilesets"
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -108,8 +108,16 @@
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 490,
-                "y": 574
+                "x": 86.5,
+                "y": 569.5
+            }
+        },
+        "maps/flayithro_02.tmx": {
+            "scale": 1.09287109375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 255.74836922527035,
+                "y": 255.74836922527032
             }
         },
         "maps/forest_01.tmx": {
@@ -345,18 +353,19 @@
         }
     },
     "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes/bgs/tilesets",
-    "map.height": 32,
+    "map.height": 16,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 32,
+    "map.width": 16,
     "openFiles": [
         "maps/beach_02.tmx",
         "tilesets/forest01.tsx",
         "maps/beach_cave.tmx",
         "tilesets/underground02.tsx",
         "maps/to_flay_01.tmx",
-        "maps/flayithro_01.tmx"
+        "maps/flayithro_01.tmx",
+        "maps/flayithro_02.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
@@ -366,12 +375,12 @@
         "tilesets/underground02.tsx",
         "maps/to_flay_01.tmx",
         "maps/flayithro_01.tmx",
+        "maps/flayithro_02.tmx",
         "maps/cave_01.tmx",
         "maps/cave_02.tmx",
         "maps/room_04.tmx",
         "maps/room_02.tmx",
-        "maps/room_03.tmx",
-        "tilesets/tavern01.tsx"
+        "maps/room_03.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
