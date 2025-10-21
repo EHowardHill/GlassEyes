@@ -254,6 +254,7 @@ struct global_data
 	int enemy_max_hp[4] = {20, 20, 20, 20};
 	bool progress_cue = false;
 	int process_stage = 0;
+	int costumes[CHAR_SIZE] = {0};
 	bool items[ITEMS_SIZE] = {0};
 	bool variables[VARIABLES_SIZE] = {0};
 	int gold = 0;

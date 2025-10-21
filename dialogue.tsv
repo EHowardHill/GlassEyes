@@ -1602,3 +1602,33 @@ dima_02
 															
 convo_obj_clothes															
 				A custom-sized suit.		Feels expensive.									
+															
+hotel_01															
+				The hotel robot	warmly welcomes you	to the village.									
+	db_ch_ginger	EM_HAPPY		Aw, thank you!											
+				The robot asks the	three if they would	like a room to stay.									
+	db_ch_sebellus	EM_SIDE_EYE		Sebellus wonders why	the robot is talking	like that.									
+	db_ch_ginger	EM_SIDE_EYE		..What?											
+	db_ch_sebellus	EM_DEFAULT		Sebellus tells his	sister it's fine,	no need to worry.									
+	db_ch_sebellus	EM_SIDE_EYE		You're kinda freakin	me out there,	Sebellus.									
+	db_ch_sebellus	EM_SIDE_EYE		Sebellus knows,	since it's very easy	to freak Ginger out.									
+				The robot says the	strangers must have	suits to check in,									
+				Reminding them of	the town's mandatory	dress code.									
+	db_ch_ginger	EM_SIDE_EYE		Let's, uh..	Figure that out and	then come back.									
+															
+hotel_02															
+				The robot behind the	desk sees their	fancy new clothes,									
+				and informs them	that their room is	Room #3.									
+	db_ch_sebellus	EM_SIDE_EYE		Sebellus thanks him	but asks him to stop	talking like that.									
+															
+hotel_room_01															
+				You hear slight	murmurs on the other	side of the door.									
+															
+hotel_room_02															
+				It sounds like two	people are quietly	arguing in there.									
+															
+hotel_room_03															
+				It's eerily quiet.	You can hear the hum	of the heater.									
+															
+eggplant_01															
+															

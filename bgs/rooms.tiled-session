@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/flayithro_02.tmx",
+    "activeFile": "",
     "expandedProjectPaths": [
         ".",
-        "maps",
-        "tilesets"
+        "tilesets",
+        "maps"
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -112,6 +112,14 @@
                 "y": 576.5
             }
         },
+        "maps/flayithro_01_night.tmx": {
+            "scale": 1,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 747.5,
+                "y": 578.5
+            }
+        },
         "maps/flayithro_02.tmx": {
             "scale": 1.09287109375,
             "selectedLayer": 0,
@@ -200,6 +208,14 @@
                 "y": 1195.75
             }
         },
+        "maps/hotel_01.tmx": {
+            "scale": 3,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 155.5,
+                "y": 127.83333333333334
+            }
+        },
         "maps/lab_01.tmx": {
             "scale": 3,
             "selectedLayer": 2,
@@ -220,8 +236,8 @@
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 320,
-                "y": 224
+                "x": 319.5,
+                "y": 223.5
             }
         },
         "maps/room_03.tmx": {
@@ -312,6 +328,9 @@
             "scaleInDock": 2,
             "scaleInEditor": 1
         },
+        "tilesets/forest01_flay_night.tsx": {
+            "scaleInDock": 1
+        },
         "tilesets/forest01_night.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -353,22 +372,19 @@
         }
     },
     "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes/bgs/tilesets",
-    "map.height": 16,
+    "map.height": 8,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 16,
+    "map.width": 8,
     "openFiles": [
-        "maps/beach_02.tmx",
-        "tilesets/forest01.tsx",
-        "maps/beach_cave.tmx",
-        "tilesets/underground02.tsx",
-        "maps/to_flay_01.tmx",
-        "maps/flayithro_01.tmx",
-        "maps/flayithro_02.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/hotel_01.tmx",
+        "tilesets/room01.tsx",
+        "maps/flayithro_01_night.tmx",
+        "maps/room_02.tmx",
         "maps/beach_02.tmx",
         "tilesets/forest01.tsx",
         "maps/beach_cave.tmx",
@@ -376,11 +392,7 @@
         "maps/to_flay_01.tmx",
         "maps/flayithro_01.tmx",
         "maps/flayithro_02.tmx",
-        "maps/cave_01.tmx",
-        "maps/cave_02.tmx",
-        "maps/room_04.tmx",
-        "maps/room_02.tmx",
-        "maps/room_03.tmx"
+        "maps/cave_01.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

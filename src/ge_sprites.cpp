@@ -5,6 +5,7 @@
 #include "bn_sprite_ptr.h"
 #include "bn_blending.h"
 
+#include "ge_globals.h"
 #include "ge_structs.h"
 #include "ge_text.h"
 #include "ge_sprites.h"
@@ -164,9 +165,55 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     v_sprite.bounds.height = 28;
     idle_animation = nullptr;
     current_animation = &anim_stand;
-    v_sprite.sprite_item_ptr = resolve_sprite_item(index_);
     follow_id = resolve_sprite_id(index_);
     idle_animation = resolve_sprite_idle_animation(index_);
+
+    enum JEREMY_COSTUMES
+    {
+        COSTUME_JEREMY_NONE,
+        COSTUME_JEREMY_FANCY,
+        COSTUME_JEREMY_BANANA
+    };
+
+    enum GINGER_COSTUMES
+    {
+        COSTUME_GINGER_NONE,
+        COSTUME_GINGER_FANCY,
+        COSTUME_GINGER_CASUAL
+    };
+
+    enum SEBELLUS_COSTUMES
+    {
+        COSTUME_SEBELLUS_NONE,
+        COSTUME_SEBELLUS_FANCY,
+        COSTUME_SEBELLUS_CASUAL
+    };
+
+    enum VISTA_COSTUMES
+    {
+        COSTUME_VISTA_NONE,
+        COSTUME_VISTA_SENATRIX,
+    };
+
+    // Costume support
+    int costume = global_data_ptr->costumes[index_];
+    if (costume > 0)
+    {
+        switch (index_)
+        {
+        case CHAR_GINGER:
+        {
+            if (costume == COSTUME_GINGER_FANCY)
+            {
+                v_sprite.sprite_item_ptr = nullptr;
+            }
+        }
+        }
+    }
+    else
+    {
+        v_sprite.sprite_item_ptr = resolve_sprite_item(index_);
+    }
 
     // Reset sprites
     v_sprite.sprite_ptr_raw[0].reset();

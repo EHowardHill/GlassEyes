@@ -1590,8 +1590,21 @@ class CutscenesTab:
 tabs/dialogue.py:
 import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
-import json  # <-- Added import
+import json
+import os
 
+# ... (portrait_types function remains the same) ...
+def portrait_types():
+    portraits = []
+    # A good idea to wrap this in a try-except in case 'graphics' doesn't exist
+    try:
+        for f in os.listdir("graphics"):
+            if f.endswith(".json") and "db_ch" in f:
+                portraits.append(f.replace(".json", ""))
+    except FileNotFoundError:
+        # Silently fail or show a warning, your choice
+        print("Warning: 'graphics' directory not found.")
+    return portraits
 
 class DialogueTab:
     def __init__(self, notebook, app):
@@ -1601,6 +1614,11 @@ class DialogueTab:
 
         self.branching1_combo = None
         self.branching2_combo = None
+        
+        # --- MODIFICATION ---
+        # Need to declare self.right_frame before create_widgets is called
+        # so it's always available, even if we hide/show it.
+        self.right_frame = None 
 
         self.load_constants()  # <-- Load constants on initialization
 
@@ -1610,6 +1628,7 @@ class DialogueTab:
         self.create_widgets()
         self.refresh()
 
+    # ... (load_constants remains the same) ...
     def load_constants(self):
         """Loads and processes constants from constants.json for dropdowns."""
         self.constant_options = {}
@@ -1672,12 +1691,30 @@ class DialogueTab:
                 "size": [""],
                 "color": [""],
             }
+            
+        # Load portrait types (this is separate from constants.json)
+        try:
+            # Add "" for an empty/default option
+            portrait_list = [""] + portrait_types()
+            self.constant_options["portrait"] = portrait_list
+        except FileNotFoundError:
+            # This handles if the 'graphics' dir is missing
+            messagebox.showwarning(
+                "Warning",
+                "'graphics' directory not found. Portrait dropdown will be empty.",
+            )
+            self.constant_options["portrait"] = [""]
+        except Exception as e:
+            # Catch other potential errors like permission issues
+            messagebox.showerror("Error", f"Failed to load portrait types: {e}")
+            self.constant_options["portrait"] = [""]
 
     def create_widgets(self):
         # Main container
         main_frame = ttk.Frame(self.frame)
         main_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
+        # ... (Left and Middle frames remain the same) ...
         # Left panel - Conversation list
         left_frame = ttk.Frame(main_frame, width=250)
         left_frame.pack(side=tk.LEFT, fill=tk.BOTH, padx=(0, 5))
@@ -1748,16 +1785,19 @@ class DialogueTab:
             side=tk.LEFT, padx=2
         )
 
-        # Right panel - Line editor
-        right_frame = ttk.Frame(main_frame)
-        right_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-        ttk.Label(right_frame, text="Line Editor", font=("Arial", 12, "bold")).pack(
+        # Right panel - Line editor
+        # --- MODIFICATION ---
+        # Store the frame as self.right_frame
+        self.right_frame = ttk.Frame(main_frame)
+        self.right_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        ttk.Label(self.right_frame, text="Line Editor", font=("Arial", 12, "bold")).pack(
             pady=5
         )
 
-        canvas = tk.Canvas(right_frame)
-        scrollbar = ttk.Scrollbar(right_frame, orient="vertical", command=canvas.yview)
+        canvas = tk.Canvas(self.right_frame)
+        scrollbar = ttk.Scrollbar(self.right_frame, orient="vertical", command=canvas.yview)
         self.editor_frame = ttk.Frame(canvas)
 
         self.editor_frame.bind(
@@ -1773,14 +1813,14 @@ class DialogueTab:
         fields = [
             ("Name / ID", "name_id"),
             ("Portrait", "portrait"),
-            ("Emotion", "emotion"),  # <-- Will become dropdown
-            ("Action", "action"),  # <-- Will become dropdown
+            ("Emotion", "emotion"), 
+            ("Action", "action"), 
             ("Line1", "line1", 20),
             ("Line2", "line2", 20),
             ("Line3", "line3", 20),
-            ("Color", "color"),  # <-- Will become dropdown
-            ("Size", "size"),  # <-- Will become dropdown
-            ("Speed", "speed"),  # <-- Will become dropdown
+            ("Color", "color"), 
+            ("Size", "size"), 
+            ("Speed", "speed"), 
             ("Index", "index"),
             ("Anim", "anim"),
             ("Navigate", "navigate"),
@@ -1788,10 +1828,8 @@ class DialogueTab:
             ("Branching Dialogue 2", "branching2"),
             ("Bg Pointer", "bg_pointer"),
         ]
-
-        # --- MODIFICATION START ---
-        # Define which fields should be dropdowns based on loaded constants
-        dropdown_fields = ["emotion", "action", "speed", "size", "color"]
+        
+        dropdown_fields = ["emotion", "action", "speed", "size", "color", "portrait"]
 
         for i, field in enumerate(fields):
             label = field[0]
@@ -1814,14 +1852,12 @@ class DialogueTab:
                 widget.grid(row=i, column=1, sticky="ew", padx=5, pady=3)
                 self.branching2_combo = widget
             elif var_name in dropdown_fields:
-                # Create a Combobox for our constant fields
                 options = self.constant_options.get(var_name, [""])
                 widget = ttk.Combobox(
                     self.editor_frame, textvariable=var, values=options, width=38
                 )
                 widget.grid(row=i, column=1, sticky="ew", padx=5, pady=3)
             else:
-                # Default to Entry for all other fields
                 entry = ttk.Entry(self.editor_frame, textvariable=var, width=40)
                 entry.grid(row=i, column=1, sticky="ew", padx=5, pady=3)
 
@@ -1838,7 +1874,6 @@ class DialogueTab:
                     )
 
             var.trace_add("write", lambda *args: self.mark_dialogue_modified())
-        # --- MODIFICATION END ---
 
         self.editor_frame.columnconfigure(1, weight=1)
 
@@ -1849,12 +1884,17 @@ class DialogueTab:
         self.current_conv_index = None
         self.current_line_index = None
 
+        # --- MODIFICATION ---
+        # Hide the editor frame by default
+        self.right_frame.pack_forget()
+
     def refresh(self):
         """Refreshes the dialogue tab UI. Renamed from refresh_dialogue_tab."""
         self.refresh_conversation_list()
         self.lines_tree.delete(*self.lines_tree.get_children())
-        self.clear_editor()
+        self.clear_editor() # This will now also hide the editor pane
 
+    # ... (update_char_count, update_branching_combos, mark_dialogue_modified, refresh_conversation_list remain the same) ...
     def update_char_count(self, var, label, max_len):
         text = var.get()
         length = len(text)
@@ -1892,8 +1932,19 @@ class DialogueTab:
 
         self.current_conv_index = selection[0]
         self.refresh_lines_list()
-        self.clear_editor()
 
+        # --- MODIFICATION ---
+        # Check if there are any lines and select the first one
+        children = self.lines_tree.get_children()
+        if children:
+            # Automatically select the first line
+            self.lines_tree.selection_set(children[0])
+            self.on_line_select(None)  # Manually call the handler
+        else:
+            # No lines, so clear/hide the editor
+            self.clear_editor()
+            
+    # ... (refresh_lines_list remains the same) ...
     def refresh_lines_list(self):
         self.lines_tree.delete(*self.lines_tree.get_children())
 
@@ -1919,6 +1970,9 @@ class DialogueTab:
     def on_line_select(self, event):
         selection = self.lines_tree.selection()
         if not selection:
+            # --- MODIFICATION ---
+            # If nothing is selected (e.g., list is cleared), hide editor
+            self.clear_editor()
             return
 
         # Check if event is None (manual call)
@@ -1929,8 +1983,16 @@ class DialogueTab:
         else:
             self.current_line_index = None
 
-        self.load_line_to_editor()
+        if self.current_line_index is not None:
+            self.load_line_to_editor()
+            # --- MODIFICATION ---
+            # Show the editor frame
+            if self.right_frame:
+                self.right_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        else:
+            self.clear_editor()
 
+    # ... (load_line_to_editor remains the same) ...
     def load_line_to_editor(self):
         if self.current_conv_index is None or self.current_line_index is None:
             return
@@ -1948,7 +2010,13 @@ class DialogueTab:
         for var in self.editor_vars.values():
             var.set("")
         self.current_line_index = None
+        
+        # --- MODIFICATION ---
+        # Also hide the editor frame
+        if self.right_frame:
+            self.right_frame.pack_forget()
 
+    # ... (apply_changes, new_conversation, delete_conversation, new_line, delete_line, move_line_up, move_line_down remain the same) ...
     def apply_changes(self):
         if self.current_conv_index is None or self.current_line_index is None:
             messagebox.showwarning("No Selection", "Please select a line to edit.")
@@ -1997,7 +2065,8 @@ class DialogueTab:
         if messagebox.askyesno("Confirm Delete", "Delete this conversation?"):
             del self.dialogue_data[self.current_conv_index]
             self.refresh_conversation_list()
-            self.clear_editor()
+            # clear_editor() is called, which will hide the editor
+            self.clear_editor() 
             self.lines_tree.delete(*self.lines_tree.get_children())
             self.current_conv_index = None
             self.mark_dialogue_modified()
@@ -2015,7 +2084,7 @@ class DialogueTab:
 
         new_index = len(self.dialogue_data[self.current_conv_index]["lines"]) - 1
         self.lines_tree.selection_set(str(new_index))
-        # Pass None to on_line_select to simulate the event
+        # on_line_select(None) will be called, which shows the editor
         self.on_line_select(None)
         self.mark_dialogue_modified()
 
@@ -2028,8 +2097,16 @@ class DialogueTab:
                 self.current_line_index
             ]
             self.refresh_lines_list()
-            self.clear_editor()
+            # clear_editor() is called, which will hide the editor
+            self.clear_editor() 
             self.mark_dialogue_modified()
+            
+            # --- MODIFICATION ---
+            # After deleting, check if there are other lines and select the new first one
+            children = self.lines_tree.get_children()
+            if children:
+                self.lines_tree.selection_set(children[0])
+                self.on_line_select(None)
 
     def move_line_up(self):
         if self.current_line_index is None or self.current_line_index == 0:
@@ -2065,7 +2142,6 @@ class DialogueTab:
         self.lines_tree.selection_set(str(new_index))
         self.on_line_select(None)
         self.mark_dialogue_modified()
-
 
 tabs/items.py:
 # tab_items.py
