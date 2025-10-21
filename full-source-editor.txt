@@ -1590,6 +1590,7 @@ class CutscenesTab:
 tabs/dialogue.py:
 import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
+import json  # <-- Added import
 
 
 class DialogueTab:
@@ -1601,11 +1602,76 @@ class DialogueTab:
         self.branching1_combo = None
         self.branching2_combo = None
 
+        self.load_constants()  # <-- Load constants on initialization
+
         self.frame = ttk.Frame(notebook)
         notebook.add(self.frame, text="Dialogue")
 
         self.create_widgets()
         self.refresh()
+
+    def load_constants(self):
+        """Loads and processes constants from constants.json for dropdowns."""
+        self.constant_options = {}
+        try:
+            with open("constants.json", "r") as f:
+                const_data = json.load(f)
+
+            # Process emotions
+            emotions = [""]  # Start with an empty option
+            for emotion in const_data.get("emotions", []):
+                fixed = emotion.replace(" ", "_").upper()
+                emotions.append("EM_" + fixed)
+            self.constant_options["emotion"] = emotions
+
+            # Process actions
+            actions = [""]
+            for action in const_data.get("actions", []):
+                fixed = action.replace(" ", "_").upper()
+                actions.append("ACT_" + fixed)
+            self.constant_options["action"] = actions
+
+            # Process speed
+            speeds = [""]
+            for speed in const_data.get("speed", []):
+                fixed = speed.replace(" ", "_").upper()
+                speeds.append("SP_" + fixed)
+            self.constant_options["speed"] = speeds
+
+            # Process size
+            sizes = [""]
+            for size in const_data.get("size", []):
+                fixed = size.replace(" ", "_").upper()
+                sizes.append(fixed)
+            self.constant_options["size"] = sizes
+
+            # Process colors
+            colors = [""]
+            for color in const_data.get("colors", []):
+                fixed = color.replace(" ", "_").upper()
+                # The JSON data already has the "COLOR_" prefix
+                colors.append(fixed)
+            self.constant_options["color"] = colors
+
+        except FileNotFoundError:
+            messagebox.showerror("Error", "constants.json not found.")
+            # Populate with empty lists to avoid errors
+            self.constant_options = {
+                "emotion": [""],
+                "action": [""],
+                "speed": [""],
+                "size": [""],
+                "color": [""],
+            }
+        except json.JSONDecodeError:
+            messagebox.showerror("Error", "Failed to parse constants.json.")
+            self.constant_options = {
+                "emotion": [""],
+                "action": [""],
+                "speed": [""],
+                "size": [""],
+                "color": [""],
+            }
 
     def create_widgets(self):
         # Main container
@@ -1707,14 +1773,14 @@ class DialogueTab:
         fields = [
             ("Name / ID", "name_id"),
             ("Portrait", "portrait"),
-            ("Emotion", "emotion"),
-            ("Action", "action"),
+            ("Emotion", "emotion"),  # <-- Will become dropdown
+            ("Action", "action"),  # <-- Will become dropdown
             ("Line1", "line1", 20),
             ("Line2", "line2", 20),
             ("Line3", "line3", 20),
-            ("Color", "color"),
-            ("Size", "size"),
-            ("Speed", "speed"),
+            ("Color", "color"),  # <-- Will become dropdown
+            ("Size", "size"),  # <-- Will become dropdown
+            ("Speed", "speed"),  # <-- Will become dropdown
             ("Index", "index"),
             ("Anim", "anim"),
             ("Navigate", "navigate"),
@@ -1722,6 +1788,10 @@ class DialogueTab:
             ("Branching Dialogue 2", "branching2"),
             ("Bg Pointer", "bg_pointer"),
         ]
+
+        # --- MODIFICATION START ---
+        # Define which fields should be dropdowns based on loaded constants
+        dropdown_fields = ["emotion", "action", "speed", "size", "color"]
 
         for i, field in enumerate(fields):
             label = field[0]
@@ -1743,7 +1813,15 @@ class DialogueTab:
                 widget = ttk.Combobox(self.editor_frame, textvariable=var, width=38)
                 widget.grid(row=i, column=1, sticky="ew", padx=5, pady=3)
                 self.branching2_combo = widget
+            elif var_name in dropdown_fields:
+                # Create a Combobox for our constant fields
+                options = self.constant_options.get(var_name, [""])
+                widget = ttk.Combobox(
+                    self.editor_frame, textvariable=var, values=options, width=38
+                )
+                widget.grid(row=i, column=1, sticky="ew", padx=5, pady=3)
             else:
+                # Default to Entry for all other fields
                 entry = ttk.Entry(self.editor_frame, textvariable=var, width=40)
                 entry.grid(row=i, column=1, sticky="ew", padx=5, pady=3)
 
@@ -1760,6 +1838,7 @@ class DialogueTab:
                     )
 
             var.trace_add("write", lambda *args: self.mark_dialogue_modified())
+        # --- MODIFICATION END ---
 
         self.editor_frame.columnconfigure(1, weight=1)
 
@@ -1842,7 +1921,14 @@ class DialogueTab:
         if not selection:
             return
 
-        self.current_line_index = int(selection[0])
+        # Check if event is None (manual call)
+        if event is not None:
+            self.current_line_index = int(selection[0])
+        elif selection:
+            self.current_line_index = int(selection[0])
+        else:
+            self.current_line_index = None
+
         self.load_line_to_editor()
 
     def load_line_to_editor(self):
@@ -1929,6 +2015,7 @@ class DialogueTab:
 
         new_index = len(self.dialogue_data[self.current_conv_index]["lines"]) - 1
         self.lines_tree.selection_set(str(new_index))
+        # Pass None to on_line_select to simulate the event
         self.on_line_select(None)
         self.mark_dialogue_modified()
 

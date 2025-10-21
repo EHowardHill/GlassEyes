@@ -1,3 +1,5 @@
+# generate-headers.py
+
 import os
 import json
 
@@ -90,7 +92,35 @@ if "items" in data:
 
         h_convos += "\t&convo_obj_" + name.lower() + ",\n"
 
-    text_h_data += "\tITEMS_SIZE\n};\n\n#endif"
+    text_h_data += "\tITEMS_SIZE\n};\n\n"
+
+    """
+    with open("constants.json", "r") as f:
+        const_data = json.load(f)
+
+    for emotion in const_data["emotions"]:
+        fixed = emotion.replace(" ", "_").upper()
+        text_h_data += "\tEM_" + fixed + ",\n"
+
+    for actions in const_data["actions"]:
+        fixed = actions.replace(" ", "_").upper()
+        text_h_data += "\tACT_" + fixed + ",\n"
+
+    for speed in const_data["speed"]:
+        fixed = speed.replace(" ", "_").upper()
+        text_h_data += "\tSP_" + fixed + ",\n"
+
+    for size in const_data["size"]:
+        fixed = size.replace(" ", "_").upper()
+        text_h_data += "\t" + fixed + ",\n"
+
+    for colors in const_data["colors"]:
+        fixed = colors.replace(" ", "_").upper()
+        text_h_data += "\tCOLOR_" + fixed + ",\n"
+    """
+
+    text_h_data += "#endif"
+
     h_labels += "};"
     h_drop += "};"
     h_convos += "};"
@@ -417,6 +447,7 @@ automatic_block = """int perform_action_automatic(int index, character_manager &
 
 references = ""
 
+
 def handle_action(dat, automatic=False):
     global references
 
@@ -450,7 +481,9 @@ def handle_action(dat, automatic=False):
                     "\t\tglobal_data_ptr->bg = &regular_bg_items::" + datt["bg"] + ";\n"
                 )
                 if datt["bg"] not in references:
-                    references += '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
+                    references += (
+                        '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
+                    )
                 block += "\t\tmusic::stop();\n"
             if "positions" in datt.keys():
                 characters = datt["positions"]
@@ -594,7 +627,11 @@ if "chapters" in data.keys():
 
         if "cutscenes" in datt.keys():
             for cutscene in datt["cutscenes"]:
-                block += "\t\ttypewriter(TYPEWRITER_" + cutscene.upper().replace(" ", "_") + ");\n"
+                block += (
+                    "\t\ttypewriter(TYPEWRITER_"
+                    + cutscene.upper().replace(" ", "_")
+                    + ");\n"
+                )
 
         if "map" in datt.keys():
             block += "\t\tglobal_data_ptr->entry_map = &map_" + datt["map"] + ";\n"

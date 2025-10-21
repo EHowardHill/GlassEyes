@@ -39,6 +39,9 @@
 #include "bn_sprite_items_spr_dima.h"
 #include "bn_sprite_items_spr_kathy.h"
 #include "bn_sprite_items_spr_pringle.h"
+#include "bn_sprite_items_spr_eggplant.h"
+#include "bn_sprite_items_spr_ack.h"
+#include "bn_sprite_items_spr_teddy.h"
 
 using namespace bn;
 
@@ -81,6 +84,9 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_DIMA: { return &sprite_items::spr_dima; break; }
 	case CHAR_KATHY: { return &sprite_items::spr_kathy; break; }
 	case CHAR_PRINGLE: { return &sprite_items::spr_pringle; break; }
+	case CHAR_EGGPLANT: { return &sprite_items::spr_eggplant; break; }
+	case CHAR_ACK: { return &sprite_items::spr_ack; break; }
+	case CHAR_TEDDY: { return &sprite_items::spr_teddy; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -113,6 +119,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_MCWEBB: { return &mcwebb_play; break; }
 	case CHAR_BOAT_EXHAUST: { return &boat_exhaust; break; }
 	case CHAR_GHOST: { return &ghost_spook; break; }
+	case CHAR_TEDDY: { return &teddy_idle; break; }
     default:
     {
         return nullptr;

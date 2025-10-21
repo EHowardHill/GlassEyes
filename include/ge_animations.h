@@ -41,5 +41,6 @@ const animation boat_exhaust = {{0,1,2,3}, 4, 0, true};
 const animation naomi_disappear = {{1,2,3,4}, 4, 0, false};
 const animation ghost_spook = {{0,0,1,2,2,1}, 6, 1, true};
 const animation ghost_disappear = {{3,4,5,6,7,8,9,10}, 8, 0, false};
+const animation teddy_idle = {{0,1}, 2, 1, true};
 
 #endif

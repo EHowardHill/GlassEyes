@@ -1549,3 +1549,56 @@ flayithro_sign
 	db_ch_ginger	EM_DEFAULT		I don't know what	"""festival rules"" are"										
 	db_ch_sebellus	EM_SIDE_EYE		Only one way	to find out.	By breaking them.									
 	db_ch_ginger	EM_SIDE_EYE		I don't know if	I agree with that.										
+															
+pringle_01															
+	db_ch_pringle	EM_DEFAULT		GREETINGS, friends!	Welcome to	Flayithro(TM)!									
+	db_ch_pringle	EM_HAPPY		Per village policy,	we have a STRICT	DRESS CODE at night.									
+	db_ch_pringle	EM_DEFAULT		This is of course	NOT to disfavor poor	ugly filthy people,									
+	db_ch_pringle	EM_DEFAULT		Who I'm sure have	at least a little	good taste,									
+	db_ch_pringle	EM_HAPPY		Seeing as they came	to FLAYITHRO(tm)	of course.									
+	db_ch_pringle	EM_DEFAULT		If you have nothing	to wear, visit our	lovely boutique.									
+	db_ch_pringle	EM_DEFAULT		(alsotakeashoweryou	threesmellterrible	thankyouverymuch).									
+															
+flayithro_sign_01															
+				OUR GLORIOUS	FOUNDER										
+															
+kathy_01															
+	db_ch_kathy	EM_DEFAULT		H-Hello there,	are you three	looking for clothes?									
+	db_ch_kathy	EM_SIDE_EYE		W-Well, on a good	day this is the best	place in town..									
+	db_ch_kathy	EM_DEFAULT		Unfortunately..	Well.. Are you three	adventurers?									
+	db_ch_kathy	EM_DEFAULT		..		..									
+	db_ch_kathy	EM_SIDE_EYE		..Just take a look	inside and you'll	see what I mean.									
+															
+boutique_01															
+	db_ch_ginger	EM_WAT		..uh.											
+	db_ch_sebellus	EM_SIDE_EYE		Here I was, afraid	that this town was	going to be boring.									
+	db_ch_ginger	EM_DEFAULT		Is it.. breathing?		Ew..									
+	db_ch_sebellus	EM_SIDE_EYE		Do you think we can	get free stuff if we	kill it?									
+	db_ch_sebellus	EM_DEFAULT		I guess there's only	one way to find	out!									
+															
+teddy_spare01															
+				The bear is not	interested in	ending the fight.									
+															
+boutique_02															
+	db_ch_kathy	EM_HAPPY		Oh.. Thank you,	I was afraid it	would never leave.				CHAR_KATHY		{2,4}			
+	db_ch_ginger	EM_DEFAULT		..Where did it	come from?										
+	db_ch_kathy	EM_DEFAULT		We had a customer	who bartered it for	some clothes.									
+	db_ch_kathy	EM_SIDE_EYE		I really need to	stop doing that,	I'll get fired.									
+	db_ch_sebellus	EM_SIDE_EYE		You wouldn't mind	doing that one more	time though, right?									
+	db_ch_sebellus	EM_DEFAULT		We're looking for	clothes and don't	have any money.									
+	db_ch_kathy	EM_SIDE_EYE		Uh.. Sure, I suppose	I can make something	work.									
+			ACT_ITEM	You found:	TAILORED SUIT	Very classy.				OBJ_CLOTHES					
+															
+boutique_03															
+	db_ch_kathy	EM_SIDE_EYE		You three better get	out of here..										
+	db_ch_kathy	EM_DEFAULT		Wouldn't want my	boss knowing what	happened earlier.									
+															
+dima_01															
+	db_ch_dima	EM_DEFAULT		I just wanted lunch,	but the guy in there	is rediculous.									
+	db_ch_dima	EM_DEFAULT		Go ahead.	See what I mean.										
+															
+dima_02															
+				It doesn't seem like	he wants to talk.										
+															
+convo_obj_clothes															
+				A custom-sized suit.		Feels expensive.									

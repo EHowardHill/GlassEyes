@@ -39,6 +39,9 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_mcwebb.h"
 #include "bn_sprite_items_db_ch_naomi.h"
 #include "bn_sprite_items_db_ch_ghost.h"
+#include "bn_sprite_items_db_ch_pringle.h"
+#include "bn_sprite_items_db_ch_kathy.h"
+#include "bn_sprite_items_db_ch_dima.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -76,6 +79,9 @@ extern const conversation avalon_wormguy_01_alt_01;
 extern const conversation avalon_wormguy_02;
 extern const conversation beach_sign;
 extern const conversation bm_fridge;
+extern const conversation boutique_01;
+extern const conversation boutique_02;
+extern const conversation boutique_03;
 extern const conversation bridge_01;
 extern const conversation broken_avalon_00;
 extern const conversation broken_avalon_01;
@@ -91,6 +97,7 @@ extern const conversation chat_mcwebb;
 extern const conversation chat_mcwebb_02;
 extern const conversation chat_mcwebb_02_alt_01;
 extern const conversation chat_mcwebb_03;
+extern const conversation convo_obj_clothes;
 extern const conversation convo_obj_document;
 extern const conversation convo_obj_flint;
 extern const conversation convo_obj_lime;
@@ -120,6 +127,8 @@ extern const conversation dart_01;
 extern const conversation dart_02;
 extern const conversation dart_03;
 extern const conversation dart_04;
+extern const conversation dima_01;
+extern const conversation dima_02;
 extern const conversation dog_and_pony;
 extern const conversation doll_guy_01;
 extern const conversation f_cutscene_01;
@@ -129,6 +138,7 @@ extern const conversation f_cutscene_04;
 extern const conversation fall_down;
 extern const conversation final_msg;
 extern const conversation flayithro_sign;
+extern const conversation flayithro_sign_01;
 extern const conversation forest_dlg_01;
 extern const conversation forest_dlg_01_alt_01;
 extern const conversation forest_dlg_02;
@@ -187,6 +197,7 @@ extern const conversation item_enoki_01;
 extern const conversation item_lime_01;
 extern const conversation item_none;
 extern const conversation item_tire_01;
+extern const conversation kathy_01;
 extern const conversation lab_01;
 extern const conversation lab_02;
 extern const conversation lab_02b;
@@ -208,6 +219,7 @@ extern const conversation leaving_lab_alt_03;
 extern const conversation naomi_fortune_01;
 extern const conversation naomi_fortune_01_alt_01;
 extern const conversation new_berlin_sign;
+extern const conversation pringle_01;
 extern const conversation scruffys_01;
 extern const conversation scruffys_01_alt_01;
 extern const conversation scruffys_02;
@@ -244,6 +256,7 @@ extern const conversation talk_184;
 extern const conversation talk_189;
 extern const conversation talk_190;
 extern const conversation talk_190b;
+extern const conversation teddy_spare01;
 extern const conversation temmie_01;
 extern const conversation temmie_02;
 extern const conversation temmie_03;

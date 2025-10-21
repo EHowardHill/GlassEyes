@@ -346,6 +346,23 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&flayithro_sign);
 		break;
 	}
+	case 225:
+	{
+		if (global_data_ptr->action_iterations[225] == 1) { ch_man.load(&pringle_01); } else
+		{ };
+		break;
+	}
+	case 226:
+	{
+		ch_man.load(&flayithro_sign_01);
+		break;
+	}
+	case 227:
+	{
+		if (global_data_ptr->action_iterations[227] == 1) { ch_man.load(&kathy_01); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -1183,6 +1200,90 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->jeremy_position = {3, 4};
 		global_data_ptr->ginger_position = {2, 4};
 		global_data_ptr->sebellus_position = {1, 4};
+		return NEW_MAP;
+		break;
+	}
+	case 219:
+	{
+		global_data_ptr->entry_map = &map_flayithro_02;
+		global_data_ptr->jeremy_position = {8, 14};
+		global_data_ptr->ginger_position = {7, 14};
+		global_data_ptr->sebellus_position = {6, 14};
+		return NEW_MAP;
+		break;
+	}
+	case 220:
+	{
+		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->jeremy_position = {19, 2};
+		global_data_ptr->ginger_position = {18, 2};
+		global_data_ptr->sebellus_position = {17, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 221:
+	{
+		music_items::shop.play();
+		global_data_ptr->entry_map = &map_flayithro_shop;
+		global_data_ptr->jeremy_position = {2, 22};
+		global_data_ptr->ginger_position = {1, 22};
+		global_data_ptr->sebellus_position = {1, 21};
+		return NEW_MAP;
+		break;
+	}
+	case 222:
+	{
+		music_items::bg_flayithro.play();
+		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->jeremy_position = {11, 21};
+		global_data_ptr->ginger_position = {10, 21};
+		global_data_ptr->sebellus_position = {9, 21};
+		return NEW_MAP;
+		break;
+	}
+	case 223:
+	{
+		music_items::z02_the_champ.play();
+		global_data_ptr->entry_map = &map_flayithro_soup;
+		global_data_ptr->jeremy_position = {3, 6};
+		global_data_ptr->ginger_position = {4, 6};
+		global_data_ptr->sebellus_position = {5, 6};
+		return NEW_MAP;
+		break;
+	}
+	case 228:
+	{
+		if (global_data_ptr->action_iterations[228] == 0) { ch_man.load(&boutique_01); global_data_ptr->action_iterations[228] += 1; } else
+		{ };
+		break;
+	}
+	case 229:
+	{
+		music_items::bg_hotel.play();
+		global_data_ptr->entry_map = &map_flayithro_hotel;
+		global_data_ptr->jeremy_position = {4, 22};
+		global_data_ptr->ginger_position = {3, 22};
+		global_data_ptr->sebellus_position = {2, 22};
+		return NEW_MAP;
+		break;
+	}
+	case 230:
+	{
+		music_items::bg_flayithro.play();
+		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->jeremy_position = {30, 20};
+		global_data_ptr->ginger_position = {31, 20};
+		global_data_ptr->sebellus_position = {31, 21};
+		return NEW_MAP;
+		break;
+	}
+	case 224:
+	{
+		music_items::bg_flayithro.play();
+		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->jeremy_position = {24, 14};
+		global_data_ptr->ginger_position = {25, 14};
+		global_data_ptr->sebellus_position = {26, 14};
 		return NEW_MAP;
 		break;
 	}

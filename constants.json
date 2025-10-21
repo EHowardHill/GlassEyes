@@ -1,0 +1,72 @@
+{
+    "emotions": [
+        "DEFAULT",
+        "HAPPY",
+        "EXCITED",
+        "ANGRY",
+        "SAD",
+        "DISAPPOINTED",
+        "SULLEN",
+        "SIDE_EYE",
+        "LAUGH",
+        "EMBARRASSED",
+        "ANNOYED",
+        "WAT",
+        "CONFUSED",
+        "SCARED",
+        "WEEP",
+        "SKIP"
+    ],
+    "actions": [
+        "DEFAULT",
+        "EMOTE",
+        "TURN",
+        "WALK",
+        "TELEPORT",
+        "SPAWN",
+        "MULTIPLE_CHOICE",
+        "END",
+        "FIGHT",
+        "PROGRESS",
+        "ITEM",
+        "CUE_GINGER",
+        "CUE_SEBELLUS",
+        "SFX_KNOCK",
+        "SFX_FIRE",
+        "SFX_EXPLOSION",
+        "HP",
+        "GAME",
+        "GOLD",
+        "VARIABLE",
+        "SHAKE_ON",
+        "SHAKE_OFF",
+        "MUSIC_VISKER",
+        "MUSIC_GINGER",
+        "MUSIC_BORED",
+        "MUSIC_SORRY",
+        "MUSIC_WIND",
+        "MUSIC_FADEOUT",
+        "MUSIC_RESET"
+    ],
+    "speed": [
+        "DEFAULT",
+        "SLOW",
+        "FAST",
+        "REALTIME"
+    ],
+    "size": [
+        "DEFAULT",
+        "SMALL",
+        "LARGE"
+    ],
+    "colors": [
+        "COLOR_WHITE",
+        "COLOR_RED",
+        "COLOR_ORANGE",
+        "COLOR_YELLOW",
+        "COLOR_GREEN",
+        "COLOR_BLUE",
+        "COLOR_PINK",
+        "COLOR_PURPLE"
+    ]
+}
