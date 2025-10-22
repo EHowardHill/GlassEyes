@@ -3,6 +3,7 @@ from tkinter import ttk, messagebox, simpledialog
 import json
 import os
 
+
 # ... (portrait_types function remains the same) ...
 def portrait_types():
     portraits = []
@@ -16,6 +17,7 @@ def portrait_types():
         print("Warning: 'graphics' directory not found.")
     return portraits
 
+
 class DialogueTab:
     def __init__(self, notebook, app):
         self.app = app
@@ -24,11 +26,11 @@ class DialogueTab:
 
         self.branching1_combo = None
         self.branching2_combo = None
-        
+
         # --- MODIFICATION ---
         # Need to declare self.right_frame before create_widgets is called
         # so it's always available, even if we hide/show it.
-        self.right_frame = None 
+        self.right_frame = None
 
         self.load_constants()  # <-- Load constants on initialization
 
@@ -101,7 +103,7 @@ class DialogueTab:
                 "size": [""],
                 "color": [""],
             }
-            
+
         # Load portrait types (this is separate from constants.json)
         try:
             # Add "" for an empty/default option
@@ -185,6 +187,9 @@ class DialogueTab:
         ttk.Button(line_btn_frame, text="New Line", command=self.new_line).pack(
             side=tk.LEFT, padx=2
         )
+        ttk.Button(
+            line_btn_frame, text="Duplicate Line", command=self.duplicate_line
+        ).pack(side=tk.LEFT, padx=2)
         ttk.Button(line_btn_frame, text="Move Up", command=self.move_line_up).pack(
             side=tk.LEFT, padx=2
         )
@@ -195,19 +200,20 @@ class DialogueTab:
             side=tk.LEFT, padx=2
         )
 
-
         # Right panel - Line editor
         # --- MODIFICATION ---
         # Store the frame as self.right_frame
         self.right_frame = ttk.Frame(main_frame)
         self.right_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-        ttk.Label(self.right_frame, text="Line Editor", font=("Arial", 12, "bold")).pack(
-            pady=5
-        )
+        ttk.Label(
+            self.right_frame, text="Line Editor", font=("Arial", 12, "bold")
+        ).pack(pady=5)
 
         canvas = tk.Canvas(self.right_frame)
-        scrollbar = ttk.Scrollbar(self.right_frame, orient="vertical", command=canvas.yview)
+        scrollbar = ttk.Scrollbar(
+            self.right_frame, orient="vertical", command=canvas.yview
+        )
         self.editor_frame = ttk.Frame(canvas)
 
         self.editor_frame.bind(
@@ -223,14 +229,14 @@ class DialogueTab:
         fields = [
             ("Name / ID", "name_id"),
             ("Portrait", "portrait"),
-            ("Emotion", "emotion"), 
-            ("Action", "action"), 
+            ("Emotion", "emotion"),
+            ("Action", "action"),
             ("Line1", "line1", 20),
             ("Line2", "line2", 20),
             ("Line3", "line3", 20),
-            ("Color", "color"), 
-            ("Size", "size"), 
-            ("Speed", "speed"), 
+            ("Color", "color"),
+            ("Size", "size"),
+            ("Speed", "speed"),
             ("Index", "index"),
             ("Anim", "anim"),
             ("Navigate", "navigate"),
@@ -238,7 +244,7 @@ class DialogueTab:
             ("Branching Dialogue 2", "branching2"),
             ("Bg Pointer", "bg_pointer"),
         ]
-        
+
         dropdown_fields = ["emotion", "action", "speed", "size", "color", "portrait"]
 
         for i, field in enumerate(fields):
@@ -302,7 +308,7 @@ class DialogueTab:
         """Refreshes the dialogue tab UI. Renamed from refresh_dialogue_tab."""
         self.refresh_conversation_list()
         self.lines_tree.delete(*self.lines_tree.get_children())
-        self.clear_editor() # This will now also hide the editor pane
+        self.clear_editor()  # This will now also hide the editor pane
 
     # ... (update_char_count, update_branching_combos, mark_dialogue_modified, refresh_conversation_list remain the same) ...
     def update_char_count(self, var, label, max_len):
@@ -353,7 +359,7 @@ class DialogueTab:
         else:
             # No lines, so clear/hide the editor
             self.clear_editor()
-            
+
     # ... (refresh_lines_list remains the same) ...
     def refresh_lines_list(self):
         self.lines_tree.delete(*self.lines_tree.get_children())
@@ -420,7 +426,7 @@ class DialogueTab:
         for var in self.editor_vars.values():
             var.set("")
         self.current_line_index = None
-        
+
         # --- MODIFICATION ---
         # Also hide the editor frame
         if self.right_frame:
@@ -476,7 +482,7 @@ class DialogueTab:
             del self.dialogue_data[self.current_conv_index]
             self.refresh_conversation_list()
             # clear_editor() is called, which will hide the editor
-            self.clear_editor() 
+            self.clear_editor()
             self.lines_tree.delete(*self.lines_tree.get_children())
             self.current_conv_index = None
             self.mark_dialogue_modified()
@@ -498,6 +504,40 @@ class DialogueTab:
         self.on_line_select(None)
         self.mark_dialogue_modified()
 
+    def duplicate_line(self):
+        if self.current_conv_index is None:
+            messagebox.showwarning(
+                "No Conversation", "Please select a conversation first."
+            )
+            return
+
+        if self.current_line_index is None:
+            messagebox.showwarning(
+                "No Line Selected", "Please select a line to duplicate."
+            )
+            return
+
+        # Get the current line data
+        current_line = self.dialogue_data[self.current_conv_index]["lines"][
+            self.current_line_index
+        ]
+
+        # Create a copy of the line data
+        duplicated_line = {key: current_line[key] for key in current_line.keys()}
+
+        # Insert the duplicated line right after the current line
+        insert_position = self.current_line_index + 1
+        self.dialogue_data[self.current_conv_index]["lines"].insert(
+            insert_position, duplicated_line
+        )
+
+        self.refresh_lines_list()
+
+        # Select the newly duplicated line
+        self.lines_tree.selection_set(str(insert_position))
+        self.on_line_select(None)
+        self.mark_dialogue_modified()
+
     def delete_line(self):
         if self.current_conv_index is None or self.current_line_index is None:
             return
@@ -508,9 +548,9 @@ class DialogueTab:
             ]
             self.refresh_lines_list()
             # clear_editor() is called, which will hide the editor
-            self.clear_editor() 
+            self.clear_editor()
             self.mark_dialogue_modified()
-            
+
             # --- MODIFICATION ---
             # After deleting, check if there are other lines and select the new first one
             children = self.lines_tree.get_children()

@@ -102,6 +102,14 @@
                 ],
                 "speed": 0,
                 "loop": true
+            },
+            "fancy_sit": {
+                "frames": [
+                    9,
+                    10
+                ],
+                "speed": 1,
+                "loop": true
             }
         },
         "sebellus": {
@@ -130,6 +138,14 @@
                 "frames": [
                     12,
                     13
+                ],
+                "speed": 1,
+                "loop": true
+            },
+            "fancy_stand": {
+                "frames": [
+                    9,
+                    10
                 ],
                 "speed": 1,
                 "loop": true
@@ -427,7 +443,10 @@
         "Water Bottle": {
             "drop": true
         },
-        "Clothes": {}
+        "Clothes": {},
+        "Soup": {
+            "drop": true
+        }
     },
     "objects": {
         "Vista": {},
@@ -791,6 +810,17 @@
             "227": {
                 "sequence": [
                     "kathy_01"
+                ]
+            },
+            "231": {
+                "auto": "hotel_room_01"
+            },
+            "232": {
+                "auto": "hotel_room_02"
+            },
+            "234": {
+                "sequence": [
+                    "eggplant_01"
                 ]
             }
         },
@@ -2248,6 +2278,11 @@
                         ]
                     }
                 }
+            },
+            "233": {
+                "sequence": [
+                    "ack_01"
+                ]
             }
         }
     },

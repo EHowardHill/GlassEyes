@@ -53,6 +53,9 @@ class ActionsTab:
         ttk.Button(btn_frame, text="Edit Action", command=self.edit_action).pack(
             side="left", padx=2
         )
+        ttk.Button(
+            btn_frame, text="Duplicate Action", command=self.duplicate_action
+        ).pack(side="left", padx=2)
         ttk.Button(btn_frame, text="Delete Action", command=self.delete_action).pack(
             side="left", padx=2
         )
@@ -99,6 +102,47 @@ class ActionsTab:
         action_display = self.actions_listbox.get(selection[0])
         action_id = action_display.split(" (")[0].replace("ID ", "")
         self.edit_action_dialog(action_id)
+
+    def duplicate_action(self):
+        selection = self.actions_listbox.curselection()
+        if not selection:
+            messagebox.showwarning("Warning", "Please select an action to duplicate!")
+            return
+
+        action_display = self.actions_listbox.get(selection[0])
+        action_id = action_display.split(" (")[0].replace("ID ", "")
+        action_type = self.action_type_var.get()
+
+        # Get the action data to duplicate
+        original_action = self.data["actions"][action_type][action_id]
+
+        # Find the next available ID
+        max_id = 0
+        for atype in ["interactable", "automatic"]:
+            if atype in self.data["actions"]:
+                for existing_id in self.data["actions"][atype].keys():
+                    try:
+                        id_num = int(existing_id)
+                        if id_num > max_id:
+                            max_id = id_num
+                    except ValueError:
+                        pass
+
+        new_id = str(max_id + 1)
+
+        # Create a deep copy of the action data
+        import copy
+
+        duplicated_action = copy.deepcopy(original_action)
+
+        # Add the duplicated action with the new ID
+        self.data["actions"][action_type][new_id] = duplicated_action
+
+        # Refresh the display
+        self.refresh()
+
+        # Show success message
+        messagebox.showinfo("Success", f"Action duplicated with new ID: {new_id}")
 
     def edit_action_dialog(self, action_id):
         dialog = tk.Toplevel(self.root)
@@ -375,6 +419,21 @@ class ActionsTab:
                 if "positions" in new_map:
                     positions_data.update(new_map["positions"])
                     refresh_positions_list()
+        else:
+            # Auto-populate ID with highest existing ID + 1
+            max_id = 0
+            for action_type in ["interactable", "automatic"]:
+                if action_type in self.data["actions"]:
+                    for existing_id in self.data["actions"][action_type].keys():
+                        try:
+                            id_num = int(existing_id)
+                            if id_num > max_id:
+                                max_id = id_num
+                        except ValueError:
+                            pass
+
+            # Insert the next ID (highest + 1), but keep it editable
+            id_entry.insert(0, str(max_id + 1))
 
         def save_action():
             new_id = id_entry.get().strip()

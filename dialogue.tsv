@@ -1630,5 +1630,39 @@ hotel_room_02
 hotel_room_03															
 				It's eerily quiet.	You can hear the hum	of the heater.									
 															
-eggplant_01															
+ack_01															
+	db_ch_ack	EM_DEFAULT		I ordered potato	soup. I don't know	what this is.									
+	db_ch_ack	EM_DEFAULT		..Do you think	he knows what a	potato is?									
 															
+eggplant_01															
+	db_ch_eggplant	EM_DEFAULT		HEY, GLABBER.	This place has the	BEST SOUP IN TOWN.									
+	db_ch_eggplant	EM_DEFAULT		Why should I give	it to YOU?										
+				because	I'm not hungry								&eggplant_01_alt_01		
+	db_ch_eggplant	EM_DEFAULT		Because?!	BECAUSE?! NO!	Prove your worth!									
+	db_ch_eggplant	EM_DEFAULT		I challenge you to	a game I always win!	STARING CONTEST!									
+	db_ch_eggplant	EM_HAPPY		..	..	..									
+	db_ch_eggplant	EM_HAPPY		..	..	..									
+	db_ch_eggplant	EM_HAPPY		..	..	..									
+	db_ch_eggplant	EM_HAPPY		..	..	..									
+	db_ch_eggplant	EM_EXCITED		..	..	..You're good..									
+	db_ch_eggplant	EM_HAPPY		..	..	..									
+	db_ch_eggplant	EM_ANGRY		..	..	..ALRIGHT!									
+	db_ch_eggplant	EM_ANGRY		HAIR GOT IN MY EYES!	That doesn't count!										
+				nuh uh	give me soup										
+	db_ch_eggplant	EM_DEFAULT		REMATCH!		..GO!									
+	db_ch_eggplant	EM_HAPPY		..	..	..									
+	db_ch_eggplant	EM_EXCITED		AHHH!	GOT IN MY EYES AGAIN										
+	db_ch_eggplant	EM_DEFAULT		FINE!	YOU WIN!										
+			ACT_ITEM	YOU FOUND:	Soup	(Doesn't smell good)				OBJ_SOUP					
+															
+convo_obj_soup															
+				It tastes confusing.	Sort of.. oily.	It has chunks.									
+			ACT_HP	HP INCREASED BY 1						1					
+															
+eggplant_01_alt_01															
+	db_ch_eggplant	EM_EXCITED		Not hungry?!	NOT HUNGRY?!										
+	db_ch_eggplant	EM_HAPPY		GET OUT!	NOW!										
+															
+eggplant_01_alt_02															
+	db_ch_eggplant	EM_DEFAULT		..	..FINE! Have soup.	BUT DON'T COME BACK!									
+			ACT_ITEM	You found:	SOUP	It smells.. weird.				OBJ_SOUP					
