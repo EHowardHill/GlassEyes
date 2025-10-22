@@ -363,6 +363,27 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 231:
+	{
+		ch_man.load(&hotel_room_01);
+		break;
+	}
+	case 232:
+	{
+		ch_man.load(&hotel_room_02);
+		break;
+	}
+	case 234:
+	{
+		if (global_data_ptr->action_iterations[234] == 1) { ch_man.load(&eggplant_01); } else
+		{ };
+		break;
+	}
+	case 235:
+	{
+		ch_man.load(&hotel_fridge);
+		break;
+	}
 	}
 	return -1;
 }
@@ -1284,6 +1305,40 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->jeremy_position = {24, 14};
 		global_data_ptr->ginger_position = {25, 14};
 		global_data_ptr->sebellus_position = {26, 14};
+		return NEW_MAP;
+		break;
+	}
+	case 233:
+	{
+		if (global_data_ptr->action_iterations[233] == 0) { ch_man.load(&ack_01); global_data_ptr->action_iterations[233] += 1; } else
+		{ };
+		break;
+	}
+	case 236:
+	{
+		music_items::bg_hotel.play();
+		global_data_ptr->entry_map = &map_flayithro_hotel_night;
+		global_data_ptr->jeremy_position = {1, 5};
+		return NEW_MAP;
+		break;
+	}
+	case 238:
+	{
+		if (global_data_ptr->action_iterations[238] == 0) { ch_man.load(&dock_ginger_01); global_data_ptr->action_iterations[238] += 1; } else
+		{ };
+		break;
+	}
+	case 239:
+	{
+		if (global_data_ptr->action_iterations[239] == 0) { ch_man.load(&dock_sebellus_01); global_data_ptr->action_iterations[239] += 1; } else
+		{ };
+		break;
+	}
+	case 237:
+	{
+		music_items::bg_sorry.play();
+		global_data_ptr->entry_map = &map_flayithro_01_night;
+		global_data_ptr->jeremy_position = {30, 20};
 		return NEW_MAP;
 		break;
 	}

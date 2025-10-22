@@ -1,11 +1,4 @@
 
-SEBELLUS:
-Ginger told you about   my glass eyes,  right?
-Did you know-   and this is just    between us-
-I can tell you  how long you'll live for.
-That's right.   Would you like  to know?
-I'll just say, I'd  make better choices if I were you.
-
 VISTA:
 Do you know what I like about you humans?
 You hate me. As you ought to.
@@ -26,3 +19,72 @@ I'm sorry you had to see this.
 
 Ginger asks Jeremy in Flayithro.
 Jeremy has to kill Ginger.
+
+
+
+
+-
+
+Endings:
+
+Ginger (What?) / Sebellus (Hint) are both randoms.
+
+Vista has a conversation with Jeremy in the train.
+
+VISTA:
+Do you know what I like about you humans?
+You hate me. As you ought to.
+I have endeavored to make your lives a living hell for generations.
+The muetos ought to hate me too, and yet they don't.
+This is why I can't trust them.
+Do you know how long eternity is, human?
+It's like.. describing color to the blind.
+You have no organ for experiencing eternity.
+(Comments about how she calls Ginger "Ginger" to humor her, knew that it was a sign she would leave)
+
+Vista decides to let Ginger speak with Henry, apologizes for the inconvinience. However, Ginger wants the human to be there - as a neutral third party. Vista is confused, but allows the request.
+
+If the human refuses, then the game ends with Vista's death and Ginger taking the place of Vista at the beginning of the game. (Ending A1)
+
+-
+When they arrive, they discover that Henry is no longer human.
+Henry threatens to kill Sebellus over the situation, Ginger stays firm.
+Sebellus is killed.
+Vista realizes that he's gone too far, joins the party to kill him.
+They destroy the factory accidentally.
+Ginger is given the choice to go home... at a cost.
+-
+
+If Ginger is killed, then Jeremy is sent home and Vista goes into mourning. (Ending B1)
+If Ginger is *spared*:
+
+Ginger (Go) + Sebellus (Yes)
+
+    -
+    Vista feels bad and ends up killing Ginger herself. (Ending B2)
+    -
+
+Ginger (Stay) + Sebellus (Yes)
+
+    -
+    Ginger takes a bunch of pills and eats them, not knowing what they'll do.
+    She ends up dying. (Ending B3)
+    -
+
+Ginger (Go) + Sebellus (No)
+
+    -
+    Ginger asks to go with Jeremy to visit her human family.
+    Vista reluctantly agrees.
+    They go home, special cutscene where her family unplugs the monitor.
+    They don't recognize her / are freaked out by her and kick her out.
+    She flies home to find her mother, who likely won't remember her. (Ending C1)
+    -
+
+Ginger (Stay) + Sebellus (No)
+
+    -
+    Ginger agrees to stay behind, is coronated.
+    Her first action is to end the war.
+    She ends up living in a hut, taking the place of Vista. (Ending A2)
+    -

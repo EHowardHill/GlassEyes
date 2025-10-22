@@ -36,7 +36,7 @@ int main()
 
     // Set for debug
     global_data_ptr = new global_data();
-    global_data_ptr->process_stage = BLACK_TO_BEACH; // BLACK_TO_LAB;
+    global_data_ptr->process_stage = FLAYITHRO_AWAKE;
 
     while (true)
     {

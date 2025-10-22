@@ -42,6 +42,8 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_pringle.h"
 #include "bn_sprite_items_db_ch_kathy.h"
 #include "bn_sprite_items_db_ch_dima.h"
+#include "bn_sprite_items_db_ch_ack.h"
+#include "bn_sprite_items_db_ch_eggplant.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -51,6 +53,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_regular_bg_items_scene_tv_01.h"
 
 // Forward declarations for conversations
+extern const conversation ack_01;
 extern const conversation avalon_courier_01;
 extern const conversation avalon_courier_02;
 extern const conversation avalon_courier_03;
@@ -103,6 +106,7 @@ extern const conversation convo_obj_flint;
 extern const conversation convo_obj_lime;
 extern const conversation convo_obj_photograph;
 extern const conversation convo_obj_pie;
+extern const conversation convo_obj_soup;
 extern const conversation convo_obj_steel;
 extern const conversation convo_obj_sticks;
 extern const conversation convo_obj_stones;
@@ -129,8 +133,18 @@ extern const conversation dart_03;
 extern const conversation dart_04;
 extern const conversation dima_01;
 extern const conversation dima_02;
+extern const conversation dock_ginger_01;
+extern const conversation dock_ginger_02;
+extern const conversation dock_ginger_alt_01;
+extern const conversation dock_ginger_alt_02;
+extern const conversation dock_sebellus_01;
+extern const conversation dock_sebellus_01_alt_01;
+extern const conversation dock_sebellus_01_alt_02;
 extern const conversation dog_and_pony;
 extern const conversation doll_guy_01;
+extern const conversation eggplant_01;
+extern const conversation eggplant_01_alt_01;
+extern const conversation eggplant_01_alt_02;
 extern const conversation f_cutscene_01;
 extern const conversation f_cutscene_02;
 extern const conversation f_cutscene_03;
@@ -182,6 +196,17 @@ extern const conversation have_to_go_2;
 extern const conversation have_to_go_3;
 extern const conversation have_to_go_3_alt_01;
 extern const conversation have_to_go_4;
+extern const conversation hotel_01;
+extern const conversation hotel_02;
+extern const conversation hotel_bed_01;
+extern const conversation hotel_bed_02;
+extern const conversation hotel_bed_03;
+extern const conversation hotel_bed_04;
+extern const conversation hotel_bed_04_alt_01;
+extern const conversation hotel_fridge;
+extern const conversation hotel_room_01;
+extern const conversation hotel_room_02;
+extern const conversation hotel_room_03;
 extern const conversation intro_01;
 extern const conversation intro_02;
 extern const conversation intro_03;

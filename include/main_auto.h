@@ -20,6 +20,7 @@ enum progress
 	FINAL_MSG,
 	BLACK_TO_BEACH,
 	TEST_MAP,
+	FLAYITHRO_AWAKE,
 };
 
 void resolve_chapter();

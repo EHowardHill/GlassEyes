@@ -149,6 +149,14 @@
                 ],
                 "speed": 1,
                 "loop": true
+            },
+            "fancy_stand_thumb": {
+                "frames": [
+                    11,
+                    12
+                ],
+                "speed": 1,
+                "loop": true
             }
         },
         "sm": {
@@ -822,6 +830,9 @@
                 "sequence": [
                     "eggplant_01"
                 ]
+            },
+            "235": {
+                "auto": "hotel_fridge"
             }
         },
         "automatic": {
@@ -2283,6 +2294,40 @@
                 "sequence": [
                     "ack_01"
                 ]
+            },
+            "236": {
+                "music": "bg_hotel",
+                "new_map": {
+                    "map": "flayithro_hotel_night",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            5
+                        ]
+                    }
+                }
+            },
+            "238": {
+                "sequence": [
+                    "dock_ginger_01"
+                ]
+            },
+            "239": {
+                "sequence": [
+                    "dock_sebellus_01"
+                ]
+            },
+            "237": {
+                "music": "bg_sorry",
+                "new_map": {
+                    "map": "flayithro_01_night",
+                    "positions": {
+                        "jeremy": [
+                            30,
+                            20
+                        ]
+                    }
+                }
             }
         }
     },
@@ -2487,6 +2532,16 @@
                 "ginger": [
                     2,
                     3
+                ]
+            }
+        },
+        "FLAYITHRO_AWAKE": {
+            "map": "hotel_01_night",
+            "reset_health": true,
+            "positions": {
+                "jeremy": [
+                    2,
+                    2
                 ]
             }
         }

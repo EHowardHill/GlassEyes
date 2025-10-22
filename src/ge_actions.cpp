@@ -197,6 +197,24 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     }
                     break;
                 }
+                case 240:
+                {
+                    auto g = ch_man->find_by_index(CHAR_GINGER);
+                    if (g != nullptr)
+                    {
+                        g->idle_animation = &ginger_fancy_sit;
+                        g->current_animation = &ginger_fancy_sit;
+                    }
+
+                    auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                    if (s != nullptr)
+                    {
+                        s->idle_animation = &sebellus_fancy_stand;
+                        s->current_animation = &sebellus_fancy_stand;
+                    }
+
+                    break;
+                }
                 default:
                 {
                     int ret = perform_action_automatic(action, *ch_man);

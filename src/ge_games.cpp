@@ -80,7 +80,7 @@ static void update_dialogue(game_state *gs)
         {
             if (!gs->dlg_lines[i].is_ended())
             {
-                gs->dlg_lines[i].update(line.portrait, false);
+                gs->dlg_lines[i].update(line.portrait, false, EM_DEFAULT);
                 break;
             }
         }

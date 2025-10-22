@@ -183,16 +183,16 @@ void typewriter(int scene)
                 {
                     if (lines[1].is_ended())
                     {
-                        lines[2].update(nullptr, true);
+                        lines[2].update(nullptr, true, EM_DEFAULT);
                     }
                     else
                     {
-                        lines[1].update(nullptr, true);
+                        lines[1].update(nullptr, true, EM_DEFAULT);
                     }
                 }
                 else
                 {
-                    lines[0].update(nullptr, true);
+                    lines[0].update(nullptr, true, EM_DEFAULT);
                 }
             }
 

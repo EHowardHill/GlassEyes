@@ -123,7 +123,7 @@ void text::init(const string<20> &value)
     index = 0;
 }
 
-void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = false)
+void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = false, int emotion = EM_DEFAULT)
 {
     if (index >= reference.size() || is_ended())
     {
@@ -143,6 +143,17 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         else if (portrait == &sprite_items::db_ch_visker)
         {
             sound_items::snd_dialogue_visker.play(0.4);
+        }
+        else if (portrait == &sprite_items::db_ch_sebellus)
+        {
+            if (emotion != EM_ANGRY)
+            {
+                sound_items::snd_dialogue_sebellus.play(0.4);
+            }
+            else
+            {
+                sound_items::snd_dialogue_typewriter.play(0.5);
+            }
         }
         else if (typewriter)
         {
@@ -339,7 +350,7 @@ void dialogue_box::init(character_manager *ch_man)
         // Rest of your existing init code for normal dialogue...
         if (line.portrait != nullptr)
         {
-            portrait = line.portrait->create_sprite(-84, 56, line.emotion);
+            portrait = line.portrait->create_sprite(-84, 56, line.emotion * 2);
         }
         else
         {
@@ -401,31 +412,31 @@ void dialogue_box::init(character_manager *ch_man)
         }
         case ACT_MUSIC_VISKER:
         {
-            music::stop();
+            ch_man->music_fadeout = false;
             music_items::theme_visker.play(0.75);
             break;
         }
         case ACT_MUSIC_GINGER:
         {
-            music::stop();
+            ch_man->music_fadeout = false;
             music_items::theme_ginger.play(0.75);
             break;
         }
         case ACT_MUSIC_SORRY:
         {
-            music::stop();
+            ch_man->music_fadeout = false;
             music_items::bg_sorry.play(0.75);
             break;
         }
         case ACT_MUSIC_BORED:
         {
-            music::stop();
+            ch_man->music_fadeout = false;
             music_items::bg_bored.play(0.75);
             break;
         }
         case ACT_MUSIC_WIND:
         {
-            music::stop();
+            ch_man->music_fadeout = false;
             music_items::ambient_wind.play(0.75);
             break;
         }
@@ -569,13 +580,19 @@ void dialogue_box::update()
         portrait.value().set_tiles(l.portrait->tiles_item(), (l.emotion * 2) + 1);
     }
 
-    if (ticker % 3 == 0)
+    int text_delay = 3; // Default speed
+    if (l.speed == 1)
+    {
+        text_delay = 6; // Twice as slow
+    }
+
+    if (ticker % text_delay == 0)
     {
         for (int t = 0; t < 3; t++)
         {
             if (!lines[t].is_ended())
             {
-                lines[t].update(l.portrait);
+                lines[t].update(l.portrait, false, l.emotion);
                 return;
             }
         }

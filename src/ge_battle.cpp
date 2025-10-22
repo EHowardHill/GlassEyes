@@ -123,7 +123,7 @@ static void update_dialogue(battle_state *bs)
         {
             if (!bs->dlg_lines[i].is_ended())
             {
-                bs->dlg_lines[i].update(line.portrait, false);
+                bs->dlg_lines[i].update(line.portrait, false, EM_DEFAULT);
                 break;
             }
         }

@@ -15,6 +15,10 @@
 
 #include "bn_sprite_items_spr_elements.h"
 
+#include "bn_sprite_items_spr_jeremy_fancy.h"
+#include "bn_sprite_items_spr_ginger_fancy.h"
+#include "bn_sprite_items_spr_sebellus_fancy.h"
+
 using namespace bn;
 
 // Static member definitions
@@ -105,7 +109,7 @@ void v_sprite_ptr::update(bool dialogue_box_ended)
     for (auto *item : manager)
     {
         bound bounds = item->real_position();
-        bound acceptable = {screen.position, screen.width + 64, screen.height + 64};
+        bound acceptable = {screen.position, screen.width + 64, screen.height + 68};
 
         if (!dialogue_box_ended)
         {
@@ -168,33 +172,6 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     follow_id = resolve_sprite_id(index_);
     idle_animation = resolve_sprite_idle_animation(index_);
 
-    enum JEREMY_COSTUMES
-    {
-        COSTUME_JEREMY_NONE,
-        COSTUME_JEREMY_FANCY,
-        COSTUME_JEREMY_BANANA
-    };
-
-    enum GINGER_COSTUMES
-    {
-        COSTUME_GINGER_NONE,
-        COSTUME_GINGER_FANCY,
-        COSTUME_GINGER_CASUAL
-    };
-
-    enum SEBELLUS_COSTUMES
-    {
-        COSTUME_SEBELLUS_NONE,
-        COSTUME_SEBELLUS_FANCY,
-        COSTUME_SEBELLUS_CASUAL
-    };
-
-    enum VISTA_COSTUMES
-    {
-        COSTUME_VISTA_NONE,
-        COSTUME_VISTA_SENATRIX,
-    };
-
     // Costume support
     int costume = global_data_ptr->costumes[index_];
     if (costume > 0)
@@ -205,8 +182,25 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
         {
             if (costume == COSTUME_GINGER_FANCY)
             {
-                v_sprite.sprite_item_ptr = nullptr;
+                v_sprite.sprite_item_ptr = &sprite_items::spr_ginger_fancy;
             }
+            break;
+        }
+        case CHAR_JEREMY:
+        {
+            if (costume == COSTUME_JEREMY_FANCY)
+            {
+                v_sprite.sprite_item_ptr = &sprite_items::spr_jeremy_fancy;
+            }
+            break;
+        }
+        case CHAR_SEBELLUS:
+        {
+            if (costume == COSTUME_JEREMY_FANCY)
+            {
+                v_sprite.sprite_item_ptr = &sprite_items::spr_sebellus_fancy;
+            }
+            break;
         }
         }
     }

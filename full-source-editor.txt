@@ -2120,6 +2120,12 @@ class DialogueTab:
             self.refresh_conversation_list()
             self.conv_listbox.selection_clear(0, tk.END)
             self.conv_listbox.selection_set(tk.END)
+            
+            # --- MODIFICATION ---
+            # Scroll the listbox to the end to see the new item
+            self.conv_listbox.see(tk.END)
+            # --------------------
+            
             self.conv_listbox.event_generate("<<ListboxSelect>>")
             self.mark_dialogue_modified()
 

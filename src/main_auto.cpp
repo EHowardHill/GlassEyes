@@ -116,6 +116,10 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::forest_01;
 		global_data_ptr->ginger_position = {2, 3};
 		break;		}
+	case FLAYITHRO_AWAKE: {
+		global_data_ptr->entry_map = &map_hotel_01_night;
+		global_data_ptr->jeremy_position = {2, 2};
+		break;		}
 	default: { break; }
 	}
 }

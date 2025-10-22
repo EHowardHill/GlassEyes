@@ -1648,7 +1648,7 @@ eggplant_01
 	db_ch_eggplant	EM_HAPPY		..	..	..									
 	db_ch_eggplant	EM_ANGRY		..	..	..ALRIGHT!									
 	db_ch_eggplant	EM_ANGRY		HAIR GOT IN MY EYES!	That doesn't count!										
-				nuh uh	give me soup										
+				nuh uh	give me soup									&eggplant_01_alt_02	
 	db_ch_eggplant	EM_DEFAULT		REMATCH!		..GO!									
 	db_ch_eggplant	EM_HAPPY		..	..	..									
 	db_ch_eggplant	EM_EXCITED		AHHH!	GOT IN MY EYES AGAIN										
@@ -1666,3 +1666,103 @@ eggplant_01_alt_01
 eggplant_01_alt_02															
 	db_ch_eggplant	EM_DEFAULT		..	..FINE! Have soup.	BUT DON'T COME BACK!									
 			ACT_ITEM	You found:	SOUP	It smells.. weird.				OBJ_SOUP					
+															
+hotel_bed_01															
+				This one's too soft.											
+															
+hotel_bed_02															
+				This one's too hard.											
+															
+hotel_bed_03															
+				This bed smells	kind of weird.										
+															
+hotel_bed_04															
+				You haven't had a	full night's rest in	several days.							&hotel_bed_04_alt_01		
+				Are you ready to	go to sleep?										
+				yes for the love	nah I'm good										
+		EM_SKIP	ACT_PROGRESS							FLAYITHRO_AWAKE					
+															
+hotel_bed_04_alt_01															
+				Maybe in a bit.											
+															
+dock_ginger_01															
+	db_ch_ginger	EM_DEFAULT		Hey.		Up so soon?									
+	db_ch_ginger	EM_SIDE_EYE		Sebellus and I	figured you could	use the sleep.									
+	db_ch_ginger	EM_DEFAULT		..											
+	db_ch_ginger	EM_SAD		..	What am I	doing here?	COLOR_PURPLE								
+	db_ch_ginger	EM_SULLEN		I guess.. Well..	I can't stop the war	or the suffering,									
+	db_ch_ginger	EM_DEFAULT		But mom is tired,	And maybe, if I'm	somewhere else,									
+	db_ch_ginger	EM_SULLEN		She'll put an end to	it until she can	find me again.									
+	db_ch_ginger	EM_SIDE_EYE		What do you think?											
+				What?	Sure thing.	You should go home.							&dock_ginger_alt_01	&dock_ginger_alt_02	
+	db_ch_ginger	EM_SAD		Nevermind. I	don't blame you for	not understanding.									
+	db_ch_ginger	EM_SULLEN		I just don't..	understand. I don't	know why I exist.									
+	db_ch_ginger	EM_CONFUSED		Forget it.	Forget I said	anything.									
+															
+dock_ginger_02															
+	db_ch_ginger	EM_DEFAULT		The weather looks so	nice out here.										
+	db_ch_ginger	EM_SIDE_EYE		I could never live	here. Too close to	the castle.									
+	db_ch_ginger	EM_DEFAULT		But I want to live	somewhere just like	this.									
+															
+dock_ginger_alt_01															
+	db_ch_ginger	EM_SIDE_EYE		Oh, you're just	being polite. It's a	terrible idea.									
+	db_ch_ginger	EM_SAD		I'm just a stupid	kid. I don't know	what I'm doing.									
+	db_ch_ginger	EM_LAUGH		You wouldn't believe	me if I told you,	but..									
+	db_ch_ginger	EM_DEFAULT		Do you know why I	finally decided to	run away?									
+	db_ch_ginger	EM_DEFAULT		I saw an angel.	He told me to go and	find a human.									
+	db_ch_ginger	EM_CONFUSED		You don't have to	believe me.										
+	db_ch_ginger	EM_SULLEN		But things are	strange here.										
+	db_ch_ginger	EM_SAD		I hope I didn't make	a mistake I can't	come back from.	COLOR_PURPLE								
+															
+dock_ginger_alt_02															
+	db_ch_ginger	EM_WEEP		..			COLOR_PURPLE								
+	db_ch_ginger	EM_WEEP		..	..		COLOR_PURPLE								
+	db_ch_ginger	EM_WEEP		I want to go home.	I want to go home	so, so much.	COLOR_PURPLE								
+	db_ch_ginger	EM_SCARED		What have I done??	What have I done???		COLOR_PURPLE								
+	db_ch_ginger	EM_SCARED		..											
+	db_ch_ginger	EM_SCARED		It's too late to	turn back now. You	need to get home.									
+	db_ch_ginger	EM_SULLEN		Let's g-get to	Canterbury, then	we'll..									
+	db_ch_ginger	EM_SULLEN		..we'll figure it	out, how does that	sound?									
+															
+dock_sebellus_01															
+	db_ch_sebellus	EM_DEFAULT		The water is very	nice this late at	night, yes?									
+	db_ch_sebellus	EM_SIDE_EYE		You wanna hear	something spooky,	human?									
+	db_ch_sebellus	EM_DEFAULT		I'm sure Ginger told	"you about my ""Glass"	"Eyes"", right?"									
+	db_ch_sebellus	EM_DEFAULT		I bet you didn't	know that I can see	how people will die.									
+	db_ch_sebellus	EM_LAUGH		Unfortunately, I'm	not good at knowing	when a joke is dead.									
+	db_ch_sebellus	EM_SIDE_EYE		But it's true. I	know how I'll die,	so until then?									
+	db_ch_sebellus	EM_DEFAULT		I'm invincible.		It's awesome.				CHAR_SEBELLUS	&sebellus_fancy_stand_thumb				
+	db_ch_sebellus	EM_DEFAULT		Ginger worries cos	my life expectancy	is very short,									
+	db_ch_sebellus	EM_HAPPY		But I have plenty	of life left in me,	so I'm fine.									
+	db_ch_sebellus	EM_SIDE_EYE		Tell me, human. Have	you ever wondered	how you'll go?				CHAR_SEBELLUS	&sebellus_fancy_stand				
+				Yes	No	Give me a hint							&dock_sebellus_01_alt_01	&dock_sebellus_01_alt_02	
+	db_ch_sebellus	EM_DEFAULT		Alright, then.											
+	db_ch_sebellus	EM_HAPPY		Let me tell you a	story, first.										
+	db_ch_sebellus	EM_DEFAULT		When Ginger came to	live with us, she	kept to herself.									
+	db_ch_sebellus	EM_LAUGH		She'll never admit	this, but I annoyed	the dog out of her.									
+	db_ch_sebellus	EM_DEFAULT		I don't think she	warmed up to me	until she learned									
+	db_ch_sebellus	EM_DEFAULT		that I play guitar.		It's true!									
+	db_ch_sebellus	EM_DEFAULT		The castle has a	music room.	We'd play together.									
+	db_ch_sebellus	EM_DEFAULT		She loves music and	she's shy, but she's	gifted at piano.									
+	db_ch_sebellus	EM_LAUGH		I'm shocked she's	traveled so far with	no headphones.									
+	db_ch_sebellus	EM_DEFAULT		She's task-oriented.	Finding someone to	take care of helps.									
+	db_ch_sebellus	EM_DEFAULT		She wouldn't have	gotten this far	without you.									
+	db_ch_sebellus	EM_DEFAULT		Let me give you	some friendly	advice, human.									
+	db_ch_sebellus	EM_DEFAULT	ACT_MUSIC_FADEOUT	..											
+	db_ch_sebellus	EM_DEFAULT		The path you're	walking on?										
+	db_ch_sebellus	EM_DEFAULT		You had better	walk it carefully.		COLOR_RED		SP_SLOW						
+	db_ch_sebellus	EM_DEFAULT		Am I clear?					SP_SLOW						
+	db_ch_sebellus	EM_DEFAULT	ACT_MUSIC_SORRY	That's all I have	to say. Rest up	for tomorrow.									
+															
+dock_sebellus_01_alt_01															
+	db_ch_sebellus	EM_DEFAULT		Wise man.	I respect that.										
+	db_ch_sebellus	EM_SIDE_EYE		You take care of	yourself, man.	Long road ahead.									
+	db_ch_sebellus	EM_DEFAULT		We need all the rest	we can get.										
+															
+dock_sebellus_01_alt_02															
+	db_ch_sebellus	EM_LAUGH		I like you.	You're funny.										
+	db_ch_sebellus	EM_HAPPY		I wouldn't make any	funny remarks around	my mother.									
+	db_ch_sebellus	EM_DEFAULT		That's my advice.		Take care, man.									
+															
+hotel_fridge															
+				There's stuff in	here, but it might	cost money.									

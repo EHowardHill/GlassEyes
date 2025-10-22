@@ -20,6 +20,7 @@
 #include "bn_sprite_items_spr_vista_01.h"
 
 #include "main.h"
+#include "main_auto.h"
 #include "ge_globals.h"
 #include "ge_sprites.h"
 #include "ge_text.h"
@@ -39,6 +40,17 @@ int navigate_map()
 {
     map_manager current_map(global_data_ptr->entry_map);
     character_manager char_mgr;
+
+    switch (global_data_ptr->process_stage)
+    {
+    case FLAYITHRO_AWAKE:
+    {
+        global_data_ptr->costumes[CHAR_JEREMY] = COSTUME_JEREMY_FANCY;
+        global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_FANCY;
+        global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_FANCY;
+        break;
+    }
+    }
 
     for (int y = 0; y < current_map.current_map->size.y.integer(); y++)
     {

@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "maps/flayithro_01_night.tmx",
     "expandedProjectPaths": [
-        ".",
         "tilesets",
-        "maps"
+        "maps",
+        "."
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -113,11 +113,11 @@
             }
         },
         "maps/flayithro_01_night.tmx": {
-            "scale": 1,
+            "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 747.5,
-                "y": 578.5
+                "x": 705.6666666666666,
+                "y": 773
             }
         },
         "maps/flayithro_02.tmx": {
@@ -126,6 +126,14 @@
             "viewCenter": {
                 "x": 255.74836922527035,
                 "y": 255.74836922527032
+            }
+        },
+        "maps/flayithro_hotel_night.tmx": {
+            "scale": 0.9553013392857143,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 128.2317892400257,
+                "y": 447.50277469478357
             }
         },
         "maps/forest_01.tmx": {
@@ -210,9 +218,17 @@
         },
         "maps/hotel_01.tmx": {
             "scale": 3,
-            "selectedLayer": 1,
+            "selectedLayer": 4,
             "viewCenter": {
                 "x": 155.5,
+                "y": 127.83333333333334
+            }
+        },
+        "maps/hotel_01_night.tmx": {
+            "scale": 3,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 149.16666666666663,
                 "y": 127.83333333333334
             }
         },
@@ -228,8 +244,8 @@
             "scale": 2.1634765625,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 205.6874605037465,
-                "y": 127.34133790737565
+                "x": 205.91857000993048,
+                "y": 127.34133790737562
             }
         },
         "maps/room_02.tmx": {
@@ -378,21 +394,26 @@
     "map.tileWidth": 32,
     "map.width": 8,
     "openFiles": [
+        "maps/room01.tmx",
+        "maps/hotel_01_night.tmx",
+        "maps/flayithro_hotel_night.tmx",
+        "maps/flayithro_01_night.tmx",
+        "maps/hotel_01.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/room01.tmx",
+        "maps/hotel_01_night.tmx",
+        "maps/flayithro_hotel_night.tmx",
         "maps/hotel_01.tmx",
-        "tilesets/room01.tsx",
         "maps/flayithro_01_night.tmx",
+        "tilesets/room01.tsx",
         "maps/room_02.tmx",
         "maps/beach_02.tmx",
         "tilesets/forest01.tsx",
         "maps/beach_cave.tmx",
         "tilesets/underground02.tsx",
-        "maps/to_flay_01.tmx",
-        "maps/flayithro_01.tmx",
-        "maps/flayithro_02.tmx",
-        "maps/cave_01.tmx"
+        "maps/to_flay_01.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

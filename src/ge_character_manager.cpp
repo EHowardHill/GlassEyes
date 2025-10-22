@@ -174,20 +174,24 @@ void character_manager::update(map_manager *current_map = nullptr)
     bool db_inactive = true;
     bool ib_inactive = true;
 
-    if (!music_fadeout)
+    if (music::playing())
     {
-        music::set_volume(0.5);
-    }
-    else
-    {
-        fixed volume = music::volume() - 0.005;
-        if (volume > 0)
+        if (!music_fadeout)
         {
-            music::set_volume(volume);
+
+            music::set_volume(0.5);
         }
         else
         {
-            music::set_volume(0);
+            fixed volume = music::volume() - 0.005;
+            if (volume > 0)
+            {
+                music::set_volume(volume);
+            }
+            else
+            {
+                music::set_volume(0);
+            }
         }
     }
 
