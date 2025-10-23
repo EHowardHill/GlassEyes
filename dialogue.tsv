@@ -1766,3 +1766,32 @@ dock_sebellus_01_alt_02
 															
 hotel_fridge															
 				There's stuff in	here, but it might	cost money.									
+															
+vista_01															
+		EM_SKIP								CHAR_JEREMY	&jeremy_fancy_invisible				
+		EM_SKIP	ACT_SFX_EXPLOSION							CHAR_VISTA_LIFT	&vista_jeremy_lift				
+		EM_SKIP	ACT_MUSIC_WIND_HEARTBEAT												
+	db_ch_vista_02	EM_ANGRY		Oh, you..	Filthy glabber..				SP_SLOW						
+	db_ch_vista_02	EM_ANGRY		You thought you	could escape. But my	dragons see all.			SP_DEFAULT						
+	db_ch_vista_02	EM_ANGRY		They saw you with	my precious children	since yesterday.			SP_DEFAULT						
+	db_ch_vista_02	EM_ANGRY		Speak now, or	I shall tear off	your wretched face.			SP_SLOW						
+		EM_SKIP	ACT_TELEPORT							CHAR_GINGER		{30,22}			
+		EM_SKIP	ACT_TELEPORT							CHAR_SEBELLUS		{30,22}			
+		EM_SKIP	ACT_CUE_GINGER												
+		EM_SKIP	ACT_CUE_SEBELLUS												
+	db_ch_ginger	EM_WAT		M-MOM!! WAIT!!	HE DIDN'T- IT'S NOT-										
+	db_ch_vista_02	EM_SULLEN		Dearest..	Stand behind me.										
+	db_ch_ginger	EM_WEEP		We found him!! He	was in the garbage	chute by New Berlin!									
+	db_ch_ginger	EM_WEEP		H-He was helping us	get back to town!!										
+	db_ch_vista_02	EM_SULLEN		Is that so?											
+				Yes.	Nope.								&vista_01_alt_01		
+	db_ch_vista_02	EM_SAD		I hope you	understand how close	to death you were.				CHAR_VISTA_LIFT	&vista_jeremy_lift_02				
+	db_ch_ginger	EM_DEFAULT		He's trying to get	to Canterbury so he	can fly back home!									
+	db_ch_vista_02	EM_SULLEN		What a coincidence.	That is where I was	headed as well.									
+	db_ch_vista_02	EM_SULLEN		Why don't the three	of us take the	train, yes?									
+	db_ch_sebellus	EM_DEFAULT		Alright, then!											
+		EM_SKIP	ACT_PROGRESS							BLACK_TO_TRAIN					
+															
+vista_01_alt_01															
+	db_ch_vista_02	EM_SULLEN		Very well.											
+		EM_SKIP	ACT_HP							-100					

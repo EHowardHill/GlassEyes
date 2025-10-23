@@ -42,6 +42,7 @@
 #include "bn_sprite_items_spr_eggplant.h"
 #include "bn_sprite_items_spr_ack.h"
 #include "bn_sprite_items_spr_teddy.h"
+#include "bn_sprite_items_spr_vista_lift.h"
 
 using namespace bn;
 
@@ -87,6 +88,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_EGGPLANT: { return &sprite_items::spr_eggplant; break; }
 	case CHAR_ACK: { return &sprite_items::spr_ack; break; }
 	case CHAR_TEDDY: { return &sprite_items::spr_teddy; break; }
+	case CHAR_VISTA_LIFT: { return &sprite_items::spr_vista_lift; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -101,6 +103,7 @@ int resolve_sprite_id(int character)
     {
 	case CHAR_GINGER: { return CHAR_JEREMY; break; }
 	case CHAR_SEBELLUS: { return CHAR_GINGER; break; }
+	case CHAR_VISTA_LIFT: { return CHAR_JEREMY; break; }
     default:
     {
         return 0;
@@ -120,6 +123,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_BOAT_EXHAUST: { return &boat_exhaust; break; }
 	case CHAR_GHOST: { return &ghost_spook; break; }
 	case CHAR_TEDDY: { return &teddy_idle; break; }
+	case CHAR_VISTA_LIFT: { return &vista_invisible; break; }
     default:
     {
         return nullptr;

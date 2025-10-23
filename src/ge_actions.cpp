@@ -199,18 +199,37 @@ int action_listener(map_manager *man, character_manager *ch_man)
                 }
                 case 240:
                 {
-                    auto g = ch_man->find_by_index(CHAR_GINGER);
-                    if (g != nullptr)
+                    if (global_data_ptr->action_iterations[238] > 0 &&
+                        global_data_ptr->action_iterations[239] > 0)
                     {
-                        g->idle_animation = &ginger_fancy_sit;
-                        g->current_animation = &ginger_fancy_sit;
-                    }
 
-                    auto s = ch_man->find_by_index(CHAR_SEBELLUS);
-                    if (s != nullptr)
+                        // If spoken to both, cue Vista
+                        ch_man->load(&vista_01);
+
+                        auto v = ch_man->find_by_index(CHAR_VISTA_LIFT);
+                        if (v != nullptr)
+                        {
+                            v->v_sprite.bounds.position.x = ch_man->player_ptr->v_sprite.bounds.position.x - 42;
+                            v->v_sprite.bounds.position.y = ch_man->player_ptr->v_sprite.bounds.position.y + 16;
+                        }
+                    }
+                    else
                     {
-                        s->idle_animation = &sebellus_fancy_stand;
-                        s->current_animation = &sebellus_fancy_stand;
+
+                        // Set up Ginger and Sebellus' sprites
+                        auto g = ch_man->find_by_index(CHAR_GINGER);
+                        if (g != nullptr)
+                        {
+                            g->idle_animation = &ginger_fancy_sit;
+                            g->current_animation = &ginger_fancy_sit;
+                        }
+
+                        auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                        if (s != nullptr)
+                        {
+                            s->idle_animation = &sebellus_fancy_stand;
+                            s->current_animation = &sebellus_fancy_stand;
+                        }
                     }
 
                     break;

@@ -518,7 +518,10 @@ void character::update(map_manager *current_map, bool db_inactive)
         custom_anim = false;
         if (moving)
         {
-            current_animation = &anim_walk;
+            if (index != CHAR_VISTA_LIFT)
+            {
+                current_animation = &anim_walk;
+            }
         }
         else if (idle_animation == nullptr)
         {

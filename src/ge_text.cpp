@@ -136,6 +136,10 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         {
             sound_items::snd_dialogue_vista.play(0.7);
         }
+        else if (portrait == &sprite_items::db_ch_vista_02)
+        {
+            sound_items::snd_dialogue_vista.play(0.7);
+        }
         else if (portrait == &sprite_items::db_ch_jeremy)
         {
             sound_items::snd_dialogue_jeremy.play(0.7);
@@ -146,14 +150,7 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         }
         else if (portrait == &sprite_items::db_ch_sebellus)
         {
-            if (emotion != EM_ANGRY)
-            {
-                sound_items::snd_dialogue_sebellus.play(0.4);
-            }
-            else
-            {
-                sound_items::snd_dialogue_typewriter.play(0.5);
-            }
+            sound_items::snd_dialogue_sebellus.play(0.4);
         }
         else if (typewriter)
         {
@@ -438,6 +435,12 @@ void dialogue_box::init(character_manager *ch_man)
         {
             ch_man->music_fadeout = false;
             music_items::ambient_wind.play(0.75);
+            break;
+        }
+        case ACT_MUSIC_WIND_HEARTBEAT:
+        {
+            ch_man->music_fadeout = false;
+            music_items::ambient_heartbeat.play(0.75);
             break;
         }
         case ACT_MUSIC_FADEOUT:
