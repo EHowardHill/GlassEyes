@@ -120,6 +120,15 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_hotel_01_night;
 		global_data_ptr->jeremy_position = {2, 2};
 		break;		}
+	case BLACK_TO_TRAIN: {
+		global_data_ptr->entry_map = &map_train_room_04;
+		global_data_ptr->bg_track = &music_items::bg_sorry_train;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		music::stop();
+		global_data_ptr->jeremy_position = {4, 3};
+		break;		}
+	case BLACK_TO_CANTERBURY: {
+		break;		}
 	default: { break; }
 	}
 }

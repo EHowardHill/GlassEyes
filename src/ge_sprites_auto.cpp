@@ -43,6 +43,8 @@
 #include "bn_sprite_items_spr_ack.h"
 #include "bn_sprite_items_spr_teddy.h"
 #include "bn_sprite_items_spr_vista_lift.h"
+#include "bn_sprite_items_spr_vista_02.h"
+#include "bn_sprite_items_spr_desmond.h"
 
 using namespace bn;
 
@@ -89,6 +91,8 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_ACK: { return &sprite_items::spr_ack; break; }
 	case CHAR_TEDDY: { return &sprite_items::spr_teddy; break; }
 	case CHAR_VISTA_LIFT: { return &sprite_items::spr_vista_lift; break; }
+	case CHAR_VISTA_02: { return &sprite_items::spr_vista_02; break; }
+	case CHAR_DESMOND: { return &sprite_items::spr_desmond; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -124,6 +128,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_GHOST: { return &ghost_spook; break; }
 	case CHAR_TEDDY: { return &teddy_idle; break; }
 	case CHAR_VISTA_LIFT: { return &vista_invisible; break; }
+	case CHAR_DESMOND: { return &desmond_idle; break; }
     default:
     {
         return nullptr;

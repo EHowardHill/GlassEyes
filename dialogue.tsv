@@ -1795,3 +1795,60 @@ vista_01
 vista_01_alt_01															
 	db_ch_vista_02	EM_SULLEN		Very well.											
 		EM_SKIP	ACT_HP							-100					
+															
+vista_bar															
+	db_ch_vista_02	EM_EXCITED		Human.. Welcome.	Order anything you	want from the bar.									
+	db_ch_vista_02	EM_SIDE_EYE		Please forgive me	for my behavior in	Flayithro.									
+	db_ch_vista_02	EM_DISAPPOINTED		I couldn't know what	happened to my	children.									
+	db_ch_vista_02	EM_SULLEN		And forgive me for	anything I might	say for a while.									
+	db_ch_vista_02	EM_DISAPPOINTED		In my smaller form,	alcohol has more of	an effect on me.									
+	db_ch_vista_02	EM_SULLEN		I ought not to be	speaking with you	right now.									
+	db_ch_vista_02	EM_LAUGH		Oh.. Goodness,	It can't do any	harm.									
+	db_ch_vista_02	EM_SIDE_EYE		I spoke with my	children earlier..	Oh dear..									
+	db_ch_vista_02	EM_SIDE_EYE		They do not take the	war seriously..										
+	db_ch_vista_02	EM_SIDE_EYE		I'm sure they shared	information humans	ought not know.									
+	db_ch_vista_02	EM_DISAPPOINTED		I must admit.. I	often feel tired of	the war as well.									
+	db_ch_vista_02	EM_SIDE_EYE		There is something I	do respect in you	humans.									
+	db_ch_vista_02	EM_SULLEN		You hate me. I	see your propaganda	quite often.									
+	db_ch_vista_02	EM_LAUGH		I deserve all of	your hatred.										
+	db_ch_vista_02	EM_SIDE_EYE		No.. Ginger told me	that you aren't from	New Berlin.									
+	db_ch_vista_02	EM_SIDE_EYE		You're from the	New World,	aren't you?									
+	db_ch_vista_02	EM_LAUGH		Haha.. You might not	even know who I am,	right?									
+	db_ch_vista_02	EM_SIDE_EYE		Forgive me.. I'm so	loose-lipped..										
+	db_ch_vista_02	EM_EXCITED		My daughter is fond	of you. Thank you	for protecting her.									
+	db_ch_vista_02	EM_SIDE_EYE		Her name is Selari,	but she introduces	"herself as ""Ginger""."									
+	db_ch_vista_02	EM_SIDE_EYE		Do you know why I	humor her by letting	her keep this name?									
+	db_ch_vista_02	EM_SIDE_EYE		..											
+	db_ch_vista_02	EM_SULLEN		..											
+	db_ch_vista_02	EM_SULLEN		This isn't the first	time she's tried to	leave, you know.									
+	db_ch_vista_02	EM_DISAPPOINTED		It's my fault. I	shouldn't have left	her alone this week.									
+	db_ch_vista_02	EM_SULLEN		I had business and	left her home. She	said she was sick.									
+	db_ch_vista_02	EM_SULLEN		I understand why she	feels like she needs	to go.									
+	db_ch_vista_02	EM_SIDE_EYE		I don't understand	why she doesn't	trust me.									
+	db_ch_vista_02	EM_SULLEN		It hurts my	feelings deeply.										
+	db_ch_vista_02	EM_LAUGH		But I've said enough	already. My loose	tongue..									
+	db_ch_vista_02	EM_EXCITED		Please.	Help yourself.	We'll be there soon.									
+															
+train_locked															
+				The door is locked.											
+															
+train_mirror															
+				How would you know	if it wasn't you?										
+															
+train_sebellus															
+				He looks like	nothing could wake	him up.									
+				Shoes on the bed.	Ew.										
+															
+train_ginger															
+	db_ch_ginger	EM_DISAPPOINTED		I don't get it.	I made it so far	this time.									
+	db_ch_ginger	EM_SULLEN		It doesn't matter.	I'll have better	luck next time.									
+	db_ch_ginger	EM_DEFAULT		At least we're able	to get you home.										
+	db_ch_ginger	EM_DEFAULT		..											
+	db_ch_ginger	EM_SULLEN		What's the point of	all of this?	Life, I mean.									
+	db_ch_ginger	EM_ANGRY		Feels like a sick	joke, doesn't it.										
+	db_ch_ginger	EM_ANGRY		Well I don't think	it's very funny.										
+															
+train_arrive															
+			ACT_SFX_CHIME	"""WE ARE NOW"	APPROACHING	"CANTERBURY."""									
+				"""PLEASE STAY"	"SEATED."""										
+		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					

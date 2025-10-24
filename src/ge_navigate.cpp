@@ -43,6 +43,7 @@ int navigate_map()
 
     switch (global_data_ptr->process_stage)
     {
+    case BLACK_TO_TRAIN:
     case FLAYITHRO_AWAKE:
     {
         global_data_ptr->costumes[CHAR_JEREMY] = COSTUME_JEREMY_FANCY;
@@ -100,14 +101,6 @@ int navigate_map()
         global_data_ptr->jeremy_position.y * 32};
     int spawn_action = current_map.action(spawn_pos);
 
-    if (spawn_action == NEW_BERLIN_SIGN)
-    {
-        if (current_map.bg_ptr.has_value())
-        {
-            current_map.bg_ptr.value().set_visible(true);
-        }
-    }
-
     // Auto-loaded conversations
     if (global_data_ptr->entry_map == &map_room01)
     {
@@ -119,6 +112,10 @@ int navigate_map()
         v_sprite_ptr::camera.x = global_data_ptr->entry_map->raw_size.x / 2;
         v_sprite_ptr::camera.y = global_data_ptr->entry_map->raw_size.y / 4;
         global_data_ptr->shake = true;
+    }
+
+    if (current_map.bg_ptr.has_value())
+    {
         current_map.bg_ptr.value().set_visible(true);
     }
 
@@ -191,7 +188,11 @@ int navigate_map()
 
         if (current_map.bg_ptr.has_value())
         {
-            if (global_data_ptr->entry_map == &map_cutscene_channel)
+            if (global_data_ptr->entry_map == &map_cutscene_channel ||
+                global_data_ptr->entry_map == &map_train_room_01 ||
+                global_data_ptr->entry_map == &map_train_room_02 ||
+                global_data_ptr->entry_map == &map_train_room_03 ||
+                global_data_ptr->entry_map == &map_train_room_04)
             {
                 current_map.bg_ptr.value().set_x(current_map.bg_ptr.value().x() - 5);
             }

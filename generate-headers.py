@@ -476,6 +476,7 @@ def handle_action(dat, automatic=False):
                     + datt["bg_track"]
                     + ";\n"
                 )
+                block += "\t\tmusic::stop();\n"
             if "bg" in datt.keys():
                 block += (
                     "\t\tglobal_data_ptr->bg = &regular_bg_items::" + datt["bg"] + ";\n"
@@ -484,7 +485,6 @@ def handle_action(dat, automatic=False):
                     references += (
                         '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
                     )
-                block += "\t\tmusic::stop();\n"
             if "positions" in datt.keys():
                 characters = datt["positions"]
                 for c_key in characters.keys():

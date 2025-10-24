@@ -384,6 +384,22 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&hotel_fridge);
 		break;
 	}
+	case 251:
+	{
+		if (global_data_ptr->action_iterations[251] == 1) { ch_man.load(&train_locked); } else
+		{ };
+		break;
+	}
+	case 255:
+	{
+		ch_man.load(&train_mirror);
+		break;
+	}
+	case 257:
+	{
+		ch_man.load(&train_sebellus);
+		break;
+	}
 	}
 	return -1;
 }
@@ -573,6 +589,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_cave_01;
 		global_data_ptr->bg_track = &music_items::cave_01;
+		music::stop();
 		global_data_ptr->jeremy_position = {7, 12};
 		global_data_ptr->ginger_position = {6, 12};
 		return NEW_MAP;
@@ -602,6 +619,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_forest_01;
 		global_data_ptr->bg_track = &music_items::forest_01;
+		music::stop();
 		global_data_ptr->jeremy_position = {67, 3};
 		global_data_ptr->ginger_position = {66, 3};
 		return NEW_MAP;
@@ -713,6 +731,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_cave_cowbemmie;
 		global_data_ptr->bg_track = &music_items::bg_dixieland;
+		music::stop();
 		global_data_ptr->jeremy_position = {2, 3};
 		global_data_ptr->ginger_position = {1, 3};
 		return NEW_MAP;
@@ -722,6 +741,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_cave_03;
 		global_data_ptr->bg_track = &music_items::forest_01;
+		music::stop();
 		global_data_ptr->jeremy_position = {5, 23};
 		global_data_ptr->ginger_position = {6, 23};
 		return NEW_MAP;
@@ -747,6 +767,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_forest_03;
 		global_data_ptr->bg_track = &music_items::bg_avalon;
+		music::stop();
 		global_data_ptr->jeremy_position = {14, 15};
 		global_data_ptr->ginger_position = {15, 15};
 		return NEW_MAP;
@@ -780,6 +801,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_tavern_01;
 		global_data_ptr->bg_track = &music_items::theme_visker;
+		music::stop();
 		global_data_ptr->jeremy_position = {8, 10};
 		global_data_ptr->ginger_position = {7, 10};
 		return NEW_MAP;
@@ -789,6 +811,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_shop_01;
 		global_data_ptr->bg_track = &music_items::shop;
+		music::stop();
 		global_data_ptr->jeremy_position = {5, 8};
 		global_data_ptr->ginger_position = {4, 8};
 		return NEW_MAP;
@@ -798,6 +821,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_forest_03;
 		global_data_ptr->bg_track = &music_items::bg_avalon;
+		music::stop();
 		global_data_ptr->jeremy_position = {47, 8};
 		global_data_ptr->ginger_position = {46, 8};
 		return NEW_MAP;
@@ -807,6 +831,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_forest_03;
 		global_data_ptr->bg_track = &music_items::bg_avalon;
+		music::stop();
 		global_data_ptr->jeremy_position = {24, 14};
 		global_data_ptr->ginger_position = {23, 14};
 		return NEW_MAP;
@@ -816,6 +841,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_forest_04;
 		global_data_ptr->bg_track = &music_items::bg_spamton;
+		music::stop();
 		global_data_ptr->jeremy_position = {4, 7};
 		global_data_ptr->ginger_position = {3, 7};
 		return NEW_MAP;
@@ -825,6 +851,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_forest_03;
 		global_data_ptr->bg_track = &music_items::bg_avalon;
+		music::stop();
 		global_data_ptr->jeremy_position = {6, 2};
 		global_data_ptr->ginger_position = {6, 1};
 		return NEW_MAP;
@@ -868,8 +895,8 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_forest_03_attack;
 		global_data_ptr->bg_track = &music_items::ambient_wind;
-		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
 		music::stop();
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
 		global_data_ptr->jeremy_position = {25, 16};
 		global_data_ptr->ginger_position = {26, 16};
 		return NEW_MAP;
@@ -885,6 +912,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_dark_01;
 		global_data_ptr->bg_track = &music_items::bg_sorry;
+		music::stop();
 		global_data_ptr->jeremy_position = {0, 10};
 		global_data_ptr->ginger_position = {1, 10};
 		return NEW_MAP;
@@ -970,6 +998,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_dark_05;
 		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+		music::stop();
 		global_data_ptr->jeremy_position = {1, 30};
 		global_data_ptr->ginger_position = {1, 29};
 		return NEW_MAP;
@@ -985,6 +1014,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_dark_06;
 		global_data_ptr->bg_track = &music_items::bg_sorry;
+		music::stop();
 		global_data_ptr->jeremy_position = {2, 18};
 		global_data_ptr->ginger_position = {1, 18};
 		return NEW_MAP;
@@ -1021,6 +1051,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_room_garden;
 		global_data_ptr->bg_track = &music_items::ambient_wind;
+		music::stop();
 		global_data_ptr->jeremy_position = {6, 10};
 		return NEW_MAP;
 		break;
@@ -1063,6 +1094,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_room_03;
 		global_data_ptr->bg_track = &music_items::theme_anata;
+		music::stop();
 		global_data_ptr->jeremy_position = {15, 4};
 		return NEW_MAP;
 		break;
@@ -1182,6 +1214,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_to_flay_01b;
 		global_data_ptr->bg_track = &music_items::cave_01;
+		music::stop();
 		global_data_ptr->jeremy_position = {4, 13};
 		global_data_ptr->ginger_position = {3, 13};
 		global_data_ptr->sebellus_position = {2, 13};
@@ -1192,6 +1225,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		global_data_ptr->entry_map = &map_to_flay_01;
 		global_data_ptr->bg_track = &music_items::forest_01;
+		music::stop();
 		global_data_ptr->jeremy_position = {11, 18};
 		global_data_ptr->ginger_position = {12, 18};
 		global_data_ptr->sebellus_position = {13, 18};
@@ -1218,6 +1252,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		music_items::bg_flayithro.play();
 		global_data_ptr->entry_map = &map_flayithro_01;
 		global_data_ptr->bg_track = &music_items::bg_flayithro;
+		music::stop();
 		global_data_ptr->jeremy_position = {3, 4};
 		global_data_ptr->ginger_position = {2, 4};
 		global_data_ptr->sebellus_position = {1, 4};
@@ -1340,6 +1375,85 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->entry_map = &map_flayithro_01_night;
 		global_data_ptr->jeremy_position = {30, 20};
 		return NEW_MAP;
+		break;
+	}
+	case 244:
+	{
+		if (global_data_ptr->action_iterations[244] == 0) { ch_man.load(&vista_bar); global_data_ptr->action_iterations[244] += 1; } else
+		{ };
+		break;
+	}
+	case 241:
+	{
+		global_data_ptr->entry_map = &map_train_01;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {52, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 245:
+	{
+		global_data_ptr->entry_map = &map_train_room_03;
+		global_data_ptr->jeremy_position = {4, 6};
+		return NEW_MAP;
+		break;
+	}
+	case 246:
+	{
+		global_data_ptr->entry_map = &map_train_room_02;
+		global_data_ptr->jeremy_position = {4, 6};
+		return NEW_MAP;
+		break;
+	}
+	case 247:
+	{
+		global_data_ptr->entry_map = &map_train_room_01;
+		global_data_ptr->jeremy_position = {4, 6};
+		return NEW_MAP;
+		break;
+	}
+	case 248:
+	{
+		global_data_ptr->entry_map = &map_train_01;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {46, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 249:
+	{
+		global_data_ptr->entry_map = &map_train_01;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {40, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 250:
+	{
+		global_data_ptr->entry_map = &map_train_01;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {34, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 252:
+	{
+		global_data_ptr->entry_map = &map_train_bathroom;
+		global_data_ptr->jeremy_position = {4, 4};
+		return NEW_MAP;
+		break;
+	}
+	case 253:
+	{
+		global_data_ptr->entry_map = &map_train_01;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {58, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 254:
+	{
+		ch_man.load(&train_arrive);
 		break;
 	}
 	}

@@ -407,6 +407,11 @@ void dialogue_box::init(character_manager *ch_man)
             sound_items::snd_explosion.play();
             break;
         }
+        case ACT_SFX_CHIME:
+        {
+            sound_items::snd_chime.play();
+            break;
+        }
         case ACT_MUSIC_VISKER:
         {
             ch_man->music_fadeout = false;

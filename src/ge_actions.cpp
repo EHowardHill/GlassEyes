@@ -84,38 +84,12 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     break;
                 }
 
-                case 49:
-                {
-                    if (man->bg_ptr.has_value())
-                    {
-                        man->bg_ptr.value().set_visible(true);
-                    }
-                    break;
-                }
-                case 50:
-                {
-                    if (man->bg_ptr.has_value())
-                    {
-                        man->bg_ptr.value().set_visible(false);
-                    }
-                    break;
-                }
-
                 case CHAT_SNEAKER:
                 {
                     BN_LOG("Iterations: ", global_data_ptr->action_iterations[CHAT_SNEAKER]);
                     if (global_data_ptr->action_iterations[CHAT_SNEAKER] > 0)
                     {
                         ch_man->load(&scruffys_05b);
-                    }
-                    break;
-                }
-
-                case 85:
-                {
-                    if (man->bg_ptr.has_value())
-                    {
-                        man->bg_ptr.value().set_visible(true);
                     }
                     break;
                 }
@@ -233,6 +207,32 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     }
 
                     break;
+                }
+                case 243:
+                {
+                    auto v = ch_man->find_by_index(CHAR_VISTA_02);
+                    if (v != nullptr)
+                    {
+                        v->current_animation = &vista_drinking;
+                        v->idle_animation = &vista_drinking;
+                    }
+                }
+                case 256:
+                {
+                    // Set up Ginger and Sebellus' sprites
+                    auto g = ch_man->find_by_index(CHAR_GINGER);
+                    if (g != nullptr)
+                    {
+                        g->idle_animation = &ginger_fancy_wistful;
+                        g->current_animation = &ginger_fancy_wistful;
+                    }
+
+                    auto s = ch_man->find_by_index(CHAR_SEBELLUS);
+                    if (s != nullptr)
+                    {
+                        s->idle_animation = &sebellus_fancy_sleep;
+                        s->current_animation = &sebellus_fancy_sleep;
+                    }
                 }
                 default:
                 {

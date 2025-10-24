@@ -34,6 +34,7 @@
         "SFX_KNOCK",
         "SFX_FIRE",
         "SFX_EXPLOSION",
+        "SFX_CHIME",
         "HP",
         "GAME",
         "GOLD",

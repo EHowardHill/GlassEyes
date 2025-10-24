@@ -21,6 +21,8 @@ enum progress
 	BLACK_TO_BEACH,
 	TEST_MAP,
 	FLAYITHRO_AWAKE,
+	BLACK_TO_TRAIN,
+	BLACK_TO_CANTERBURY,
 };
 
 void resolve_chapter();

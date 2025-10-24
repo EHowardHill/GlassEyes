@@ -4,6 +4,10 @@ from PIL import Image
 import math
 import json  # Add this import
 
+# Define the magic pink color for transparency
+TRANSPARENT_PINK = (255, 0, 255)
+
+
 # Process existing BMPs without JSON files
 graphics_dir = "graphics"
 if os.path.exists(graphics_dir):
@@ -51,7 +55,8 @@ def process_bmp(input_path, output_path):
     max_dim = max(orig_width, orig_height)
     new_size = math.ceil(max_dim / 256) * 256
 
-    # Create new square canvas with white background
+    # Create new square canvas with black background
+    # The quantizer will pick up the pink from the image
     new_img = Image.new("RGB", (new_size, new_size), (0, 0, 0))
 
     # Paste original image in top-left corner
@@ -65,7 +70,7 @@ def process_bmp(input_path, output_path):
     palette_data = quantized.getpalette()
 
     # Extract RGB values from palette (palette is a flat list of R,G,B values)
-    colors = []
+    raw_colors = []
     num_colors = min(16, len(palette_data) // 3)
     for i in range(num_colors):
         r = palette_data[i * 3]
@@ -73,29 +78,77 @@ def process_bmp(input_path, output_path):
         b = palette_data[i * 3 + 2]
         # Calculate luminance for sorting
         luminance = 0.299 * r + 0.587 * g + 0.114 * b
-        colors.append((r, g, b, luminance))
+        raw_colors.append((r, g, b, luminance))
 
-    # Sort colors by luminance (darkest to lightest)
-    colors.sort(key=lambda x: x[3])
+    # --- New Palette Sorting Logic ---
+    # Find pink and separate it from other colors
+    pink_color_data = None
+    other_colors = []
 
-    # Create mapping from old indices to new indices
-    old_to_new = {}
+    for r, g, b, luminance in raw_colors:
+        if (r, g, b) == TRANSPARENT_PINK:
+            if pink_color_data is None:  # Only grab the first instance
+                pink_color_data = (r, g, b, luminance)
+        else:
+            other_colors.append((r, g, b, luminance))
+
+    # Sort *other* colors by luminance
+    other_colors.sort(key=lambda x: x[3])
+
+    # Create the new sorted color list, forcing pink to be at index 0
+    sorted_colors = []
+
+    # Add pink at index 0
+    if pink_color_data:
+        sorted_colors.append(pink_color_data)
+    else:
+        # Pink wasn't in the image, force it in at index 0
+        # Use 0 for luminance, it doesn't matter
+        sorted_colors.append(
+            (TRANSPARENT_PINK[0], TRANSPARENT_PINK[1], TRANSPARENT_PINK[2], 0)
+        )
+        # If we were already at 16, remove the last (brightest) one
+        if len(other_colors) >= 16:
+            other_colors.pop()
+
+    # Add the rest of the colors
+    sorted_colors.extend(other_colors)
+
+    # Ensure we are still at max 16 colors
+    sorted_colors = sorted_colors[:16]
+
+    # --- New Remapping Logic ---
+
+    # Build the new flat palette list
     new_palette = []
-    for new_idx, (r, g, b, _) in enumerate(colors):
-        # Find this color in the original palette
-        for old_idx in range(num_colors):
-            old_r = palette_data[old_idx * 3]
-            old_g = palette_data[old_idx * 3 + 1]
-            old_b = palette_data[old_idx * 3 + 2]
-            if old_r == r and old_g == g and old_b == b:
-                old_to_new[old_idx] = new_idx
-                break
+    # This map stores (R,G,B) -> new_index
+    color_to_new_index = {}
+
+    for new_idx, (r, g, b, _) in enumerate(sorted_colors):
         new_palette.extend([r, g, b])
+        if (r, g, b) not in color_to_new_index:
+            color_to_new_index[(r, g, b)] = new_idx
+
+    # Fill the rest of the palette with black if less than 16 colors
+    while len(new_palette) < 16 * 3:
+        new_palette.extend([0, 0, 0])
+
+    # Build a map from the OLD palette index to the NEW palette index
+    old_index_to_new_index = {}
+    for old_idx in range(num_colors):
+        old_r = palette_data[old_idx * 3]
+        old_g = palette_data[old_idx * 3 + 1]
+        old_b = palette_data[old_idx * 3 + 2]
+
+        # Find the new index for this old color
+        # Default to 0 (pink) if its color was removed (e.g., > 16 colors)
+        new_idx = color_to_new_index.get((old_r, old_g, old_b), 0)
+        old_index_to_new_index[old_idx] = new_idx
 
     # Create new image with remapped indices
     remapped_data = []
-    for pixel in quantized.getdata():
-        remapped_data.append(old_to_new.get(pixel, 0))
+    for pixel_old_idx in quantized.getdata():
+        remapped_data.append(old_index_to_new_index.get(pixel_old_idx, 0))
 
     # Create final indexed image
     final_img = Image.new("P", (new_size, new_size))
@@ -103,14 +156,13 @@ def process_bmp(input_path, output_path):
     final_img.putdata(remapped_data)
 
     # Save as BMP without color space information
-    # PIL doesn't add color space info by default for BMP files
     final_img.save(output_path, "BMP")
 
 
 def create_tiled_bmp(png_path, output_path, grid_size, tile_indices, sprite_size=32):
-    # Load the PNG spritesheet
+    # Load the PNG spritesheet, ensuring it's RGBA
     try:
-        spritesheet = Image.open(png_path)
+        spritesheet = Image.open(png_path).convert("RGBA")
     except Exception as e:
         raise ValueError(f"Could not load PNG file: {e}")
 
@@ -137,40 +189,44 @@ def create_tiled_bmp(png_path, output_path, grid_size, tile_indices, sprite_size
     # Create output image
     output_width = grid_width * sprite_size
     output_height = grid_height * sprite_size
-    output_image = Image.new("RGB", (output_width, output_height))
+
+    # Create an RGBA canvas with a solid OPAQUE PINK background
+    # TRANSPARENT_PINK + (255,) -> (255, 0, 255, 255)
+    output_image = Image.new(
+        "RGBA", (output_width, output_height), TRANSPARENT_PINK + (255,)
+    )
 
     # Place sprites according to indices
     for i, sprite_idx in enumerate(tile_indices):
-        # Calculate position in grid
-        grid_x = i % grid_width
-        grid_y = i // grid_width
+        # Only paste non-empty tiles. Empty tiles (idx 0) will remain pink.
+        if sprite_idx != 0:
+            # Calculate position in grid
+            grid_x = i % grid_width
+            grid_y = i // grid_width
 
-        # Calculate pixel position in output
-        out_x = grid_x * sprite_size
-        out_y = grid_y * sprite_size
+            # Calculate pixel position in output
+            out_x = grid_x * sprite_size
+            out_y = grid_y * sprite_size
 
-        # If index is 0, draw a black square
-        if sprite_idx == 0:
-            # Create a black tile
-            black_tile = Image.new("RGB", (sprite_size, sprite_size), color="black")
-            output_image.paste(black_tile, (out_x, out_y))
-        else:
             # Extract sprite from spritesheet (adjust for 1-based indexing)
             sprite_y = (sprite_idx - 1) * sprite_size
             sprite = spritesheet.crop(
                 (0, sprite_y, sprite_size, sprite_y + sprite_size)
             )
 
-            # Paste sprite to output
-            output_image.paste(sprite, (out_x, out_y))
+            # Paste sprite to output, using its own alpha channel as a mask.
+            # Transparent pixels in the sprite will not be pasted,
+            # revealing the pink background.
+            output_image.paste(sprite, (out_x, out_y), mask=sprite)
 
     # Ensure output directory exists
     output_dir = os.path.dirname(output_path)
     if output_dir and not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    # Save as BMP
-    output_image.save(output_path, "BMP")
+    # Save as BMP, converting from RGBA to RGB first.
+    # This flattens the image, preserving the pink background.
+    output_image.convert("RGB").save(output_path, "BMP")
 
 
 map_dir = os.path.join("bgs", "maps")
@@ -214,14 +270,19 @@ for map in maps:
         "bgs/tilesets/" + tileset_root.findall(".//image")[0].attrib["source"]
     )
 
-    lbl_blue = (
-        int(
-            root.find(".//tileset[@source='../tilesets/blue-labels.tsx']").attrib[
-                "firstgid"
-            ]
+    try:
+        lbl_blue = (
+            int(
+                root.find(".//tileset[@source='../tilesets/blue-labels.tsx']").attrib[
+                    "firstgid"
+                ]
+            )
+            - 1
         )
-        - 1
-    )
+    except:
+        print(map)
+        print("blue missing")
+        exit(1)
 
     # Find all layer elements
     layers = root.findall(".//layer")
@@ -279,10 +340,18 @@ template = """
 inline constexpr map map_$name = {
     {$width, $height},
     {$raw_width, $raw_height},
-    {\n\t$metadata\n    },
-    {\n\t$colliders\n    },
-    {\n\t$actions\n    },
-    {\n\t$characters\n    },
+    {
+    $metadata
+    },
+    {
+    $colliders
+    },
+    {
+    $actions
+    },
+    {
+    $characters
+    },
     &bn::regular_bg_items::map_$name};
 """
 
@@ -310,5 +379,3 @@ with open(os.path.join(includes_dir, "ge_map_data.h"), "w") as f:
             "$definitions", "\n".join(full_data)
         )
     )
-
-# No .cpp file needed anymore

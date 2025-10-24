@@ -69,6 +69,13 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "drinking": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "visker": {
@@ -140,6 +147,13 @@
                 ],
                 "speed": 1,
                 "loop": true
+            },
+            "fancy_wistful": {
+                "frames": [
+                    11
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "sebellus": {
@@ -187,6 +201,13 @@
                 ],
                 "speed": 1,
                 "loop": true
+            },
+            "fancy_sleep": {
+                "frames": [
+                    13
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "sm": {
@@ -462,6 +483,16 @@
                 "speed": 1,
                 "loop": true
             }
+        },
+        "desmond": {
+            "idle": {
+                "frames": [
+                    0,
+                    1
+                ],
+                "speed": 1,
+                "loop": true
+            }
         }
     },
     "items": {
@@ -547,6 +578,10 @@
         "Vista_Lift": {
             "follow": "Jeremy",
             "idle_animation": "vista_invisible"
+        },
+        "Vista_02": {},
+        "Desmond": {
+            "idle_animation": "desmond_idle"
         }
     },
     "cutscenes": {
@@ -867,6 +902,17 @@
             },
             "235": {
                 "auto": "hotel_fridge"
+            },
+            "251": {
+                "sequence": [
+                    "train_locked"
+                ]
+            },
+            "255": {
+                "auto": "train_mirror"
+            },
+            "257": {
+                "auto": "train_sebellus"
             }
         },
         "automatic": {
@@ -2362,6 +2408,118 @@
                         ]
                     }
                 }
+            },
+            "244": {
+                "sequence": [
+                    "vista_bar"
+                ]
+            },
+            "241": {
+                "new_map": {
+                    "map": "train_01",
+                    "bg": "big_bg_forest_01",
+                    "positions": {
+                        "jeremy": [
+                            52,
+                            2
+                        ]
+                    }
+                }
+            },
+            "245": {
+                "new_map": {
+                    "map": "train_room_03",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            6
+                        ]
+                    }
+                }
+            },
+            "246": {
+                "new_map": {
+                    "map": "train_room_02",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            6
+                        ]
+                    }
+                }
+            },
+            "247": {
+                "new_map": {
+                    "map": "train_room_01",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            6
+                        ]
+                    }
+                }
+            },
+            "248": {
+                "new_map": {
+                    "map": "train_01",
+                    "bg": "big_bg_forest_01",
+                    "positions": {
+                        "jeremy": [
+                            46,
+                            2
+                        ]
+                    }
+                }
+            },
+            "249": {
+                "new_map": {
+                    "map": "train_01",
+                    "bg": "big_bg_forest_01",
+                    "positions": {
+                        "jeremy": [
+                            40,
+                            2
+                        ]
+                    }
+                }
+            },
+            "250": {
+                "new_map": {
+                    "map": "train_01",
+                    "bg": "big_bg_forest_01",
+                    "positions": {
+                        "jeremy": [
+                            34,
+                            2
+                        ]
+                    }
+                }
+            },
+            "252": {
+                "new_map": {
+                    "map": "train_bathroom",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            4
+                        ]
+                    }
+                }
+            },
+            "253": {
+                "new_map": {
+                    "map": "train_01",
+                    "bg": "big_bg_forest_01",
+                    "positions": {
+                        "jeremy": [
+                            58,
+                            2
+                        ]
+                    }
+                }
+            },
+            "254": {
+                "auto": "train_arrive"
             }
         }
     },
@@ -2580,7 +2738,16 @@
             }
         },
         "BLACK_TO_TRAIN": {
-            "bg_track": "bg_office"
-        }
+            "map": "train_room_04",
+            "bg_track": "bg_sorry_train",
+            "bg": "big_bg_forest_01",
+            "positions": {
+                "jeremy": [
+                    4,
+                    3
+                ]
+            }
+        },
+        "BLACK_TO_CANTERBURY": {}
     }
 }
