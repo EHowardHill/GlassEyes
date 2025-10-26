@@ -102,6 +102,13 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "fancy_hug": {
+                "frames": [
+                    10
+                ],
+                "speed": 1,
+                "loop": true
             }
         },
         "ginger": {
@@ -151,6 +158,13 @@
             "fancy_wistful": {
                 "frames": [
                     11
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "fancy_hug": {
+                "frames": [
+                    12
                 ],
                 "speed": 0,
                 "loop": false
@@ -913,6 +927,19 @@
             },
             "257": {
                 "auto": "train_sebellus"
+            },
+            "260": {
+                "music": "bg_canter_02",
+                "new_map": {
+                    "map": "canter_01",
+                    "bg": "big_bg_city_01",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            11
+                        ]
+                    }
+                }
             }
         },
         "automatic": {
@@ -2520,6 +2547,24 @@
             },
             "254": {
                 "auto": "train_arrive"
+            },
+            "258": {
+                "sequence": [
+                    "canter_01"
+                ],
+                "music": "intro_03"
+            },
+            "259": {
+                "music": "bg_canter_01",
+                "new_map": {
+                    "map": "to_canter_02",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            3
+                        ]
+                    }
+                }
             }
         }
     },
@@ -2748,6 +2793,14 @@
                 ]
             }
         },
-        "BLACK_TO_CANTERBURY": {}
+        "BLACK_TO_CANTERBURY": {
+            "map": "to_canter_01",
+            "positions": {
+                "jeremy": [
+                    6,
+                    3
+                ]
+            }
+        }
     }
 }

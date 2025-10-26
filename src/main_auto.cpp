@@ -128,6 +128,8 @@ void resolve_chapter()
 		global_data_ptr->jeremy_position = {4, 3};
 		break;		}
 	case BLACK_TO_CANTERBURY: {
+		global_data_ptr->entry_map = &map_to_canter_01;
+		global_data_ptr->jeremy_position = {6, 3};
 		break;		}
 	default: { break; }
 	}

@@ -1852,3 +1852,27 @@ train_arrive
 			ACT_SFX_CHIME	"""WE ARE NOW"	APPROACHING	"CANTERBURY."""									
 				"""PLEASE STAY"	"SEATED."""										
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
+															
+canter_01															
+		EM_SKIP	ACT_WALK							CHAR_JEREMY		{7,3}			
+		EM_SKIP	ACT_WALK							CHAR_GINGER		{9,3}			
+		EM_SKIP	ACT_WALK							CHAR_SEBELLUS		{10,3}			
+	db_ch_vista_02	EM_SULLEN		My children and I	have business to	attend to.									
+	db_ch_vista_02	EM_SULLEN		Here is 999G.	It will be enough to	fly you home.									
+	db_ch_vista_02	EM_SULLEN		Thank you for taking	care of my children.										
+	db_ch_ginger	EM_DISAPPOINTED		..											
+	db_ch_ginger	EM_SAD	ACT_WALK	..						CHAR_GINGER		{8,3}			
+	db_ch_ginger	EM_DISAPPOINTED	ACT_MUSIC_FADEOUT	..	..	..									
+		EM_SKIP								CHAR_JEREMY	&jeremy_fancy_hug				
+		EM_SKIP	ACT_TELEPORT							CHAR_GINGER		{8,3}			
+	db_ch_ginger	EM_WEEP		..						CHAR_GINGER	&ginger_fancy_hug				
+	db_ch_ginger	EM_SULLEN		Thank you.											
+	db_ch_ginger	EM_LAUGH		Don't forget us, ok?											
+	db_ch_sebellus	EM_HAPPY		I don't think he	could even if he	wanted to.									
+	db_ch_vista_02	EM_SULLEN		Come along, it's	time for us to have	a word with Henry.									
+	db_ch_ginger	EM_SULLEN		Goodbye.											
+	db_ch_sebellus	EM_HAPPY		Smell ya' later.											
+	db_ch_vista_02	EM_SULLEN		Farewell.	Please do not	follow us.									
+		EM_SKIP	ACT_WALK							CHAR_VISTA_02		{48,5}			
+		EM_SKIP	ACT_WALK							CHAR_GINGER		{48,6}			
+		EM_SKIP	ACT_WALK							CHAR_SEBELLUS		{48,6}			

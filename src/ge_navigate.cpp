@@ -45,6 +45,7 @@ int navigate_map()
     {
     case BLACK_TO_TRAIN:
     case FLAYITHRO_AWAKE:
+    case BLACK_TO_CANTERBURY:
     {
         global_data_ptr->costumes[CHAR_JEREMY] = COSTUME_JEREMY_FANCY;
         global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_FANCY;

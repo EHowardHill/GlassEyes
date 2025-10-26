@@ -91,6 +91,7 @@ extern const conversation broken_avalon_00;
 extern const conversation broken_avalon_01;
 extern const conversation broken_avalon_01_alt_01;
 extern const conversation broken_avalon_02;
+extern const conversation canter_01;
 extern const conversation captive_01;
 extern const conversation cave_01;
 extern const conversation cave_01_alt_01;

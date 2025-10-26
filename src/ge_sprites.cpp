@@ -332,9 +332,17 @@ void character::update(map_manager *current_map, bool db_inactive)
             }
         }
 
+        // *** BEGIN CHANGE ***
+        bool is_move_to_active = false;
+        // *** END CHANGE ***
+
         // Replace the move_to logic section with this improved version
         if (move_to.x != 0 && move_to.y != 0)
         {
+            // *** BEGIN CHANGE ***
+            is_move_to_active = true;
+            // *** END CHANGE ***
+
             vector_2 move_to_exp = {
                 (move_to.x * 32) + 16,
                 (move_to.y * 32) + 16};
@@ -459,54 +467,62 @@ void character::update(map_manager *current_map, bool db_inactive)
             }
         }
 
-        if (delta.x != 0 || delta.y != 0)
+        // *** BEGIN CHANGE ***
+        // Only check collisions if we are NOT moving via move_to
+        if (!is_move_to_active)
         {
-            bound future_bounds_x = get_collision_bounds();
-            future_bounds_x.position.x = future_bounds_x.position.x + delta.x;
-
-            bound future_bounds_y = get_collision_bounds();
-            future_bounds_y.position.y = future_bounds_y.position.y + delta.y;
-
-            // Check X movement
-            if (current_map->check_box_collision(future_bounds_x, ch_man))
+            // *** END CHANGE ***
+            if (delta.x != 0 || delta.y != 0)
             {
-                delta.x = 0;
-            }
+                bound future_bounds_x = get_collision_bounds();
+                future_bounds_x.position.x = future_bounds_x.position.x + delta.x;
 
-            // Check Y movement
-            if (current_map->check_box_collision(future_bounds_y, ch_man))
-            {
-                delta.y = 0;
-            }
+                bound future_bounds_y = get_collision_bounds();
+                future_bounds_y.position.y = future_bounds_y.position.y + delta.y;
 
-            // For diagonal movement, also check the combined movement
-            if (delta.x != 0 && delta.y != 0)
-            {
-                bound future_bounds_both = get_collision_bounds();
-                future_bounds_both.position.x = future_bounds_both.position.x + delta.x;
-                future_bounds_both.position.y = future_bounds_both.position.y + delta.y;
-
-                if (current_map->check_box_collision(future_bounds_both, ch_man))
+                // Check X movement
+                if (current_map->check_box_collision(future_bounds_x, ch_man))
                 {
-                    // Try to slide along walls
-                    // If diagonal fails but individual axes might work, keep the working axis
-                    if (delta.x != 0 && !current_map->check_box_collision(future_bounds_x, ch_man))
+                    delta.x = 0;
+                }
+
+                // Check Y movement
+                if (current_map->check_box_collision(future_bounds_y, ch_man))
+                {
+                    delta.y = 0;
+                }
+
+                // For diagonal movement, also check the combined movement
+                if (delta.x != 0 && delta.y != 0)
+                {
+                    bound future_bounds_both = get_collision_bounds();
+                    future_bounds_both.position.x = future_bounds_both.position.x + delta.x;
+                    future_bounds_both.position.y = future_bounds_both.position.y + delta.y;
+
+                    if (current_map->check_box_collision(future_bounds_both, ch_man))
                     {
-                        delta.y = 0; // Can move X but not Y
-                    }
-                    else if (delta.y != 0 && !current_map->check_box_collision(future_bounds_y, ch_man))
-                    {
-                        delta.x = 0; // Can move Y but not X
-                    }
-                    else
-                    {
-                        // Can't move in either direction
-                        delta.x = 0;
-                        delta.y = 0;
+                        // Try to slide along walls
+                        // If diagonal fails but individual axes might work, keep the working axis
+                        if (delta.x != 0 && !current_map->check_box_collision(future_bounds_x, ch_man))
+                        {
+                            delta.y = 0; // Can move X but not Y
+                        }
+                        else if (delta.y != 0 && !current_map->check_box_collision(future_bounds_y, ch_man))
+                        {
+                            delta.x = 0; // Can move Y but not X
+                        }
+                        else
+                        {
+                            // Can't move in either direction
+                            delta.x = 0;
+                            delta.y = 0;
+                        }
                     }
                 }
             }
-        }
+            // *** BEGIN CHANGE ***
+        } // End of !is_move_to_active block
+        // *** END CHANGE ***
 
         // Apply movement with fixed direction (always do this, even if delta is 0)
         v_sprite.bounds.position.x = v_sprite.bounds.position.x + delta.x;

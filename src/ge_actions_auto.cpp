@@ -1,6 +1,7 @@
 #include "bn_music.h"
 #include "bn_music_items.h"
 
+#include "bn_regular_bg_items_big_bg_city_01.h"
 #include "bn_regular_bg_items_big_bg_forest_01.h"
 
 #include "main_auto.h"
@@ -398,6 +399,15 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	case 257:
 	{
 		ch_man.load(&train_sebellus);
+		break;
+	}
+	case 260:
+	{
+		music_items::bg_canter_02.play();
+		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg = &regular_bg_items::big_bg_city_01;
+		global_data_ptr->jeremy_position = {3, 11};
+		return NEW_MAP;
 		break;
 	}
 	}
@@ -1454,6 +1464,21 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	case 254:
 	{
 		ch_man.load(&train_arrive);
+		break;
+	}
+	case 258:
+	{
+		music_items::intro_03.play();
+		if (global_data_ptr->action_iterations[258] == 0) { ch_man.load(&canter_01); global_data_ptr->action_iterations[258] += 1; } else
+		{ };
+		break;
+	}
+	case 259:
+	{
+		music_items::bg_canter_01.play();
+		global_data_ptr->entry_map = &map_to_canter_02;
+		global_data_ptr->jeremy_position = {2, 3};
+		return NEW_MAP;
 		break;
 	}
 	}
