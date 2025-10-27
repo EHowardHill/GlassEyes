@@ -49,6 +49,7 @@ enum actions
     ACT_SFX_FIRE,
     ACT_SFX_EXPLOSION,
     ACT_SFX_CHIME,
+    ACT_SFX_CLICK,
     ACT_HP,
     ACT_GAME,
     ACT_GOLD,

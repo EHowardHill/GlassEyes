@@ -1876,3 +1876,31 @@ canter_01
 		EM_SKIP	ACT_WALK							CHAR_VISTA_02		{48,5}			
 		EM_SKIP	ACT_WALK							CHAR_GINGER		{48,6}			
 		EM_SKIP	ACT_WALK							CHAR_SEBELLUS		{48,6}			
+															
+matt_01															
+	db_ch_matt	EM_DEFAULT		D-DOES MINE EYE	DECEIVE ME?!	..A PARISHONER?!?				CHAR_MATT	&matt_alas				
+	db_ch_matt	EM_DEFAULT		Oh.. I see, you're	not from around	here, are you.				CHAR_MATT	&matt_erm				
+	db_ch_matt	EM_DEFAULT		WELCOME! I am the	A.I.RCHBISHOP of	CANTERBURY, Matthew!				CHAR_MATT	&matt_yay				
+	db_ch_matt	EM_DEFAULT		However, I get	"called ""Matt"" "	a TON.									
+	db_ch_matt	EM_DEFAULT		I'm sure you've seen	ads for my auto-	biography, yes?				CHAR_MATT	&matt_erm				
+		EM_SKIP								CHAR_MATT_POSTER_01	&poster_02				
+		EM_SKIP								CHAR_MATT_POSTER_02	&poster_02				
+	db_ch_matt	EM_DEFAULT	ACT_SFX_CLICK	"It's titled ""M.E."","	"or ""Mechanical"	"Episcopate"". Clever!"				CHAR_MATT	&matt_press				
+	db_ch_matt	EM_DEFAULT		I am very humble, so	I'm selling this to	raise money.									
+	db_ch_matt	EM_DEFAULT		This city is full of	er.. zombies?	They're all sick.									
+	db_ch_matt	EM_DEFAULT		I recommend seeing a	doctor if you can,	by the way.									
+	db_ch_matt	EM_DEFAULT		Zombies suck at	raising money so I'm	trying to expand.									
+	db_ch_matt	EM_DEFAULT		"I figured, ""Hey, if"	I put up idols, I	"can get muetos too."""									
+	db_ch_matt	EM_DEFAULT		None of them have	showed up yet.	Frustrating.									
+	db_ch_matt	EM_DEFAULT		Anyway, I've been	told my church has	no legs to stand on.									
+	db_ch_matt	EM_DEFAULT		So that gave me	an idea.	Behold.									
+		EM_SKIP								CHAR_MATT_POSTER_01	&poster_03				
+		EM_SKIP								CHAR_MATT_POSTER_02	&poster_03				
+	db_ch_matt	EM_DEFAULT	ACT_SFX_CLICK	I call it...		OPERATION: LEGS				CHAR_MATT	&matt_press				
+	db_ch_matt	EM_DEFAULT		There's a kooky	scientist in town	that I commissioned									
+	db_ch_matt	EM_DEFAULT		to make me a	fabulous pair of	legs. Neat, huh?									
+	db_ch_matt	EM_DEFAULT		I need an update on	his progress, but	I'm been stuck here.									
+	db_ch_matt	EM_DEFAULT		Books won't sell	themselves, you see.	So.. Human..									
+	db_ch_matt	EM_DEFAULT		You wouldn't mind	checking on them,	would you?				CHAR_MATT	&matt_erm				
+	db_ch_matt	EM_DEFAULT		You can't miss his	office. The code is	"""3477""."				CHAR_MATT	&matt_erm				
+	db_ch_matt	EM_DEFAULT	ACT_MUSIC_FADEOUT	Thank you SO much.	REALLY appreciate	your service.				CHAR_MATT	&matt_sit				

@@ -45,6 +45,9 @@
 #include "bn_sprite_items_spr_vista_lift.h"
 #include "bn_sprite_items_spr_vista_02.h"
 #include "bn_sprite_items_spr_desmond.h"
+#include "bn_sprite_items_spr_matt_poster_01.h"
+#include "bn_sprite_items_spr_matt_poster_02.h"
+#include "bn_sprite_items_spr_matt.h"
 
 using namespace bn;
 
@@ -93,6 +96,9 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_VISTA_LIFT: { return &sprite_items::spr_vista_lift; break; }
 	case CHAR_VISTA_02: { return &sprite_items::spr_vista_02; break; }
 	case CHAR_DESMOND: { return &sprite_items::spr_desmond; break; }
+	case CHAR_MATT_POSTER_01: { return &sprite_items::spr_matt_poster_01; break; }
+	case CHAR_MATT_POSTER_02: { return &sprite_items::spr_matt_poster_02; break; }
+	case CHAR_MATT: { return &sprite_items::spr_matt; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -129,6 +135,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_TEDDY: { return &teddy_idle; break; }
 	case CHAR_VISTA_LIFT: { return &vista_invisible; break; }
 	case CHAR_DESMOND: { return &desmond_idle; break; }
+	case CHAR_MATT: { return &matt_sit; break; }
     default:
     {
         return nullptr;

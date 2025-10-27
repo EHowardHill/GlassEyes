@@ -55,5 +55,13 @@ const animation ghost_spook = {{0,0,1,2,2,1}, 6, 1, true};
 const animation ghost_disappear = {{3,4,5,6,7,8,9,10}, 8, 0, false};
 const animation teddy_idle = {{0,1}, 2, 1, true};
 const animation desmond_idle = {{0,1}, 2, 1, true};
+const animation matt_yay = {{0}, 1, 0, false};
+const animation matt_sit = {{1}, 1, 0, false};
+const animation matt_erm = {{2}, 1, 0, false};
+const animation matt_press = {{3,4}, 2, 0, false};
+const animation matt_alas = {{5}, 1, 0, false};
+const animation poster_01 = {{0}, 1, 0, false};
+const animation poster_02 = {{1}, 1, 0, false};
+const animation poster_03 = {{2}, 1, 0, false};
 
 #endif

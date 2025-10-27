@@ -1481,6 +1481,21 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
+	case 261:
+	{
+		music_items::ambient_wind.play();
+		global_data_ptr->entry_map = &map_canter_cathedral;
+		global_data_ptr->jeremy_position = {1, 4};
+		return NEW_MAP;
+		break;
+	}
+	case 262:
+	{
+		music_items::bg_hotel.play();
+		if (global_data_ptr->action_iterations[262] == 0) { ch_man.load(&matt_01); global_data_ptr->action_iterations[262] += 1; } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }

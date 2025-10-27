@@ -507,6 +507,67 @@
                 "speed": 1,
                 "loop": true
             }
+        },
+        "matt": {
+            "yay": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "sit": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "erm": {
+                "frames": [
+                    2
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "press": {
+                "frames": [
+                    3,
+                    4
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "alas": {
+                "frames": [
+                    5
+                ],
+                "speed": 0,
+                "loop": false
+            }
+        },
+        "poster": {
+            "01": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "02": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "03": {
+                "frames": [
+                    2
+                ],
+                "speed": 0,
+                "loop": false
+            }
         }
     },
     "items": {
@@ -596,6 +657,11 @@
         "Vista_02": {},
         "Desmond": {
             "idle_animation": "desmond_idle"
+        },
+        "matt_poster_01": {},
+        "matt_poster_02": {},
+        "Matt": {
+            "idle_animation": "matt_sit"
         }
     },
     "cutscenes": {
@@ -2565,6 +2631,24 @@
                         ]
                     }
                 }
+            },
+            "261": {
+                "music": "ambient_wind",
+                "new_map": {
+                    "map": "canter_cathedral",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            4
+                        ]
+                    }
+                }
+            },
+            "262": {
+                "sequence": [
+                    "matt_01"
+                ],
+                "music": "bg_hotel"
             }
         }
     },
