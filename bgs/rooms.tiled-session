@@ -240,6 +240,38 @@
                 "y": 273.8333333333333
             }
         },
+        "maps/lab_02.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 262.66666666666663,
+                "y": 183.33333333333334
+            }
+        },
+        "maps/lab_03.tmx": {
+            "scale": 1.9296875,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 63.7408906882591,
+                "y": 223.87044534412956
+            }
+        },
+        "maps/lab_04.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 412,
+                "y": 293
+            }
+        },
+        "maps/lab_05.tmx": {
+            "scale": 2.7015625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 128.07403123192597,
+                "y": 159.90746096009252
+            }
+        },
         "maps/room01.tmx": {
             "scale": 2.1634765625,
             "selectedLayer": 0,
@@ -388,7 +420,7 @@
         }
     },
     "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes/bgs/tilesets",
-    "map.height": 8,
+    "map.height": 10,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,

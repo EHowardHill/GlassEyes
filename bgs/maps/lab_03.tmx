@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="4" height="14" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" source="../tilesets/lab01.tsx"/>
+ <layer id="1" name="colliders" width="4" height="14">
+  <data encoding="csv">
+40,22,24,41,
+2,23,25,3,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+40,0,0,41,
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="actions" width="4" height="14">
+  <data encoding="csv">
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="metadata" width="4" height="14">
+  <data encoding="csv">
+0,0,0,19,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="decor" width="4" height="14">
+  <data encoding="csv">
+0,0,0,0,
+0,0,0,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,5,5,0,
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+</map>
