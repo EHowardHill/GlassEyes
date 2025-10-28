@@ -468,6 +468,7 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		music_items::ambient_heartbeat.play();
 		global_data_ptr->entry_map = &map_lab_path;
 		global_data_ptr->jeremy_position = {4, 14};
+		global_data_ptr->kiara_position = {0, 0};
 		return NEW_MAP;
 		break;
 	}

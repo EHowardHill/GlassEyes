@@ -1954,7 +1954,7 @@ kiara_note
 	db_ch_kiara	EM_SIDE_EYE		How about we move	on, okie dokie?										
 															
 kiara_bed															
-	db_ch_kiara	EM_EMBARRASSED		Look, I'm well-aware	that it's illegal to	sleep at an office.									
+	db_ch_kiara	EM_EMBARRASSED		Look, I'm well-aware	that it's illegal to	"""live"" in an office."									
 	db_ch_kiara	EM_HAPPY		This isn't where the	boss sleeps, he	just.. y'know..									
 	db_ch_kiara	EM_HAPPY		Once a day..	Takes eight-hour	naps here..									
 															
@@ -1963,3 +1963,25 @@ kiara_door
 	db_ch_kiara	EM_EMBARRASSED		I-I mean.. I can't	STOP you, but..	Umm..									
 	db_ch_kiara	EM_EMBARRASSED		I might lock the	door behind you.	For.. safety.									
 	db_ch_kiara	EM_EMBARRASSED		B-But by all means,	be my guest.										
+															
+death_01															
+	db_ch_death				You finally made it.										
+				Who are you?	What do you mean?	Where am I?									
+	db_ch_death				I am Death.										
+	db_ch_death			Do you have a	sacrifice for me?										
+				No.	Yes.										
+				That is no issue.	I will have you	eventually.									
+	db_ch_death			And now,	without further	ado..									
+															
+death_01_alt_01															
+	db_ch_death			I have been waiting	many years for this	moment.									
+	db_ch_death			You will	understand soon.										
+	db_ch_death			Do you have a	sacrifice for me?										
+	db_ch_death			No.	Yes.										
+	db_ch_death			I see. Do not worry.	I will have you	soon enough.									
+															
+death_01_alt_02															
+	db_ch_death			Here is the place	where all muetos are	born.									
+	db_ch_death			Do you have a	sacrifice for me?										
+				No.	Yes.										
+				No worries.	I will have you	soon enough.									

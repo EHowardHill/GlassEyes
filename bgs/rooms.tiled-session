@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "maps/lab_path.tmx",
     "expandedProjectPaths": [
-        ".",
+        "maps",
         "tilesets",
-        "maps"
+        "."
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -280,6 +280,14 @@
                 "y": 159.90746096009252
             }
         },
+        "maps/lab_path.tmx": {
+            "scale": 1.6884765625,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 79.95373048004626,
+                "y": 255.85193753614806
+            }
+        },
         "maps/room01.tmx": {
             "scale": 2.1634765625,
             "selectedLayer": 0,
@@ -398,6 +406,9 @@
         "tilesets/lab01.tsx": {
             "scaleInDock": 1
         },
+        "tilesets/lab02.tsx": {
+            "scaleInDock": 1
+        },
         "tilesets/room01.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
@@ -434,21 +445,28 @@
     "map.tileWidth": 32,
     "map.width": 5,
     "openFiles": [
+        "maps/lab_02.tmx",
+        "maps/lab_03.tmx",
+        "maps/lab_04.tmx",
+        "maps/lab_06.tmx",
+        "maps/lab_05.tmx",
+        "maps/lab_path.tmx",
+        "tilesets/underground02.tsx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/lab_02.tmx",
+        "maps/lab_03.tmx",
+        "maps/lab_04.tmx",
+        "maps/lab_06.tmx",
+        "maps/lab_05.tmx",
+        "tilesets/underground02.tsx",
+        "maps/lab_path.tmx",
         "maps/room01.tmx",
         "maps/hotel_01_night.tmx",
         "maps/flayithro_hotel_night.tmx",
         "maps/hotel_01.tmx",
-        "maps/flayithro_01_night.tmx",
-        "tilesets/room01.tsx",
-        "maps/room_02.tmx",
-        "maps/beach_02.tmx",
-        "tilesets/forest01.tsx",
-        "maps/beach_cave.tmx",
-        "tilesets/underground02.tsx",
-        "maps/to_flay_01.tmx"
+        "maps/flayithro_01_night.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
