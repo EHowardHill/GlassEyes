@@ -46,6 +46,7 @@ int navigate_map()
     case BLACK_TO_TRAIN:
     case FLAYITHRO_AWAKE:
     case BLACK_TO_CANTERBURY:
+    case BLACK_TO_LAB_02:
     {
         global_data_ptr->costumes[CHAR_JEREMY] = COSTUME_JEREMY_FANCY;
         global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_FANCY;
@@ -83,6 +84,13 @@ int navigate_map()
     if (global_data_ptr->sebellus_position.x != 0 && global_data_ptr->sebellus_position.y != 0)
     {
         char_mgr.add_character(CHAR_SEBELLUS, global_data_ptr->sebellus_position, 0);
+    }
+
+    if (global_data_ptr->kiara_position.x != 0 && global_data_ptr->kiara_position.y != 0)
+    {
+        char_mgr.add_character(CHAR_KIARA, global_data_ptr->kiara_position, 0);
+        auto k = char_mgr.find_by_index(CHAR_KIARA);
+        k->is_follow = true;
     }
 
     if (current_map.current_map == &map_forest_01 && global_data_ptr->action_iterations[CONVO_FOREST_01] > 1)

@@ -45,6 +45,7 @@ enum actions
     ACT_ITEM,
     ACT_CUE_GINGER,
     ACT_CUE_SEBELLUS,
+    ACT_CUE_KIARA,
     ACT_SFX_KNOCK,
     ACT_SFX_FIRE,
     ACT_SFX_EXPLOSION,

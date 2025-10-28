@@ -1904,3 +1904,18 @@ matt_01
 	db_ch_matt	EM_DEFAULT		You wouldn't mind	checking on them,	would you?				CHAR_MATT	&matt_erm				
 	db_ch_matt	EM_DEFAULT		You can't miss his	office. The code is	"""3477""."				CHAR_MATT	&matt_erm				
 	db_ch_matt	EM_DEFAULT	ACT_MUSIC_FADEOUT	Thank you SO much.	REALLY appreciate	your service.				CHAR_MATT	&matt_sit				
+															
+kiara_01															
+		EM_SKIP	ACT_MUSIC_GINGER												
+	db_ch_kiara	EM_EMBARRASSED	ACT_WALK	U-Uh.. This office	is off-limits to the	public, sir..				CHAR_KIARA		{5,3}			
+	db_ch_kiara	EM_WAT		Oh! Are you with	the city?										
+	db_ch_kiara	EM_EMBARRASSED		(This is so	embarrassing..)			SIZE_SMALL							
+	db_ch_kiara	EM_HAPPY		Howdy-doody!	My name is	Kiara Scarlett.									
+	db_ch_kiara	EM_SIDE_EYE		I-I guess if you	have any questions,	feel free to ask!									
+		EM_SKIP	ACT_CUE_KIARA												
+		EM_SKIP	ACT_MUSIC_RESET												
+															
+k_door_01															
+	db_ch_kiara	EM_EMBARRASSED		O-Oh, you wanna go	in there?	Uh.. Hmmmm..									
+	db_ch_kiara	EM_SULLEN		I suppose I don't	have an option but	to let you in, huh?									
+	db_ch_kiara	EM_EMBARRASSED		J-Just keep in mind,	I'm an intern here,	okay?									

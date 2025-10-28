@@ -662,6 +662,9 @@
         "matt_poster_02": {},
         "Matt": {
             "idle_animation": "matt_sit"
+        },
+        "Kiara": {
+            "follow": "Jeremy"
         }
     },
     "cutscenes": {
@@ -1003,6 +1006,37 @@
                         "jeremy": [
                             3,
                             11
+                        ]
+                    }
+                }
+            },
+            "264": {
+                "new_map": {
+                    "map": "lab_03",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            11
+                        ],
+                        "kiara": [
+                            2,
+                            11
+                        ]
+                    }
+                }
+            },
+            "266": {
+                "music": "ambient_wind",
+                "new_map": {
+                    "map": "lab_04",
+                    "positions": {
+                        "jeremy": [
+                            11,
+                            2
+                        ],
+                        "kiara": [
+                            12,
+                            2
                         ]
                     }
                 }
@@ -2649,6 +2683,16 @@
                     "matt_01"
                 ],
                 "music": "bg_hotel"
+            },
+            "264": {
+                "sequence": [
+                    "k_door_01"
+                ]
+            },
+            "263": {
+                "sequence": [
+                    "kiara_01"
+                ]
             }
         }
     },
@@ -2883,6 +2927,16 @@
                 "jeremy": [
                     6,
                     3
+                ]
+            }
+        },
+        "BLACK_TO_LAB_02": {
+            "map": "lab_02",
+            "bg_track": "bg_office",
+            "positions": {
+                "jeremy": [
+                    1,
+                    5
                 ]
             }
         }

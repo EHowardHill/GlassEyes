@@ -39,7 +39,7 @@ int main()
 
     // Set for debug
     global_data_ptr = new global_data();
-    global_data_ptr->process_stage = BLACK_TO_CANTERBURY;
+    global_data_ptr->process_stage = BLACK_TO_LAB_02;
 
     while (true)
     {

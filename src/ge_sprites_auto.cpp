@@ -48,6 +48,7 @@
 #include "bn_sprite_items_spr_matt_poster_01.h"
 #include "bn_sprite_items_spr_matt_poster_02.h"
 #include "bn_sprite_items_spr_matt.h"
+#include "bn_sprite_items_spr_kiara.h"
 
 using namespace bn;
 
@@ -99,6 +100,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_MATT_POSTER_01: { return &sprite_items::spr_matt_poster_01; break; }
 	case CHAR_MATT_POSTER_02: { return &sprite_items::spr_matt_poster_02; break; }
 	case CHAR_MATT: { return &sprite_items::spr_matt; break; }
+	case CHAR_KIARA: { return &sprite_items::spr_kiara; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -114,6 +116,7 @@ int resolve_sprite_id(int character)
 	case CHAR_GINGER: { return CHAR_JEREMY; break; }
 	case CHAR_SEBELLUS: { return CHAR_GINGER; break; }
 	case CHAR_VISTA_LIFT: { return CHAR_JEREMY; break; }
+	case CHAR_KIARA: { return CHAR_JEREMY; break; }
     default:
     {
         return 0;

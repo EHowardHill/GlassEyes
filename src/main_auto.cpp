@@ -131,6 +131,11 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_to_canter_01;
 		global_data_ptr->jeremy_position = {6, 3};
 		break;		}
+	case BLACK_TO_LAB_02: {
+		global_data_ptr->entry_map = &map_lab_02;
+		global_data_ptr->bg_track = &music_items::bg_office;
+		global_data_ptr->jeremy_position = {1, 5};
+		break;		}
 	default: { break; }
 	}
 }

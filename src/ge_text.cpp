@@ -536,6 +536,12 @@ void dialogue_box::init(character_manager *ch_man)
             seb->idle_animation = &anim_stand;
             break;
         }
+        case ACT_CUE_KIARA:
+        {
+            auto kiara = ch_man->find_by_index(CHAR_KIARA);
+            kiara->is_follow = true;
+            break;
+        }
         default:
         {
             break;

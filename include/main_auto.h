@@ -23,6 +23,7 @@ enum progress
 	FLAYITHRO_AWAKE,
 	BLACK_TO_TRAIN,
 	BLACK_TO_CANTERBURY,
+	BLACK_TO_LAB_02,
 };
 
 void resolve_chapter();
