@@ -31,9 +31,11 @@
 #include "bn_sprite_items_visker_battle.h"
 #include "bn_sprite_items_croke_battle.h"
 
+#include "ge_bullet.h"
+
 #include "ge_globals.h"
 #include "ge_text.h"
-#include "ge_bullet.h"
+#include "ge_minigame.h"
 
 using namespace bn;
 
@@ -201,75 +203,72 @@ int battle_map();
 
 struct battle_state
 {
+    // Enemy data
     const sprite_item *enemy_sprite_item;
-    int party_size = 1;
-    int current_actor = -1;
-    int selected_menu = STATUS_BAR_NONE;
-    int stage = stage_talking;
-    int result = RESULT_FIRST;
-    int y_delta = 0;
-    int moveset = 2;
-    int selected_moveset = 0;
-    int speed = 1;
-
-    items_box item_menu;
-    conversation *pending_item_conv = nullptr;
-    int used_item_index = -1;
-
-    // Action tracking
-    int character_actions[MAX_PARTY_SIZE] = {ACTION_NONE, ACTION_NONE, ACTION_NONE, ACTION_NONE};
-    int choosing_for = 0; // Which character is currently choosing
-    bool has_acted[MAX_PARTY_SIZE];
-
-    // Reusable dialogue state
-    conversation *active_conv = nullptr;
-    int dlg_index = 0;
-    int dlg_size = 0;
-    int dlg_ticker = 0;
-    text dlg_lines[3] = {{nullptr, {-40, 32}}, {nullptr, {-40, 48}}, {nullptr, {-40, 64}}};
-    optional<sprite_ptr> portrait;
-    optional<regular_bg_ptr> bg_ptr;
-
-    // Combat entities
-    optional<sprite_ptr> character_sprites[MAX_PARTY_SIZE];
-    int character_states[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-    int character_tickers[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-
     optional<sprite_ptr> enemy_sprite;
     int enemy_state = 0;
     int enemy_ticker = 0;
 
-    // Menu state
+    // Party data
+    int party_size = 1;
+    optional<sprite_ptr> character_sprites[MAX_PARTY_SIZE];
+    int character_states[MAX_PARTY_SIZE] = {0, 0, 0, 0};
+    int character_tickers[MAX_PARTY_SIZE] = {0, 0, 0, 0};
+
+    // Battle flow
+    int current_actor = -1;
+    int stage = stage_talking;
+    int result = RESULT_FIRST;
+    int y_delta = 0;
+
+    // Enemy behavior config
+    int moveset = 2;
+    int selected_moveset = 0;
+    int speed = 1;
+
+    // Action tracking
+    int character_actions[MAX_PARTY_SIZE] = {ACTION_NONE, ACTION_NONE, ACTION_NONE, ACTION_NONE};
+    int choosing_for = 0;
+    bool has_acted[MAX_PARTY_SIZE];
+
+    // Dialogue system (reusable)
+    conversation *active_conv = nullptr;
+    int dlg_index = 0;
+    int dlg_size = 0;
+    int dlg_ticker = 0;
+    text dlg_lines[3];
+    optional<sprite_ptr> portrait;
+    optional<regular_bg_ptr> bg_ptr;
+
+    // Menu state (status screen)
     int menu_index = 0;
+    int selected_menu = STATUS_BAR_NONE;
+    items_box item_menu;
+    conversation *pending_item_conv = nullptr;
+    int used_item_index = -1;
 
-    // Attack bars - now arrays for multiple characters
-    optional<sprite_ptr> attack_headers[MAX_PARTY_SIZE];
-    optional<sprite_ptr> attack_recvs[MAX_PARTY_SIZE];
-    optional<sprite_ptr> attack_units[MAX_PARTY_SIZE];
-    int attack_damages[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-    bool attack_pressed[MAX_PARTY_SIZE] = {false, false, false, false};
-    int num_attackers = 0;
-
-    // Individual attack timing parameters
-    fixed attack_speeds[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-    int attack_launch_delays[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-    int attack_launch_timers[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-    bool attack_launched[MAX_PARTY_SIZE] = {false, false, false, false};
-
-    // Recv state
-    optional<sprite_ptr> heart;
-    vector_2 heart_pos = {0, 0};
-    int recv_ticker = 0;
-    vector<bullet, 16> bullets;
-
-    // UI elements
+    // UI elements (reusable)
     optional<sprite_ptr> char_img;
     optional<sprite_ptr> battle_icons[3];
     optional<text> labels[5];
 
-    // Special Croke battle tracking
-    int croke_conv_index = 0; // Which conversation (0=croke_02, 1=croke_03, 2=croke_04)
-    int croke_anim_frame = 0; // Current animation frame for Croke
+    // Special boss tracking
+    int croke_conv_index = 0;
+    int croke_anim_frame = 0;
+
+    int num_attackers = 0;
+    array<optional<sprite_ptr>, MAX_PARTY_SIZE> attack_headers;
+    array<optional<sprite_ptr>, MAX_PARTY_SIZE> attack_recvs;
+    array<optional<sprite_ptr>, MAX_PARTY_SIZE> attack_units;
+    array<bool, MAX_PARTY_SIZE> attack_pressed;
+    array<int, MAX_PARTY_SIZE> attack_damages;
+    array<bool, MAX_PARTY_SIZE> attack_launched;
+    array<fixed, MAX_PARTY_SIZE> attack_speeds;
+    array<int, MAX_PARTY_SIZE> attack_launch_delays;
+    array<int, MAX_PARTY_SIZE> attack_launch_timers;
+
+    // MINIGAME SYSTEM - replaces all extracted state above
+    optional<minigame_state> active_minigame;
 };
 
 #endif

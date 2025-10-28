@@ -35,7 +35,8 @@ int main()
 
     game_numpad();
 
-    int value = NEW_CHAPTER;
+    global_data_ptr->foe = FOE_VISKERS_01;
+    int value = battle_map(); // NEW_CHAPTER;
 
     // Set for debug
     global_data_ptr = new global_data();

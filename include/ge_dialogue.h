@@ -47,6 +47,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_vista_02.h"
 #include "bn_sprite_items_db_ch_matt.h"
 #include "bn_sprite_items_db_ch_kiara.h"
+#include "bn_sprite_items_db_ch_death.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -135,6 +136,9 @@ extern const conversation dart_01;
 extern const conversation dart_02;
 extern const conversation dart_03;
 extern const conversation dart_04;
+extern const conversation death_01;
+extern const conversation death_01_alt_01;
+extern const conversation death_01_alt_02;
 extern const conversation dima_01;
 extern const conversation dima_02;
 extern const conversation dock_ginger_01;

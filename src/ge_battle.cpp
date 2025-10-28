@@ -355,8 +355,6 @@ int battle_map()
     // Create and reset battle state
     battle_state bs;
 
-    bs.heart = sprite_items::hearts.create_sprite(0, 0, 1);
-
     // Setup conversations based on foe
     vector<conversation *, 3> convos[RESULT_SIZE];
     vector<conversation *, 3> spare_convos;
@@ -622,77 +620,27 @@ int battle_map()
         // Stage: Recv (enemy turn)
         else if (bs.stage == stage_recv)
         {
-            bs.bg_ptr = regular_bg_items::bg_battle_box.create_bg(0, 0);
-
-            if (!bs.heart.has_value())
-                bs.heart = sprite_items::hearts.create_sprite(0, 0, 1);
-
-            if (bs.recv_ticker == 0)
+            if (!bs.active_minigame)
             {
-                bs.enemy_state = 2;
-                bs.enemy_ticker = 0;
-                bullet::populate(&bs.bullets, bs.selected_moveset, bs.speed);
-                BN_LOG("MOVESET: ", bs.selected_moveset);
-                bs.selected_moveset = (bs.selected_moveset + 1) % bs.moveset;
+                // Initialize minigame
+                bs.active_minigame = minigame_state();
+                bs.active_minigame->type = MINIGAME_BULLET_DODGE; // Or choose based on enemy/context
+                bs.active_minigame->bs = &bs;
+                minigame_init(&(*bs.active_minigame));
             }
 
-            if (next_living(-1, &bs) < 0 || global_data_ptr->enemy_hp[0] <= 0)
+            // Update minigame
+            minigame_update(&(*bs.active_minigame));
+
+            // Check if complete
+            if (minigame_is_complete(&(*bs.active_minigame)))
             {
-                music::stop();
-                text::toasts.clear();
-                return CONTINUE;
-            }
+                minigame_cleanup(&(*bs.active_minigame));
+                bs.active_minigame.reset();
 
-            // Update heart position
-            bs.heart_pos.x += keypad::right_held() - keypad::left_held();
-            bs.heart_pos.y += keypad::down_held() - keypad::up_held();
-
-            // Clamp positions
-            if (bs.heart_pos.x < -48)
-                bs.heart_pos.x = -48;
-            if (bs.heart_pos.x > 48)
-                bs.heart_pos.x = 48;
-            if (bs.heart_pos.y < -48)
-                bs.heart_pos.y = -48;
-            if (bs.heart_pos.y > 48)
-                bs.heart_pos.y = 48;
-
-            bs.heart->set_position(bs.heart_pos.x, bs.heart_pos.y);
-            bs.heart->set_tiles(sprite_items::hearts.tiles_item(), 1);
-
-            // Update bullets
-            for (auto &b : bs.bullets)
-            {
-                b.update();
-
-                if (b.item && b.item->visible())
-                {
-                    if (abs(bs.heart_pos.x - b.item->x()) + abs(bs.heart_pos.y - b.item->y()) < 12)
-                    {
-                        int who = random_living(&bs);
-                        if (who >= 0)
-                        {
-                            global_data_ptr->hp[who] -= 2;
-
-                            // Position toast based on character's Y position
-                            text::add_toast(-2, vector_2(-96, -44 + (who * 8)));
-                            sound_items::sfx_damage.play();
-
-                            // Trigger hurt animation for hit character
-                            bs.character_states[who] = 2; // HURT state
-                            bs.character_tickers[who] = 0;
-                        }
-                        b.item->set_visible(false);
-                    }
-                }
-            }
-
-            if (++bs.recv_ticker > 400)
-            {
-                bs.recv_ticker = 0;
                 bs.current_actor = -1;
 
-                // Reset for new round of turns
+                // Reset for new round
                 for (int i = 0; i < MAX_PARTY_SIZE; ++i)
                 {
                     bs.has_acted[i] = false;
@@ -700,7 +648,6 @@ int battle_map()
                 }
 
                 bs.choosing_for = 0;
-
                 bs.stage = stage_status;
             }
         }
@@ -710,8 +657,6 @@ int battle_map()
         {
             bs.bg_ptr.reset();
             bs.enemy_state = 1; // stay in idle
-            bs.heart.reset();
-            bs.bullets.clear();
 
             if (next_living(-1, &bs) < 0)
             {

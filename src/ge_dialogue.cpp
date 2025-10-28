@@ -34,6 +34,7 @@
 #include "bn_sprite_items_db_ch_vista_02.h"
 #include "bn_sprite_items_db_ch_matt.h"
 #include "bn_sprite_items_db_ch_kiara.h"
+#include "bn_sprite_items_db_ch_death.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -648,6 +649,31 @@ const conversation dart_03 = {
 const conversation dart_04 = {
     {0, &sprite_items::db_ch_sneaker, EM_DEFAULT, ACT_DEFAULT, "N-NO!!", "IT CAN'T BE!!", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, &sprite_items::db_ch_sneaker, EM_DEFAULT, ACT_DEFAULT, "YOU'LL PAY FOR", "THAT, HUMAN!", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
+const conversation death_01 = {
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "", "You finally made it.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "Who are you?", "What do you mean?", "Where am I?", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "", "I am Death.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "Do you have a", "sacrifice for me?", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "No.", "Yes.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "That is no issue.", "I will have you", "eventually.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "And now,", "without further", "ado..", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
+const conversation death_01_alt_01 = {
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "I have been waiting", "many years for this", "moment.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "You will", "understand soon.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "Do you have a", "sacrifice for me?", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "No.", "Yes.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "I see. Do not worry.", "I will have you", "soon enough.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
+const conversation death_01_alt_02 = {
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "Here is the place", "where all muetos are", "born.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_death, EM_DEFAULT, ACT_DEFAULT, "Do you have a", "sacrifice for me?", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "No.", "Yes.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "No worries.", "I will have you", "soon enough.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
 const conversation dima_01 = {
@@ -1402,7 +1428,7 @@ const conversation kiara_01 = {
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
 const conversation kiara_bed = {
-    {0, &sprite_items::db_ch_kiara, EM_EMBARRASSED, ACT_DEFAULT, "Look, I'm well-aware", "that it's illegal to", "sleep at an office.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, &sprite_items::db_ch_kiara, EM_EMBARRASSED, ACT_DEFAULT, "Look, I'm well-aware", "that it's illegal to", "\"live\" in an office.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, &sprite_items::db_ch_kiara, EM_HAPPY, ACT_DEFAULT, "This isn't where the", "boss sleeps, he", "just.. y'know..", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, &sprite_items::db_ch_kiara, EM_HAPPY, ACT_DEFAULT, "Once a day..", "Takes eight-hour", "naps here..", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
