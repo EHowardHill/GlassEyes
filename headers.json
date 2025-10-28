@@ -665,7 +665,8 @@
         },
         "Kiara": {
             "follow": "Jeremy"
-        }
+        },
+        "Matt Legs": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1037,6 +1038,48 @@
                         "kiara": [
                             12,
                             2
+                        ]
+                    }
+                }
+            },
+            "268": {
+                "sequence": [
+                    "kiara_toaster"
+                ]
+            },
+            "272": {
+                "sequence": [
+                    "kiara_dog"
+                ]
+            },
+            "273": {
+                "sequence": [
+                    "kiara_gest"
+                ]
+            },
+            "274": {
+                "sequence": [
+                    "kiara_matt"
+                ]
+            },
+            "275": {
+                "sequence": [
+                    "kiara_note"
+                ]
+            },
+            "276": {
+                "sequence": [
+                    "kiara_bed"
+                ]
+            },
+            "277": {
+                "music": "ambient_heartbeat",
+                "new_map": {
+                    "map": "lab_path",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            14
                         ]
                     }
                 }
@@ -2692,6 +2735,71 @@
             "263": {
                 "sequence": [
                     "kiara_01"
+                ]
+            },
+            "267": {
+                "new_map": {
+                    "map": "lab_06",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            8
+                        ],
+                        "kiara": [
+                            4,
+                            8
+                        ]
+                    }
+                }
+            },
+            "269": {
+                "new_map": {
+                    "map": "lab_04",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            2
+                        ],
+                        "kiara": [
+                            2,
+                            2
+                        ]
+                    }
+                }
+            },
+            "270": {
+                "new_map": {
+                    "map": "lab_05",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            8
+                        ],
+                        "kiara": [
+                            4,
+                            8
+                        ]
+                    }
+                }
+            },
+            "271": {
+                "new_map": {
+                    "map": "lab_04",
+                    "positions": {
+                        "jeremy": [
+                            21,
+                            2
+                        ],
+                        "kiara": [
+                            22,
+                            2
+                        ]
+                    }
+                }
+            },
+            "277": {
+                "sequence": [
+                    "kiara_door"
                 ]
             }
         }

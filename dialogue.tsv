@@ -1919,3 +1919,47 @@ k_door_01
 	db_ch_kiara	EM_EMBARRASSED		O-Oh, you wanna go	in there?	Uh.. Hmmmm..									
 	db_ch_kiara	EM_SULLEN		I suppose I don't	have an option but	to let you in, huh?									
 	db_ch_kiara	EM_EMBARRASSED		J-Just keep in mind,	I'm an intern here,	okay?									
+															
+kiara_toaster															
+	db_ch_kiara	EM_EMBARRASSED		I know it sounds	like baloney, but..	This is a toaster.									
+	db_ch_kiara	EM_DEFAULT		I literally made	breakfast with it	THIS morning.									
+	db_ch_kiara	EM_LAUGH		I can make you some	if you don't believe	me, I just, um..									
+	db_ch_kiara	EM_DISAPPOINTED		Need permission.											
+															
+kiara_dog															
+	db_ch_kiara	EM_SAD		A while ago, I had a	little yappy dog.	Her name was Gubbo.									
+	db_ch_kiara	EM_ANNOYED		Boss hated her.	Which was annoying	but it's whatever.									
+	db_ch_kiara	EM_SAD		I know what you	humans always say,	"""You're a mueto!"""									
+	db_ch_kiara	EM_SIDE_EYE		Look, it's only	weird if you make it	weird, okay?									
+	db_ch_kiara	EM_SCARED		Anyway, uh.. So..	I don't know how to	say this, but..									
+	db_ch_kiara	EM_SCARED		If you see a dog..	In a spider web..	Like, a big one..									
+	db_ch_kiara	EM_DISAPPOINTED		Be sure to let me	know, okay?										
+															
+kiara_gest															
+	db_ch_kiara	EM_SCARED		Hehe.. So.. I KNOW	those LOOK like	gestating muetos..									
+	db_ch_kiara	EM_SCARED		They're, um..	Uhhh..	Hmmmm..									
+	db_ch_kiara	EM_EMBARRASSED		I can't tell what	you're thinking, you	have a flat affect.									
+	db_ch_kiara	EM_LAUGH		Technically, these	are synthetic..	protein.. tumors.									
+	db_ch_kiara	EM_EMBARRASSED		That.. Uh..	LOOK like gestating	mueto bodies.									
+															
+kiara_matt															
+	db_ch_kiara	EM_SIDE_EYE		I take it you're	with the Archbishop,	correct?									
+	db_ch_kiara	EM_HAPPY		My personal project	has been to provide	leg support!									
+	db_ch_kiara	EM_CONFUSED		Not.. really sure	what use he's gonna	have with legs THERE									
+	db_ch_kiara	EM_EMBARRASSED		But hey, whatever	the boss says,	amiright?									
+															
+kiara_note															
+	db_ch_kiara	EM_SCARED		Oh.. Heheh.. That's	one of my.. recipes.	Yeah.									
+	db_ch_kiara	EM_EMBARRASSED		I'm really forgetful	when I go to the..	store.									
+	db_ch_kiara	EM_SIDE_EYE		How about we move	on, okie dokie?										
+															
+kiara_bed															
+	db_ch_kiara	EM_EMBARRASSED		Look, I'm well-aware	that it's illegal to	sleep at an office.									
+	db_ch_kiara	EM_HAPPY		This isn't where the	boss sleeps, he	just.. y'know..									
+	db_ch_kiara	EM_HAPPY		Once a day..	Takes eight-hour	naps here..									
+															
+kiara_door															
+	db_ch_kiara	EM_LAUGH		H-Hey there.. So..	I-If you go in there	I can't follow you.									
+	db_ch_kiara	EM_EMBARRASSED		I-I mean.. I can't	STOP you, but..	Umm..									
+	db_ch_kiara	EM_EMBARRASSED		I might lock the	door behind you.	For.. safety.									
+	db_ch_kiara	EM_EMBARRASSED		B-But by all means,	be my guest.										

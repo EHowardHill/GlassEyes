@@ -49,6 +49,7 @@
 #include "bn_sprite_items_spr_matt_poster_02.h"
 #include "bn_sprite_items_spr_matt.h"
 #include "bn_sprite_items_spr_kiara.h"
+#include "bn_sprite_items_spr_matt_legs.h"
 
 using namespace bn;
 
@@ -101,6 +102,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_MATT_POSTER_02: { return &sprite_items::spr_matt_poster_02; break; }
 	case CHAR_MATT: { return &sprite_items::spr_matt; break; }
 	case CHAR_KIARA: { return &sprite_items::spr_kiara; break; }
+	case CHAR_MATT_LEGS: { return &sprite_items::spr_matt_legs; break; }
     default:
     {
         return &sprite_items::spr_vista;

@@ -427,6 +427,50 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
+	case 268:
+	{
+		if (global_data_ptr->action_iterations[268] == 1) { ch_man.load(&kiara_toaster); } else
+		{ };
+		break;
+	}
+	case 272:
+	{
+		if (global_data_ptr->action_iterations[272] == 1) { ch_man.load(&kiara_dog); } else
+		{ };
+		break;
+	}
+	case 273:
+	{
+		if (global_data_ptr->action_iterations[273] == 1) { ch_man.load(&kiara_gest); } else
+		{ };
+		break;
+	}
+	case 274:
+	{
+		if (global_data_ptr->action_iterations[274] == 1) { ch_man.load(&kiara_matt); } else
+		{ };
+		break;
+	}
+	case 275:
+	{
+		if (global_data_ptr->action_iterations[275] == 1) { ch_man.load(&kiara_note); } else
+		{ };
+		break;
+	}
+	case 276:
+	{
+		if (global_data_ptr->action_iterations[276] == 1) { ch_man.load(&kiara_bed); } else
+		{ };
+		break;
+	}
+	case 277:
+	{
+		music_items::ambient_heartbeat.play();
+		global_data_ptr->entry_map = &map_lab_path;
+		global_data_ptr->jeremy_position = {0, 0};
+		return NEW_MAP;
+		break;
+	}
 	}
 	return -1;
 }
@@ -1522,6 +1566,44 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	case 263:
 	{
 		if (global_data_ptr->action_iterations[263] == 0) { ch_man.load(&kiara_01); global_data_ptr->action_iterations[263] += 1; } else
+		{ };
+		break;
+	}
+	case 267:
+	{
+		global_data_ptr->entry_map = &map_lab_06;
+		global_data_ptr->jeremy_position = {3, 8};
+		global_data_ptr->kiara_position = {4, 8};
+		return NEW_MAP;
+		break;
+	}
+	case 269:
+	{
+		global_data_ptr->entry_map = &map_lab_04;
+		global_data_ptr->jeremy_position = {1, 2};
+		global_data_ptr->kiara_position = {2, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 270:
+	{
+		global_data_ptr->entry_map = &map_lab_05;
+		global_data_ptr->jeremy_position = {3, 8};
+		global_data_ptr->kiara_position = {4, 8};
+		return NEW_MAP;
+		break;
+	}
+	case 271:
+	{
+		global_data_ptr->entry_map = &map_lab_04;
+		global_data_ptr->jeremy_position = {21, 2};
+		global_data_ptr->kiara_position = {22, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 277:
+	{
+		if (global_data_ptr->action_iterations[277] == 0) { ch_man.load(&kiara_door); global_data_ptr->action_iterations[277] += 1; } else
 		{ };
 		break;
 	}
