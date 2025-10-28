@@ -25,12 +25,15 @@
 #include "ge_typewriter.h"
 #include "ge_typewriter_auto.h"
 #include "ge_navigate.h"
+#include "ge_game_numpad.h"
 
 using namespace bn;
 
 int main()
 {
     core::init();
+
+    game_numpad();
 
     int value = NEW_CHAPTER;
 
