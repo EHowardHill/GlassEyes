@@ -139,9 +139,9 @@ struct game_state
     optional<regular_bg_ptr> bg_ptr;
 
     // Combat entities
-    optional<sprite_ptr> character_sprites[MAX_PARTY_SIZE];
-    int character_states[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-    int character_tickers[MAX_PARTY_SIZE] = {0, 0, 0, 0};
+    optional<sprite_ptr> character_sprites[4];
+    int character_states[4] = {0, 0, 0, 0};
+    int character_tickers[4] = {0, 0, 0, 0};
 
     optional<sprite_ptr> enemy_sprite;
     int enemy_state = 0;

@@ -27,18 +27,19 @@
 #include "ge_navigate.h"
 #include "ge_game_numpad.h"
 
+#include "ge_battle_types_auto.h"
+
 using namespace bn;
 
 int main()
 {
     core::init();
 
-    game_numpad();
+    //game_numpad();
 
     global_data_ptr->foe = FOE_VISKERS_01;
-    int value = battle_map(); // NEW_CHAPTER;
+    int value = BATTLE; // NEW_CHAPTER;
 
-    // Set for debug
     global_data_ptr = new global_data();
     global_data_ptr->process_stage = BLACK_TO_LAB_02;
 
@@ -48,7 +49,8 @@ int main()
         {
         case BATTLE:
         {
-            value = battle_map();
+            battle_map bm(&foe01);
+            value = bm.play();
             break;
         }
         case GAME:

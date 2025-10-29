@@ -19,9 +19,9 @@
 #include "bn_regular_bg_items_bg_battle_grid.h"
 #include "bn_regular_bg_items_bg_battle_box.h"
 #include "bn_regular_bg_items_bg_battle_action.h"
-#include "bn_sprite_items_spr_jeremy_01.h"
-#include "bn_sprite_items_spr_ginger_01.h"
-#include "bn_sprite_items_spr_visker_01.h"
+#include "bn_sprite_items_spr_jeremy.h"
+#include "bn_sprite_items_spr_ginger.h"
+#include "bn_sprite_items_spr_visker.h"
 #include "bn_sprite_items_hearts.h"
 #include "bn_sprite_items_battle_icons.h"
 #include "bn_sprite_items_battle_chars.h"
@@ -31,33 +31,66 @@
 #include "bn_sprite_items_visker_battle.h"
 #include "bn_sprite_items_croke_battle.h"
 
-#include "ge_bullet.h"
+#include "ge_character_manager.h"
 
 #include "ge_globals.h"
 #include "ge_text.h"
-#include "ge_minigame.h"
 
 using namespace bn;
 
-static constexpr int MAX_PARTY_SIZE = 4;
+constexpr int MAX_PARTY_SIZE = 4;
 
-static constexpr int JEREMY_IDLE_START = 10;
-static constexpr int JEREMY_HURT_START = 11;
-static constexpr int JEREMY_HURT_END = 14;
-static constexpr int JEREMY_ATK_START = 15;
-static constexpr int JEREMY_ATK_END = 21;
+enum dialogue_type
+{
+    DIALOGUE_INIT,
+    DIALOGUE_PROGESS_PARTY,
+    DIALOGUE_PROGRESS_ENEMY,
+    DIALOGUE_WIN,
+    DIALOGUE_LOSE,
+    DIALOGUE_SPARE,
+    DIALOGUE_TYPE_SIZE
+};
 
-static constexpr int GINGER_IDLE_START = 8;
-static constexpr int GINGER_IDLE_END = 11;
-static constexpr int GINGER_HURT_START = 12;
-static constexpr int GINGER_HURT_END = 14;
-static constexpr int GINGER_ATK_START = 15;
-static constexpr int GINGER_ATK_END = 17;
+enum minigame_types
+{
+    MINIGAME_BULLET_FALL,
+    MINIGAME_SIZE
+};
 
-static constexpr int ACTION_NONE = -1;
-static constexpr int ACTION_ATTACK = 0;
-static constexpr int ACTION_ITEM = 1;
-static constexpr int ACTION_SPARE = 2;
+struct battle_data
+{
+    int party[4] = {0, 0, 0, 0};
+    int enemies[4] = {0, 0, 0, 0};
+    int party_count = 0;
+    int enemy_count = 0;
+
+    const regular_bg_item *bg_item = &regular_bg_items::bg_battle_grid;
+    conversation *talk_init = nullptr;
+    conversation *talk_progress_party[3] = {nullptr, nullptr, nullptr};
+    conversation *talk_progress_enemy[3] = {nullptr, nullptr, nullptr};
+    conversation *talk_win = nullptr;
+    conversation *talk_lose = nullptr;
+    conversation *talk_spare[3] = {nullptr, nullptr, nullptr};
+    bool minigames[MINIGAME_SIZE] = {0};
+};
+
+constexpr int JEREMY_IDLE_START = 10;
+constexpr int JEREMY_HURT_START = 11;
+constexpr int JEREMY_HURT_END = 14;
+constexpr int JEREMY_ATK_START = 15;
+constexpr int JEREMY_ATK_END = 21;
+
+constexpr int GINGER_IDLE_START = 8;
+constexpr int GINGER_IDLE_END = 11;
+constexpr int GINGER_HURT_START = 12;
+constexpr int GINGER_HURT_END = 14;
+constexpr int GINGER_ATK_START = 15;
+constexpr int GINGER_ATK_END = 17;
+
+constexpr int ACTION_NONE = -1;
+constexpr int ACTION_ATTACK = 0;
+constexpr int ACTION_ITEM = 1;
+constexpr int ACTION_SPARE = 2;
 
 enum BATTLE_STAGE
 {
@@ -95,7 +128,7 @@ enum BATTLE_RESULT
     RESULT_UP,
     RESULT_DOWN,
     RESULT_SPARE,
-    RESULT_ACT, // Add new result type for ACT actions
+    RESULT_ACT,
     RESULT_LAST_WIN,
     RESULT_LAST_LOSE,
     RESULT_SIZE
@@ -111,35 +144,9 @@ struct battle_action
     battle_action(const char *n, conversation *c) : name(n), convo(c), used(false) {}
 };
 
-struct attack_unit_dissolve
-{
-    optional<sprite_ptr> spr;
-};
-
-struct attack_bar
-{
-    optional<sprite_ptr> header;
-    optional<sprite_ptr> recv_bar;
-    optional<sprite_ptr> unit;
-    vector<attack_unit_dissolve, 5> dissolves;
-    bool is_ended = false;
-
-    attack_bar(int y_delta, int index);
-    void update();
-};
-
-struct attack
-{
-    vector<attack_bar, 3> attack_bars;
-    bool is_ended = false;
-
-    attack();
-    void update();
-};
-
 struct status_bar_items
 {
-    optional<text> icon_label;
+    optional<sprite_ptr> icon_label; // Changed from optional<text> to optional<sprite_ptr> assuming it's a visual element
     int index = 0;
 
     status_bar_items();
@@ -151,7 +158,7 @@ struct status_bar_items
 struct status_bar_menu
 {
     optional<sprite_ptr> battle_icons[5];
-    optional<text> icon_label;
+    optional<sprite_ptr> icon_label; // Changed from optional<text> to optional<sprite_ptr> assuming it's a visual element
     int index = 0;
 
     status_bar_menu();
@@ -163,8 +170,8 @@ struct status_bar_menu
 struct status_bar
 {
     optional<sprite_ptr> char_img;
-    optional<text> name;
-    optional<text> hp;
+    optional<sprite_ptr> name; // Changed from optional<text>
+    optional<sprite_ptr> hp;   // Changed from optional<text>
     regular_bg_ptr action_bg = regular_bg_items::bg_battle_action.create_bg(0, 0);
     int actor_index;
 
@@ -180,95 +187,16 @@ struct status_bar
     void update();
 };
 
-struct recv
+struct battle_map
 {
-    int ticker = 0;
-    vector<bullet, bullet_count> bullets;
-    int bullet_style = bullet_fall;
-    regular_bg_ptr bg_action = regular_bg_items::bg_battle_box.create_bg(0, 0);
-    vector_2 eye_pos = {0, 0};
-    unsigned int random_value = 32;
-    sprite_ptr heart = sprite_items::hearts.create_sprite(
-        0,
-        0,
-        1);
+    optional<regular_bg_ptr> bg_grid;
+    character_manager ch_man;
+    int stage = 0;
+    const battle_data * data;
 
-    recv();
-    void update(int &g_defense_stacks);
-    void spawn_bullets();
+    int play();
+
+    battle_map(const battle_data * data);
 };
 
-vector_2 moveTowards(vector_2 from, vector_2 towards, fixed_t<4> speed);
-int battle_map();
-
-struct battle_state
-{
-    // Enemy data
-    const sprite_item *enemy_sprite_item;
-    optional<sprite_ptr> enemy_sprite;
-    int enemy_state = 0;
-    int enemy_ticker = 0;
-
-    // Party data
-    int party_size = 1;
-    optional<sprite_ptr> character_sprites[MAX_PARTY_SIZE];
-    int character_states[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-    int character_tickers[MAX_PARTY_SIZE] = {0, 0, 0, 0};
-
-    // Battle flow
-    int current_actor = -1;
-    int stage = stage_talking;
-    int result = RESULT_FIRST;
-    int y_delta = 0;
-
-    // Enemy behavior config
-    int moveset = 2;
-    int selected_moveset = 0;
-    int speed = 1;
-
-    // Action tracking
-    int character_actions[MAX_PARTY_SIZE] = {ACTION_NONE, ACTION_NONE, ACTION_NONE, ACTION_NONE};
-    int choosing_for = 0;
-    bool has_acted[MAX_PARTY_SIZE];
-
-    // Dialogue system (reusable)
-    conversation *active_conv = nullptr;
-    int dlg_index = 0;
-    int dlg_size = 0;
-    int dlg_ticker = 0;
-    text dlg_lines[3];
-    optional<sprite_ptr> portrait;
-    optional<regular_bg_ptr> bg_ptr;
-
-    // Menu state (status screen)
-    int menu_index = 0;
-    int selected_menu = STATUS_BAR_NONE;
-    items_box item_menu;
-    conversation *pending_item_conv = nullptr;
-    int used_item_index = -1;
-
-    // UI elements (reusable)
-    optional<sprite_ptr> char_img;
-    optional<sprite_ptr> battle_icons[3];
-    optional<text> labels[5];
-
-    // Special boss tracking
-    int croke_conv_index = 0;
-    int croke_anim_frame = 0;
-
-    int num_attackers = 0;
-    array<optional<sprite_ptr>, MAX_PARTY_SIZE> attack_headers;
-    array<optional<sprite_ptr>, MAX_PARTY_SIZE> attack_recvs;
-    array<optional<sprite_ptr>, MAX_PARTY_SIZE> attack_units;
-    array<bool, MAX_PARTY_SIZE> attack_pressed;
-    array<int, MAX_PARTY_SIZE> attack_damages;
-    array<bool, MAX_PARTY_SIZE> attack_launched;
-    array<fixed, MAX_PARTY_SIZE> attack_speeds;
-    array<int, MAX_PARTY_SIZE> attack_launch_delays;
-    array<int, MAX_PARTY_SIZE> attack_launch_timers;
-
-    // MINIGAME SYSTEM - replaces all extracted state above
-    optional<minigame_state> active_minigame;
-};
-
-#endif
+#endif // GE_BATTLE_H

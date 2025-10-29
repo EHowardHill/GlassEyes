@@ -17,7 +17,7 @@
 #include "bn_sprite_items_db_ch_jeremy.h"
 #include "bn_sprite_items_db_ch_vista.h"
 
-#include "bn_sprite_items_spr_vista_01.h"
+#include "bn_sprite_items_spr_vista.h"
 
 #include "main.h"
 #include "main_auto.h"
