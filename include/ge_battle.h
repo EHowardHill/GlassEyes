@@ -36,6 +36,8 @@
 #include "ge_globals.h"
 #include "ge_text.h"
 
+#include "ge_battle_types_auto.h"
+
 using namespace bn;
 
 constexpr int MAX_PARTY_SIZE = 4;
@@ -55,23 +57,6 @@ enum minigame_types
 {
     MINIGAME_BULLET_FALL,
     MINIGAME_SIZE
-};
-
-struct battle_data
-{
-    int party[4] = {0, 0, 0, 0};
-    int enemies[4] = {0, 0, 0, 0};
-    int party_count = 0;
-    int enemy_count = 0;
-
-    const regular_bg_item *bg_item = &regular_bg_items::bg_battle_grid;
-    conversation *talk_init = nullptr;
-    conversation *talk_progress_party[3] = {nullptr, nullptr, nullptr};
-    conversation *talk_progress_enemy[3] = {nullptr, nullptr, nullptr};
-    conversation *talk_win = nullptr;
-    conversation *talk_lose = nullptr;
-    conversation *talk_spare[3] = {nullptr, nullptr, nullptr};
-    bool minigames[MINIGAME_SIZE] = {0};
 };
 
 constexpr int JEREMY_IDLE_START = 10;
@@ -195,13 +180,6 @@ struct battle_map
     int play();
 
     battle_map(const battle_data *data);
-};
-
-struct mini_game
-{
-    optional<sprite_ptr> eye;
-    vector<sprite_ptr, 48> bits;
-    fixed_t<4> vars[48 * 4];
 };
 
 enum battle_responses

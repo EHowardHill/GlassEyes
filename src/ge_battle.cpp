@@ -20,6 +20,7 @@
 #include "ge_character_manager.h"
 #include "ge_dialogue.h"
 #include "ge_battle.h"
+#include "ge_sprites.h"
 
 using namespace bn;
 
@@ -85,6 +86,8 @@ int battle_map::play()
         }
     }
 
+    data->bg_music->play(0.8);
+
     int stage = stage_talking_init;
 
     optional<mini_game> current_minigame;
@@ -106,31 +109,27 @@ int battle_map::play()
         {
             if (ch_man.db.has_value())
             {
-                ch_man.db->update();
-
-                if (keypad::a_pressed())
-                {
-                    ch_man.db->handle_a_button_press(&ch_man);
-                }
-
                 if (ch_man.db->is_ended())
                 {
                     ch_man.db.reset();
-                    stage = stage_recv_init;
                 }
+            }
+            else
+            {
+                stage = stage_recv_init;
             }
             break;
         }
         case stage_recv_init:
         {
             current_minigame.emplace();
-            battle_converge_init(current_minigame.value());
+            //int result = data->minigames[0](true, current_minigame.value(), &ch_man);
             stage = stage_recv;
             break;
         }
         case stage_recv:
         {
-            battle_converge(current_minigame.value(), &ch_man);
+            //int result = data->minigames[0](false, current_minigame.value(), &ch_man);
             break;
         }
         }

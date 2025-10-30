@@ -68,3 +68,6 @@ endif
 # Include main makefile:
 #---------------------------------------------------------------------------------------------------------------------
 include $(LIBBUTANOABS)/butano.mak
+
+CFLAGS += -w
+CXXFLAGS += -w
