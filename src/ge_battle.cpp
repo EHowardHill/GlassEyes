@@ -106,31 +106,27 @@ int battle_map::play()
         {
             if (ch_man.db.has_value())
             {
-                ch_man.db->update();
-
-                if (keypad::a_pressed())
-                {
-                    ch_man.db->handle_a_button_press(&ch_man);
-                }
-
                 if (ch_man.db->is_ended())
                 {
                     ch_man.db.reset();
-                    stage = stage_recv_init;
                 }
+            }
+            else
+            {
+                stage = stage_recv_init;
             }
             break;
         }
         case stage_recv_init:
         {
             current_minigame.emplace();
-            battle_converge_init(current_minigame.value());
+            battle_converge(true, current_minigame.value(), &ch_man);
             stage = stage_recv;
             break;
         }
         case stage_recv:
         {
-            battle_converge(current_minigame.value(), &ch_man);
+            battle_converge(false, current_minigame.value(), &ch_man);
             break;
         }
         }

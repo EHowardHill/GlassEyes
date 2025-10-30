@@ -24,28 +24,15 @@ const battle_data foe01 = {
     .talk_spare = {&garbage_spare, nullptr, nullptr},
     .minigames = {true}};
 
-void battle_fall_init(mini_game &mg);
-int battle_fall(mini_game &mg, character_manager *ch_man);
-
-void battle_fall_fast_init(mini_game &mg);
-int battle_fall_fast(mini_game &mg, character_manager *ch_man);
-
-void battle_fall_wobble_init(mini_game &mg);
-int battle_fall_wobble(mini_game &mg, character_manager *ch_man);
-
-void battle_walls_init(mini_game &mg);
-int battle_walls(mini_game &mg, character_manager *ch_man);
-
-void battle_zigzag_init(mini_game &mg);
-int battle_zigzag(mini_game &mg, character_manager *ch_man);
-
-void battle_converge_init(mini_game &mg);
-int battle_converge(mini_game &mg, character_manager *ch_man);
-
-void battle_pulse_init(mini_game &mg);
-int battle_pulse(mini_game &mg, character_manager *ch_man);
-
-void battle_crossfire_init(mini_game &mg);
-int battle_crossfire(mini_game &mg, character_manager *ch_man);
+int battle_fall(bool init, mini_game &mg, character_manager *ch_man);
+int battle_fall_fast(bool init, mini_game &mg, character_manager *ch_man);
+int battle_fall_wobble(bool init, mini_game &mg, character_manager *ch_man);
+int battle_walls(bool init, mini_game &mg, character_manager *ch_man);
+int battle_zigzag(bool init, mini_game &mg, character_manager *ch_man);
+int battle_converge(bool init, mini_game &mg, character_manager *ch_man);
+int battle_pulse(bool init, mini_game &mg, character_manager *ch_man);
+int battle_crossfire(bool init, mini_game &mg, character_manager *ch_man);
+int battle_breakout(bool init, mini_game &mg, character_manager *ch_man);
+int battle_platformer(bool init, mini_game &mg, character_manager *ch_man);
 
 #endif // GE_BATTLE_TYPES_AUTO_H
