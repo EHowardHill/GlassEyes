@@ -86,6 +86,40 @@
                 ],
                 "speed": 0,
                 "loop": true
+            },
+            "battle_init": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_idle": {
+                "frames": [
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "battle_attack": {
+                "frames": [
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                ],
+                "speed": 0,
+                "loop": true
             }
         },
         "jeremy": {
@@ -109,6 +143,53 @@
                 ],
                 "speed": 1,
                 "loop": true
+            },
+            "battle_init": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_damage": {
+                "frames": [
+                    11,
+                    12,
+                    13,
+                    14
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_idle": {
+                "frames": [
+                    10
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_attack": {
+                "frames": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "ginger": {
@@ -165,6 +246,53 @@
             "fancy_hug": {
                 "frames": [
                     12
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_init": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_idle": {
+                "frames": [
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "speed": 0,
+                "loop": true
+            },
+            "battle_damage": {
+                "frames": [
+                    12,
+                    13,
+                    14,
+                    15
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_attack": {
+                "frames": [
+                    16,
+                    17,
+                    18
                 ],
                 "speed": 0,
                 "loop": false
@@ -261,6 +389,46 @@
                 ],
                 "speed": 0,
                 "loop": true
+            },
+            "battle_init": {
+                "frames": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_01": {
+                "frames": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "battle_02": {
+                "frames": [
+                    21
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "mcwebb": {
@@ -666,7 +834,17 @@
         "Kiara": {
             "follow": "Jeremy"
         },
-        "Matt Legs": {}
+        "Matt Legs": {},
+        "Jeremy_Battle": {
+            "idle_animation": "jeremy_battle_idle"
+        },
+        "Ginger_Battle": {
+            "idle_animation": "ginger_battle_idle"
+        },
+        "Visker_Battle": {
+            "idle_animation": "visker_battle_idle"
+        },
+        "Croke_Battle": {}
     },
     "cutscenes": {
         "Intro": {

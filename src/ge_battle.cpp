@@ -48,51 +48,103 @@ int battle_map::play()
     {
         if (data->party[t] == 0)
             continue;
-        ch_man.add_character(data->party[t], {0.5, t + 4}, t);
+        ch_man.add_character(data->party[t], {-3.5, -t - 1}, t);
     }
 
     for (int t = 0; t < data->enemy_count; t++)
     {
         if (data->enemies[t] == 0)
             continue;
-        ch_man.add_character(data->enemies[t], {6.5, t + 4}, t + data->party_count);
+        ch_man.add_character(data->enemies[t], {2.5, -t - 1}, t + data->party_count);
     }
 
-    if (data->talk_init != nullptr)
+    for (auto &ch : ch_man.characters)
     {
-        ch_man.load(data->talk_init);
+        switch (ch->index)
+        {
+        case CHAR_JEREMY_BATTLE:
+        {
+            ch->current_animation = &jeremy_battle_init;
+            break;
+        }
+        case CHAR_GINGER_BATTLE:
+        {
+            ch->current_animation = &ginger_battle_init;
+            break;
+        }
+        case CHAR_VISKER_BATTLE:
+        {
+            ch->current_animation = &visker_battle_init;
+            break;
+        }
+        case CHAR_CROKE_BATTLE:
+        {
+            ch->current_animation = &croke_battle_init;
+            break;
+        }
+        }
     }
+
+    int stage = stage_talking_init;
+
+    optional<mini_game> current_minigame;
 
     // Main game loop
     while (true)
     {
         bg_grid->set_position(bg_grid->x() - 1, bg_grid->y() - 1);
 
-        if (ch_man.db.has_value())
+        switch (stage)
         {
-            ch_man.db->update();
-
-            if (keypad::a_pressed())
-            {
-                ch_man.db->handle_a_button_press(&ch_man);
-            }
-
-            if (ch_man.db->is_ended())
-            {
-                ch_man.db.reset();
-            }
+        case stage_talking_init:
+        {
+            ch_man.load(data->talk_init);
+            stage = stage_talking;
+            break;
         }
-
-        auto j = ch_man.find_by_index(CHAR_JEREMY);
-        if (j != nullptr)
+        case stage_talking:
         {
-            BN_LOG("X: ", j->v_sprite.real_position().position.x, " Y: ", j->v_sprite.real_position().position.y);
+            if (ch_man.db.has_value())
+            {
+                ch_man.db->update();
+
+                if (keypad::a_pressed())
+                {
+                    ch_man.db->handle_a_button_press(&ch_man);
+                }
+
+                if (ch_man.db->is_ended())
+                {
+                    ch_man.db.reset();
+                    stage = stage_recv_init;
+                }
+            }
+            break;
+        }
+        case stage_recv_init:
+        {
+            current_minigame.emplace();
+            battle_converge_init(current_minigame.value());
+            stage = stage_recv;
+            break;
+        }
+        case stage_recv:
+        {
+            battle_converge(current_minigame.value(), &ch_man);
+            break;
+        }
         }
 
         ch_man.update(&current_map);
         current_map.update();
         bool dialogue_is_active = ch_man.db.has_value() && !ch_man.db.value().is_ended();
         v_sprite_ptr::update(!dialogue_is_active);
+
+        if (current_map.collider_ptr.has_value())
+        {
+            current_map.collider_ptr->set_position(0, 0);
+        }
+
         core::update();
     }
 }

@@ -94,16 +94,14 @@ constexpr int ACTION_SPARE = 2;
 
 enum BATTLE_STAGE
 {
-    stage_heart_moving,
-    stage_main,
+    stage_talking_init,
     stage_talking,
+    stage_recv_init,
     stage_recv,
-    stage_status,
-    stage_attack,
-    stage_talking_then_attack,
-    stage_item_dialogue,
-    stage_execute_attacks,
-    stage_act
+    stage_menu_init,
+    stage_menu,
+    stage_action_init,
+    stage_action,
 };
 
 enum BULLET_STYLE
@@ -192,11 +190,25 @@ struct battle_map
     optional<regular_bg_ptr> bg_grid;
     character_manager ch_man;
     int stage = 0;
-    const battle_data * data;
+    const battle_data *data;
 
     int play();
 
-    battle_map(const battle_data * data);
+    battle_map(const battle_data *data);
+};
+
+struct mini_game
+{
+    optional<sprite_ptr> eye;
+    vector<sprite_ptr, 48> bits;
+    fixed_t<4> vars[48 * 4];
+};
+
+enum battle_responses
+{
+    resp_attack,
+    resp_damage,
+    resp_act
 };
 
 #endif // GE_BATTLE_H

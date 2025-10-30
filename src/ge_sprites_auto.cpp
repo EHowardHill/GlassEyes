@@ -50,6 +50,10 @@
 #include "bn_sprite_items_spr_matt.h"
 #include "bn_sprite_items_spr_kiara.h"
 #include "bn_sprite_items_spr_matt_legs.h"
+#include "bn_sprite_items_spr_jeremy_battle.h"
+#include "bn_sprite_items_spr_ginger_battle.h"
+#include "bn_sprite_items_spr_visker_battle.h"
+#include "bn_sprite_items_spr_croke_battle.h"
 
 using namespace bn;
 
@@ -103,6 +107,10 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_MATT: { return &sprite_items::spr_matt; break; }
 	case CHAR_KIARA: { return &sprite_items::spr_kiara; break; }
 	case CHAR_MATT_LEGS: { return &sprite_items::spr_matt_legs; break; }
+	case CHAR_JEREMY_BATTLE: { return &sprite_items::spr_jeremy_battle; break; }
+	case CHAR_GINGER_BATTLE: { return &sprite_items::spr_ginger_battle; break; }
+	case CHAR_VISKER_BATTLE: { return &sprite_items::spr_visker_battle; break; }
+	case CHAR_CROKE_BATTLE: { return &sprite_items::spr_croke_battle; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -141,6 +149,9 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_VISTA_LIFT: { return &vista_invisible; break; }
 	case CHAR_DESMOND: { return &desmond_idle; break; }
 	case CHAR_MATT: { return &matt_sit; break; }
+	case CHAR_JEREMY_BATTLE: { return &jeremy_battle_idle; break; }
+	case CHAR_GINGER_BATTLE: { return &ginger_battle_idle; break; }
+	case CHAR_VISKER_BATTLE: { return &visker_battle_idle; break; }
     default:
     {
         return nullptr;
