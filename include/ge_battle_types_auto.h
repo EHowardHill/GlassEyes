@@ -35,6 +35,4 @@ int battle_crossfire(bool init, mini_game &mg, character_manager *ch_man);
 int battle_breakout(bool init, mini_game &mg, character_manager *ch_man);
 int battle_platformer(bool init, mini_game &mg, character_manager *ch_man);
 
-int game_dart(bool init, mini_game &mg, character_manager *ch_man);
-
 #endif // GE_BATTLE_TYPES_AUTO_H
