@@ -211,4 +211,17 @@ enum battle_responses
     resp_act
 };
 
+struct battle_menu
+{
+    optional<text> title;
+    vector<text, 5> options;
+    optional<sprite_ptr> character_img;
+    optional<sprite_ptr> selector;
+    int index = 0;
+    int character_index = 0;
+
+    battle_menu(int character_index_);
+    void update();
+};
+
 #endif // GE_BATTLE_H

@@ -40,6 +40,59 @@ battle_map::battle_map(const battle_data *data_) : data(data_)
     bg_grid = data->bg_item->create_bg(0, 0);
 }
 
+battle_menu::battle_menu(int character_index_)
+    : character_index(character_index_)
+{
+    switch (character_index)
+    {
+    case CHAR_JEREMY_BATTLE:
+    {
+        title.emplace("JEREMY", {-60, -10});
+        character_img.emplace(sprite_items::battle_chars.create_sprite(-60, -30, 0));
+        break;
+    }
+    case CHAR_GINGER_BATTLE:
+    {
+        title.emplace("GINGER");
+        character_img.emplace(sprite_items::battle_chars.create_sprite(-60, -30, 0));
+        break;
+    }
+    }
+
+    options.push_back(text("ATTACK", {-28, 10}));
+    options.push_back(text("ACT", {-28, 20}));
+    options.push_back(text("ITEM", {-28, 30}));
+    options.push_back(text("SPARE", {-28, 40}));
+    options.push_back(text("DEFEND", {-28, 50}));
+
+    selector.emplace(sprite_items::battle_icons.create_sprite(-28, -20, 0));
+}
+
+void battle_menu::update()
+{
+    if (keypad::up_pressed())
+    {
+        index--;
+        if (index < 0)
+        {
+            index = options.size() - 1;
+        }
+        sound_items::snd_chime.play();
+    }
+    else if (keypad::down_pressed())
+    {
+        index++;
+        if (index >= options.size())
+        {
+            index = 0;
+        }
+        sound_items::snd_chime.play();
+    }
+
+    selector->set_y(-20 + index * 10);
+    selector->set_tiles(sprite_items::battle_icons.tiles_item(), 0 + index);
+}
+
 int battle_map::play()
 {
     map_manager current_map(&default_battle_map);
@@ -85,7 +138,7 @@ int battle_map::play()
         }
     }
 
-    int stage = stage_talking_init;
+    int stage = stage_menu_init;
 
     optional<mini_game> current_minigame;
 
@@ -126,7 +179,22 @@ int battle_map::play()
         }
         case stage_recv:
         {
-            battle_converge(false, current_minigame.value(), &ch_man);
+            int result = battle_converge(false, current_minigame.value(), &ch_man);
+
+            if (result == 1)
+            {
+                stage = stage_menu_init;
+                current_minigame.reset();
+            }
+            break;
+        }
+        case stage_menu_init:
+        {
+            stage = stage_menu;
+            break;
+        }
+        case stage_menu:
+        {
             break;
         }
         }
