@@ -47,13 +47,17 @@ battle_menu::battle_menu(int character_index_)
     {
     case CHAR_JEREMY_BATTLE:
     {
-        title.emplace("JEREMY", {-60, -10});
+        title.emplace("JEREMY");
+        title->set_position(-60, -10);
+        title->render();
         character_img.emplace(sprite_items::battle_chars.create_sprite(-60, -30, 0));
         break;
     }
     case CHAR_GINGER_BATTLE:
     {
         title.emplace("GINGER");
+        title->set_position(-60, -10);
+        title->render();
         character_img.emplace(sprite_items::battle_chars.create_sprite(-60, -30, 0));
         break;
     }
@@ -64,6 +68,11 @@ battle_menu::battle_menu(int character_index_)
     options.push_back(text("ITEM", {-28, 30}));
     options.push_back(text("SPARE", {-28, 40}));
     options.push_back(text("DEFEND", {-28, 50}));
+
+    for (auto &option : options)
+    {
+        option.render();
+    }
 
     selector.emplace(sprite_items::battle_icons.create_sprite(-28, -20, 0));
 }
@@ -77,7 +86,7 @@ void battle_menu::update()
         {
             index = options.size() - 1;
         }
-        sound_items::snd_chime.play();
+        sound_items::snd_select.play();
     }
     else if (keypad::down_pressed())
     {
@@ -86,7 +95,7 @@ void battle_menu::update()
         {
             index = 0;
         }
-        sound_items::snd_chime.play();
+        sound_items::snd_select.play();
     }
 
     selector->set_y(-20 + index * 10);
@@ -141,6 +150,7 @@ int battle_map::play()
     int stage = stage_menu_init;
 
     optional<mini_game> current_minigame;
+    optional<battle_menu> current_menu;
 
     // Main game loop
     while (true)
@@ -190,11 +200,13 @@ int battle_map::play()
         }
         case stage_menu_init:
         {
+            current_menu.emplace(CHAR_JEREMY_BATTLE);
             stage = stage_menu;
             break;
         }
         case stage_menu:
         {
+            current_menu->update();
             break;
         }
         }
