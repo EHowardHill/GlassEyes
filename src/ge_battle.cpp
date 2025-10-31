@@ -48,36 +48,38 @@ battle_menu::battle_menu(int character_index_)
     case CHAR_JEREMY_BATTLE:
     {
         title.emplace("JEREMY");
-        title->set_position(-60, -10);
+        title->set_position(-24, -48);
+        title->color = COLOR_YELLOW;
         title->render();
-        character_img.emplace(sprite_items::battle_chars.create_sprite(-60, -30, 0));
+        character_img.emplace(sprite_items::battle_chars.create_sprite(-48, -48, 0));
         break;
     }
     case CHAR_GINGER_BATTLE:
     {
         title.emplace("GINGER");
-        title->set_position(-60, -10);
+        title->set_position(-24, -48);
+        title->color = COLOR_YELLOW;
         title->render();
-        character_img.emplace(sprite_items::battle_chars.create_sprite(-60, -30, 0));
+        character_img.emplace(sprite_items::battle_chars.create_sprite(-48, -48, 0));
         break;
     }
     }
 
-    options.push_back(text("ATTACK", {-28, 10}));
-    options.push_back(text("ACT", {-28, 20}));
-    options.push_back(text("ITEM", {-28, 30}));
-    options.push_back(text("SPARE", {-28, 40}));
-    options.push_back(text("DEFEND", {-28, 50}));
+    options.push_back(text("ATTACK", {-24, -16}));
+    options.push_back(text("ACT", {-24, 0}));
+    options.push_back(text("ITEM", {-24, 16}));
+    options.push_back(text("SPARE", {-24, 32}));
+    options.push_back(text("DEFEND", {-24, 48}));
 
     for (auto &option : options)
     {
         option.render();
     }
 
-    selector.emplace(sprite_items::battle_icons.create_sprite(-28, -20, 0));
+    selector.emplace(sprite_items::battle_icons.create_sprite(-48, -16, 0));
 }
 
-void battle_menu::update()
+int battle_menu::update()
 {
     if (keypad::up_pressed())
     {
@@ -98,8 +100,10 @@ void battle_menu::update()
         sound_items::snd_select.play();
     }
 
-    selector->set_y(-20 + index * 10);
-    selector->set_tiles(sprite_items::battle_icons.tiles_item(), 0 + index);
+    selector->set_y(-16 + index * 16);
+    selector->set_tiles(sprite_items::battle_icons.tiles_item(), index);
+
+    return index;
 }
 
 int battle_map::play()
@@ -206,8 +210,42 @@ int battle_map::play()
         }
         case stage_menu:
         {
-            current_menu->update();
+            if (current_menu.has_value())
+            {
+                int selection = current_menu->update();
+                if (keypad::a_pressed())
+                {
+                    sound_items::snd_select.play();
+                    if (selection == 0)
+                    {
+                        current_menu.reset();
+                        stage = stage_action_init;
+                    }
+                }
+            }
             break;
+        }
+        case stage_action_init:
+        {
+            /*
+            current_minigame.emplace();
+            game_dart(true, current_minigame.value(), &ch_man);
+            stage = stage_action;
+            */
+            break;
+        }
+        case stage_action:
+        {
+            /*
+            int result = game_dart(false, current_minigame.value(), &ch_man);
+
+            if (result == 1)
+            {
+                current_minigame.reset();
+                stage = stage_talking_init;
+            }
+            break;
+            */
         }
         }
 

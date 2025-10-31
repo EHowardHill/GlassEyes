@@ -201,7 +201,7 @@ struct mini_game
 {
     optional<sprite_ptr> eye;
     vector<sprite_ptr, 48> bits;
-    fixed_t<4> vars[48 * 4];
+    fixed_t<4> vars[192] = {0};
 };
 
 enum battle_responses
@@ -221,7 +221,7 @@ struct battle_menu
     int character_index = 0;
 
     battle_menu(int character_index_);
-    void update();
+    int update();
 };
 
 #endif // GE_BATTLE_H
