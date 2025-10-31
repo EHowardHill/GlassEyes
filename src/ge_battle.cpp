@@ -187,13 +187,13 @@ int battle_map::play()
         case stage_recv_init:
         {
             current_minigame.emplace();
-            battle_fall_wobble(true, current_minigame.value(), &ch_man);
+            battle_fall(true, current_minigame.value(), &ch_man);
             stage = stage_recv;
             break;
         }
         case stage_recv:
         {
-            int result = battle_fall_wobble(false, current_minigame.value(), &ch_man);
+            int result = battle_fall(false, current_minigame.value(), &ch_man);
 
             if (result == 1)
             {
@@ -228,13 +228,13 @@ int battle_map::play()
         case stage_action_init:
         {
             current_minigame.emplace();
-            battle_fall_wobble(true, current_minigame.value(), &ch_man);
+            battle_fall(true, current_minigame.value(), &ch_man);
             stage = stage_action;
             break;
         }
         case stage_action:
         {
-            int result = battle_fall_wobble(false, current_minigame.value(), &ch_man);
+            int result = battle_fall(false, current_minigame.value(), &ch_man);
 
             if (result == 1)
             {

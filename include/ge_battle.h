@@ -132,59 +132,6 @@ enum BATTLE_RESULT
     RESULT_SIZE
 };
 
-// Structure to hold action data
-struct battle_action
-{
-    const char *name;
-    conversation *convo;
-    bool used;
-
-    battle_action(const char *n, conversation *c) : name(n), convo(c), used(false) {}
-};
-
-struct status_bar_items
-{
-    optional<sprite_ptr> icon_label; // Changed from optional<text> to optional<sprite_ptr> assuming it's a visual element
-    int index = 0;
-
-    status_bar_items();
-
-    void update_label();
-    void update();
-};
-
-struct status_bar_menu
-{
-    optional<sprite_ptr> battle_icons[5];
-    optional<sprite_ptr> icon_label; // Changed from optional<text> to optional<sprite_ptr> assuming it's a visual element
-    int index = 0;
-
-    status_bar_menu();
-
-    void update_label();
-    void update();
-};
-
-struct status_bar
-{
-    optional<sprite_ptr> char_img;
-    optional<sprite_ptr> name; // Changed from optional<text>
-    optional<sprite_ptr> hp;   // Changed from optional<text>
-    regular_bg_ptr action_bg = regular_bg_items::bg_battle_action.create_bg(0, 0);
-    int actor_index;
-
-    static int current_party_size;
-    static int current_enemy_size;
-    static int selected_menu;
-    static vector<battle_action, 4> available_actions;
-
-    optional<status_bar_menu> sb_menu;
-    optional<status_bar_items> sb_items;
-
-    status_bar(int actor_index_ = 0);
-    void update();
-};
-
 struct battle_map
 {
     optional<regular_bg_ptr> bg_grid;

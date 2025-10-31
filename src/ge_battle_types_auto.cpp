@@ -89,7 +89,6 @@ int battle_fall(bool init, mini_game &mg, character_manager *ch_man)
         mg.eye = sprite_items::hearts.create_sprite(0, 48, 1);
 
         for (int t = 0; t < 48; t++)
-
         {
             int x = global_data_ptr->bn_random.get_int(110) - 50;
             auto new_bit = sprite_items::hearts.create_sprite(x, (-24 * t) - 48, 4);
@@ -105,14 +104,12 @@ int battle_fall(bool init, mini_game &mg, character_manager *ch_man)
         bit.set_position(bit.x(), bit.y() + vy);
 
         if (bit.y() < min_y)
-
         {
             min_y = bit.y().integer();
         }
 
         // Collision
         if (close(bit.x(), bit.y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -127,7 +124,11 @@ int battle_fall(bool init, mini_game &mg, character_manager *ch_man)
         return 1;
     }
 
-    handle_movement_input(*mg.eye, 2, -58, 58);
+    if (mg.eye.has_value())
+    {
+        handle_movement_input(mg.eye, 2, -58, 58);
+    }
+
     return 0;
 }
 
@@ -141,7 +142,6 @@ int battle_fall_fast(bool init, mini_game &mg, character_manager *ch_man)
         mg.eye = sprite_items::hearts.create_sprite(0, 48, 1);
 
         for (int t = 0; t < 48; t++)
-
         {
             int x = global_data_ptr->bn_random.get_int(110) - 50;
             auto new_bit = sprite_items::hearts.create_sprite(x, (-48 * t) - 48, 4);
@@ -157,14 +157,12 @@ int battle_fall_fast(bool init, mini_game &mg, character_manager *ch_man)
         bit.set_position(bit.x(), bit.y() + vy);
 
         if (bit.y() < min_y)
-
         {
             min_y = bit.y().integer();
         }
 
         // Collision
         if (close(bit.x(), bit.y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -195,7 +193,6 @@ int battle_fall_wobble(bool init, mini_game &mg, character_manager *ch_man)
         mg.eye = sprite_items::hearts.create_sprite(0, 48, 1);
 
         for (int t = 0; t < 48; t++)
-
         {
             mg.vars[t] = global_data_ptr->bn_random.get_int(100) - 50; // x position
             auto new_bit = sprite_items::hearts.create_sprite(mg.vars[t], (-24 * t) - 48, 4);
@@ -218,14 +215,12 @@ int battle_fall_wobble(bool init, mini_game &mg, character_manager *ch_man)
         bit->set_position(base_x + wobble_x, bit->y() + vy);
 
         if (bit->y() < min_y)
-
         {
             min_y = bit->y().integer();
         }
 
         // Collision
         if (close(bit->x(), bit->y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -256,7 +251,6 @@ int battle_spiral(bool init, mini_game &mg, character_manager *ch_man)
         mg.eye = sprite_items::hearts.create_sprite(0, 0, 1);
 
         for (int t = 0; t < 32; t++)
-
         {
             // Store initial angle for each bit
             mg.vars[t] = t * 11; // angle in degrees
@@ -285,7 +279,6 @@ int battle_spiral(bool init, mini_game &mg, character_manager *ch_man)
 
         // Collision
         if (close(bit->x(), bit->y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -319,7 +312,6 @@ int battle_walls(bool init, mini_game &mg, character_manager *ch_man)
 
         // Create 6 walls
         for (int wall = 0; wall < 6; wall++)
-
         {
             int gap_y = global_data_ptr->bn_random.get_int(80) - 40;
             mg.vars[wall] = gap_y; // Store gap position
@@ -356,14 +348,12 @@ int battle_walls(bool init, mini_game &mg, character_manager *ch_man)
         bit.set_position(bit.x() + 1, bit.y());
 
         if (bit.x() > max_x)
-
         {
             max_x = bit.x().integer();
         }
 
         // Collision
         if (close(bit.x(), bit.y(), mg.eye->x(), mg.eye->y(), 10))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -391,7 +381,6 @@ int battle_zigzag(bool init, mini_game &mg, character_manager *ch_man)
         mg.eye = sprite_items::hearts.create_sprite(0, 0, 1);
 
         for (int t = 0; t < 40; t++)
-
         {
             int x = (t % 5) * 30 - 60;
             int y = -58 - (t / 5) * 30;
@@ -413,36 +402,28 @@ int battle_zigzag(bool init, mini_game &mg, character_manager *ch_man)
         bit->set_y(bit->y() + 1);
 
         // Zigzag horizontally
-        if (mg.vars[t] < 0.5) // Moving right
-
-        {
+        if (mg.vars[t] < 0.5) // Moving right {
             bit->set_x(bit->x() + 1);
-            if (bit->x() > 60)
-
-            {
-                mg.vars[t] = 1; // Switch to left
-            }
-        }
-        else // Moving left
+        if (bit->x() > 60)
 
         {
+            mg.vars[t] = 1; // Switch to left
+        }
+        else // Moving left {
             bit->set_x(bit->x() - 1);
-            if (bit->x() < -60)
+        if (bit->x() < -60)
 
-            {
-                mg.vars[t] = 0; // Switch to right
-            }
+        {
+            mg.vars[t] = 0; // Switch to right
         }
 
         if (bit->y() < min_y)
-
         {
             min_y = bit->y().integer();
         }
 
         // Collision
         if (close(bit->x(), bit->y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -470,7 +451,6 @@ int battle_converge(bool init, mini_game &mg, character_manager *ch_man)
         mg.eye = sprite_items::hearts.create_sprite(0, 40, 1);
 
         for (int t = 0; t < 40; t++)
-
         {
             int side = t % 4;
 
@@ -535,7 +515,6 @@ int battle_converge(bool init, mini_game &mg, character_manager *ch_man)
 
         // Collision
         if (close(bit->x(), bit->y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -589,7 +568,6 @@ int battle_pulse(bool init, mini_game &mg, character_manager *ch_man)
 
         // 8 bits per ring, 5 rings
         for (int ring = 0; ring < 5; ring++)
-
         {
             for (int i = 0; i < 8; i++)
 
@@ -619,7 +597,6 @@ int battle_pulse(bool init, mini_game &mg, character_manager *ch_man)
             ring_radius = 80;
 
         for (int i = 0; i < 8; i++)
-
         {
             auto bit = &mg.bits.at(ring * 8 + i);
             int angle = mg.vars[ring * 8 + i].integer();
@@ -663,7 +640,6 @@ int battle_crossfire(bool init, mini_game &mg, character_manager *ch_man)
 
         // Horizontal movers
         for (int i = 0; i < 10; i++)
-
         {
             int y = (i - 5) * 13;
             mg.vars[i] = fixed_t<4>(y); // Store y position
@@ -674,7 +650,6 @@ int battle_crossfire(bool init, mini_game &mg, character_manager *ch_man)
 
         // Vertical movers
         for (int i = 0; i < 10; i++)
-
         {
             int x = (i - 5) * 13;
             mg.vars[10 + i] = fixed_t<4>(x); // Store x position
@@ -698,14 +673,12 @@ int battle_crossfire(bool init, mini_game &mg, character_manager *ch_man)
         bit->set_position(bit->x() + fixed_t<4>(2), mg.vars[i]);
 
         if (bit->x() > max_pos)
-
         {
             max_pos = bit->x().integer();
         }
 
         // Collision
         if (close(bit->x(), bit->y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -721,14 +694,12 @@ int battle_crossfire(bool init, mini_game &mg, character_manager *ch_man)
         bit->set_position(mg.vars[10 + i], bit->y() + fixed_t<4>(2));
 
         if (bit->y() > max_pos)
-
         {
             max_pos = bit->y().integer();
         }
 
         // Collision
         if (close(bit->x(), bit->y(), mg.eye->x(), mg.eye->y(), 12))
-
         {
             // sound::stop_all();
             // sound_items::sfx_damage.play();
@@ -766,7 +737,6 @@ int battle_breakout(bool init, mini_game &mg, character_manager *ch_man)
 
         // Create blocks in rows at the top
         for (int row = 0; row < 3; row++)
-
         {
             for (int col = 0; col < 8; col++)
 
@@ -839,7 +809,6 @@ int battle_breakout(bool init, mini_game &mg, character_manager *ch_man)
 
         // Ensure minimum vertical speed
         if (bn::abs(vy) < 1.5)
-
         {
             vy = vy < 0 ? fixed_t<4>(-2) : fixed_t<4>(2);
             mg.vars[1] = vy;
@@ -854,7 +823,6 @@ int battle_breakout(bool init, mini_game &mg, character_manager *ch_man)
         auto block = &mg.bits[i];
 
         if (close(ball->x(), ball->y(), block->x(), block->y(), 10))
-
         {
             // Bounce ball
             vy = -vy;
@@ -888,92 +856,4 @@ int battle_breakout(bool init, mini_game &mg, character_manager *ch_man)
     }
 
     return 0;
-}
-
-// --- GAME: DARTS
-
-#define game_dart_state mg.vars[0]
-#define game_dart_state_timer mg.vars[1]
-#define game_dart_wobble_timer mg.vars[2]
-#define game_dart_aim_x mg.vars[3]
-#define game_dart_aim_y mg.vars[4]
-#define game_dart_random_jitter_x mg.vars[5]
-#define game_dart_random_jitter_y mg.vars[6]
-#define game_dart_wobbled_dart_x mg.vars[7]
-#define game_dart_wobbled_dart_y mg.vars[8]
-#define game_dart_power mg.vars[9]
-#define game_dart_power_direction mg.vars[10]
-#define game_dart_max_power mg.vars[12]
-#define game_dart_throw_timer mg.vars[13]
-#define game_dart_dart_target_x mg.vars[14]
-#define game_dart_dart_target_y mg.vars[15]
-#define game_dart_dart_start_x mg.vars[16]
-#define game_dart_dart_start_y mg.vars[17]
-#define game_dart_result_timer mg.vars[18]
-
-int game_dart(bool init, mini_game &mg, character_manager *ch_man)
-{
-    // Dart sprite is at index 6 in mg.bits
-    sprite_ptr *dart_sprite = nullptr;
-    if (mg.bits.size() > 6)
-    {
-        dart_sprite = &mg.bits.at(6);
-    }
-
-    // --- Initialization ---
-    if (init == true)
-    {
-        for (int t = 0; t < 192; t++)
-        {
-            mg.vars[t] = 0;
-        }
-
-        // Create dartboard (mg.bits[0])
-        auto dartboard = sprite_items::dartboard.create_sprite(0, -16);
-        dartboard.set_z_order(1);
-        mg.bits.push_back(dartboard);
-
-        mg.eye = sprite_items::hearts.create_sprite(0, -16, 1);
-        mg.eye->set_z_order(-1);
-
-        // Create game_dart_max_power meter sprites (mg.bits[1] to mg.bits[5])
-        for (int i = 0; i < 5; ++i)
-        {
-            auto meter = sprite_items::battle_squares.create_sprite(
-                -60 + (i * 8), 32, 0);
-            meter.set_visible(false);
-            mg.bits.push_back(meter);
-        }
-
-        // Dart (mg.bits[6])
-        auto dart = sprite_items::darts.create_sprite(-80, 60, 0);
-        mg.bits.push_back(dart);
-
-        // Initialize persistent data
-        game_dart_state = DART_INTRO;
-        game_dart_wobbled_dart_y = 0;
-        game_dart_wobbled_dart_y = 0;
-        game_dart_max_power = fixed_t<4>(100);
-    }
-
-    else
-    {
-        BN_LOG(game_dart_state);
-
-        // Main loop
-        switch (game_dart_state.integer())
-        {
-        case DART_INTRO:
-        {
-            game_dart_wobbled_dart_y += 1;
-            if (game_dart_wobbled_dart_y >= 30)
-            {
-                game_dart_state = fixed_t<4>(DART_AIMING);
-            }
-            break;
-        }
-        }
-
-        return 0;
-    }
 }
