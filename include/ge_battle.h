@@ -57,6 +57,24 @@ enum minigame_types
     MINIGAME_SIZE
 };
 
+struct mini_game
+{
+    optional<sprite_ptr> eye;
+    vector<sprite_ptr, 24> bits;
+    fixed_t<4> vars[64] = {0};
+
+    void reset()
+    {
+        eye.reset();
+        bits.clear();
+
+        for (int i = 0; i < 64; ++i)
+        {
+            vars[i] = 0;
+        }
+    }
+};
+
 struct battle_data
 {
     int party[4] = {0, 0, 0, 0};
@@ -71,7 +89,8 @@ struct battle_data
     conversation *talk_win = nullptr;
     conversation *talk_lose = nullptr;
     conversation *talk_spare[3] = {nullptr, nullptr, nullptr};
-    bool minigames[MINIGAME_SIZE] = {0};
+
+    int (*battles[8])(bool, mini_game *, character_manager *) = {nullptr};
 };
 
 constexpr int JEREMY_IDLE_START = 10;
@@ -144,13 +163,6 @@ struct battle_map
     battle_map(const battle_data *data);
 };
 
-struct mini_game
-{
-    optional<sprite_ptr> eye;
-    vector<sprite_ptr, 48> bits;
-    fixed_t<4> vars[192] = {0};
-};
-
 enum battle_responses
 {
     resp_attack,
@@ -169,6 +181,17 @@ struct battle_menu
 
     battle_menu(int character_index_);
     int update();
+
+    void reset()
+    {
+        title.reset();
+        character_img.reset();
+        selector.reset();
+        options.clear();
+
+        index = 0;
+        character_index = 0;
+    }
 };
 
 #endif // GE_BATTLE_H

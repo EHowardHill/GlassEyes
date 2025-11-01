@@ -155,6 +155,7 @@ int battle_map::play()
 
     optional<mini_game> current_minigame;
     optional<battle_menu> current_menu;
+    int battle_ticker = 0;
 
     // Main game loop
     while (true)
@@ -186,14 +187,19 @@ int battle_map::play()
         }
         case stage_recv_init:
         {
+            if (data->battles[battle_ticker] == nullptr)
+            {
+                battle_ticker = 0;
+            }
+
             current_minigame.emplace();
-            battle_fall(true, current_minigame.value(), &ch_man);
+            data->battles[battle_ticker](true, &current_minigame.value(), &ch_man);
             stage = stage_recv;
             break;
         }
         case stage_recv:
         {
-            int result = battle_fall(false, current_minigame.value(), &ch_man);
+            int result = data->battles[battle_ticker](false, &current_minigame.value(), &ch_man);
 
             if (result == 1)
             {
@@ -218,6 +224,7 @@ int battle_map::play()
                     sound_items::snd_select.play();
                     if (selection == 0)
                     {
+                        current_menu.value().reset();
                         current_menu.reset();
                         stage = stage_action_init;
                     }
@@ -227,21 +234,24 @@ int battle_map::play()
         }
         case stage_action_init:
         {
+            if (current_minigame.has_value())
+            {
+                current_minigame.reset();
+            }
             current_minigame.emplace();
-            battle_fall(true, current_minigame.value(), &ch_man);
+            battle_fall_fast(true, &current_minigame.value(), &ch_man);
             stage = stage_action;
             break;
         }
         case stage_action:
         {
-            int result = battle_fall(false, current_minigame.value(), &ch_man);
+            int result = battle_fall_fast(false, &current_minigame.value(), &ch_man);
 
             if (result == 1)
             {
                 stage = stage_talking_init;
                 current_minigame.reset();
             }
-            break;
         }
         }
 
@@ -255,6 +265,7 @@ int battle_map::play()
             current_map.collider_ptr->set_position(0, 0);
         }
 
+        battle_ticker++;
         core::update();
     }
 }
