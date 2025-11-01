@@ -103,7 +103,7 @@ int battle_fall_fast(bool init, mini_game *mg, character_manager *ch_man)
         }
     }
 
-    if (min_y > 96)
+    if (min_y >= 0)
     {
         // All bits have fallen
         return 1;
@@ -640,6 +640,7 @@ int attack_darts(bool init, mini_game *mg, character_manager *ch_man)
         mg->eye = sprite_items::hearts.create_sprite(0, 0, 1);
     }
 
+    /*
     else
     {
         switch (dart_stage.integer())
@@ -730,4 +731,5 @@ int attack_darts(bool init, mini_game *mg, character_manager *ch_man)
         }
         }
     }
+    */
 }
