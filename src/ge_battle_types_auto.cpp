@@ -73,7 +73,7 @@ int battle_fall_fast(bool init, mini_game *mg, character_manager *ch_man)
         // OPTIMIZED: Move eye to (0, 48) to prevent initial collision with falling bits
         mg->eye = sprite_items::hearts.create_sprite(0, 48, 1);
 
-        for (int t = 0; t < 24; t++)
+        for (int t = 0; t < 16; t++)
         {
             int x = global_data_ptr->bn_random.get_int(110) - 50;
             auto new_bit = sprite_items::hearts.create_sprite(x, (-48 * t) - 48, 4);
@@ -124,7 +124,7 @@ int battle_fall_wobble(bool init, mini_game *mg, character_manager *ch_man)
         // OPTIMIZED: Move eye to (0, 48) to prevent initial collision with falling bits
         mg->eye = sprite_items::hearts.create_sprite(0, 48, 1);
 
-        for (int t = 0; t < 24; t++)
+        for (int t = 0; t < 16; t++)
         {
             mg->vars[t] = global_data_ptr->bn_random.get_int(100) - 50; // x position
             auto new_bit = sprite_items::hearts.create_sprite(mg->vars[t], (-24 * t) - 48, 4);
@@ -135,7 +135,7 @@ int battle_fall_wobble(bool init, mini_game *mg, character_manager *ch_man)
     int min_y = 0;
     fixed_t<4> *ticker = &mg->vars[48]; // ticker stored after x positions
 
-    for (int t = 0; t < 24; t++)
+    for (int t = 0; t < 16; t++)
     {
         auto bit = &mg->bits.at(t);
 
@@ -178,7 +178,7 @@ int battle_spiral(bool init, mini_game *mg, character_manager *ch_man)
         // No optimization needed: bits start far from (0, 0) due to initial radius
         mg->eye = sprite_items::hearts.create_sprite(0, 0, 1);
 
-        for (int t = 0; t < 24; t++)
+        for (int t = 0; t < 16; t++)
         {
             // Store initial angle for each bit
             mg->vars[t] = t * 11; // angle in degrees
@@ -192,7 +192,7 @@ int battle_spiral(bool init, mini_game *mg, character_manager *ch_man)
 
     fixed_t<4> *radius = &mg->vars[32];
 
-    for (int t = 0; t < 24; t++)
+    for (int t = 0; t < 16; t++)
     {
         auto bit = &mg->bits.at(t);
 
@@ -304,7 +304,7 @@ int battle_zigzag(bool init, mini_game *mg, character_manager *ch_man)
         // No optimization needed: bits start off-screen
         mg->eye = sprite_items::hearts.create_sprite(0, 0, 1);
 
-        for (int t = 0; t < 24; t++)
+        for (int t = 0; t < 16; t++)
         {
             int x = (t % 5) * 30 - 60;
             int y = -58 - (t / 5) * 30;
@@ -318,7 +318,7 @@ int battle_zigzag(bool init, mini_game *mg, character_manager *ch_man)
 
     int min_y = 0;
 
-    for (int t = 0; t < 24; t++)
+    for (int t = 0; t < 16; t++)
     {
         auto bit = &mg->bits.at(t);
 
@@ -605,6 +605,11 @@ int battle_breakout(bool init, mini_game *mg, character_manager *ch_man)
 #define dart_stage mg->vars[0]
 #define dart_pattern mg->vars[1]
 #define dart_move_dir mg->vars[2]
+#define jitter mg->vars[3]
+#define dart_x mg->vars[4]
+#define dart_y mg->vars[5]
+#define dart_score mg->vars[6]
+#define dart_ticker mg->vars[7]
 
 const int MAX_POS = 64;
 const int MIN_POS = -64;
@@ -613,43 +618,49 @@ const int MOVE_AMOUNT = 2; // Moves 2 pixels at a time
 enum DART_STAGES
 {
     DART_STAGE_AIM,
+    DART_STAGE_POWER,
     DART_STAGE_THROW,
     DART_STAGE_RESULT
 };
 
 int attack_darts(bool init, mini_game *mg, character_manager *ch_man)
 {
-
     if (init)
     {
-        dart_stage = 0;
-        dart_pattern = global_data_ptr->bn_random.get_int(3); // 0, 1, or 2
+        dart_stage = DART_STAGE_AIM;
+        dart_pattern = global_data_ptr->bn_random.get_int(2); // 0, 1, or 2
+        dart_move_dir = 1;
+        dart_ticker = 0;
 
         auto dartboard = sprite_items::dartboard.create_sprite(0, 0, 0);
         mg->bits.push_back(dartboard);
 
-        auto dart = sprite_items::darts.create_sprite(0, -40, 0);
+        auto dart = sprite_items::darts.create_sprite(0, -100, 0);
         mg->bits.push_back(dart);
 
         auto battle_square_01 = sprite_items::battle_squares.create_sprite(-48, 48, 0);
         mg->bits.push_back(battle_square_01);
 
-        auto battle_square_02 = sprite_items::battle_squares.create_sprite(48, 48, 0);
+        auto battle_square_02 = sprite_items::battle_squares.create_sprite(120, 48, 2);
         mg->bits.push_back(battle_square_02);
 
         mg->eye = sprite_items::hearts.create_sprite(0, 0, 1);
     }
 
-    /*
     else
     {
+        auto dartboard = &mg->bits[0];
+        auto dart = &mg->bits[1];
+        auto battle_square_01 = &mg->bits[2];
+        auto battle_square_02 = &mg->bits[3];
+
         switch (dart_stage.integer())
         {
         case DART_STAGE_AIM:
         {
             if (keypad::a_pressed())
             {
-                dart_stage = DART_STAGE_THROW;
+                dart_stage = DART_STAGE_POWER;
             }
 
             int current_pattern = dart_pattern.integer();
@@ -680,56 +691,98 @@ int attack_darts(bool init, mini_game *mg, character_manager *ch_man)
                 mg->eye->set_y(range * bn::sin(mg->eye->x() / 40.0f));
             }
 
-            // --- Random Movement ---
-            else if (current_pattern == 2)
+            break;
+        }
+
+        case DART_STAGE_POWER:
+        {
+            bool prepare = false;
+
+            if (battle_square_02->x() > -64)
             {
-                if (global_data_ptr->bn_random.get_int(10) == 0)
+                battle_square_02->set_x(battle_square_02->x() - 5);
+            }
+            else
+            {
+                BN_LOG("CAME FROM WAIT TOO LONG");
+                prepare = true;
+                jitter = 48;
+            }
+
+            if (keypad::a_pressed())
+            {
+                BN_LOG("CAME FROM A PRESS");
+                prepare = true;
+                jitter = (battle_square_02->x() - battle_square_01->x()) * 2;
+            }
+
+            if (prepare)
+            {
+                if (jitter < 1)
+                    jitter = 1;
+
+                dart_x = mg->eye->x() + global_data_ptr->bn_random.get_fixed(jitter / 2) - (jitter / 4);
+                dart_y = mg->eye->y() + global_data_ptr->bn_random.get_fixed(jitter / 2) - (jitter / 4);
+                dart->set_position(dart_x, dart_y);
+                mg->eye->set_tiles(sprite_items::hearts.tiles_item(), 3);
+                mg->eye->set_position(dart_x, dart_y);
+
+                if (dart_x < 0)
+                    dart_x = dart_x * -1;
+                if (dart_y < 0)
+                    dart_y = dart_y * -1;
+
+                auto dist = dart_x + dart_y;
+
+                if (dist < 5)
                 {
-                    int new_dir = global_data_ptr->bn_random.get_int(4);
-                    dart_move_dir = new_dir;
+                    dart_score = 10;
+                }
+                else if (dist < 15)
+                {
+                    dart_score = 3;
+                }
+                else if (dist < 25)
+                {
+                    dart_score = 2;
+                }
+                else if (dist < 35)
+                {
+                    dart_score = 1;
+                }
+                else
+                {
+                    dart_score = 0;
                 }
 
-                int dir = dart_move_dir.integer();
-                int dx = 0, dy = 0;
-                if (dir == 0)
-                    dy = -MOVE_AMOUNT; // up
-                else if (dir == 1)
-                    dy = MOVE_AMOUNT; // down
-                else if (dir == 2)
-                    dx = -MOVE_AMOUNT; // left
-                else if (dir == 3)
-                    dx = MOVE_AMOUNT; // right
-
-                mg->eye->set_x(mg->eye->x() + dx);
-                mg->eye->set_y(mg->eye->y() + dy);
-
-                if (mg->eye->x() > MAX_POS || mg->eye->x() < MIN_POS || mg->eye->y() > MAX_POS || mg->eye->y() < MIN_POS)
+                if (dart_score > 0)
                 {
-                    if (mg->eye->x() > MAX_POS)
-                    {
-                        mg->eye->set_x(MAX_POS);
-                    }
-                    else if (mg->eye->x() < MIN_POS)
-                    {
-                        mg->eye->x() = MIN_POS;
-                    }
-
-                    if (mg->eye->y() > MAX_POS)
-                    {
-                        mg->eye->set_y(MAX_POS);
-                    }
-                    else if (mg->eye->y() < MIN_POS)
-                    {
-                        mg->eye->y() = MIN_POS;
-                    }
-
-                    dart_move_dir = global_data_ptr->bn_random.get_int(4);
+                    sound_items::snd_hit.play();
                 }
+                else
+                {
+                    sound_items::snd_miss.play();
+                }
+
+                text::add_toast(dart_score.integer(), {0, -72});
+
+                dart_stage = DART_STAGE_RESULT;
             }
 
             break;
         }
+
+        case DART_STAGE_RESULT:
+        {
+            dart_ticker += 1;
+
+            if (dart_ticker > 92)
+            {
+                return 1;
+            }
+        }
         }
     }
-    */
+
+    return 0;
 }

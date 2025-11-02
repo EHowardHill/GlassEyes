@@ -157,6 +157,8 @@ int battle_map::play()
     optional<battle_menu> current_menu;
     int battle_ticker = 0;
 
+    data->bg_music->play();
+
     // Main game loop
     while (true)
     {
@@ -187,11 +189,6 @@ int battle_map::play()
         }
         case stage_recv_init:
         {
-            if (data->battles[battle_ticker] == nullptr)
-            {
-                battle_ticker = 0;
-            }
-
             current_minigame.emplace();
             battle_fall_wobble(true, &current_minigame.value(), &ch_man);
             stage = stage_recv;
@@ -239,13 +236,13 @@ int battle_map::play()
                 current_minigame.reset();
             }
             current_minigame.emplace();
-            battle_fall_fast(true, &current_minigame.value(), &ch_man);
+            attack_darts(true, &current_minigame.value(), &ch_man);
             stage = stage_action;
             break;
         }
         case stage_action:
         {
-            int result = battle_fall_fast(false, &current_minigame.value(), &ch_man);
+            int result = attack_darts(false, &current_minigame.value(), &ch_man);
 
             if (result == 1)
             {
@@ -266,6 +263,7 @@ int battle_map::play()
         }
 
         battle_ticker++;
+        text::update_toasts();
         core::update();
     }
 }

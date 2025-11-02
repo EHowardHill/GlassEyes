@@ -35,7 +35,7 @@ int main()
 {
     core::init();
 
-    //game_numpad();
+    // game_numpad();
 
     global_data_ptr->foe = FOE_VISKERS_01;
     int value = BATTLE; // NEW_CHAPTER;

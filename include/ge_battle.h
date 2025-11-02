@@ -60,15 +60,15 @@ enum minigame_types
 struct mini_game
 {
     optional<sprite_ptr> eye;
-    vector<sprite_ptr, 24> bits;
-    fixed_t<4> vars[64] = {0};
+    vector<sprite_ptr, 16> bits;
+    fixed_t<4> vars[32] = {0};
 
     void reset()
     {
         eye.reset();
         bits.clear();
 
-        for (int i = 0; i < 64; ++i)
+        for (int i = 0; i < 48; ++i)
         {
             vars[i] = 0;
         }
@@ -83,28 +83,14 @@ struct battle_data
     int enemy_count = 0;
 
     const regular_bg_item *bg_item = &regular_bg_items::bg_battle_grid;
-    conversation *talk_init = nullptr;
-    conversation *talk_progress_party[3] = {nullptr, nullptr, nullptr};
-    conversation *talk_progress_enemy[3] = {nullptr, nullptr, nullptr};
-    conversation *talk_win = nullptr;
-    conversation *talk_lose = nullptr;
-    conversation *talk_spare[3] = {nullptr, nullptr, nullptr};
-
-    int (*battles[8])(bool, mini_game *, character_manager *) = {nullptr};
+    const music_item *bg_music = &music_items::boss;
+    const conversation *talk_init = nullptr;
+    const conversation *talk_progress_party[3] = {nullptr, nullptr, nullptr};
+    const conversation *talk_progress_enemy[3] = {nullptr, nullptr, nullptr};
+    const conversation *talk_win = nullptr;
+    const conversation *talk_lose = nullptr;
+    const conversation *talk_spare[3] = {nullptr, nullptr, nullptr};
 };
-
-constexpr int JEREMY_IDLE_START = 10;
-constexpr int JEREMY_HURT_START = 11;
-constexpr int JEREMY_HURT_END = 14;
-constexpr int JEREMY_ATK_START = 15;
-constexpr int JEREMY_ATK_END = 21;
-
-constexpr int GINGER_IDLE_START = 8;
-constexpr int GINGER_IDLE_END = 11;
-constexpr int GINGER_HURT_START = 12;
-constexpr int GINGER_HURT_END = 14;
-constexpr int GINGER_ATK_START = 15;
-constexpr int GINGER_ATK_END = 17;
 
 constexpr int ACTION_NONE = -1;
 constexpr int ACTION_ATTACK = 0;
