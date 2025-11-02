@@ -34,7 +34,6 @@ const battle_data foe01 = {
     .talk_init = &garbage_fight_01,
     .talk_progress_party = {&garbage_fight_02, &garbage_fight_03, nullptr},
     .talk_win = &garbage_fight_04,
-    .talk_spare = {&garbage_spare, nullptr, nullptr}
-};
+    .talk_spare = {&garbage_spare, nullptr, nullptr}};
 
 #endif // GE_BATTLE_TYPES_AUTO_H

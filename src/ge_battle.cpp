@@ -20,6 +20,7 @@
 #include "ge_character_manager.h"
 #include "ge_dialogue.h"
 #include "ge_battle.h"
+#include "ge_battle_acts_auto.h"
 
 using namespace bn;
 
