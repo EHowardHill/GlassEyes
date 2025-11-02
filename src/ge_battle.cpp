@@ -193,13 +193,13 @@ int battle_map::play()
             }
 
             current_minigame.emplace();
-            data->battles[battle_ticker](true, &current_minigame.value(), &ch_man);
+            battle_fall_wobble(true, &current_minigame.value(), &ch_man);
             stage = stage_recv;
             break;
         }
         case stage_recv:
         {
-            int result = data->battles[battle_ticker](false, &current_minigame.value(), &ch_man);
+            int result = battle_fall_wobble(false, &current_minigame.value(), &ch_man);
 
             if (result == 1)
             {

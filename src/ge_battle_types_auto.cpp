@@ -157,7 +157,7 @@ int battle_fall_wobble(bool init, mini_game *mg, character_manager *ch_man)
         }
     }
 
-    if (min_y > 96)
+    if (min_y >= 0)
     {
         // All bits have fallen
         return 1;
