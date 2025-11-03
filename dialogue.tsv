@@ -1985,3 +1985,41 @@ death_01_alt_02
 	db_ch_death			Do you have a	sacrifice for me?										
 				No.	Yes.										
 				No worries.	I will have you	soon enough.									
+															
+henry_01															
+	db_ch_vista_02	EM_WAT		..Human?	What are you doing	in this place?									
+	db_ch_vista_02	EM_SULLEN		You must leave.		Now.									
+	db_ch_henry	EM_DEFAULT		..		The human may stay.									
+	db_ch_henry	EM_DEFAULT		We have been	watching him closely	since his fall.									
+	db_ch_vista_02	EM_CONFUSED		What do you mean?											
+	db_ch_henry	EM_DEFAULT		Every few years, you	come to me, asking	for change.									
+	db_ch_henry	EM_DEFAULT		For the first time,	this wish shall be	granted.									
+	db_ch_henry	EM_DEFAULT		But do you	remember what you	said about wishes?									
+	db_ch_vista_02	EM_CONFUSED		..I do.											
+	db_ch_henry	EM_DEFAULT		Call for your	children to join us.										
+	db_ch_vista_02	EM_SAD		Selari? Sebellus?		We need you in here.									
+	db_ch_ginger	EM_SIDE_EYE		But I thought-											
+	db_ch_vista_02	EM_SAD		I know what I said.		Come here.									
+	db_ch_ginger	EM_LAUGH		..		IT'S YOU!									
+	db_ch_henry	EM_DEFAULT		Vista. This will be	the most important	part of your reign.									
+	db_ch_henry	EM_DEFAULT		I always permitted	you to leave, Vista,	if you so wished.									
+	db_ch_vista_02	EM_SULLEN		Because you needed	my rule to be	voluntary, yes.									
+	db_ch_henry	EM_DEFAULT		I do not recall you	having run away in	the way Selari does.									
+	db_ch_henry	EM_DEFAULT		She will continue	this behavior,	you know.									
+	db_ch_sebellus	EM_DEFAULT		Hey- Stop that.	You're scaring her.										
+	db_ch_vista_02	EM_SULLEN		Sebellus.	It is not your place	to speak right now.									
+	db_ch_henry	EM_DEFAULT		I no longer have my	human eyes to give.										
+	db_ch_henry	EM_DEFAULT		I cannot produce a	new mueto with a	full human soul.									
+	db_ch_henry	EM_DEFAULT		I apologize, Selari.	Your mother is more	dear to me than you.									
+	db_ch_henry	EM_DEFAULT		I will give her the	choice to administer	a dose of Lethedol.									
+	db_ch_ginger	EM_DEFAULT		..W-What's that?											
+	db_ch_henry	EM_DEFAULT		All muetos have a	tiny piece of a	human soul within.									
+	db_ch_henry	EM_DEFAULT		Lethedol is used to	remove unfortunate	human memories.									
+	db_ch_ginger	EM_SCARED		..S-So I wouldn't	remember being a	human anymore?									
+	db_ch_ginger	EM_WEEP		I need to go home,	I-I need to go home-	I need to go home-									
+	db_ch_sebellus	EM_DEFAULT		Human.	Take care of Ginger	for me.									
+	db_ch_ginger	EM_WEEP		SEBELLUS!!	NO!!										
+	db_ch_vista_02	EM_DISAPPOINTED		Sebellus! Stop that	this instant!										
+	db_ch_sebellus	EM_DEFAULT		Goodbye, Ginger.		I love you so much.									
+	db_ch_henry	EM_DEFAULT		..											
+	db_ch_vista_02	EM_SULLEN		That was entirely	unnescessary, Henry.										
