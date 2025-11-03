@@ -19,15 +19,12 @@
 #include "ge_character_manager.h"
 #include "ge_dialogue.h"
 #include "ge_actions.h"
-#include "ge_battle.h"
 #include "ge_games.h"
 #include "ge_map_data.h"
 #include "ge_typewriter.h"
 #include "ge_typewriter_auto.h"
 #include "ge_navigate.h"
 #include "ge_game_numpad.h"
-
-#include "ge_battle_types_auto.h"
 
 using namespace bn;
 
@@ -38,7 +35,7 @@ int main()
     // game_numpad();
 
     global_data_ptr->foe = FOE_VISKERS_01;
-    int value = BATTLE; // NEW_CHAPTER;
+    int value = NEW_CHAPTER; // NEW_CHAPTER;
 
     global_data_ptr = new global_data();
     global_data_ptr->process_stage = BLACK_TO_LAB_02;
@@ -47,12 +44,6 @@ int main()
     {
         switch (value)
         {
-        case BATTLE:
-        {
-            battle_map bm(&foe01);
-            value = bm.play();
-            break;
-        }
         case GAME:
         {
             value = game_map();
