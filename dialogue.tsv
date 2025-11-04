@@ -2023,3 +2023,89 @@ henry_01
 	db_ch_sebellus	EM_DEFAULT		Goodbye, Ginger.		I love you so much.									
 	db_ch_henry	EM_DEFAULT		..											
 	db_ch_vista_02	EM_SULLEN		That was entirely	unnescessary, Henry.										
+	db_ch_henry	EM_DEFAULT		I will remake him if	I need to. Scarlett	will clean this up.									
+	db_ch_henry	EM_DEFAULT		Selari, step away	from the body.										
+	db_ch_ginger	EM_WEEP		I HATE YOU!!											
+	db_ch_henry	EM_DEFAULT		You do know why this	is so urgent, Vista.										
+	db_ch_henry	EM_DEFAULT		Selari's human donor	will be taken off	life support soon.									
+	db_ch_henry	EM_DEFAULT		She needs to be	comfortable with her	new life.									
+	db_ch_vista_02	EM_SAD		Four-hundred and	seventy six.										
+	db_ch_henry	EM_DEFAULT		What do you mean?											
+	db_ch_vista_02	EM_SULLEN		That's how many	"half-life ""children"""	you've given me.									
+	db_ch_vista_02	EM_SULLEN		You say that what	you do is for the	sake of new life.									
+	db_ch_vista_02	EM_SULLEN		You leave nothing	behind you but	death, Henry.									
+	db_ch_vista_02	EM_SAD		Tell me my name,	Henry.										
+	db_ch_henry	EM_SULLEN		Vista Blackrose,	The Senatrix	of Albion.									
+	db_ch_vista_02	EM_SULLEN		No, Henry.	My REAL name. The	one I've forgotten.									
+	db_ch_vista_02	EM_SAD		I will ask again,	in a different tone	of voice.									
+	db_ch_vista_02	EM_ANGRY		Tell me my real name	or I will skin you	like a potato.									
+	db_ch_vista_02	EM_SAD		Human.. Go into the	other room and	comfort my daughter.									
+															
+henry_02															
+	db_ch_ginger	EM_SCARED		..									&henry_02_alt_01	&henry_02_alt_02	
+	db_ch_ginger	EM_WEEP		..	..	..									
+	db_ch_ginger	EM_WEEP		..	..	I have to go home.									
+	db_ch_ginger	EM_SAD		I-I got my hands	on Henry's.. tool.	I know what it is.									
+	db_ch_ginger	EM_SAD		It pulls your soul	from your body.										
+	db_ch_ginger	EM_SAD		I don't know if I'll	return home if I use	it.									
+	db_ch_ginger	EM_SAD		I don't know if	I care.										
+	db_ch_ginger	EM_SULLEN		You are the only	friend I have left.										
+	db_ch_ginger	EM_SULLEN		I respect your	opinion.										
+				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&henry_02_alt_02	
+	db_ch_vista_02	EM_SULLEN		Ginger.											
+	db_ch_ginger	EM_SULLEN		..											
+	db_ch_vista_02	EM_SULLEN		Both of you.		Follow me.									
+															
+henry_02_alt_01															
+	db_ch_ginger	EM_SULLEN		..T-Thank you..	Please make it	quick, okay?									
+															
+henry_02_alt_02															
+															
+ending_lab_01															
+	db_ch_kiara	EM_WAT		Your  majesty!	You look troubled!	Where is Henry?!									
+	db_ch_vista_02	EM_SAD		Henry.. is gone.		Do not enter.									
+	db_ch_kiara	EM_SAD		O-Oh..	I knew his time was	coming soon, b-but..									
+	db_ch_kiara	EM_SCARED		If Henry..	is DEAD.. then that	means..									
+	db_ch_kiara	EM_SCARED		Who will write the	sigils to split	souls?									
+	db_ch_vista_02	EM_SULLEN		No one.	It's over.	The war is over.									
+	db_ch_vista_02	EM_SULLEN		Go home, Kiara.	I have plans to	make.									
+	db_ch_vista_02	EM_SULLEN		My daughter..		What will you do?									
+	db_ch_ginger	EM_WEEP		..I-I want to stay	with y-you..		COLOR_PURPLE								
+	db_ch_vista_02	EM_SAD		I sense your mind	will change.										
+	db_ch_vista_02	EM_SAD		Your heart lies	elsewhere.										
+	db_ch_vista_02	EM_SAD		I wish cherish the	time we have left,	but the kingdom..									
+	db_ch_vista_02	EM_SAD		It is dead.	No new muetos can be	born without Henry.									
+	db_ch_vista_02	EM_SAD		It was always fated	to end this way.										
+	db_ch_vista_02	EM_SULLEN		Human.. Thank you	for looking after my	daughter.									
+	db_ch_vista_02	EM_SULLEN		You may go home.											
+															
+ending_lab_02															
+				..											
+				Ginger's lifeless	body hits the	ground.									
+				You can only hope	her soul made its	way back home.									
+															
+ending_lab_02b															
+				Oh.. Human.		Stand still.	COLOR_BLUE		SP_SLOW						
+				Do you know what	you've done, human?		COLOR_BLUE		SP_SLOW						
+				You've met with a	terrible fate.		COLOR_BLUE		SP_SLOW						
+															
+ending_lab_03															
+	db_ch_ginger	EM_SCARED		..	..	You really think so?									
+	db_ch_ginger	EM_SAD		You want me to	forget all about	you?									
+	db_ch_ginger	EM_WEEP		A-And forget all	about Sebellus..	And my family..									
+	db_ch_ginger	EM_WEEP		I-I don't.. know..	if I can..	I.. I don't..									
+	db_ch_vista_02	EM_SULLEN		..	..	Ginger.									
+	db_ch_vista_02	EM_SULLEN		It is done.											
+	db_ch_ginger	EM_DEFAULT		What do you mean?											
+	db_ch_vista_02	EM_SULLEN		Henry and I have	come to an..	agreement.									
+	db_ch_ginger	EM_SAD		..	I'm going to take	the Lethodol.									
+	db_ch_vista_02	EM_SULLEN		You don't have to,	child.										
+	db_ch_ginger	EM_SAD		I do. I'm going to	keep running away	unless I do.									
+	db_ch_vista_02	EM_SULLEN		..											
+	db_ch_vista_02	EM_SULLEN		..	..	..									
+	db_ch_vista_02	EM_SAD		Henry remembered my	name, you know.										
+	db_ch_vista_02	EM_SULLEN		Things would have	gone very sour if	he had not.									
+	db_ch_vista_02	EM_SULLEN		I will remember your	name, Virginia.										
+	db_ch_vista_02	EM_SULLEN		Human, you had best	say your goodbyes	and go home.									
+	db_ch_ginger	EM_SCARED		..	..	..									
+	db_ch_ginger	EM_SCARED		Take care of	yourself, okay?										
