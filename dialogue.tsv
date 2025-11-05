@@ -2057,13 +2057,20 @@ henry_02
 	db_ch_vista_02	EM_SULLEN		Both of you.		Follow me.									
 															
 henry_02_alt_01															
+	db_ch_ginger	EM_SULLEN		..	..	..Alright..									
 	db_ch_ginger	EM_SULLEN		..T-Thank you..	Please make it	quick, okay?									
+	db_ch_ginger	EM_CONFUSED		B-But tell me..	Before I go..	That look..									
+	db_ch_ginger	EM_SAD		That look on your	face.. What are you	feeling?									
+				Sadness	Anger	Relief								&ending_lab_02	
+	db_ch_ginger	EM_LAUGH		Hey..	Take care of	yourself, okay?									
+	db_ch_ginger	EM_LAUGH		Maybe we'll see	each other again.										
+	db_ch_ginger	EM_SAD		Goodbye,	friend.										
 															
 henry_02_alt_02															
 															
 ending_lab_01															
 	db_ch_kiara	EM_WAT		Your  majesty!	You look troubled!	Where is Henry?!									
-	db_ch_vista_02	EM_SAD		Henry.. is gone.		Do not enter.									
+	db_ch_vista_02	EM_SAD		Henry is gone.		Do not enter.									
 	db_ch_kiara	EM_SAD		O-Oh..	I knew his time was	coming soon, b-but..									
 	db_ch_kiara	EM_SCARED		If Henry..	is DEAD.. then that	means..									
 	db_ch_kiara	EM_SCARED		Who will write the	sigils to split	souls?									
@@ -2085,9 +2092,22 @@ ending_lab_02
 				You can only hope	her soul made its	way back home.									
 															
 ending_lab_02b															
-				Oh.. Human.		Stand still.	COLOR_BLUE		SP_SLOW						
-				Do you know what	you've done, human?		COLOR_BLUE		SP_SLOW						
-				You've met with a	terrible fate.		COLOR_BLUE		SP_SLOW						
+	db_ch_vista_02	EM_SULLEN		..	..	..			SP_SLOW						
+	db_ch_vista_02	EM_SAD		..	..	I see.			SP_SLOW						
+	db_ch_vista_02	EM_SULLEN		..	..	Was this her choice?			SP_DEFAULT						
+				Yes.					SP_DEFAULT						
+	db_ch_vista_02			Very well.		Was she afraid?			SP_DEFAULT						
+				She was brave.					SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		..	..	..			SP_SLOW						
+	db_ch_vista_02	EM_SAD		Some nights..	When I was having	trouble sleeping..			SP_DEFAULT						
+	db_ch_vista_02	EM_SAD		I tried to picture	this moment.	I couldn't.			SP_DEFAULT						
+	db_ch_vista_02	EM_SAD		But I knew that it	would come sooner	or later.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		I should have done	the same, you know.	I'm a coward.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		But it's too late	for me now.	This is my fate.			SP_DEFAULT						
+	db_ch_vista_02	EM_SAD		I'm proud of her.	I only hope that she	remembers me.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		I should kill you	for what you've	done, human.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		But I can't.					SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		..		Go home now.			SP_DEFAULT						
 															
 ending_lab_03															
 	db_ch_ginger	EM_SCARED		..	..	You really think so?									
@@ -2097,15 +2117,105 @@ ending_lab_03
 	db_ch_vista_02	EM_SULLEN		..	..	Ginger.									
 	db_ch_vista_02	EM_SULLEN		It is done.											
 	db_ch_ginger	EM_DEFAULT		What do you mean?											
-	db_ch_vista_02	EM_SULLEN		Henry and I have	come to an..	agreement.									
+	db_ch_vista_02	EM_DISAPPOINTED		Henry and I have	come to an..	agreement.									
 	db_ch_ginger	EM_SAD		..	I'm going to take	the Lethodol.									
-	db_ch_vista_02	EM_SULLEN		You don't have to,	child.										
-	db_ch_ginger	EM_SAD		I do. I'm going to	keep running away	unless I do.									
-	db_ch_vista_02	EM_SULLEN		..											
+	db_ch_vista_02	EM_SULLEN		Give me that.											
 	db_ch_vista_02	EM_SULLEN		..	..	..									
 	db_ch_vista_02	EM_SAD		Henry remembered my	name, you know.										
 	db_ch_vista_02	EM_SULLEN		Things would have	gone very sour if	he had not.									
 	db_ch_vista_02	EM_SULLEN		I will remember your	name, Virginia.										
+	db_ch_ginger	EM_SAD		You want me to take	this, don't you.										
+	db_ch_vista_02	EM_DISAPPOINTED		I don't want you to	do anything that you	don't want to do.									
+	db_ch_ginger	EM_ANGRY		That's what Henry	said to you, isn't	it?									
+	db_ch_vista_02	EM_DEFAULT		I-It..	..	..									
+	db_ch_vista_02	EM_SAD		..	..	..									
+	db_ch_vista_02	EM_SULLEN		Yes. It was.		But I mean it.									
+	db_ch_vista_02	EM_SULLEN		It'll be like waking	up from a bad dream.	Consider..									
+	db_ch_vista_02	EM_DISAPPOINTED		You aren't sad from	all the dreams you	have forgotten.									
+	db_ch_vista_02	EM_SIDE_EYE		And we'll have each	other, won't we? Two	peas in a pod.									
+	db_ch_ginger	EM_SULLEN		You're afraid that	I'll run away again.										
+	db_ch_vista_02	EM_SIDE_EYE		I want you to go, or	to stay. But running	away like you do..									
+	db_ch_vista_02	EM_SULLEN		It's not safe.	You can take it when	we get back home.									
+	db_ch_ginger	EM_WEEP		..N-No. If I'm going	to take it, I want	to take it now.									
+	db_ch_ginger	EM_WEEP		I-I don't want to	waste any more of	my life.									
+	db_ch_vista_02	EM_SIDE_EYE		Sunshine.. The two	of us will live	forever.									
+	db_ch_vista_02	EM_SIDE_EYE		No need to speak	this way.										
+	db_ch_vista_02	EM_SAD		..	..	..									
 	db_ch_vista_02	EM_SULLEN		Human, you had best	say your goodbyes	and go home.									
 	db_ch_ginger	EM_SCARED		..	..	..									
 	db_ch_ginger	EM_SCARED		Take care of	yourself, okay?										
+	db_ch_ginger	EM_WEEP		T-Thank you.		Goodbye, now.									
+															
+henry_02_alt_01b															
+	db_ch_ginger	EM_WEEP		..	..	..									
+	db_ch_ginger	EM_WEEP		..J-Just do it	before I remember	a-again, okay?									
+															
+final_01															
+				You take an	uneventful flight	home.									
+				No one else on board	could know what you	know.									
+				You wonder if your	adventure was just	a waste of time.									
+				As new muetos stop	emerging from the	tunnels,									
+				The morale of many	muetos grows dire.										
+				Some accuse their	queen of giving up	the fight.									
+				Others pray to her	in vain for a	miracle.									
+				Meanwhile, the queen	and her daughter	hide in the woods.									
+				The bombs cease.	The wind in the wood	grows heavy.									
+				Vista and Ginger	have become the	last of the muetos.									
+															
+final_01b															
+	db_ch_ginger	EM_DISAPPOINTED		Hey, uh..	Mom.. I was thinking	about something..									
+	db_ch_vista_02	EM_DEFAULT		Yes?	What is it dear?										
+	db_ch_ginger	EM_DISAPPOINTED		Do you think..	I have a gravestone?	My human self.									
+	db_ch_vista_02	EM_SIDE_EYE		You.. may, I don't..	Why are you thinking	of such things?									
+	db_ch_vista_02	EM_SULLEN		It isn't healthy to	dwell on this.										
+	db_ch_ginger	EM_SAD		Well, I, uh..	You know.. I come	from the Old World..									
+	db_ch_ginger	EM_DEFAULT		Where did you come	from, originally?										
+	db_ch_vista_02	EM_SIDE_EYE		Hmm.. Well..	I think I came from	the Old World too.									
+	db_ch_vista_02	EM_SULLEN		I do not remember	my name, however.										
+	db_ch_ginger	EM_EMBARRASSED		Maybe it's just	morbid curiousity,	you know?									
+	db_ch_ginger	EM_ANNOYED		I just think it's	worth seeing.	Once.									
+	db_ch_vista_02	EM_EXCITED		Well, it's been too	long since we've	gone on a trip, yes?									
+	db_ch_vista_02	EM_HAPPY		I think it would be	nice to get a good	change of scenery.									
+															
+final_01c															
+				Ginger didn't want	to come home from	that trip.									
+				She stayed behind,	while Vista returned	home.									
+				There was plenty of	Lethedol to help her	ease the pain.									
+				And so it went,	on and on,	until the end.									
+															
+final_02															
+				Your flight home was	quiet and	uneventful.									
+				You wondered what	the purpose of it	all was in the end.									
+				If you would ever	encounter any of	them again.									
+				As for Vista..	Something finally	broke within her.									
+				She no longer cared	for the war, or for	her people,									
+				Who, without Henry,	would be no more	within a decade.									
+				She hid deep in the	woods, somewhere no	one would find her.									
+				After taking the	last of Henry's	Lethedol, she slept.									
+				The woman who	awoke could live a	peaceful life.									
+				And so it went -	each day of eternity	went by the same.									
+				Unable to shake the	feeling that	something..									
+				..wasn't quite	right.										
+															
+final_03															
+	db_ch_ginger	EM_CONFUSED		..w-where am I?											
+	db_ch_const	EM_DISAPPOINTED		Ah.. Your majesty,	you're awake again.	Where are my notes-									
+	db_ch_owly	EM_DISAPPOINTED		Your name is Selari,	You have permanent	daily memory loss.									
+	db_ch_owly	EM_DISAPPOINTED		You took a medicine	"named ""Lethedol"","	which has strong									
+	db_ch_owly	EM_DISAPPOINTED		and permanent side	effects on Marelons,	like you.									
+	db_ch_const	EM_DISAPPOINTED		I am Constance,	The royal maid to	your late mother.									
+	db_ch_ginger	EM_CONFUSED		..late mother?											
+	db_ch_const	EM_DISAPPOINTED		Yes. She used a soul	extraction tool on	herself last month.									
+	db_ch_const	EM_DISAPPOINTED		The public does not	know this.. They are	growing impatient.									
+	db_ch_const	EM_DISAPPOINTED		We need to dress you	up as her for a..	public showing.									
+	db_ch_const	EM_DISAPPOINTED		You just need to	stand and wave.	Can you do that?									
+	db_ch_ginger	EM_EMBARRASSED		I-I.. I think so..											
+	db_ch_const	EM_DISAPPOINTED		Very good, and..	I know you won't	remember this..									
+	db_ch_const	EM_DISAPPOINTED		The castle staff and	I.. are not sure how	to take care of you.									
+	db_ch_const	EM_DISAPPOINTED		There is a cabin not	far from here.	It's very cozy.									
+	db_ch_const	EM_DISAPPOINTED		"""Vista is sick"" is"	much safer than	"""Vista is dead""."									
+	db_ch_const	EM_DISAPPOINTED		You would pretend	to be her.. Very	little would change.									
+	db_ch_const	EM_DISAPPOINTED		You two look just	the same anyways.	What do you say?									
+	db_ch_ginger	EM_DISAPPOINTED		I-I.. I don't..	I don't know..										
+	db_ch_const	EM_DISAPPOINTED		I suppose it doesn't	matter. Just change	into the outfit.									
+	db_ch_const	EM_DISAPPOINTED		It will be over	very, very soon.										
