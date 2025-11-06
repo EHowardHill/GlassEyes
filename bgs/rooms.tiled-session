@@ -32,6 +32,14 @@
                 "y": 223.8370118845501
             }
         },
+        "maps/castle_01.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 367.5,
+                "y": 152.5
+            }
+        },
         "maps/cave_01.tmx": {
             "scale": 1.6561383928571427,
             "selectedLayer": 2,
@@ -244,48 +252,48 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 255.99999999999997,
-                "y": 127.33333333333334
+                "x": 256.3333333333333,
+                "y": 127.66666666666664
             }
         },
         "maps/lab_03.tmx": {
             "scale": 1.9296875,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 63.7408906882591,
-                "y": 223.87044534412956
+                "x": 64.00000000000001,
+                "y": 224.12955465587044
             }
         },
         "maps/lab_04.tmx": {
             "scale": 1,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 412,
-                "y": 425
+                "x": 384.5,
+                "y": 384.5
             }
         },
         "maps/lab_05.tmx": {
             "scale": 2.7015625,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 128.07403123192597,
-                "y": 159.90746096009252
+                "x": 127.88895315211104,
+                "y": 160.09253903990745
             }
         },
         "maps/lab_06.tmx": {
             "scale": 2.7015625,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 128.07403123192597,
-                "y": 159.90746096009252
+                "x": 127.88895315211104,
+                "y": 160.09253903990745
             }
         },
         "maps/lab_path.tmx": {
             "scale": 1.6884765625,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 79.95373048004626,
-                "y": 255.85193753614806
+                "x": -78.176980913823,
+                "y": 176.78658183921343
             }
         },
         "maps/room01.tmx": {
@@ -439,11 +447,11 @@
         }
     },
     "last.imagePath": "C:/Users/ethan/OneDrive/Documents/GitHub/GlassEyes/bgs/tilesets",
-    "map.height": 16,
+    "map.height": 32,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 5,
+    "map.width": 32,
     "openFiles": [
         "maps/lab_02.tmx",
         "maps/lab_03.tmx",
