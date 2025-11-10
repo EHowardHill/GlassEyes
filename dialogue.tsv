@@ -1324,117 +1324,6 @@ chat_mcwebb
 	db_ch_mcwebb	EM_DEFAULT		Well, go ahead.	On you git.					CHAR_MCWEBB	&mcwebb_dont				
 			ACT_PROGRESS			CUTSCENE_CHANNEL									
 															
-f_cutscene_01															
-				Dr. Erickson?	Dr. Erickson- Do you	have a moment?	COLOR_BLUE								
-				Do you need me to	direct you to the	tutoring department?									
-				I read your paper on	Pleiotropic genes.	It was.. Inspired.	COLOR_BLUE								
-				Please, let me treat	you to lunch.		COLOR_BLUE								
-				They say, at the	quantum level,	observation affects	COLOR_BLUE								
-				reality.	What do you think	of that, Doctor?	COLOR_BLUE								
-				I'm a biologist,	not a physicist.	However..									
-				"""Observing"" doesn't"	change things. It's	more nuanced.									
-				To see, light has to	bounce off something	and hit your eyes.									
-				The light is what	changes things.	Not you.									
-				Unless, of course,	you turn on the	light.									
-				*sigh*											
-				It's not really any	of your business,	but..									
-				It's cruel irony..	Truly. This city has	some of the best									
-				minds, equipment..	in the world.	And yet.									
-				They have a	crippling fear of	change.									
-				They know they're	blessed, but they	don't know why,									
-				And they think that	if anything changes,	it might go away.									
-				That's an amazing	observation,	Dr. Erickson.	COLOR_BLUE								
-				You can keep a	secret, can't you,	kid?									
-				Yes, sir.			COLOR_BLUE								
-				They're pulling my	funding at the end	of the semester.									
-				I have a few months	to get my..	No.									
-				Do you need my	assistance, sir?		COLOR_BLUE								
-				I appreciate it,	kid, but..										
-				Do you recognize	these sigils, sir?		COLOR_BLUE								
-				..	How do you know	about such things?									
-				I'll tell you what.	Come to my lab	this Friday. 9 PM.									
-				It'd be an honor!			COLOR_BLUE								
-				I appreciate it.	We'll see what	you've got.									
-															
-f_cutscene_02															
-				I don't understand..	The ritual calls for	blood, doesn't it?									
-				It's not enough for	what you want to do,	Dr. Erickson.	COLOR_BLUE								
-				You have to give up	something more	substantial.	COLOR_BLUE								
-				The eyes are the	windows to the soul.		COLOR_BLUE								
-				Of course..	Of course.	Thank you.									
-				..and you're certain	that will be enough?										
-				Have I ever given	you a reason not	to trust me?	COLOR_RED								
-				No.											
-						I'm scared.									
-				It will only	hurt for a moment.		COLOR_RED								
-				I'm sorry that	it has to be	this way.									
-				You must be	terrified,	poor thing.									
-				My name is	Dr. Henry Erickson.										
-				What is your	name?	If you can remember.									
-						V-Vista.	COLOR_PURPLE								
-				Welcome to my home,	Vista.										
-				You are going to	be part of something	very special.									
-															
-f_cutscene_03															
-				Good morning,	pumpkin.	Did you sleep well?									
-				Morning, Henry.	Not really.	Too many thoughts.	COLOR_PURPLE								
-				Do you know what	day it is?										
-				It's.. Thursday?			COLOR_PURPLE								
-				It's been one year	since you woke up	for the first time.									
-				I made you a cake.	It's your favorite,	lemon.									
-				Go ahead,	make a wish.										
-				I.. Don't know if	I want to.		COLOR_PURPLE								
-				How come?											
-				I remember, the day	you brought me here,		COLOR_PURPLE								
-				I thought I wasn't	going to make it.		COLOR_PURPLE								
-				Back home.. I	couldn't take it	anymore.	COLOR_PURPLE								
-				And then I woke	up as.. This.		COLOR_PURPLE								
-				I wanted to escape.	It was a wish.	And..	COLOR_PURPLE								
-				You've been a	good father to me.		COLOR_PURPLE								
-				But I gave up so	many things, things	I took for granted.	COLOR_PURPLE								
-				I wish I could see	the sun again.	I really, really do.	COLOR_PURPLE								
-				But I'm afraid to	wish because.. 		COLOR_PURPLE								
-				..Well, I don't want	to give up anything	else.	COLOR_PURPLE								
-				Anything that I	might not be able	to get back.	COLOR_PURPLE								
-				I understand.	Once I finish my	research..									
-				We'll be able to	get out of hiding?		COLOR_PURPLE								
-				Oh.. Much more	than that, Vista.	Much more.									
-															
-f_cutscene_04															
-				EVICTION NOTICE:	PROPERTY MUST BE	VACATED									
-				Henry.. I've been	thinking, and I	don't know if the	COLOR_PURPLE								
-				machine will be	able to survive the	fall.	COLOR_PURPLE								
-				I can fix whatever	breaks.	I'll find a way.									
-				Here, you all in	first. Easy. It	won't hurt you.									
-				Dad- ..Henry..	..I-I'm scared,	the fall-									
-				Are the others	through the chute?										
-				Yes.											
-				Vista.	I have been keeping	a secret from you.									
-				..y-you have?											
-				You are different	from the others.										
-				How do I create a	"""mueto""?"										
-				Well, you let out	some blood, and	the magic takes									
-				a piece of a human	soul and fuses it to	a mueto body, yes?									
-				That was not how	I created you,	Vista.									
-				You have an *entire*	soul within you.										
-				The others will not	live more than a	couple years.									
-				But you? You could	live forever.										
-				W-What happened	to my old body?!										
-				You can visit it.	It is comatose at	the hospital.									
-				You have one choice.	Live forever, or	go home.									
-				You don't need to	decide now. But it	must be soon.									
-				I have plans.	I will make more	muetos. Many more.									
-				I will make them	in spite of this	awful city.									
-				And I want you	to be their queen.										
-				W-what does that	mean..?										
-				Whatever you want	it to mean.										
-						..why me?									
-				You're who the	spirits chose.										
-				Do you trust me?											
-						No.									
-				I'm scared.											
-				It will only	be scary for a	moment.									
-															
 convo_obj_ticket															
 				You've got the	golden ticket!										
 															
@@ -1700,40 +1589,24 @@ dock_ginger_01
 	db_ch_ginger	EM_DEFAULT		Hey.		Up so soon?									
 	db_ch_ginger	EM_SIDE_EYE		Sebellus and I	figured you could	use the sleep.									
 	db_ch_ginger	EM_DEFAULT		..											
-	db_ch_ginger	EM_SAD		..	What am I	doing here?	COLOR_PURPLE								
-	db_ch_ginger	EM_SULLEN		I guess.. Well..	I can't stop the war	or the suffering,									
-	db_ch_ginger	EM_DEFAULT		But mom is tired,	And maybe, if I'm	somewhere else,									
-	db_ch_ginger	EM_SULLEN		She'll put an end to	it until she can	find me again.									
-	db_ch_ginger	EM_SIDE_EYE		What do you think?											
-				What?	Sure thing.	You should go home.							&dock_ginger_alt_01	&dock_ginger_alt_02	
-	db_ch_ginger	EM_SAD		Nevermind. I	don't blame you for	not understanding.									
-	db_ch_ginger	EM_SULLEN		I just don't..	understand. I don't	know why I exist.									
-	db_ch_ginger	EM_CONFUSED		Forget it.	Forget I said	anything.									
-															
-dock_ginger_02															
-	db_ch_ginger	EM_DEFAULT		The weather looks so	nice out here.										
-	db_ch_ginger	EM_SIDE_EYE		I could never live	here. Too close to	the castle.									
-	db_ch_ginger	EM_DEFAULT		But I want to live	somewhere just like	this.									
-															
-dock_ginger_alt_01															
-	db_ch_ginger	EM_SIDE_EYE		Oh, you're just	being polite. It's a	terrible idea.									
-	db_ch_ginger	EM_SAD		I'm just a stupid	kid. I don't know	what I'm doing.									
-	db_ch_ginger	EM_LAUGH		You wouldn't believe	me if I told you,	but..									
-	db_ch_ginger	EM_DEFAULT		Do you know why I	finally decided to	run away?									
-	db_ch_ginger	EM_DEFAULT		I saw an angel.	He told me to go and	find a human.									
-	db_ch_ginger	EM_CONFUSED		You don't have to	believe me.										
-	db_ch_ginger	EM_SULLEN		But things are	strange here.										
-	db_ch_ginger	EM_SAD		I hope I didn't make	a mistake I can't	come back from.	COLOR_PURPLE								
-															
-dock_ginger_alt_02															
-	db_ch_ginger	EM_WEEP		..			COLOR_PURPLE								
-	db_ch_ginger	EM_WEEP		..	..		COLOR_PURPLE								
-	db_ch_ginger	EM_WEEP		I want to go home.	I want to go home	so, so much.	COLOR_PURPLE								
-	db_ch_ginger	EM_SCARED		What have I done??	What have I done???		COLOR_PURPLE								
-	db_ch_ginger	EM_SCARED		..											
-	db_ch_ginger	EM_SCARED		It's too late to	turn back now. You	need to get home.									
-	db_ch_ginger	EM_SULLEN		Let's g-get to	Canterbury, then	we'll..									
-	db_ch_ginger	EM_SULLEN		..we'll figure it	out, how does that	sound?									
+	db_ch_ginger	EM_DEFAULT		Y'know.. I've been	thinking a little..										
+	db_ch_ginger	EM_DEFAULT		Until I became	Selari.. Why was I	here?									
+	db_ch_ginger	EM_DEFAULT		All those school	classes, my family,	my friends..									
+	db_ch_ginger	EM_DEFAULT		Just to become a	talking cat in a	foreign country.									
+	db_ch_ginger	EM_DEFAULT		And it wasn't a big	thing either.	I had a dream.									
+	db_ch_ginger	EM_DEFAULT		Something asked me	if I wanted a new	life. I said yes.									
+	db_ch_ginger	EM_DEFAULT		I don't know why I	said yes. Maybe I	was sad. Or tired.									
+	db_ch_ginger	EM_DEFAULT		He looked like	an angel.										
+	db_ch_ginger	EM_DEFAULT		I don't think he	was an angel.										
+	db_ch_ginger	EM_DEFAULT		But that one.. tiny	little question?	Changed my life.									
+	db_ch_ginger	EM_DEFAULT		Even if I ever get	to go home.. I'll	never be the same.									
+	db_ch_ginger	EM_DEFAULT		Sometimes, life, it	changes slowly over	a lot of time, yeah?									
+	db_ch_ginger	EM_DEFAULT		Sometimes you do	one thing and your	life is over.									
+	db_ch_ginger	EM_DEFAULT		You gotta be careful	I guess.	Always alert.									
+	db_ch_ginger	EM_DEFAULT		Or it'll.. well..	It'll eat you alive.										
+	db_ch_ginger	EM_DEFAULT		It's pretty tonight.	I want to sit here	a while.									
+	db_ch_ginger	EM_DEFAULT		I could never live	here. Too close to	the castle.									
+	db_ch_ginger	EM_DEFAULT		But I could live	somewhere just like	here, y'know?									
 															
 dock_sebellus_01															
 	db_ch_sebellus	EM_DEFAULT		The water is very	nice this late at	night, yes?									
@@ -2230,3 +2103,268 @@ final_03
 	db_ch_ginger	EM_DISAPPOINTED		I-I.. I don't..	I don't know..										
 	db_ch_const	EM_DISAPPOINTED		I suppose it doesn't	matter. Just change	into the outfit.									
 	db_ch_const	EM_DISAPPOINTED		It will be over	very, very soon.										
+															
+cutscene_01															
+				CANTERBURY		The domed city									scene_01_00
+			ACT_SFX_KNOCK	Dr. Erickson? Hello?	Are you busy?		COLOR_BLUE								scene_01_01
+				My office hours are	clearly posted on	the wall outside.									scene_01_01
+				I understand, but I	wasn't sure if I'd	have another chance.	COLOR_BLUE								scene_01_01
+				I'm sorry, I don't	believe you're a	student of mine.									scene_01_02
+				I'm not, but I've	read your paper on	Pleiotropic genes.	COLOR_BLUE								scene_01_02
+				It was.. inspired.			COLOR_BLUE								scene_01_02
+				Thank you.											scene_01_02
+				Please let me take	you to lunch.		COLOR_BLUE								scene_01_01
+				I appreciate the	simulated rainfall.	It's convincing.									scene_01_03
+				What do you know	what I miss from the	New World?									scene_01_03
+				The smell.	This rain doesn't	smell like anything.									scene_01_03
+				So, Dr. Erickson,	they say that at the	quantum level,	COLOR_BLUE								scene_01_03
+				Observation affects	reality. What do you	think of that?	COLOR_BLUE								scene_01_03
+				I'm a biologist. I	don't know anything	about physics.									scene_01_03
+				However..	If I understand it	correctly..									scene_01_03
+				It's not that	"""observation"" by"	itself does this.									scene_01_04
+				You need light to	see things, and at	that level, well..									scene_01_04
+				Light itself can	change the state of	particles.									scene_01_04
+				Does that answer	your question?										scene_01_04
+				Yes, sir.	I have another	question, though.	COLOR_BLUE								scene_01_04
+				Forgive me if it	seems presumptuous,	Dr. Erickson.	COLOR_BLUE								scene_01_04
+				Why were you fired?			COLOR_BLUE								scene_01_04
+				I wasn't.	I quit.										scene_01_04
+				The university isn't	interested in my	research.									scene_01_03
+				If someone happened	to have the sigils	you're looking for..	COLOR_BLUE								scene_01_03
+				Do you think you'd	be able to.. gain	some leverage?	COLOR_BLUE								scene_01_03
+				..Who are you?											scene_01_04
+				I'm a student.			COLOR_BLUE								scene_01_04
+				..How do you feel	about meeting me at	my home tonight?									scene_01_04
+				It would be an	honor, sir.		COLOR_BLUE								scene_01_04
+															
+cutscene_02															
+				This field is so new	and so discrete that	it's unregulated.									
+				There's nothing fun	for smart people	that's legal, right?	COLOR_BLUE								
+				We want to keep it	that way, so you	must say nothing.									
+				I need you to sign	this non-disclosure	agreement first.									
+				Done.			COLOR_BLUE								
+				Alright. You know	why Old World cities	are enclosed, yes?									
+				Anxiety about the	impact of human	life on nature.	COLOR_BLUE								
+				Yes. It makes	everyone miserable.	And yet..									
+				There is no concern	about the impact of	wildlife.									
+				This machine is	designed to print	complex proteins.									
+				I sold one to the	city to help solve	our hunger problems.									
+				But all life is made	from proteins, yes?										
+				It that what these	bodies in flasks	come from?	COLOR_BLUE								
+				I've been working on	combining human and	animal genes.									
+				I think that these	could repopulate	the forests.									
+				Their biology is	viable but there	are still issues.									
+				I can print them,	but I can't bring	them to life.									
+				Henry, before you	use my sigils, you	ought to know..	COLOR_BLUE								
+				They don't create	life. They just..	Move it around.	COLOR_BLUE								
+				That's fine. I	envision these with	human souls, as..									
+				I think you could	call them colonists	in a sense.									
+				You do understand	what this will cost	you, Dr. Erickson?	COLOR_BLUE								
+				Of course I do.											
+				Do I look like a man	who has anything	to lose?									
+															
+cutscene_03															
+				I don't understand	why they only last	a couple of hours.									
+				All these cuts and	carcasses will	attract attention.									
+				The ritual is	correct.. But your	bodies need some	COLOR_BLUE								
+				fine-tuning to be	compatible with only	half a soul.	COLOR_BLUE								
+				Would it be easier	to transfer an	entire soul, then?									
+				In some ways, yes.	In others.. no.		COLOR_BLUE								
+				Your bodies are	compatible with	entire souls.	COLOR_BLUE								
+				But it will cost you	more than just your	blood, Henry.	COLOR_BLUE								
+				What would I need?											
+				The eyes are the	window to the soul.		COLOR_BLUE								
+				..so it would cost	me an eye?										
+				Whose soul would be	transferred, then?										
+				That would be at our	discretion, Henry.		COLOR_BLUE								
+				So I have a choice?											
+				I didn't mean you.			COLOR_BLUE								
+				Are you are sure	that this will work?				SP_SLOW						
+				Of course I am.	Have I ever led you	wrong?	COLOR_BLUE								
+				No..	I suppose not.				SP_DEFAULT						
+															
+cutscene_04															
+				It's alright,	you're safe.	Take slow breaths.									
+				Good morning.	Can you understand	what I'm saying?									
+				Hmm.. I see..											
+				W-What..		W-What happened..	COLOR_PURPLE								
+				So you do	understand. It seems	to have worked..									
+				Welcome home.	Your name is Vista.	You are a Marelon.									
+				T-That's not	my name.		COLOR_PURPLE								
+				Oh..	Oh, you poor thing..										
+				..	In that case.. Are	you a human?									
+				Y-Yes of course.			COLOR_PURPLE								
+				..	..	Fascinating.									
+				My name is	Dr. Henry Erickson.										
+				It seems that you've	become involved in	my experiment.									
+				Tell me, what do you	last remember?										
+				T-Take me home.	Now.		COLOR_PURPLE								
+				You are home. Your	memories come from	a stranger.									
+				Do you remember	anything at all?										
+				You can retch into	this, but your	stomach is empty.									
+				..			COLOR_PURPLE								
+				I apologize for	being so	interrogative.									
+				This will be your	room. Let me know if	you need anything.									
+				..											
+															
+cutscene_05															
+				ONE YEAR LATER											
+				Good morning.	Did you sleep well?										
+				Morning, Henry.	Not really.	Too many thoughts.	COLOR_PURPLE								
+				Do you know what day	today is?										
+				It's.. Thursday,	isn't it?		COLOR_PURPLE								
+				I'll need to take	your vitals for the	university, however,									
+				as of today, you are	one year old and	perfectly healthy!									
+				I made you a cake.	It's lemon, your	favorite.									
+				Do you want to make	a wish?										
+				I don't know if I	want to.		COLOR_PURPLE								
+				How come?											
+				..	I told you.. some	things.. a year ago.	COLOR_PURPLE								
+				I told you that I	went to sleep and	woke up here.	COLOR_PURPLE								
+				..That's.. not..	the whole truth,	Henry..	COLOR_PURPLE								
+				What do you mean?											
+				I did go to sleep..	but.. in my dreams..	I was visited.	COLOR_PURPLE								
+				I don't know what it	was.. It was like an	angel, I think..	COLOR_PURPLE								
+				It told me that I	could trade in my	life for a new one.	COLOR_PURPLE								
+				And you know what I	said, Henry?	I said yes.	COLOR_PURPLE								
+				My wish came true.	And here I am.		COLOR_PURPLE								
+				I don't know what	happened to.. the	other me, but..	COLOR_PURPLE								
+				I wish I couldn't	remember where I	came from.	COLOR_PURPLE								
+				I am Vista.		No one but Vista.	COLOR_PURPLE								
+				I just..	I just wish I could	see the sun again.	COLOR_PURPLE								
+				But I'm afraid.	Because what if it..	changes things.	COLOR_PURPLE								
+				I don't want to give	anything else up..	That.. I.. Can't..	COLOR_PURPLE								
+				That I can't ever	get back.		COLOR_PURPLE								
+				Vista, I promise you	that when this	research is done,									
+				You will be able to	see the sun.										
+				..And I won't have	to lose anything?	Do you promise?	COLOR_PURPLE								
+				The contrary. I have	plans. And if they	all work out..									
+				We'll have	everything.										
+															
+cutscene_06															
+				Henry..			COLOR_PURPLE								
+				Don't be nervous.	The police never	check the garbage.									
+				We can escape as	long as we're	discrete.									
+				No, the machine.	I don't think it'll	survive the fall.	COLOR_PURPLE								
+				I can fix whatever	breaks, Vista.	It'll be fine.									
+				Have the others gone	first already?										
+				Y-Yes.		I'm scared.	COLOR_PURPLE								
+				What happens if..	If I make a mistake	and die?	COLOR_PURPLE								
+				You've had death on	your mind a lot,	haven't you?									
+				Perhaps, since the	others are down	there..									
+				We should talk.											
+				Vista,	You could go back to	your human life.									
+				What d-do you mean?			COLOR_PURPLE								
+				It would involve	your death, of	course..									
+				But if you die, your	soul returns to	where it came.									
+				I worked hard to	prove this in	writing.									
+				However, Vista, I'm	taking the chance to	do something great.									
+				We can't go home.	So we will make a	new home.									
+				I intend to make	more muetos.	Many more.									
+				I will make them in	spite of this	wretched city.									
+				I want to make a	proper kingdom full	of muetos.									
+				But they can't have	full souls like you.										
+				You know Roger and	Sage won't live more	than five years.									
+				I do..			COLOR_PURPLE								
+				This kingdom will	need one of their	own to last.									
+				Someone wise and	good-hearted to	lead them.									
+				Vista, I want to	make you into a	queen.									
+				I don't understand..			COLOR_PURPLE								
+				You have a choice.	Follow me down the	rabbit hole..									
+				Or you may go home.											
+				But you gave up your	eye to make me,	didn't you?	COLOR_PURPLE								
+				I have two eyes.	I can try again.										
+				What do you say?											
+															
+cutscene_07															
+				Escaping into the	Canterbury woods was	illegal as a human.	COLOR_PURPLE								
+				When the university	threatened to sue	Dr. Henry Erickson,	COLOR_PURPLE								
+				His garbage chute	escape made him a	fugitive.	COLOR_PURPLE								
+				The city sent police	after him. All were	killed by muetos.	COLOR_PURPLE								
+				So began the bloody,	endless war between	us and the humans.	COLOR_PURPLE								
+				Our dragons kill a	few humans. Their	bombs kill muetos.	COLOR_PURPLE								
+				I have tried to slow	down, but they have	no desire to stop.	COLOR_PURPLE								
+				Father can only make	so many new muetos	at a time.	COLOR_PURPLE								
+				And so, Constance..	What I want for my	birthday is an heir.	COLOR_PURPLE								
+				"Not a ""child"" who"	will last a year.	A proper heir.	COLOR_PURPLE								
+				I know it's a hard	ask, but.. I'm so	tired, Constance.	COLOR_PURPLE								
+				I want to wash my	hands of all this	blood.	COLOR_PURPLE								
+				That's what you can	tell Father.		COLOR_PURPLE								
+				I'll draft a letter	right away, your	majesty.	COLOR_PURPLE								
+				Very good.	Now..	Leave me be.	COLOR_PURPLE								
+															
+cutscene_08															
+	db_ch_constance			Your majesty! Your	birthday gift has	arrived!									
+	db_ch_vista_02	EM_SULLEN		Very good,	Constance.										
+	db_ch_sebellus	EM_SIDE_EYE		Oh? May I see?											
+	db_ch_vista_02	EM_SULLEN		Sebellus, please	stay calm. We don't	want to overwelm.									
+	db_ch_ginger	EM_SCARED		..											
+	db_ch_constance			Your majesty, you	recieved a letter as	well.									
+	db_ch_vista_02	EM_SULLEN		"""Dear Vista,"	I had my assistant	"select her dress."""									
+	db_ch_vista_02	EM_SULLEN		"""My vision may be"	restored, but due to	"my lack of eyes,"""									
+	db_ch_vista_02	EM_SULLEN		"""I was not able to"	oversee the final	"stages."""									
+	db_ch_vista_02	EM_SULLEN		"""This is Selari. She"	shares your genetic	"code."""									
+	db_ch_vista_02	EM_SULLEN		"""She is like you, in"	that she has a full	"human soul."""									
+	db_ch_vista_02	EM_SULLEN		"""Her temperment is"	similar to yours,	"and I think that"""									
+	db_ch_vista_02	EM_SULLEN		"""She will become a"	welcome addition to	"your family."""									
+	db_ch_vista_02	EM_SULLEN		"""With love,"	Your father,	"Henry Erickson."""									
+	db_ch_vista_02	EM_SULLEN		What is your name,	love?										
+	db_ch_ginger	EM_SAD		Virginia, ma'am.	People call me	"""Ginger"", though."									
+	db_ch_vista_02	EM_DEFAULT		I see.	Constance, you may	excuse us now.									
+	db_ch_sebellus	EM_CONFUSED		..so? Is it true?	That Gingers don't	have souls?									
+	db_ch_vista_02	EM_DEFAULT		I see.	Constance, you may	excuse us now.									
+	db_ch_vista_02	EM_DEFAULT		Please forgive my	son, Sebellus.										
+	db_ch_vista_02	EM_DEFAULT		Sebellus, go with	Constance to the	dining hall.									
+	db_ch_sebellus	EM_HAPPY		Yes, ma'am.											
+	db_ch_vista_02	EM_DEFAULT		Ginger.. yes?	It is an honor to	welcome you.									
+	db_ch_vista_02	EM_DEFAULT		Are you from the	New World, or the	Old World?									
+	db_ch_ginger	EM_SCARED		T-The New World,	ma'am.										
+	db_ch_vista_02	EM_DEFAULT		Please accompany me.	There is something I	want to show you.									
+															
+cutscene_08b															
+	db_ch_vista_02			You may notice each	of these panels have	different faces.									
+	db_ch_vista_02			Every panel was a	different face I've	worn in the past.									
+	db_ch_vista_02			However, this one,	the one you wear	now..									
+	db_ch_vista_02			It has always been	my favorite.										
+	db_ch_vista_02			My secret is that	this is a hidden	doorway.									
+	db_ch_vista_02			If you were to	follow me inside..										
+															
+cutscene_08c															
+	db_ch_vista_02			I commissioned the	best in the country	to make this room.									
+	db_ch_vista_02			It looks just like	a New World human	house, yes?									
+	db_ch_vista_02			I am just like you.	My soul came from a	New World human.									
+	db_ch_ginger			..I-It did?											
+	db_ch_vista_02			It's true! The..	experience you had	with Henry?									
+	db_ch_vista_02			I had the same,	a long.. long time	ago, you see.									
+	db_ch_vista_02			I know he may seem..	Frightening.. But he	is a nice man.									
+	db_ch_vista_02			Sometimes.. If I'm	in a bad mood, I	come here to relax.									
+	db_ch_vista_02			It is just like the	human world! There	are movies,									
+	db_ch_vista_02			I have a kitchen,	and games.. And now,	It is yours, too.									
+	db_ch_vista_02			It is my birthday,	but it is also yours	is it not?									
+	db_ch_vista_02			Why don't we make a	cake together, then?										
+	db_ch_vista_02			And then we can go	to my castle town	and get you some new									
+	db_ch_vista_02			clothes.. Some more	practical ones,	perhaps..									
+	db_ch_ginger	EM_WEEP		..											
+	db_ch_vista_02			Dear.. It will be	alright, I promise.										
+	db_ch_ginger	EM_WEEP		..T-Thank you.											
+	db_ch_vista_02			Of course, dear.											
+															
+cutscene_09															
+	db_ch_vista_02			G-Ginger, dear..	Now isn't the time	to be here..									
+	db_ch_vista_02	EM_LAUGH		*hic* Mama is	consulting with the	spirits, you see..									
+	db_ch_vista_02			I left my medicine..	for my head.. in the	secret garden..									
+	db_ch_vista_02			It's in my bedroom..	The doorway..	Please, fetch it..									
+															
+cutscene_09b															
+	db_ch_vista_02			Thank you,	sunshine..	Thank you..									
+	db_ch_vista_02			..											
+	db_ch_vista_02			I shouldn't have	asked you to see my	secret garden, dear.									
+	db_ch_vista_02			Ginger, dear..	This throne..	These treats..									
+	db_ch_vista_02			What good does it	do to gain the world	and lose your soul?									
+	db_ch_vista_02			Death.. He delights	in us, you know..										
+	db_ch_vista_02			This war.. Humans	fighting themselves	in different bodies.									
+	db_ch_vista_02			So much death..	Generations..	And generations..									
+	db_ch_vista_02	EM_LAUGH		What irony that I	can't die, the only	one who wants it!									
+	db_ch_vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
+	db_ch_vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
+	db_ch_vista_02	EM_WEEP		I want to go home..	I want to go home..	..									
