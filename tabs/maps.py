@@ -432,7 +432,6 @@ class MapsTab:
     def paste_selection(self, event=None):
         """Pastes the data from the clipboard at the current mouse position."""
         if not self.clipboard_data:
-            messagebox.showinfo("Paste", "Clipboard is empty. Use the Select tool (S) to copy.")
             return
 
         paste_x, paste_y = self.current_grid_pos
