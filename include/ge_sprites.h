@@ -152,6 +152,10 @@ struct character
             return CH_TYPE_PLAYER;
         case CHAR_JEREMY:
             return CH_TYPE_PLAYER;
+        case CHAR_VISTA_BED:
+            return CH_TYPE_PLAYER;
+        case CHAR_VISTA_YOUNG:
+            return CH_TYPE_PLAYER;
         default:
             return CH_TYPE_NPC;
         }

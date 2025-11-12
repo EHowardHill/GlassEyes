@@ -2104,7 +2104,7 @@ class DialogueTab:
             self.refresh_lines_list()
             self.mark_dialogue_modified()
             self.lines_tree.selection_set(str(self.current_line_index))
-            messagebox.showinfo("Success", "Changes applied!")
+            # messagebox.showinfo("Success", "Changes applied!")
 
         except IndexError:
             messagebox.showerror(

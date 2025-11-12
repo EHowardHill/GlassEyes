@@ -49,6 +49,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_kiara.h"
 #include "bn_sprite_items_db_ch_death.h"
 #include "bn_sprite_items_db_ch_henry.h"
+#include "bn_sprite_items_db_ch_constance.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -56,6 +57,18 @@ typedef const dialogue_line conversation[128];
 #include "bn_regular_bg_items_scene_tv_04.h"
 #include "bn_regular_bg_items_scene_tv_05.h"
 #include "bn_regular_bg_items_scene_tv_01.h"
+#include "bn_regular_bg_items_scene_01_00.h"
+#include "bn_regular_bg_items_scene_01_01.h"
+#include "bn_regular_bg_items_scene_01_02.h"
+#include "bn_regular_bg_items_scene_01_03.h"
+#include "bn_regular_bg_items_scene_01_04.h"
+#include "bn_regular_bg_items_scene_02_00.h"
+#include "bn_regular_bg_items_scene_02_02.h"
+#include "bn_regular_bg_items_scene_02_01.h"
+#include "bn_regular_bg_items_scene_03_00.h"
+#include "bn_regular_bg_items_scene_03_03.h"
+#include "bn_regular_bg_items_scene_03_01.h"
+#include "bn_regular_bg_items_scene_03_02.h"
 
 // Forward declarations for conversations
 extern const conversation ack_01;
@@ -126,6 +139,18 @@ extern const conversation croke_03;
 extern const conversation croke_04;
 extern const conversation croke_05;
 extern const conversation croke_05_alt_01;
+extern const conversation cutscene_01;
+extern const conversation cutscene_02;
+extern const conversation cutscene_03;
+extern const conversation cutscene_04;
+extern const conversation cutscene_05;
+extern const conversation cutscene_06;
+extern const conversation cutscene_07;
+extern const conversation cutscene_08;
+extern const conversation cutscene_08b;
+extern const conversation cutscene_08c;
+extern const conversation cutscene_09;
+extern const conversation cutscene_09b;
 extern const conversation dark_152;
 extern const conversation dark_info;
 extern const conversation dark_talk;
@@ -143,9 +168,6 @@ extern const conversation death_01_alt_02;
 extern const conversation dima_01;
 extern const conversation dima_02;
 extern const conversation dock_ginger_01;
-extern const conversation dock_ginger_02;
-extern const conversation dock_ginger_alt_01;
-extern const conversation dock_ginger_alt_02;
 extern const conversation dock_sebellus_01;
 extern const conversation dock_sebellus_01_alt_01;
 extern const conversation dock_sebellus_01_alt_02;
@@ -158,11 +180,12 @@ extern const conversation ending_lab_01;
 extern const conversation ending_lab_02;
 extern const conversation ending_lab_02b;
 extern const conversation ending_lab_03;
-extern const conversation f_cutscene_01;
-extern const conversation f_cutscene_02;
-extern const conversation f_cutscene_03;
-extern const conversation f_cutscene_04;
 extern const conversation fall_down;
+extern const conversation final_01;
+extern const conversation final_01b;
+extern const conversation final_01c;
+extern const conversation final_02;
+extern const conversation final_03;
 extern const conversation final_msg;
 extern const conversation flayithro_sign;
 extern const conversation flayithro_sign_01;
@@ -212,6 +235,7 @@ extern const conversation have_to_go_4;
 extern const conversation henry_01;
 extern const conversation henry_02;
 extern const conversation henry_02_alt_01;
+extern const conversation henry_02_alt_01b;
 extern const conversation hotel_01;
 extern const conversation hotel_02;
 extern const conversation hotel_bed_01;

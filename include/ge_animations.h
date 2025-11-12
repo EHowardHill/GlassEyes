@@ -13,6 +13,8 @@ const animation vista_invisible = {{0}, 1, 0, false};
 const animation vista_jeremy_lift = {{1,2,3}, 3, 0, false};
 const animation vista_jeremy_lift_02 = {{4}, 1, 0, false};
 const animation vista_drinking = {{9}, 1, 0, false};
+const animation vista_bed_awake = {{1}, 1, 0, false};
+const animation vista_bed_cry = {{2}, 1, 0, false};
 const animation visker_poke = {{9,10}, 2, 0, true};
 const animation visker_battle_init = {{0,1,2,3,4,5}, 6, 0, false};
 const animation visker_battle_idle = {{6,7,8,9}, 4, 0, true};
@@ -77,5 +79,6 @@ const animation matt_alas = {{5}, 1, 0, false};
 const animation poster_01 = {{0}, 1, 0, false};
 const animation poster_02 = {{1}, 1, 0, false};
 const animation poster_03 = {{2}, 1, 0, false};
+const animation henry_sit = {{9}, 1, 0, false};
 
 #endif

@@ -24,6 +24,8 @@ enum progress
 	BLACK_TO_TRAIN,
 	BLACK_TO_CANTERBURY,
 	BLACK_TO_LAB_02,
+	CH_CUTSCENE_04,
+	CH_CUTSCENE_05,
 };
 
 void resolve_chapter();

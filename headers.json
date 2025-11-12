@@ -76,6 +76,20 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "bed_awake": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "bed_cry": {
+                "frames": [
+                    2
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "visker": {
@@ -736,6 +750,15 @@
                 "speed": 0,
                 "loop": false
             }
+        },
+        "henry": {
+            "sit": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": false
+            }
         }
     },
     "items": {
@@ -844,7 +867,10 @@
         "Visker_Battle": {
             "idle_animation": "visker_battle_idle"
         },
-        "Croke_Battle": {}
+        "Croke_Battle": {},
+        "Henry": {},
+        "Vista Bed": {},
+        "Vista Young": {}
     },
     "cutscenes": {
         "Intro": {
@@ -2983,6 +3009,16 @@
                 "sequence": [
                     "kiara_door"
                 ]
+            },
+            "278": {
+                "sequence": [
+                    "cutscene_04"
+                ]
+            },
+            "279": {
+                "sequence": [
+                    "cutscene_05"
+                ]
             }
         }
     },
@@ -3229,6 +3265,13 @@
                     5
                 ]
             }
+        },
+        "CH_CUTSCENE_04": {
+            "map": "cutscene_lab_room_02"
+        },
+        "CH_CUTSCENE_05": {
+            "map": "cutscene_lab_kitchen",
+            "bg_track": "intro_03"
         }
     }
 }

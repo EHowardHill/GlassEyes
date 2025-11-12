@@ -1608,6 +1608,18 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 278:
+	{
+		if (global_data_ptr->action_iterations[278] == 0) { ch_man.load(&cutscene_04); global_data_ptr->action_iterations[278] += 1; } else
+		{ };
+		break;
+	}
+	case 279:
+	{
+		if (global_data_ptr->action_iterations[279] == 0) { ch_man.load(&cutscene_05); global_data_ptr->action_iterations[279] += 1; } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }

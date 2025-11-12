@@ -26,10 +26,10 @@
 #include "bn_sprite_items_battle_icons.h"
 #include "bn_sprite_items_battle_chars.h"
 
-#include "bn_sprite_items_jeremy_battle.h"
-#include "bn_sprite_items_ginger_battle.h"
-#include "bn_sprite_items_visker_battle.h"
-#include "bn_sprite_items_croke_battle.h"
+#include "bn_sprite_items_spr_jeremy_battle.h"
+#include "bn_sprite_items_spr_ginger_battle.h"
+#include "bn_sprite_items_spr_visker_battle.h"
+#include "bn_sprite_items_spr_croke_battle.h"
 
 #include "ge_character_manager.h"
 

@@ -1926,7 +1926,7 @@ henry_01
 	db_ch_vista_02	EM_SAD		Human.. Go into the	other room and	comfort my daughter.									
 															
 henry_02															
-	db_ch_ginger	EM_SCARED		..									&henry_02_alt_01	&henry_02_alt_02	
+	db_ch_ginger	EM_SCARED		..									&henry_02_alt_01	&henry_02_alt_01	
 	db_ch_ginger	EM_WEEP		..	..	..									
 	db_ch_ginger	EM_WEEP		..	..	I have to go home.									
 	db_ch_ginger	EM_SAD		I-I got my hands	on Henry's.. tool.	I know what it is.									
@@ -1935,7 +1935,7 @@ henry_02
 	db_ch_ginger	EM_SAD		I don't know if	I care.										
 	db_ch_ginger	EM_SULLEN		You are the only	friend I have left.										
 	db_ch_ginger	EM_SULLEN		I respect your	opinion.										
-				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&henry_02_alt_02	
+				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&henry_02_alt_01	
 	db_ch_vista_02	EM_SULLEN		Ginger.											
 	db_ch_ginger	EM_SULLEN		..											
 	db_ch_vista_02	EM_SULLEN		Both of you.		Follow me.									
@@ -1950,7 +1950,7 @@ henry_02_alt_01
 	db_ch_ginger	EM_LAUGH		Maybe we'll see	each other again.										
 	db_ch_ginger	EM_SAD		Goodbye,	friend.										
 															
-henry_02_alt_02															
+henry_02_alt_01															
 															
 ending_lab_01															
 	db_ch_kiara	EM_WAT		Your  majesty!	You look troubled!	Where is Henry?!									
@@ -2083,26 +2083,26 @@ final_02
 															
 final_03															
 	db_ch_ginger	EM_CONFUSED		..w-where am I?											
-	db_ch_const	EM_DISAPPOINTED		Ah.. Your majesty,	you're awake again.	Where are my notes-									
-	db_ch_owly	EM_DISAPPOINTED		Your name is Selari,	You have permanent	daily memory loss.									
-	db_ch_owly	EM_DISAPPOINTED		You took a medicine	"named ""Lethedol"","	which has strong									
-	db_ch_owly	EM_DISAPPOINTED		and permanent side	effects on Marelons,	like you.									
-	db_ch_const	EM_DISAPPOINTED		I am Constance,	The royal maid to	your late mother.									
+	db_ch_constance	EM_DISAPPOINTED		Ah.. Your majesty,	you're awake again.	Where are my notes-									
+	db_ch_constance	EM_DISAPPOINTED		Your name is Selari,	You have permanent	daily memory loss.									
+	db_ch_constance	EM_DISAPPOINTED		You took a medicine	"named ""Lethedol"","	which has strong									
+	db_ch_constance	EM_DISAPPOINTED		and permanent side	effects on Marelons,	like you.									
+	db_ch_constance	EM_DISAPPOINTED		I am Constance,	The royal maid to	your late mother.									
 	db_ch_ginger	EM_CONFUSED		..late mother?											
-	db_ch_const	EM_DISAPPOINTED		Yes. She used a soul	extraction tool on	herself last month.									
-	db_ch_const	EM_DISAPPOINTED		The public does not	know this.. They are	growing impatient.									
-	db_ch_const	EM_DISAPPOINTED		We need to dress you	up as her for a..	public showing.									
-	db_ch_const	EM_DISAPPOINTED		You just need to	stand and wave.	Can you do that?									
+	db_ch_constance	EM_DISAPPOINTED		Yes. She used a soul	extraction tool on	herself last month.									
+	db_ch_constance	EM_DISAPPOINTED		The public does not	know this.. They are	growing impatient.									
+	db_ch_constance	EM_DISAPPOINTED		We need to dress you	up as her for a..	public showing.									
+	db_ch_constance	EM_DISAPPOINTED		You just need to	stand and wave.	Can you do that?									
 	db_ch_ginger	EM_EMBARRASSED		I-I.. I think so..											
-	db_ch_const	EM_DISAPPOINTED		Very good, and..	I know you won't	remember this..									
-	db_ch_const	EM_DISAPPOINTED		The castle staff and	I.. are not sure how	to take care of you.									
-	db_ch_const	EM_DISAPPOINTED		There is a cabin not	far from here.	It's very cozy.									
-	db_ch_const	EM_DISAPPOINTED		"""Vista is sick"" is"	much safer than	"""Vista is dead""."									
-	db_ch_const	EM_DISAPPOINTED		You would pretend	to be her.. Very	little would change.									
-	db_ch_const	EM_DISAPPOINTED		You two look just	the same anyways.	What do you say?									
+	db_ch_constance	EM_DISAPPOINTED		Very good, and..	I know you won't	remember this..									
+	db_ch_constance	EM_DISAPPOINTED		The castle staff and	I.. are not sure how	to take care of you.									
+	db_ch_constance	EM_DISAPPOINTED		There is a cabin not	far from here.	It's very cozy.									
+	db_ch_constance	EM_DISAPPOINTED		"""Vista is sick"" is"	much safer than	"""Vista is dead""."									
+	db_ch_constance	EM_DISAPPOINTED		You would pretend	to be her.. Very	little would change.									
+	db_ch_constance	EM_DISAPPOINTED		You two look just	the same anyways.	What do you say?									
 	db_ch_ginger	EM_DISAPPOINTED		I-I.. I don't..	I don't know..										
-	db_ch_const	EM_DISAPPOINTED		I suppose it doesn't	matter. Just change	into the outfit.									
-	db_ch_const	EM_DISAPPOINTED		It will be over	very, very soon.										
+	db_ch_constance	EM_DISAPPOINTED		I suppose it doesn't	matter. Just change	into the outfit.									
+	db_ch_constance	EM_DISAPPOINTED		It will be over	very, very soon.										
 															
 cutscene_01															
 				CANTERBURY		The domed city									scene_01_00
@@ -2183,62 +2183,64 @@ cutscene_03
 				No..	I suppose not.				SP_DEFAULT						scene_03_02
 															
 cutscene_04															
-				It's alright,	you're safe.	Take slow breaths.									
-				Good morning.	Can you understand	what I'm saying?									
-				Hmm.. I see..											
-				W-What..		W-What happened..	COLOR_PURPLE								
-				So you do	understand. It seems	to have worked..									
-				Welcome home.		Your name is Vista.									
-				T-That's not	my name.		COLOR_PURPLE								
-				Oh..	Oh, you poor thing..										
-				..	In that case.. Are	you a human?									
-				Y-Yes of course.			COLOR_PURPLE								
-				..	..	Fascinating.									
-				My name is	Dr. Henry Erickson.										
-				It seems that you've	become involved in	my experiment.									
-				Tell me, what do you	last remember?										
-				T-Take me home.	Now.		COLOR_PURPLE								
-				You are home. Your	memories come from	a stranger.									
-				Do you remember	anything at all?										
-				You can retch into	this, but your	stomach is empty.									
-				..			COLOR_PURPLE								
-				I apologize for	being so	interrogative.									
-				This will be your	room. Let me know if	you need anything.									
-				..											
+	db_ch_henry	EM_HAPPY	ACT_WALK	Good morning.	Can you understand	what I'm saying?				CHAR_HENRY		{3,3}			
+	db_ch_henry	EM_DEFAULT		It's alright,	you're safe.	Take slow breaths.				CHAR_VISTA_BED	&vista_bed_awake				
+	db_ch_ginger	EM_SCARED		W-What..		W-What happened..	COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		Hmm.. I see..											
+	db_ch_henry	EM_EXCITED		So you do	understand. It seems	to have worked..									
+	db_ch_henry	EM_HAPPY		Welcome home.		Your name is Vista.									
+	db_ch_ginger	EM_CONFUSED		T-That's not	my name.		COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		Oh..	Oh, you poor thing..										
+	db_ch_henry	EM_DEFAULT		..	In that case.. Are	you a human?									
+	db_ch_ginger	EM_CONFUSED		Y-Yes of course.			COLOR_PURPLE								
+	db_ch_ginger	EM_SIDE_EYE		W-What's..	What's wrong with	your eye?	COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		..	..	Fascinating.									
+	db_ch_henry	EM_HAPPY		Oh- I'm missing an	eye. This one is	made of glass.									
+	db_ch_henry	EM_DEFAULT		My name is	Dr. Henry Erickson.										
+	db_ch_henry	EM_DEFAULT		It seems that you've	become involved in	my experiment.									
+	db_ch_henry	EM_DEFAULT		Tell me, what do you	last remember?										
+	db_ch_ginger	EM_SCARED		T-Take me home.	Now.		COLOR_PURPLE			CHAR_VISTA_BED	&vista_bed_cry				
+	db_ch_henry	EM_DEFAULT		You are home. Your	memories came from	a stranger.									
+	db_ch_henry			(It seems my memory	suppressant doesn't	work on full souls.)									
+	db_ch_henry			The left door leads	to the toilet if you	feel nauseous.									
+	db_ch_ginger	EM_WEEP	ACT_WALK	..			COLOR_PURPLE			CHAR_HENRY		{4,3}			
+	db_ch_ginger	EM_WEEP		..			COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		I apologize for	being so	interrogative.									
+	db_ch_henry	EM_DEFAULT		This will be your	room. Let me know if	you need anything.									
 															
 cutscene_05															
-				ONE YEAR LATER											
-				Good morning.	Did you sleep well?										
-				Morning, Henry.	Not really.	Too many thoughts.	COLOR_PURPLE								
-				Do you know what day	today is?										
-				It's.. Thursday,	isn't it?		COLOR_PURPLE								
-				I'll need to take	your vitals for the	university, however,									
-				as of today, you are	one year old and	perfectly healthy!									
-				I made you a cake.	It's lemon, your	favorite.									
-				Do you want to make	a wish?										
-				I don't know if I	want to.		COLOR_PURPLE								
-				How come?											
-				..	I told you.. some	things.. a year ago.	COLOR_PURPLE								
-				I told you that I	went to sleep and	woke up here.	COLOR_PURPLE								
-				..That's.. not..	the whole truth,	Henry..	COLOR_PURPLE								
-				What do you mean?											
-				I did go to sleep..	but.. in my dreams..	I was visited.	COLOR_PURPLE								
-				I don't know what it	was.. It was like an	angel, I think..	COLOR_PURPLE								
-				It told me that I	could trade in my	life for a new one.	COLOR_PURPLE								
-				And you know what I	said, Henry?	I said yes.	COLOR_PURPLE								
-				My wish came true.	And here I am.		COLOR_PURPLE								
-				I don't know what	happened to.. the	other me, but..	COLOR_PURPLE								
-				I wish I couldn't	remember where I	came from.	COLOR_PURPLE								
-				I am Vista.		No one but Vista.	COLOR_PURPLE								
-				I just..	I just wish I could	see the sun again.	COLOR_PURPLE								
-				But I'm afraid.	Because what if it..	changes things.	COLOR_PURPLE								
-				I don't want to give	anything else up..	That.. I.. Can't..	COLOR_PURPLE								
-				That I can't ever	get back.		COLOR_PURPLE								
-				Vista, I promise you	that when this	research is done,									
-				You will be able to	see the sun.										
-				..And I won't have	to lose anything?	Do you promise?	COLOR_PURPLE								
-				The contrary. I have	plans. And if they	all work out..									
-				We'll have	everything.										
+		EM_SKIP								CHAR_HENRY	&henry_sit				
+	db_ch_henry	EM_HAPPY	ACT_WALK	Good morning.	Did you sleep well?					CHAR_VISTA_YOUNG		{1,4}			
+	db_ch_ginger	EM_SULLEN		Good morning, Henry.	Not really.	Too many thoughts.	COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		Do you know what day	today is?										
+	db_ch_ginger	EM_SIDE_EYE		It's.. Thursday,	isn't it?		COLOR_PURPLE								
+	db_ch_henry	EM_HAPPY		I'll need to take	your vitals for the	university, however,									
+	db_ch_henry	EM_HAPPY		as of today, you are	one year old and	perfectly healthy!									
+	db_ch_henry	EM_HAPPY		I made you a	key lime pie, like	you requested.									
+	db_ch_henry	EM_HAPPY		Do you want to make	a wish?										
+	db_ch_ginger	EM_SULLEN		I don't know if I	want to.		COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		How come?											
+	db_ch_ginger	EM_SIDE_EYE		..	I told you.. some	things.. a year ago.	COLOR_PURPLE								
+	db_ch_ginger	EM_SIDE_EYE		I told you that I	went to sleep and	woke up here.	COLOR_PURPLE								
+	db_ch_ginger			..That's.. not..	the whole truth,	Henry..	COLOR_PURPLE								
+	db_ch_henry	EM_SAD		What do you mean?											
+	db_ch_ginger	EM_EMBARRASSED		I did go to sleep..	but.. in my dreams..	I was visited.	COLOR_PURPLE								
+	db_ch_ginger	EM_EMBARRASSED		I don't know what it	was.. It was like an	angel, I think..	COLOR_PURPLE								
+	db_ch_ginger	EM_DEFAULT		It told me that I	could trade in my	life for a new one.	COLOR_PURPLE								
+	db_ch_ginger	EM_DISAPPOINTED		And you know what I	said, Henry?	I said yes.	COLOR_PURPLE								
+	db_ch_ginger	EM_SAD		My wish came true.	And here I am.		COLOR_PURPLE								
+	db_ch_ginger	EM_SIDE_EYE		I don't know what	happened to.. the	other me, but..	COLOR_PURPLE								
+	db_ch_ginger	EM_DEFAULT		I wish I couldn't	remember where I	came from.	COLOR_PURPLE								
+	db_ch_ginger	EM_DEFAULT		I am Vista.		No one but Vista.	COLOR_PURPLE								
+	db_ch_ginger	EM_SAD		I just..	I just wish I could	see the sun again.	COLOR_PURPLE								
+	db_ch_ginger	EM_SCARED		But I'm afraid.	Because what if it..	changes things.	COLOR_PURPLE								
+	db_ch_ginger	EM_SULLEN		I don't want to give	anything else up..	That.. I.. Can't..	COLOR_PURPLE								
+	db_ch_ginger	EM_DEFAULT		That I can't ever	get back.		COLOR_PURPLE								
+	db_ch_henry	EM_HAPPY		Vista, I promise you	that when this	research is done,									
+	db_ch_henry	EM_HAPPY		You will be able to	see the sun.										
+	db_ch_ginger	EM_HAPPY		..And I won't have	to lose anything?	Do you promise?	COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		The contrary. I have	plans. And if they	all work out..									
+	db_ch_henry	EM_HAPPY		We'll have	everything.										
 															
 cutscene_06															
 				Henry..			COLOR_PURPLE								
@@ -2263,7 +2265,7 @@ cutscene_06
 				I will make them in	spite of this	wretched city.									
 				I want to make a	proper kingdom full	of muetos.									
 				But they can't have	full souls like you.										
-				You know Roger and	Sage won't live more	than five years.									
+				You know the others	won't live more	than five years.									
 				I do..			COLOR_PURPLE								
 				This kingdom will	need one of their	own to last.									
 				Someone wise and	good-hearted to	lead them.									

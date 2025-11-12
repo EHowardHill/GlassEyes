@@ -54,6 +54,9 @@
 #include "bn_sprite_items_spr_ginger_battle.h"
 #include "bn_sprite_items_spr_visker_battle.h"
 #include "bn_sprite_items_spr_croke_battle.h"
+#include "bn_sprite_items_spr_henry.h"
+#include "bn_sprite_items_spr_vista_bed.h"
+#include "bn_sprite_items_spr_vista_young.h"
 
 using namespace bn;
 
@@ -111,6 +114,9 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_GINGER_BATTLE: { return &sprite_items::spr_ginger_battle; break; }
 	case CHAR_VISKER_BATTLE: { return &sprite_items::spr_visker_battle; break; }
 	case CHAR_CROKE_BATTLE: { return &sprite_items::spr_croke_battle; break; }
+	case CHAR_HENRY: { return &sprite_items::spr_henry; break; }
+	case CHAR_VISTA_BED: { return &sprite_items::spr_vista_bed; break; }
+	case CHAR_VISTA_YOUNG: { return &sprite_items::spr_vista_young; break; }
     default:
     {
         return &sprite_items::spr_vista;

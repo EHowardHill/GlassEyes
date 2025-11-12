@@ -38,7 +38,7 @@ int main()
     int value = NEW_CHAPTER; // NEW_CHAPTER;
 
     global_data_ptr = new global_data();
-    global_data_ptr->process_stage = BLACK_TO_LAB_02;
+    global_data_ptr->process_stage = CH_CUTSCENE_05;
 
     while (true)
     {

@@ -136,6 +136,13 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::bg_office;
 		global_data_ptr->jeremy_position = {1, 5};
 		break;		}
+	case CH_CUTSCENE_04: {
+		global_data_ptr->entry_map = &map_cutscene_lab_room_02;
+		break;		}
+	case CH_CUTSCENE_05: {
+		global_data_ptr->entry_map = &map_cutscene_lab_kitchen;
+		global_data_ptr->bg_track = &music_items::intro_03;
+		break;		}
 	default: { break; }
 	}
 }
