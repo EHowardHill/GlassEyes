@@ -146,6 +146,7 @@ extern const conversation cutscene_04;
 extern const conversation cutscene_05;
 extern const conversation cutscene_06;
 extern const conversation cutscene_07;
+extern const conversation cutscene_07b;
 extern const conversation cutscene_08;
 extern const conversation cutscene_08b;
 extern const conversation cutscene_08c;

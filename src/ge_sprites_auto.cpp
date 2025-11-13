@@ -57,6 +57,8 @@
 #include "bn_sprite_items_spr_henry.h"
 #include "bn_sprite_items_spr_vista_bed.h"
 #include "bn_sprite_items_spr_vista_young.h"
+#include "bn_sprite_items_spr_constance.h"
+#include "bn_sprite_items_spr_ginger_fancy2.h"
 
 using namespace bn;
 
@@ -117,6 +119,8 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_HENRY: { return &sprite_items::spr_henry; break; }
 	case CHAR_VISTA_BED: { return &sprite_items::spr_vista_bed; break; }
 	case CHAR_VISTA_YOUNG: { return &sprite_items::spr_vista_young; break; }
+	case CHAR_CONSTANCE: { return &sprite_items::spr_constance; break; }
+	case CHAR_GINGER_FANCY2: { return &sprite_items::spr_ginger_fancy2; break; }
     default:
     {
         return &sprite_items::spr_vista;

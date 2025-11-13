@@ -542,6 +542,10 @@ void dialogue_box::init(character_manager *ch_man)
             kiara->is_follow = true;
             break;
         }
+        case ACT_WAIT:
+        {
+            // Code goes here
+        }
         default:
         {
             break;

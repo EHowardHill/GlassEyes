@@ -1620,6 +1620,36 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 280:
+	{
+		if (global_data_ptr->action_iterations[280] == 0) { ch_man.load(&cutscene_06); global_data_ptr->action_iterations[280] += 1; } else
+		{ };
+		break;
+	}
+	case 281:
+	{
+		if (global_data_ptr->action_iterations[281] == 0) { ch_man.load(&cutscene_07b); global_data_ptr->action_iterations[281] += 1; } else
+		{ };
+		break;
+	}
+	case 282:
+	{
+		if (global_data_ptr->action_iterations[282] == 0) { ch_man.load(&cutscene_08); global_data_ptr->action_iterations[282] += 1; } else
+		{ };
+		break;
+	}
+	case 283:
+	{
+		if (global_data_ptr->action_iterations[283] == 0) { ch_man.load(&cutscene_08b); global_data_ptr->action_iterations[283] += 1; } else
+		{ };
+		break;
+	}
+	case 284:
+	{
+		if (global_data_ptr->action_iterations[284] == 0) { ch_man.load(&cutscene_08c); global_data_ptr->action_iterations[284] += 1; } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }

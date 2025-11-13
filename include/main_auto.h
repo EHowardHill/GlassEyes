@@ -26,6 +26,11 @@ enum progress
 	BLACK_TO_LAB_02,
 	CH_CUTSCENE_04,
 	CH_CUTSCENE_05,
+	CH_CUTSCENE_06,
+	CH_CUTSCENE_07,
+	CH_CUTSCENE_08,
+	CH_CUTSCENE_08B,
+	CH_CUTSCENE_08C,
 };
 
 void resolve_chapter();

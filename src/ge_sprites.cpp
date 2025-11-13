@@ -196,7 +196,7 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
         }
         case CHAR_SEBELLUS:
         {
-            if (costume == COSTUME_JEREMY_FANCY)
+            if (costume == COSTUME_SEBELLUS_FANCY)
             {
                 v_sprite.sprite_item_ptr = &sprite_items::spr_sebellus_fancy;
             }

@@ -26,7 +26,7 @@ enum GINGER_COSTUMES
 {
     COSTUME_GINGER_NONE,
     COSTUME_GINGER_FANCY,
-    COSTUME_GINGER_CASUAL
+    COSTUME_GINGER_CASUAL,
 };
 
 enum SEBELLUS_COSTUMES
@@ -155,6 +155,8 @@ struct character
         case CHAR_VISTA_BED:
             return CH_TYPE_PLAYER;
         case CHAR_VISTA_YOUNG:
+            return CH_TYPE_PLAYER;
+        case CHAR_VISTA_02:
             return CH_TYPE_PLAYER;
         default:
             return CH_TYPE_NPC;

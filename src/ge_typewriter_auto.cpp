@@ -55,6 +55,7 @@ const conversation *resolve_typewriter_conversation(int scene)
 	case TYPEWRITER_MSG: { return &final_msg; break; }
 	case TYPEWRITER_NEW_BERLIN: { return &new_berlin_sign; break; }
 	case TYPEWRITER_DOG_AND_PONY: { return &dog_and_pony; break; }
+	case TYPEWRITER_CCUTSCENE_07: { return &cutscene_07; break; }
 
     default:
     {

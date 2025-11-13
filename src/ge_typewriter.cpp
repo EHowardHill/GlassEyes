@@ -113,6 +113,11 @@ void typewriter(int scene)
 
         break;
     }
+    case TYPEWRITER_CCUTSCENE_07:
+    {
+        current_conversation = &cutscene_07;
+        type = TYPE_TEXT;
+    }
     default:
     {
         type = TYPE_IMG;

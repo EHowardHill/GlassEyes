@@ -27,6 +27,27 @@
                 ],
                 "speed": 1,
                 "loop": true
+            },
+            "face_down": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "face_right": {
+                "frames": [
+                    3
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "face_up": {
+                "frames": [
+                    6
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "vista": {
@@ -87,6 +108,27 @@
             "bed_cry": {
                 "frames": [
                     2
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "young_up": {
+                "frames": [
+                    6
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "throne": {
+                "frames": [
+                    10
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "pickup_02": {
+                "frames": [
+                    11
                 ],
                 "speed": 0,
                 "loop": false
@@ -870,7 +912,9 @@
         "Croke_Battle": {},
         "Henry": {},
         "Vista Bed": {},
-        "Vista Young": {}
+        "Vista Young": {},
+        "Constance": {},
+        "Ginger Fancy2": {}
     },
     "cutscenes": {
         "Intro": {
@@ -916,7 +960,10 @@
             "music": "intro",
             "type": "popup"
         },
-        "Buffer": {}
+        "Buffer": {},
+        "CCutscene 07": {
+            "conversation": "cutscene_07"
+        }
     },
     "actions": {
         "interactable": {
@@ -3019,6 +3066,31 @@
                 "sequence": [
                     "cutscene_05"
                 ]
+            },
+            "280": {
+                "sequence": [
+                    "cutscene_06"
+                ]
+            },
+            "281": {
+                "sequence": [
+                    "cutscene_07b"
+                ]
+            },
+            "282": {
+                "sequence": [
+                    "cutscene_08"
+                ]
+            },
+            "283": {
+                "sequence": [
+                    "cutscene_08b"
+                ]
+            },
+            "284": {
+                "sequence": [
+                    "cutscene_08c"
+                ]
             }
         }
     },
@@ -3272,6 +3344,26 @@
         "CH_CUTSCENE_05": {
             "map": "cutscene_lab_kitchen",
             "bg_track": "intro_03"
+        },
+        "CH_CUTSCENE_06": {
+            "map": "cutscene_garbage_chute",
+            "bg_track": "ambient_wind"
+        },
+        "CH_CUTSCENE_07": {
+            "map": "cutscene_castle_01",
+            "cutscenes": [
+                "CCutscene 07"
+            ]
+        },
+        "CH_CUTSCENE_08": {
+            "map": "cutscene_castle_02",
+            "bg_track": "intro_02"
+        },
+        "CH_CUTSCENE_08B": {
+            "map": "cutscene_castle_03"
+        },
+        "CH_CUTSCENE_08C": {
+            "map": "cutscene_castle_bonus"
         }
     }
 }

@@ -143,6 +143,24 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_cutscene_lab_kitchen;
 		global_data_ptr->bg_track = &music_items::intro_03;
 		break;		}
+	case CH_CUTSCENE_06: {
+		global_data_ptr->entry_map = &map_cutscene_garbage_chute;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		break;		}
+	case CH_CUTSCENE_07: {
+		typewriter(TYPEWRITER_CCUTSCENE_07);
+		global_data_ptr->entry_map = &map_cutscene_castle_01;
+		break;		}
+	case CH_CUTSCENE_08: {
+		global_data_ptr->entry_map = &map_cutscene_castle_02;
+		global_data_ptr->bg_track = &music_items::intro_02;
+		break;		}
+	case CH_CUTSCENE_08B: {
+		global_data_ptr->entry_map = &map_cutscene_castle_03;
+		break;		}
+	case CH_CUTSCENE_08C: {
+		global_data_ptr->entry_map = &map_cutscene_castle_bonus;
+		break;		}
 	default: { break; }
 	}
 }

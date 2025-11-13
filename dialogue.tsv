@@ -2243,114 +2243,100 @@ cutscene_05
 	db_ch_henry	EM_HAPPY		We'll have	everything.										
 															
 cutscene_06															
-				Henry..			COLOR_PURPLE								
-				Don't be nervous.	The police never	check the garbage.									
-				We can escape as	long as we're	discrete.									
-				No, the machine.	I don't think it'll	survive the fall.	COLOR_PURPLE								
-				I can fix whatever	breaks, Vista.	It'll be fine.									
-				Have the others gone	first already?										
-				Y-Yes.		I'm scared.	COLOR_PURPLE								
-				What happens if..	If I make a mistake	and die?	COLOR_PURPLE								
-				You've had death on	your mind a lot,	haven't you?									
-				Perhaps, since the	others are down	there..									
-				We should talk.											
-				Vista,	You could go back to	your human life.									
-				What d-do you mean?			COLOR_PURPLE								
-				It would involve	your death, of	course..									
-				But if you die, your	soul returns to	where it came.									
-				I worked hard to	prove this in	writing.									
-				However, Vista, I'm	taking the chance to	do something great.									
-				We can't go home.	So we will make a	new home.									
-				I intend to make	more muetos.	Many more.									
-				I will make them in	spite of this	wretched city.									
-				I want to make a	proper kingdom full	of muetos.									
-				But they can't have	full souls like you.										
-				You know the others	won't live more	than five years.									
-				I do..			COLOR_PURPLE								
-				This kingdom will	need one of their	own to last.									
-				Someone wise and	good-hearted to	lead them.									
-				Vista, I want to	make you into a	queen.									
-				I don't understand..			COLOR_PURPLE								
-				You have a choice.	Follow me down the	rabbit hole..									
-				Or you may go home.											
-				But you gave up your	eye to make me,	didn't you?	COLOR_PURPLE								
-				I have two eyes.	I can try again.										
-				What do you say?											
-															
-cutscene_07															
-	db_ch_vista_02			Escaping into the	Canterbury woods was	illegal as a human.	COLOR_PURPLE								
-	db_ch_vista_02			When the university	threatened to sue	Dr. Henry Erickson,	COLOR_PURPLE								
-	db_ch_vista_02			His garbage chute	escape made him a	fugitive.	COLOR_PURPLE								
-	db_ch_vista_02			The city sent police	after him. All were	killed by muetos.	COLOR_PURPLE								
-	db_ch_vista_02			So began the bloody,	endless war between	us and the humans.	COLOR_PURPLE								
-	db_ch_vista_02			Our dragons kill a	few humans. Their	bombs kill muetos.	COLOR_PURPLE								
-	db_ch_vista_02			I have tried to slow	down, but they have	no desire to stop.	COLOR_PURPLE								
-	db_ch_vista_02			Father can only make	so many new muetos	at a time.	COLOR_PURPLE								
-	db_ch_vista_02			So.. Tell him that	what I want for my	birthday is an heir.									
-	db_ch_vista_02			"Not a ""child"" who"	will last a year.	A proper heir.	COLOR_PURPLE								
-	db_ch_vista_02			I know it's a hard	ask, but..	I'm so tired.	COLOR_PURPLE								
-	db_ch_vista_02			I want to wash my	hands of all this	blood.	COLOR_PURPLE								
-	db_ch_vista_02			That's what you can	tell Father.		COLOR_PURPLE								
-	db_ch_vista_02			Oh, and could you	ask him why he won't	move in here?									
-	db_ch_vista_02			It's too dangerous	for him to live in	the city again.									
-				I'll draft a letter	right away, your	majesty.	COLOR_PURPLE								
-				Very good.	Now..	Leave me be.	COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		Are the others down	the chute with the	equipment?				CHAR_VISTA_YOUNG	&vista_young_up				
+	db_ch_ginger	EM_SIDE_EYE		Yes.. They gave the	signal, they're ok..		COLOR_PURPLE								
+	db_ch_henry	EM_HAPPY	ACT_WALK	Don't be nervous.	The police never	check the garbage.				CHAR_HENRY		{7,4}			
+	db_ch_henry	EM_DEFAULT		We can escape as	long as we're	discrete.									
+	db_ch_ginger	EM_SIDE_EYE		Are you sure the	machine survived	the fall?	COLOR_PURPLE								
+	db_ch_henry	EM_HAPPY		I can fix whatever	breaks, Vista.	It'll be fine.									
+	db_ch_henry	EM_DEFAULT		Are you nervous	about the distance	of the chute?									
+	db_ch_ginger	EM_SAD		Y-Yes.			COLOR_PURPLE								
+	db_ch_ginger	EM_CONFUSED		What happens if..	If I make a mistake	and die?	COLOR_PURPLE			CHAR_VISTA_YOUNG	&anim_stand				
+	db_ch_henry	EM_HAPPY		You've had death on	your mind a lot,	haven't you?									
+	db_ch_henry	EM_DEFAULT		Perhaps, since the	others are down	there..									
+	db_ch_henry	EM_DEFAULT		We should talk.	Privately.										
+	db_ch_henry	EM_DEFAULT		Vista,	You could go back to	your human life.									
+	db_ch_ginger	EM_DEFAULT		What d-do you mean?			COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		It would involve	your death, of	course..									
+	db_ch_henry	EM_DEFAULT		But if you die, your	soul returns to	where it came.									
+	db_ch_henry	EM_DEFAULT		I proved this in	testing months	ago.									
+	db_ch_henry	EM_DEFAULT		However, Vista, I'm	taking the chance to	do something great.									
+	db_ch_henry	EM_DEFAULT		We can't go home.	So we will make a	new home.									
+	db_ch_henry	EM_DEFAULT		I intend to make	more muetos.	Many more.									
+	db_ch_henry	EM_DEFAULT		I will make them in	spite of this	wretched city.									
+	db_ch_henry	EM_DEFAULT		I want to make a	proper kingdom full	of muetos.									
+	db_ch_henry	EM_DEFAULT		But they can't have	full souls like you.										
+	db_ch_henry	EM_DEFAULT		You know the others	won't live more	than five years.									
+	db_ch_ginger	EM_SAD		I do..			COLOR_PURPLE								
+	db_ch_henry	EM_HAPPY		This kingdom will	need one of their	own to last.									
+	db_ch_henry	EM_HAPPY		Someone wise and	kind-hearted to	lead them.									
+	db_ch_henry	EM_HAPPY		Vista, I want you	to become their	queen.									
+	db_ch_ginger	EM_CONFUSED		I don't understand..			COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		You have a choice.	Follow me down the	rabbit hole..									
+	db_ch_henry	EM_DEFAULT		Or you may go home.											
+	db_ch_ginger	EM_DEFAULT		But you gave up your	eye to make me,	didn't you?	COLOR_PURPLE								
+	db_ch_henry	EM_DEFAULT		I have two eyes.	I can do this one	more time.									
+	db_ch_henry	EM_DEFAULT		What do you say?											
 															
 cutscene_08															
-	db_ch_constance			Your majesty! Your	birthday gift has	arrived!									
+		EM_SKIP								CHAR_VISTA_02	&vista_throne				
+		EM_SKIP								CHAR_GINGER_FANCY2	&anim_face_right				
+	db_ch_constance		ACT_WALK	Your majesty! Your	birthday gift has	arrived!				CHAR_CONSTANCE		{3,4}			
 	db_ch_vista_02	EM_SULLEN		Very good,	Constance.										
 	db_ch_sebellus	EM_SIDE_EYE		Oh? May I see?											
-	db_ch_vista_02	EM_SULLEN		Sebellus, please	stay calm. We don't	want to overwelm.									
-	db_ch_ginger	EM_SCARED		..											
-	db_ch_constance			Your majesty, you	recieved a letter as	well.									
-	db_ch_vista_02	EM_SULLEN		"""Dear Vista,"	I had my assistant	"select her dress."""									
-	db_ch_vista_02	EM_SULLEN		"""My vision may be"	restored, but due to	"my lack of eyes,"""									
+	db_ch_vista_02	EM_SULLEN	ACT_WALK	Sebellus, please	stay calm. We don't	want to overwelm.				CHAR_VISTA_02	&anim_stand	{4,7}			
+	db_ch_constance		ACT_WALK	Your majesty, you	recieved a letter as	well.				CHAR_CONSTANCE		{3,6}			
+	db_ch_vista_02	EM_SULLEN		"""Dear Vista,"	I had my assistant	"select her dress."""				CHAR_VISTA_02	&vista_pickup_02				
+	db_ch_vista_02	EM_SULLEN	ACT_WALK	"""Due to my current"	lack of eyes,					CHAR_SEBELLUS		{5, 6}			
 	db_ch_vista_02	EM_SULLEN		"""I was not able to"	oversee the final	"stages."""									
 	db_ch_vista_02	EM_SULLEN		"""This is Selari. She"	shares your genetic	"code."""									
 	db_ch_vista_02	EM_SULLEN		"""She is like you, in"	that she has a full	"human soul."""									
-	db_ch_vista_02	EM_SULLEN		"""Her temperment is"	similar to yours,	"and I think that"""									
-	db_ch_vista_02	EM_SULLEN		"""She will become a"	welcome addition to	"your family."""									
+	db_ch_vista_02	EM_SULLEN		"""Her temperment is"	similar to yours,	and I think that									
+	db_ch_vista_02	EM_SULLEN		she will become a	welcome addition to	"your family."""									
 	db_ch_vista_02	EM_SULLEN		"""With love,"	Your father,	"Henry Erickson."""									
-	db_ch_vista_02	EM_SULLEN		What is your name,	love?										
+	db_ch_vista_02	EM_SULLEN	ACT_WALK	What is your name,	love?					CHAR_VISTA_02		{3,7}			
 	db_ch_ginger	EM_SAD		Virginia, ma'am.	People call me	"""Ginger"", though."									
-	db_ch_vista_02	EM_DEFAULT		I see.	Constance, you may	excuse us now.									
 	db_ch_sebellus	EM_CONFUSED		..so? Is it true?	That Gingers don't	have souls?									
 	db_ch_vista_02	EM_DEFAULT		I see.	Constance, you may	excuse us now.									
-	db_ch_vista_02	EM_DEFAULT		Please forgive my	son, Sebellus.										
+	db_ch_vista_02	EM_DEFAULT	ACT_WALK	Please forgive my	son, Sebellus.					CHAR_CONSTANCE		{-1, 5}			
 	db_ch_vista_02	EM_DEFAULT		Sebellus, go with	Constance to the	dining hall.									
 	db_ch_sebellus	EM_HAPPY		Yes, ma'am.											
-	db_ch_vista_02	EM_DEFAULT		Ginger.. yes?	It is an honor to	welcome you.									
+	db_ch_vista_02	EM_HAPPY	ACT_WALK	Ginger.. yes?	It is an honor to	welcome you.				CHAR_SEBELLUS		{-1, 5}			
 	db_ch_vista_02	EM_DEFAULT		Are you from the	New World, or the	Old World?									
-	db_ch_ginger	EM_SCARED		T-The New World,	ma'am.										
-	db_ch_vista_02	EM_DEFAULT		Please accompany me.	There is something I	want to show you.									
+	db_ch_ginger	EM_CONFUSED		T-The New World,	ma'am.										
+	db_ch_vista_02	EM_HAPPY		It's alright, love.	You are in a	good place now.									
+	db_ch_vista_02	EM_HAPPY		Please accompany me.	There is something I	want to show you.									
 															
 cutscene_08b															
-	db_ch_vista_02			You may notice each	of these panels have	different faces.									
-	db_ch_vista_02			Every panel was a	different face I've	worn in the past.									
+		EM_SKIP	ACT_WALK							CHAR_VISTA_02	&anim_face_right	{3,5}			
+	db_ch_vista_02	EM_DEFAULT	ACT_WALK	You may notice each	of these panels have	different faces.				CHAR_GINGER_FANCY2		{4,5}			
+	db_ch_vista_02	EM_DEFAULT		Every panel was a	different face I've	worn in the past.									
 	db_ch_vista_02			However, this one,	the one you wear	now..									
-	db_ch_vista_02			It has always been	my favorite.										
+	db_ch_vista_02	EM_HAPPY		It has always been	my favorite.										
 	db_ch_vista_02			My secret is that	this is a hidden	doorway.									
 	db_ch_vista_02			If you were to	follow me inside..										
 															
 cutscene_08c															
-	db_ch_vista_02			I commissioned the	best in the country	to make this room.									
-	db_ch_vista_02			It looks just like	a New World human	house, yes?									
-	db_ch_vista_02			I am just like you.	My soul came from a	New World human.									
-	db_ch_ginger			..I-It did?											
-	db_ch_vista_02			It's true! The..	experience you had	with Henry?									
-	db_ch_vista_02			I had the same,	a long.. long time	ago, you see.									
+	db_ch_vista_02	EM_HAPPY		I commissioned the	best in the country	to make this room.									
+	db_ch_vista_02	EM_EXCITED		It looks just like	a New World human	house, yes?									
+		EM_SKIP	ACT_WALK							CHAR_GINGER_FANCY2		{13,7}			
+	db_ch_vista_02	EM_HAPPY	ACT_WALK	I am just like you.	My soul came from a	New World human.				CHAR_VISTA_02	&anim_face_right	{12,7}			
+	db_ch_ginger	EM_DEFAULT		..I-It did?											
+	db_ch_vista_02	EM_HAPPY		It's true! The..	experience you had	with Henry?									
+	db_ch_vista_02	EM_SIDE_EYE		I had the same,	a long.. long time	ago, you see.									
 	db_ch_vista_02			I know he may seem..	Frightening.. But he	is a nice man.									
 	db_ch_vista_02			Sometimes.. If I'm	in a bad mood, I	come here to relax.									
-	db_ch_vista_02			It is just like the	human world! There	are movies,									
-	db_ch_vista_02			I have a kitchen,	and games.. And now,	It is yours, too.									
-	db_ch_vista_02			It is my birthday,	but it is also yours	is it not?									
-	db_ch_vista_02			Why don't we make a	cake together, then?										
-	db_ch_vista_02			And then we can go	to my castle town	and get you some new									
-	db_ch_vista_02			clothes.. Some more	practical ones,	perhaps..									
+		EM_SKIP	ACT_WALK							CHAR_GINGER_FANCY2		{9,12}			
+	db_ch_vista_02	EM_HAPPY	ACT_WALK	It is just like the	human world! There	are movies,				CHAR_VISTA_02	&anim_face_right	{8,12}			
+	db_ch_vista_02	EM_HAPPY		I have a kitchen,	and games.. And now,	It is yours, too.									
+	db_ch_vista_02	EM_HAPPY		It is my birthday,	but it is also yours	is it not?									
+	db_ch_vista_02	EM_EXCITED		Why don't we make a	cake together, then?										
+	db_ch_vista_02	EM_HAPPY		And then we can go	to my castle town	and get you some new									
+	db_ch_vista_02	EM_HAPPY		clothes.. Something	to whatever your	taste may be.									
 	db_ch_ginger	EM_WEEP		..											
-	db_ch_vista_02			Dear.. It will be	alright, I promise.										
+	db_ch_vista_02	EM_EXCITED		Dear.. It will be	alright, I promise.										
 	db_ch_ginger	EM_WEEP		..T-Thank you.											
-	db_ch_vista_02			Of course, dear.											
+	db_ch_vista_02	EM_EXCITED		Of course, dear.											
 															
 cutscene_09															
 	db_ch_vista_02			G-Ginger, dear..	Now isn't the time	to be here..									
@@ -2371,3 +2357,26 @@ cutscene_09b
 	db_ch_vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
 	db_ch_vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
 	db_ch_vista_02	EM_WEEP		I want to go home..	I want to go home..	..									
+															
+cutscene_07															
+			ACT_MUSIC_SORRY	Escaping from	Canterbury was	illegal as a human.									
+				But the university	threatened to sue	my father,									
+				and he knew his	chances were better	on the run.									
+				The city sent police	after him. All were	killed by muetos.									
+				So began the bloody,	endless war between	us and the humans.									
+				Our dragons kill a	few humans. Bombs	kill a few muetos.									
+				Despite constant	correspondence	between us,									
+				There will never be	an easy resolution	to the conflict.									
+				Father can only make	so many new muetos	at a time.									
+															
+cutscene_07b															
+	db_ch_vista_02	EM_DISAPPOINTED		So.. Tell him that	what I want for my	birthday is an heir.				CHAR_VISTA_02	&vista_throne				
+	db_ch_vista_02	EM_DISAPPOINTED		"Not a ""child"" who"	will only last a	few years. An heir.									
+	db_ch_vista_02	EM_SAD		I know it's hard to	ask.. But I'm tired.	I'm so, so tired.									
+	db_ch_vista_02	EM_SAD		I want to wash my	hands of all this	spilt blood.									
+	db_ch_vista_02	EM_DEFAULT		That's what you can	tell him.	Oh..									
+	db_ch_vista_02	EM_DEFAULT		Also ask him once	again why he can't	move here?									
+	db_ch_vista_02	EM_DEFAULT		We have electricity	now, and the city is	so dangerous.									
+	db_ch_constance	EM_DEFAULT		I'll draft a letter	right away,	your majesty.									
+	db_ch_vista_02	EM_SAD		Very good,	Constance. Now..	Leave me be.									
+	db_ch_constance	EM_DEFAULT		Yes,	your majesty.										

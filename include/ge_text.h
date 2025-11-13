@@ -65,6 +65,7 @@ enum actions
     ACT_MUSIC_WIND_HEARTBEAT,
     ACT_MUSIC_FADEOUT,
     ACT_MUSIC_RESET,
+    ACT_WAIT,
 };
 
 enum speed
