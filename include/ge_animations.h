@@ -86,5 +86,7 @@ const animation poster_01 = {{0}, 1, 0, false};
 const animation poster_02 = {{1}, 1, 0, false};
 const animation poster_03 = {{2}, 1, 0, false};
 const animation henry_sit = {{9}, 1, 0, false};
+const animation pills_roll = {{1}, 1, 0, false};
+const animation pills_hide = {{0}, 1, 0, false};
 
 #endif

@@ -158,6 +158,8 @@ struct character
             return CH_TYPE_PLAYER;
         case CHAR_VISTA_02:
             return CH_TYPE_PLAYER;
+        case CHAR_GINGER:
+            return CH_TYPE_PLAYER;
         default:
             return CH_TYPE_NPC;
         }

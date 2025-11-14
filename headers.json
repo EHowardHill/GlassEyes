@@ -801,6 +801,22 @@
                 "speed": 0,
                 "loop": false
             }
+        },
+        "pills": {
+            "roll": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "hide": {
+                "frames": [
+                    0
+                ],
+                "speed": 0,
+                "loop": false
+            }
         }
     },
     "items": {
@@ -823,7 +839,8 @@
         "Clothes": {},
         "Soup": {
             "drop": true
-        }
+        },
+        "Pills": {}
     },
     "objects": {
         "Vista": {},
@@ -914,7 +931,9 @@
         "Vista Bed": {},
         "Vista Young": {},
         "Constance": {},
-        "Ginger Fancy2": {}
+        "Ginger Fancy2": {},
+        "Vista Drunk": {},
+        "Pills": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1338,6 +1357,152 @@
                         ]
                     }
                 }
+            },
+            "286": {
+                "sequence": [
+                    "c09_mirror"
+                ]
+            },
+            "287": {
+                "sequence": [
+                    "c09_books"
+                ]
+            },
+            "289": {
+                "new_map": {
+                    "map": "castle_ginger",
+                    "positions": {
+                        "ginger": [
+                            1,
+                            2
+                        ]
+                    }
+                }
+            },
+            "290": {
+                "sequence": [
+                    "c09_door_sebellus"
+                ]
+            },
+            "291": {
+                "new_map": {
+                    "map": "castle_vista",
+                    "positions": {
+                        "ginger": [
+                            2,
+                            3
+                        ]
+                    }
+                }
+            },
+            "292": {
+                "new_map": {
+                    "map": "castle_02b",
+                    "positions": {
+                        "ginger": [
+                            17,
+                            2
+                        ]
+                    }
+                }
+            },
+            "288": {
+                "new_map": {
+                    "map": "castle_vista",
+                    "positions": {
+                        "ginger": [
+                            2,
+                            3
+                        ]
+                    }
+                }
+            },
+            "294": {
+                "new_map": {
+                    "map": "castle_bonus",
+                    "positions": {
+                        "ginger": [
+                            13,
+                            2
+                        ]
+                    }
+                }
+            },
+            "295": {
+                "sequence": [
+                    "c09_tv"
+                ]
+            },
+            "296": {
+                "sequence": [
+                    "c09_bed"
+                ]
+            },
+            "297": {
+                "sequence": [
+                    "c09_fridge"
+                ]
+            },
+            "298": {
+                "new_map": {
+                    "map": "castle_02b",
+                    "positions": {
+                        "ginger": [
+                            14,
+                            22
+                        ]
+                    }
+                }
+            },
+            "299": {
+                "new_map": {
+                    "map": "castle_02b",
+                    "positions": {
+                        "ginger": [
+                            5,
+                            2
+                        ]
+                    }
+                }
+            },
+            "300": {
+                "sequence": [
+                    "c09_desk"
+                ]
+            },
+            "301": {
+                "music": "ambient_birds",
+                "new_map": {
+                    "map": "castle_secret_garden",
+                    "positions": {
+                        "ginger": [
+                            6,
+                            46
+                        ]
+                    }
+                }
+            },
+            "303": {
+                "sequence": [
+                    "c09_graves"
+                ]
+            },
+            "304": {
+                "music": "ambient_heartbeat",
+                "new_map": {
+                    "map": "castle_secret_tunnel",
+                    "positions": {
+                        "ginger": [
+                            5,
+                            22
+                        ]
+                    }
+                }
+            },
+            "307": {
+                "sequence": [
+                    "c09_pills"
+                ]
             }
         },
         "automatic": {
@@ -3091,6 +3256,40 @@
                 "sequence": [
                     "cutscene_08c"
                 ]
+            },
+            "285": {
+                "sequence": [
+                    "c09_init"
+                ]
+            },
+            "293": {
+                "sequence": [
+                    "cutscene_09"
+                ]
+            },
+            "302": {
+                "music": "bg_sorry",
+                "new_map": {
+                    "map": "castle_bonus",
+                    "positions": {
+                        "ginger": [
+                            2,
+                            2
+                        ]
+                    }
+                }
+            },
+            "305": {
+                "music": "ambient_birds",
+                "new_map": {
+                    "map": "castle_secret_garden",
+                    "positions": {
+                        "ginger": [
+                            6,
+                            2
+                        ]
+                    }
+                }
             }
         }
     },
@@ -3364,6 +3563,10 @@
         },
         "CH_CUTSCENE_08C": {
             "map": "cutscene_castle_bonus"
+        },
+        "CH_CUTSCENE_09": {
+            "map": "castle_ginger",
+            "bg_track": "intro_03"
         }
     }
 }

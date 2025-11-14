@@ -46,6 +46,8 @@ int action_listener(map_manager *man, character_manager *ch_man)
 
         if (action != 0 && cooldown == false)
         {
+            BN_LOG("ACTION: ", action);
+
             // AUTOMATIC
             if (new_tile)
             {
@@ -205,7 +207,6 @@ int action_listener(map_manager *man, character_manager *ch_man)
                             s->current_animation = &sebellus_fancy_stand;
                         }
                     }
-
                     break;
                 }
                 case 243:
@@ -216,6 +217,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         v->current_animation = &vista_drinking;
                         v->idle_animation = &vista_drinking;
                     }
+                    break;
                 }
                 case 256:
                 {
@@ -233,6 +235,24 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         s->idle_animation = &sebellus_fancy_sleep;
                         s->current_animation = &sebellus_fancy_sleep;
                     }
+                    break;
+                }
+                case 306:
+                {
+                    if (global_data_ptr->action_iterations[306] < 1)
+                    {
+                        auto p = ch_man->find_by_index(CHAR_PILLS);
+                        if (p != nullptr)
+                        {
+                            p->idle_animation = &pills_roll;
+                            p->current_animation = &pills_roll;
+                        }
+                        p->move_to.x = 6;
+                        p->move_to.y = 7;
+                        sound_items::sfx_bottle.play();
+                        global_data_ptr->action_iterations[306] = 1;
+                    }
+                    break;
                 }
                 default:
                 {
@@ -291,6 +311,18 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         global_data_ptr->entry_map = &map_tavern_01;
 
                         ch_man->load(&scruffys_05);
+                    }
+                    break;
+                }
+                case 308:
+                {
+                    if (global_data_ptr->items[OBJ_PILLS])
+                    {
+                        ch_man->load(&cutscene_09b);
+                    }
+                    else
+                    {
+                        ch_man->load(&c09_reiterate);
                     }
                     break;
                 }

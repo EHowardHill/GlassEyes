@@ -472,6 +472,125 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
+	case 286:
+	{
+		if (global_data_ptr->action_iterations[286] == 1) { ch_man.load(&c09_mirror); } else
+		{ };
+		break;
+	}
+	case 287:
+	{
+		if (global_data_ptr->action_iterations[287] == 1) { ch_man.load(&c09_books); } else
+		{ };
+		break;
+	}
+	case 289:
+	{
+		global_data_ptr->entry_map = &map_castle_ginger;
+		global_data_ptr->ginger_position = {1, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 290:
+	{
+		if (global_data_ptr->action_iterations[290] == 1) { ch_man.load(&c09_door_sebellus); } else
+		{ };
+		break;
+	}
+	case 291:
+	{
+		global_data_ptr->entry_map = &map_castle_vista;
+		global_data_ptr->ginger_position = {2, 3};
+		return NEW_MAP;
+		break;
+	}
+	case 292:
+	{
+		global_data_ptr->entry_map = &map_castle_02b;
+		global_data_ptr->ginger_position = {17, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 288:
+	{
+		global_data_ptr->entry_map = &map_castle_vista;
+		global_data_ptr->ginger_position = {2, 3};
+		return NEW_MAP;
+		break;
+	}
+	case 294:
+	{
+		global_data_ptr->entry_map = &map_castle_bonus;
+		global_data_ptr->ginger_position = {13, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 295:
+	{
+		if (global_data_ptr->action_iterations[295] == 1) { ch_man.load(&c09_tv); } else
+		{ };
+		break;
+	}
+	case 296:
+	{
+		if (global_data_ptr->action_iterations[296] == 1) { ch_man.load(&c09_bed); } else
+		{ };
+		break;
+	}
+	case 297:
+	{
+		if (global_data_ptr->action_iterations[297] == 1) { ch_man.load(&c09_fridge); } else
+		{ };
+		break;
+	}
+	case 298:
+	{
+		global_data_ptr->entry_map = &map_castle_02b;
+		global_data_ptr->ginger_position = {14, 22};
+		return NEW_MAP;
+		break;
+	}
+	case 299:
+	{
+		global_data_ptr->entry_map = &map_castle_02b;
+		global_data_ptr->ginger_position = {5, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 300:
+	{
+		if (global_data_ptr->action_iterations[300] == 1) { ch_man.load(&c09_desk); } else
+		{ };
+		break;
+	}
+	case 301:
+	{
+		music_items::ambient_birds.play();
+		global_data_ptr->entry_map = &map_castle_secret_garden;
+		global_data_ptr->ginger_position = {6, 46};
+		return NEW_MAP;
+		break;
+	}
+	case 303:
+	{
+		if (global_data_ptr->action_iterations[303] == 1) { ch_man.load(&c09_graves); } else
+		{ };
+		break;
+	}
+	case 304:
+	{
+		music_items::ambient_heartbeat.play();
+		global_data_ptr->entry_map = &map_castle_secret_tunnel;
+		global_data_ptr->ginger_position = {5, 22};
+		return NEW_MAP;
+		break;
+	}
+	case 307:
+	{
+		if (global_data_ptr->action_iterations[307] == 1) { ch_man.load(&c09_pills); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -1648,6 +1767,34 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[284] == 0) { ch_man.load(&cutscene_08c); global_data_ptr->action_iterations[284] += 1; } else
 		{ };
+		break;
+	}
+	case 285:
+	{
+		if (global_data_ptr->action_iterations[285] == 0) { ch_man.load(&c09_init); global_data_ptr->action_iterations[285] += 1; } else
+		{ };
+		break;
+	}
+	case 293:
+	{
+		if (global_data_ptr->action_iterations[293] == 0) { ch_man.load(&cutscene_09); global_data_ptr->action_iterations[293] += 1; } else
+		{ };
+		break;
+	}
+	case 302:
+	{
+		music_items::bg_sorry.play();
+		global_data_ptr->entry_map = &map_castle_bonus;
+		global_data_ptr->ginger_position = {2, 2};
+		return NEW_MAP;
+		break;
+	}
+	case 305:
+	{
+		music_items::ambient_birds.play();
+		global_data_ptr->entry_map = &map_castle_secret_garden;
+		global_data_ptr->ginger_position = {6, 2};
+		return NEW_MAP;
 		break;
 	}
 	}

@@ -59,6 +59,8 @@
 #include "bn_sprite_items_spr_vista_young.h"
 #include "bn_sprite_items_spr_constance.h"
 #include "bn_sprite_items_spr_ginger_fancy2.h"
+#include "bn_sprite_items_spr_vista_drunk.h"
+#include "bn_sprite_items_spr_pills.h"
 
 using namespace bn;
 
@@ -121,6 +123,8 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_VISTA_YOUNG: { return &sprite_items::spr_vista_young; break; }
 	case CHAR_CONSTANCE: { return &sprite_items::spr_constance; break; }
 	case CHAR_GINGER_FANCY2: { return &sprite_items::spr_ginger_fancy2; break; }
+	case CHAR_VISTA_DRUNK: { return &sprite_items::spr_vista_drunk; break; }
+	case CHAR_PILLS: { return &sprite_items::spr_pills; break; }
     default:
     {
         return &sprite_items::spr_vista;

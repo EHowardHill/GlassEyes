@@ -53,6 +53,12 @@ int navigate_map()
         global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_FANCY;
         break;
     }
+    case CH_CUTSCENE_09:
+    {
+        global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_CASUAL;
+        global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_CASUAL;
+        break;
+    }
     }
 
     for (int y = 0; y < current_map.current_map->size.y.integer(); y++)

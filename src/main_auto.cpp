@@ -161,6 +161,10 @@ void resolve_chapter()
 	case CH_CUTSCENE_08C: {
 		global_data_ptr->entry_map = &map_cutscene_castle_bonus;
 		break;		}
+	case CH_CUTSCENE_09: {
+		global_data_ptr->entry_map = &map_castle_ginger;
+		global_data_ptr->bg_track = &music_items::intro_03;
+		break;		}
 	default: { break; }
 	}
 }

@@ -19,6 +19,9 @@
 #include "bn_sprite_items_spr_ginger_fancy.h"
 #include "bn_sprite_items_spr_sebellus_fancy.h"
 
+#include "bn_sprite_items_spr_ginger_casual.h"
+#include "bn_sprite_items_spr_sebellus_casual.h"
+
 using namespace bn;
 
 // Static member definitions
@@ -184,6 +187,10 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
             {
                 v_sprite.sprite_item_ptr = &sprite_items::spr_ginger_fancy;
             }
+            if (costume == COSTUME_GINGER_CASUAL)
+            {
+                v_sprite.sprite_item_ptr = &sprite_items::spr_ginger_casual;
+            }
             break;
         }
         case CHAR_JEREMY:
@@ -199,6 +206,10 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
             if (costume == COSTUME_SEBELLUS_FANCY)
             {
                 v_sprite.sprite_item_ptr = &sprite_items::spr_sebellus_fancy;
+            }
+            if (costume == COSTUME_SEBELLUS_CASUAL)
+            {
+                v_sprite.sprite_item_ptr = &sprite_items::spr_sebellus_casual;
             }
             break;
         }

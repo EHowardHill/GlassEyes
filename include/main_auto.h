@@ -31,6 +31,7 @@ enum progress
 	CH_CUTSCENE_08,
 	CH_CUTSCENE_08B,
 	CH_CUTSCENE_08C,
+	CH_CUTSCENE_09,
 };
 
 void resolve_chapter();

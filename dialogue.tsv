@@ -2339,24 +2339,28 @@ cutscene_08c
 	db_ch_vista_02	EM_EXCITED		Of course, dear.											
 															
 cutscene_09															
-	db_ch_vista_02			G-Ginger, dear..	Now isn't the time	to be here..									
+	db_ch_vista_02	EM_SULLEN	ACT_MUSIC_FADEOUT	G-Ginger, dear..	Now isn't the time	to be here..									
 	db_ch_vista_02	EM_LAUGH		*hic* Mama is	consulting with the	spirits, you see..									
-	db_ch_vista_02			I left my medicine..	for my head.. in the	secret garden..									
-	db_ch_vista_02			It's in my bedroom..	The doorway..	Please, fetch it..									
+	db_ch_vista_02	EM_SAD		I left my medicine..	for my head.. in the	secret garden..									
+	db_ch_vista_02	EM_SIDE_EYE		Do you remember our	secret room? The one	like the New World?									
+	db_ch_vista_02	EM_SIDE_EYE		There's a door.. It	leads to a secret	garden..									
+	db_ch_ginger	EM_DEFAULT		I thought you said I	wasn't allowed in	that garden.									
+	db_ch_vista_02	EM_SIDE_EYE	ACT_MUSIC_SORRY	*hic* I trust you..	More than anyone	else, Ginger..									
+	db_ch_vista_02	EM_SAD		Please..											
 															
 cutscene_09b															
-	db_ch_vista_02			Thank you,	sunshine..	Thank you..									
-	db_ch_vista_02			..											
-	db_ch_vista_02			I shouldn't have	asked you to see my	secret garden, dear.									
-	db_ch_vista_02			Ginger, dear..	This throne..	These treats..									
-	db_ch_vista_02			What good does it	do to gain the world	and lose your soul?									
-	db_ch_vista_02			Death.. He delights	in us, you know..										
-	db_ch_vista_02			This war.. Humans	fighting themselves	in different bodies.									
-	db_ch_vista_02			So much death..	Generations..	And generations..									
+	db_ch_vista_02	EM_EXCITED		Thank you,	sunshine..	Thank you..									
+	db_ch_vista_02	EM_DEFAULT		..											
+	db_ch_vista_02	EM_SAD		I shouldn't have	asked you to see my	secret garden, dear.									
+	db_ch_vista_02	EM_DISAPPOINTED		Ginger, dear..	This throne..	These treats..									
+	db_ch_vista_02	EM_SAD		What good does it	do to gain the world	and lose your soul?									
+	db_ch_vista_02	EM_SULLEN		Death.. He delights	in us, you know..										
+	db_ch_vista_02	EM_SULLEN		This war.. Humans	fighting themselves	in different bodies.									
+	db_ch_vista_02	EM_SAD		So much death..	Generations..	And generations..									
 	db_ch_vista_02	EM_LAUGH		What irony that I	can't die, the only	one who wants it!									
 	db_ch_vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
 	db_ch_vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
-	db_ch_vista_02	EM_WEEP		I want to go home..	I want to go home..	..									
+	db_ch_vista_02	EM_SAD		I want to go home..	I want to go home..	..									
 															
 cutscene_07															
 			ACT_MUSIC_SORRY	Escaping from	Canterbury was	illegal as a human.									
@@ -2380,3 +2384,58 @@ cutscene_07b
 	db_ch_constance	EM_DEFAULT		I'll draft a letter	right away,	your majesty.									
 	db_ch_vista_02	EM_SAD		Very good,	Constance. Now..	Leave me be.									
 	db_ch_constance	EM_DEFAULT		Yes,	your majesty.										
+															
+c09_init															
+	db_ch_ginger	EM_SAD		Ugh.. My neck.	How long was that	nap for?									
+	db_ch_ginger	EM_SIDE_EYE		Hmm.. I haven't	seen mom in a while.										
+	db_ch_ginger	EM_DEFAULT		I wonder what she's	up to?										
+															
+c09_mirror															
+				Is it you?											
+															
+c09_books															
+				Most of these books	have already been	read twice by now.									
+				Many of them were	imported from the	New World.									
+				They have a sort of	"""musty"" smell."	Reminds you of home.									
+															
+c09_door_sebellus															
+	db_ch_ginger	EM_DEFAULT		That's the door to	Sebellus' room.	It's locked.									
+	db_ch_ginger	EM_SIDE_EYE		It's probably a mess	and he doesn't want	anyone to know.									
+															
+c09_tv															
+				There's a huge	collection of movies	under the TV.									
+				Sebellus lacks a	movie taste so he'll	watch anything.									
+				It does make it more	fun. It's sad to	watch movies alone.									
+															
+c09_bed															
+				Sometimes it's fun	to spend the night	here,									
+				and pretend you're	still at home.										
+															
+c09_fridge															
+				Not in the mood	for snacks	right now.									
+															
+c09_desk															
+				This is the table	where you write	mediocre poetry.									
+				Sebellus always	seems to like it,	though.									
+				Mom is also very	supportive for some	reason.									
+				She's trying to get	you set up in a	poetry club.									
+				It feels weird that	she's asking Henry	to make muetos									
+				just to be a part	of the club,	though.									
+															
+c09_graves															
+	db_ch_ginger	EM_DEFAULT		I can't read the	mueto script on the	gravestones..									
+	db_ch_ginger	EM_SIDE_EYE		But I remember what	mom told me about	black roses.									
+	db_ch_ginger	EM_DEFAULT		They were the first	thing Dr. Erickson	ever made.									
+	db_ch_ginger	EM_DEFAULT		That's where our	family gets its	surname -									
+	db_ch_ginger	EM_DEFAULT		"""Selari Blackrose""."											
+	db_ch_ginger	EM_DEFAULT		I'm sure that'll end	up on one of these	stones someday.									
+															
+c09_pills															
+			ACT_ITEM	You found:	PILLS					OBJ_PILLS					
+				This should be what	you came looking	for, Ginger.				CHAR_PILLS	&pills_hide				
+															
+convo_obj_pills															
+				You're not really	sure what's in	these pills.									
+															
+c09_reiterate															
+	db_ch_vista_02	EM_SAD		The pills, please...	In our secret room,	There's a door..									
