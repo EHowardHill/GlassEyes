@@ -438,7 +438,7 @@ void dialogue_box::init(character_manager *ch_man)
         case ACT_MUSIC_BORED:
         {
             ch_man->music_fadeout = false;
-            music_items::bg_bored.play(0.75);
+            music_items::theme_sans.play(0.75);
             break;
         }
         case ACT_MUSIC_WIND:

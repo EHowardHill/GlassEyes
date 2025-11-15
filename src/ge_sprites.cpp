@@ -224,7 +224,7 @@ character::character(int index_, vector_2 start_, character_manager *manager) : 
     v_sprite.sprite_ptr_raw[0].reset();
     v_sprite.sprite_ptr_raw[1].reset();
 
-    if (type() == CH_TYPE_PLAYER || (v_sprite_ptr::camera.x == 0 && v_sprite_ptr::camera.y == 0))
+    if ((this == ch_man->player_ptr) || (v_sprite_ptr::camera.x == 0 && v_sprite_ptr::camera.y == 0))
     {
         v_sprite_ptr::camera.x = start_.x;
         v_sprite_ptr::camera.y = start_.y;
@@ -263,7 +263,7 @@ void character::update(map_manager *current_map, bool db_inactive)
     // Not falling
     else
     {
-        if (type() == CH_TYPE_PLAYER)
+        if (this == ch_man->player_ptr)
         {
             if (db_inactive)
             {

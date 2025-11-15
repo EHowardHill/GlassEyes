@@ -26,7 +26,177 @@
 #include "ge_navigate.h"
 #include "ge_game_numpad.h"
 
+#include "bn_regular_bg_items_bg_chapter_select.h"
+
 using namespace bn;
+
+int chapter_select()
+{
+    auto bg = regular_bg_items::bg_chapter_select.create_bg(0, 0);
+
+    int index = 0;
+
+    constexpr int c_w = -56 - 32;
+    constexpr int c_h = -56;
+
+    const char *ch_titles[7] = {
+        "Ch. 1",
+        "Ch. 2",
+        "Ch. 3",
+        "Ch. 4",
+        "Ch. 5",
+        "Ch. 6",
+        "Ch. 7"};
+
+    const char *ch_names[7] = {
+        "Exordium",
+        "Her",
+        "North by North",
+        "1000 Miles",
+        "Morning Bell",
+        "The Giantess",
+        "Always Like This"};
+
+    text titles[7] = {
+        {"Ch. 1", {c_w, c_h + (16 * 0)}},
+        {"Ch. 2", {c_w, c_h + (16 * 1)}},
+        {"Ch. 3", {c_w, c_h + (16 * 2)}},
+        {"Ch. 4", {c_w, c_h + (16 * 3)}},
+        {"Ch. 5", {c_w, c_h + (16 * 4)}},
+        {"Ch. 6", {c_w, c_h + (16 * 5)}},
+        {"Ch. 7", {c_w, c_h + (16 * 6)}}};
+
+    vector<text, 7> ch_titles_var;
+    vector<text, 7> ch_names_var;
+
+    auto heart = sprite_items::hearts.create_sprite(c_w - 20, c_h, 1);
+
+    for (int t = 0; t < 7; t++)
+    {
+        text ch_t = {ch_titles[t], {c_w, c_h + (16 * t)}};
+        ch_titles_var.push_back(ch_t);
+
+        text ch_n = {ch_names[t], {c_w + 64, c_h + (16 * t)}};
+        ch_names_var.push_back(ch_n);
+    }
+
+    for (int t = 0; t < 7; t++)
+    {
+        ch_titles_var.at(t).render();
+        ch_names_var.at(t).render();
+    }
+
+    ch_titles_var.at(index).color = COLOR_YELLOW;
+    ch_names_var.at(index).color = COLOR_YELLOW;
+    ch_titles_var.at(index).render();
+    ch_names_var.at(index).render();
+
+    bool selected = false;
+
+    while (selected == false)
+    {
+        if (keypad::down_pressed())
+        {
+            ch_titles_var.at(index).color = COLOR_WHITE;
+            ch_names_var.at(index).color = COLOR_WHITE;
+            ch_titles_var.at(index).render();
+            ch_names_var.at(index).render();
+
+            index++;
+            if (index > 6)
+                index = 0;
+            sound_items::snd_select.play();
+            heart.set_y(c_h + (16 * index));
+
+            ch_titles_var.at(index).color = COLOR_YELLOW;
+            ch_names_var.at(index).color = COLOR_YELLOW;
+            ch_titles_var.at(index).render();
+            ch_names_var.at(index).render();
+        }
+
+        if (keypad::up_pressed())
+        {
+            ch_titles_var.at(index).color = COLOR_WHITE;
+            ch_names_var.at(index).color = COLOR_WHITE;
+            ch_titles_var.at(index).render();
+            ch_names_var.at(index).render();
+
+            index--;
+            if (index < 0)
+                index = 6;
+            sound_items::snd_select.play();
+            heart.set_y(c_h + (16 * index));
+
+            ch_titles_var.at(index).color = COLOR_YELLOW;
+            ch_names_var.at(index).color = COLOR_YELLOW;
+            ch_titles_var.at(index).render();
+            ch_names_var.at(index).render();
+        }
+
+        if (keypad::a_pressed())
+        {
+            selected = true;
+        }
+
+        core::update();
+    }
+
+    sound_items::snd_chime.play();
+
+    for (int t = 0; t < 92; t++)
+    {
+        heart.set_tiles(sprite_items::hearts.tiles_item(), 3);
+
+        core::update();
+    }
+
+    ch_titles_var.clear();
+    ch_names_var.clear();
+
+    switch (index)
+    {
+    case 0:
+    {
+        return CUTSCENE_01;
+        break;
+    }
+    case 1:
+    {
+        return BLACK_TO_LAB;
+        break;
+    }
+    case 2:
+    {
+        return AVALON;
+        break;
+    }
+    case 3:
+    {
+        return DARK_TO_DARK;
+        break;
+    }
+    case 4:
+    {
+        return WAKEY_WAKEY;
+        break;
+    }
+    case 5:
+    {
+        return FLAYITHRO_AWAKE;
+        break;
+    }
+    case 6:
+    {
+        return BLACK_TO_LAB_02;
+        break;
+    }
+    default:
+    {
+        return CUTSCENE_01;
+        break;
+    }
+    }
+}
 
 int main()
 {
@@ -34,11 +204,17 @@ int main()
 
     // game_numpad();
 
+    core::update();
+
     global_data_ptr->foe = FOE_VISKERS_01;
     int value = NEW_CHAPTER; // NEW_CHAPTER;
 
     global_data_ptr = new global_data();
-    global_data_ptr->process_stage = CH_CUTSCENE_09;
+    global_data_ptr->process_stage = CUTSCENE_01;
+    global_data_ptr->jeremy_position = {0, 0};
+    global_data_ptr->ginger_position = {0, 0};
+    global_data_ptr->sebellus_position = {0, 0};
+    core::update();
 
     while (true)
     {
