@@ -112,7 +112,8 @@ enum colors
     COLOR_GREEN,
     COLOR_BLUE,
     COLOR_PINK,
-    COLOR_PURPLE
+    COLOR_PURPLE,
+    COLOR_SANS
 };
 
 struct dialogue_line;

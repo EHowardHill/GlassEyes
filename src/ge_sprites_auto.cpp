@@ -61,6 +61,11 @@
 #include "bn_sprite_items_spr_ginger_fancy2.h"
 #include "bn_sprite_items_spr_vista_drunk.h"
 #include "bn_sprite_items_spr_pills.h"
+#include "bn_sprite_items_spr_cs_mspx.h"
+#include "bn_sprite_items_spr_cs_ge.h"
+#include "bn_sprite_items_spr_cs_fox.h"
+#include "bn_sprite_items_spr_sans.h"
+#include "bn_sprite_items_spr_stand.h"
 
 using namespace bn;
 
@@ -125,6 +130,11 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_GINGER_FANCY2: { return &sprite_items::spr_ginger_fancy2; break; }
 	case CHAR_VISTA_DRUNK: { return &sprite_items::spr_vista_drunk; break; }
 	case CHAR_PILLS: { return &sprite_items::spr_pills; break; }
+	case CHAR_CS_MSPX: { return &sprite_items::spr_cs_mspx; break; }
+	case CHAR_CS_GE: { return &sprite_items::spr_cs_ge; break; }
+	case CHAR_CS_FOX: { return &sprite_items::spr_cs_fox; break; }
+	case CHAR_SANS: { return &sprite_items::spr_sans; break; }
+	case CHAR_STAND: { return &sprite_items::spr_stand; break; }
     default:
     {
         return &sprite_items::spr_vista;

@@ -817,6 +817,22 @@
                 "speed": 0,
                 "loop": false
             }
+        },
+        "sans": {
+            "left": {
+                "frames": [
+                    10
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "ice_cream": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": false
+            }
         }
     },
     "items": {
@@ -840,7 +856,10 @@
         "Soup": {
             "drop": true
         },
-        "Pills": {}
+        "Pills": {},
+        "Ice Cream": {
+            "drop": true
+        }
     },
     "objects": {
         "Vista": {},
@@ -933,7 +952,12 @@
         "Constance": {},
         "Ginger Fancy2": {},
         "Vista Drunk": {},
-        "Pills": {}
+        "Pills": {},
+        "CS_MSPX": {},
+        "CS_GE": {},
+        "CS_FOX": {},
+        "Sans": {},
+        "Stand": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1502,6 +1526,11 @@
             "307": {
                 "sequence": [
                     "c09_pills"
+                ]
+            },
+            "315": {
+                "sequence": [
+                    "sans_06"
                 ]
             }
         },
@@ -3111,12 +3140,6 @@
             "254": {
                 "auto": "train_arrive"
             },
-            "258": {
-                "sequence": [
-                    "canter_01"
-                ],
-                "music": "intro_03"
-            },
             "259": {
                 "music": "bg_canter_01",
                 "new_map": {
@@ -3290,22 +3313,41 @@
                         ]
                     }
                 }
+            },
+            "310": {
+                "sequence": [
+                    "sans_01"
+                ]
+            },
+            "311": {
+                "sequence": [
+                    "sans_02"
+                ]
+            },
+            "312": {
+                "sequence": [
+                    "sans_03"
+                ]
+            },
+            "313": {
+                "sequence": [
+                    "sans_04"
+                ]
+            },
+            "314": {
+                "sequence": [
+                    "sans_05"
+                ]
+            },
+            "258": {
+                "sequence": [
+                    "canter_01"
+                ],
+                "music": "intro"
             }
         }
     },
     "chapters": {
-        "CUTSCENE_01": {
-            "cutscenes": [
-                "Intro"
-            ],
-            "map": "room01",
-            "positions": {
-                "jeremy": [
-                    9,
-                    2
-                ]
-            }
-        },
         "CUTSCENE_TO_GARBAGE": {
             "cutscenes": [
                 "Intro2",
@@ -3540,10 +3582,6 @@
         "CH_CUTSCENE_04": {
             "map": "cutscene_lab_room_02"
         },
-        "CH_CUTSCENE_05": {
-            "map": "cutscene_lab_kitchen",
-            "bg_track": "intro_03"
-        },
         "CH_CUTSCENE_06": {
             "map": "cutscene_garbage_chute",
             "bg_track": "ambient_wind"
@@ -3564,9 +3602,37 @@
         "CH_CUTSCENE_08C": {
             "map": "cutscene_castle_bonus"
         },
+        "CUTSCENE_01": {
+            "map": "room01",
+            "cutscenes": [
+                "Intro"
+            ],
+            "positions": {
+                "jeremy": [
+                    0,
+                    0
+                ]
+            }
+        },
+        "CH_SANS": {
+            "map": "sans",
+            "bg_track": "theme_sans"
+        },
+        "CH_TITLE": {
+            "cutscenes": [
+                "Intro2",
+                "Buffer",
+                "Title",
+                "Buffer"
+            ]
+        },
+        "CH_CUTSCENE_05": {
+            "map": "cutscene_lab_kitchen",
+            "bg_track": "intro"
+        },
         "CH_CUTSCENE_09": {
             "map": "castle_ginger",
-            "bg_track": "intro_03"
+            "bg_track": "intro"
         }
     }
 }

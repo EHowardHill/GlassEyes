@@ -16,9 +16,11 @@ const char *ITEM_LABELS[ITEMS_SIZE] = {
 	"Clothes",
 	"Soup",
 	"Pills",
+	"Ice Cream",
 };
 
 const bool ITEM_DROP[ITEMS_SIZE] = {
+	false,
 	false,
 	false,
 	false,
@@ -48,4 +50,5 @@ const conversation *ITEM_CONVOS[ITEMS_SIZE] = {
 	&convo_obj_clothes,
 	&convo_obj_soup,
 	&convo_obj_pills,
+	&convo_obj_ice_cream,
 };

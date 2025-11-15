@@ -77,6 +77,8 @@ int navigate_map()
         }
     }
 
+    BN_LOG("Jeremy: ", global_data_ptr->jeremy_position.x.integer(), " x ", global_data_ptr->jeremy_position.y.integer());
+
     if (global_data_ptr->jeremy_position.x != 0 && global_data_ptr->jeremy_position.y != 0)
     {
         char_mgr.add_character(CHAR_JEREMY, global_data_ptr->jeremy_position, 0);

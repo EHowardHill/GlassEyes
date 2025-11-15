@@ -50,6 +50,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_death.h"
 #include "bn_sprite_items_db_ch_henry.h"
 #include "bn_sprite_items_db_ch_constance.h"
+#include "bn_sprite_items_db_ch_sans.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -133,6 +134,7 @@ extern const conversation chat_mcwebb_03;
 extern const conversation convo_obj_clothes;
 extern const conversation convo_obj_document;
 extern const conversation convo_obj_flint;
+extern const conversation convo_obj_ice_cream;
 extern const conversation convo_obj_lime;
 extern const conversation convo_obj_photograph;
 extern const conversation convo_obj_pie;
@@ -308,6 +310,12 @@ extern const conversation naomi_fortune_01;
 extern const conversation naomi_fortune_01_alt_01;
 extern const conversation new_berlin_sign;
 extern const conversation pringle_01;
+extern const conversation sans_01;
+extern const conversation sans_02;
+extern const conversation sans_03;
+extern const conversation sans_04;
+extern const conversation sans_05;
+extern const conversation sans_06;
 extern const conversation scruffys_01;
 extern const conversation scruffys_01_alt_01;
 extern const conversation scruffys_02;

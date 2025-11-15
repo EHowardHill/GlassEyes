@@ -68,12 +68,6 @@ character *character_manager::add_character(int index, vector_2 position, int id
         new_char->is_follow = true;
     }
 
-    // Track player
-    if (new_char->type() == CH_TYPE_PLAYER && !player_ptr)
-    {
-        player_ptr = new_char;
-    }
-
     return new_char;
 }
 
@@ -173,6 +167,19 @@ void character_manager::update(map_manager *current_map = nullptr)
 {
     bool db_inactive = true;
     bool ib_inactive = true;
+
+    // Track player
+    if (!player_ptr)
+    {
+        for (auto char_id : {CHAR_JEREMY, CHAR_VISTA_02, CHAR_VISTA, CHAR_VISTA_YOUNG})
+        {
+            if (auto j = find_by_index(char_id); j != nullptr)
+            {
+                player_ptr = j;
+                break;
+            }
+        }
+    }
 
     if (music::playing())
     {

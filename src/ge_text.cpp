@@ -17,6 +17,7 @@
 
 // Sprites
 #include "bn_sprite_items_spr_font_01.h"
+#include "bn_sprite_items_spr_font_comic_sans.h"
 #include "bn_sprite_items_hearts.h"
 #include "bn_regular_bg_items_bg_dialogue_box.h"
 
@@ -58,7 +59,14 @@ letter::letter(char ch, vector_2 ideal_position_, int color_) : ideal_position(i
 
     if (char_index > -1)
     {
-        sprite = sprite_items::spr_font_01.create_sprite(ideal_position_.x, ideal_position_.y, char_index + (94 * color_));
+        if (color_ == COLOR_SANS)
+        {
+            sprite = sprite_items::spr_font_comic_sans.create_sprite(ideal_position_.x, ideal_position_.y, char_index);
+        }
+        else
+        {
+            sprite = sprite_items::spr_font_01.create_sprite(ideal_position_.x, ideal_position_.y, char_index + (94 * color_));
+        }
     }
 }
 
@@ -151,6 +159,9 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         else if (portrait == &sprite_items::db_ch_sebellus)
         {
             sound_items::snd_dialogue_sebellus.play(0.4);
+        }
+        else if (portrait == &sprite_items::db_ch_sans) {
+            sound_items::snd_dialogue_sans.play(0.4);
         }
         else if (typewriter)
         {

@@ -591,6 +591,12 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 315:
+	{
+		if (global_data_ptr->action_iterations[315] == 1) { ch_man.load(&sans_06); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -1647,13 +1653,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		ch_man.load(&train_arrive);
 		break;
 	}
-	case 258:
-	{
-		music_items::intro_03.play();
-		if (global_data_ptr->action_iterations[258] == 0) { ch_man.load(&canter_01); global_data_ptr->action_iterations[258] += 1; } else
-		{ };
-		break;
-	}
 	case 259:
 	{
 		music_items::bg_canter_01.play();
@@ -1795,6 +1794,43 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->entry_map = &map_castle_secret_garden;
 		global_data_ptr->ginger_position = {6, 2};
 		return NEW_MAP;
+		break;
+	}
+	case 310:
+	{
+		if (global_data_ptr->action_iterations[310] == 0) { ch_man.load(&sans_01); global_data_ptr->action_iterations[310] += 1; } else
+		{ };
+		break;
+	}
+	case 311:
+	{
+		if (global_data_ptr->action_iterations[311] == 0) { ch_man.load(&sans_02); global_data_ptr->action_iterations[311] += 1; } else
+		{ };
+		break;
+	}
+	case 312:
+	{
+		if (global_data_ptr->action_iterations[312] == 0) { ch_man.load(&sans_03); global_data_ptr->action_iterations[312] += 1; } else
+		{ };
+		break;
+	}
+	case 313:
+	{
+		if (global_data_ptr->action_iterations[313] == 0) { ch_man.load(&sans_04); global_data_ptr->action_iterations[313] += 1; } else
+		{ };
+		break;
+	}
+	case 314:
+	{
+		if (global_data_ptr->action_iterations[314] == 0) { ch_man.load(&sans_05); global_data_ptr->action_iterations[314] += 1; } else
+		{ };
+		break;
+	}
+	case 258:
+	{
+		music_items::intro.play();
+		if (global_data_ptr->action_iterations[258] == 0) { ch_man.load(&canter_01); global_data_ptr->action_iterations[258] += 1; } else
+		{ };
 		break;
 	}
 	}

@@ -15,11 +15,6 @@ void resolve_chapter()
 {
     switch (global_data_ptr->process_stage)
     {
-	case CUTSCENE_01: {
-		typewriter(TYPEWRITER_INTRO);
-		global_data_ptr->entry_map = &map_room01;
-		global_data_ptr->jeremy_position = {9, 2};
-		break;		}
 	case CUTSCENE_TO_GARBAGE: {
 		typewriter(TYPEWRITER_INTRO2);
 		typewriter(TYPEWRITER_BUFFER);
@@ -139,10 +134,6 @@ void resolve_chapter()
 	case CH_CUTSCENE_04: {
 		global_data_ptr->entry_map = &map_cutscene_lab_room_02;
 		break;		}
-	case CH_CUTSCENE_05: {
-		global_data_ptr->entry_map = &map_cutscene_lab_kitchen;
-		global_data_ptr->bg_track = &music_items::intro_03;
-		break;		}
 	case CH_CUTSCENE_06: {
 		global_data_ptr->entry_map = &map_cutscene_garbage_chute;
 		global_data_ptr->bg_track = &music_items::ambient_wind;
@@ -161,9 +152,28 @@ void resolve_chapter()
 	case CH_CUTSCENE_08C: {
 		global_data_ptr->entry_map = &map_cutscene_castle_bonus;
 		break;		}
+	case CUTSCENE_01: {
+		typewriter(TYPEWRITER_INTRO);
+		global_data_ptr->entry_map = &map_room01;
+		global_data_ptr->jeremy_position = {0, 0};
+		break;		}
+	case CH_SANS: {
+		global_data_ptr->entry_map = &map_sans;
+		global_data_ptr->bg_track = &music_items::theme_sans;
+		break;		}
+	case CH_TITLE: {
+		typewriter(TYPEWRITER_INTRO2);
+		typewriter(TYPEWRITER_BUFFER);
+		typewriter(TYPEWRITER_TITLE);
+		typewriter(TYPEWRITER_BUFFER);
+		break;		}
+	case CH_CUTSCENE_05: {
+		global_data_ptr->entry_map = &map_cutscene_lab_kitchen;
+		global_data_ptr->bg_track = &music_items::intro;
+		break;		}
 	case CH_CUTSCENE_09: {
 		global_data_ptr->entry_map = &map_castle_ginger;
-		global_data_ptr->bg_track = &music_items::intro_03;
+		global_data_ptr->bg_track = &music_items::intro;
 		break;		}
 	default: { break; }
 	}
