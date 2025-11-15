@@ -1655,7 +1655,7 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 259:
 	{
-		music_items::bg_canter_01.play();
+		music_items::bg_canter_02.play();
 		global_data_ptr->entry_map = &map_to_canter_02;
 		global_data_ptr->jeremy_position = {2, 3};
 		return NEW_MAP;
