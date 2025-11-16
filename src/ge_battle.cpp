@@ -6,6 +6,7 @@
 #include "bn_music_items.h"
 #include "bn_sound_items.h"
 #include "bn_random.h"
+#include "bn_unique_ptr.h"
 
 #include "bn_regular_bg_items_bg_battle_grid.h"
 #include "bn_regular_bg_items_bg_dialogue_box.h"
@@ -353,8 +354,9 @@ int battle_map()
     auto bg_grid = regular_bg_items::bg_battle_grid.create_bg(0, 0);
 
     // Create and reset battle state
-    battle_state bs;
-
+    auto bs_ptr = bn::make_unique<battle_state>();
+    battle_state &bs = *bs_ptr;
+    
     bs.heart = sprite_items::hearts.create_sprite(0, 0, 1);
 
     // Setup conversations based on foe

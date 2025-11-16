@@ -12,6 +12,7 @@
 #include "bn_sound_items.h"
 #include "bn_math.h"
 #include "bn_blending.h"
+#include "bn_unique_ptr.h"
 
 // Face Sprites
 #include "bn_sprite_items_db_ch_jeremy.h"
@@ -39,7 +40,10 @@ using namespace bn;
 int navigate_map()
 {
     map_manager current_map(global_data_ptr->entry_map);
-    character_manager char_mgr;
+
+    // OLD: character_manager char_mgr;
+    auto char_mgr_ptr = bn::make_unique<character_manager>();
+    character_manager &char_mgr = *char_mgr_ptr;
 
     switch (global_data_ptr->process_stage)
     {
