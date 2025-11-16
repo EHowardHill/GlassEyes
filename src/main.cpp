@@ -196,6 +196,9 @@ int main()
     core::init();
     global_data_ptr = new global_data();
 
+    global_data_ptr->foe = FOE_VISKERS_01;
+    battle_map();
+
     // game_numpad();
 
     int value = NEW_CHAPTER;
