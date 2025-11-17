@@ -2342,7 +2342,7 @@ cutscene_08c
 	db_ch_vista_02	EM_EXCITED		Dear.. It will be	alright, I promise.										
 	db_ch_ginger	EM_WEEP		..T-Thank you.											
 	db_ch_vista_02	EM_EXCITED		Of course, dear.											
-		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					
+		EM_SKIP	ACT_PROGRESS							FLAYITHRO_AWAKE					
 															
 cutscene_09															
 	db_ch_vista_02	EM_SULLEN	ACT_MUSIC_FADEOUT	G-Ginger, dear..	Now isn't the time	to be here..									
@@ -2367,6 +2367,7 @@ cutscene_09b
 	db_ch_vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
 	db_ch_vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
 	db_ch_vista_02	EM_SAD		I want to go home..	I want to go home..	..									
+		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					
 															
 cutscene_07															
 			ACT_MUSIC_SORRY	Escaping from	Canterbury was	illegal as a human.									
