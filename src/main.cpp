@@ -216,6 +216,12 @@ int main()
     global_data_ptr->sebellus_position = {0, 0};
     core::update();
 
+    sound_items::snd_chime.play();
+    for (int t = 0; t < 96; t++)
+    {
+        core::update();
+    }
+
     while (true)
     {
         global_data_ptr->bg = nullptr;
@@ -265,11 +271,6 @@ int main()
             value = navigate_map();
             break;
         }
-        }
-
-        if (global_data_ptr->hp[0] == 0 && global_data_ptr->entry_map != &map_garbage_05)
-        {
-            value = GAME_OVER;
         }
 
         core::update();

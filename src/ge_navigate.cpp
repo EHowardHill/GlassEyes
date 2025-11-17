@@ -399,35 +399,38 @@ int navigate_map()
 
     blending::set_transparency_alpha(1);
 
-    if (current_map.collider_ptr.has_value())
-        current_map.collider_ptr->set_blending_enabled(true);
-
-    if (current_map.bg_ptr.has_value())
-        current_map.bg_ptr->set_blending_enabled(true);
-
-    for (auto &spr : v_sprite_ptr::manager)
+    if (char_mgr.status != BATTLE && char_mgr.status != GAME)
     {
-        if (spr->sprite_ptr_raw[0].has_value())
-            spr->sprite_ptr_raw[0]->set_blending_enabled(true);
+        if (current_map.collider_ptr.has_value())
+            current_map.collider_ptr->set_blending_enabled(true);
 
-        if (spr->sprite_ptr_raw[1].has_value())
-            spr->sprite_ptr_raw[1]->set_blending_enabled(true);
-    }
+        if (current_map.bg_ptr.has_value())
+            current_map.bg_ptr->set_blending_enabled(true);
 
-    for (int t = 0; t < 48; t++)
-    {
-        auto new_alpha = blending::transparency_alpha() - 0.05;
-
-        if (new_alpha > 0)
+        for (auto &spr : v_sprite_ptr::manager)
         {
-            blending::set_transparency_alpha(new_alpha);
-        }
-        else
-        {
-            blending::set_transparency_alpha(0);
+            if (spr->sprite_ptr_raw[0].has_value())
+                spr->sprite_ptr_raw[0]->set_blending_enabled(true);
+
+            if (spr->sprite_ptr_raw[1].has_value())
+                spr->sprite_ptr_raw[1]->set_blending_enabled(true);
         }
 
-        core::update();
+        for (int t = 0; t < 48; t++)
+        {
+            auto new_alpha = blending::transparency_alpha() - 0.05;
+
+            if (new_alpha > 0)
+            {
+                blending::set_transparency_alpha(new_alpha);
+            }
+            else
+            {
+                blending::set_transparency_alpha(0);
+            }
+
+            core::update();
+        }
     }
 
     // RETURN

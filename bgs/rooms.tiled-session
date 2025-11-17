@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "maps/lab_01.tmx",
     "expandedProjectPaths": [
         "maps",
         ".",
@@ -249,11 +249,11 @@
             }
         },
         "maps/lab_01.tmx": {
-            "scale": 3,
+            "scale": 0.75,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 499.66666666666663,
-                "y": 273.8333333333333
+                "x": 151.33333333333331,
+                "y": 258
             }
         },
         "maps/lab_02.tmx": {
@@ -465,9 +465,11 @@
     "map.tileWidth": 32,
     "map.width": 32,
     "openFiles": [
+        "maps/lab_01.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/lab_01.tmx",
         "maps/lab_02.tmx",
         "maps/lab_03.tmx",
         "maps/lab_04.tmx",
@@ -478,8 +480,7 @@
         "maps/castle_01.tmx",
         "tilesets/castle01.tsx",
         "maps/castle_02b.tmx",
-        "maps/room01.tmx",
-        "maps/hotel_01_night.tmx"
+        "maps/room01.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

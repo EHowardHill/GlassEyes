@@ -255,7 +255,7 @@ static void update_character_animation(int char_index, battle_state &bs)
             // Intro animation
             if (char_index == 0) // Jeremy has special intro
             {
-                sprite->set_tiles(spr_item->tiles_item(), ticker / 5);
+                sprite->set_tiles(spr_item->tiles_item(), (ticker / 5) * 2);
             }
             else if (char_index == 1) // Ginger intro
             {
@@ -265,7 +265,7 @@ static void update_character_animation(int char_index, battle_state &bs)
                 {
                     frame = idle_start - 1;
                 }
-                sprite->set_tiles(spr_item->tiles_item(), frame);
+                sprite->set_tiles(spr_item->tiles_item(), frame * 2);
             }
             ticker++;
         }
@@ -273,7 +273,7 @@ static void update_character_animation(int char_index, battle_state &bs)
         {
             state = 1; // Go to idle
             ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
         }
         break;
     }
@@ -283,12 +283,12 @@ static void update_character_animation(int char_index, battle_state &bs)
         if (idle_end > idle_start) // Animated idle
         {
             int frame = idle_start + ((ticker / 8) % (idle_end - idle_start + 1));
-            sprite->set_tiles(spr_item->tiles_item(), frame);
+            sprite->set_tiles(spr_item->tiles_item(), frame * 2);
             ticker++;
         }
         else // Static idle
         {
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
         }
         break;
     }
@@ -303,11 +303,11 @@ static void update_character_animation(int char_index, battle_state &bs)
         {
             state = 1; // Back to idle
             ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
         }
         else
         {
-            sprite->set_tiles(spr_item->tiles_item(), frame);
+            sprite->set_tiles(spr_item->tiles_item(), frame * 2);
             ticker++;
         }
 
@@ -324,11 +324,11 @@ static void update_character_animation(int char_index, battle_state &bs)
         {
             state = 1; // Back to idle
             ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
         }
         else
         {
-            sprite->set_tiles(spr_item->tiles_item(), frame);
+            sprite->set_tiles(spr_item->tiles_item(), frame * 2);
             ticker++;
         }
 
@@ -356,7 +356,7 @@ int battle_map()
     // Create and reset battle state
     auto bs_ptr = bn::make_unique<battle_state>();
     battle_state &bs = *bs_ptr;
-    
+
     bs.heart = sprite_items::hearts.create_sprite(0, 0, 1);
 
     // Setup conversations based on foe
