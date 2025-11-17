@@ -23,27 +23,33 @@ int action_listener(map_manager *man, character_manager *ch_man)
 {
     if (ch_man->player_ptr != nullptr)
     {
+        auto chara_ptr = ch_man->player_ptr;
+        vector_2 current_position = chara_ptr->v_sprite.bounds.position;
+
+        // Calculate current tile coordinates
+        vector_2 current_tile = {
+            current_position.x / 32,
+            current_position.y / 32};
+
+        // Check if we've moved to a new tile
+        bool new_tile = (previous_tile.x != current_tile.x ||
+                         previous_tile.y != current_tile.y);
+
+        // Get the action for current position
+        int action = man->action(current_position);
+
+        // Reset action_triggered flag when entering a new tile
+        if (new_tile)
+        {
+            previous_tile = current_tile;
+        }
+
         if (!ch_man->db.has_value())
         {
-            auto chara_ptr = ch_man->player_ptr;
-            vector_2 current_position = chara_ptr->v_sprite.bounds.position;
-
-            // Calculate current tile coordinates
-            vector_2 current_tile = {
-                current_position.x / 32,
-                current_position.y / 32};
-
-            // Check if we've moved to a new tile
-            bool new_tile = (previous_tile.x != current_tile.x ||
-                             previous_tile.y != current_tile.y);
-
-            // Get the action for current position
-            int action = man->action(current_position);
-
-            // Reset action_triggered flag when entering a new tile
-            if (new_tile)
+            if (dialogue_just_closed)
             {
-                previous_tile = current_tile;
+                cooldown = true;
+                dialogue_just_closed = false;
             }
 
             if (action != 0 && cooldown == false)
@@ -342,7 +348,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
         }
         else
         {
-            cooldown = true;
+            dialogue_just_closed = true;
         }
     }
 

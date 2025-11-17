@@ -715,12 +715,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 26:
-	{
-		if (global_data_ptr->action_iterations[26] == 0) { ch_man.load(&garbage_06); global_data_ptr->action_iterations[26] += 1; } else
-		{ ch_man.load(&garbage_06); }
-		break;
-	}
 	case 27:
 	{
 		if (global_data_ptr->action_iterations[27] == 0) { ch_man.load(&lab_01); global_data_ptr->action_iterations[27] += 1; } else
@@ -1830,6 +1824,13 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		music_items::intro.play();
 		if (global_data_ptr->action_iterations[258] == 0) { ch_man.load(&canter_01); global_data_ptr->action_iterations[258] += 1; } else
+		{ };
+		break;
+	}
+	case 26:
+	{
+		if (global_data_ptr->action_iterations[26] == 0) { ch_man.load(&garbage_06); global_data_ptr->action_iterations[26] += 1; } else
+		if (global_data_ptr->action_iterations[26] == 1) { ch_man.load(&garbage_06b); global_data_ptr->action_iterations[26] += 1; } else
 		{ };
 		break;
 	}

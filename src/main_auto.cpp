@@ -26,17 +26,6 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::bg_garbage;
 		global_data_ptr->jeremy_position = {9, 5};
 		break;		}
-	case GARBAGE_TO_BLACK: {
-		typewriter(TYPEWRITER_GARBAGE);
-		global_data_ptr->entry_map = &map_lab_01;
-		global_data_ptr->bg_track = &music_items::bg_office;
-		global_data_ptr->jeremy_position = {4, 5};
-		break;		}
-	case BLACK_TO_LAB: {
-		global_data_ptr->entry_map = &map_lab_01;
-		global_data_ptr->bg_track = &music_items::bg_office;
-		global_data_ptr->jeremy_position = {4, 5};
-		break;		}
 	case FOREST_01: {
 		global_data_ptr->entry_map = &map_forest_01;
 		global_data_ptr->bg_track = &music_items::forest_01;
@@ -73,14 +62,6 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_room_05b;
 		global_data_ptr->bg_track = &music_items::ambient_wind;
 		global_data_ptr->jeremy_position = {3, 3};
-		break;		}
-	case AVALON: {
-		global_data_ptr->entry_map = &map_forest_03;
-		global_data_ptr->bg_track = &music_items::bg_avalon;
-		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
-		music::stop();
-		global_data_ptr->jeremy_position = {15, 15};
-		global_data_ptr->ginger_position = {14, 15};
 		break;		}
 	case DARK_TO_DARK: {
 		typewriter(TYPEWRITER_BUFFER);
@@ -174,6 +155,24 @@ void resolve_chapter()
 	case CH_CUTSCENE_09: {
 		global_data_ptr->entry_map = &map_castle_ginger;
 		global_data_ptr->bg_track = &music_items::intro;
+		break;		}
+	case CH_CUTSCENE_03: {
+		typewriter(TYPEWRITER_CCUTSCENE_03);
+		global_data_ptr->entry_map = &map_forest_03;
+		global_data_ptr->jeremy_position = {16, 15};
+		global_data_ptr->ginger_position = {17, 15};
+		break;		}
+	case CH_CUTSCENE_01: {
+		typewriter(TYPEWRITER_CCUTSCENE_01);
+		global_data_ptr->entry_map = &map_garbage_01;
+		global_data_ptr->bg_track = &music_items::bg_garbage;
+		global_data_ptr->jeremy_position = {9, 5};
+		break;		}
+	case CH_CUTSCENE_02: {
+		typewriter(TYPEWRITER_CCUTSCENE_02);
+		global_data_ptr->entry_map = &map_lab_01;
+		global_data_ptr->bg_track = &music_items::bg_office;
+		global_data_ptr->jeremy_position = {4, 5};
 		break;		}
 	default: { break; }
 	}

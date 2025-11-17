@@ -184,7 +184,7 @@ garbage_06b
 	db_ch_visker	EM_DISAPPOINTED		Let's go home, wife.	I'm hungry.										
 	db_ch_visker_wife	EM_DEFAULT		Why not eat human.											
 	db_ch_visker	EM_DISAPPOINTED		I'm angry at human.	We eat human later.										
-			ACT_PROGRESS							GARBAGE_TO_BLACK					
+			ACT_PROGRESS							CH_CUTSCENE_02					
 															
 lab_01															
 		EM_SKIP								CHAR_JEREMY	&jeremy_lay_down				
@@ -2115,7 +2115,7 @@ cutscene_01
 				Thank you.											scene_01_02
 				Please let me take	you to lunch.		COLOR_BLUE								scene_01_01
 				I appreciate the	simulated rainfall.	It's convincing.									scene_01_03
-				What do you know	what I miss from the	New World?									scene_01_03
+				Do you know what	I miss most from the	New World?									scene_01_03
 				The smell.	This rain doesn't	smell like anything.									scene_01_03
 				So, Dr. Erickson,	they say that at the	quantum level,	COLOR_BLUE								scene_01_03
 				Observation affects	reality. What do you	think of that?	COLOR_BLUE								scene_01_03

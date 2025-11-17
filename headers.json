@@ -1006,6 +1006,18 @@
         "Buffer": {},
         "CCutscene 07": {
             "conversation": "cutscene_07"
+        },
+        "CCutscene 01": {
+            "conversation": "cutscene_01",
+            "music": "cave_01"
+        },
+        "CCutscene 02": {
+            "conversation": "cutscene_02",
+            "music": "cave_01"
+        },
+        "CCutscene 03": {
+            "conversation": "cutscene_03",
+            "music": "ambient_heartbeat"
         }
     },
     "actions": {
@@ -1672,12 +1684,6 @@
                         ]
                     }
                 }
-            },
-            "26": {
-                "sequence": [
-                    "garbage_06"
-                ],
-                "auto": "garbage_06b"
             },
             "27": {
                 "sequence": [
@@ -3344,6 +3350,12 @@
                     "canter_01"
                 ],
                 "music": "intro"
+            },
+            "26": {
+                "sequence": [
+                    "garbage_06",
+                    "garbage_06b"
+                ]
             }
         }
     },
@@ -3365,30 +3377,6 @@
                 ]
             },
             "bg_track": "bg_garbage"
-        },
-        "GARBAGE_TO_BLACK": {
-            "reset_health": true,
-            "cutscenes": [
-                "Garbage"
-            ],
-            "map": "lab_01",
-            "positions": {
-                "jeremy": [
-                    4,
-                    5
-                ]
-            },
-            "bg_track": "bg_office"
-        },
-        "BLACK_TO_LAB": {
-            "map": "lab_01",
-            "positions": {
-                "jeremy": [
-                    4,
-                    5
-                ]
-            },
-            "bg_track": "bg_office"
         },
         "FOREST_01": {
             "bg": "big_bg_forest_01",
@@ -3466,21 +3454,6 @@
                 ]
             },
             "bg_track": "ambient_wind"
-        },
-        "AVALON": {
-            "bg": "big_bg_forest_01",
-            "map": "forest_03",
-            "positions": {
-                "jeremy": [
-                    15,
-                    15
-                ],
-                "ginger": [
-                    14,
-                    15
-                ]
-            },
-            "bg_track": "bg_avalon"
         },
         "DARK_TO_DARK": {
             "cutscenes": [
@@ -3633,6 +3606,51 @@
         "CH_CUTSCENE_09": {
             "map": "castle_ginger",
             "bg_track": "intro"
+        },
+        "CH_CUTSCENE_03": {
+            "map": "forest_03",
+            "reset_health": true,
+            "cutscenes": [
+                "CCutscene 03"
+            ],
+            "positions": {
+                "jeremy": [
+                    16,
+                    15
+                ],
+                "ginger": [
+                    17,
+                    15
+                ]
+            }
+        },
+        "CH_CUTSCENE_01": {
+            "map": "garbage_01",
+            "bg_track": "bg_garbage",
+            "reset_health": true,
+            "cutscenes": [
+                "CCutscene 01"
+            ],
+            "positions": {
+                "jeremy": [
+                    9,
+                    5
+                ]
+            }
+        },
+        "CH_CUTSCENE_02": {
+            "map": "lab_01",
+            "bg_track": "bg_office",
+            "reset_health": true,
+            "cutscenes": [
+                "CCutscene 02"
+            ],
+            "positions": {
+                "jeremy": [
+                    4,
+                    5
+                ]
+            }
         }
     }
 }

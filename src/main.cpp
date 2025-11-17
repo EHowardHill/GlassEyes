@@ -145,37 +145,37 @@ int chapter_select()
                 {
                 case 0:
                 {
-                    return CUTSCENE_01;
+                    return CH_CUTSCENE_01;
                     break;
                 }
                 case 1:
                 {
-                    return BLACK_TO_LAB;
+                    return CH_CUTSCENE_02;
                     break;
                 }
                 case 2:
                 {
-                    return AVALON;
+                    return CH_CUTSCENE_03;
                     break;
                 }
                 case 3:
                 {
-                    return DARK_TO_DARK;
+                    return CH_CUTSCENE_05;
                     break;
                 }
                 case 4:
                 {
-                    return WAKEY_WAKEY;
+                    return CH_CUTSCENE_06;
                     break;
                 }
                 case 5:
                 {
-                    return FLAYITHRO_AWAKE;
+                    return CH_CUTSCENE_08;
                     break;
                 }
                 case 6:
                 {
-                    return BLACK_TO_LAB_02;
+                    return CH_CUTSCENE_09;
                     break;
                 }
                 default:

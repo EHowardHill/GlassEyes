@@ -221,7 +221,7 @@ struct text
 
     void init(const char *value);
     void init(const string<20> &value);
-    void update(const sprite_item *portrait, bool typewriter, int emotion);
+    void update(const sprite_item *portrait, bool typewriter, int emotion, bool skip_sound = false);
     void render();
     void set_position(int x, int y);
     bool is_ended();

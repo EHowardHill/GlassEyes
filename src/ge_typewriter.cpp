@@ -113,6 +113,30 @@ void typewriter(int scene)
 
         break;
     }
+    case TYPEWRITER_CCUTSCENE_01:
+    {
+        music::stop();
+        music_items::cave_01.play();
+
+        current_conversation = &cutscene_01;
+        type = TYPE_TEXT;
+        break;
+    }
+    case TYPEWRITER_CCUTSCENE_02:
+    {
+        music::stop();
+        music_items::cave_01.play();
+
+        current_conversation = &cutscene_02;
+        type = TYPE_TEXT;
+        break;
+    }
+    case TYPEWRITER_CCUTSCENE_03:
+    {
+        current_conversation = &cutscene_03;
+        type = TYPE_TEXT;
+        break;
+    }
     case TYPEWRITER_CCUTSCENE_07:
     {
         current_conversation = &cutscene_07;
@@ -131,9 +155,9 @@ void typewriter(int scene)
         // Initialize with first dialogue including color
         const dialogue_line &first_line = (*current_conversation)[index];
 
-        lines[0] = {first_line.raw_text[0], {-71 + 16, 36}};
-        lines[1] = {first_line.raw_text[1], {-71 + 16, 36 + 16}};
-        lines[2] = {first_line.raw_text[2], {-71 + 16, 36 + 32}};
+        lines[0] = {first_line.raw_text[0], {-71, 34}};
+        lines[1] = {first_line.raw_text[1], {-71, 34 + 16}};
+        lines[2] = {first_line.raw_text[2], {-71, 34 + 32}};
 
         // Set color for each line
         lines[0].color = first_line.color;
@@ -150,56 +174,87 @@ void typewriter(int scene)
                 frame = current_line.bg_item->create_bg(0, 0);
             }
 
+            // --- NEW LOGIC START ---
+
+            // Check if all lines are done typing
+            bool all_lines_finished = lines[0].is_ended() && lines[1].is_ended() && lines[2].is_ended();
+
             if (keypad::a_pressed())
             {
-                index++;
-
-                // Check if we've reached the end
-                if ((*current_conversation)[index].action == ACT_END)
-                    break;
-
-                const dialogue_line &next_line = (*current_conversation)[index];
-
-                // Clear existing letters
-                lines[0].letters.clear();
-                lines[1].letters.clear();
-                lines[2].letters.clear();
-
-                // Reset indices for new text
-                lines[0].index = 0;
-                lines[1].index = 0;
-                lines[2].index = 0;
-
-                // Reinitialize with new text
-                lines[0].init(next_line.raw_text[0]);
-                lines[1].init(next_line.raw_text[1]);
-                lines[2].init(next_line.raw_text[2]);
-
-                // Set color for new text
-                lines[0].color = next_line.color;
-                lines[1].color = next_line.color;
-                lines[2].color = next_line.color;
-            }
-
-            // Update letters with color
-            if (ticker % 5 == 0)
-            {
-                if (lines[0].is_ended())
+                if (all_lines_finished)
                 {
-                    if (lines[1].is_ended())
-                    {
-                        lines[2].update(nullptr, true, EM_DEFAULT);
-                    }
-                    else
-                    {
-                        lines[1].update(nullptr, true, EM_DEFAULT);
-                    }
+                    // 1. If lines ARE finished, advance to the next dialogue
+                    index++;
+
+                    // Check if we've reached the end
+                    if ((*current_conversation)[index].action == ACT_END)
+                        break;
+
+                    const dialogue_line &next_line = (*current_conversation)[index];
+
+                    // Clear existing letters
+                    lines[0].letters.clear();
+                    lines[1].letters.clear();
+                    lines[2].letters.clear();
+
+                    // Reset indices for new text
+                    lines[0].index = 0;
+                    lines[1].index = 0;
+                    lines[2].index = 0;
+
+                    // Reinitialize with new text
+                    lines[0].init(next_line.raw_text[0]);
+                    lines[1].init(next_line.raw_text[1]);
+                    lines[2].init(next_line.raw_text[2]);
+
+                    // Set color for new text
+                    lines[0].color = next_line.color;
+                    lines[1].color = next_line.color;
+                    lines[2].color = next_line.color;
                 }
                 else
                 {
-                    lines[0].update(nullptr, true, EM_DEFAULT);
+                    // 2. If lines are NOT finished, "fast forward" them
+                    while (!lines[0].is_ended())
+                    {
+                        lines[0].update(nullptr, true, EM_DEFAULT, true);
+                    }
+                    while (!lines[1].is_ended())
+                    {
+                        lines[1].update(nullptr, true, EM_DEFAULT, true);
+                    }
+                    while (!lines[2].is_ended())
+                    {
+                        lines[2].update(nullptr, true, EM_DEFAULT, true);
+                    }
                 }
             }
+
+            // Update letters (typewriter effect)
+            if (ticker % 5 == 0)
+            {
+                // 3. Only run the ticker update if the lines aren't already finished
+                if (!all_lines_finished)
+                {
+                    if (lines[0].is_ended())
+                    {
+                        if (lines[1].is_ended())
+                        {
+                            lines[2].update(nullptr, true, EM_DEFAULT);
+                        }
+                        else
+                        {
+                            lines[1].update(nullptr, true, EM_DEFAULT);
+                        }
+                    }
+                    else
+                    {
+                        lines[0].update(nullptr, true, EM_DEFAULT);
+                    }
+                }
+            }
+
+            // --- NEW LOGIC END ---
 
             // Apply color to all displayed letters
             for (int t = 0; t < 3; t++)
@@ -213,7 +268,10 @@ void typewriter(int scene)
             ticker++;
             core::update();
         }
+
+        music::stop();
     }
+
     else if (type == TYPE_IMG)
     {
         int wait = 96;

@@ -131,14 +131,14 @@ void text::init(const string<20> &value)
     index = 0;
 }
 
-void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = false, int emotion = EM_DEFAULT)
+void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = false, int emotion = EM_DEFAULT, bool skip_sound)
 {
     if (index >= reference.size() || is_ended())
     {
         return;
     }
 
-    if (index % 2 == 0)
+    if (index % 2 == 0 && !skip_sound)
     {
         if (portrait == &sprite_items::db_ch_vista || portrait == &sprite_items::db_ch_ginger)
         {
@@ -160,7 +160,8 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         {
             sound_items::snd_dialogue_sebellus.play(0.4);
         }
-        else if (portrait == &sprite_items::db_ch_sans) {
+        else if (portrait == &sprite_items::db_ch_sans)
+        {
             sound_items::snd_dialogue_sans.play(0.4);
         }
         else if (typewriter)
@@ -382,6 +383,12 @@ void dialogue_box::init(character_manager *ch_man)
                 }
                 else if (line.action == ACT_WALK)
                 {
+                    // To prevent overlapping movement commands
+                    if (ch->move_to.x != 0 && ch->move_to.y != 0)
+                    {
+                        ch->v_sprite.bounds.position.x = (ch->move_to.x * 32) + 16;
+                        ch->v_sprite.bounds.position.y = (ch->move_to.y * 32) + 16;
+                    }
                     ch->move_to = line.navigate;
                 }
             }
