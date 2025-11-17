@@ -81,7 +81,7 @@ int navigate_map()
         }
     }
 
-    BN_LOG("Jeremy: ", global_data_ptr->jeremy_position.x.integer(), " x ", global_data_ptr->jeremy_position.y.integer());
+    reset_previous_tile();
 
     if (global_data_ptr->jeremy_position.x != 0 && global_data_ptr->jeremy_position.y != 0)
     {
@@ -201,8 +201,8 @@ int navigate_map()
             }
         }
 
-        char_mgr.update(&current_map);
         loop_value = action_listener(&current_map, &char_mgr);
+        char_mgr.update(&current_map);
         current_map.update();
         bool dialogue_is_active = char_mgr.db.has_value() && !char_mgr.db.value().is_ended();
         v_sprite_ptr::update(!dialogue_is_active);

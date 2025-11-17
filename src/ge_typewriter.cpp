@@ -174,8 +174,6 @@ void typewriter(int scene)
                 frame = current_line.bg_item->create_bg(0, 0);
             }
 
-            // --- NEW LOGIC START ---
-
             // Check if all lines are done typing
             bool all_lines_finished = lines[0].is_ended() && lines[1].is_ended() && lines[2].is_ended();
 
@@ -253,8 +251,6 @@ void typewriter(int scene)
                     }
                 }
             }
-
-            // --- NEW LOGIC END ---
 
             // Apply color to all displayed letters
             for (int t = 0; t < 3; t++)

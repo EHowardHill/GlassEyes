@@ -76,21 +76,12 @@ void resolve_chapter()
 		global_data_ptr->bg = &regular_bg_items::bg_cutscene_channel;
 		music::stop();
 		break;		}
-	case FINAL_MSG: {
-		typewriter(TYPEWRITER_BUFFER);
-		typewriter(TYPEWRITER_MSG);
-		break;		}
 	case BLACK_TO_BEACH: {
 		global_data_ptr->entry_map = &map_beach_02;
 		global_data_ptr->bg_track = &music_items::forest_01;
 		global_data_ptr->jeremy_position = {2, 5};
 		global_data_ptr->ginger_position = {2, 4};
 		global_data_ptr->sebellus_position = {2, 3};
-		break;		}
-	case TEST_MAP: {
-		global_data_ptr->entry_map = &map_to_flay_02;
-		global_data_ptr->bg_track = &music_items::forest_01;
-		global_data_ptr->ginger_position = {2, 3};
 		break;		}
 	case FLAYITHRO_AWAKE: {
 		global_data_ptr->entry_map = &map_hotel_01_night;
@@ -111,9 +102,6 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_lab_02;
 		global_data_ptr->bg_track = &music_items::bg_office;
 		global_data_ptr->jeremy_position = {1, 5};
-		break;		}
-	case CH_CUTSCENE_04: {
-		global_data_ptr->entry_map = &map_cutscene_lab_room_02;
 		break;		}
 	case CH_CUTSCENE_06: {
 		global_data_ptr->entry_map = &map_cutscene_garbage_chute;
@@ -173,6 +161,15 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_lab_01;
 		global_data_ptr->bg_track = &music_items::bg_office;
 		global_data_ptr->jeremy_position = {4, 5};
+		break;		}
+	case BLACK_TO_DEATH: {
+		global_data_ptr->entry_map = &map_lab_path;
+		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+		global_data_ptr->jeremy_position = {4, 14};
+		break;		}
+	case CH_CUTSCENE_04: {
+		typewriter(TYPEWRITER_BUFFER);
+		global_data_ptr->entry_map = &map_cutscene_lab_room_02;
 		break;		}
 	default: { break; }
 	}

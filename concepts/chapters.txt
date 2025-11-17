@@ -1,0 +1,31 @@
+
+cutscene 01
+- garbage
+
+- visker knockout
+cutscene 02
+- outpost
+
+- last cave
+cutscene 03
+- avalon
+
+- sneaker knockout
+cutscene 04
+- pit
+
+- campfire
+cutscene 05
+- campfire
+
+- going to sleep in house
+cutscene 06
+- wakey wakey
+
+- go back to train cabin
+cutscene 07
+- canterbury
+
+- dark lab
+cutscene 08
+- final scene

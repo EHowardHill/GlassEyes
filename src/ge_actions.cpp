@@ -19,6 +19,13 @@ static vector_2 previous_tile = {-1, -1};
 static bool dialogue_just_closed = false;
 static bool cooldown = false;
 
+void reset_previous_tile()
+{
+    previous_tile = {-1, -1};
+    dialogue_just_closed = false;
+    cooldown = false;
+}
+
 int action_listener(map_manager *man, character_manager *ch_man)
 {
     if (ch_man->player_ptr != nullptr)
@@ -350,6 +357,10 @@ int action_listener(map_manager *man, character_manager *ch_man)
         {
             dialogue_just_closed = true;
         }
+    }
+    else
+    {
+        previous_tile = {-1, -1};
     }
 
     return NONE;

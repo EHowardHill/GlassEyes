@@ -786,7 +786,7 @@ scruffys_05_alt_01
 scruffys_05b															
 	db_ch_sneaker	EM_DEFAULT	ACT_MUSIC_FADEOUT	I.. I can't..	YOU!	GLABBER!									
 	db_ch_sneaker	EM_DEFAULT		I'LL KILL YOU!!											
-			ACT_PROGRESS							PIT_01					
+			ACT_PROGRESS							CH_CUTSCENE_04					
 															
 tollhouse_01															
 	db_ch_tollman	EM_DEFAULT		Ask not for	whom the bell	tolls..									
@@ -966,7 +966,7 @@ item_155
 item_155b															
 		EM_SKIP	ACT_SFX_FIRE												
 	db_ch_ginger	EM_HAPPY	ACT_MUSIC_FADEOUT	Ahh..	There we go.	Much better.				CHAR_FIRE	&fire_on				
-			ACT_PROGRESS							DARK_TO_DARK					
+			ACT_PROGRESS							CH_CUTSCENE_05					
 															
 item_none															
 				Doesn't seem to	be anything here.	Sorry.									
@@ -1218,7 +1218,7 @@ dog_and_pony
 sleep_01															
 				Are you ready to	get some sleep?										
 				Oh yeah	No								&sleep_01_alt_01		
-		EM_SKIP	ACT_PROGRESS							WAKEY_WAKEY					
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_06					
 															
 sleep_01_alt_01															
 				Very well.											
@@ -1735,7 +1735,7 @@ train_ginger
 train_arrive															
 			ACT_SFX_CHIME	"""WE ARE NOW"	APPROACHING	"CANTERBURY."""									
 				"""PLEASE STAY"	"SEATED."""										
-		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_07					
 															
 canter_01															
 		EM_SKIP	ACT_WALK							CHAR_JEREMY		{7,3}			
@@ -2207,6 +2207,7 @@ cutscene_04
 	db_ch_ginger	EM_WEEP		..			COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		I apologize for	being so	interrogative.									
 	db_ch_henry	EM_DEFAULT		This will be your	room. Let me know if	you need anything.									
+		EM_SKIP	ACT_PROGRESS							PIT_01					
 															
 cutscene_05															
 		EM_SKIP								CHAR_HENRY	&henry_sit				
@@ -2241,6 +2242,7 @@ cutscene_05
 	db_ch_ginger	EM_HAPPY		..And I won't have	to lose anything?	Do you promise?	COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		The contrary. I have	plans. And if they	all work out..									
 	db_ch_henry	EM_HAPPY		We'll have	everything.										
+		EM_SKIP	ACT_PROGRESS							DARK_TO_DARK					
 															
 cutscene_06															
 	db_ch_henry	EM_DEFAULT		Are the others down	the chute with the	equipment?				CHAR_VISTA_YOUNG	&vista_young_up				
@@ -2277,6 +2279,7 @@ cutscene_06
 	db_ch_ginger	EM_DEFAULT		But you gave up your	eye to make me,	didn't you?	COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		I have two eyes.	I can do this one	more time.									
 	db_ch_henry	EM_DEFAULT		What do you say?											
+		EM_SKIP	ACT_PROGRESS							WAKEY_WAKEY					
 															
 cutscene_08															
 		EM_SKIP								CHAR_VISTA_02	&vista_throne				
@@ -2306,6 +2309,7 @@ cutscene_08
 	db_ch_ginger	EM_CONFUSED		T-The New World,	ma'am.										
 	db_ch_vista_02	EM_HAPPY		It's alright, love.	You are in a	good place now.									
 	db_ch_vista_02	EM_HAPPY		Please accompany me.	There is something I	want to show you.									
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_08B					
 															
 cutscene_08b															
 		EM_SKIP	ACT_WALK							CHAR_VISTA_02	&anim_face_right	{3,5}			
@@ -2315,6 +2319,7 @@ cutscene_08b
 	db_ch_vista_02	EM_HAPPY		It has always been	my favorite.										
 	db_ch_vista_02			My secret is that	this is a hidden	doorway.									
 	db_ch_vista_02			If you were to	follow me inside..										
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_08C					
 															
 cutscene_08c															
 	db_ch_vista_02	EM_HAPPY		I commissioned the	best in the country	to make this room.									
@@ -2337,6 +2342,7 @@ cutscene_08c
 	db_ch_vista_02	EM_EXCITED		Dear.. It will be	alright, I promise.										
 	db_ch_ginger	EM_WEEP		..T-Thank you.											
 	db_ch_vista_02	EM_EXCITED		Of course, dear.											
+		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					
 															
 cutscene_09															
 	db_ch_vista_02	EM_SULLEN	ACT_MUSIC_FADEOUT	G-Ginger, dear..	Now isn't the time	to be here..									
@@ -2384,6 +2390,7 @@ cutscene_07b
 	db_ch_constance	EM_DEFAULT		I'll draft a letter	right away,	your majesty.									
 	db_ch_vista_02	EM_SAD		Very good,	Constance. Now..	Leave me be.									
 	db_ch_constance	EM_DEFAULT		Yes,	your majesty.										
+		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
 															
 c09_init															
 	db_ch_ginger	EM_SAD		Ugh.. My neck.	How long was that	nap for?									

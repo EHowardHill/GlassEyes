@@ -3477,12 +3477,6 @@
             "map": "cutscene_channel",
             "bg_track": "ambient_wind"
         },
-        "FINAL_MSG": {
-            "cutscenes": [
-                "Buffer",
-                "Msg"
-            ]
-        },
         "BLACK_TO_BEACH": {
             "map": "beach_02",
             "bg_track": "forest_01",
@@ -3497,16 +3491,6 @@
                     4
                 ],
                 "sebellus": [
-                    2,
-                    3
-                ]
-            }
-        },
-        "TEST_MAP": {
-            "map": "to_flay_02",
-            "bg_track": "forest_01",
-            "positions": {
-                "ginger": [
                     2,
                     3
                 ]
@@ -3551,9 +3535,6 @@
                     5
                 ]
             }
-        },
-        "CH_CUTSCENE_04": {
-            "map": "cutscene_lab_room_02"
         },
         "CH_CUTSCENE_06": {
             "map": "cutscene_garbage_chute",
@@ -3651,6 +3632,22 @@
                     5
                 ]
             }
+        },
+        "BLACK_TO_DEATH": {
+            "map": "lab_path",
+            "bg_track": "ambient_heartbeat",
+            "positions": {
+                "jeremy": [
+                    4,
+                    14
+                ]
+            }
+        },
+        "CH_CUTSCENE_04": {
+            "map": "cutscene_lab_room_02",
+            "cutscenes": [
+                "Buffer"
+            ]
         }
     }
 }

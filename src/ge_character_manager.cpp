@@ -171,7 +171,7 @@ void character_manager::update(map_manager *current_map = nullptr)
     // Track player
     if (!player_ptr)
     {
-        for (auto char_id : {CHAR_JEREMY, CHAR_VISTA_02, CHAR_VISTA, CHAR_VISTA_YOUNG})
+        for (auto char_id : {CHAR_JEREMY, CHAR_VISTA_02, CHAR_VISTA, CHAR_VISTA_YOUNG, CHAR_GINGER})
         {
             if (auto j = find_by_index(char_id); j != nullptr)
             {
