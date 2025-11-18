@@ -201,6 +201,11 @@ int main()
 
     // game_numpad();
 
+    global_data_ptr->entry_map = &map_cave_02;
+    global_data_ptr->jeremy_position = {2, 30};
+    global_data_ptr->ginger_position = {3, 30};
+    navigate_map();
+
     int value = NEW_CHAPTER;
     {
         global_data_ptr->process_stage = CUTSCENE_01;

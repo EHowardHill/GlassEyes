@@ -605,14 +605,14 @@
             },
             "spike_up": {
                 "frames": [
-                    3
+                    1
                 ],
                 "speed": 0,
                 "loop": true
             },
             "spike_down": {
                 "frames": [
-                    2
+                    0
                 ],
                 "speed": 0,
                 "loop": true

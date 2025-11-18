@@ -31,6 +31,8 @@
 
 using namespace bn;
 
+#define x_center (-(temp.size() * 8) / 2) + 8
+
 void typewriter(int scene)
 {
     optional<regular_bg_ptr> frame;
@@ -152,12 +154,30 @@ void typewriter(int scene)
 
     if (type == TYPE_TEXT)
     {
-        // Initialize with first dialogue including color
+        // Initialize with first dialogue including color and centered position
         const dialogue_line &first_line = (*current_conversation)[index];
 
-        lines[0] = {first_line.raw_text[0], {-71, 34}};
-        lines[1] = {first_line.raw_text[1], {-71, 34 + 16}};
-        lines[2] = {first_line.raw_text[2], {-71, 34 + 32}};
+        // Calculate centered X positions using bn::string to avoid strlen optimization
+        int x0 = 0, x1 = 0, x2 = 0;
+        if (first_line.raw_text[0] != nullptr)
+        {
+            string<128> temp(first_line.raw_text[0]);
+            x0 = x_center;
+        }
+        if (first_line.raw_text[1] != nullptr)
+        {
+            string<128> temp(first_line.raw_text[1]);
+            x1 = x_center;
+        }
+        if (first_line.raw_text[2] != nullptr)
+        {
+            string<128> temp(first_line.raw_text[2]);
+            x2 = x_center;
+        }
+
+        lines[0] = {first_line.raw_text[0], {x0, 34}};
+        lines[1] = {first_line.raw_text[1], {x1, 34 + 16}};
+        lines[2] = {first_line.raw_text[2], {x2, 34 + 32}};
 
         // Set color for each line
         lines[0].color = first_line.color;
@@ -204,6 +224,28 @@ void typewriter(int scene)
                     lines[0].init(next_line.raw_text[0]);
                     lines[1].init(next_line.raw_text[1]);
                     lines[2].init(next_line.raw_text[2]);
+
+                    // Update positions to center the text using bn::string
+                    if (next_line.raw_text[0] != nullptr)
+                    {
+                        string<128> temp(next_line.raw_text[0]);
+                        lines[0].start.x = x_center;
+                    }
+                    if (next_line.raw_text[1] != nullptr)
+                    {
+                        string<128> temp(next_line.raw_text[1]);
+                        lines[1].start.x = x_center;
+                    }
+                    if (next_line.raw_text[2] != nullptr)
+                    {
+                        string<128> temp(next_line.raw_text[2]);
+                        lines[2].start.x = x_center;
+                    }
+
+                    // Reset current_x for each line
+                    lines[0].current_x = 0;
+                    lines[1].current_x = 0;
+                    lines[2].current_x = 0;
 
                     // Set color for new text
                     lines[0].color = next_line.color;

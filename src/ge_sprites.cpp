@@ -13,7 +13,8 @@
 #include "ge_maps.h"
 #include "ge_animations.h"
 
-#include "bn_sprite_items_spr_elements.h"
+#include "bn_sprite_items_spr_button.h"
+#include "bn_sprite_items_spr_spike.h"
 
 #include "bn_sprite_items_spr_jeremy_fancy.h"
 #include "bn_sprite_items_spr_ginger_fancy.h"
@@ -131,7 +132,7 @@ void v_sprite_ptr::update(bool dialogue_box_ended)
             else
             {
                 // Update z-order for both sprites
-                if (item->sprite_item_ptr != &sprite_items::spr_elements)
+                if (item->sprite_item_ptr != &sprite_items::spr_spike && item->sprite_item_ptr != &sprite_items::spr_button)
                 {
                     item->sprite_ptr_raw[0].value().set_z_order(10 - item->sprite_ptr_raw[1].value().y().integer() / 2);
                     item->sprite_ptr_raw[1].value().set_z_order(10 - item->sprite_ptr_raw[1].value().y().integer() / 2);
@@ -478,47 +479,73 @@ void character::update(map_manager *current_map, bool db_inactive)
             }
         }
 
-        // *** BEGIN CHANGE ***
-        // Only check collisions if we are NOT moving via move_to
         if (!is_move_to_active)
         {
             // *** END CHANGE ***
             if (delta.x != 0 || delta.y != 0)
             {
+                // 1. DEFINE SPIKE CHECK LAMBDA
+                // This helper checks if a potential position hits an active spike
+                auto check_spike_collision = [&](bound target_bounds) -> bool
+                {
+                    for (auto &other : ch_man->characters)
+                    {
+                        // Safety check: ensure 'other' exists and is not 'this' character
+                        if (other && other.get() != this)
+                        {
+                            // Check if it is a spike and if it is active
+                            if (other->index == CHAR_SPIKE && other->is_pressed)
+                            {
+                                if (within_bounds(target_bounds, other->get_collision_bounds()))
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                };
+
                 bound future_bounds_x = get_collision_bounds();
                 future_bounds_x.position.x = future_bounds_x.position.x + delta.x;
 
                 bound future_bounds_y = get_collision_bounds();
                 future_bounds_y.position.y = future_bounds_y.position.y + delta.y;
 
-                // Check X movement
-                if (current_map->check_box_collision(future_bounds_x, ch_man))
+                // Check X movement (Map OR Spike)
+                if (current_map->check_box_collision(future_bounds_x, ch_man) || check_spike_collision(future_bounds_x))
                 {
                     delta.x = 0;
                 }
 
-                // Check Y movement
-                if (current_map->check_box_collision(future_bounds_y, ch_man))
+                // Check Y movement (Map OR Spike)
+                if (current_map->check_box_collision(future_bounds_y, ch_man) || check_spike_collision(future_bounds_y))
                 {
                     delta.y = 0;
                 }
 
-                // For diagonal movement, also check the combined movement
+                // For diagonal movement
                 if (delta.x != 0 && delta.y != 0)
                 {
                     bound future_bounds_both = get_collision_bounds();
                     future_bounds_both.position.x = future_bounds_both.position.x + delta.x;
                     future_bounds_both.position.y = future_bounds_both.position.y + delta.y;
 
-                    if (current_map->check_box_collision(future_bounds_both, ch_man))
+                    // Check Both (Map OR Spike)
+                    if (current_map->check_box_collision(future_bounds_both, ch_man) || check_spike_collision(future_bounds_both))
                     {
                         // Try to slide along walls
-                        // If diagonal fails but individual axes might work, keep the working axis
-                        if (delta.x != 0 && !current_map->check_box_collision(future_bounds_x, ch_man))
+                        // Check X sliding
+                        if (delta.x != 0 &&
+                            !current_map->check_box_collision(future_bounds_x, ch_man) &&
+                            !check_spike_collision(future_bounds_x))
                         {
                             delta.y = 0; // Can move X but not Y
                         }
-                        else if (delta.y != 0 && !current_map->check_box_collision(future_bounds_y, ch_man))
+                        // Check Y sliding
+                        else if (delta.y != 0 &&
+                                 !current_map->check_box_collision(future_bounds_y, ch_man) &&
+                                 !check_spike_collision(future_bounds_y))
                         {
                             delta.x = 0; // Can move Y but not X
                         }
@@ -531,9 +558,7 @@ void character::update(map_manager *current_map, bool db_inactive)
                     }
                 }
             }
-            // *** BEGIN CHANGE ***
-        } // End of !is_move_to_active block
-        // *** END CHANGE ***
+        }
 
         // Apply movement with fixed direction (always do this, even if delta is 0)
         v_sprite.bounds.position.x = v_sprite.bounds.position.x + delta.x;

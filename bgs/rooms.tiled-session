@@ -3,10 +3,10 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/forest_03.tmx",
+    "activeFile": "maps/cave_02.tmx",
     "expandedProjectPaths": [
-        "maps",
         ".",
+        "maps",
         "tilesets"
     ],
     "exportAsImage.includeBackgroundColor": true,
@@ -52,16 +52,16 @@
             "scale": 1.6561383928571427,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 224.01509535683002,
-                "y": 292.54801536491686
+                "x": 223.7131882202305,
+                "y": 223.7131882202305
             }
         },
         "maps/cave_02.tmx": {
             "scale": 1.5,
-            "selectedLayer": 3,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 511.99999999999994,
-                "y": 513
+                "x": 245,
+                "y": 816.9999999999999
             }
         },
         "maps/cave_03.tmx": {
@@ -96,12 +96,28 @@
                 "y": 258.75
             }
         },
+        "maps/cutscene_lab_kitchen.tmx": {
+            "scale": 1.6921875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 127.94090489381348,
+                "y": 159.85226223453373
+            }
+        },
+        "maps/cutscene_lab_room_02.tmx": {
+            "scale": 1.6921875,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 143.8965835641736,
+                "y": 96.02954755309327
+            }
+        },
         "maps/dark_01.tmx": {
             "scale": 1,
             "selectedLayer": 4,
             "viewCenter": {
                 "x": 147.5,
-                "y": 365
+                "y": 364.5
             }
         },
         "maps/dark_02.tmx": {
@@ -124,7 +140,7 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 249.5,
+                "x": 249.75,
                 "y": 632.25
             }
         },
@@ -132,7 +148,7 @@
             "scale": 0.3742745535714286,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1052.7031459669001,
+                "x": 1051.3672282689727,
                 "y": 335.3153421798121
             }
         },
@@ -172,7 +188,7 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 3569.333333333333,
+                "x": 3348.333333333333,
                 "y": 191.66666666666663
             }
         },
@@ -188,8 +204,8 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 480,
-                "y": 401.66666666666663
+                "x": 382.33333333333337,
+                "y": 442.99999999999994
             }
         },
         "maps/forest_03_attack.tmx": {
@@ -269,7 +285,7 @@
             "selectedLayer": 2,
             "viewCenter": {
                 "x": 151.33333333333331,
-                "y": 258
+                "y": 257.99999999999994
             }
         },
         "maps/lab_02.tmx": {
@@ -484,25 +500,24 @@
     "map.tileWidth": 32,
     "map.width": 32,
     "openFiles": [
-        "maps/lab_01.tmx",
-        "maps/dark_06.tmx",
-        "maps/dark_04.tmx",
-        "maps/forest_03.tmx"
+        "maps/cave_01.tmx",
+        "maps/cave_02.tmx",
+        "maps/forest_01.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/cave_01.tmx",
+        "maps/forest_01.tmx",
+        "maps/cave_02.tmx",
+        "maps/cutscene_lab_room_02.tmx",
+        "maps/cutscene_lab_kitchen.tmx",
+        "maps/dark_01.tmx",
         "maps/lab_01.tmx",
         "maps/dark_06.tmx",
         "maps/dark_04.tmx",
         "maps/forest_03.tmx",
         "maps/cave_03.tmx",
-        "maps/lab_02.tmx",
-        "maps/lab_03.tmx",
-        "maps/lab_04.tmx",
-        "maps/lab_06.tmx",
-        "maps/lab_05.tmx",
-        "maps/lab_path.tmx",
-        "tilesets/underground02.tsx"
+        "maps/lab_02.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
