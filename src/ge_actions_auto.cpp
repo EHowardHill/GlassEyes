@@ -597,7 +597,7 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
-	case 189:
+	case 169:
 	{
 		music_items::theme_anata.play();
 		global_data_ptr->entry_map = &map_room_02;

@@ -591,7 +591,7 @@ void dialogue_box::init(character_manager *ch_man)
         case ACT_MUSIC_RESET:
         {
             music::stop();
-            global_data_ptr->bg_track->play(0.5);
+            global_data_ptr->bg_track->play(1);
             break;
         }
         case ACT_GOLD:

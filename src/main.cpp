@@ -196,6 +196,9 @@ int main()
 {
     core::init();
     global_data_ptr = new global_data();
+    global_data_ptr->jeremy_position = {0, 0};
+    global_data_ptr->ginger_position = {0, 0};
+    global_data_ptr->sebellus_position = {0, 0};
 
     // global_data_ptr->foe = FOE_VISKERS_01;
     // battle_map();
@@ -214,9 +217,6 @@ int main()
     // music_items::ambient_drone.play();
 
     global_data_ptr->process_stage = chapter_select();
-    global_data_ptr->jeremy_position = {0, 0};
-    global_data_ptr->ginger_position = {0, 0};
-    global_data_ptr->sebellus_position = {0, 0};
     core::update();
 
     sound_items::snd_chime.play();
@@ -268,7 +268,7 @@ int main()
         {
             if (!music::playing())
             {
-                global_data_ptr->bg_track->play(0.5);
+                global_data_ptr->bg_track->play(1);
             }
 
             value = navigate_map();
