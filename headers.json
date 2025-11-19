@@ -1544,6 +1544,18 @@
                 "sequence": [
                     "sans_06"
                 ]
+            },
+            "169": {
+                "music": "theme_anata",
+                "new_map": {
+                    "map": "room_02",
+                    "positions": {
+                        "jeremy": [
+                            9,
+                            11
+                        ]
+                    }
+                }
             }
         },
         "automatic": {
@@ -3356,6 +3368,25 @@
                     "garbage_06",
                     "garbage_06b"
                 ]
+            },
+            "167": {
+                "new_map": {
+                    "map": "dark_07",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            13
+                        ],
+                        "ginger": [
+                            1,
+                            12
+                        ],
+                        "sebellus": [
+                            1,
+                            11
+                        ]
+                    }
+                }
             }
         }
     },

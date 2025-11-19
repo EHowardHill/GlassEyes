@@ -597,6 +597,14 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 189:
+	{
+		music_items::theme_anata.play();
+		global_data_ptr->entry_map = &map_room_02;
+		global_data_ptr->jeremy_position = {9, 11};
+		return NEW_MAP;
+		break;
+	}
 	}
 	return -1;
 }
@@ -1832,6 +1840,15 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		if (global_data_ptr->action_iterations[26] == 0) { ch_man.load(&garbage_06); global_data_ptr->action_iterations[26] += 1; } else
 		if (global_data_ptr->action_iterations[26] == 1) { ch_man.load(&garbage_06b); global_data_ptr->action_iterations[26] += 1; } else
 		{ };
+		break;
+	}
+	case 167:
+	{
+		global_data_ptr->entry_map = &map_dark_07;
+		global_data_ptr->jeremy_position = {1, 13};
+		global_data_ptr->ginger_position = {1, 12};
+		global_data_ptr->sebellus_position = {1, 11};
+		return NEW_MAP;
 		break;
 	}
 	}

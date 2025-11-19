@@ -1,4 +1,6 @@
 editor-main.py:
+# editor-main.py
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 import json
@@ -264,7 +266,7 @@ if __name__ == "__main__":
     root.mainloop()
 
 tabs/actions.py:
-# tab_actions.py
+# actions.py
 
 import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog

@@ -972,7 +972,7 @@ item_none
 				Doesn't seem to	be anything here.	Sorry.									
 															
 dark_talk															
-		EM_SKIP								CHAR_JEREMY	&jeremy_lay_down				
+		EM_SKIP	ACT_MUSIC_RESET							CHAR_JEREMY	&jeremy_lay_down				
 		EM_SKIP								CHAR_GINGER	&ginger_sit_sad				
 		EM_SKIP								CHAR_FIRE	&fire_on				
 	db_ch_ginger	EM_SAD		Hey, uh..	Now that we're	settled,									
@@ -1735,7 +1735,7 @@ train_ginger
 train_arrive															
 			ACT_SFX_CHIME	"""WE ARE NOW"	APPROACHING	"CANTERBURY."""									
 				"""PLEASE STAY"	"SEATED."""										
-		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_07					
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_08					
 															
 canter_01															
 		EM_SKIP	ACT_WALK							CHAR_JEREMY		{7,3}			
@@ -2135,7 +2135,7 @@ cutscene_01
 				..Who are you?											scene_01_04
 				I'm a student.			COLOR_BLUE								scene_01_04
 				..How do you feel	about meeting me at	my home tonight?									scene_01_04
-				It would be an	honor, sir.		COLOR_BLUE								scene_01_04
+			ACT_MUSIC_FADEOUT	It would be an	honor, sir.		COLOR_BLUE								scene_01_04
 															
 cutscene_02															
 				This field is so new	and so discrete that	it's unregulated.									scene_02_00
@@ -2160,7 +2160,7 @@ cutscene_02
 				That's fine. I	envision these with	human souls, as..									scene_02_01
 				I think you could	call them colonists	in a sense.									scene_02_01
 				You do understand	what this will cost	you, Dr. Erickson?	COLOR_BLUE								scene_02_02
-				Do I look like a man	who has anything	to lose?									scene_02_02
+			ACT_MUSIC_FADEOUT	Do I look like a man	who has anything	to lose?									scene_02_02
 															
 cutscene_03															
 				I don't understand	why they only last	a couple of hours.									scene_03_00
@@ -2180,7 +2180,7 @@ cutscene_03
 				I didn't mean you.			COLOR_BLUE								scene_03_00
 				Are you are sure	that this will work?				SP_SLOW						scene_03_00
 				Of course I am.	Have I ever led you	wrong?	COLOR_BLUE								scene_03_02
-				No..	I suppose not.				SP_DEFAULT						scene_03_02
+			ACT_MUSIC_FADEOUT	No..	I suppose not.				SP_DEFAULT						scene_03_02
 															
 cutscene_04															
 	db_ch_henry	EM_HAPPY	ACT_WALK	Good morning.	Can you understand	what I'm saying?				CHAR_HENRY		{3,3}			
@@ -2206,7 +2206,7 @@ cutscene_04
 	db_ch_ginger	EM_WEEP	ACT_WALK	..			COLOR_PURPLE			CHAR_HENRY		{4,3}			
 	db_ch_ginger	EM_WEEP		..			COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		I apologize for	being so	interrogative.									
-	db_ch_henry	EM_DEFAULT		This will be your	room. Let me know if	you need anything.									
+	db_ch_henry	EM_DEFAULT	ACT_MUSIC_FADEOUT	This will be your	room. Let me know if	you need anything.									
 		EM_SKIP	ACT_PROGRESS							PIT_01					
 															
 cutscene_05															
@@ -2241,7 +2241,7 @@ cutscene_05
 	db_ch_henry	EM_HAPPY		You will be able to	see the sun.										
 	db_ch_ginger	EM_HAPPY		..And I won't have	to lose anything?	Do you promise?	COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		The contrary. I have	plans. And if they	all work out..									
-	db_ch_henry	EM_HAPPY		We'll have	everything.										
+	db_ch_henry	EM_HAPPY	ACT_MUSIC_FADEOUT	We'll have	everything.										
 		EM_SKIP	ACT_PROGRESS							DARK_TO_DARK					
 															
 cutscene_06															
@@ -2278,8 +2278,8 @@ cutscene_06
 	db_ch_henry	EM_DEFAULT		Or you may go home.											
 	db_ch_ginger	EM_DEFAULT		But you gave up your	eye to make me,	didn't you?	COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		I have two eyes.	I can do this one	more time.									
-	db_ch_henry	EM_DEFAULT		What do you say?											
-		EM_SKIP	ACT_PROGRESS							WAKEY_WAKEY					
+	db_ch_henry	EM_DEFAULT	ACT_MUSIC_FADEOUT	What do you say?											
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_07					
 															
 cutscene_08															
 		EM_SKIP								CHAR_VISTA_02	&vista_throne				
@@ -2341,8 +2341,8 @@ cutscene_08c
 	db_ch_ginger	EM_WEEP		..											
 	db_ch_vista_02	EM_EXCITED		Dear.. It will be	alright, I promise.										
 	db_ch_ginger	EM_WEEP		..T-Thank you.											
-	db_ch_vista_02	EM_EXCITED		Of course, dear.											
-		EM_SKIP	ACT_PROGRESS							FLAYITHRO_AWAKE					
+	db_ch_vista_02	EM_EXCITED	ACT_MUSIC_FADEOUT	Of course, dear.											
+		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
 															
 cutscene_09															
 	db_ch_vista_02	EM_SULLEN	ACT_MUSIC_FADEOUT	G-Ginger, dear..	Now isn't the time	to be here..									
@@ -2366,7 +2366,7 @@ cutscene_09b
 	db_ch_vista_02	EM_LAUGH		What irony that I	can't die, the only	one who wants it!									
 	db_ch_vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
 	db_ch_vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
-	db_ch_vista_02	EM_SAD		I want to go home..	I want to go home..	..									
+	db_ch_vista_02	EM_SAD	ACT_MUSIC_FADEOUT	I want to go home..	I want to go home..	..									
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					
 															
 cutscene_07															
@@ -2390,7 +2390,7 @@ cutscene_07b
 	db_ch_vista_02	EM_DEFAULT		We have electricity	now, and the city is	so dangerous.									
 	db_ch_constance	EM_DEFAULT		I'll draft a letter	right away,	your majesty.									
 	db_ch_vista_02	EM_SAD		Very good,	Constance. Now..	Leave me be.									
-	db_ch_constance	EM_DEFAULT		Yes,	your majesty.										
+	db_ch_constance	EM_DEFAULT	ACT_MUSIC_FADEOUT	Yes,	your majesty.										
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
 															
 c09_init															

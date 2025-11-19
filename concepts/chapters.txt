@@ -19,13 +19,13 @@ cutscene 05
 - campfire
 
 - going to sleep in house
-cutscene 06
+cutscene 06 + 7
 - wakey wakey
 
 - go back to train cabin
-cutscene 07
+cutscene 07 -> 08
 - canterbury
 
 - dark lab
-cutscene 08
+cutscene 08 -> 09
 - final scene
