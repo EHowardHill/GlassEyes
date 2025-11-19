@@ -259,7 +259,8 @@ struct global_data
 	bool items[ITEMS_SIZE] = {0};
 	bool variables[VARIABLES_SIZE] = {0};
 	int gold = 0;
-	bool shake = false;
+	bool shake = 0;
+	bool inverted_controls = false;
 
 	const music_item *bg_track;
 };

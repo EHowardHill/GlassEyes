@@ -302,6 +302,12 @@ void character::update(map_manager *current_map, bool db_inactive)
                 {
                     delta.x = 1;
                 }
+
+                if (global_data_ptr->inverted_controls)
+                {
+                    delta.x = delta.x * -1;
+                    delta.y = delta.y * -1;
+                }
             }
 
             v_sprite_ptr::camera.x = v_sprite.bounds.position.x;

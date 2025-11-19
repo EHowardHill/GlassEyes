@@ -308,6 +308,8 @@ extern const conversation leaving_lab_alt_03;
 extern const conversation matt_01;
 extern const conversation naomi_fortune_01;
 extern const conversation naomi_fortune_01_alt_01;
+extern const conversation naomi_garbage_01;
+extern const conversation naomi_garbage_02;
 extern const conversation new_berlin_sign;
 extern const conversation pringle_01;
 extern const conversation sans_01;

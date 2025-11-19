@@ -1564,6 +1564,15 @@
                         ]
                     }
                 }
+            },
+            "316": {
+                "sequence": [
+                    "naomi_garbage_01",
+                    "naomi_garbage_02"
+                ]
+            },
+            "317": {
+                "auto": "pipis_man"
             }
         },
         "automatic": {

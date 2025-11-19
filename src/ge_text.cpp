@@ -672,6 +672,11 @@ void dialogue_box::init(character_manager *ch_man)
             kiara->is_follow = true;
             break;
         }
+        case ACT_INVERT_CONTROLS:
+        {
+            global_data_ptr->inverted_controls = true;
+            break;
+        }
         case ACT_WAIT:
         {
             // Code goes here

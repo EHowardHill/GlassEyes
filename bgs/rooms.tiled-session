@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/cave_02.tmx",
+    "activeFile": "maps/forest_04.tmx",
     "expandedProjectPaths": [
         ".",
         "maps",
@@ -52,16 +52,16 @@
             "scale": 1.6561383928571427,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 223.7131882202305,
-                "y": 223.7131882202305
+                "x": 224.01509535683,
+                "y": 223.71318822023048
             }
         },
         "maps/cave_02.tmx": {
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 245,
-                "y": 816.9999999999999
+                "x": 72,
+                "y": 852.3333333333333
             }
         },
         "maps/cave_03.tmx": {
@@ -188,8 +188,8 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 3348.333333333333,
-                "y": 191.66666666666663
+                "x": 3348.6666666666665,
+                "y": 191.66666666666669
             }
         },
         "maps/forest_02.tmx": {
@@ -218,18 +218,18 @@
         },
         "maps/forest_04.tmx": {
             "scale": 2,
-            "selectedLayer": 2,
+            "selectedLayer": 3,
             "viewCenter": {
                 "x": 131.25,
                 "y": 147.25
             }
         },
         "maps/garbage_01.tmx": {
-            "scale": 3,
+            "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 715,
-                "y": 260.8333333333333
+                "x": 339,
+                "y": 207.5
             }
         },
         "maps/garbage_02.tmx": {
@@ -244,16 +244,16 @@
             "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 283.3333333333333,
+                "x": 88,
                 "y": 194.33333333333334
             }
         },
         "maps/garbage_04.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 0,
+            "scale": 2,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
-                "y": 383.33333333333326
+                "x": 222.25,
+                "y": 531.25
             }
         },
         "maps/garbage_05.tmx": {
@@ -500,12 +500,15 @@
     "map.tileWidth": 32,
     "map.width": 32,
     "openFiles": [
-        "maps/cave_01.tmx",
-        "maps/cave_02.tmx",
-        "maps/forest_01.tmx"
+        "maps/garbage_04.tmx",
+        "maps/forest_04.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/garbage_04.tmx",
+        "maps/forest_04.tmx",
+        "maps/garbage_03.tmx",
+        "maps/garbage_01.tmx",
         "maps/cave_01.tmx",
         "maps/forest_01.tmx",
         "maps/cave_02.tmx",
@@ -513,11 +516,7 @@
         "maps/cutscene_lab_kitchen.tmx",
         "maps/dark_01.tmx",
         "maps/lab_01.tmx",
-        "maps/dark_06.tmx",
-        "maps/dark_04.tmx",
-        "maps/forest_03.tmx",
-        "maps/cave_03.tmx",
-        "maps/lab_02.tmx"
+        "maps/dark_06.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

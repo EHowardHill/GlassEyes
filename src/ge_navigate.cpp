@@ -224,7 +224,17 @@ int navigate_map()
         }
 
         // Handle map-specific puzzle logic
-        if (current_map.current_map == &map_cave_02)
+        if (current_map.current_map == &map_garbage_04)
+        {
+            auto f = char_mgr.find_by_index(CHAR_FIRE);
+            if (f != nullptr)
+            {
+                f->idle_animation = &fire_on;
+                f->current_animation = &fire_on;
+            }
+        }
+
+        else if (current_map.current_map == &map_cave_02)
         {
             auto button_01 = char_mgr.find_by_id(1);
 

@@ -103,10 +103,6 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::bg_office;
 		global_data_ptr->jeremy_position = {1, 5};
 		break;		}
-	case CH_CUTSCENE_06: {
-		global_data_ptr->entry_map = &map_cutscene_garbage_chute;
-		global_data_ptr->bg_track = &music_items::ambient_wind;
-		break;		}
 	case CH_CUTSCENE_07: {
 		typewriter(TYPEWRITER_CCUTSCENE_07);
 		global_data_ptr->entry_map = &map_cutscene_castle_01;
@@ -170,6 +166,11 @@ void resolve_chapter()
 	case CH_CUTSCENE_04: {
 		typewriter(TYPEWRITER_BUFFER);
 		global_data_ptr->entry_map = &map_cutscene_lab_room_02;
+		break;		}
+	case CH_CUTSCENE_06: {
+		global_data_ptr->entry_map = &map_cutscene_garbage_chute;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		global_data_ptr->jeremy_position = {0, 0};
 		break;		}
 	default: { break; }
 	}

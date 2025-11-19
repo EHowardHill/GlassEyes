@@ -66,6 +66,7 @@ enum actions
     ACT_MUSIC_FADEOUT,
     ACT_MUSIC_RESET,
     ACT_WAIT,
+    ACT_INVERT_CONTROLS
 };
 
 enum speed

@@ -602,7 +602,16 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		music_items::theme_anata.play();
 		global_data_ptr->entry_map = &map_room_02;
 		global_data_ptr->jeremy_position = {9, 11};
+		global_data_ptr->ginger_position = {0, 0};
+		global_data_ptr->sebellus_position = {0, 0};
 		return NEW_MAP;
+		break;
+	}
+	case 316:
+	{
+		if (global_data_ptr->action_iterations[316] == 1) { ch_man.load(&naomi_garbage_01); } else
+		if (global_data_ptr->action_iterations[316] == 2) { ch_man.load(&naomi_garbage_02); } else
+		{ };
 		break;
 	}
 	}

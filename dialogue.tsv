@@ -2534,3 +2534,15 @@ sans_06
 	db_ch_sans	EM_DEFAULT		but what do i know,	i'm just a skeleton		COLOR_SANS								
 	db_ch_sans	EM_DEFAULT		that's all from me.	if you ever want to	take the tour again,	COLOR_SANS								
 	db_ch_sans	EM_ANGRY		just restart the	game console.	see ya later, pal.	COLOR_SANS								
+															
+naomi_garbage_01															
+	db_ch_naomi	EM_DEFAULT		Hmm.. Has anyone	ever told you that	you look.. poor?									
+	db_ch_naomi	EM_DEFAULT		Leave me be,	this smoked rat	is MINE									
+															
+naomi_garbage_02															
+	db_ch_naomi			Can I help you, hmm?											
+															
+pipis_man															
+				NOTICE!! DO NOT	interact with    the	[[ Pipis ]] man									
+				SYMPTOMS INCLUDE	[[redacted]] and	[[redacted]]									
+				AVALON is [[NOT]]	RESPONSIBLE FOR SIDE	EFFECTS of [[pipis]]									

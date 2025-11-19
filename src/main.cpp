@@ -228,6 +228,7 @@ int main()
     while (true)
     {
         global_data_ptr->bg = nullptr;
+        global_data_ptr->inverted_controls = false;
 
         switch (value)
         {
