@@ -3575,10 +3575,6 @@
                 ]
             }
         },
-        "CH_CUTSCENE_06": {
-            "map": "cutscene_garbage_chute",
-            "bg_track": "ambient_wind"
-        },
         "CH_CUTSCENE_07": {
             "map": "cutscene_castle_01",
             "cutscenes": [
@@ -3687,6 +3683,16 @@
             "cutscenes": [
                 "Buffer"
             ]
+        },
+        "CH_CUTSCENE_06": {
+            "map": "cutscene_garbage_chute",
+            "bg_track": "ambient_wind",
+            "positions": {
+                "jeremy": [
+                    0,
+                    0
+                ]
+            }
         }
     }
 }
