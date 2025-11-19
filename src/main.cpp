@@ -32,6 +32,7 @@ using namespace bn;
 
 int chapter_select()
 {
+
     auto bg = regular_bg_items::bg_chapter_select.create_bg(0, 0);
 
     int index = 0;
@@ -201,11 +202,6 @@ int main()
 
     // game_numpad();
 
-    global_data_ptr->entry_map = &map_cave_02;
-    global_data_ptr->jeremy_position = {2, 30};
-    global_data_ptr->ginger_position = {3, 30};
-    navigate_map();
-
     int value = NEW_CHAPTER;
     {
         global_data_ptr->process_stage = CUTSCENE_01;
@@ -214,6 +210,8 @@ int main()
         global_data_ptr->process_stage = CH_TITLE;
         resolve_chapter();
     }
+
+    // music_items::ambient_drone.play();
 
     global_data_ptr->process_stage = chapter_select();
     global_data_ptr->jeremy_position = {0, 0};

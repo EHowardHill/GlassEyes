@@ -344,25 +344,18 @@ void character::update(map_manager *current_map, bool db_inactive)
             }
         }
 
-        // *** BEGIN CHANGE ***
         bool is_move_to_active = false;
-        // *** END CHANGE ***
 
-        // Replace the move_to logic section with this improved version
         if (move_to.x != 0 && move_to.y != 0)
         {
-            // *** BEGIN CHANGE ***
             is_move_to_active = true;
-            // *** END CHANGE ***
 
             vector_2 move_to_exp = {
                 (move_to.x * 32) + 16,
                 (move_to.y * 32) + 16};
 
-            // Define tolerance - larger when moving fast, smaller when slow
-            int tolerance = keypad::b_held() ? 3 : 1; // 3 pixels tolerance with speed boost, 1 without
+            int tolerance = keypad::b_held() ? 3 : 1;
 
-            // Calculate the distance to target for each axis
             int dist_x = (move_to_exp.x - v_sprite.bounds.position.x).integer();
             int dist_y = (move_to_exp.y - v_sprite.bounds.position.y).integer();
 
@@ -420,8 +413,6 @@ void character::update(map_manager *current_map, bool db_inactive)
 
         if (dx != 0 || dy != 0) // If we're moving at all
         {
-            // For following characters, only update direction if cooldown is done
-            // and movement is significant
             if (is_follow && !ch_man->db.has_value())
             {
                 if (face_change_cooldown == 0)
@@ -481,7 +472,6 @@ void character::update(map_manager *current_map, bool db_inactive)
 
         if (!is_move_to_active)
         {
-            // *** END CHANGE ***
             if (delta.x != 0 || delta.y != 0)
             {
                 // 1. DEFINE SPIKE CHECK LAMBDA
@@ -490,13 +480,26 @@ void character::update(map_manager *current_map, bool db_inactive)
                 {
                     for (auto &other : ch_man->characters)
                     {
-                        // Safety check: ensure 'other' exists and is not 'this' character
                         if (other && other.get() != this)
                         {
-                            // Check if it is a spike and if it is active
                             if (other->index == CHAR_SPIKE && other->is_pressed)
                             {
-                                if (within_bounds(target_bounds, other->get_collision_bounds()))
+                                bound spike_bounds = other->get_collision_bounds();
+
+                                // Proper box-to-box collision check
+                                int target_left = (target_bounds.position.x - target_bounds.width / 2).integer();
+                                int target_right = (target_bounds.position.x + target_bounds.width / 2).integer();
+                                int target_top = (target_bounds.position.y - target_bounds.height / 2).integer();
+                                int target_bottom = (target_bounds.position.y + target_bounds.height / 2).integer();
+
+                                int spike_left = (spike_bounds.position.x - spike_bounds.width / 2).integer();
+                                int spike_right = (spike_bounds.position.x + spike_bounds.width / 2).integer();
+                                int spike_top = (spike_bounds.position.y - spike_bounds.height / 2).integer();
+                                int spike_bottom = (spike_bounds.position.y + spike_bounds.height / 2).integer();
+
+                                // Check if boxes overlap
+                                if (target_right > spike_left && target_left < spike_right &&
+                                    target_bottom > spike_top && target_top < spike_bottom)
                                 {
                                     return true;
                                 }
@@ -531,8 +534,7 @@ void character::update(map_manager *current_map, bool db_inactive)
                     future_bounds_both.position.x = future_bounds_both.position.x + delta.x;
                     future_bounds_both.position.y = future_bounds_both.position.y + delta.y;
 
-                    // Check Both (Map OR Spike)
-                    if (current_map->check_box_collision(future_bounds_both, ch_man) || check_spike_collision(future_bounds_both))
+                    if (check_spike_collision(future_bounds_both))
                     {
                         // Try to slide along walls
                         // Check X sliding

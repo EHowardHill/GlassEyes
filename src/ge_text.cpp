@@ -148,10 +148,6 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         {
             sound_items::snd_dialogue_vista.play(0.7);
         }
-        else if (portrait == &sprite_items::db_ch_jeremy)
-        {
-            sound_items::snd_dialogue_jeremy.play(0.7);
-        }
         else if (portrait == &sprite_items::db_ch_visker)
         {
             sound_items::snd_dialogue_visker.play(0.4);
@@ -167,6 +163,122 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         else if (typewriter)
         {
             sound_items::snd_dialogue_typewriter.play(0.5);
+        }
+        else if (portrait == &sprite_items::db_ch_ack)
+        {
+            sound_items::snd_dialogue_noelle.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_constance)
+        {
+            sound_items::snd_dialogue_noelle.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_courier)
+        {
+            sound_items::snd_dialogue_mcwebb.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_croke)
+        {
+            sound_items::snd_dialogue_berdly.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_deadguy)
+        {
+            sound_items::snd_dialogue_berdly.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_death)
+        {
+            sound_items::snd_dialogue_death.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_dima)
+        {
+            sound_items::snd_dialogue_mcwebb.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_doll)
+        {
+            sound_items::snd_dialogue_kiara.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_eggplant)
+        {
+            sound_items::snd_dialogue_sebellus.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_ghost)
+        {
+            sound_items::snd_dialogue_generic.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_glompy)
+        {
+            sound_items::snd_dialogue_greyfriar.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_grandma)
+        {
+            sound_items::snd_dialogue_noelle.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_greyfriar)
+        {
+            sound_items::snd_dialogue_greyfriar.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_henry)
+        {
+            sound_items::snd_dialogue_death.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_horsey)
+        {
+            sound_items::snd_dialogue_lancer.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_jelly)
+        {
+            sound_items::snd_dialogue_mcwebb.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_kathy)
+        {
+            sound_items::snd_dialogue_kiara.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_kiara)
+        {
+            sound_items::snd_dialogue_kiara.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_matt)
+        {
+            sound_items::snd_dialogue_matt.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_mcwebb)
+        {
+            sound_items::snd_dialogue_mcwebb.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_naomi)
+        {
+            sound_items::snd_dialogue_susie.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_primary)
+        {
+            sound_items::snd_dialogue_kiara.play(0.6);
+        } //
+        else if (portrait == &sprite_items::db_ch_pringle)
+        {
+            sound_items::snd_dialogue_lancer.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_robin)
+        {
+            sound_items::snd_dialogue_berdly.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_sneaker)
+        {
+            sound_items::snd_dialogue_sebellus.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_temmie)
+        {
+            sound_items::snd_dialogue_temmie.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_togore)
+        {
+            sound_items::snd_dialogue_togore.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_tollman)
+        {
+            sound_items::snd_dialogue_sebellus.play(0.6);
+        }
+        else if (portrait == &sprite_items::db_ch_visker_wife)
+        {
+            sound_items::snd_dialogue_visker.play(0.6);
         }
         else
         {

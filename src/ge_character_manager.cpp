@@ -68,6 +68,11 @@ character *character_manager::add_character(int index, vector_2 position, int id
         new_char->is_follow = true;
     }
 
+    if (index == CHAR_SPIKE)
+    {
+        new_char->is_pressed = true;
+    }
+
     return new_char;
 }
 
