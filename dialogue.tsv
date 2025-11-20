@@ -2562,3 +2562,8 @@ vodka_01
 				Huh.. It seems like	someone left a	bottle of vodka.									
 				I hope they don't	miss it.										
 			ACT_ITEM	You found:	VODKA	Refreshing!				OBJ_VODKA	&anim_hidden				
+															
+avalon_01															
+	db_ch_ginger	EM_SIDE_EYE		Okay.. I think this	is the way to	Avalon village.									
+	db_ch_ginger	EM_DEFAULT		Are you ready?											
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_03					

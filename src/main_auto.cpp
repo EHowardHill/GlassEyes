@@ -101,7 +101,6 @@ void resolve_chapter()
 		break;		}
 	case BLACK_TO_LAB_02: {
 		global_data_ptr->entry_map = &map_lab_02;
-		global_data_ptr->bg_track = &music_items::bg_office;
 		global_data_ptr->jeremy_position = {1, 5};
 		break;		}
 	case CH_CUTSCENE_07: {
@@ -150,7 +149,7 @@ void resolve_chapter()
 	case CH_CUTSCENE_02: {
 		typewriter(TYPEWRITER_CCUTSCENE_02);
 		global_data_ptr->entry_map = &map_lab_01;
-		global_data_ptr->bg_track = &music_items::bg_office;
+		global_data_ptr->bg_track = &music_items::cave_01;
 		global_data_ptr->jeremy_position = {4, 5};
 		break;		}
 	case BLACK_TO_DEATH: {

@@ -1022,17 +1022,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 81:
-	{
-		global_data_ptr->entry_map = &map_forest_03;
-		global_data_ptr->bg_track = &music_items::bg_avalon;
-		music::stop();
-		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
-		global_data_ptr->jeremy_position = {14, 15};
-		global_data_ptr->ginger_position = {15, 15};
-		return NEW_MAP;
-		break;
-	}
 	case 82:
 	{
 		global_data_ptr->entry_map = &map_cave_03;
@@ -2013,6 +2002,12 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->ginger_position = {2, 15};
 		global_data_ptr->sebellus_position = {1, 15};
 		return NEW_MAP;
+		break;
+	}
+	case 81:
+	{
+		if (global_data_ptr->action_iterations[81] == 0) { ch_man.load(&avalon_01); global_data_ptr->action_iterations[81] += 1; } else
+		{ };
 		break;
 	}
 	}

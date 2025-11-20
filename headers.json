@@ -2093,23 +2093,6 @@
                     }
                 }
             },
-            "81": {
-                "new_map": {
-                    "map": "forest_03",
-                    "bg": "big_bg_forest_01",
-                    "bg_track": "bg_avalon",
-                    "positions": {
-                        "jeremy": [
-                            14,
-                            15
-                        ],
-                        "ginger": [
-                            15,
-                            15
-                        ]
-                    }
-                }
-            },
             "82": {
                 "new_map": {
                     "map": "cave_03",
@@ -3495,6 +3478,11 @@
                         ]
                     }
                 }
+            },
+            "81": {
+                "sequence": [
+                    "avalon_01"
+                ]
             }
         }
     },
@@ -3667,7 +3655,6 @@
         },
         "BLACK_TO_LAB_02": {
             "map": "lab_02",
-            "bg_track": "bg_office",
             "positions": {
                 "jeremy": [
                     1,
@@ -3739,7 +3726,7 @@
         },
         "CH_CUTSCENE_02": {
             "map": "lab_01",
-            "bg_track": "bg_office",
+            "bg_track": "cave_01",
             "reset_health": true,
             "cutscenes": [
                 "CCutscene 02"
