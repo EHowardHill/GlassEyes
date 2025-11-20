@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/forest_04.tmx",
+    "activeFile": "maps/room_basement.tmx",
     "expandedProjectPaths": [
         ".",
         "maps",
@@ -212,31 +212,31 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 970.9999999999999,
-                "y": 191.33333333333331
+                "x": 3348.6666666666665,
+                "y": 191.66666666666669
             }
         },
         "maps/forest_02.tmx": {
-            "scale": 2,
-            "selectedLayer": 1,
+            "scale": 4,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 424.25,
-                "y": 91.5
+                "x": 527.5,
+                "y": 172.875
             }
         },
         "maps/forest_03.tmx": {
-            "scale": 1,
+            "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 472.5,
-                "y": 471
+                "x": 382.33333333333337,
+                "y": 442.99999999999994
             }
         },
         "maps/forest_03_attack.tmx": {
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1366.5,
+                "x": 2001,
                 "y": 306
             }
         },
@@ -244,8 +244,8 @@
             "scale": 2,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 171.25,
-                "y": 76.5
+                "x": 253.5,
+                "y": 174
             }
         },
         "maps/garbage_01.tmx": {
@@ -276,7 +276,7 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 221.75,
+                "x": 222,
                 "y": 531.5
             }
         },
@@ -410,7 +410,7 @@
         },
         "maps/room_basement.tmx": {
             "scale": 1.2790364583333333,
-            "selectedLayer": 0,
+            "selectedLayer": 4,
             "viewCenter": {
                 "x": 383.88272421867043,
                 "y": 192.3322813804337
@@ -516,6 +516,9 @@
         "tilesets/room03.tsx": {
             "scaleInDock": 0.75
         },
+        "tilesets/room04.tsx": {
+            "scaleInDock": 1
+        },
         "tilesets/spr_visker_01.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -541,22 +544,26 @@
     "map.width": 32,
     "openFiles": [
         "maps/garbage_04.tmx",
-        "maps/forest_04.tmx"
+        "maps/dark_06.tmx",
+        "maps/dark_05b.tmx",
+        "maps/tunnel_01.tmx",
+        "maps/beach_01.tmx",
+        "maps/room_basement.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
         "maps/garbage_04.tmx",
-        "maps/forest_04.tmx",
+        "maps/dark_06.tmx",
+        "maps/dark_05b.tmx",
+        "maps/tunnel_01.tmx",
+        "maps/beach_01.tmx",
+        "maps/room_basement.tmx",
         "maps/room_hallway.tmx",
         "maps/dark_07.tmx",
         "maps/beach_02.tmx",
-        "maps/beach_01.tmx",
         "maps/cave_05.tmx",
-        "maps/garbage_03.tmx",
-        "maps/garbage_01.tmx",
-        "maps/cave_01.tmx",
-        "maps/forest_01.tmx",
-        "maps/cave_02.tmx"
+        "maps/forest_04.tmx",
+        "maps/garbage_03.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
