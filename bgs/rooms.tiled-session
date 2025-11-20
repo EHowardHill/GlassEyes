@@ -16,12 +16,20 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "maps/beach_01.tmx": {
+            "scale": 0.7458984375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 512.1340665095574,
+                "y": 512.1340665095576
+            }
+        },
         "maps/beach_02.tmx": {
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 384.5,
-                "y": 191.5
+                "x": 384,
+                "y": 191
             }
         },
         "maps/beach_cave.tmx": {
@@ -85,7 +93,7 @@
             "selectedLayer": 3,
             "viewCenter": {
                 "x": 294.66666666666663,
-                "y": 294.66666666666663
+                "y": 216.66666666666663
             }
         },
         "maps/cave_cowbemmie.tmx": {
@@ -144,12 +152,28 @@
                 "y": 632.25
             }
         },
+        "maps/dark_05b.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 428,
+                "y": 317.33333333333326
+            }
+        },
         "maps/dark_06.tmx": {
-            "scale": 0.3742745535714286,
+            "scale": 1.5,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 247.33333333333331,
+                "y": 537.3333333333333
+            }
+        },
+        "maps/dark_07.tmx": {
+            "scale": 1.491796875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1051.3672282689727,
-                "y": 335.3153421798121
+                "x": 256.0670332547787,
+                "y": 256.0670332547788
             }
         },
         "maps/flayithro_01.tmx": {
@@ -188,31 +212,31 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 3348.6666666666665,
-                "y": 191.66666666666669
+                "x": 970.9999999999999,
+                "y": 191.33333333333331
             }
         },
         "maps/forest_02.tmx": {
-            "scale": 4,
-            "selectedLayer": 2,
+            "scale": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 527.5,
-                "y": 172.875
+                "x": 424.25,
+                "y": 91.5
             }
         },
         "maps/forest_03.tmx": {
-            "scale": 1.5,
+            "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 382.33333333333337,
-                "y": 442.99999999999994
+                "x": 472.5,
+                "y": 471
             }
         },
         "maps/forest_03_attack.tmx": {
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 2001,
+                "x": 1366.5,
                 "y": 306
             }
         },
@@ -220,8 +244,8 @@
             "scale": 2,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 131.25,
-                "y": 147.25
+                "x": 171.25,
+                "y": 76.5
             }
         },
         "maps/garbage_01.tmx": {
@@ -252,8 +276,8 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 222.25,
-                "y": 531.25
+                "x": 221.75,
+                "y": 531.5
             }
         },
         "maps/garbage_05.tmx": {
@@ -384,6 +408,14 @@
                 "y": 113.5
             }
         },
+        "maps/room_basement.tmx": {
+            "scale": 1.2790364583333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 383.88272421867043,
+                "y": 192.3322813804337
+            }
+        },
         "maps/room_hallway.tmx": {
             "scale": 1.9296875,
             "selectedLayer": 0,
@@ -414,6 +446,14 @@
             "viewCenter": {
                 "x": 512.5,
                 "y": 383.5
+            }
+        },
+        "maps/tunnel_01.tmx": {
+            "scale": 1.491796875,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 256.0670332547787,
+                "y": 256.0670332547788
             }
         },
         "maps/viskers_house.tmx": {
@@ -507,16 +547,16 @@
     "recentFiles": [
         "maps/garbage_04.tmx",
         "maps/forest_04.tmx",
+        "maps/room_hallway.tmx",
+        "maps/dark_07.tmx",
+        "maps/beach_02.tmx",
+        "maps/beach_01.tmx",
+        "maps/cave_05.tmx",
         "maps/garbage_03.tmx",
         "maps/garbage_01.tmx",
         "maps/cave_01.tmx",
         "maps/forest_01.tmx",
-        "maps/cave_02.tmx",
-        "maps/cutscene_lab_room_02.tmx",
-        "maps/cutscene_lab_kitchen.tmx",
-        "maps/dark_01.tmx",
-        "maps/lab_01.tmx",
-        "maps/dark_06.tmx"
+        "maps/cave_02.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

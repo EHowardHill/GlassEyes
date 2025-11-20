@@ -48,6 +48,13 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "hidden": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "vista": {
@@ -859,6 +866,15 @@
         "Pills": {},
         "Ice Cream": {
             "drop": true
+        },
+        "Turkey": {
+            "drop": true
+        },
+        "Beer": {
+            "drop": true
+        },
+        "Vodka": {
+            "drop": true
         }
     },
     "objects": {
@@ -1307,7 +1323,6 @@
                 "auto": "train_sebellus"
             },
             "260": {
-                "music": "bg_canter_02",
                 "new_map": {
                     "map": "canter_01",
                     "bg": "big_bg_city_01",
@@ -1815,6 +1830,7 @@
             "51": {
                 "new_map": {
                     "map": "forest_01",
+                    "bg": "big_bg_forest_01",
                     "bg_track": "forest_01",
                     "positions": {
                         "jeremy": [
@@ -2032,7 +2048,7 @@
             "68": {
                 "new_map": {
                     "map": "cave_03",
-                    "bg_track": "forest_01",
+                    "bg_track": "cave_01",
                     "positions": {
                         "jeremy": [
                             5,
@@ -2048,6 +2064,7 @@
             "71": {
                 "new_map": {
                     "map": "forest_01",
+                    "bg": "big_bg_forest_01",
                     "positions": {
                         "jeremy": [
                             105,
@@ -2063,6 +2080,7 @@
             "79": {
                 "new_map": {
                     "map": "forest_02",
+                    "bg": "big_bg_forest_01",
                     "positions": {
                         "jeremy": [
                             27,
@@ -2078,6 +2096,7 @@
             "81": {
                 "new_map": {
                     "map": "forest_03",
+                    "bg": "big_bg_forest_01",
                     "bg_track": "bg_avalon",
                     "positions": {
                         "jeremy": [
@@ -2124,6 +2143,7 @@
             "84": {
                 "new_map": {
                     "map": "forest_02",
+                    "bg": "big_bg_forest_01",
                     "positions": {
                         "jeremy": [
                             2,
@@ -2171,6 +2191,7 @@
             "102": {
                 "new_map": {
                     "map": "forest_03",
+                    "bg": "big_bg_forest_01",
                     "bg_track": "bg_avalon",
                     "positions": {
                         "jeremy": [
@@ -2187,6 +2208,7 @@
             "117": {
                 "new_map": {
                     "map": "forest_03",
+                    "bg": "big_bg_forest_01",
                     "bg_track": "bg_avalon",
                     "positions": {
                         "jeremy": [
@@ -2219,6 +2241,7 @@
             "119": {
                 "new_map": {
                     "map": "forest_03",
+                    "bg": "big_bg_forest_01",
                     "bg_track": "bg_avalon",
                     "positions": {
                         "jeremy": [
@@ -3411,6 +3434,67 @@
                         ]
                     }
                 }
+            },
+            "321": {
+                "new_map": {
+                    "map": "dark_05b",
+                    "positions": {
+                        "jeremy": [
+                            14,
+                            3
+                        ],
+                        "ginger": [
+                            14,
+                            4
+                        ],
+                        "sebellus": [
+                            14,
+                            5
+                        ]
+                    }
+                }
+            },
+            "323": {
+                "music": "intro_guitar",
+                "new_map": {
+                    "map": "beach_01",
+                    "bg_track": "intro_guitar",
+                    "positions": {
+                        "jeremy": [
+                            27,
+                            4
+                        ],
+                        "ginger": [
+                            26,
+                            4
+                        ],
+                        "sebellus": [
+                            25,
+                            4
+                        ]
+                    }
+                }
+            },
+            "324": {
+                "music": "ambient_wind",
+                "new_map": {
+                    "map": "tunnel_01",
+                    "bg_track": "ambient_wind",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            14
+                        ],
+                        "ginger": [
+                            2,
+                            15
+                        ],
+                        "sebellus": [
+                            1,
+                            15
+                        ]
+                    }
+                }
             }
         }
     },
@@ -3639,23 +3723,6 @@
             "map": "castle_ginger",
             "bg_track": "intro"
         },
-        "CH_CUTSCENE_03": {
-            "map": "forest_03",
-            "reset_health": true,
-            "cutscenes": [
-                "CCutscene 03"
-            ],
-            "positions": {
-                "jeremy": [
-                    16,
-                    15
-                ],
-                "ginger": [
-                    17,
-                    15
-                ]
-            }
-        },
         "CH_CUTSCENE_01": {
             "map": "garbage_01",
             "bg_track": "bg_garbage",
@@ -3718,6 +3785,25 @@
                 "jeremy": [
                     44,
                     11
+                ]
+            }
+        },
+        "CH_CUTSCENE_03": {
+            "map": "forest_03",
+            "bg_track": "bg_avalon",
+            "bg": "big_bg_forest_01",
+            "reset_health": true,
+            "cutscenes": [
+                "CCutscene 03"
+            ],
+            "positions": {
+                "jeremy": [
+                    16,
+                    15
+                ],
+                "ginger": [
+                    17,
+                    15
                 ]
             }
         }

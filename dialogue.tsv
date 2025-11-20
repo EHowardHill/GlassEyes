@@ -1272,8 +1272,7 @@ chat_197
 		EM_SKIP	ACT_ITEM							OBJ_PIE					
 															
 visker_final															
-				Hello, Visker.	Uggggggggggggh								&visker_final_alt_01		
-	db_ch_visker	EM_DEFAULT		HUMAN!	You're alive?!										
+	db_ch_visker	EM_DEFAULT	ACT_MUSIC_VISKER	HUMAN!	You're alive?!										
 	db_ch_ginger	EM_DEFAULT		Y-You two know	each other?										
 	db_ch_visker	EM_SULLEN		It seems human	fared better than	previous home owner.									
 	db_ch_ginger	EM_WAT		W-What happened to	the people inside	the house?									
@@ -1285,34 +1284,20 @@ visker_final
 	db_ch_sebellus	EM_DEFAULT		Why don't you	just let us	through, pal.									
 	db_ch_visker	EM_ANGRY		Visker want to	eat THAT human.	But..									
 	db_ch_visker	EM_DEFAULT		Visker is patient	and will wait for	human to die.									
-	db_ch_sebellus	EM_DEFAULT		Thank you.											
+	db_ch_sebellus	EM_DEFAULT	ACT_WALK	Thank you.						CHAR_VISKER		{16,7}			
 															
 visker_final_alt_01															
-	db_ch_visker	EM_ANGRY		Human forgot	turkey!										
+	db_ch_visker	EM_ANGRY	ACT_MUSIC_VISKER	HUMAN!	Human forgot	TURKEY!									
+	db_ch_ginger	EM_SIDE_EYE		You know this guy??											
 	db_ch_visker	EM_DEFAULT		Turkey was	SPECIFICALLY	requested!									
 	db_ch_ginger	EM_SIDE_EYE		What is he	talking about??										
 	db_ch_visker	EM_ANGRY		SILENCE, GREEN	THING! Visker	will FIGHT NOW!									
-															
-visker_final_02															
-				He hasn't blinked	since he showed	up here.									
-				On second thought..	You've never seen	him blink before.									
-															
-vf_01															
-				Time to finish	annoying human	ONCE and for ALL									
-															
-vf_02															
-				Visker sees your	offer to SPARE as	offensive,									
-				since it implies	that you are the	stronger one.									
-															
-vf_03															
-				Visker is	continuing to	fight on principle.									
-															
-vf_04															
-				Look, I don't	know what to	tell you, man.									
-															
-visker_final_03															
-				Visker.. Will	stay here to	recover..									
-				Will live to	fight human..	Another day..									
+	db_ch_sebellus	EM_DEFAULT		Great.	Let's go.										
+	db_ch_visker	EM_SIDE_EYE		Uhhh.. Visker.. was	not aware of scary	mueto with sword.									
+	db_ch_visker	EM_SIDE_EYE		..Visker realizes	that three-on-one	fight is not wise.									
+	db_ch_visker	EM_SAD		Visker will INSTEAD	steal everything and	run away.									
+	db_ch_ginger	EM_WAT	ACT_WALK	HEY!						CHAR_VISKER		{16,7}			
+	db_ch_ginger	EM_ANGRY		Jerk..											
 															
 chat_mcwebb															
 	db_ch_mcwebb	EM_DEFAULT		Well, howdy.	I don't figure that	was Y'ALL's dragon?									
@@ -2560,7 +2545,7 @@ convo_obj_beer
 desmond_01															
 	db_ch_desmond	EM_DEFAULT		Pick your poison,	human.										
 	db_ch_desmond	EM_DEFAULT		No.. No, I don't	mean it literally.										
-	db_ch_desmond	EM_DEFAULT		Vodka	Beer	No, thank you							desmond_01_alt_01	desmond_01_alt_02	
+	db_ch_desmond	EM_DEFAULT		Vodka	Beer	No, thank you							&desmond_01_alt_01	&desmond_01_alt_02	
 			ACT_ITEM	You recieved:	VODKA	Comes in a bottle				OBJ_VODKA					
 															
 desmond_01_alt_01															
@@ -2568,3 +2553,12 @@ desmond_01_alt_01
 															
 desmond_01_alt_02															
 	db_ch_desmond	EM_DEFAULT		Very well.											
+															
+convo_obj_turkey															
+				It's the best thing	you've had to eat	in a while.									
+			ACT_HP	You got:	HP +20					20					
+															
+vodka_01															
+				Huh.. It seems like	someone left a	bottle of vodka.									
+				I hope they don't	miss it.										
+			ACT_ITEM	You found:	VODKA	Refreshing!				OBJ_VODKA	&anim_hidden				

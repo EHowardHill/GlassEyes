@@ -141,12 +141,6 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_castle_ginger;
 		global_data_ptr->bg_track = &music_items::intro;
 		break;		}
-	case CH_CUTSCENE_03: {
-		typewriter(TYPEWRITER_CCUTSCENE_03);
-		global_data_ptr->entry_map = &map_forest_03;
-		global_data_ptr->jeremy_position = {16, 15};
-		global_data_ptr->ginger_position = {17, 15};
-		break;		}
 	case CH_CUTSCENE_01: {
 		typewriter(TYPEWRITER_CCUTSCENE_01);
 		global_data_ptr->entry_map = &map_garbage_01;
@@ -179,6 +173,15 @@ void resolve_chapter()
 		global_data_ptr->bg = &regular_bg_items::big_bg_city_01;
 		music::stop();
 		global_data_ptr->jeremy_position = {44, 11};
+		break;		}
+	case CH_CUTSCENE_03: {
+		typewriter(TYPEWRITER_CCUTSCENE_03);
+		global_data_ptr->entry_map = &map_forest_03;
+		global_data_ptr->bg_track = &music_items::bg_avalon;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		music::stop();
+		global_data_ptr->jeremy_position = {16, 15};
+		global_data_ptr->ginger_position = {17, 15};
 		break;		}
 	default: { break; }
 	}

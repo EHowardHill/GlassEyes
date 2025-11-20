@@ -485,6 +485,10 @@ def handle_action(dat, automatic=False):
                     references += (
                         '#include "bn_regular_bg_items_' + datt["bg"] + '.h"\n'
                     )
+            else:
+                block += (
+                    "\t\tglobal_data_ptr->bg = nullptr;\n"
+                )
             if "positions" in datt.keys():
                 characters = datt["positions"]
                 for c_key in characters.keys():

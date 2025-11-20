@@ -69,6 +69,8 @@ enum character_list
 	CHAR_CS_FOX,
 	CHAR_SANS,
 	CHAR_STAND,
+	CHAR_VODKA,
+	CHAR_BEER,
 	CHAR_SIZE,
 	CHAR_TYPEWRITER
 };

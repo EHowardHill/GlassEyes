@@ -10,6 +10,7 @@ const animation anim_falling = {{0,3,6,9}, 4, 1, true};
 const animation anim_face_down = {{0}, 1, 0, false};
 const animation anim_face_right = {{3}, 1, 0, false};
 const animation anim_face_up = {{6}, 1, 0, false};
+const animation anim_hidden = {{1}, 1, 0, false};
 const animation vista_reminisce = {{9}, 1, 0, true};
 const animation vista_pickup = {{6,10,6,11}, 4, 1, false};
 const animation vista_invisible = {{0}, 1, 0, false};

@@ -272,6 +272,28 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         return KEYPAD;
                         break;
                     }
+                    case 322:
+                    {
+                        if (global_data_ptr->action_iterations[306] < 1)
+                        {
+                            global_data_ptr->action_iterations[210]++;
+                            if (global_data_ptr->items[OBJ_TURKEY] == true)
+                            {
+                                global_data_ptr->items[OBJ_TURKEY] = false;
+                                ch_man->load(&visker_final);
+                            }
+                            else
+                            {
+                                for (int t = 0; t < ITEMS_SIZE; t++)
+                                {
+                                    global_data_ptr->items[t] = false;
+                                }
+                                ch_man->load(&visker_final_alt_01);
+                            }
+                        }
+
+                        break;
+                    }
                     default:
                     {
                         int ret = perform_action_automatic(action, *ch_man);

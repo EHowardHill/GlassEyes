@@ -51,6 +51,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_henry.h"
 #include "bn_sprite_items_db_ch_constance.h"
 #include "bn_sprite_items_db_ch_sans.h"
+#include "bn_sprite_items_db_ch_desmond.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -131,6 +132,7 @@ extern const conversation chat_mcwebb;
 extern const conversation chat_mcwebb_02;
 extern const conversation chat_mcwebb_02_alt_01;
 extern const conversation chat_mcwebb_03;
+extern const conversation convo_obj_beer;
 extern const conversation convo_obj_clothes;
 extern const conversation convo_obj_document;
 extern const conversation convo_obj_flint;
@@ -144,6 +146,8 @@ extern const conversation convo_obj_steel;
 extern const conversation convo_obj_sticks;
 extern const conversation convo_obj_stones;
 extern const conversation convo_obj_ticket;
+extern const conversation convo_obj_turkey;
+extern const conversation convo_obj_vodka;
 extern const conversation convo_obj_water_bottle;
 extern const conversation croke_01;
 extern const conversation croke_01_alt_01;
@@ -180,6 +184,9 @@ extern const conversation dart_04;
 extern const conversation death_01;
 extern const conversation death_01_alt_01;
 extern const conversation death_01_alt_02;
+extern const conversation desmond_01;
+extern const conversation desmond_01_alt_01;
+extern const conversation desmond_01_alt_02;
 extern const conversation dima_01;
 extern const conversation dima_02;
 extern const conversation dock_ginger_01;
@@ -374,13 +381,7 @@ extern const conversation train_locked;
 extern const conversation train_mirror;
 extern const conversation train_sebellus;
 extern const conversation tunnel_01;
-extern const conversation vf_01;
-extern const conversation vf_02;
-extern const conversation vf_03;
-extern const conversation vf_04;
 extern const conversation visker_final;
-extern const conversation visker_final_02;
-extern const conversation visker_final_03;
 extern const conversation visker_final_alt_01;
 extern const conversation visker_h_01;
 extern const conversation visker_h_02;
@@ -388,6 +389,7 @@ extern const conversation visker_h_03;
 extern const conversation vista_01;
 extern const conversation vista_01_alt_01;
 extern const conversation vista_bar;
+extern const conversation vodka_01;
 extern const conversation wakeup_01;
 extern const conversation worm_action_01;
 extern const conversation worm_action_01_alt_01;
