@@ -124,7 +124,7 @@ static void update_dialogue(battle_state *bs)
         {
             if (!bs->dlg_lines[i].is_ended())
             {
-                bs->dlg_lines[i].update(line.portrait, false, EM_DEFAULT);
+                bs->dlg_lines[i].update(line.portrait, false, EM_DEFAULT, false);
                 break;
             }
         }
@@ -219,7 +219,7 @@ static void update_character_animation(int char_index, battle_state &bs)
     switch (char_index)
     {
     case 0: // Jeremy
-        spr_item = &sprite_items::spr_jeremy_battle;
+        spr_item = &sprite_items::jeremy_battle;
         idle_start = JEREMY_IDLE_START;
         idle_end = JEREMY_IDLE_START; // Single frame idle for Jeremy
         hurt_start = JEREMY_HURT_START;
@@ -229,7 +229,7 @@ static void update_character_animation(int char_index, battle_state &bs)
         break;
 
     case 1: // Ginger
-        spr_item = &sprite_items::spr_ginger_battle;
+        spr_item = &sprite_items::ginger_battle;
         idle_start = GINGER_IDLE_START;
         idle_end = GINGER_IDLE_END;
         hurt_start = GINGER_HURT_START;
@@ -255,7 +255,7 @@ static void update_character_animation(int char_index, battle_state &bs)
             // Intro animation
             if (char_index == 0) // Jeremy has special intro
             {
-                sprite->set_tiles(spr_item->tiles_item(), (ticker / 5) * 2);
+                sprite->set_tiles(spr_item->tiles_item(), ticker / 5);
             }
             else if (char_index == 1) // Ginger intro
             {
@@ -265,7 +265,7 @@ static void update_character_animation(int char_index, battle_state &bs)
                 {
                     frame = idle_start - 1;
                 }
-                sprite->set_tiles(spr_item->tiles_item(), frame * 2);
+                sprite->set_tiles(spr_item->tiles_item(), frame);
             }
             ticker++;
         }
@@ -273,7 +273,7 @@ static void update_character_animation(int char_index, battle_state &bs)
         {
             state = 1; // Go to idle
             ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start);
         }
         break;
     }
@@ -283,12 +283,12 @@ static void update_character_animation(int char_index, battle_state &bs)
         if (idle_end > idle_start) // Animated idle
         {
             int frame = idle_start + ((ticker / 8) % (idle_end - idle_start + 1));
-            sprite->set_tiles(spr_item->tiles_item(), frame * 2);
+            sprite->set_tiles(spr_item->tiles_item(), frame);
             ticker++;
         }
         else // Static idle
         {
-            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start);
         }
         break;
     }
@@ -303,11 +303,11 @@ static void update_character_animation(int char_index, battle_state &bs)
         {
             state = 1; // Back to idle
             ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start);
         }
         else
         {
-            sprite->set_tiles(spr_item->tiles_item(), frame * 2);
+            sprite->set_tiles(spr_item->tiles_item(), frame);
             ticker++;
         }
 
@@ -324,11 +324,11 @@ static void update_character_animation(int char_index, battle_state &bs)
         {
             state = 1; // Back to idle
             ticker = 0;
-            sprite->set_tiles(spr_item->tiles_item(), idle_start * 2);
+            sprite->set_tiles(spr_item->tiles_item(), idle_start);
         }
         else
         {
-            sprite->set_tiles(spr_item->tiles_item(), frame * 2);
+            sprite->set_tiles(spr_item->tiles_item(), frame);
             ticker++;
         }
 
@@ -366,7 +366,7 @@ int battle_map()
     switch (global_data_ptr->foe)
     {
     case FOE_VISKERS_01:
-        bs.enemy_sprite_item = &sprite_items::spr_visker_battle;
+        bs.enemy_sprite_item = &sprite_items::visker_battle;
         global_data_ptr->enemy_max_hp[0] = 12;
         global_data_ptr->enemy_hp[0] = 12;
         bs.moveset = 3;
@@ -374,7 +374,7 @@ int battle_map()
 
         // Just Jeremy for this battle
         bs.party_size = 1;
-        bs.character_sprites[0] = sprite_items::spr_jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
+        bs.character_sprites[0] = sprite_items::jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
         bs.character_sprites[0]->set_z_order(0);
 
         convos[RESULT_FIRST].push_back(&garbage_fight_01);
@@ -388,27 +388,27 @@ int battle_map()
         break;
 
     case FOE_VISKERS_02:
-        bs.enemy_sprite_item = &sprite_items::spr_visker_battle;
+        bs.enemy_sprite_item = &sprite_items::visker_battle;
         global_data_ptr->enemy_max_hp[0] = 99;
         global_data_ptr->enemy_hp[0] = 99;
         bs.moveset = BULLET_SIZE;
         bs.speed = 300;
 
         bs.party_size = 1;
-        bs.character_sprites[0] = sprite_items::spr_jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
+        bs.character_sprites[0] = sprite_items::jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
 
         convos[RESULT_FIRST].push_back(&garbage_fight_05);
         spare_convos.push_back(&garbage_spare);
         break;
 
     case FOE_CROKE_01:
-        bs.enemy_sprite_item = &sprite_items::spr_croke_battle;
+        bs.enemy_sprite_item = &sprite_items::croke_battle;
         global_data_ptr->enemy_max_hp[0] = 0;
         global_data_ptr->enemy_hp[0] = 0;
 
         bs.party_size = 2;
-        bs.character_sprites[0] = sprite_items::spr_jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
-        bs.character_sprites[1] = sprite_items::spr_ginger_battle.create_sprite(-96, get_character_y_position(1), 0);
+        bs.character_sprites[0] = sprite_items::jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
+        bs.character_sprites[1] = sprite_items::ginger_battle.create_sprite(-96, get_character_y_position(1), 0);
 
         // For Croke, we don't use the normal convos array
         // We'll handle his sequence specially
@@ -417,15 +417,15 @@ int battle_map()
         break;
 
     case FOE_TEST:
-        bs.enemy_sprite_item = &sprite_items::spr_visker_battle;
+        bs.enemy_sprite_item = &sprite_items::visker_battle;
         global_data_ptr->enemy_max_hp[0] = 99;
         global_data_ptr->enemy_hp[0] = 99;
         bs.moveset = BULLET_SIZE;
         bs.speed = 5;
 
         bs.party_size = 2;
-        bs.character_sprites[0] = sprite_items::spr_jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
-        bs.character_sprites[1] = sprite_items::spr_ginger_battle.create_sprite(-96, get_character_y_position(1), 0);
+        bs.character_sprites[0] = sprite_items::jeremy_battle.create_sprite(-96, get_character_y_position(0), 0);
+        bs.character_sprites[1] = sprite_items::ginger_battle.create_sprite(-96, get_character_y_position(1), 0);
 
         convos[RESULT_FIRST].push_back(&garbage_fight_05);
         break;
@@ -493,7 +493,7 @@ int battle_map()
                 if (bs.croke_anim_frame < start_frame)
                     bs.croke_anim_frame = start_frame;
 
-                bs.enemy_sprite->set_tiles(sprite_items::spr_croke_battle.tiles_item(), bs.croke_anim_frame);
+                bs.enemy_sprite->set_tiles(sprite_items::croke_battle.tiles_item(), bs.croke_anim_frame);
                 bs.enemy_ticker++;
             }
         }
@@ -505,7 +505,7 @@ int battle_map()
             case 0: // INTRO
                 if (bs.enemy_ticker < 35)
                 {
-                    bs.enemy_sprite->set_tiles(sprite_items::spr_visker_battle.tiles_item(),
+                    bs.enemy_sprite->set_tiles(sprite_items::visker_battle.tiles_item(),
                                                bs.enemy_ticker / 5);
                     bs.enemy_ticker++;
                 }
@@ -516,13 +516,13 @@ int battle_map()
                 break;
 
             case 1: // IDLE
-                bs.enemy_sprite->set_tiles(sprite_items::spr_visker_battle.tiles_item(),
+                bs.enemy_sprite->set_tiles(sprite_items::visker_battle.tiles_item(),
                                            ((bs.enemy_ticker / 5) % 4) + 6);
                 bs.enemy_ticker++;
                 break;
 
             case 2: // ATTACK
-                bs.enemy_sprite->set_tiles(sprite_items::spr_visker_battle.tiles_item(),
+                bs.enemy_sprite->set_tiles(sprite_items::visker_battle.tiles_item(),
                                            ((bs.enemy_ticker / 5) % 6) + 10);
                 bs.enemy_ticker++;
                 break;

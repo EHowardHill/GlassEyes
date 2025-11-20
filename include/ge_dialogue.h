@@ -311,6 +311,7 @@ extern const conversation naomi_fortune_01_alt_01;
 extern const conversation naomi_garbage_01;
 extern const conversation naomi_garbage_02;
 extern const conversation new_berlin_sign;
+extern const conversation pipis_man;
 extern const conversation pringle_01;
 extern const conversation sans_01;
 extern const conversation sans_02;

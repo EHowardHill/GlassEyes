@@ -614,6 +614,11 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 317:
+	{
+		ch_man.load(&pipis_man);
+		break;
+	}
 	}
 	return -1;
 }
