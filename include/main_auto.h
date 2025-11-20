@@ -33,6 +33,7 @@ enum progress
 	BLACK_TO_DEATH,
 	CH_CUTSCENE_04,
 	CH_CUTSCENE_06,
+	KEYPAD_FAILURE,
 };
 
 void resolve_chapter();

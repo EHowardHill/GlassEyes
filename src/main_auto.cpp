@@ -10,6 +10,7 @@
 
 #include "bn_regular_bg_items_big_bg_forest_01.h"
 #include "bn_regular_bg_items_bg_cutscene_channel.h"
+#include "bn_regular_bg_items_big_bg_city_01.h"
 
 void resolve_chapter()
 {
@@ -171,6 +172,13 @@ void resolve_chapter()
 		global_data_ptr->entry_map = &map_cutscene_garbage_chute;
 		global_data_ptr->bg_track = &music_items::ambient_wind;
 		global_data_ptr->jeremy_position = {0, 0};
+		break;		}
+	case KEYPAD_FAILURE: {
+		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg_track = &music_items::bg_canter_02;
+		global_data_ptr->bg = &regular_bg_items::big_bg_city_01;
+		music::stop();
+		global_data_ptr->jeremy_position = {44, 11};
 		break;		}
 	default: { break; }
 	}

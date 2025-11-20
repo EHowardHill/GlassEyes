@@ -2546,3 +2546,25 @@ pipis_man
 				NOTICE!! DO NOT	interact with    the	[[ Pipis ]] man									
 				SYMPTOMS INCLUDE	[[redacted]] and	[[redacted]]									
 				AVALON is [[NOT]]	RESPONSIBLE FOR SIDE	EFFECTS of [[pipis]]									
+															
+convo_obj_vodka															
+			ACT_INVERT_CONTROLS	It smells sort of	like hand sanitizer.										
+				You don't feel its	effects right away.										
+			ACT_HP	You recieved:	1 HP					1					
+															
+convo_obj_beer															
+			ACT_INVERT_CONTROLS	It tastes like	cheap, watery beer.										
+				At least it's cold.											
+			ACT_HP	You recieved:	1 HP					1					
+															
+desmond_01															
+	db_ch_desmond	EM_DEFAULT		Pick your poison,	human.										
+	db_ch_desmond	EM_DEFAULT		No.. No, I don't	mean it literally.										
+	db_ch_desmond	EM_DEFAULT		Vodka	Beer	No, thank you							desmond_01_alt_01	desmond_01_alt_02	
+			ACT_ITEM	You recieved:	VODKA	Comes in a bottle				OBJ_VODKA					
+															
+desmond_01_alt_01															
+			ACT_ITEM	You recieved:	BEER	Looks cheap				OBJ_BEER					
+															
+desmond_01_alt_02															
+	db_ch_desmond	EM_DEFAULT		Very well.											

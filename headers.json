@@ -957,7 +957,9 @@
         "CS_GE": {},
         "CS_FOX": {},
         "Sans": {},
-        "Stand": {}
+        "Stand": {},
+        "Vodka": {},
+        "Beer": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1573,6 +1575,11 @@
             },
             "317": {
                 "auto": "pipis_man"
+            },
+            "320": {
+                "sequence": [
+                    "desmond_01"
+                ]
             }
         },
         "automatic": {
@@ -3700,6 +3707,17 @@
                 "jeremy": [
                     0,
                     0
+                ]
+            }
+        },
+        "KEYPAD_FAILURE": {
+            "map": "canter_01",
+            "bg_track": "bg_canter_02",
+            "bg": "big_bg_city_01",
+            "positions": {
+                "jeremy": [
+                    44,
+                    11
                 ]
             }
         }

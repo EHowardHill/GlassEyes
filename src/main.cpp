@@ -200,11 +200,6 @@ int main()
     global_data_ptr->ginger_position = {0, 0};
     global_data_ptr->sebellus_position = {0, 0};
 
-    // global_data_ptr->foe = FOE_VISKERS_01;
-    // battle_map();
-
-    // game_numpad();
-
     int value = NEW_CHAPTER;
     {
         global_data_ptr->process_stage = CUTSCENE_01;
@@ -213,8 +208,6 @@ int main()
         global_data_ptr->process_stage = CH_TITLE;
         resolve_chapter();
     }
-
-    // music_items::ambient_drone.play();
 
     global_data_ptr->process_stage = chapter_select();
     core::update();
@@ -247,6 +240,11 @@ int main()
             resolve_chapter();
 
             value = CONTINUE;
+            break;
+        }
+        case KEYPAD:
+        {
+            value = game_numpad();
             break;
         }
         case GAME_OVER:

@@ -9,6 +9,9 @@
 
 #include "bn_sprite_items_number_pad.h"
 
+#include "main.h"
+#include "main_auto.h"
+#include "ge_globals.h"
 #include "ge_game_numpad.h"
 
 using namespace bn;
@@ -17,6 +20,7 @@ constexpr int WINNING_CODE[4] = {3, 4, 7, 7};
 
 int game_numpad()
 {
+    music::stop();
     int success = -1; // -1 = ongoing, 1 = success, 0 = failure
 
     vector<sprite_ptr, 10> numpad_sprites;
@@ -262,5 +266,14 @@ int game_numpad()
         core::update();
     }
 
-    return success;
+    if (success == 1)
+    {
+        global_data_ptr->process_stage = BLACK_TO_LAB_02;
+    }
+    else if (success == 0)
+    {
+        global_data_ptr->process_stage = KEYPAD_FAILURE;
+    }
+
+    return NEW_CHAPTER;
 }

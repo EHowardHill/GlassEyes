@@ -267,6 +267,11 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         }
                         break;
                     }
+                    case 318:
+                    {
+                        return KEYPAD;
+                        break;
+                    }
                     default:
                     {
                         int ret = perform_action_automatic(action, *ch_man);
@@ -337,6 +342,11 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         {
                             ch_man->load(&c09_reiterate);
                         }
+                        break;
+                    }
+                    case 319:
+                    {
+                        music_items::z02_the_champ.play();
                         break;
                     }
                     default:

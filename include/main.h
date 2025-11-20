@@ -9,6 +9,7 @@ enum RETURN_TYPE {
     NEW_CHAPTER,
     GAME_OVER,
     BATTLE,
+    KEYPAD,
     GAME
 };
 
