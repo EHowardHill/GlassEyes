@@ -1611,6 +1611,65 @@
                 "sequence": [
                     "desmond_01"
                 ]
+            },
+            "325": {
+                "sequence": [
+                    "naomi_shop_01",
+                    "naomi_shop_02"
+                ]
+            },
+            "326": {
+                "music": "shop",
+                "new_map": {
+                    "map": "shop_02",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            5
+                        ]
+                    }
+                }
+            },
+            "327": {
+                "music": "bg_canter_02",
+                "new_map": {
+                    "map": "canter_01",
+                    "positions": {
+                        "jeremy": [
+                            30,
+                            13
+                        ]
+                    }
+                }
+            },
+            "328": {
+                "auto": "naomi_shop_03"
+            },
+            "329": {
+                "auto": "naomi_shop_04"
+            },
+            "330": {
+                "auto": "canter_shop"
+            },
+            "331": {
+                "music": "ambient_wind",
+                "new_map": {
+                    "map": "church_01",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            12
+                        ]
+                    }
+                }
+            },
+            "333": {
+                "sequence": [
+                    "canter_people"
+                ]
+            },
+            "334": {
+                "auto": "cathedral_door"
             }
         },
         "automatic": {
@@ -3499,6 +3558,18 @@
                 "sequence": [
                     "avalon_01"
                 ]
+            },
+            "332": {
+                "music": "bg_canter_02",
+                "new_map": {
+                    "map": "canter_01",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            20
+                        ]
+                    }
+                }
             }
         }
     },

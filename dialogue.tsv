@@ -2567,3 +2567,37 @@ avalon_01
 	db_ch_ginger	EM_SIDE_EYE		Okay.. I think this	is the way to	Avalon village.									
 	db_ch_ginger	EM_DEFAULT		Are you ready?											
 		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_03					
+															
+naomi_shop_01															
+	db_ch_naomi			Oh..	You again, hehe.	Fancy seeing you.									
+	db_ch_naomi	EM_DEFAULT		Welcome to Naomi's	Vape and Smartphone	Repair shop!									
+	db_ch_naomi	EM_DEFAULT		You don't seem to be	the type to have any	money, I fear.									
+	db_ch_naomi	EM_DEFAULT		At least you're not	a zombie like half	the city, though.									
+	db_ch_naomi	EM_DEFAULT		A little birdie told	me you're in with	the royal family.									
+	db_ch_naomi	EM_DEFAULT		Now how did THAT	happen? A random	human? Bizarre.									
+	db_ch_naomi	EM_DEFAULT		I don't sell	anything at this	shop you can afford.									
+	db_ch_naomi	EM_DEFAULT		But if you ever bump	into that crew again	you'll, well..									
+	db_ch_naomi	EM_HAPPY		You'll definitely	need something to	hold.									
+	db_ch_naomi	EM_DEFAULT		But if you have	money, you know	where my shop is.									
+															
+naomi_shop_02															
+	db_ch_naomi	EM_HAPPY		Hmm?	Are you still poor?										
+															
+naomi_shop_03															
+				Overpriced plastic	garbage in garish,	ugly colors.									
+				At least the shop is	actually open.										
+															
+naomi_shop_04															
+				The warning is in	a language you	don't know.									
+															
+canter_shop															
+			ACT_SFX_KNOCK	No one seems to be	in right now.										
+															
+canter_people															
+				Their eyes are grey	and faded. They look	like glass.									
+				Their breathing is	shallow enough to be	like hibernation.									
+				There is nothing you	can do for them as	they are right now.									
+															
+cathedral_door															
+				There is a sign in	multiple languages	on the front.									
+				NOTICE: PLEASE	USE SIDE DOOR										
