@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/cave_04.tmx",
+    "activeFile": "maps/cave_03.tmx",
     "expandedProjectPaths": [
         "maps",
-        ".",
-        "tilesets"
+        "tilesets",
+        "."
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -74,10 +74,10 @@
         },
         "maps/cave_03.tmx": {
             "scale": 1,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 591,
-                "y": 487.5
+                "x": 486.5,
+                "y": 780
             }
         },
         "maps/cave_04.tmx": {
@@ -540,10 +540,11 @@
     "map.tileWidth": 32,
     "map.width": 32,
     "openFiles": [
-        "maps/cave_04.tmx"
+        "maps/cave_03.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/cave_03.tmx",
         "maps/cave_04.tmx",
         "maps/cave_05.tmx",
         "maps/forest_03.tmx",
@@ -554,8 +555,7 @@
         "maps/garbage_04.tmx",
         "maps/room_hallway.tmx",
         "maps/dark_07.tmx",
-        "maps/beach_02.tmx",
-        "maps/beach_01.tmx"
+        "maps/beach_02.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
