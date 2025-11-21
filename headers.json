@@ -840,6 +840,16 @@
                 "speed": 0,
                 "loop": false
             }
+        },
+        "o": {
+            "candle": {
+                "frames": [
+                    0,
+                    1
+                ],
+                "speed": 0,
+                "loop": true
+            }
         }
     },
     "items": {
@@ -975,7 +985,13 @@
         "Sans": {},
         "Stand": {},
         "Vodka": {},
-        "Beer": {}
+        "Beer": {},
+        "Naomi_Shop": {},
+        "O_ICXC": {},
+        "O_MARY": {},
+        "O_CANDLE": {
+            "idle_animation": "o_candle"
+        }
     },
     "cutscenes": {
         "Intro": {

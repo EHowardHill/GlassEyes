@@ -68,6 +68,10 @@
 #include "bn_sprite_items_spr_stand.h"
 #include "bn_sprite_items_spr_vodka.h"
 #include "bn_sprite_items_spr_beer.h"
+#include "bn_sprite_items_spr_naomi_shop.h"
+#include "bn_sprite_items_spr_o_icxc.h"
+#include "bn_sprite_items_spr_o_mary.h"
+#include "bn_sprite_items_spr_o_candle.h"
 
 using namespace bn;
 
@@ -139,6 +143,10 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_STAND: { return &sprite_items::spr_stand; break; }
 	case CHAR_VODKA: { return &sprite_items::spr_vodka; break; }
 	case CHAR_BEER: { return &sprite_items::spr_beer; break; }
+	case CHAR_NAOMI_SHOP: { return &sprite_items::spr_naomi_shop; break; }
+	case CHAR_O_ICXC: { return &sprite_items::spr_o_icxc; break; }
+	case CHAR_O_MARY: { return &sprite_items::spr_o_mary; break; }
+	case CHAR_O_CANDLE: { return &sprite_items::spr_o_candle; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -180,6 +188,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_JEREMY_BATTLE: { return &jeremy_battle_idle; break; }
 	case CHAR_GINGER_BATTLE: { return &ginger_battle_idle; break; }
 	case CHAR_VISKER_BATTLE: { return &visker_battle_idle; break; }
+	case CHAR_O_CANDLE: { return &o_candle; break; }
     default:
     {
         return nullptr;

@@ -200,6 +200,12 @@ int main()
     global_data_ptr->ginger_position = {0, 0};
     global_data_ptr->sebellus_position = {0, 0};
 
+    /**/
+    global_data_ptr->jeremy_position = {4, 12};
+    global_data_ptr->entry_map = &map_church_01;
+    navigate_map();
+    /**/
+
     int value = NEW_CHAPTER;
     {
         global_data_ptr->process_stage = CUTSCENE_01;

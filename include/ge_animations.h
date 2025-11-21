@@ -91,5 +91,6 @@ const animation pills_roll = {{1}, 1, 0, false};
 const animation pills_hide = {{0}, 1, 0, false};
 const animation sans_left = {{10}, 1, 0, false};
 const animation sans_ice_cream = {{9}, 1, 0, false};
+const animation o_candle = {{0,1}, 2, 0, true};
 
 #endif
