@@ -870,9 +870,7 @@
             "drop": true
         },
         "Clothes": {},
-        "Soup": {
-            "drop": true
-        },
+        "Soup": {},
         "Pills": {},
         "Ice Cream": {
             "drop": true

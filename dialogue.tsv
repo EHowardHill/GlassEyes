@@ -1541,8 +1541,7 @@ eggplant_01
 			ACT_ITEM	YOU FOUND:	Soup	(Doesn't smell good)				OBJ_SOUP					
 															
 convo_obj_soup															
-				It tastes confusing.	Sort of.. oily.	It has chunks.									
-			ACT_HP	HP INCREASED BY 1						1					
+				This is too gross	to eat.										
 															
 eggplant_01_alt_01															
 	db_ch_eggplant	EM_EXCITED		Not hungry?!	NOT HUNGRY?!										

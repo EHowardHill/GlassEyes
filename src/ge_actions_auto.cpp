@@ -637,6 +637,66 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 325:
+	{
+		if (global_data_ptr->action_iterations[325] == 1) { ch_man.load(&naomi_shop_01); } else
+		if (global_data_ptr->action_iterations[325] == 2) { ch_man.load(&naomi_shop_02); } else
+		{ };
+		break;
+	}
+	case 326:
+	{
+		music_items::shop.play();
+		global_data_ptr->entry_map = &map_shop_02;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {1, 5};
+		return NEW_MAP;
+		break;
+	}
+	case 327:
+	{
+		music_items::bg_canter_02.play();
+		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {30, 13};
+		return NEW_MAP;
+		break;
+	}
+	case 328:
+	{
+		ch_man.load(&naomi_shop_03);
+		break;
+	}
+	case 329:
+	{
+		ch_man.load(&naomi_shop_04);
+		break;
+	}
+	case 330:
+	{
+		ch_man.load(&canter_shop);
+		break;
+	}
+	case 331:
+	{
+		music_items::ambient_wind.play();
+		global_data_ptr->entry_map = &map_church_01;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {4, 12};
+		return NEW_MAP;
+		break;
+	}
+	case 333:
+	{
+		if (global_data_ptr->action_iterations[333] == 1) { ch_man.load(&canter_people); } else
+		{ };
+		break;
+	}
+	case 334:
+	{
+		ch_man.load(&cathedral_door);
+		break;
+	}
 	}
 	return -1;
 }
@@ -2008,6 +2068,15 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[81] == 0) { ch_man.load(&avalon_01); global_data_ptr->action_iterations[81] += 1; } else
 		{ };
+		break;
+	}
+	case 332:
+	{
+		music_items::bg_canter_02.play();
+		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {2, 20};
+		return NEW_MAP;
 		break;
 	}
 	}
