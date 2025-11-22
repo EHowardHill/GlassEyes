@@ -129,10 +129,8 @@ int navigate_map()
     }
     else if (global_data_ptr->entry_map == &map_cutscene_channel)
     {
+        music_items::bg_channel.play(0.6);
         char_mgr.load(&chat_mcwebb_02);
-        v_sprite_ptr::camera.x = global_data_ptr->entry_map->raw_size.x / 2;
-        v_sprite_ptr::camera.y = global_data_ptr->entry_map->raw_size.y / 4;
-        global_data_ptr->shake = true;
     }
 
     if (current_map.bg_ptr.has_value())
@@ -385,6 +383,12 @@ int navigate_map()
                     }
                 }
             }
+        }
+
+        else if (current_map.current_map == &map_cutscene_channel)
+        {
+            v_sprite_ptr::camera.x = (global_data_ptr->entry_map->raw_size.x / 2) + 48;
+            v_sprite_ptr::camera.y = (global_data_ptr->entry_map->raw_size.y / 4) - 64;
         }
 
         // If fallen off-map

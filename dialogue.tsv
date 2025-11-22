@@ -1351,7 +1351,8 @@ chat_mcwebb_02
 	db_ch_mcwebb	EM_DEFAULT		Keep both your	eyes open when	you two meet.									
 	db_ch_mcwebb	EM_DEFAULT		Because you	surely will meet.										
 	db_ch_mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when that happens.									
-	db_ch_mcwebb	EM_DEFAULT		Y'all never did	business with me,	understood?									
+	db_ch_mcwebb	EM_DEFAULT	ACT_MUSIC_FADEOUT	Y'all never did	business with me,	understood?									
+			ACT_PROGRESS							BLACK_TO_BEACH					
 															
 chat_mcwebb_02_alt_01															
 	db_ch_mcwebb	EM_DEFAULT		Oh, I don't mean	in that sense,	human.									
@@ -1367,7 +1368,7 @@ chat_mcwebb_02_alt_01
 	db_ch_mcwebb	EM_DEFAULT		It's probably best	that she get some	sleep before..									
 	db_ch_mcwebb	EM_DEFAULT		Well.. I don't want	to spoil the fun,	now do I.									
 	db_ch_mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when y'all meet.									
-	db_ch_mcwebb	EM_DEFAULT		Y'all never did	business with me,	understood?									
+	db_ch_mcwebb	EM_DEFAULT	ACT_MUSIC_FADEOUT	Y'all never did	business with me,	understood?									
 			ACT_PROGRESS							BLACK_TO_BEACH					
 															
 beach_sign															

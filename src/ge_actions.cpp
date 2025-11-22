@@ -312,36 +312,6 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         }
                         break;
                     }
-                    case 336:
-                    {
-                        if (global_data_ptr->action_iterations[335] < 1)
-                        {
-                            ch_man->load(&boutique_0);
-                        }
-                        else if (global_data_ptr->action_iterations[336] < 1)
-                        {
-                            ch_man->load(&boutique_02);
-                            global_data_ptr->action_iterations[335] = 1;
-                        }
-                        break;
-                    }
-                    case 337:
-                    {
-                        if (global_data_ptr->action_iterations[337] < 1)
-                        {
-                            if (global_data_ptr->items[OBJ_CLOTHES] == true)
-                            {
-                                ch_man->load(&lobbybot_02);
-                                global_data_ptr->action_iterations[337] = 1;
-                            }
-                            else
-                            {
-                                global_data_ptr->action_iterations[337] = 0;
-                                ch_man->load(&lobbybot_01);
-                            }
-                        }
-                        break;
-                    }
                     default:
                     {
                         int ret = perform_action_automatic(action, *ch_man);
@@ -417,6 +387,36 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     case 319:
                     {
                         music_items::z02_the_champ.play();
+                        break;
+                    }
+                    case 336:
+                    {
+                        if (global_data_ptr->action_iterations[335] < 1)
+                        {
+                            ch_man->load(&boutique_0);
+                        }
+                        else if (global_data_ptr->action_iterations[336] < 1)
+                        {
+                            ch_man->load(&boutique_02);
+                            global_data_ptr->action_iterations[335] = 1;
+                        }
+                        break;
+                    }
+                    case 337:
+                    {
+                        if (global_data_ptr->action_iterations[337] < 1)
+                        {
+                            if (global_data_ptr->items[OBJ_CLOTHES] == true)
+                            {
+                                ch_man->load(&lobbybot_02);
+                                global_data_ptr->action_iterations[337] = 1;
+                            }
+                            else
+                            {
+                                global_data_ptr->action_iterations[337] = 0;
+                                ch_man->load(&lobbybot_01);
+                            }
+                        }
                         break;
                     }
                     default:

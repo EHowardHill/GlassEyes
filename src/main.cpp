@@ -54,8 +54,6 @@ int chapter_select()
 
         for (int t = 0; t < 7; t++)
         {
-            // FIX: Use curly braces {} for aggregate initialization
-            // We also ensure the point is constructed with braces or explicit constructor depending on your point class
             ch_titles_var.push_back(unique_ptr<text>(new text{ch_titles[t], {c_w, c_h + (16 * t)}}));
             ch_names_var.push_back(unique_ptr<text>(new text{ch_names[t], {c_w + 64, c_h + (16 * t)}}));
         }
