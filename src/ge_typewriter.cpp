@@ -143,6 +143,7 @@ void typewriter(int scene)
     {
         current_conversation = &cutscene_07;
         type = TYPE_TEXT;
+        break;
     }
     default:
     {

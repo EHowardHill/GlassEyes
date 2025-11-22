@@ -2372,7 +2372,7 @@ cutscene_07b
 	db_ch_constance	EM_DEFAULT		I'll draft a letter	right away,	your majesty.									
 	db_ch_vista_02	EM_SAD		Very good,	Constance. Now..	Leave me be.									
 	db_ch_constance	EM_DEFAULT	ACT_MUSIC_FADEOUT	Yes,	your majesty.										
-		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
+		EM_SKIP	ACT_PROGRESS							FLAYITHRO_AWAKE					
 															
 c09_init															
 	db_ch_ginger	EM_SAD		Ugh.. My neck.	How long was that	nap for?									

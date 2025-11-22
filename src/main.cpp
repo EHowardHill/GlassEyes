@@ -141,9 +141,9 @@ int chapter_select()
                 case 4:
                     return CH_CUTSCENE_06;
                 case 5:
-                    return CH_CUTSCENE_08;
+                    return CH_CUTSCENE_07;
                 case 6:
-                    return CH_CUTSCENE_09;
+                    return CH_CUTSCENE_08;
                 default:
                     return CUTSCENE_01;
                 }
