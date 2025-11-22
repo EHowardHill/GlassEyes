@@ -989,7 +989,8 @@
         "O_MARY": {},
         "O_CANDLE": {
             "idle_animation": "o_candle"
-        }
+        },
+        "LobbyBot": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1668,6 +1669,12 @@
             },
             "334": {
                 "auto": "cathedral_door"
+            },
+            "338": {
+                "sequence": [
+                    "lobbybot_03",
+                    "lobbybot_04"
+                ]
             }
         },
         "automatic": {
@@ -1884,21 +1891,6 @@
                 "sequence": [
                     "bridge_01"
                 ]
-            },
-            "48": {
-                "new_map": {
-                    "map": "cave_02",
-                    "positions": {
-                        "jeremy": [
-                            3,
-                            30
-                        ],
-                        "ginger": [
-                            2,
-                            30
-                        ]
-                    }
-                }
             },
             "51": {
                 "new_map": {
@@ -2118,22 +2110,6 @@
                     }
                 }
             },
-            "68": {
-                "new_map": {
-                    "map": "cave_03",
-                    "bg_track": "cave_01",
-                    "positions": {
-                        "jeremy": [
-                            5,
-                            23
-                        ],
-                        "ginger": [
-                            6,
-                            23
-                        ]
-                    }
-                }
-            },
             "71": {
                 "new_map": {
                     "map": "forest_01",
@@ -2177,37 +2153,6 @@
                         "ginger": [
                             4,
                             15
-                        ]
-                    }
-                }
-            },
-            "83": {
-                "new_map": {
-                    "map": "cave_04",
-                    "positions": {
-                        "jeremy": [
-                            16,
-                            3
-                        ],
-                        "ginger": [
-                            15,
-                            3
-                        ]
-                    }
-                }
-            },
-            "84": {
-                "new_map": {
-                    "map": "forest_02",
-                    "bg": "big_bg_forest_01",
-                    "positions": {
-                        "jeremy": [
-                            2,
-                            3
-                        ],
-                        "ginger": [
-                            1,
-                            3
                         ]
                     }
                 }
@@ -3565,6 +3510,72 @@
                         "jeremy": [
                             2,
                             20
+                        ]
+                    }
+                }
+            },
+            "48": {
+                "music": "cave_01",
+                "new_map": {
+                    "map": "cave_02",
+                    "positions": {
+                        "jeremy": [
+                            3,
+                            30
+                        ],
+                        "ginger": [
+                            2,
+                            30
+                        ]
+                    }
+                }
+            },
+            "68": {
+                "music": "cave_01",
+                "new_map": {
+                    "map": "cave_03",
+                    "bg_track": "cave_01",
+                    "positions": {
+                        "jeremy": [
+                            5,
+                            23
+                        ],
+                        "ginger": [
+                            6,
+                            23
+                        ]
+                    }
+                }
+            },
+            "83": {
+                "music": "cave_01",
+                "new_map": {
+                    "map": "cave_04",
+                    "positions": {
+                        "jeremy": [
+                            16,
+                            3
+                        ],
+                        "ginger": [
+                            15,
+                            3
+                        ]
+                    }
+                }
+            },
+            "84": {
+                "music": "ambient_wind",
+                "new_map": {
+                    "map": "forest_02",
+                    "bg": "big_bg_forest_01",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            3
+                        ],
+                        "ginger": [
+                            1,
+                            3
                         ]
                     }
                 }

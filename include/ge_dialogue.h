@@ -52,6 +52,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_constance.h"
 #include "bn_sprite_items_db_ch_sans.h"
 #include "bn_sprite_items_db_ch_desmond.h"
+#include "bn_sprite_items_db_ch_lobbybot.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -103,9 +104,10 @@ extern const conversation avalon_wormguy_01_alt_01;
 extern const conversation avalon_wormguy_02;
 extern const conversation beach_sign;
 extern const conversation bm_fridge;
+extern const conversation boutique_0;
 extern const conversation boutique_01;
+extern const conversation boutique_01b;
 extern const conversation boutique_02;
-extern const conversation boutique_03;
 extern const conversation bridge_01;
 extern const conversation broken_avalon_00;
 extern const conversation broken_avalon_01;
@@ -316,6 +318,10 @@ extern const conversation leaving_lab;
 extern const conversation leaving_lab_alt_01;
 extern const conversation leaving_lab_alt_02;
 extern const conversation leaving_lab_alt_03;
+extern const conversation lobbybot_01;
+extern const conversation lobbybot_02;
+extern const conversation lobbybot_03;
+extern const conversation lobbybot_04;
 extern const conversation matt_01;
 extern const conversation naomi_fortune_01;
 extern const conversation naomi_fortune_01_alt_01;
@@ -370,7 +376,6 @@ extern const conversation talk_184;
 extern const conversation talk_189;
 extern const conversation talk_190;
 extern const conversation talk_190b;
-extern const conversation teddy_spare01;
 extern const conversation temmie_01;
 extern const conversation temmie_02;
 extern const conversation temmie_03;

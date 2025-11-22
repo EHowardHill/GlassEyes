@@ -1458,25 +1458,19 @@ boutique_01
 	db_ch_ginger	EM_WAT		..uh.											
 	db_ch_sebellus	EM_SIDE_EYE		Here I was, afraid	that this town was	going to be boring.									
 	db_ch_ginger	EM_DEFAULT		Is it.. breathing?		Ew..									
-	db_ch_sebellus	EM_SIDE_EYE		Do you think we can	get free stuff if we	kill it?									
-	db_ch_sebellus	EM_DEFAULT		I guess there's only	one way to find	out!									
-															
-teddy_spare01															
-				The bear is not	interested in	ending the fight.									
+	db_ch_ginger	EM_SIDE_EYE		..Sebellus?	What do we do?										
+	db_ch_sebellus	EM_DEFAULT		Hmm. Well, I wonder	if there's something	helpful in town.									
 															
 boutique_02															
 	db_ch_kathy	EM_HAPPY		Oh.. Thank you,	I was afraid it	would never leave.				CHAR_KATHY		{2,4}			
 	db_ch_ginger	EM_DEFAULT		..Where did it	come from?										
 	db_ch_kathy	EM_DEFAULT		We had a customer	who bartered it for	some clothes.									
 	db_ch_kathy	EM_SIDE_EYE		I really need to	stop doing that,	I'll get fired.									
-	db_ch_sebellus	EM_SIDE_EYE		You wouldn't mind	doing that one more	time though, right?									
+	db_ch_sebellus	EM_SIDE_EYE		Since you're already	at risk for getting	fired..									
+	db_ch_sebellus	EM_SIDE_EYE		You wouldn't mind if	the three of us	asked for a favor?									
 	db_ch_sebellus	EM_DEFAULT		We're looking for	clothes and don't	have any money.									
 	db_ch_kathy	EM_SIDE_EYE		Uh.. Sure, I suppose	I can make something	work.									
 			ACT_ITEM	You found:	TAILORED SUIT	Very classy.				OBJ_CLOTHES					
-															
-boutique_03															
-	db_ch_kathy	EM_SIDE_EYE		You three better get	out of here..										
-	db_ch_kathy	EM_DEFAULT		Wouldn't want my	boss knowing what	happened earlier.									
 															
 dima_01															
 	db_ch_dima	EM_DEFAULT		I just wanted lunch,	but the guy in there	is rediculous.									
@@ -2600,3 +2594,58 @@ canter_people
 cathedral_door															
 				There is a sign in	multiple languages	on the front.									
 				NOTICE: PLEASE	USE SIDE DOOR										
+															
+boutique_01b															
+	db_ch_ginger	EM_WAT	ACT_WALK	Huh..	It actually worked.					CHAR_TEDDY		{-3,3}			
+	db_ch_sebellus	EM_DEFAULT		It seems pulsing	teddy bear monsters	have taste too.									
+	db_ch_sebellus	EM_SIDE_EYE		Unlike my sister	here. Do you know	what she did once?									
+	db_ch_ginger	EM_ANGRY		Oh, here we go	with the fish story.										
+	db_ch_sebellus	EM_EXCITED		See!! She knows it	was gross!!										
+	db_ch_sebellus	EM_SIDE_EYE		She once ate a plate	of fish with a bunch	of sugar on top!									
+	db_ch_sebellus	EM_EXCITED		It wasn't even	cooked! It was raw!										
+	db_ch_ginger	EM_ANGRY		Well you eat chips	in your bed and let	the crumbs fall.									
+	db_ch_sebellus	EM_SIDE_EYE		The human looks like	a college student,	right?									
+	db_ch_sebellus	EM_SIDE_EYE		I'm sure he does	that all the time	too though.									
+	db_ch_sebellus	EM_DEFAULT		We should speak to	the lady outside.										
+															
+boutique_0															
+	db_ch_kathy	EM_DEFAULT		Oh.. Oh dear, don't	go in there right	now.. We're.. uh..									
+	db_ch_kathy	EM_HAPPY		We're having a	situation right now.										
+	db_ch_sebellus	EM_SIDE_EYE		A situation sounds	like fun.										
+	db_ch_kathy	EM_DEFAULT		N-No, there's this,	uh.. How do I say	it.. .. Bear.									
+	db_ch_kathy	EM_HAPPY		You three look like	adventurers?										
+	db_ch_ginger	EM_EMBARRASSED		You could..	say that.	I think.									
+	db_ch_ginger	EM_HAPPY		..Y-Yeah, we're	adventurers.										
+	db_ch_kathy	EM_HAPPY		Wonderful. There's	a reward if you can	make it go away.									
+															
+lobbybot_01															
+	db_ch_lobbybot			hey hey whoa whoa	we don't let POOR	people into town									
+	db_ch_lobbybot			if you want a room	at our establishment	you need suits									
+	db_ch_sebellus	EM_SIDE_EYE		That's such a big	attitude from such a	small robot.									
+	db_ch_lobbybot			listen pal i am so	much taller than you										
+	db_ch_sebellus	EM_DEFAULT		Oh, shut up.											
+	db_ch_lobbybot			i'm a robot so my	clothes are part of	my body									
+	db_ch_lobbybot			therefore my hat	makes me taller than	you									
+	db_ch_sebellus	EM_DEFAULT		Whatever.	We'll be back.										
+	db_ch_ginger	EM_SIDE_EYE		I'm sure we can rest	outside town.										
+	db_ch_sebellus	EM_DEFAULT		Not safe out there.											
+	db_ch_sebellus	EM_HAPPY		But we'll figure	something out.										
+															
+lobbybot_02															
+	db_ch_lobbybot			oh lovely, i see the	three of you have	suits to wear									
+	db_ch_lobbybot			and you're oh so	very tall too,	very nice									
+	db_ch_sebellus	EM_HAPPY		Thank you,	lobby robot.										
+	db_ch_lobbybot			it's lobby	BOY,	it's on my hat									
+															
+lobbybot_03															
+	db_ch_lobbybot			the human is awake,	how fancy										
+	db_ch_lobbybot			enjoy your night but	everyone's asleep	out there									
+	db_ch_lobbybot			of course i'm not	good old lobby boy	works forever									
+	db_ch_lobbybot			personally between	you and i human, i	think muetos suck									
+	db_ch_lobbybot			we should overthrow	them sometime										
+															
+lobbybot_04															
+	db_ch_lobbybot			the new archbishop	of canterbury? he's	a robot too									
+	db_ch_lobbybot			personally i think	he should launch a	holy war									
+	db_ch_lobbybot			nothing but benefits	for our respective	kinds, human									
+	db_ch_lobbybot			just think about it											

@@ -697,6 +697,13 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&cathedral_door);
 		break;
 	}
+	case 338:
+	{
+		if (global_data_ptr->action_iterations[338] == 1) { ch_man.load(&lobbybot_03); } else
+		if (global_data_ptr->action_iterations[338] == 2) { ch_man.load(&lobbybot_04); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -908,15 +915,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
-	case 48:
-	{
-		global_data_ptr->entry_map = &map_cave_02;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {3, 30};
-		global_data_ptr->ginger_position = {2, 30};
-		return NEW_MAP;
-		break;
-	}
 	case 51:
 	{
 		global_data_ptr->entry_map = &map_forest_01;
@@ -1053,17 +1051,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 68:
-	{
-		global_data_ptr->entry_map = &map_cave_03;
-		global_data_ptr->bg_track = &music_items::cave_01;
-		music::stop();
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {5, 23};
-		global_data_ptr->ginger_position = {6, 23};
-		return NEW_MAP;
-		break;
-	}
 	case 71:
 	{
 		global_data_ptr->entry_map = &map_forest_01;
@@ -1088,24 +1075,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {5, 15};
 		global_data_ptr->ginger_position = {4, 15};
-		return NEW_MAP;
-		break;
-	}
-	case 83:
-	{
-		global_data_ptr->entry_map = &map_cave_04;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {16, 3};
-		global_data_ptr->ginger_position = {15, 3};
-		return NEW_MAP;
-		break;
-	}
-	case 84:
-	{
-		global_data_ptr->entry_map = &map_forest_02;
-		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
-		global_data_ptr->jeremy_position = {2, 3};
-		global_data_ptr->ginger_position = {1, 3};
 		return NEW_MAP;
 		break;
 	}
@@ -2076,6 +2045,48 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->entry_map = &map_canter_01;
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {2, 20};
+		return NEW_MAP;
+		break;
+	}
+	case 48:
+	{
+		music_items::cave_01.play();
+		global_data_ptr->entry_map = &map_cave_02;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {3, 30};
+		global_data_ptr->ginger_position = {2, 30};
+		return NEW_MAP;
+		break;
+	}
+	case 68:
+	{
+		music_items::cave_01.play();
+		global_data_ptr->entry_map = &map_cave_03;
+		global_data_ptr->bg_track = &music_items::cave_01;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {5, 23};
+		global_data_ptr->ginger_position = {6, 23};
+		return NEW_MAP;
+		break;
+	}
+	case 83:
+	{
+		music_items::cave_01.play();
+		global_data_ptr->entry_map = &map_cave_04;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {16, 3};
+		global_data_ptr->ginger_position = {15, 3};
+		return NEW_MAP;
+		break;
+	}
+	case 84:
+	{
+		music_items::ambient_wind.play();
+		global_data_ptr->entry_map = &map_forest_02;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {2, 3};
+		global_data_ptr->ginger_position = {1, 3};
 		return NEW_MAP;
 		break;
 	}

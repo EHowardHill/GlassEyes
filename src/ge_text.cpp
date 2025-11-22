@@ -239,7 +239,11 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         else if (portrait == &sprite_items::db_ch_matt)
         {
             sound_items::snd_dialogue_matt.play(0.6);
-        } //
+        }
+        else if (portrait == &sprite_items::db_ch_lobbybot)
+        {
+            sound_items::snd_dialogue_matt.play(0.6);
+        }
         else if (portrait == &sprite_items::db_ch_mcwebb)
         {
             sound_items::snd_dialogue_mcwebb.play(0.6);

@@ -274,9 +274,9 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     }
                     case 322:
                     {
-                        if (global_data_ptr->action_iterations[306] < 1)
+                        if (global_data_ptr->action_iterations[322] < 1)
                         {
-                            global_data_ptr->action_iterations[210]++;
+                            global_data_ptr->action_iterations[322]++;
                             if (global_data_ptr->items[OBJ_TURKEY] == true)
                             {
                                 global_data_ptr->items[OBJ_TURKEY] = false;
@@ -292,6 +292,54 @@ int action_listener(map_manager *man, character_manager *ch_man)
                             }
                         }
 
+                        break;
+                    }
+                    case 335:
+                    {
+                        if (global_data_ptr->action_iterations[335] < 1)
+                        {
+                            if (global_data_ptr->items[OBJ_SOUP] == true)
+                            {
+                                global_data_ptr->items[OBJ_SOUP] = false;
+                                ch_man->load(&boutique_01b);
+                                global_data_ptr->action_iterations[335] = 1;
+                            }
+                            else
+                            {
+                                ch_man->load(&boutique_01);
+                                global_data_ptr->action_iterations[335] = 0;
+                            }
+                        }
+                        break;
+                    }
+                    case 336:
+                    {
+                        if (global_data_ptr->action_iterations[335] < 1)
+                        {
+                            ch_man->load(&boutique_0);
+                        }
+                        else if (global_data_ptr->action_iterations[336] < 1)
+                        {
+                            ch_man->load(&boutique_02);
+                            global_data_ptr->action_iterations[335] = 1;
+                        }
+                        break;
+                    }
+                    case 337:
+                    {
+                        if (global_data_ptr->action_iterations[337] < 1)
+                        {
+                            if (global_data_ptr->items[OBJ_SUIT] == true)
+                            {
+                                ch_man->load(&lobbybot_02);
+                                global_data_ptr->action_iterations[337] = 1;
+                            }
+                            else
+                            {
+                                global_data_ptr->action_iterations[337] = 0;
+                                ch_man->load(&lobbybot_01);
+                            }
+                        }
                         break;
                     }
                     default:
