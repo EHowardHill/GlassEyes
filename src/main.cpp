@@ -32,9 +32,7 @@ using namespace bn;
 
 int chapter_select()
 {
-
     auto bg = regular_bg_items::bg_chapter_select.create_bg(0, 0);
-
     int index = 0;
 
     {
@@ -42,56 +40,44 @@ int chapter_select()
         constexpr int c_h = -56;
 
         const char *ch_titles[7] = {
-            "Ch. 1",
-            "Ch. 2",
-            "Ch. 3",
-            "Ch. 4",
-            "Ch. 5",
-            "Ch. 6",
-            "Ch. 7"};
+            "Ch. 1", "Ch. 2", "Ch. 3", "Ch. 4",
+            "Ch. 5", "Ch. 6", "Ch. 7"};
 
         const char *ch_names[7] = {
-            "Exordium",
-            "Her",
-            "North by North",
-            "1000 Miles",
-            "Morning Bell",
-            "The Giantess",
-            "Always Like This"};
+            "Exordium", "Her", "North by North", "1000 Miles",
+            "Morning Bell", "The Giantess", "Always Like This"};
 
-        text titles[7] = {
-            {"Ch. 1", {c_w, c_h + (16 * 0)}},
-            {"Ch. 2", {c_w, c_h + (16 * 1)}},
-            {"Ch. 3", {c_w, c_h + (16 * 2)}},
-            {"Ch. 4", {c_w, c_h + (16 * 3)}},
-            {"Ch. 5", {c_w, c_h + (16 * 4)}},
-            {"Ch. 6", {c_w, c_h + (16 * 5)}},
-            {"Ch. 7", {c_w, c_h + (16 * 6)}}};
-
-        vector<text, 7> ch_titles_var;
-        vector<text, 7> ch_names_var;
+        list<unique_ptr<text>, 7> ch_titles_var;
+        list<unique_ptr<text>, 7> ch_names_var;
 
         auto heart = sprite_items::hearts.create_sprite(c_w - 20, c_h, 1);
 
         for (int t = 0; t < 7; t++)
         {
-            text ch_t = {ch_titles[t], {c_w, c_h + (16 * t)}};
-            ch_titles_var.push_back(ch_t);
-
-            text ch_n = {ch_names[t], {c_w + 64, c_h + (16 * t)}};
-            ch_names_var.push_back(ch_n);
+            // FIX: Use curly braces {} for aggregate initialization
+            // We also ensure the point is constructed with braces or explicit constructor depending on your point class
+            ch_titles_var.push_back(unique_ptr<text>(new text{ch_titles[t], {c_w, c_h + (16 * t)}}));
+            ch_names_var.push_back(unique_ptr<text>(new text{ch_names[t], {c_w + 64, c_h + (16 * t)}}));
         }
 
-        for (int t = 0; t < 7; t++)
+        // Helper lambda to simulate .at(index) behavior for a list
+        auto get_item = [](auto &list_container, int idx) -> text *
         {
-            ch_titles_var.at(t).render();
-            ch_names_var.at(t).render();
-        }
+            auto it = list_container.begin();
+            for (int i = 0; i < idx; ++i)
+                ++it;
+            return it->get();
+        };
 
-        ch_titles_var.at(index).color = COLOR_YELLOW;
-        ch_names_var.at(index).color = COLOR_YELLOW;
-        ch_titles_var.at(index).render();
-        ch_names_var.at(index).render();
+        for (auto &t : ch_titles_var)
+            t->render();
+        for (auto &n : ch_names_var)
+            n->render();
+
+        get_item(ch_titles_var, index)->color = COLOR_YELLOW;
+        get_item(ch_names_var, index)->color = COLOR_YELLOW;
+        get_item(ch_titles_var, index)->render();
+        get_item(ch_names_var, index)->render();
 
         bool selected = false;
 
@@ -99,40 +85,42 @@ int chapter_select()
         {
             if (keypad::down_pressed())
             {
-                ch_titles_var.at(index).color = COLOR_WHITE;
-                ch_names_var.at(index).color = COLOR_WHITE;
-                ch_titles_var.at(index).render();
-                ch_names_var.at(index).render();
+                get_item(ch_titles_var, index)->color = COLOR_WHITE;
+                get_item(ch_names_var, index)->color = COLOR_WHITE;
+                get_item(ch_titles_var, index)->render();
+                get_item(ch_names_var, index)->render();
 
                 index++;
                 if (index > 6)
                     index = 0;
+
                 sound_items::snd_select.play();
                 heart.set_y(c_h + (16 * index));
 
-                ch_titles_var.at(index).color = COLOR_YELLOW;
-                ch_names_var.at(index).color = COLOR_YELLOW;
-                ch_titles_var.at(index).render();
-                ch_names_var.at(index).render();
+                get_item(ch_titles_var, index)->color = COLOR_YELLOW;
+                get_item(ch_names_var, index)->color = COLOR_YELLOW;
+                get_item(ch_titles_var, index)->render();
+                get_item(ch_names_var, index)->render();
             }
 
             if (keypad::up_pressed())
             {
-                ch_titles_var.at(index).color = COLOR_WHITE;
-                ch_names_var.at(index).color = COLOR_WHITE;
-                ch_titles_var.at(index).render();
-                ch_names_var.at(index).render();
+                get_item(ch_titles_var, index)->color = COLOR_WHITE;
+                get_item(ch_names_var, index)->color = COLOR_WHITE;
+                get_item(ch_titles_var, index)->render();
+                get_item(ch_names_var, index)->render();
 
                 index--;
                 if (index < 0)
                     index = 6;
+
                 sound_items::snd_select.play();
                 heart.set_y(c_h + (16 * index));
 
-                ch_titles_var.at(index).color = COLOR_YELLOW;
-                ch_names_var.at(index).color = COLOR_YELLOW;
-                ch_titles_var.at(index).render();
-                ch_names_var.at(index).render();
+                get_item(ch_titles_var, index)->color = COLOR_YELLOW;
+                get_item(ch_names_var, index)->color = COLOR_YELLOW;
+                get_item(ch_titles_var, index)->render();
+                get_item(ch_names_var, index)->render();
             }
 
             if (keypad::r_pressed() && keypad::l_pressed())
@@ -145,45 +133,21 @@ int chapter_select()
                 switch (index)
                 {
                 case 0:
-                {
                     return CH_CUTSCENE_01;
-                    break;
-                }
                 case 1:
-                {
                     return CH_CUTSCENE_02;
-                    break;
-                }
                 case 2:
-                {
                     return CH_CUTSCENE_03;
-                    break;
-                }
                 case 3:
-                {
                     return CH_CUTSCENE_05;
-                    break;
-                }
                 case 4:
-                {
                     return CH_CUTSCENE_06;
-                    break;
-                }
                 case 5:
-                {
                     return CH_CUTSCENE_08;
-                    break;
-                }
                 case 6:
-                {
                     return CH_CUTSCENE_09;
-                    break;
-                }
                 default:
-                {
                     return CUTSCENE_01;
-                    break;
-                }
                 }
             }
 
@@ -199,12 +163,6 @@ int main()
     global_data_ptr->jeremy_position = {0, 0};
     global_data_ptr->ginger_position = {0, 0};
     global_data_ptr->sebellus_position = {0, 0};
-
-    /**/
-    global_data_ptr->jeremy_position = {4, 12};
-    global_data_ptr->entry_map = &map_church_01;
-    navigate_map();
-    /**/
 
     int value = NEW_CHAPTER;
     {
@@ -226,6 +184,7 @@ int main()
 
     while (true)
     {
+        BN_LOG("Chapter: ", global_data_ptr->process_stage);
         global_data_ptr->inverted_controls = false;
 
         switch (value)

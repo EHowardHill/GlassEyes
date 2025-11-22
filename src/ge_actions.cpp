@@ -329,7 +329,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     {
                         if (global_data_ptr->action_iterations[337] < 1)
                         {
-                            if (global_data_ptr->items[OBJ_SUIT] == true)
+                            if (global_data_ptr->items[OBJ_CLOTHES] == true)
                             {
                                 ch_man->load(&lobbybot_02);
                                 global_data_ptr->action_iterations[337] = 1;

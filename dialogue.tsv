@@ -1147,7 +1147,7 @@ talk_177
 	db_ch_ginger	EM_SAD		Think about	some things.		COLOR_PURPLE								
 															
 talk_177_alt_01															
-	db_ch_ginger	EM_HAPPY		Aw, that's my	favorite.										
+	db_ch_ginger	EM_EXCITED		Aw, that's my	favorite!										
 	db_ch_ginger	EM_SIDE_EYE		Anyways..	That's all I have	to say.									
 	db_ch_ginger	EM_SAD		I need some	time to, uh..										
 	db_ch_ginger	EM_SAD		Think about	some things.		COLOR_PURPLE								
@@ -1273,7 +1273,7 @@ chat_197
 															
 visker_final															
 	db_ch_visker	EM_DEFAULT	ACT_MUSIC_VISKER	HUMAN!	You're alive?!										
-	db_ch_ginger	EM_DEFAULT		Y-You two know	each other?										
+	db_ch_ginger	EM_DEFAULT	ACT_WALK	Y-You two know	each other?					CHAR_VISKER		{8,7}			
 	db_ch_visker	EM_SULLEN		It seems human	fared better than	previous home owner.									
 	db_ch_ginger	EM_WAT		W-What happened to	the people inside	the house?									
 	db_ch_visker	EM_SIDE_EYE		House humans	tasted.. Not so	good.									
@@ -1284,11 +1284,12 @@ visker_final
 	db_ch_sebellus	EM_DEFAULT		Why don't you	just let us	through, pal.									
 	db_ch_visker	EM_ANGRY		Visker want to	eat THAT human.	But..									
 	db_ch_visker	EM_DEFAULT		Visker is patient	and will wait for	human to die.									
-	db_ch_sebellus	EM_DEFAULT	ACT_WALK	Thank you.						CHAR_VISKER		{16,7}			
+	db_ch_sebellus	EM_DEFAULT	ACT_WALK	Thank you.						CHAR_VISKER		{17,7}			
+		EM_SKIP	ACT_MUSIC_WIND												
 															
 visker_final_alt_01															
 	db_ch_visker	EM_ANGRY	ACT_MUSIC_VISKER	HUMAN!	Human forgot	TURKEY!									
-	db_ch_ginger	EM_SIDE_EYE		You know this guy??											
+	db_ch_ginger	EM_SIDE_EYE	ACT_WALK	You know this guy??						CHAR_VISKER		{8,7}			
 	db_ch_visker	EM_DEFAULT		Turkey was	SPECIFICALLY	requested!									
 	db_ch_ginger	EM_SIDE_EYE		What is he	talking about??										
 	db_ch_visker	EM_ANGRY		SILENCE, GREEN	THING! Visker	will FIGHT NOW!									
@@ -1296,8 +1297,9 @@ visker_final_alt_01
 	db_ch_visker	EM_SIDE_EYE		Uhhh.. Visker.. was	not aware of scary	mueto with sword.									
 	db_ch_visker	EM_SIDE_EYE		..Visker realizes	that three-on-one	fight is not wise.									
 	db_ch_visker	EM_SAD		Visker will INSTEAD	steal everything and	run away.									
-	db_ch_ginger	EM_WAT	ACT_WALK	HEY!						CHAR_VISKER		{16,7}			
+	db_ch_ginger	EM_WAT	ACT_WALK	HEY!						CHAR_VISKER		{17,7}			
 	db_ch_ginger	EM_ANGRY		Jerk..											
+		EM_SKIP	ACT_MUSIC_WIND												
 															
 chat_mcwebb															
 	db_ch_mcwebb	EM_DEFAULT		Well, howdy.	I don't figure that	was Y'ALL's dragon?									
@@ -1307,7 +1309,7 @@ chat_mcwebb
 	db_ch_mcwebb	EM_DEFAULT		Typically I sell	ferry rides over	the channel, but..									
 	db_ch_mcwebb	EM_SIDE_EYE	ACT_MUSIC_FADEOUT	I'm not keen to	being killed by	a dragon, you see.									
 	db_ch_mcwebb	EM_DEFAULT		Well, go ahead.	On you git.					CHAR_MCWEBB	&mcwebb_dont				
-			ACT_PROGRESS			CUTSCENE_CHANNEL									
+			ACT_PROGRESS							CUTSCENE_CHANNEL					
 															
 convo_obj_ticket															
 				You've got the	golden ticket!										
@@ -2223,7 +2225,7 @@ cutscene_05
 		EM_SKIP	ACT_PROGRESS							DARK_TO_DARK					
 															
 cutscene_06															
-	db_ch_henry	EM_DEFAULT		Are the others down	the chute with the	equipment?				CHAR_VISTA_YOUNG	&vista_young_up				
+	db_ch_henry	EM_DEFAULT	ACT_MUSIC_WIND	Are the others down	the chute with the	equipment?				CHAR_VISTA_YOUNG	&vista_young_up				
 	db_ch_ginger	EM_SIDE_EYE		Yes.. They gave the	signal, they're ok..		COLOR_PURPLE								
 	db_ch_henry	EM_HAPPY	ACT_WALK	Don't be nervous.	The police never	check the garbage.				CHAR_HENRY		{7,4}			
 	db_ch_henry	EM_DEFAULT		We can escape as	long as we're	discrete.									
@@ -2257,7 +2259,7 @@ cutscene_06
 	db_ch_ginger	EM_DEFAULT		But you gave up your	eye to make me,	didn't you?	COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		I have two eyes.	I can do this one	more time.									
 	db_ch_henry	EM_DEFAULT	ACT_MUSIC_FADEOUT	What do you say?											
-		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_07					
+		EM_SKIP	ACT_PROGRESS							WAKEY_WAKEY					
 															
 cutscene_08															
 		EM_SKIP								CHAR_VISTA_02	&vista_throne				
