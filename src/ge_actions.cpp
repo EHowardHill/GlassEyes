@@ -296,19 +296,14 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     }
                     case 335:
                     {
-                        if (global_data_ptr->action_iterations[335] < 1)
+                        if (global_data_ptr->items[OBJ_SOUP] == true)
                         {
-                            if (global_data_ptr->items[OBJ_SOUP] == true)
-                            {
-                                global_data_ptr->items[OBJ_SOUP] = false;
-                                ch_man->load(&boutique_01b);
-                                global_data_ptr->action_iterations[335] = 1;
-                            }
-                            else
-                            {
-                                ch_man->load(&boutique_01);
-                                global_data_ptr->action_iterations[335] = 0;
-                            }
+                            global_data_ptr->items[OBJ_SOUP] = false;
+                            ch_man->load(&boutique_01b);
+                        }
+                        else if (global_data_ptr->variables[BEAR_DEFEAT] == false)
+                        {
+                            ch_man->load(&boutique_01);
                         }
                         break;
                     }
@@ -391,14 +386,16 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     }
                     case 336:
                     {
-                        if (global_data_ptr->action_iterations[335] < 1)
+                        if (global_data_ptr->variables[BEAR_DEFEAT] == false)
                         {
                             ch_man->load(&boutique_0);
                         }
                         else if (global_data_ptr->action_iterations[336] < 1)
                         {
-                            ch_man->load(&boutique_02);
-                            global_data_ptr->action_iterations[335] = 1;
+                            if (global_data_ptr->items[OBJ_CLOTHES] == false)
+                            {
+                                ch_man->load(&boutique_02);
+                            }
                         }
                         break;
                     }

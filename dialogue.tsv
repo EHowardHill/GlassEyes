@@ -975,75 +975,21 @@ dark_talk
 		EM_SKIP	ACT_MUSIC_RESET							CHAR_JEREMY	&jeremy_lay_down				
 		EM_SKIP								CHAR_GINGER	&ginger_sit_sad				
 		EM_SKIP								CHAR_FIRE	&fire_on				
-	db_ch_ginger	EM_SAD		Hey, uh..	Now that we're	settled,									
-	db_ch_ginger	EM_DEFAULT		I imagine you	probably have	questions.									
-				No not really	Yeah								&dark_talk_alt_01		
-	db_ch_ginger	EM_SAD		Well.. Here goes.	Muetos aren't what	we might seem.									
-	db_ch_ginger	EM_SULLEN		I don't know how	much you know	about us, but..									
-	db_ch_ginger	EM_SULLEN		Our life cycle	goes like this,	right?									
-	db_ch_ginger	EM_SULLEN		We pop out of	tunnels in the	ground,									
-	db_ch_ginger	EM_SULLEN		Already knowing	how to talk and	all that,									
-	db_ch_ginger	EM_SULLEN		Then we find a	village and live	for a couple years,									
-	db_ch_ginger	EM_SULLEN		Until we die.	Then they throw	our bodies into									
-	db_ch_ginger	EM_SULLEN		the tunnels, where	it starts over	again.									
-	db_ch_ginger	EM_SAD		"""Where do the"	"bodies come from,"""	you might ask.									
-				I won't ask	Right								&dark_talk_alt_02		
-	db_ch_ginger	EM_SULLEN		Canterbury.	There's a man there,	Dr. Henry Erickson.									
-	db_ch_ginger	EM_SIDE_EYE		You might have	heard of him	before.									
-	db_ch_ginger	EM_SULLEN		Well.. He's still	alive. And he makes	us. In a lab.									
-	db_ch_ginger	EM_SAD		But that's not even	the worst part of it	all.									
-	db_ch_ginger	EM_SAD		Every mueto you	meet.. Has the piece	of a human soul									
-	db_ch_ginger	EM_SAD		inside of them.	Slowly killing the	"human ""donor""."									
-	db_ch_ginger	EM_SAD		You know how	all the humans in	the city act..									
-	db_ch_ginger	EM_SAD		Off? Lethargic.	Distressed.	Paranoid.									
-	db_ch_ginger	EM_SAD		It's because Henry	is using evil magic	to siphon souls									
-	db_ch_ginger	EM_SAD		into these meat	puppets. I don't	know his goal.									
-	db_ch_ginger	EM_SULLEN		And how do I	know all this?										
-				I don't care	How?								&dark_talk_alt_03		
-	db_ch_ginger	EM_DEFAULT		Because I'm one	of only two muetos	in the world									
-	db_ch_ginger	EM_DEFAULT		Who had an	ENTIRE human soul	moved over.									
-	db_ch_ginger	EM_SULLEN		I was a human	not even that	long ago.									
-	db_ch_ginger	EM_SAD		I've been told my	human body is	in a coma.									
-	db_ch_ginger	EM_SULLEN		Anyways.. I want	to get to Canterbury	to stop this.									
-	db_ch_ginger	EM_SULLEN		Something very,	very wrong is	happening.									
-	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_01															
-	db_ch_ginger	EM_DEFAULT		Like what?											
-				Who are you?	Why are you so green								&dark_talk_alt_04		
-	db_ch_ginger	EM_LAUGH		You're not gonna	believe this, but..										
-	db_ch_ginger	EM_SAD		I'm, uh..	Princess Selari.										
-	db_ch_ginger	EM_EMBARRASSED		I ran away from	home because of..	personal reasons.									
-	db_ch_ginger	EM_DEFAULT		There's someone	I need to see in	Canterbury.									
-	db_ch_ginger	EM_DEFAULT		It's the best way	for you to get home	too, though, so..									
-	db_ch_ginger	EM_DEFAULT		I'm not putting	you out or anything	like that.									
-	db_ch_ginger	EM_HAPPY		I'm very happy I	bumped into you,	I wouldn't have									
-	db_ch_ginger	EM_HAPPY		been able to get	this far without	you.									
-	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_04															
-	db_ch_ginger	EM_LAUGH		The limes.	You are what you	eat and all that.									
-	db_ch_ginger	EM_SULLEN		But seriously..	I'm a Marelon.	We, uh..									
-	db_ch_ginger	EM_DEFAULT		We're a special	kind of mueto that	is very rare.									
-	db_ch_ginger	EM_SIDE_EYE		There are only	three of us in the	whole world.									
-	db_ch_ginger	EM_DEFAULT		We're green, and..	well.. We, uh.. Play	a certain role									
-	db_ch_ginger	EM_DEFAULT		in the kingdom.											
-	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_02															
-	db_ch_ginger	EM_EMBARRASSED		It's uh..	pretty gross, but..	Well..									
-	db_ch_ginger	EM_SULLEN		All I'll say for now	is that we come	from Canterbury,									
-	db_ch_ginger	EM_SULLEN		and there's a, uh..	reason I want to go.										
-	db_ch_ginger	EM_SULLEN		It's the best way	for you to get home	too, though, so..									
-	db_ch_ginger	EM_DEFAULT		I'm not putting	you out or anything.	It's serendipitous.									
-	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_03															
-	db_ch_ginger	EM_DEFAULT		It's because, I'm..	uh..										
+	db_ch_ginger	EM_SIDE_EYE		So, uh.. I think	it's important that	I come clean.									
+	db_ch_ginger	EM_EMBARRASSED		My name.. isn't	"actually ""Ginger""."										
+	db_ch_ginger	EM_SAD		"It's ""Virginia"", I"	"just go by ""Ginger"""	because it's short.									
+	db_ch_ginger	EM_LAUGH		Whew.. that feels	good to get off my	chest..									
+	db_ch_ginger	EM_EMBARRASSED		So.. the war.. uh..	Between the humans	and the muetos..									
+	db_ch_ginger	EM_DISAPPOINTED		It's all.. well..	It's not fake, but	it's.. hmm..									
+	db_ch_ginger	EM_SAD		..anyway, I'm trying	to get to Canterbury	to meet someone.									
+	db_ch_ginger	EM_EMBARRASSED		Okay, I'll just say	it. I know THE	Dr. Henry Erickson.									
+	db_ch_ginger	EM_EMBARRASSED		It's a long story.	But I think he'll	listen to me!									
+	db_ch_ginger	EM_DEFAULT		I think I have a	chance to make it	all stop.									
+	db_ch_ginger	EM_EMBARRASSED		I'm not trying to	take advantage of	you, though..									
+	db_ch_ginger	EM_DEFAULT		There's a train	there that can take	you home.									
+	db_ch_ginger	EM_SIDE_EYE		..Have you ever felt	like you were on a	special mission?									
+	db_ch_ginger	EM_DEFAULT		Like there's a job	only you can do?	It's like that.									
+	db_ch_ginger	EM_LAUGH		I know it sounds	delusional.. but,	uh.. Yeah.									
 	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
 		EM_SKIP								CHAR_GINGER	&anim_stand				
 															
@@ -1122,9 +1068,11 @@ talk_177
 				He's chill	What the heck man								&talk_177_alt_02		
 	db_ch_ginger	EM_LAUGH		Oh, whew..	I was a bit worried.	He's a lot.									
 	db_ch_ginger	EM_SIDE_EYE		You probably	noticed his.. Uh..	His eyes.									
-	db_ch_ginger	EM_DEFAULT		He has what they	"call ""Glass Eyes""."										
+	db_ch_ginger	EM_DEFAULT		His eyes have	special runes on	them.									
+	db_ch_ginger	EM_SIDE_EYE		And, uh..	Because of that..	They, uh..									
 	db_ch_ginger	EM_DEFAULT		He can see things	other people	can't.									
 	db_ch_ginger	EM_DEFAULT		It was to	compensate for..	other things.									
+	db_ch_ginger	EM_DEFAULT		They were given to	him shortly after	he was first made.									
 	db_ch_ginger	EM_SIDE_EYE		I'm glad he's in	there.. I don't want	to talk about									
 	db_ch_ginger	EM_SIDE_EYE		this in front	of him.										
 				"""I can hear you"	"by the way!"""										
@@ -1205,14 +1153,13 @@ dog_and_pony
 				*iconic	theme song*										scene_tv_02
 				SUP DUDES!	Welcome to the	DOG & PONY SHOW!	COLOR_BLUE								scene_tv_03
 				Elliott.. That's	not what we're	calling it, right?	COLOR_RED								scene_tv_03
-				We've got a ton of	stuff planned for	you all today..	COLOR_BLUE								scene_tv_04
-				I'm not a dog, and	I know you know	"""dog"" has a"	COLOR_RED								scene_tv_04
-				..slightly	pejorative	connotation.	COLOR_RED								scene_tv_04
+				We've got a ton of	stuff planned for	you all today..	COLOR_BLUE								scene_tv_03
+				I'm not a dog, and	I know you know	"""dog"" has a"	COLOR_RED								scene_tv_03
+				..slightly	pejorative	connotation.	COLOR_RED								scene_tv_03
 				See, I've got	this super cool	cannon here-	COLOR_BLUE								scene_tv_05
 				I get the joke.	It's cute. I'm	just thinking..	COLOR_RED								scene_tv_05
 				AND WE'RE GONNA	LAUNCH TODD OUT	OF IT	COLOR_BLUE								scene_tv_05
-				..											scene_tv_01
-				WE HAVE DETECTED	AN UNAUTHORIZED	TRANSMISSION									scene_tv_01
+			ACT_MUSIC_WIND	WE HAVE DETECTED	AN UNAUTHORIZED	TRANSMISSION									scene_tv_01
 				PLEASE STAY TUNED,	PROGRAMMING WILL	RETURN SHORTLY									scene_tv_01
 															
 sleep_01															
@@ -1245,13 +1192,7 @@ have_to_go_3
 	db_ch_ginger	EM_DISAPPOINTED	ACT_SHAKE_OFF	Ugh.. It stinks	down here.										
 	db_ch_sebellus	EM_SIDE_EYE		It's always	something with you,	isn't it.									
 	db_ch_ginger	EM_ANGRY		Sebellus, you're	not being funny.										
-	db_ch_sebellus	EM_DEFAULT		Why don't we	leave that up to	the human.									
-				Please shut up.	You're fine.								&have_to_go_3_alt_01		
-	db_ch_sebellus	EM_SIDE_EYE		Turning my own	baby sister against	me, aye?									
-	db_ch_sebellus	EM_DEFAULT		I see how it is.											
-															
-have_to_go_3_alt_01															
-	db_ch_sebellus	EM_DEFAULT		See? I've still	got it in me.										
+	db_ch_sebellus	EM_SIDE_EYE		Hey, if we weren't	running for our life	you would'a laughed.									
 															
 have_to_go_4															
 		ACT_SFX_EXPLOSION													

@@ -4,6 +4,7 @@
 enum VARIABLES
 {
     GHOST_TALK,
+    BEAR_DEFEAT,
     VARIABLES_SIZE
 };
 
