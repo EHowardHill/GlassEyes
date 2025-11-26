@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
  <tileset firstgid="1" source="../tilesets/room02.tsx"/>
- <tileset firstgid="65" source="../tilesets/blue-labels.tsx"/>
+ <tileset firstgid="81" source="../tilesets/blue-labels.tsx"/>
  <layer id="1" name="decor" width="10" height="10">
   <data encoding="csv">
 0,0,55,0,0,0,0,0,0,0,
-0,0,0,0,0,64,0,64,64,0,
-0,1,1,1,1,64,64,0,0,0,
-0,46,64,64,64,64,33,35,37,0,
-0,64,24,26,26,26,26,28,64,0,
-0,64,25,27,27,27,27,29,64,0,
-0,64,64,0,64,64,47,64,64,0,
-0,44,64,64,64,64,64,45,64,0,
-0,45,64,64,64,64,64,64,64,0,
-0,0,0,0,64,64,0,0,0,0
+0,0,0,0,0,2,0,64,64,0,
+0,1,1,1,1,2,64,0,0,0,
+0,46,2,2,2,2,33,35,37,0,
+0,2,24,26,26,26,26,28,64,0,
+0,2,25,27,27,27,27,29,2,0,
+0,2,2,0,2,2,47,2,2,0,
+0,44,2,2,2,2,2,45,2,0,
+0,45,2,2,2,2,2,2,2,0,
+0,0,0,0,2,2,0,0,0,0
 </data>
  </layer>
  <layer id="2" name="colliders" width="10" height="10">
@@ -33,7 +33,7 @@
  <layer id="3" name="characters" width="10" height="10">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,78,0,0,
+0,0,0,0,0,0,0,94,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
@@ -44,18 +44,18 @@
 0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="4" name="actions" width="10" height="10" visible="0">
+ <layer id="4" name="actions" width="10" height="10">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
-0,168,169,170,171,0,0,0,0,0,
-0,168,169,170,171,0,164,164,164,0,
-0,0,0,0,0,0,164,164,164,0,
+0,184,185,186,187,0,0,0,0,0,
+0,184,185,186,187,0,180,180,180,0,
+0,0,0,0,0,0,180,180,180,0,
 0,0,0,0,0,0,0,0,0,0,
-0,167,0,0,0,0,0,0,0,0,
-0,167,167,0,0,0,0,0,0,0,
-0,167,0,0,0,0,0,0,0,0,
-0,0,0,0,166,166,0,0,0,0
+0,183,0,0,0,0,0,0,0,0,
+0,183,183,0,0,0,0,0,0,0,
+0,183,0,0,0,0,0,0,0,0,
+0,0,0,0,182,182,0,0,0,0
 </data>
  </layer>
  <layer id="5" name="metadata" width="10" height="10">

@@ -22,7 +22,6 @@
 #include "bn_regular_bg_items_bg_dialogue_box.h"
 
 #include "bn_sprite_items_db_ch_jeremy.h"
-#include "bn_sprite_items_db_ch_vista.h"
 #include "bn_sprite_items_db_ch_visker.h"
 #include "bn_sprite_items_db_ch_visker_wife.h"
 #include "bn_sprite_items_db_ch_ginger.h"
@@ -140,7 +139,7 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
 
     if (index % 2 == 0 && !skip_sound)
     {
-        if (portrait == &sprite_items::db_ch_vista || portrait == &sprite_items::db_ch_ginger)
+        if (portrait == &sprite_items::db_ch_ginger)
         {
             sound_items::snd_dialogue_vista.play(0.7);
         }

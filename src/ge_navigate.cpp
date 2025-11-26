@@ -16,7 +16,6 @@
 
 // Face Sprites
 #include "bn_sprite_items_db_ch_jeremy.h"
-#include "bn_sprite_items_db_ch_vista.h"
 
 #include "bn_sprite_items_spr_vista.h"
 

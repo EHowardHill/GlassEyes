@@ -1512,7 +1512,7 @@ dock_ginger_01
 	db_ch_ginger	EM_SIDE_EYE		Sebellus and I	figured you could	use the sleep.									
 	db_ch_ginger	EM_DEFAULT		..											
 	db_ch_ginger	EM_DEFAULT		Y'know.. I've been	thinking a little..										
-	db_ch_ginger	EM_DEFAULT		Until I became	Selari.. Why was I	here?									
+	db_ch_ginger	EM_DEFAULT		Until I came to	the Old World.. Why was I	here?									
 	db_ch_ginger	EM_DEFAULT		All those school	classes, my family,	my friends..									
 	db_ch_ginger	EM_DEFAULT		Just to become a	talking cat in a	foreign country.									
 	db_ch_ginger	EM_DEFAULT		And it wasn't a big	thing either.	I had a dream.									
@@ -1594,7 +1594,7 @@ vista_01
 	db_ch_vista_02	EM_SAD		I hope you	understand how close	to death you were.				CHAR_VISTA_LIFT	&vista_jeremy_lift_02				
 	db_ch_ginger	EM_DEFAULT		He's trying to get	to Canterbury so he	can go back home!									
 	db_ch_vista_02	EM_SULLEN		What a coincidence.	That is where I was	headed as well.									
-	db_ch_vista_02	EM_SULLEN		Why don't the three	of us take the	train, yes?									
+	db_ch_vista_02	EM_SULLEN		Why don't the four	of us take the	train, yes?									
 	db_ch_sebellus	EM_DEFAULT		Alright, then!											
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_TRAIN					
 															
@@ -1715,7 +1715,7 @@ kiara_01
 		EM_SKIP	ACT_MUSIC_GINGER												
 	db_ch_kiara	EM_EMBARRASSED	ACT_WALK	U-Uh.. This office	is off-limits to the	public, sir..				CHAR_KIARA		{5,3}			
 	db_ch_kiara	EM_WAT		Oh! Are you with	the city?										
-	db_ch_kiara	EM_EMBARRASSED		(This is so	embarrassing..)			SIZE_SMALL							
+	db_ch_kiara	EM_EMBARRASSED		(This is so	embarrassing..)										
 	db_ch_kiara	EM_HAPPY		Howdy-doody!	My name is	Kiara Scarlett.									
 	db_ch_kiara	EM_SIDE_EYE		I-I guess if you	have any questions,	feel free to ask!									
 		EM_SKIP	ACT_CUE_KIARA												
@@ -2091,7 +2091,7 @@ cutscene_02
 				This machine is	designed to print	complex proteins.									scene_02_01
 				I sold one to the	city to help solve	our hunger problems.									scene_02_01
 				But all life is made	from proteins, yes?										scene_02_01
-				It that where the	bodies in the flasks	come from?	COLOR_BLUE								scene_02_01
+				Is that where the	bodies in the flasks	come from?	COLOR_BLUE								scene_02_01
 				I've been working on	combining human and	animal genes.									scene_02_02
 				I think that these	could repopulate	the forests.									scene_02_02
 				Their biology is	viable but there	are still issues.									scene_02_02
@@ -2181,7 +2181,7 @@ cutscene_05
 	db_ch_henry	EM_HAPPY		Vista, I promise you	that when this	research is done,									
 	db_ch_henry	EM_HAPPY		You will be able to	see the sun.										
 	db_ch_ginger	EM_HAPPY		..And I won't have	to lose anything?	Do you promise?	COLOR_PURPLE								
-	db_ch_henry	EM_DEFAULT		The contrary. I have	plans. And if they	all work out..									
+	db_ch_henry	EM_DEFAULT		Of course. I have	plans. And if they	all work out..									
 	db_ch_henry	EM_HAPPY	ACT_MUSIC_FADEOUT	We'll have	everything.										
 		EM_SKIP	ACT_PROGRESS							DARK_TO_DARK					
 															
@@ -2242,7 +2242,7 @@ cutscene_08
 	db_ch_ginger	EM_SAD		Virginia, ma'am.	People call me	"""Ginger"", though."									
 	db_ch_sebellus	EM_CONFUSED		..so? Is it true?	That Gingers don't	have souls?									
 	db_ch_vista_02	EM_DEFAULT		I see.	Constance, you may	excuse us now.									
-	db_ch_vista_02	EM_DEFAULT	ACT_WALK	Please forgive my	son, Sebellus.					CHAR_CONSTANCE		{-1, 5}			
+	db_ch_vista_02	EM_DEFAULT	ACT_WALK	Please forgive my	son, Sebellus.					CHAR_CONSTANCE		{-2, 5}			
 	db_ch_vista_02	EM_DEFAULT		Sebellus, go with	Constance to the	dining hall.									
 	db_ch_sebellus	EM_HAPPY		Yes, ma'am.											
 	db_ch_vista_02	EM_HAPPY	ACT_WALK	Ginger.. yes?	It is an honor to	welcome you.				CHAR_SEBELLUS		{-1, 5}			

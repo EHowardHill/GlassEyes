@@ -3947,12 +3947,6 @@
                 ]
             }
         },
-        "CH_CUTSCENE_04": {
-            "map": "cutscene_lab_room_02",
-            "cutscenes": [
-                "Buffer"
-            ]
-        },
         "CH_CUTSCENE_06": {
             "map": "cutscene_garbage_chute",
             "bg_track": "ambient_wind",
@@ -4064,6 +4058,13 @@
         "ENDING_01_PART_04": {
             "map": "ginger_room_cutscene",
             "bg_track": "theme_anata"
+        },
+        "CH_CUTSCENE_04": {
+            "map": "cutscene_lab_room_02",
+            "bg_track": "ambient_wind",
+            "cutscenes": [
+                "Buffer"
+            ]
         }
     }
 }
