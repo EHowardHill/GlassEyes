@@ -4,7 +4,6 @@ final = ""
 
 for file in os.listdir("src"):
 
-
     if file not in ["ge_dialogue.cpp"]:
 
         with open(os.path.join("src", file), "r") as f:

@@ -420,8 +420,9 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	}
 	case 266:
 	{
-		music_items::ambient_wind.play();
 		global_data_ptr->entry_map = &map_lab_04;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {11, 2};
 		global_data_ptr->kiara_position = {12, 2};
@@ -462,16 +463,6 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[276] == 1) { ch_man.load(&kiara_bed); } else
 		{ };
-		break;
-	}
-	case 277:
-	{
-		music_items::ambient_heartbeat.play();
-		global_data_ptr->entry_map = &map_lab_path;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {4, 14};
-		global_data_ptr->kiara_position = {0, 0};
-		return NEW_MAP;
 		break;
 	}
 	case 286:
@@ -574,8 +565,9 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	}
 	case 301:
 	{
-		music_items::ambient_birds.play();
 		global_data_ptr->entry_map = &map_castle_secret_garden;
+		global_data_ptr->bg_track = &music_items::ambient_birds;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->ginger_position = {6, 46};
 		return NEW_MAP;
@@ -589,8 +581,9 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	}
 	case 304:
 	{
-		music_items::ambient_heartbeat.play();
 		global_data_ptr->entry_map = &map_castle_secret_tunnel;
+		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->ginger_position = {5, 22};
 		return NEW_MAP;
@@ -610,8 +603,9 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	}
 	case 169:
 	{
-		music_items::theme_anata.play();
 		global_data_ptr->entry_map = &map_room_02;
+		global_data_ptr->bg_track = &music_items::theme_anata;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {9, 11};
 		global_data_ptr->ginger_position = {0, 0};
@@ -646,8 +640,9 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	}
 	case 326:
 	{
-		music_items::shop.play();
 		global_data_ptr->entry_map = &map_shop_02;
+		global_data_ptr->bg_track = &music_items::shop;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {1, 5};
 		return NEW_MAP;
@@ -655,8 +650,9 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	}
 	case 327:
 	{
-		music_items::bg_canter_02.play();
 		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg_track = &music_items::bg_canter_02;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {30, 13};
 		return NEW_MAP;
@@ -679,8 +675,9 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	}
 	case 331:
 	{
-		music_items::ambient_wind.play();
 		global_data_ptr->entry_map = &map_church_01;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {4, 12};
 		return NEW_MAP;
@@ -702,6 +699,27 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		if (global_data_ptr->action_iterations[338] == 1) { ch_man.load(&lobbybot_03); } else
 		if (global_data_ptr->action_iterations[338] == 2) { ch_man.load(&lobbybot_04); } else
 		{ };
+		break;
+	}
+	case 342:
+	{
+		ch_man.load(&door_locked);
+		break;
+	}
+	case 343:
+	{
+		ch_man.load(&hotel_bed);
+		break;
+	}
+	case 277:
+	{
+		global_data_ptr->entry_map = &map_castle_ginger;
+		global_data_ptr->bg_track = &music_items::theme_anata;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {0, 0};
+		global_data_ptr->kiara_position = {0, 0};
+		return NEW_MAP;
 		break;
 	}
 	}
@@ -1498,8 +1516,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 208:
 	{
-		music_items::cave_01.play();
 		global_data_ptr->entry_map = &map_beach_cave;
+		global_data_ptr->bg_track = &music_items::cave_01;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {6, 3};
 		global_data_ptr->ginger_position = {6, 4};
@@ -1509,8 +1528,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 209:
 	{
-		music_items::forest_01.play();
 		global_data_ptr->entry_map = &map_beach_02b;
+		global_data_ptr->bg_track = &music_items::forest_01;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {20, 2};
 		global_data_ptr->ginger_position = {20, 3};
@@ -1570,7 +1590,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 218:
 	{
-		music_items::bg_flayithro.play();
 		global_data_ptr->entry_map = &map_flayithro_01;
 		global_data_ptr->bg_track = &music_items::bg_flayithro;
 		music::stop();
@@ -1603,8 +1622,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 221:
 	{
-		music_items::shop.play();
 		global_data_ptr->entry_map = &map_flayithro_shop;
+		global_data_ptr->bg_track = &music_items::shop;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {2, 22};
 		global_data_ptr->ginger_position = {1, 22};
@@ -1614,8 +1634,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 222:
 	{
-		music_items::bg_flayithro.play();
 		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->bg_track = &music_items::bg_flayithro;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {11, 21};
 		global_data_ptr->ginger_position = {10, 21};
@@ -1625,8 +1646,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 223:
 	{
-		music_items::z02_the_champ.play();
 		global_data_ptr->entry_map = &map_flayithro_soup;
+		global_data_ptr->bg_track = &music_items::z02_the_champ;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {3, 6};
 		global_data_ptr->ginger_position = {4, 6};
@@ -1642,8 +1664,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 229:
 	{
-		music_items::bg_hotel.play();
 		global_data_ptr->entry_map = &map_flayithro_hotel;
+		global_data_ptr->bg_track = &music_items::bg_hotel;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {4, 22};
 		global_data_ptr->ginger_position = {3, 22};
@@ -1653,8 +1676,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 230:
 	{
-		music_items::bg_flayithro.play();
 		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->bg_track = &music_items::bg_flayithro;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {30, 20};
 		global_data_ptr->ginger_position = {31, 20};
@@ -1664,8 +1688,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 224:
 	{
-		music_items::bg_flayithro.play();
 		global_data_ptr->entry_map = &map_flayithro_01;
+		global_data_ptr->bg_track = &music_items::bg_flayithro;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {24, 14};
 		global_data_ptr->ginger_position = {25, 14};
@@ -1681,8 +1706,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 236:
 	{
-		music_items::bg_hotel.play();
 		global_data_ptr->entry_map = &map_flayithro_hotel_night;
+		global_data_ptr->bg_track = &music_items::bg_hotel;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {1, 5};
 		return NEW_MAP;
@@ -1702,8 +1728,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 237:
 	{
-		music_items::bg_sorry.play();
 		global_data_ptr->entry_map = &map_flayithro_01_night;
+		global_data_ptr->bg_track = &music_items::bg_sorry;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {30, 20};
 		return NEW_MAP;
@@ -1794,8 +1821,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 259:
 	{
-		music_items::bg_canter_02.play();
 		global_data_ptr->entry_map = &map_to_canter_02;
+		global_data_ptr->bg_track = &music_items::bg_canter_02;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {2, 3};
 		return NEW_MAP;
@@ -1803,8 +1831,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 261:
 	{
-		music_items::ambient_wind.play();
 		global_data_ptr->entry_map = &map_canter_cathedral;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {1, 4};
 		return NEW_MAP;
@@ -1927,8 +1956,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 302:
 	{
-		music_items::bg_sorry.play();
 		global_data_ptr->entry_map = &map_castle_bonus;
+		global_data_ptr->bg_track = &music_items::bg_sorry;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->ginger_position = {2, 2};
 		return NEW_MAP;
@@ -1936,8 +1966,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 305:
 	{
-		music_items::ambient_birds.play();
 		global_data_ptr->entry_map = &map_castle_secret_garden;
+		global_data_ptr->bg_track = &music_items::ambient_birds;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->ginger_position = {6, 2};
 		return NEW_MAP;
@@ -2009,7 +2040,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 323:
 	{
-		music_items::intro_guitar.play();
 		global_data_ptr->entry_map = &map_beach_01;
 		global_data_ptr->bg_track = &music_items::intro_guitar;
 		music::stop();
@@ -2022,7 +2052,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 324:
 	{
-		music_items::ambient_wind.play();
 		global_data_ptr->entry_map = &map_tunnel_01;
 		global_data_ptr->bg_track = &music_items::ambient_wind;
 		music::stop();
@@ -2041,8 +2070,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 332:
 	{
-		music_items::bg_canter_02.play();
 		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg_track = &music_items::bg_canter_02;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {2, 20};
 		return NEW_MAP;
@@ -2050,8 +2080,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 48:
 	{
-		music_items::cave_01.play();
 		global_data_ptr->entry_map = &map_cave_02;
+		global_data_ptr->bg_track = &music_items::cave_01;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {3, 30};
 		global_data_ptr->ginger_position = {2, 30};
@@ -2060,7 +2091,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 68:
 	{
-		music_items::cave_01.play();
 		global_data_ptr->entry_map = &map_cave_03;
 		global_data_ptr->bg_track = &music_items::cave_01;
 		music::stop();
@@ -2072,8 +2102,9 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 83:
 	{
-		music_items::cave_01.play();
 		global_data_ptr->entry_map = &map_cave_04;
+		global_data_ptr->bg_track = &music_items::cave_01;
+		music::stop();
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {16, 3};
 		global_data_ptr->ginger_position = {15, 3};
@@ -2082,12 +2113,78 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	}
 	case 84:
 	{
-		music_items::ambient_wind.play();
 		global_data_ptr->entry_map = &map_forest_02;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		music::stop();
 		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
 		global_data_ptr->jeremy_position = {2, 3};
 		global_data_ptr->ginger_position = {1, 3};
 		return NEW_MAP;
+		break;
+	}
+	case 340:
+	{
+		if (global_data_ptr->action_iterations[340] == 0) { ch_man.load(&test_convo); global_data_ptr->action_iterations[340] += 1; } else
+		{ };
+		break;
+	}
+	case 339:
+	{
+		music_items::bg_channel.play();
+		if (global_data_ptr->action_iterations[339] == 0) { ch_man.load(&chat_mcwebb_02); global_data_ptr->action_iterations[339] += 1; } else
+		{ };
+		break;
+	}
+	case 344:
+	{
+		if (global_data_ptr->action_iterations[344] == 0) { ch_man.load(&boutique_0); global_data_ptr->action_iterations[344] += 1; } else
+		{ };
+		break;
+	}
+	case 345:
+	{
+		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg_track = &music_items::bg_canter_02;
+		music::stop();
+		global_data_ptr->bg = &regular_bg_items::big_bg_city_01;
+		global_data_ptr->jeremy_position = {43, 3};
+		return NEW_MAP;
+		break;
+	}
+	case 347:
+	{
+		if (global_data_ptr->action_iterations[347] == 0) { ch_man.load(&henry_01); global_data_ptr->action_iterations[347] += 1; } else
+		{ };
+		break;
+	}
+	case 349:
+	{
+		if (global_data_ptr->action_iterations[349] == 0) { ch_man.load(&ending_lab_01); global_data_ptr->action_iterations[349] += 1; } else
+		{ };
+		break;
+	}
+	case 350:
+	{
+		if (global_data_ptr->action_iterations[350] == 0) { ch_man.load(&final_01c); global_data_ptr->action_iterations[350] += 1; } else
+		{ };
+		break;
+	}
+	case 351:
+	{
+		if (global_data_ptr->action_iterations[351] == 0) { ch_man.load(&final_01b); global_data_ptr->action_iterations[351] += 1; } else
+		{ };
+		break;
+	}
+	case 352:
+	{
+		if (global_data_ptr->action_iterations[352] == 0) { ch_man.load(&final_01d); global_data_ptr->action_iterations[352] += 1; } else
+		{ };
+		break;
+	}
+	case 353:
+	{
+		if (global_data_ptr->action_iterations[353] == 0) { ch_man.load(&ending_lab_01); global_data_ptr->action_iterations[353] += 1; } else
+		{ };
 		break;
 	}
 	}

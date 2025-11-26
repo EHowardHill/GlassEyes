@@ -73,6 +73,13 @@
 #include "bn_sprite_items_spr_o_mary.h"
 #include "bn_sprite_items_spr_o_candle.h"
 #include "bn_sprite_items_spr_lobbybot.h"
+#include "bn_sprite_items_spr_camera.h"
+#include "bn_sprite_items_spr_henry_monster.h"
+#include "bn_sprite_items_spr_vista_large.h"
+#include "bn_sprite_items_spr_ginger_telephone.h"
+#include "bn_sprite_items_spr_ginger_pc.h"
+#include "bn_sprite_items_spr_vista_read01.h"
+#include "bn_sprite_items_spr_vista_read02.h"
 
 using namespace bn;
 
@@ -149,6 +156,13 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_O_MARY: { return &sprite_items::spr_o_mary; break; }
 	case CHAR_O_CANDLE: { return &sprite_items::spr_o_candle; break; }
 	case CHAR_LOBBYBOT: { return &sprite_items::spr_lobbybot; break; }
+	case CHAR_CAMERA: { return &sprite_items::spr_camera; break; }
+	case CHAR_HENRY_MONSTER: { return &sprite_items::spr_henry_monster; break; }
+	case CHAR_VISTA_LARGE: { return &sprite_items::spr_vista_large; break; }
+	case CHAR_GINGER_TELEPHONE: { return &sprite_items::spr_ginger_telephone; break; }
+	case CHAR_GINGER_PC: { return &sprite_items::spr_ginger_pc; break; }
+	case CHAR_VISTA_READ01: { return &sprite_items::spr_vista_read01; break; }
+	case CHAR_VISTA_READ02: { return &sprite_items::spr_vista_read02; break; }
     default:
     {
         return &sprite_items::spr_vista;
@@ -191,6 +205,7 @@ const animation *resolve_sprite_idle_animation(int character)
 	case CHAR_GINGER_BATTLE: { return &ginger_battle_idle; break; }
 	case CHAR_VISKER_BATTLE: { return &visker_battle_idle; break; }
 	case CHAR_O_CANDLE: { return &o_candle; break; }
+	case CHAR_HENRY_MONSTER: { return &anim_face_up; break; }
     default:
     {
         return nullptr;

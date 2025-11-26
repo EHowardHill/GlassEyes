@@ -164,7 +164,7 @@ int main()
 
     int value = NEW_CHAPTER;
     {
-        global_data_ptr->process_stage = CUTSCENE_01;
+        global_data_ptr->process_stage = CUTSCENE_01; // CUTSCENE_01;
         resolve_chapter();
         navigate_map();
         global_data_ptr->process_stage = CH_TITLE;
@@ -182,7 +182,6 @@ int main()
 
     while (true)
     {
-        BN_LOG("Chapter: ", global_data_ptr->process_stage);
         global_data_ptr->inverted_controls = false;
 
         switch (value)
@@ -199,6 +198,11 @@ int main()
         }
         case NEW_CHAPTER:
         {
+            BN_LOG("CHAPTER: ", global_data_ptr->process_stage);
+
+            global_data_ptr->jeremy_position = {0, 0};
+            global_data_ptr->ginger_position = {0, 0};
+            global_data_ptr->sebellus_position = {0, 0};
             resolve_chapter();
 
             value = CONTINUE;

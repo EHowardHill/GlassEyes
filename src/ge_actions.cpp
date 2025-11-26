@@ -294,16 +294,21 @@ int action_listener(map_manager *man, character_manager *ch_man)
 
                         break;
                     }
-                    case 335:
+                    case 346:
                     {
-                        if (global_data_ptr->items[OBJ_SOUP] == true)
+                        auto v = ch_man->find_by_index(CHAR_VISTA_02);
+                        if (v != nullptr)
                         {
-                            global_data_ptr->items[OBJ_SOUP] = false;
-                            ch_man->load(&boutique_01b);
+                            v->current_animation = &anim_face_right;
+                            v->idle_animation = &anim_face_right;
                         }
-                        else if (global_data_ptr->variables[BEAR_DEFEAT] == false)
+                        break;
+                    }
+                    case 348:
+                    {
+                        if (global_data_ptr->variables[HENRY_TALK] == true)
                         {
-                            ch_man->load(&boutique_01);
+                            ch_man->load(&henry_02);
                         }
                         break;
                     }
@@ -388,31 +393,53 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     {
                         if (global_data_ptr->variables[BEAR_DEFEAT] == false)
                         {
-                            ch_man->load(&boutique_0);
+                            ch_man->load(&boutique_0a);
                         }
-                        else if (global_data_ptr->action_iterations[336] < 1)
+                        else if (global_data_ptr->items[OBJ_CLOTHES] == false)
                         {
-                            if (global_data_ptr->items[OBJ_CLOTHES] == false)
-                            {
-                                ch_man->load(&boutique_02);
-                            }
+                            ch_man->load(&boutique_02);
                         }
                         break;
                     }
                     case 337:
                     {
-                        if (global_data_ptr->action_iterations[337] < 1)
+                        if (global_data_ptr->items[OBJ_CLOTHES] == true)
                         {
-                            if (global_data_ptr->items[OBJ_CLOTHES] == true)
-                            {
-                                ch_man->load(&lobbybot_02);
-                                global_data_ptr->action_iterations[337] = 1;
-                            }
-                            else
-                            {
-                                global_data_ptr->action_iterations[337] = 0;
-                                ch_man->load(&lobbybot_01);
-                            }
+                            ch_man->load(&lobbybot_02);
+                        }
+                        else
+                        {
+                            ch_man->load(&lobbybot_01);
+                        }
+                        break;
+                    }
+                    case 335:
+                    {
+                        if (global_data_ptr->items[OBJ_SOUP] == true)
+                        {
+                            global_data_ptr->items[OBJ_SOUP] = false;
+                            ch_man->load(&boutique_01b);
+                        }
+                        else if (global_data_ptr->variables[BEAR_DEFEAT] == true)
+                        {
+                            ch_man->load(&boutique_01);
+                        }
+                        break;
+                    }
+                    case 341:
+                    {
+                        if (global_data_ptr->items[OBJ_CLOTHES] == true)
+                        {
+                            global_data_ptr->jeremy_position = {4, 6};
+                            global_data_ptr->ginger_position = {3, 6};
+                            global_data_ptr->sebellus_position = {2, 6};
+                            global_data_ptr->entry_map = &map_hotel_01;
+                            sound_items::sfx_door.play();
+                            return NEW_MAP;
+                        }
+                        else
+                        {
+                            ch_man->load(&door_locked);
                         }
                         break;
                     }

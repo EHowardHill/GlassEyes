@@ -15,7 +15,7 @@ using namespace bn;
 
 typedef const dialogue_line conversation[128];
 
-#include "bn_sprite_items_db_ch_vista.h"
+#include "bn_sprite_items_db_ch_vista_02.h"
 #include "bn_sprite_items_db_ch_visker.h"
 #include "bn_sprite_items_db_ch_visker_wife.h"
 #include "bn_sprite_items_db_ch_ginger.h"
@@ -44,7 +44,6 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_dima.h"
 #include "bn_sprite_items_db_ch_ack.h"
 #include "bn_sprite_items_db_ch_eggplant.h"
-#include "bn_sprite_items_db_ch_vista_02.h"
 #include "bn_sprite_items_db_ch_matt.h"
 #include "bn_sprite_items_db_ch_kiara.h"
 #include "bn_sprite_items_db_ch_death.h"
@@ -57,7 +56,6 @@ typedef const dialogue_line conversation[128];
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
 #include "bn_regular_bg_items_scene_tv_03.h"
-#include "bn_regular_bg_items_scene_tv_04.h"
 #include "bn_regular_bg_items_scene_tv_05.h"
 #include "bn_regular_bg_items_scene_tv_01.h"
 #include "bn_regular_bg_items_scene_01_00.h"
@@ -108,6 +106,7 @@ extern const conversation boutique_0;
 extern const conversation boutique_01;
 extern const conversation boutique_01b;
 extern const conversation boutique_02;
+extern const conversation boutique_0a;
 extern const conversation bridge_01;
 extern const conversation broken_avalon_00;
 extern const conversation broken_avalon_01;
@@ -179,10 +178,6 @@ extern const conversation cutscene_09b;
 extern const conversation dark_152;
 extern const conversation dark_info;
 extern const conversation dark_talk;
-extern const conversation dark_talk_alt_01;
-extern const conversation dark_talk_alt_02;
-extern const conversation dark_talk_alt_03;
-extern const conversation dark_talk_alt_04;
 extern const conversation dart_01;
 extern const conversation dart_02;
 extern const conversation dart_03;
@@ -201,6 +196,7 @@ extern const conversation dock_sebellus_01_alt_01;
 extern const conversation dock_sebellus_01_alt_02;
 extern const conversation dog_and_pony;
 extern const conversation doll_guy_01;
+extern const conversation door_locked;
 extern const conversation eggplant_01;
 extern const conversation eggplant_01_alt_01;
 extern const conversation eggplant_01_alt_02;
@@ -212,6 +208,7 @@ extern const conversation fall_down;
 extern const conversation final_01;
 extern const conversation final_01b;
 extern const conversation final_01c;
+extern const conversation final_01d;
 extern const conversation final_02;
 extern const conversation final_03;
 extern const conversation final_msg;
@@ -258,7 +255,6 @@ extern const conversation ghost_01_alt_02;
 extern const conversation have_to_go;
 extern const conversation have_to_go_2;
 extern const conversation have_to_go_3;
-extern const conversation have_to_go_3_alt_01;
 extern const conversation have_to_go_4;
 extern const conversation henry_01;
 extern const conversation henry_02;
@@ -266,11 +262,13 @@ extern const conversation henry_02_alt_01;
 extern const conversation henry_02_alt_01b;
 extern const conversation hotel_01;
 extern const conversation hotel_02;
+extern const conversation hotel_bed;
 extern const conversation hotel_bed_01;
 extern const conversation hotel_bed_02;
 extern const conversation hotel_bed_03;
 extern const conversation hotel_bed_04;
 extern const conversation hotel_bed_04_alt_01;
+extern const conversation hotel_bed_alt_01;
 extern const conversation hotel_fridge;
 extern const conversation hotel_room_01;
 extern const conversation hotel_room_02;

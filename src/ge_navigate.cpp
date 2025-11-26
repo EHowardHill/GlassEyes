@@ -51,18 +51,28 @@ int navigate_map()
     case FLAYITHRO_AWAKE:
     case BLACK_TO_CANTERBURY:
     case BLACK_TO_LAB_02:
+    case FINAL_CHAPTER:
     {
         global_data_ptr->costumes[CHAR_JEREMY] = COSTUME_JEREMY_FANCY;
         global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_FANCY;
         global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_FANCY;
         break;
     }
-    case CH_CUTSCENE_09:
+    case ENDING_01_PART_02:
+    {
+        global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_CASUAL;
+        break;
+    }
+    default:
+    {
+        break;
+    }
+    }
+
+    if (global_data_ptr->entry_map == &map_castle_ginger)
     {
         global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_CASUAL;
         global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_CASUAL;
-        break;
-    }
     }
 
     for (int y = 0; y < current_map.current_map->size.y.integer(); y++)
@@ -122,17 +132,6 @@ int navigate_map()
         global_data_ptr->jeremy_position.y * 32};
     int spawn_action = current_map.action(spawn_pos);
 
-    // Auto-loaded conversations
-    if (global_data_ptr->entry_map == &map_room01)
-    {
-        char_mgr.load(&test_convo);
-    }
-    else if (global_data_ptr->entry_map == &map_cutscene_channel)
-    {
-        music_items::bg_channel.play(0.6);
-        char_mgr.load(&chat_mcwebb_02);
-    }
-
     if (current_map.bg_ptr.has_value())
     {
         current_map.bg_ptr.value().set_visible(true);
@@ -154,6 +153,22 @@ int navigate_map()
 
         if (spr->sprite_ptr_raw[1].has_value())
             spr->sprite_ptr_raw[1]->set_blending_enabled(true);
+    }
+
+    // Change music if supposed to be different
+    if (music::playing_item().has_value())
+    {
+        if (music::playing_item().value() != *global_data_ptr->bg_track)
+        {
+            if (global_data_ptr->bg_track != nullptr)
+            {
+                global_data_ptr->bg_track->play(0.6, true);
+            }
+            else
+            {
+                music::stop();
+            }
+        }
     }
 
     // Main loop
@@ -383,12 +398,6 @@ int navigate_map()
                     }
                 }
             }
-        }
-
-        else if (current_map.current_map == &map_cutscene_channel)
-        {
-            v_sprite_ptr::camera.x = (global_data_ptr->entry_map->raw_size.x / 2) + 48;
-            v_sprite_ptr::camera.y = (global_data_ptr->entry_map->raw_size.y / 4) - 64;
         }
 
         // If fallen off-map

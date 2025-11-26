@@ -685,6 +685,11 @@ void dialogue_box::init(character_manager *ch_man)
         {
             // Code goes here
         }
+        case ACT_HARD_RESET:
+        {
+            core::hard_reset();
+            break;
+        }
         default:
         {
             break;
