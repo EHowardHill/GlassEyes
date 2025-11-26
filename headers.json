@@ -1748,6 +1748,11 @@
                         ]
                     }
                 }
+            },
+            "355": {
+                "sequence": [
+                    "train_ginger"
+                ]
             }
         },
         "automatic": {
@@ -4048,15 +4053,6 @@
                 "ending_01_cutscene_01"
             ]
         },
-        "ENDING_01_PART_01": {
-            "map": "lab_cutscene_01",
-            "positions": {
-                "jeremy": [
-                    0,
-                    0
-                ]
-            }
-        },
         "ENDING_01_PART_03": {
             "map": "graveyard_cutscene_01",
             "bg_track": "ambient_birds"
@@ -4079,6 +4075,18 @@
                 "jeremy": [
                     9,
                     15
+                ]
+            }
+        },
+        "ENDING_01_PART_01": {
+            "map": "lab_cutscene_01",
+            "cutscenes": [
+                "ending_01_cutscene_01"
+            ],
+            "positions": {
+                "jeremy": [
+                    0,
+                    0
                 ]
             }
         }
