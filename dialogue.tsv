@@ -1512,7 +1512,8 @@ dock_ginger_01
 	db_ch_ginger	EM_SIDE_EYE		Sebellus and I	figured you could	use the sleep.									
 	db_ch_ginger	EM_DEFAULT		..											
 	db_ch_ginger	EM_DEFAULT		Y'know.. I've been	thinking a little..										
-	db_ch_ginger	EM_DEFAULT		Until I came to	the Old World.. Why was I	here?									
+	db_ch_ginger	EM_DEFAULT		Until I came to	the Old World..
+	db_ch_ginger	EM_DEFAULT		Why was I	here?									
 	db_ch_ginger	EM_DEFAULT		All those school	classes, my family,	my friends..									
 	db_ch_ginger	EM_DEFAULT		Just to become a	talking cat in a	foreign country.									
 	db_ch_ginger	EM_DEFAULT		And it wasn't a big	thing either.	I had a dream.									
@@ -1778,6 +1779,7 @@ death_01
 				No.	Yes.										
 				That is no issue.	I will have you	eventually.									
 	db_ch_death			And now,	without further	ado..									
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
 															
 death_01_alt_01															
 	db_ch_death			I have been waiting	many years for this	moment.									

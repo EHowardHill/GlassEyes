@@ -80,6 +80,7 @@
 #include "bn_sprite_items_spr_ginger_pc.h"
 #include "bn_sprite_items_spr_vista_read01.h"
 #include "bn_sprite_items_spr_vista_read02.h"
+#include "bn_sprite_items_spr_death.h"
 
 using namespace bn;
 
@@ -163,6 +164,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_GINGER_PC: { return &sprite_items::spr_ginger_pc; break; }
 	case CHAR_VISTA_READ01: { return &sprite_items::spr_vista_read01; break; }
 	case CHAR_VISTA_READ02: { return &sprite_items::spr_vista_read02; break; }
+	case CHAR_DEATH: { return &sprite_items::spr_death; break; }
     default:
     {
         return &sprite_items::spr_vista;

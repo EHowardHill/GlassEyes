@@ -1052,7 +1052,8 @@
         "Ginger Telephone": {},
         "Ginger PC": {},
         "Vista Read01": {},
-        "Vista Read02": {}
+        "Vista Read02": {},
+        "Death": {}
     },
     "cutscenes": {
         "Intro": {
@@ -3706,6 +3707,11 @@
                 "sequence": [
                     "ending_lab_01"
                 ]
+            },
+            "354": {
+                "sequence": [
+                    "death_01"
+                ]
             }
         }
     },
@@ -4065,6 +4071,16 @@
             "cutscenes": [
                 "Buffer"
             ]
+        },
+        "ENDING_01_PART_00": {
+            "map": "lab_final",
+            "bg_track": "ambient_heartbeat",
+            "positions": {
+                "jeremy": [
+                    9,
+                    15
+                ]
+            }
         }
     }
 }

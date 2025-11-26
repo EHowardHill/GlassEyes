@@ -2187,6 +2187,12 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 354:
+	{
+		if (global_data_ptr->action_iterations[354] == 0) { ch_man.load(&death_01); global_data_ptr->action_iterations[354] += 1; } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
