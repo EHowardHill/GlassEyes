@@ -1868,7 +1868,7 @@ henry_02
 	db_ch_vista_02	EM_SULLEN	ACT_WALK	Ginger.						CHAR_VISTA_02		{10,12}			
 	db_ch_ginger	EM_SULLEN		..											
 	db_ch_vista_02	EM_SULLEN		Both of you.		Follow me.									
-		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_01					
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
 															
 henry_02_alt_01															
 	db_ch_ginger	EM_SULLEN		..	..	..Alright..									
@@ -2009,8 +2009,7 @@ final_02
 				After taking the	last of Henry's	Lethedol, she slept.									
 				The woman who	awoke could live a	peaceful life.									
 				And so it went -	each day of eternity	went by the same.									
-				Unable to shake the	feeling that	something..									
-				..wasn't quite	right.										
+				Happily ever after..											
 		EM_SKIP	ACT_HARD_RESET												
 															
 final_03															
