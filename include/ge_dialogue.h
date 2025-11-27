@@ -74,6 +74,7 @@ typedef const dialogue_line conversation[128];
 
 // Forward declarations for conversations
 extern const conversation ack_01;
+extern const conversation airport_closed;
 extern const conversation avalon_01;
 extern const conversation avalon_courier_01;
 extern const conversation avalon_courier_02;

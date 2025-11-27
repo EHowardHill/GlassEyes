@@ -113,7 +113,7 @@ void v_sprite_ptr::update(bool dialogue_box_ended)
     for (auto *item : manager)
     {
         bound bounds = item->real_position();
-        bound acceptable = {screen.position, screen.width + 64, screen.height + 68};
+        bound acceptable = {screen.position, screen.width + 72, screen.height + 72};
 
         if (!dialogue_box_ended)
         {

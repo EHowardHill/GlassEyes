@@ -229,8 +229,6 @@ int navigate_map()
         if (current_map.bg_ptr.has_value())
         {
             if (global_data_ptr->entry_map == &map_cutscene_channel ||
-                global_data_ptr->entry_map == &map_train_room_01 ||
-                global_data_ptr->entry_map == &map_train_room_02 ||
                 global_data_ptr->entry_map == &map_train_room_03 ||
                 global_data_ptr->entry_map == &map_train_room_04)
             {

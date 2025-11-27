@@ -101,7 +101,6 @@ int action_listener(map_manager *man, character_manager *ch_man)
 
                     case CHAT_SNEAKER:
                     {
-                        BN_LOG("Iterations: ", global_data_ptr->action_iterations[CHAT_SNEAKER]);
                         if (global_data_ptr->action_iterations[CHAT_SNEAKER] > 0)
                         {
                             ch_man->load(&scruffys_05b);
@@ -111,14 +110,11 @@ int action_listener(map_manager *man, character_manager *ch_man)
 
                     case 163:
                     {
-                        if (global_data_ptr->action_iterations[163] == 1)
+                        auto seb = ch_man->find_by_index(CHAR_SEBELLUS);
+                        if (seb != nullptr)
                         {
-                            auto seb = ch_man->find_by_index(CHAR_SEBELLUS);
-                            if (seb != nullptr)
-                            {
-                                seb->current_animation = &sebellus_hide;
-                                seb->idle_animation = &sebellus_hide;
-                            }
+                            seb->current_animation = &sebellus_hide;
+                            seb->idle_animation = &sebellus_hide;
                         }
                         break;
                     }

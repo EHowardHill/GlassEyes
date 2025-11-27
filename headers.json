@@ -2575,22 +2575,6 @@
                     "sebellus_01"
                 ]
             },
-            "165": {
-                "new_map": {
-                    "map": "dark_06",
-                    "bg_track": "bg_sorry",
-                    "positions": {
-                        "jeremy": [
-                            2,
-                            18
-                        ],
-                        "ginger": [
-                            1,
-                            18
-                        ]
-                    }
-                }
-            },
             "166": {
                 "sequence": [
                     "sebellus_02"
@@ -3206,28 +3190,6 @@
                     }
                 }
             },
-            "246": {
-                "new_map": {
-                    "map": "train_room_02",
-                    "positions": {
-                        "jeremy": [
-                            4,
-                            6
-                        ]
-                    }
-                }
-            },
-            "247": {
-                "new_map": {
-                    "map": "train_room_01",
-                    "positions": {
-                        "jeremy": [
-                            4,
-                            6
-                        ]
-                    }
-                }
-            },
             "248": {
                 "new_map": {
                     "map": "train_01",
@@ -3260,17 +3222,6 @@
                         "jeremy": [
                             34,
                             2
-                        ]
-                    }
-                }
-            },
-            "252": {
-                "new_map": {
-                    "map": "train_bathroom",
-                    "positions": {
-                        "jeremy": [
-                            4,
-                            4
                         ]
                     }
                 }
@@ -3745,6 +3696,68 @@
                         ]
                     }
                 }
+            },
+            "252": {
+                "sequence": [
+                    "door_locked"
+                ],
+                "new_map": {
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            4
+                        ]
+                    }
+                }
+            },
+            "246": {
+                "sequence": [
+                    "door_locked"
+                ],
+                "new_map": {
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            6
+                        ]
+                    }
+                }
+            },
+            "247": {
+                "sequence": [
+                    "door_locked"
+                ],
+                "new_map": {
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            6
+                        ]
+                    }
+                }
+            },
+            "165": {
+                "new_map": {
+                    "map": "dark_06",
+                    "bg_track": "bg_sorry",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            18
+                        ],
+                        "ginger": [
+                            1,
+                            18
+                        ],
+                        "sebellus": [
+                            1,
+                            19
+                        ]
+                    }
+                }
+            },
+            "357": {
+                "auto": "airport_closed"
             }
         }
     },

@@ -1465,24 +1465,10 @@ ack_01
 	db_ch_ack	EM_DEFAULT		..Do you think	he knows what a	potato is?									
 															
 eggplant_01															
-	db_ch_eggplant	EM_DEFAULT		HEY, GLABBER.	This place has the	BEST SOUP IN TOWN.									
-	db_ch_eggplant	EM_DEFAULT		Why should I give	it to YOU?										
-				because	I'm not hungry								&eggplant_01_alt_01		
-	db_ch_eggplant	EM_DEFAULT		Because?!	BECAUSE?! NO!	Prove your worth!									
-	db_ch_eggplant	EM_DEFAULT		I challenge you to	a game I always win!	STARING CONTEST!									
-	db_ch_eggplant	EM_HAPPY		..	..	..									
-	db_ch_eggplant	EM_HAPPY		..	..	..									
-	db_ch_eggplant	EM_HAPPY		..	..	..									
-	db_ch_eggplant	EM_HAPPY		..	..	..									
-	db_ch_eggplant	EM_HAPPY		..	..	..You're good..									
-	db_ch_eggplant	EM_HAPPY		..	..	..									
-	db_ch_eggplant	EM_HAPPY		..	..	..ALRIGHT!									
-	db_ch_eggplant	EM_HAPPY		HAIR GOT IN MY EYES!	That doesn't count!										
-				nuh uh	give me soup									&eggplant_01_alt_02	
-	db_ch_eggplant			REMATCH!		..GO!									
-	db_ch_eggplant	EM_HAPPY		..	..	..									
-	db_ch_eggplant	EM_HAPPY		AHHH!	GOT IN MY EYES AGAIN										
-	db_ch_eggplant			FINE!	YOU WIN!										
+	db_ch_eggplant			EVERYONE IN TOWN	SAYS MY SOUP	SUCKS									
+	db_ch_eggplant			AS AN ACT OF	GOODWILL I'M GIVING	IT AWAY FOR FREE									
+	db_ch_eggplant			THIS TOWN HAS A	CLEAR AND PERVASIVE	BIAS AGAINST									
+	db_ch_eggplant			SENSITIVE YOUNG MEN	LIKE ME										
 			ACT_ITEM	YOU FOUND:	Soup	(Doesn't smell good)				OBJ_SOUP					
 															
 convo_obj_soup															
@@ -1490,7 +1476,7 @@ convo_obj_soup
 															
 eggplant_01_alt_01															
 	db_ch_eggplant	EM_EXCITED		Not hungry?!	NOT HUNGRY?!										
-	db_ch_eggplant	EM_HAPPY		GET OUT!	NOW!										
+	db_ch_eggplant	EM_DEFAULT		GET OUT!	NOW!										
 															
 eggplant_01_alt_02															
 	db_ch_eggplant	EM_DEFAULT		..	..FINE! Have soup.	BUT DON'T COME BACK!									
@@ -2122,6 +2108,7 @@ cutscene_03
 			ACT_MUSIC_FADEOUT	No..	I suppose not.				SP_DEFAULT						scene_03_02
 															
 cutscene_04															
+		EM_SKIP	ACT_MUSIC_WIND												
 	db_ch_henry	EM_HAPPY	ACT_WALK	Good morning.	Can you understand	what I'm saying?				CHAR_HENRY		{3,3}			
 	db_ch_henry	EM_DEFAULT		It's alright,	you're safe.	Take slow breaths.				CHAR_VISTA_BED	&vista_bed_awake				
 	db_ch_ginger	EM_SCARED		W-What..		W-What happened..	COLOR_PURPLE								
@@ -2448,16 +2435,20 @@ sans_04
 		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_left	{42,5}			
 															
 sans_05															
-	db_ch_sans	EM_DEFAULT		you know what time	it is now.	that's right									
-	db_ch_sans	EM_HAPPY		ice cream time											
-	db_ch_sans	EM_DEFAULT		here at the glass-	eyes-and-undertale-	anniversary museum									
-	db_ch_sans	EM_ANGRY		every day is	a sundae										
+	db_ch_sans	EM_DEFAULT		you know what time	it is now.	that's right	COLOR_SANS								
+	db_ch_sans	EM_HAPPY		ice cream time			COLOR_SANS								
+	db_ch_sans	EM_DEFAULT		here at the glass-	eyes-and-undertale-	anniversary museum	COLOR_SANS								
+	db_ch_sans	EM_ANGRY		every day is	a sundae		COLOR_SANS								
+	db_ch_sans	EM_DEFAULT		but first, we gotta	get special thanks	out of the way	COLOR_SANS								
+	db_ch_sans	EM_DEFAULT		we gotta thank:	draconix	"the real ""og"""	COLOR_SANS								
+	db_ch_sans	EM_DEFAULT		liz, iz, costin,	choso, dima,	etc etc..	COLOR_SANS								
+	db_ch_sans	EM_DEFAULT		ok enough of that,	we have ice cream	to eat	COLOR_SANS								
 		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_ice_cream	{46,5}			
 															
 sans_06															
 	db_ch_sans	EM_DEFAULT		oh?	oh yeah	here's your cone	COLOR_SANS								
 			ACT_ITEM	You found:	ICE CREAM	Yum!				OBJ_ICE_CREAM					
-	db_ch_sans	EM_DEFAULT		i know it's	disappointing, with	it being virtual	COLOR_SANS								
+	db_ch_sans	EM_DEFAULT		i know it's	disappointing, with	it being virtual	COLOR_SANS			CHAR_SANS	&anim_face_right				
 	db_ch_sans	EM_ANGRY		besides, what you're	after is the real	inside scoop	COLOR_SANS								
 	db_ch_sans	EM_EXCITED		the roaring knight?	it's visker.	definitely.	COLOR_SANS								
 	db_ch_sans	EM_DEFAULT		just kidding.	but seriously..		COLOR_SANS								
@@ -2649,3 +2640,6 @@ final_01d
 	db_ch_ginger	EM_HAPPY		Thank you for your	kindness to me.	Despite everything.									
 	db_ch_ginger	EM_HAPPY		Love,	Virginia										
 		EM_SKIP	ACT_HARD_RESET												
+															
+airport_closed															
+				NEW BERLIN STATION	CLOSED FOR REPAIRS										

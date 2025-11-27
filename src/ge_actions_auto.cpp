@@ -1221,17 +1221,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
-	case 131:
-	{
-		global_data_ptr->entry_map = &map_dark_01;
-		global_data_ptr->bg_track = &music_items::bg_sorry;
-		music::stop();
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {0, 10};
-		global_data_ptr->ginger_position = {1, 10};
-		return NEW_MAP;
-		break;
-	}
 	case 139:
 	{
 		global_data_ptr->entry_map = &map_dark_02;
@@ -1331,17 +1320,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[164] == 0) { ch_man.load(&sebellus_01); global_data_ptr->action_iterations[164] += 1; } else
 		{ };
-		break;
-	}
-	case 165:
-	{
-		global_data_ptr->entry_map = &map_dark_06;
-		global_data_ptr->bg_track = &music_items::bg_sorry;
-		music::stop();
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {2, 18};
-		global_data_ptr->ginger_position = {1, 18};
-		return NEW_MAP;
 		break;
 	}
 	case 166:
@@ -1764,22 +1742,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 246:
-	{
-		global_data_ptr->entry_map = &map_train_room_02;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {4, 6};
-		return NEW_MAP;
-		break;
-	}
-	case 247:
-	{
-		global_data_ptr->entry_map = &map_train_room_01;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {4, 6};
-		return NEW_MAP;
-		break;
-	}
 	case 248:
 	{
 		global_data_ptr->entry_map = &map_train_01;
@@ -1801,14 +1763,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		global_data_ptr->entry_map = &map_train_01;
 		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
 		global_data_ptr->jeremy_position = {34, 2};
-		return NEW_MAP;
-		break;
-	}
-	case 252:
-	{
-		global_data_ptr->entry_map = &map_train_bathroom;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {4, 4};
 		return NEW_MAP;
 		break;
 	}
@@ -2203,6 +2157,61 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[356] == 0) { ch_man.load(&final_03); global_data_ptr->action_iterations[356] += 1; } else
 		{ };
+		break;
+	}
+	case 131:
+	{
+		global_data_ptr->entry_map = &map_dark_01;
+		global_data_ptr->bg_track = &music_items::bg_sorry;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {1, 11};
+		global_data_ptr->ginger_position = {1, 10};
+		return NEW_MAP;
+		break;
+	}
+	case 252:
+	{
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {4, 4};
+		if (global_data_ptr->action_iterations[252] == 0) { ch_man.load(&door_locked); global_data_ptr->action_iterations[252] += 1; } else
+		{ };
+		return NEW_MAP;
+		break;
+	}
+	case 246:
+	{
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {4, 6};
+		if (global_data_ptr->action_iterations[246] == 0) { ch_man.load(&door_locked); global_data_ptr->action_iterations[246] += 1; } else
+		{ };
+		return NEW_MAP;
+		break;
+	}
+	case 247:
+	{
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {4, 6};
+		if (global_data_ptr->action_iterations[247] == 0) { ch_man.load(&door_locked); global_data_ptr->action_iterations[247] += 1; } else
+		{ };
+		return NEW_MAP;
+		break;
+	}
+	case 165:
+	{
+		global_data_ptr->entry_map = &map_dark_06;
+		global_data_ptr->bg_track = &music_items::bg_sorry;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {2, 18};
+		global_data_ptr->ginger_position = {1, 18};
+		global_data_ptr->sebellus_position = {1, 19};
+		return NEW_MAP;
+		break;
+	}
+	case 357:
+	{
+		ch_man.load(&airport_closed);
 		break;
 	}
 	}

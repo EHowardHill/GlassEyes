@@ -30,6 +30,8 @@
 
 using namespace bn;
 
+constexpr bool TESTING = false;
+
 int chapter_select()
 {
     auto bg = regular_bg_items::bg_chapter_select.create_bg(0, 0);
@@ -79,8 +81,14 @@ int chapter_select()
 
         bool selected = false;
 
+        int ticker = 0;
         while (selected == false)
         {
+            if (ticker % 256 == 0)
+            {
+                sound_items::drone.play();
+            }
+
             if (keypad::down_pressed())
             {
                 get_item(ch_titles_var, index)->color = COLOR_WHITE;
@@ -149,6 +157,7 @@ int chapter_select()
                 }
             }
 
+            ticker++;
             core::update();
         }
     }
@@ -163,26 +172,30 @@ int main()
     global_data_ptr->sebellus_position = {0, 0};
 
     int value = NEW_CHAPTER;
-    /*
+
+    if (TESTING == true)
     {
-        global_data_ptr->process_stage = CUTSCENE_01;
-        resolve_chapter();
-        navigate_map();
-        global_data_ptr->process_stage = CH_TITLE;
-        resolve_chapter();
+        global_data_ptr->process_stage = FINAL_CHAPTER;
     }
-    */
-
-    // global_data_ptr->process_stage = chapter_select();
-    core::update();
-
-    sound_items::snd_chime.play();
-    for (int t = 0; t < 96; t++)
+    else
     {
+        {
+            global_data_ptr->process_stage = CUTSCENE_01;
+            resolve_chapter();
+            navigate_map();
+            global_data_ptr->process_stage = CH_TITLE;
+            resolve_chapter();
+        }
+
+        global_data_ptr->process_stage = chapter_select();
         core::update();
-    }
 
-    global_data_ptr->process_stage = FINAL_CHAPTER;
+        sound_items::snd_chime.play();
+        for (int t = 0; t < 96; t++)
+        {
+            core::update();
+        }
+    }
 
     while (true)
     {
