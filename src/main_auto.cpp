@@ -215,11 +215,6 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::bg_sorry;
 		global_data_ptr->bg = nullptr;
 		break;		}
-	case ENDING_01_PART_01: {
-		global_data_ptr->entry_map = &map_lab_cutscene_01;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {0, 0};
-		break;		}
 	case ENDING_01_PART_03: {
 		global_data_ptr->entry_map = &map_graveyard_cutscene_01;
 		global_data_ptr->bg_track = &music_items::ambient_birds;
@@ -241,6 +236,22 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {9, 15};
+		break;		}
+	case ENDING_01_PART_01: {
+		typewriter(TYPEWRITER_ENDING_01_CUTSCENE_01);
+		global_data_ptr->entry_map = &map_lab_cutscene_01;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {0, 0};
+		break;		}
+	case ENDING_02_PART_00: {
+		typewriter(TYPEWRITER_ENDING_02_CUTSCENE_01);
+		global_data_ptr->bg = nullptr;
+		break;		}
+	case ENDING_03_PART_00: {
+		global_data_ptr->entry_map = &map_castle_ginger_cutscene_01;
+		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {0, 0};
 		break;		}
 	default: { break; }
 	}

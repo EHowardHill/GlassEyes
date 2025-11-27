@@ -48,6 +48,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_kiara.h"
 #include "bn_sprite_items_db_ch_death.h"
 #include "bn_sprite_items_db_ch_henry.h"
+#include "bn_sprite_items_db_ch_jeremy.h"
 #include "bn_sprite_items_db_ch_constance.h"
 #include "bn_sprite_items_db_ch_sans.h"
 #include "bn_sprite_items_db_ch_desmond.h"
@@ -201,8 +202,6 @@ extern const conversation eggplant_01;
 extern const conversation eggplant_01_alt_01;
 extern const conversation eggplant_01_alt_02;
 extern const conversation ending_lab_01;
-extern const conversation ending_lab_02;
-extern const conversation ending_lab_02b;
 extern const conversation ending_lab_03;
 extern const conversation fall_down;
 extern const conversation final_01;
@@ -259,7 +258,6 @@ extern const conversation have_to_go_4;
 extern const conversation henry_01;
 extern const conversation henry_02;
 extern const conversation henry_02_alt_01;
-extern const conversation henry_02_alt_01b;
 extern const conversation hotel_01;
 extern const conversation hotel_02;
 extern const conversation hotel_bed;

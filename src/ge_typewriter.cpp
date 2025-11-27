@@ -145,6 +145,18 @@ void typewriter(int scene)
         type = TYPE_TEXT;
         break;
     }
+    case TYPEWRITER_ENDING_01_CUTSCENE_01:
+    {
+        current_conversation = &final_01;
+        type = TYPE_TEXT;
+        break;
+    }
+    case TYPEWRITER_ENDING_02_CUTSCENE_01:
+    {
+        current_conversation = &final_02;
+        type = TYPE_TEXT;
+        break;
+    }
     default:
     {
         type = TYPE_IMG;
@@ -187,6 +199,11 @@ void typewriter(int scene)
 
         while ((*current_conversation)[index].action != ACT_END)
         {
+            if ((*current_conversation)[index].action == ACT_HARD_RESET)
+            {
+                core::reset();
+            }
+
             const dialogue_line &current_line = (*current_conversation)[index];
 
             if (current_line.bg_item != nullptr)

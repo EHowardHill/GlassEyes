@@ -199,6 +199,10 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         {
             sound_items::snd_dialogue_sebellus.play(0.6);
         }
+        else if (portrait == &sprite_items::db_ch_jeremy)
+        {
+            sound_items::snd_dialogue_sebellus.play(0.6);
+        }
         else if (portrait == &sprite_items::db_ch_ghost)
         {
             sound_items::snd_dialogue_generic.play(0.6);
@@ -686,7 +690,7 @@ void dialogue_box::init(character_manager *ch_man)
         }
         case ACT_HARD_RESET:
         {
-            core::hard_reset();
+            core::reset();
             break;
         }
         default:

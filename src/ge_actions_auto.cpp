@@ -722,6 +722,12 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
+	case 355:
+	{
+		if (global_data_ptr->action_iterations[355] == 1) { ch_man.load(&train_ginger); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -2190,6 +2196,12 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	case 354:
 	{
 		if (global_data_ptr->action_iterations[354] == 0) { ch_man.load(&death_01); global_data_ptr->action_iterations[354] += 1; } else
+		{ };
+		break;
+	}
+	case 356:
+	{
+		if (global_data_ptr->action_iterations[356] == 0) { ch_man.load(&final_03); global_data_ptr->action_iterations[356] += 1; } else
 		{ };
 		break;
 	}

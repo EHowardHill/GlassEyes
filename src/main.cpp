@@ -163,15 +163,17 @@ int main()
     global_data_ptr->sebellus_position = {0, 0};
 
     int value = NEW_CHAPTER;
+    /*
     {
-        global_data_ptr->process_stage = CUTSCENE_01; // CUTSCENE_01;
+        global_data_ptr->process_stage = CUTSCENE_01;
         resolve_chapter();
         navigate_map();
         global_data_ptr->process_stage = CH_TITLE;
         resolve_chapter();
     }
+    */
 
-    global_data_ptr->process_stage = chapter_select();
+    // global_data_ptr->process_stage = chapter_select();
     core::update();
 
     sound_items::snd_chime.play();
@@ -179,6 +181,8 @@ int main()
     {
         core::update();
     }
+
+    global_data_ptr->process_stage = FINAL_CHAPTER;
 
     while (true)
     {

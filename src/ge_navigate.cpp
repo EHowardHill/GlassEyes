@@ -68,7 +68,14 @@ int navigate_map()
     }
     }
 
-    if (global_data_ptr->entry_map == &map_castle_ginger)
+    if (global_data_ptr->entry_map == &map_castle_ginger ||
+        global_data_ptr->entry_map == &map_castle_01 ||
+        global_data_ptr->entry_map == &map_castle_02b ||
+        global_data_ptr->entry_map == &map_castle_bonus ||
+        global_data_ptr->entry_map == &map_castle_ginger_cutscene_01 ||
+        global_data_ptr->entry_map == &map_castle_secret_garden ||
+        global_data_ptr->entry_map == &map_castle_secret_tunnel ||
+        global_data_ptr->entry_map == &map_castle_vista)
     {
         global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_CASUAL;
         global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_CASUAL;

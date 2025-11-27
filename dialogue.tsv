@@ -1512,7 +1512,8 @@ dock_ginger_01
 	db_ch_ginger	EM_SIDE_EYE		Sebellus and I	figured you could	use the sleep.									
 	db_ch_ginger	EM_DEFAULT		..											
 	db_ch_ginger	EM_DEFAULT		Y'know.. I've been	thinking a little..										
-	db_ch_ginger	EM_DEFAULT		Until I came to	the Old World.. Why was I	here?									
+	db_ch_ginger	EM_DEFAULT		Until I came to	the Old World..										
+	db_ch_ginger	EM_DEFAULT		Why was I here?											
 	db_ch_ginger	EM_DEFAULT		All those school	classes, my family,	my friends..									
 	db_ch_ginger	EM_DEFAULT		Just to become a	talking cat in a	foreign country.									
 	db_ch_ginger	EM_DEFAULT		And it wasn't a big	thing either.	I had a dream.									
@@ -1829,7 +1830,7 @@ henry_01
 	db_ch_vista_02	EM_DISAPPOINTED		Sebellus! Stop that	this instant!										
 	db_ch_sebellus	EM_DEFAULT		Goodbye, Ginger.		I love you so much.									
 	db_ch_henry	EM_DEFAULT		Very well.						CHAR_HENRY_MONSTER	&anim_face_right				
-	db_ch_henry	EM_DEFAULT	ACT_SFX_FIRE	..						CHAR_SEBELLUS	&sebellus_death				
+	db_ch_henry	EM_DEFAULT	ACT_SFX_EXPLOSION	..						CHAR_SEBELLUS	&sebellus_death				
 	db_ch_vista_02	EM_SULLEN		That was entirely	unnescessary, Henry.					CHAR_GINGER	&ginger_terror				
 	db_ch_henry	EM_DEFAULT		I will remake him if	I need to.					CHAR_HENRY_MONSTER		&anim_face_down			
 	db_ch_henry	EM_DEFAULT		You will not notice	he was ever gone.										
@@ -1863,7 +1864,7 @@ henry_02
 	db_ch_ginger	EM_SAD		I don't know if	I care.										
 	db_ch_ginger	EM_SULLEN		You are the only	friend I have left.										
 	db_ch_ginger	EM_SULLEN	ACT_TELEPORT	..I need to know	what to do.					CHAR_VISTA_02	&anim_face_down	{10,9}			
-				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&henry_02_alt_01	
+				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&ending_lab_03	
 	db_ch_vista_02	EM_SULLEN	ACT_WALK	Ginger.						CHAR_VISTA_02		{10,12}			
 	db_ch_ginger	EM_SULLEN		..											
 	db_ch_vista_02	EM_SULLEN		Both of you.		Follow me.									
@@ -1872,14 +1873,28 @@ henry_02
 henry_02_alt_01															
 	db_ch_ginger	EM_SULLEN		..	..	..Alright..									
 	db_ch_ginger	EM_SULLEN		..T-Thank you..	Please make it	quick, okay?									
-	db_ch_ginger	EM_CONFUSED		B-But tell me..	Before I go..	That look..									
-	db_ch_ginger	EM_SAD		That look on your	face.. What are you	feeling?									
-				Sadness	Anger	Relief								&ending_lab_02	
 	db_ch_ginger	EM_LAUGH		Hey..	Take care of	yourself, okay?									
 	db_ch_ginger	EM_LAUGH		Maybe we'll see	each other again.										
-	db_ch_ginger	EM_SAD		Goodbye,	friend.										
-															
-henry_02_alt_01															
+	db_ch_ginger	EM_SAD		Goodbye,	friend.					CHAR_JEREMY	&jeremy_shoot				
+			ACT_SFX_EXPLOSION							CHAR_GINGER	&ginger_death				
+	db_ch_vista_02	EM_SULLEN	ACT_WALK	..	..	..			SP_SLOW	CHAR_VISTA_02		{10,13}			
+	db_ch_vista_02	EM_SAD		..	..	I see.			SP_SLOW						
+	db_ch_vista_02	EM_SULLEN		..	..	Was this her choice?			SP_DEFAULT						
+	db_ch_jeremy			Yes.					SP_DEFAULT	CHAR_JEREMY	&anim_face_right				
+	db_ch_vista_02			Very well.		Was she afraid?			SP_DEFAULT						
+	db_ch_jeremy	EM_DEFAULT		She was brave.					SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		..	..	..			SP_SLOW						
+	db_ch_vista_02	EM_SAD		Some nights..	When I was having	trouble sleeping..			SP_DEFAULT						
+	db_ch_vista_02	EM_SAD		I tried to picture	this moment.	I couldn't.			SP_DEFAULT						
+	db_ch_vista_02	EM_SAD		But I knew that it	would come sooner	or later.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		I should have done	the same, you know.	I'm a coward.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		But it's too late	for me now.	This is my fate.			SP_DEFAULT						
+	db_ch_vista_02	EM_SAD		I'm proud of her.	I only hope that she	remembers me.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		I should kill you	for what you've	done, human.			SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		But I can't.					SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		There's been enough	death today.				SP_DEFAULT						
+	db_ch_vista_02	EM_SULLEN		..	Go home.	Now.			SP_DEFAULT						
+		EM_SKIP	ACT_PROGRESS							ENDING_02_PART_00					
 															
 ending_lab_01															
 	db_ch_kiara	EM_WAT	ACT_WALK	Your  majesty!	You look troubled!	Where is Henry?!				CHAR_KIARA		{4,6}			
@@ -1900,35 +1915,12 @@ ending_lab_01
 	db_ch_vista_02	EM_SULLEN		You may go home.											
 		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_02					
 															
-ending_lab_02															
-				..											
-				Ginger's lifeless	body hits the	ground.									
-				You can only hope	her soul made its	way back home.									
-															
-ending_lab_02b															
-	db_ch_vista_02	EM_SULLEN		..	..	..			SP_SLOW						
-	db_ch_vista_02	EM_SAD		..	..	I see.			SP_SLOW						
-	db_ch_vista_02	EM_SULLEN		..	..	Was this her choice?			SP_DEFAULT						
-				Yes.					SP_DEFAULT						
-	db_ch_vista_02			Very well.		Was she afraid?			SP_DEFAULT						
-				She was brave.					SP_DEFAULT						
-	db_ch_vista_02	EM_SULLEN		..	..	..			SP_SLOW						
-	db_ch_vista_02	EM_SAD		Some nights..	When I was having	trouble sleeping..			SP_DEFAULT						
-	db_ch_vista_02	EM_SAD		I tried to picture	this moment.	I couldn't.			SP_DEFAULT						
-	db_ch_vista_02	EM_SAD		But I knew that it	would come sooner	or later.			SP_DEFAULT						
-	db_ch_vista_02	EM_SULLEN		I should have done	the same, you know.	I'm a coward.			SP_DEFAULT						
-	db_ch_vista_02	EM_SULLEN		But it's too late	for me now.	This is my fate.			SP_DEFAULT						
-	db_ch_vista_02	EM_SAD		I'm proud of her.	I only hope that she	remembers me.			SP_DEFAULT						
-	db_ch_vista_02	EM_SULLEN		I should kill you	for what you've	done, human.			SP_DEFAULT						
-	db_ch_vista_02	EM_SULLEN		But I can't.					SP_DEFAULT						
-	db_ch_vista_02	EM_SULLEN		..		Go home now.			SP_DEFAULT						
-															
 ending_lab_03															
 	db_ch_ginger	EM_SCARED		..	..	You really think so?									
 	db_ch_ginger	EM_SAD		You want me to	forget all about	you?									
 	db_ch_ginger	EM_WEEP		A-And forget all	about Sebellus..	And my family..									
 	db_ch_ginger	EM_WEEP		I-I don't.. know..	if I can..	I.. I don't..									
-	db_ch_vista_02	EM_SULLEN		..	..	Ginger.									
+	db_ch_vista_02	EM_SULLEN	ACT_WALK	..	..	Ginger.				CHAR_VISTA_02		{10,12}			
 	db_ch_vista_02	EM_SULLEN		It is done.											
 	db_ch_ginger	EM_DEFAULT		What do you mean?											
 	db_ch_vista_02	EM_DISAPPOINTED		Henry and I have	come to an..	agreement.									
@@ -1959,10 +1951,7 @@ ending_lab_03
 	db_ch_ginger	EM_SCARED		..	..	..									
 	db_ch_ginger	EM_SCARED		Take care of	yourself, okay?										
 	db_ch_ginger	EM_WEEP		T-Thank you.		Goodbye, now.									
-															
-henry_02_alt_01b															
-	db_ch_ginger	EM_WEEP		..	..	..									
-	db_ch_ginger	EM_WEEP		..J-Just do it	before I remember	a-again, okay?									
+		EM_SKIP	ACT_PROGRESS							ENDING_03_PART_00					
 															
 final_01															
 				You take an	uneventful train	ride home.									
@@ -2022,29 +2011,31 @@ final_02
 				And so it went -	each day of eternity	went by the same.									
 				Unable to shake the	feeling that	something..									
 				..wasn't quite	right.										
+		EM_SKIP	ACT_HARD_RESET												
 															
 final_03															
 	db_ch_ginger	EM_CONFUSED		..w-where am I?											
-	db_ch_constance	EM_DISAPPOINTED		Ah.. Your majesty,	you're awake again.	Where are my notes-									
-	db_ch_constance	EM_DISAPPOINTED		Your name is Selari,	You have permanent	daily memory loss.									
-	db_ch_constance	EM_DISAPPOINTED		You took a medicine	"named ""Lethedol"","	which has strong									
-	db_ch_constance	EM_DISAPPOINTED		and permanent side	effects on Marelons,	like you.									
-	db_ch_constance	EM_DISAPPOINTED		I am Constance,	The royal maid to	your late mother.									
+	db_ch_constance			Ah.. Your majesty,	you're awake again.	Where are my notes-									
+	db_ch_constance			Your name is Selari,	You have permanent	daily memory loss.									
+	db_ch_constance			You took a medicine	"named ""Lethedol"","	which has strong									
+	db_ch_constance			and permanent side	effects on Marelons,	like you.									
+	db_ch_constance			I am Constance,	The royal maid to	your late mother.									
 	db_ch_ginger	EM_CONFUSED		..late mother?											
-	db_ch_constance	EM_DISAPPOINTED		Yes. She used a soul	extraction tool on	herself last month.									
-	db_ch_constance	EM_DISAPPOINTED		The public does not	know this.. They are	growing impatient.									
-	db_ch_constance	EM_DISAPPOINTED		We need to dress you	up as her for a..	public showing.									
-	db_ch_constance	EM_DISAPPOINTED		You just need to	stand and wave.	Can you do that?									
+	db_ch_constance			Yes. She used a soul	extraction tool on	herself last month.									
+	db_ch_constance			The public does not	know this.. They are	growing impatient.									
+	db_ch_constance			We need to dress you	up as her for a..	public showing.									
+	db_ch_constance			You just need to	stand and wave.	Can you do that?									
 	db_ch_ginger	EM_EMBARRASSED		I-I.. I think so..											
-	db_ch_constance	EM_DISAPPOINTED		Very good, and..	I know you won't	remember this..									
-	db_ch_constance	EM_DISAPPOINTED		The castle staff and	I.. are not sure how	to take care of you.									
-	db_ch_constance	EM_DISAPPOINTED		There is a cabin not	far from here.	It's very cozy.									
+	db_ch_constance			Very good, and..	I know you won't	remember this..									
+	db_ch_constance			The castle staff and	I.. are not sure how	to take care of you.									
+	db_ch_constance			There is a cabin not	far from here.	It's very cozy.									
 	db_ch_constance	EM_DISAPPOINTED		"""Vista is sick"" is"	much safer than	"""Vista is dead""."									
-	db_ch_constance	EM_DISAPPOINTED		You would pretend	to be her.. Very	little would change.									
-	db_ch_constance	EM_DISAPPOINTED		You two look just	the same anyways.	What do you say?									
-	db_ch_ginger	EM_DISAPPOINTED		I-I.. I don't..	I don't know..										
-	db_ch_constance	EM_DISAPPOINTED		I suppose it doesn't	matter. Just change	into the outfit.									
-	db_ch_constance	EM_DISAPPOINTED		It will be over	very, very soon.										
+	db_ch_constance			You would pretend	to be her.. Very	little would change.									
+	db_ch_constance			You two look just	the same anyways.	What do you say?									
+	db_ch_ginger			I-I.. I don't..	I don't know..										
+	db_ch_constance			I suppose it doesn't	matter. Just change	into the outfit.									
+	db_ch_constance			It will be over	very, very soon.										
+		EM_SKIP	ACT_HARD_RESET												
 															
 cutscene_01															
 				CANTERBURY		The domed city									scene_01_00

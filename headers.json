@@ -268,6 +268,13 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "shoot": {
+                "frames": [
+                    11
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "ginger": {
@@ -382,6 +389,18 @@
                 ],
                 "speed": 0,
                 "loop": true
+            },
+            "death": {
+                "frames": [
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    12
+                ],
+                "speed": 1,
+                "loop": false
             }
         },
         "sebellus": {
@@ -1117,6 +1136,10 @@
         },
         "ending_01_cutscene_01": {
             "conversation": "final_01",
+            "music": "bg_sorry_train"
+        },
+        "ending_02_cutscene_01": {
+            "conversation": "final_02",
             "music": "bg_sorry_train"
         }
     },
@@ -3717,6 +3740,11 @@
                 "sequence": [
                     "death_01"
                 ]
+            },
+            "356": {
+                "sequence": [
+                    "final_03"
+                ]
             }
         }
     },
@@ -4083,6 +4111,21 @@
             "cutscenes": [
                 "ending_01_cutscene_01"
             ],
+            "positions": {
+                "jeremy": [
+                    0,
+                    0
+                ]
+            }
+        },
+        "ENDING_02_PART_00": {
+            "cutscenes": [
+                "ending_02_cutscene_01"
+            ]
+        },
+        "ENDING_03_PART_00": {
+            "map": "castle_ginger_cutscene_01",
+            "bg_track": "ambient_heartbeat",
             "positions": {
                 "jeremy": [
                     0,
