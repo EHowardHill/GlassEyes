@@ -81,6 +81,13 @@ int navigate_map()
         global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_CASUAL;
     }
 
+    if (global_data_ptr->entry_map == &map_lab_final)
+    {
+        global_data_ptr->costumes[CHAR_JEREMY] = COSTUME_JEREMY_FANCY;
+        global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_FANCY;
+        global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_FANCY;
+    }
+
     for (int y = 0; y < current_map.current_map->size.y.integer(); y++)
     {
         for (int x = 0; x < current_map.current_map->size.x.integer(); x++)

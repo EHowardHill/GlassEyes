@@ -165,127 +165,127 @@ void text::update(const bn::sprite_item *portrait = nullptr, bool typewriter = f
         }
         else if (portrait == &sprite_items::db_ch_ack)
         {
-            sound_items::snd_dialogue_noelle.play(0.6);
+            sound_items::snd_dialogue_noelle.play(1);
         }
         else if (portrait == &sprite_items::db_ch_constance)
         {
-            sound_items::snd_dialogue_noelle.play(0.6);
+            sound_items::snd_dialogue_noelle.play(1);
         }
         else if (portrait == &sprite_items::db_ch_courier)
         {
-            sound_items::snd_dialogue_mcwebb.play(0.6);
+            sound_items::snd_dialogue_mcwebb.play(1);
         }
         else if (portrait == &sprite_items::db_ch_croke)
         {
-            sound_items::snd_dialogue_berdly.play(0.6);
+            sound_items::snd_dialogue_berdly.play(1);
         }
         else if (portrait == &sprite_items::db_ch_deadguy)
         {
-            sound_items::snd_dialogue_berdly.play(0.6);
+            sound_items::snd_dialogue_berdly.play(1);
         }
         else if (portrait == &sprite_items::db_ch_death)
         {
-            sound_items::snd_dialogue_death.play(0.6);
+            sound_items::snd_dialogue_death.play(1);
         } //
         else if (portrait == &sprite_items::db_ch_dima)
         {
-            sound_items::snd_dialogue_mcwebb.play(0.6);
+            sound_items::snd_dialogue_mcwebb.play(1);
         }
         else if (portrait == &sprite_items::db_ch_doll)
         {
-            sound_items::snd_dialogue_kiara.play(0.6);
+            sound_items::snd_dialogue_kiara.play(1);
         } //
         else if (portrait == &sprite_items::db_ch_eggplant)
         {
-            sound_items::snd_dialogue_sebellus.play(0.6);
+            sound_items::snd_dialogue_sebellus.play(1);
         }
         else if (portrait == &sprite_items::db_ch_jeremy)
         {
-            sound_items::snd_dialogue_sebellus.play(0.6);
+            sound_items::snd_dialogue_sebellus.play(1);
         }
         else if (portrait == &sprite_items::db_ch_ghost)
         {
-            sound_items::snd_dialogue_generic.play(0.6);
+            sound_items::snd_dialogue_generic.play(1);
         }
         else if (portrait == &sprite_items::db_ch_glompy)
         {
-            sound_items::snd_dialogue_greyfriar.play(0.6);
+            sound_items::snd_dialogue_greyfriar.play(1);
         }
         else if (portrait == &sprite_items::db_ch_grandma)
         {
-            sound_items::snd_dialogue_noelle.play(0.6);
+            sound_items::snd_dialogue_noelle.play(1);
         }
         else if (portrait == &sprite_items::db_ch_greyfriar)
         {
-            sound_items::snd_dialogue_greyfriar.play(0.6);
+            sound_items::snd_dialogue_greyfriar.play(1);
         } //
         else if (portrait == &sprite_items::db_ch_henry)
         {
-            sound_items::snd_dialogue_death.play(0.6);
+            sound_items::snd_dialogue_death.play(1);
         } //
         else if (portrait == &sprite_items::db_ch_horsey)
         {
-            sound_items::snd_dialogue_lancer.play(0.6);
+            sound_items::snd_dialogue_lancer.play(1);
         }
         else if (portrait == &sprite_items::db_ch_jelly)
         {
-            sound_items::snd_dialogue_mcwebb.play(0.6);
+            sound_items::snd_dialogue_mcwebb.play(1);
         }
         else if (portrait == &sprite_items::db_ch_kathy)
         {
-            sound_items::snd_dialogue_kiara.play(0.6);
+            sound_items::snd_dialogue_kiara.play(1);
         } //
         else if (portrait == &sprite_items::db_ch_kiara)
         {
-            sound_items::snd_dialogue_kiara.play(0.6);
+            sound_items::snd_dialogue_kiara.play(1);
         } //
         else if (portrait == &sprite_items::db_ch_matt)
         {
-            sound_items::snd_dialogue_matt.play(0.6);
+            sound_items::snd_dialogue_matt.play(1);
         }
         else if (portrait == &sprite_items::db_ch_lobbybot)
         {
-            sound_items::snd_dialogue_matt.play(0.6);
+            sound_items::snd_dialogue_matt.play(1);
         }
         else if (portrait == &sprite_items::db_ch_mcwebb)
         {
-            sound_items::snd_dialogue_mcwebb.play(0.6);
+            sound_items::snd_dialogue_mcwebb.play(1);
         }
         else if (portrait == &sprite_items::db_ch_naomi)
         {
-            sound_items::snd_dialogue_susie.play(0.6);
+            sound_items::snd_dialogue_susie.play(1);
         }
         else if (portrait == &sprite_items::db_ch_primary)
         {
-            sound_items::snd_dialogue_kiara.play(0.6);
+            sound_items::snd_dialogue_kiara.play(1);
         } //
         else if (portrait == &sprite_items::db_ch_pringle)
         {
-            sound_items::snd_dialogue_lancer.play(0.6);
+            sound_items::snd_dialogue_lancer.play(1);
         }
         else if (portrait == &sprite_items::db_ch_robin)
         {
-            sound_items::snd_dialogue_berdly.play(0.6);
+            sound_items::snd_dialogue_berdly.play(1);
         }
         else if (portrait == &sprite_items::db_ch_sneaker)
         {
-            sound_items::snd_dialogue_sebellus.play(0.6);
+            sound_items::snd_dialogue_sebellus.play(1);
         }
         else if (portrait == &sprite_items::db_ch_temmie)
         {
-            sound_items::snd_dialogue_temmie.play(0.6);
+            sound_items::snd_dialogue_temmie.play(1);
         }
         else if (portrait == &sprite_items::db_ch_togore)
         {
-            sound_items::snd_dialogue_togore.play(0.6);
+            sound_items::snd_dialogue_togore.play(1);
         }
         else if (portrait == &sprite_items::db_ch_tollman)
         {
-            sound_items::snd_dialogue_sebellus.play(0.6);
+            sound_items::snd_dialogue_sebellus.play(1);
         }
         else if (portrait == &sprite_items::db_ch_visker_wife)
         {
-            sound_items::snd_dialogue_visker.play(0.6);
+            sound_items::snd_dialogue_visker.play(1);
         }
         else
         {
@@ -691,6 +691,14 @@ void dialogue_box::init(character_manager *ch_man)
         case ACT_HARD_RESET:
         {
             core::reset();
+            break;
+        }
+        case ACT_CLEAR_INVENTORY:
+        {
+            for (int i = 0; i < ITEMS_SIZE; i++)
+            {
+                global_data_ptr->items[i] = false;
+            }
             break;
         }
         default:

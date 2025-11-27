@@ -709,6 +709,13 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "pie_take": {
+                "frames": [
+                    1
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "fire": {
@@ -1072,7 +1079,9 @@
         "Ginger PC": {},
         "Vista Read01": {},
         "Vista Read02": {},
-        "Death": {}
+        "Death": {},
+        "Friend": {},
+        "Skellybeans": {}
     },
     "cutscenes": {
         "Intro": {
@@ -3758,6 +3767,37 @@
             },
             "357": {
                 "auto": "airport_closed"
+            },
+            "358": {
+                "sequence": [
+                    "convo_friend"
+                ]
+            },
+            "359": {
+                "new_map": {
+                    "map": "forest_05",
+                    "bg_track": "bg_friend",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            7
+                        ],
+                        "ginger": [
+                            5,
+                            7
+                        ]
+                    }
+                }
+            },
+            "360": {
+                "sequence": [
+                    "convo_friend_leave"
+                ]
+            },
+            "361": {
+                "sequence": [
+                    "skelly_01"
+                ]
             }
         }
     },
@@ -3901,15 +3941,6 @@
                 "jeremy": [
                     6,
                     3
-                ]
-            }
-        },
-        "BLACK_TO_LAB_02": {
-            "map": "lab_02",
-            "positions": {
-                "jeremy": [
-                    1,
-                    5
                 ]
             }
         },
@@ -4143,6 +4174,16 @@
                 "jeremy": [
                     0,
                     0
+                ]
+            }
+        },
+        "BLACK_TO_LAB_02": {
+            "map": "lab_02",
+            "bg_track": "cave_01",
+            "positions": {
+                "jeremy": [
+                    1,
+                    5
                 ]
             }
         }

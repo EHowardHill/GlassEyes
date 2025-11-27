@@ -81,6 +81,8 @@
 #include "bn_sprite_items_spr_vista_read01.h"
 #include "bn_sprite_items_spr_vista_read02.h"
 #include "bn_sprite_items_spr_death.h"
+#include "bn_sprite_items_spr_friend.h"
+#include "bn_sprite_items_spr_skellybeans.h"
 
 using namespace bn;
 
@@ -165,6 +167,8 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_VISTA_READ01: { return &sprite_items::spr_vista_read01; break; }
 	case CHAR_VISTA_READ02: { return &sprite_items::spr_vista_read02; break; }
 	case CHAR_DEATH: { return &sprite_items::spr_death; break; }
+	case CHAR_FRIEND: { return &sprite_items::spr_friend; break; }
+	case CHAR_SKELLYBEANS: { return &sprite_items::spr_skellybeans; break; }
     default:
     {
         return &sprite_items::spr_vista;

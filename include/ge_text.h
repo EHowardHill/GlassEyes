@@ -67,7 +67,8 @@ enum actions
     ACT_MUSIC_RESET,
     ACT_WAIT,
     ACT_INVERT_CONTROLS,
-    ACT_HARD_RESET
+    ACT_HARD_RESET,
+    ACT_CLEAR_INVENTORY
 };
 
 enum speed

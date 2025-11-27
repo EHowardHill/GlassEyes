@@ -973,7 +973,8 @@ item_155
 item_155b															
 		EM_SKIP	ACT_SFX_FIRE												
 	db_ch_ginger	EM_HAPPY	ACT_MUSIC_FADEOUT	Ahh..	There we go.	Much better.				CHAR_FIRE	&fire_on				
-			ACT_PROGRESS							CH_CUTSCENE_05					
+		EM_SKIP	ACT_CLEAR_INVENTORY												
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_05					
 															
 item_none															
 				Doesn't seem to	be anything here.	Sorry.									
@@ -1216,7 +1217,7 @@ bm_fridge
 															
 chat_197															
 				You found:	SLICE OF PIE										
-				Huh.	Wonder how that	got there.									
+				Huh.	Wonder how that	got there.				OBJ_PIE	&elem_pie_take				
 		EM_SKIP	ACT_ITEM							OBJ_PIE					
 															
 visker_final															
@@ -1387,13 +1388,13 @@ flayithro_sign
 	db_ch_ginger	EM_SIDE_EYE		I don't know if	I agree with that.										
 															
 pringle_01															
-	db_ch_pringle	EM_DEFAULT		GREETINGS, friends!	Welcome to	Flayithro(TM)!									
-	db_ch_pringle	EM_HAPPY		Per village policy,	we have a STRICT	DRESS CODE at night.									
-	db_ch_pringle	EM_DEFAULT		This is of course	NOT to disfavor poor	ugly filthy people,									
-	db_ch_pringle	EM_DEFAULT		Who I'm sure have	at least a little	good taste,									
-	db_ch_pringle	EM_HAPPY		Seeing as they came	to FLAYITHRO(tm)	of course.									
-	db_ch_pringle	EM_DEFAULT		If you have nothing	to wear, visit our	lovely boutique.									
-	db_ch_pringle	EM_DEFAULT		(alsotakeashoweryou	threesmellterrible	thankyouverymuch).									
+	db_ch_pringle			GREETINGS, friends!	Welcome to	Flayithro(TM)!									
+	db_ch_pringle			Per village policy,	we have a STRICT	DRESS CODE at night.									
+	db_ch_pringle			This is of course	NOT to disfavor poor	ugly filthy people,									
+	db_ch_pringle			Who I'm sure have	at least a little	good taste,									
+	db_ch_pringle			Seeing as they came	to FLAYITHRO(tm)	of course.									
+	db_ch_pringle			If you have nothing	to wear, visit our	lovely boutique.									
+	db_ch_pringle			(alsotakeashoweryou	threesmellterrible	thankyouverymuch).									
 															
 flayithro_sign_01															
 				OUR GLORIOUS	FOUNDER										
@@ -1683,6 +1684,7 @@ matt_01
 	db_ch_matt	EM_DEFAULT		WELCOME! I am the	A.I.RCHBISHOP of	CANTERBURY, Matthew!				CHAR_MATT	&matt_yay				
 	db_ch_matt	EM_DEFAULT		However, I get	"called ""Matt"" "	a TON.									
 	db_ch_matt	EM_DEFAULT		I'm sure you've seen	ads for my auto-	biography, yes?				CHAR_MATT	&matt_erm				
+		EM_SKIP	ACT_WALK							CHAR_JEREMY		{58,3}			
 		EM_SKIP								CHAR_MATT_POSTER_01	&poster_02				
 		EM_SKIP								CHAR_MATT_POSTER_02	&poster_02				
 	db_ch_matt	EM_DEFAULT	ACT_SFX_CLICK	"It's titled ""M.E."","	"or ""Mechanical"	"Episcopate"". Clever!"				CHAR_MATT	&matt_press				
@@ -2643,3 +2645,14 @@ final_01d
 															
 airport_closed															
 				NEW BERLIN STATION	CLOSED FOR REPAIRS										
+															
+convo_friend															
+				You shouldn't	be here.										
+															
+convo_friend_leave															
+				You have gone too	far. There is no	going back now.									
+															
+skelly_01															
+	db_ch_ginger	EM_SIDE_EYE		..I think we'll be	fine, but that's a	human skeleton.									
+	db_ch_ginger	EM_DEFAULT		You've gotta watch	out for muetos out	here.									
+	db_ch_ginger	EM_EMBARRASSED		-The bad ones,	of course.	The bad ones.									

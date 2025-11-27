@@ -2214,6 +2214,35 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		ch_man.load(&airport_closed);
 		break;
 	}
+	case 358:
+	{
+		if (global_data_ptr->action_iterations[358] == 0) { ch_man.load(&convo_friend); global_data_ptr->action_iterations[358] += 1; } else
+		{ };
+		break;
+	}
+	case 359:
+	{
+		global_data_ptr->entry_map = &map_forest_05;
+		global_data_ptr->bg_track = &music_items::bg_friend;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {4, 7};
+		global_data_ptr->ginger_position = {5, 7};
+		return NEW_MAP;
+		break;
+	}
+	case 360:
+	{
+		if (global_data_ptr->action_iterations[360] == 0) { ch_man.load(&convo_friend_leave); global_data_ptr->action_iterations[360] += 1; } else
+		{ };
+		break;
+	}
+	case 361:
+	{
+		if (global_data_ptr->action_iterations[361] == 0) { ch_man.load(&skelly_01); global_data_ptr->action_iterations[361] += 1; } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }

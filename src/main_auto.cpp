@@ -93,11 +93,6 @@ void resolve_chapter()
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {6, 3};
 		break;		}
-	case BLACK_TO_LAB_02: {
-		global_data_ptr->entry_map = &map_lab_02;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {1, 5};
-		break;		}
 	case CH_CUTSCENE_07: {
 		typewriter(TYPEWRITER_CCUTSCENE_07);
 		global_data_ptr->entry_map = &map_cutscene_castle_01;
@@ -252,6 +247,12 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {0, 0};
+		break;		}
+	case BLACK_TO_LAB_02: {
+		global_data_ptr->entry_map = &map_lab_02;
+		global_data_ptr->bg_track = &music_items::cave_01;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {1, 5};
 		break;		}
 	default: { break; }
 	}

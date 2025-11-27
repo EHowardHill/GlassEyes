@@ -215,8 +215,6 @@ int main()
         }
         case NEW_CHAPTER:
         {
-            BN_LOG("CHAPTER: ", global_data_ptr->process_stage);
-
             global_data_ptr->jeremy_position = {0, 0};
             global_data_ptr->ginger_position = {0, 0};
             global_data_ptr->sebellus_position = {0, 0};
