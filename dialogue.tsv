@@ -208,13 +208,20 @@ lab_03_alt_01
 															
 lab_03_alt_02															
 				LOGIN SUCCESSFUL											
-				December 31, 19XX											
+				December 31, 201X											
 				FINAL LOG.	Funding cuts are	sending us home.									
-				Unfortunately,	we haven't been	able to find them.									
-				In all honesty	this whole year	feels like it's been									
-				a huge waste	of time.	Our prevailing									
-				theory as to where	new muetos come	from is that									
-				"they ""pop out of"	"the ground"". It's as"	good as any.									
+				However, every ESG	test has been	entirely conclusive.									
+				Ghosts are real.											
+				One curious note is	that our imaging	system has been									
+				consistently	depicting them as	having forms that									
+				either resemble	muetos, or clowns.	Often both.									
+				There are no	consistent theories	to support why this									
+				phenomenon occurs,	and our findings	have resulted in									
+				the Canterbury	institute not taking	us seriously.									
+				It is our belief	that the Archbishop,	as well as other									
+				key figures involved	in city management,	are not taking our									
+				concerns seriously.											
+				Something very dark	is going on.										
 															
 lab_04															
 				If you had been	able to finish	your degree,									
@@ -2297,6 +2304,7 @@ cutscene_09b
 	db_ch_vista_02	EM_SAD		So much death..	Generations..	And generations..									
 	db_ch_vista_02	EM_LAUGH		What irony that I	can't die, the only	one who wants it!									
 	db_ch_vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
+	db_ch_vista_02	EM_SULLEN		It's all fake.. a	wicked parody of a	family..									
 	db_ch_vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
 	db_ch_vista_02	EM_SAD	ACT_MUSIC_FADEOUT	I want to go home..	I want to go home..	..									
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					

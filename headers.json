@@ -2424,22 +2424,6 @@
                     "broken_avalon_00"
                 ]
             },
-            "131": {
-                "new_map": {
-                    "map": "dark_01",
-                    "bg_track": "bg_sorry",
-                    "positions": {
-                        "jeremy": [
-                            0,
-                            10
-                        ],
-                        "ginger": [
-                            1,
-                            10
-                        ]
-                    }
-                }
-            },
             "139": {
                 "new_map": {
                     "map": "dark_02",
@@ -3745,6 +3729,22 @@
                 "sequence": [
                     "final_03"
                 ]
+            },
+            "131": {
+                "new_map": {
+                    "map": "dark_01",
+                    "bg_track": "bg_sorry",
+                    "positions": {
+                        "jeremy": [
+                            1,
+                            11
+                        ],
+                        "ginger": [
+                            1,
+                            10
+                        ]
+                    }
+                }
             }
         }
     },
