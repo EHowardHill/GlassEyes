@@ -492,6 +492,20 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "shot": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "back_up": {
+                "frames": [
+                    10
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "sm": {
@@ -946,6 +960,16 @@
                 "speed": 0,
                 "loop": false
             }
+        },
+        "gun": {
+            "shoot": {
+                "frames": [
+                    1,
+                    0
+                ],
+                "speed": 1,
+                "loop": false
+            }
         }
     },
     "items": {
@@ -1101,7 +1125,8 @@
         "Friend": {},
         "Skellybeans": {},
         "Homeress": {},
-        "Angel": {}
+        "Angel": {},
+        "Gun": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1827,6 +1852,12 @@
                         ]
                     }
                 }
+            },
+            "369": {
+                "sequence": [
+                    "sebellus_gun",
+                    "sebellus_gun_02"
+                ]
             }
         },
         "automatic": {

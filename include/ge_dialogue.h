@@ -364,6 +364,8 @@ extern const conversation scruffys_06b_alt_01;
 extern const conversation sebellus_00;
 extern const conversation sebellus_01;
 extern const conversation sebellus_02;
+extern const conversation sebellus_gun;
+extern const conversation sebellus_gun_02;
 extern const conversation sign_135;
 extern const conversation sign_136;
 extern const conversation sign_142;

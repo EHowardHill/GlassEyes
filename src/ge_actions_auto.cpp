@@ -748,6 +748,13 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
+	case 369:
+	{
+		if (global_data_ptr->action_iterations[369] == 1) { ch_man.load(&sebellus_gun); } else
+		if (global_data_ptr->action_iterations[369] == 2) { ch_man.load(&sebellus_gun_02); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }

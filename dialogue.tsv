@@ -2749,3 +2749,39 @@ constance_castle_alt_01
 	db_ch_constance			Just walk up and try	to open the painting	like it's a door.									
 	db_ch_ginger	EM_LAUGH		Well, that's not	quite what I-										
 	db_ch_constance			If you're looking	for the queen, she's	in her room.									
+															
+sebellus_gun															
+	db_ch_sebellus			Hey, Greenie!	What's new?										
+	db_ch_ginger	EM_ANGRY		Please don't call me	that, it's weird.										
+	db_ch_sebellus	EM_HAPPY		Yeah, but you're	green.										
+	db_ch_ginger	EM_ANGRY		YOU'RE green!											
+	db_ch_sebellus			So?	Anyway, this cool	gun thing is new!									
+	db_ch_sebellus	EM_HAPPY		She really shouldn't	have gotten me this.										
+	db_ch_ginger	EM_EXCITED		I agree.											
+	db_ch_sebellus	EM_SIDE_EYE	ACT_WALK	I've been having fun	shooting at targets,	wanna try?				CHAR_SEBELLUS	&anim_face_right	{2,5}			
+	db_ch_ginger	EM_DEFAULT	ACT_WALK	..sure, I guess.	Why not.	Hey-				CHAR_GINGER	&anim_face_right	{3,5}			
+	db_ch_ginger	EM_SIDE_EYE		How do we know this	won't wake up mom's	dragon?									
+	db_ch_sebellus	EM_HAPPY		Oh- Bloodflood is a	heavy sleeper, he	doesn't care.									
+	db_ch_sebellus	EM_SIDE_EYE	ACT_WALK	Alright.. So you	wanna keep your eye	on the target, and-				CHAR_SEBELLUS	&anim_face_right	{3,6}			
+		EM_SKIP	ACT_TELEPORT							CHAR_SEBELLUS	&sebellus_shot	{2,6}			
+		EM_SKIP								CHAR_GUN	&gun_shoot				
+	db_ch_sebellus	EM_LAUGH	ACT_SFX_FIRE	..OWWWW!	GAAAH!	THAT HURTS!									
+	db_ch_ginger	EM_WAT		Sebellus!!	Are you alright?!?					CHAR_GINGER	&anim_face_down				
+	db_ch_ginger	EM_DISAPPOINTED		See, this is why mom	giving you things is	a bad idea.									
+	db_ch_sebellus	EM_LAUGH		Hey, I was doing	just fine until you	tried it!									
+	db_ch_ginger	EM_SAD		You're bleeding!!	We need to get you	to a medic!									
+	db_ch_sebellus	EM_LAUGH		HECK no!	I just got this	thing!									
+	db_ch_sebellus	EM_LAUGH		They're gonna take	it away if you tell!										
+	db_ch_ginger	EM_DISAPPOINTED		Then what do we do??											
+	db_ch_sebellus			Nothing.	I'm just gonna walk	it off.				CHAR_SEBELLUS	&sebellus_back_up				
+	db_ch_ginger	EM_DEFAULT		..											
+	db_ch_sebellus	EM_EXCITED		..											
+	db_ch_ginger	EM_DEFAULT		..	You're serious.										
+	db_ch_sebellus			When have I not	been serious about	something?									
+	db_ch_ginger	EM_SIDE_EYE	ACT_WALK	I'll, uh.. be in the	other room.					CHAR_GINGER		{3,6}			
+	db_ch_sebellus		ACT_WALK	You better not tell	though, or I'll call	you Greenie forever!				CHAR_SEBELLUS	&sebellus_back_up	{3,5}			
+															
+sebellus_gun_02															
+	db_ch_sebellus	EM_SIDE_EYE		You didn't tell mom,	did you?										
+	db_ch_ginger			I haven't.											
+	db_ch_sebellus	EM_HAPPY		Fantastic.											

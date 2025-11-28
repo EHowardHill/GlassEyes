@@ -61,6 +61,8 @@ const animation sebellus_fancy_sleep = {{13}, 1, 0, false};
 const animation sebellus_sword = {{14}, 1, 0, false};
 const animation sebellus_death = {{15,16,17,18,19,20,21,22,23,24}, 10, 1, false};
 const animation sebellus_ready = {{14}, 1, 0, false};
+const animation sebellus_shot = {{9}, 1, 0, false};
+const animation sebellus_back_up = {{10}, 1, 0, false};
 const animation sm_stab_01 = {{0}, 1, 0, true};
 const animation sm_stab_02 = {{1}, 1, 0, true};
 const animation sm_dead = {{2}, 1, 0, true};
@@ -103,5 +105,6 @@ const animation sans_left = {{10}, 1, 0, false};
 const animation sans_ice_cream = {{9}, 1, 0, false};
 const animation o_candle = {{0,1}, 2, 0, true};
 const animation angel_disappear = {{1,2}, 2, 0, false};
+const animation gun_shoot = {{1,0}, 2, 1, false};
 
 #endif

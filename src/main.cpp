@@ -30,7 +30,7 @@
 
 using namespace bn;
 
-constexpr bool TESTING = true;
+constexpr bool TESTING = false;
 
 int chapter_select()
 {

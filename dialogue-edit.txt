@@ -1,129 +1,3 @@
-### Plot Summary (Reconstructed Chronological Order)
-
-"Glass Eyes" is a dark fantasy tragedy with heavy Undertale-inspired RPG elements (dialogue choices, sparing/fighting, multiple endings). The story spans decades and revolves around the creation of an artificial fantasy race called "muetos" — short-lived anthropomorphic animal-people who "pop out of the ground" via forbidden soul-transfer rituals.
-
-1. **Distant Past (Cutscenes 01–03)**  
-   Dr. Henry Erickson, a brilliant but disgraced biologist in the domed human city of Canterbury (a sterile, post-environmental-collapse "New World"), teams up with an occultist who provides soul-manipulating sigils. Henry wants to repopulate the ruined outside ("Old World") with new life. He builds a protein-printing machine that can create viable hybrid animal-human bodies, but he cannot animate them without souls. The sigils allow him to rip pieces of dying human souls (or entire souls at greater cost) and implant them into his printed bodies. The price is steep: blood, then his own eye, and eventually more.
-
-2. **Creation of Vista (Cutscene 04 & 05)**  
-   Henry sacrifices his eye to transfer an entire adult human woman's dying soul into the first fully conscious mueto body — a Marelon (like a cat-person, but with horns and no tail). She wakes up terrified, with fragmented memories. Henry names her "Vista" and suppresses the truth at first. Over the following year he raises her like a daughter/partner. Vista eventually accepts her new existence but begs to forget her human past completely. Henry promises her a kingdom.
-
-3. **The Escape & Birth of the Mueto Nation (Cutscene 06)**  
-   The authorities discover Henry's experiments. Henry, Vista, and a handful of short-lived prototype muetos flee Canterbury through the garbage chute into the toxic outside wilderness. Vista chooses to stay with Henry instead of letting herself "die" to return to her original human body. Henry continues creating short-lived muetos (5-year lifespan) using soul fragments. Vista becomes their immortal queen ("Grand Master Senatrix Vista Blackrose") because she alone has a full human soul and can live indefinitely by periodically shedding/regenerating her skin (a grotesque ritual).
-
-4. **Present Day – The Endless War**  
-   Decades later, muetos have built a hidden society in the ruins and tunnels of the Old World (Avalon Village, etc.). They fight a hopeless guerrilla war against human cities that bomb them from the air. No new full-soul muetos can be born without Henry (who lives in hiding and is now blind or nearly so). Mueto morale collapses; they will go extinct within a generation.
-
-5. **Main Game (Demo Section)**  
-   The player character is an unnamed human (Jeremy) who illegally escapes Canterbury and immediately falls down the garbage chute into Mt. Garbage. There he meets:
-   - Visker, the cynical, starving rat-king of trash
-   - Ginger, a nervous, kind, lime-obsessed female mueto who is secretly Princess Selari — Vista's "daughter"/genetic clone with another transferred full human soul (Virginia/Ginger)
-   Jeremy and Ginger travel together toward the mueto city of Avalon, hoping to reach the fabled safe haven of Canterbury for muetos (a lie/propaganda). Along the way they see the dying mueto world: silly Temmies, hostile patrols, abandoned labs, and signs of collapse.
-
-6. **Climax & Multiple Endings (Henry/Vista confrontation)**  
-   Ginger discovers the awful truth: she is not "born" but a transferred dying human soul (like her mother Vista once was). Henry is still alive, old, and dying. He needs one final full-soul transfer to create a stable heir or to end the cycle. Vista, now ancient and broken by centuries of war guilt, wants it all to stop.  
-   Depending on player choices throughout the game (especially mercy vs violence and final dialogue decisions), there are at least four endings:
-   - Ginger forcibly forgets her human past with Lethedol and stays as princess/heir; the mueto race slowly dies while she and Vista live eternally in denial.
-   - Ginger kills herself with Henry's soul-extraction tool to return home; Vista kills Henry and ends mueto creation forever.
-   - The player mercy-kills or helps Vista end everything.
-   - Tragic loop: Ginger is brain-damaged by Lethedol and is propped up as a puppet queen while the kingdom collapses.
-
-### Core Themes
-- **Identity & Forgetting**: Is it mercy or cruelty to erase someone's painful past? Every major character wants to forget who they were.
-- **Transhumanism vs Nature**: Creating "better" life through technology inevitably causes suffering and extinction.
-- **Immortality as Punishment**: Vista is the only truly immortal mueto and is completely broken by it.
-- **Colonial Guilt & War**: Humans literally colonize the wilderness with stolen human souls in animal bodies; the war is humans fighting their own discarded souls.
-- **Mother-Daughter Trauma**: Vista and Ginger/Selari repeat the cycle of abandonment, denial, and forced forgetting.
-- **The Cost of Wishes**: Every character gets exactly what they wished for, in the worst possible way.
-
-### Main Characters & Personalities
-
-- **Vista Blackrose (The Senatrix / Queen)**  
-  Marelon woman, regal, purple color scheme. Starts kind and curious, becomes weary, alcoholic, deeply depressed, and self-loathing. Immortal = endless guilt. Loves her "children" but knows she is complicit in their short, doomed lives. Desperately wants to forget her own human past.
-
-- **Ginger / Princess Selari / Virginia**  
-  Marelon girl, orange/ginger fur, nervous and empathetic, obsessed with limes (coping mechanism). Secretly a full-soul transfer like Vista. Sweet and avoidant on the surface; underneath she is terrified of her identity and clings to whoever shows her kindness. Represents the "new generation" that has to pay for the previous one's dreams.
-
-- **Dr. Henry Erickson**  
-  Human scientist, now old and blind (glass eyes). Charismatic, paternal, utterly ruthless utilitarian. Believes the ends justify any means. Sees muetos as his masterpieces but is willing to sacrifice anything (his eyesight, Vista's sanity, Ginger's life) to keep the project going.
-
-- **Sebellus**  
-  Marelon, Vista's short-lived "son" (half-soul mueto). Protective of Ginger, a bit bratty, but genuinely caring. Dies willingly in one ending to spare Ginger more pain.
-
-- **Visker**  
-  Comic-relief boss: starving rat who lives in garbage, wants to eat humans but is too pathetic/lonely to be truly evil. Cynical philosopher of trash.
-
-- **Jeremy (silent player character)**  
-  Escaped human, amnesiac for most of the journey. The outsider lens through which we see the dying mueto world.
-
-The game is fundamentally about two transferred human women (mother and daughter) confronting the fact that their beautiful fairy-tale kingdom was built on soul theft, forced amnesia, and an extinction clock — and whether forgetting again is salvation or the ultimate damnation.
-
-### The Core Family (That Isn’t Really a Family)
-
-At the heart of Glass Eyes is a single, horribly dysfunctional “family” unit created entirely through soul theft, cloning, and centuries of denial. Every relationship orbits around the fact that none of them asked to exist in these bodies and none of them can truly escape what was done to them.
-
-#### Vista ↔ Ginger (Mother–Daughter, Queen–Heir, Trauma Donor–Trauma Receiver)
-This is the central emotional spine of the game and the one that hurts the most.
-
-- Vista sees Ginger as four things at once:  
-  1. Her literal genetic clone (same base body template).  
-  2. The second chance she never got — a full-soul mueto who could rule without the weight of 200+ years of guilt.  
-  3. A walking reminder of her own original human death (they both “woke up” the same way).  
-  4. The only person alive who truly understands the horror of what Henry did to them.
-
-- Ginger starts out idolising Vista (“Mom is perfect, Mom has everything under control”) and slowly realises that Vista is an alcoholic wreck who is using Ginger as an exit strategy: “If I can just raise one good heir, I can finally stop existing.”
-
-- Vista’s love is genuine but suffocating. She builds Ginger an entire secret human-style bedroom because she knows Ginger misses the human world, yet she also withholds the full truth for as long as possible. Every kind gesture is laced with manipulation (“Take the Lethedol, dear, you’ll be happier if you forget”).
-
-- By the climax they are mirror images: both full-soul transfers begging for the same amnesia drug, both terrified of remembering their human deaths, both willing to sacrifice the other to escape the cycle.
-
-#### Vista ↔ Sebellus (Queen–Firstborn, Immortal–Doomed)
-Sebellus is the only one who calls Vista out directly.
-
-- He is a short-lived half-soul mueto (normal kind), so he has maybe two years left at most when the game happens.  
-- He resents being created as a disposable soldier/prince and resents even more that Vista refuses to acknowledge how fucked-up that is.  
-- At the same time he is fiercely protective of Ginger and sees himself as the only one willing to make the hard choice (in one ending he straight-up volunteers to die so Ginger doesn’t have to lose her memories).
-
-- Their scenes are full of exhausted sniping:  
-  Vista: “Sebellus, it is not your place to speak right now.”  
-  Sebellus: “You’re scaring her again, Mom.”
-
-- He is the only family member who treats Vista like a fallible person instead of a demigoddess, and that makes him the only one she occasionally listens to.
-
-#### Ginger ↔ Sebellus (Big Sister–Little Brother, Full Soul–Half Soul)
-The healthiest relationship in the entire script, which is saying something.
-
-- They genuinely like each other. Ginger writes bad poetry, Sebellus pretends it’s amazing. They watch movies together in the secret room.  
-- Sebellus is the one person Ginger can be angry around without feeling guilty, because he’s angry too.  
-- He is in love with her (not necessarily romantic, but the script leaves it ambiguous), and in the worst endings he kills himself so she doesn’t have to take Lethedol or return to being human.
-
-- Their dynamic is “two kids who know the house is on fire but still try to have a normal sibling relationship for as long as possible.”
-
-#### The Player (Jeremy) ↔ The Family
-The player is the ultimate outsider and unwilling therapist.
-
-- You fall out of the sky into their dying world, and Ginger immediately latches onto you as the first normal human she’s ever met who isn’t Henry.  
-- To Ginger you are simultaneously:  
-  - A reminder of the home she can never return to.  
-  - Proof that humans aren’t all monsters.  
-  - The only person who wasn’t created by Henry and therefore the only one whose kindness feels “real.”
-
-- Vista treats you with distant, regal politeness at first, then growing desperation. She knows you are the only one who can talk Ginger into staying or leaving forever. In some endings she begs you to take Ginger home; in others she begs you to help her force Ginger to forget.
-
-- Sebellus is suspicious of you (“Why is a human suddenly here right when everything is falling apart?”) but eventually decides you’re the least bad adult in the room and entrusts Ginger to you.
-
-- Mechanically, your pacifist/genocide choices don’t change the ending, but they do change how much the family trusts you in the final confrontation. If you’ve been killing muetos, Vista will threaten to skin you like a potato. If you’ve been merciful, she’ll cry and ask you to comfort Ginger while she finally confronts Henry.
-
-#### In short, the four-person dynamic is:
-
-Vista (immortal mother, slowly committing suicide via kingdom)  
-↖          ↘  
-Ginger (heir who just wants to go home)  —  Sebellus (doomed older brother who just wants everyone to stop lying)  
-↖          ↘  
-Player (silent human who accidentally became the family therapist and gets to decide how much of this house burns down with everyone still inside)
-
-Every conversation between any two of them is about the other two. They are a closed system slowly eating itself, and the player is the only variable they didn’t plan for — which is why they all end up begging you, in their own way, to make the final choice for them.
-
 Name / ID	Portrait	Emotion	Action	Line1	Line2	Line3	Color	Size	Speed	Index	Anim	Navigate	Branching Dialogue 1	Branching Dialogue 2	Bg Pointer
 intro_01															
 				Deep within the	woods of the	old world,									scene_cabin01
@@ -137,11 +11,11 @@ test_convo
 				In her cabin,	most days were	just the same.									
 				She read her books	and cared for her	sawdust doll.									
 			ACT_SFX_KNOCK	But today,	there was a knock	at the door.				CHAR_VISTA					
-vista	EM_DEFAULT	ACT_WALK	Yes?	Who is it?					CHAR_VISTA	&vista_pickup	{2, 3}			
-vista	EM_SULLEN		Hmm,	What could this be?										
-vista	EM_HAPPY		"""Dear Vista,"	I don't know if you	"remember me.."""									
-vista	EM_DEFAULT		"""It's been years"	"and years.."""										
-vista	EM_DEFAULT		I don't..	remember..	anyone else..									
+vista_02	EM_DEFAULT	ACT_WALK	Yes?	Who is it?					CHAR_VISTA	&vista_pickup	{2, 3}			
+vista_02	EM_SULLEN		Hmm,	What could this be?										
+vista_02	EM_HAPPY		"""Dear Vista,"	I don't know if you	"remember me.."""									
+vista_02	EM_DEFAULT		"""It's been years"	"and years.."""										
+vista_02	EM_SULLEN		I don't..	remember..	anyone else..									
 			ACT_PROGRESS							CUTSCENE_TO_GARBAGE					
 															
 intro_02															
@@ -334,13 +208,20 @@ lab_03_alt_01
 															
 lab_03_alt_02															
 				LOGIN SUCCESSFUL											
-				December 31, 19XX											
+				December 31, 201X											
 				FINAL LOG.	Funding cuts are	sending us home.									
-				Unfortunately,	we haven't been	able to find them.									
-				In all honesty	this whole year	feels like it's been									
-				a huge waste	of time.	Our prevailing									
-				theory as to where	new muetos come	from is that									
-				"they ""pop out of"	"the ground"". It's as"	good as any.									
+				However, every ESG	test has been	entirely conclusive.									
+				Ghosts are real.											
+				One curious note is	that our imaging	system has been									
+				consistently	depicting them as	having forms that									
+				either resemble	muetos, or clowns.	Often both.									
+				There are no	consistent theories	to support why this									
+				phenomenon occurs,	and our findings	have resulted in									
+				the Canterbury	institute not taking	us seriously.									
+				It is our belief	that the Archbishop,	as well as other									
+				key figures involved	in city management,	are not taking our									
+				concerns seriously.											
+				Something very dark	is going on.										
 															
 lab_04															
 				If you had been	able to finish	your degree,									
@@ -1092,84 +973,31 @@ item_155
 item_155b															
 		EM_SKIP	ACT_SFX_FIRE												
 ginger	EM_HAPPY	ACT_MUSIC_FADEOUT	Ahh..	There we go.	Much better.				CHAR_FIRE	&fire_on				
-			ACT_PROGRESS							CH_CUTSCENE_05					
+		EM_SKIP	ACT_CLEAR_INVENTORY												
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_05					
 															
 item_none															
 				Doesn't seem to	be anything here.	Sorry.									
 															
 dark_talk															
-		EM_SKIP								CHAR_JEREMY	&jeremy_lay_down				
+		EM_SKIP	ACT_MUSIC_RESET							CHAR_JEREMY	&jeremy_lay_down				
 		EM_SKIP								CHAR_GINGER	&ginger_sit_sad				
 		EM_SKIP								CHAR_FIRE	&fire_on				
-ginger	EM_SAD		Hey, uh..	Now that we're	settled,									
-ginger	EM_DEFAULT		I imagine you	probably have	questions.									
-				No not really	Yeah								&dark_talk_alt_01		
-ginger	EM_SAD		Well.. Here goes.	Muetos aren't what	we might seem.									
-ginger	EM_SULLEN		I don't know how	much you know	about us, but..									
-ginger	EM_SULLEN		Our life cycle	goes like this,	right?									
-ginger	EM_SULLEN		We pop out of	tunnels in the	ground,									
-ginger	EM_SULLEN		Already knowing	how to talk and	all that,									
-ginger	EM_SULLEN		Then we find a	village and live	for a couple years,									
-ginger	EM_SULLEN		Until we die.	Then they throw	our bodies into									
-ginger	EM_SULLEN		the tunnels, where	it starts over	again.									
-ginger	EM_SAD		"""Where do the"	"bodies come from,"""	you might ask.									
-				I won't ask	Right								&dark_talk_alt_02		
-ginger	EM_SULLEN		Canterbury.	There's a man there,	Dr. Henry Erickson.									
-ginger	EM_SIDE_EYE		You might have	heard of him	before.									
-ginger	EM_SULLEN		Well.. He's still	alive. And he makes	us. In a lab.									
-ginger	EM_SAD		But that's not even	the worst part of it	all.									
-ginger	EM_SAD		Every mueto you	meet.. Has the piece	of a human soul									
-ginger	EM_SAD		inside of them.	Slowly killing the	"human ""donor""."									
-ginger	EM_SAD		You know how	all the humans in	the city act..									
-ginger	EM_SAD		Off? Lethargic.	Distressed.	Paranoid.									
-ginger	EM_SAD		It's because Henry	is using evil magic	to siphon souls									
-ginger	EM_SAD		into these meat	puppets. I don't	know his goal.									
-ginger	EM_SULLEN		And how do I	know all this?										
-				I don't care	How?								&dark_talk_alt_03		
-ginger	EM_DEFAULT		Because I'm one	of only two muetos	in the world									
-ginger	EM_DEFAULT		Who had an	ENTIRE human soul	moved over.									
-ginger	EM_SULLEN		I was a human	not even that	long ago.									
-ginger	EM_SAD		I've been told my	human body is	in a coma.									
-ginger	EM_SULLEN		Anyways.. I want	to get to Canterbury	to stop this.									
-ginger	EM_SULLEN		Something very,	very wrong is	happening.									
-ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_01															
-ginger	EM_DEFAULT		Like what?											
-				Who are you?	Why are you so green								&dark_talk_alt_04		
-ginger	EM_LAUGH		You're not gonna	believe this, but..										
-ginger	EM_SAD		I'm, uh..	Princess Selari.										
-ginger	EM_EMBARRASSED		I ran away from	home because of..	personal reasons.									
-ginger	EM_DEFAULT		There's someone	I need to see in	Canterbury.									
-ginger	EM_DEFAULT		It's the best way	for you to get home	too, though, so..									
-ginger	EM_DEFAULT		I'm not putting	you out or anything	like that.									
-ginger	EM_HAPPY		I'm very happy I	bumped into you,	I wouldn't have									
-ginger	EM_HAPPY		been able to get	this far without	you.									
-ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_04															
-ginger	EM_LAUGH		The limes.	You are what you	eat and all that.									
-ginger	EM_SULLEN		But seriously..	I'm a Marelon.	We, uh..									
-ginger	EM_DEFAULT		We're a special	kind of mueto that	is very rare.									
-ginger	EM_SIDE_EYE		There are only	three of us in the	whole world.									
-ginger	EM_DEFAULT		We're green, and..	well.. We, uh.. Play	a certain role									
-ginger	EM_DEFAULT		in the kingdom.											
-ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_02															
-ginger	EM_EMBARRASSED		It's uh..	pretty gross, but..	Well..									
-ginger	EM_SULLEN		All I'll say for now	is that we come	from Canterbury,									
-ginger	EM_SULLEN		and there's a, uh..	reason I want to go.										
-ginger	EM_SULLEN		It's the best way	for you to get home	too, though, so..									
-ginger	EM_DEFAULT		I'm not putting	you out or anything.	It's serendipitous.									
-ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
-		EM_SKIP								CHAR_GINGER	&anim_stand				
-															
-dark_talk_alt_03															
-ginger	EM_DEFAULT		It's because, I'm..	uh..										
+ginger	EM_SIDE_EYE		So, uh.. I think	it's important that	I come clean.									
+ginger	EM_EMBARRASSED		My name.. isn't	"actually ""Ginger""."										
+ginger	EM_SAD		"It's ""Virginia"", I"	"just go by ""Ginger"""	because it's short.									
+ginger	EM_LAUGH		Whew.. that feels	good to get off my	chest..									
+ginger	EM_EMBARRASSED		So.. the war.. uh..	Between the humans	and the muetos..									
+ginger	EM_DISAPPOINTED		It's all.. well..	It's not fake, but	it's.. hmm..									
+ginger	EM_SAD		..anyway, I'm trying	to get to Canterbury	to meet someone.									
+ginger	EM_EMBARRASSED		Okay, I'll just say	it. I know THE	Dr. Henry Erickson.									
+ginger	EM_EMBARRASSED		It's a long story.	But I think he'll	listen to me!									
+ginger	EM_DEFAULT		I think I have a	chance to make it	all stop.									
+ginger	EM_EMBARRASSED		I'm not trying to	take advantage of	you, though..									
+ginger	EM_DEFAULT		There's a train	there that can take	you home.									
+ginger	EM_SIDE_EYE		..Have you ever felt	like you were on a	special mission?									
+ginger	EM_DEFAULT		Like there's a job	only you can do?	It's like that.									
+ginger	EM_LAUGH		I know it sounds	delusional.. but,	uh.. Yeah.									
 ginger	EM_SIDE_EYE	ACT_SFX_FIRE	H-Hey,	what was that??					CHAR_GINGER	&ginger_sit_alert				
 		EM_SKIP								CHAR_GINGER	&anim_stand				
 															
@@ -1248,9 +1076,11 @@ ginger	EM_DEFAULT		What do you	think about him?
 				He's chill	What the heck man								&talk_177_alt_02		
 ginger	EM_LAUGH		Oh, whew..	I was a bit worried.	He's a lot.									
 ginger	EM_SIDE_EYE		You probably	noticed his.. Uh..	His eyes.									
-ginger	EM_DEFAULT		He has what they	"call ""Glass Eyes""."										
+ginger	EM_DEFAULT		His eyes have	special runes on	them.									
+ginger	EM_SIDE_EYE		And, uh..	Because of that..	They, uh..									
 ginger	EM_DEFAULT		He can see things	other people	can't.									
 ginger	EM_DEFAULT		It was to	compensate for..	other things.									
+ginger	EM_DEFAULT		They were given to	him shortly after	he was first made.									
 ginger	EM_SIDE_EYE		I'm glad he's in	there.. I don't want	to talk about									
 ginger	EM_SIDE_EYE		this in front	of him.										
 				"""I can hear you"	"by the way!"""										
@@ -1273,7 +1103,7 @@ ginger	EM_SAD		I need some	time to, uh..
 ginger	EM_SAD		Think about	some things.		COLOR_PURPLE								
 															
 talk_177_alt_01															
-ginger	EM_HAPPY		Aw, that's my	favorite.										
+ginger	EM_EXCITED		Aw, that's my	favorite!										
 ginger	EM_SIDE_EYE		Anyways..	That's all I have	to say.									
 ginger	EM_SAD		I need some	time to, uh..										
 ginger	EM_SAD		Think about	some things.		COLOR_PURPLE								
@@ -1331,14 +1161,13 @@ dog_and_pony
 				*iconic	theme song*										scene_tv_02
 				SUP DUDES!	Welcome to the	DOG & PONY SHOW!	COLOR_BLUE								scene_tv_03
 				Elliott.. That's	not what we're	calling it, right?	COLOR_RED								scene_tv_03
-				We've got a ton of	stuff planned for	you all today..	COLOR_BLUE								scene_tv_04
-				I'm not a dog, and	I know you know	"""dog"" has a"	COLOR_RED								scene_tv_04
-				..slightly	pejorative	connotation.	COLOR_RED								scene_tv_04
+				We've got a ton of	stuff planned for	you all today..	COLOR_BLUE								scene_tv_03
+				I'm not a dog, and	I know you know	"""dog"" has a"	COLOR_RED								scene_tv_03
+				..slightly	pejorative	connotation.	COLOR_RED								scene_tv_03
 				See, I've got	this super cool	cannon here-	COLOR_BLUE								scene_tv_05
 				I get the joke.	It's cute. I'm	just thinking..	COLOR_RED								scene_tv_05
 				AND WE'RE GONNA	LAUNCH TODD OUT	OF IT	COLOR_BLUE								scene_tv_05
-				..											scene_tv_01
-				WE HAVE DETECTED	AN UNAUTHORIZED	TRANSMISSION									scene_tv_01
+			ACT_MUSIC_WIND	WE HAVE DETECTED	AN UNAUTHORIZED	TRANSMISSION									scene_tv_01
 				PLEASE STAY TUNED,	PROGRAMMING WILL	RETURN SHORTLY									scene_tv_01
 															
 sleep_01															
@@ -1371,13 +1200,7 @@ have_to_go_3
 ginger	EM_DISAPPOINTED	ACT_SHAKE_OFF	Ugh.. It stinks	down here.										
 sebellus	EM_SIDE_EYE		It's always	something with you,	isn't it.									
 ginger	EM_ANGRY		Sebellus, you're	not being funny.										
-sebellus	EM_DEFAULT		Why don't we	leave that up to	the human.									
-				Please shut up.	You're fine.								&have_to_go_3_alt_01		
-sebellus	EM_SIDE_EYE		Turning my own	baby sister against	me, aye?									
-sebellus	EM_DEFAULT		I see how it is.											
-															
-have_to_go_3_alt_01															
-sebellus	EM_DEFAULT		See? I've still	got it in me.										
+sebellus	EM_SIDE_EYE		Hey, if we weren't	running for our life	you would'a laughed.									
 															
 have_to_go_4															
 		ACT_SFX_EXPLOSION													
@@ -1394,13 +1217,12 @@ bm_fridge
 															
 chat_197															
 				You found:	SLICE OF PIE										
-				Huh.	Wonder how that	got there.									
+				Huh.	Wonder how that	got there.				OBJ_PIE	&elem_pie_take				
 		EM_SKIP	ACT_ITEM							OBJ_PIE					
 															
 visker_final															
-				Hello, Visker.	Uggggggggggggh								&visker_final_alt_01		
-visker	EM_DEFAULT		HUMAN!	You're alive?!										
-ginger	EM_DEFAULT		Y-You two know	each other?										
+visker	EM_DEFAULT	ACT_MUSIC_VISKER	HUMAN!	You're alive?!										
+ginger	EM_DEFAULT	ACT_WALK	Y-You two know	each other?					CHAR_VISKER		{8,7}			
 visker	EM_SULLEN		It seems human	fared better than	previous home owner.									
 ginger	EM_WAT		W-What happened to	the people inside	the house?									
 visker	EM_SIDE_EYE		House humans	tasted.. Not so	good.									
@@ -1411,34 +1233,22 @@ visker	EM_DEFAULT		Visker not know	who killed humans.
 sebellus	EM_DEFAULT		Why don't you	just let us	through, pal.									
 visker	EM_ANGRY		Visker want to	eat THAT human.	But..									
 visker	EM_DEFAULT		Visker is patient	and will wait for	human to die.									
-sebellus	EM_DEFAULT		Thank you.											
+sebellus	EM_DEFAULT	ACT_WALK	Thank you.						CHAR_VISKER		{17,7}			
+		EM_SKIP	ACT_MUSIC_WIND												
 															
 visker_final_alt_01															
-visker	EM_ANGRY		Human forgot	turkey!										
+visker	EM_ANGRY	ACT_MUSIC_VISKER	HUMAN!	Human forgot	TURKEY!									
+ginger	EM_SIDE_EYE	ACT_WALK	You know this guy??						CHAR_VISKER		{8,7}			
 visker	EM_DEFAULT		Turkey was	SPECIFICALLY	requested!									
 ginger	EM_SIDE_EYE		What is he	talking about??										
 visker	EM_ANGRY		SILENCE, GREEN	THING! Visker	will FIGHT NOW!									
-															
-visker_final_02															
-				He hasn't blinked	since he showed	up here.									
-				On second thought..	You've never seen	him blink before.									
-															
-vf_01															
-				Time to finish	annoying human	ONCE and for ALL									
-															
-vf_02															
-				Visker sees your	offer to SPARE as	offensive,									
-				since it implies	that you are the	stronger one.									
-															
-vf_03															
-				Visker is	continuing to	fight on principle.									
-															
-vf_04															
-				Look, I don't	know what to	tell you, man.									
-															
-visker_final_03															
-				Visker.. Will	stay here to	recover..									
-				Will live to	fight human..	Another day..									
+sebellus	EM_DEFAULT		Great.	Let's go.										
+visker	EM_SIDE_EYE		Uhhh.. Visker.. was	not aware of scary	mueto with sword.									
+visker	EM_SIDE_EYE		..Visker realizes	that three-on-one	fight is not wise.									
+visker	EM_SAD		Visker will INSTEAD	steal everything and	run away.									
+ginger	EM_WAT	ACT_WALK	HEY!						CHAR_VISKER		{17,7}			
+ginger	EM_ANGRY		Jerk..											
+		EM_SKIP	ACT_MUSIC_WIND												
 															
 chat_mcwebb															
 mcwebb	EM_DEFAULT		Well, howdy.	I don't figure that	was Y'ALL's dragon?									
@@ -1448,7 +1258,7 @@ mcwebb	EM_DEFAULT		I don't have long	in this world left.	I don't mind.
 mcwebb	EM_DEFAULT		Typically I sell	ferry rides over	the channel, but..									
 mcwebb	EM_SIDE_EYE	ACT_MUSIC_FADEOUT	I'm not keen to	being killed by	a dragon, you see.									
 mcwebb	EM_DEFAULT		Well, go ahead.	On you git.					CHAR_MCWEBB	&mcwebb_dont				
-			ACT_PROGRESS			CUTSCENE_CHANNEL									
+			ACT_PROGRESS							CUTSCENE_CHANNEL					
 															
 convo_obj_ticket															
 				You've got the	golden ticket!										
@@ -1490,7 +1300,8 @@ mcwebb	EM_DEFAULT		I advise you,	human.
 mcwebb	EM_DEFAULT		Keep both your	eyes open when	you two meet.									
 mcwebb	EM_DEFAULT		Because you	surely will meet.										
 mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when that happens.									
-mcwebb	EM_DEFAULT		Y'all never did	business with me,	understood?									
+mcwebb	EM_DEFAULT	ACT_MUSIC_FADEOUT	Y'all never did	business with me,	understood?									
+			ACT_PROGRESS							BLACK_TO_BEACH					
 															
 chat_mcwebb_02_alt_01															
 mcwebb	EM_DEFAULT		Oh, I don't mean	in that sense,	human.									
@@ -1506,7 +1317,7 @@ mcwebb	EM_DEFAULT		I've heard our	princess has a heart	of gold.
 mcwebb	EM_DEFAULT		It's probably best	that she get some	sleep before..									
 mcwebb	EM_DEFAULT		Well.. I don't want	to spoil the fun,	now do I.									
 mcwebb	EM_DEFAULT		I plan to be back	on safe shores	when y'all meet.									
-mcwebb	EM_DEFAULT		Y'all never did	business with me,	understood?									
+mcwebb	EM_DEFAULT	ACT_MUSIC_FADEOUT	Y'all never did	business with me,	understood?									
 			ACT_PROGRESS							BLACK_TO_BEACH					
 															
 beach_sign															
@@ -1577,13 +1388,13 @@ sebellus	EM_SIDE_EYE		Only one way	to find out.	By breaking them.
 ginger	EM_SIDE_EYE		I don't know if	I agree with that.										
 															
 pringle_01															
-pringle	EM_DEFAULT		GREETINGS, friends!	Welcome to	Flayithro(TM)!									
-pringle	EM_HAPPY		Per village policy,	we have a STRICT	DRESS CODE at night.									
-pringle	EM_DEFAULT		This is of course	NOT to disfavor poor	ugly filthy people,									
-pringle	EM_DEFAULT		Who I'm sure have	at least a little	good taste,									
-pringle	EM_HAPPY		Seeing as they came	to FLAYITHRO(tm)	of course.									
-pringle	EM_DEFAULT		If you have nothing	to wear, visit our	lovely boutique.									
-pringle	EM_DEFAULT		(alsotakeashoweryou	threesmellterrible	thankyouverymuch).									
+pringle			GREETINGS, friends!	Welcome to	Flayithro(TM)!									
+pringle			Per village policy,	we have a STRICT	DRESS CODE at night.									
+pringle			This is of course	NOT to disfavor poor	ugly filthy people,									
+pringle			Who I'm sure have	at least a little	good taste,									
+pringle			Seeing as they came	to FLAYITHRO(tm)	of course.									
+pringle			If you have nothing	to wear, visit our	lovely boutique.									
+pringle			(alsotakeashoweryou	threesmellterrible	thankyouverymuch).									
 															
 flayithro_sign_01															
 				OUR GLORIOUS	FOUNDER										
@@ -1599,25 +1410,19 @@ boutique_01
 ginger	EM_WAT		..uh.											
 sebellus	EM_SIDE_EYE		Here I was, afraid	that this town was	going to be boring.									
 ginger	EM_DEFAULT		Is it.. breathing?		Ew..									
-sebellus	EM_SIDE_EYE		Do you think we can	get free stuff if we	kill it?									
-sebellus	EM_DEFAULT		I guess there's only	one way to find	out!									
-															
-teddy_spare01															
-				The bear is not	interested in	ending the fight.									
+ginger	EM_SIDE_EYE		..Sebellus?	What do we do?										
+sebellus	EM_DEFAULT		Hmm. Well, I wonder	if there's something	helpful in town.									
 															
 boutique_02															
 kathy	EM_HAPPY		Oh.. Thank you,	I was afraid it	would never leave.				CHAR_KATHY		{2,4}			
 ginger	EM_DEFAULT		..Where did it	come from?										
 kathy	EM_DEFAULT		We had a customer	who bartered it for	some clothes.									
 kathy	EM_SIDE_EYE		I really need to	stop doing that,	I'll get fired.									
-sebellus	EM_SIDE_EYE		You wouldn't mind	doing that one more	time though, right?									
+sebellus	EM_SIDE_EYE		Since you're already	at risk for getting	fired..									
+sebellus	EM_SIDE_EYE		You wouldn't mind if	the three of us	asked for a favor?									
 sebellus	EM_DEFAULT		We're looking for	clothes and don't	have any money.									
 kathy	EM_SIDE_EYE		Uh.. Sure, I suppose	I can make something	work.									
 			ACT_ITEM	You found:	TAILORED SUIT	Very classy.				OBJ_CLOTHES					
-															
-boutique_03															
-kathy	EM_SIDE_EYE		You three better get	out of here..										
-kathy	EM_DEFAULT		Wouldn't want my	boss knowing what	happened earlier.									
 															
 dima_01															
 dima	EM_DEFAULT		I just wanted lunch,	but the guy in there	is rediculous.									
@@ -1661,33 +1466,18 @@ ack	EM_DEFAULT		I ordered potato	soup. I don't know	what this is.
 ack	EM_DEFAULT		..Do you think	he knows what a	potato is?									
 															
 eggplant_01															
-eggplant	EM_DEFAULT		HEY, GLABBER.	This place has the	BEST SOUP IN TOWN.									
-eggplant	EM_DEFAULT		Why should I give	it to YOU?										
-				because	I'm not hungry								&eggplant_01_alt_01		
-eggplant	EM_DEFAULT		Because?!	BECAUSE?! NO!	Prove your worth!									
-eggplant	EM_DEFAULT		I challenge you to	a game I always win!	STARING CONTEST!									
-eggplant	EM_HAPPY		..	..	..									
-eggplant	EM_HAPPY		..	..	..									
-eggplant	EM_HAPPY		..	..	..									
-eggplant	EM_HAPPY		..	..	..									
-eggplant	EM_EXCITED		..	..	..You're good..									
-eggplant	EM_HAPPY		..	..	..									
-eggplant	EM_ANGRY		..	..	..ALRIGHT!									
-eggplant	EM_ANGRY		HAIR GOT IN MY EYES!	That doesn't count!										
-				nuh uh	give me soup									&eggplant_01_alt_02	
-eggplant	EM_DEFAULT		REMATCH!		..GO!									
-eggplant	EM_HAPPY		..	..	..									
-eggplant	EM_EXCITED		AHHH!	GOT IN MY EYES AGAIN										
-eggplant	EM_DEFAULT		FINE!	YOU WIN!										
+eggplant			EVERYONE IN TOWN	SAYS MY SOUP	SUCKS									
+eggplant			AS AN ACT OF	GOODWILL I'M GIVING	IT AWAY FOR FREE									
+eggplant			THIS TOWN HAS A	CLEAR AND PERVASIVE	BIAS AGAINST									
+eggplant			SENSITIVE YOUNG MEN	LIKE ME										
 			ACT_ITEM	YOU FOUND:	Soup	(Doesn't smell good)				OBJ_SOUP					
 															
 convo_obj_soup															
-				It tastes confusing.	Sort of.. oily.	It has chunks.									
-			ACT_HP	HP INCREASED BY 1						1					
+				This is too gross	to eat.										
 															
 eggplant_01_alt_01															
 eggplant	EM_EXCITED		Not hungry?!	NOT HUNGRY?!										
-eggplant	EM_HAPPY		GET OUT!	NOW!										
+eggplant	EM_DEFAULT		GET OUT!	NOW!										
 															
 eggplant_01_alt_02															
 eggplant	EM_DEFAULT		..	..FINE! Have soup.	BUT DON'T COME BACK!									
@@ -1716,7 +1506,8 @@ ginger	EM_DEFAULT		Hey.		Up so soon?
 ginger	EM_SIDE_EYE		Sebellus and I	figured you could	use the sleep.									
 ginger	EM_DEFAULT		..											
 ginger	EM_DEFAULT		Y'know.. I've been	thinking a little..										
-ginger	EM_DEFAULT		Until I became	Selari.. Why was I	here?									
+ginger	EM_DEFAULT		Until I came to	the Old World..										
+ginger	EM_DEFAULT		Why was I here?											
 ginger	EM_DEFAULT		All those school	classes, my family,	my friends..									
 ginger	EM_DEFAULT		Just to become a	talking cat in a	foreign country.									
 ginger	EM_DEFAULT		And it wasn't a big	thing either.	I had a dream.									
@@ -1798,7 +1589,7 @@ vista_02	EM_SULLEN		Is that so?
 vista_02	EM_SAD		I hope you	understand how close	to death you were.				CHAR_VISTA_LIFT	&vista_jeremy_lift_02				
 ginger	EM_DEFAULT		He's trying to get	to Canterbury so he	can go back home!									
 vista_02	EM_SULLEN		What a coincidence.	That is where I was	headed as well.									
-vista_02	EM_SULLEN		Why don't the three	of us take the	train, yes?									
+vista_02	EM_SULLEN		Why don't the four	of us take the	train, yes?									
 sebellus	EM_DEFAULT		Alright, then!											
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_TRAIN					
 															
@@ -1861,7 +1652,7 @@ ginger	EM_ANGRY		Well I don't think	it's very funny.
 train_arrive															
 			ACT_SFX_CHIME	"""WE ARE NOW"	APPROACHING	"CANTERBURY."""									
 				"""PLEASE STAY"	"SEATED."""										
-		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_07					
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_08					
 															
 canter_01															
 		EM_SKIP	ACT_WALK							CHAR_JEREMY		{7,3}			
@@ -1893,6 +1684,7 @@ matt	EM_DEFAULT		Oh.. I see, you're	not from around	here, are you.				CHAR_MATT	
 matt	EM_DEFAULT		WELCOME! I am the	A.I.RCHBISHOP of	CANTERBURY, Matthew!				CHAR_MATT	&matt_yay				
 matt	EM_DEFAULT		However, I get	"called ""Matt"" "	a TON.									
 matt	EM_DEFAULT		I'm sure you've seen	ads for my auto-	biography, yes?				CHAR_MATT	&matt_erm				
+		EM_SKIP	ACT_WALK							CHAR_JEREMY		{58,3}			
 		EM_SKIP								CHAR_MATT_POSTER_01	&poster_02				
 		EM_SKIP								CHAR_MATT_POSTER_02	&poster_02				
 matt	EM_DEFAULT	ACT_SFX_CLICK	"It's titled ""M.E."","	"or ""Mechanical"	"Episcopate"". Clever!"				CHAR_MATT	&matt_press				
@@ -1919,7 +1711,7 @@ kiara_01
 		EM_SKIP	ACT_MUSIC_GINGER												
 kiara	EM_EMBARRASSED	ACT_WALK	U-Uh.. This office	is off-limits to the	public, sir..				CHAR_KIARA		{5,3}			
 kiara	EM_WAT		Oh! Are you with	the city?										
-kiara	EM_EMBARRASSED		(This is so	embarrassing..)			SIZE_SMALL							
+kiara	EM_EMBARRASSED		(This is so	embarrassing..)										
 kiara	EM_HAPPY		Howdy-doody!	My name is	Kiara Scarlett.									
 kiara	EM_SIDE_EYE		I-I guess if you	have any questions,	feel free to ask!									
 		EM_SKIP	ACT_CUE_KIARA												
@@ -1976,65 +1768,60 @@ kiara	EM_EMBARRASSED		B-But by all means,	be my guest.
 															
 death_01															
 death				You finally made it.										
-				Who are you?	What do you mean?	Where am I?									
 death				I am Death.										
-death			Do you have a	sacrifice for me?										
-				No.	Yes.										
-				That is no issue.	I will have you	eventually.									
-death			And now,	without further	ado..									
+death			I see that you have	no sacrifice for me.										
+				You will be my	sacrifice, in time.										
+death			Let me get out	of your way,	then..									
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
 															
-death_01_alt_01															
-death			I have been waiting	many years for this	moment.									
-death			You will	understand soon.										
-death			Do you have a	sacrifice for me?										
-death			No.	Yes.										
-death			I see. Do not worry.	I will have you	soon enough.									
-															
-death_01_alt_02															
-death			Here is the place	where all muetos are	born.									
-death			Do you have a	sacrifice for me?										
-				No.	Yes.										
-				No worries.	I will have you	soon enough.									
+death_02															
+death				You finally made it.										
+death				I am Death.										
+death			I see that you have	a sacrifice for me.										
+death			Show it to me.											
+				You present the	Panagia icon.										
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
 															
 henry_01															
-vista_02	EM_WAT		..Human?	What are you doing	in this place?									
+vista_02	EM_SULLEN		..Human?	What are you doing	in this place?									
 vista_02	EM_SULLEN		You must leave.		Now.									
 henry	EM_DEFAULT		..		The human may stay.									
 henry	EM_DEFAULT		We have been	watching him closely	since his fall.									
-vista_02	EM_CONFUSED		What do you mean?											
+vista_02	EM_SULLEN		What do you mean?											
 henry	EM_DEFAULT		Every few years, you	come to me, asking	for change.									
 henry	EM_DEFAULT		For the first time,	this wish shall be	granted.									
 henry	EM_DEFAULT		But do you	remember what you	said about wishes?									
-vista_02	EM_CONFUSED		..I do.											
+vista_02	EM_DISAPPOINTED		..I do.											
 henry	EM_DEFAULT		Call for your	children to join us.										
 vista_02	EM_SAD		Selari? Sebellus?		We need you in here.									
-ginger	EM_SIDE_EYE		But I thought-											
-vista_02	EM_SAD		I know what I said.		Come here.									
+ginger	EM_SIDE_EYE	ACT_WALK	But I thought-						CHAR_GINGER		{15,2}			
+vista_02	EM_SAD	ACT_WALK	I know what I said.		Come here.				CHAR_SEBELLUS		{15,3}			
+ginger	EM_WAT		..											
 ginger	EM_LAUGH		..		IT'S YOU!									
 henry	EM_DEFAULT		Vista. This will be	the most important	part of your reign.									
 henry	EM_DEFAULT		I always permitted	you to leave, Vista,	if you so wished.									
-vista_02	EM_SULLEN		Because you needed	my rule to be	voluntary, yes.									
 henry	EM_DEFAULT		I do not recall you	having run away in	the way Selari does.									
 henry	EM_DEFAULT		She will continue	this behavior,	you know.									
 sebellus	EM_DEFAULT		Hey- Stop that.	You're scaring her.										
 vista_02	EM_SULLEN		Sebellus.	It is not your place	to speak right now.									
-henry	EM_DEFAULT		I no longer have my	human eyes to give.										
+henry	EM_DEFAULT		I no longer have	any human eyes of	mine to give.				CHAR_HENRY_MONSTER	&anim_face_down				
 henry	EM_DEFAULT		I cannot produce a	new mueto with a	full human soul.									
 henry	EM_DEFAULT		I apologize, Selari.	Your mother is more	dear to me than you.									
 henry	EM_DEFAULT		I will give her the	choice to administer	a dose of Lethedol.									
 ginger	EM_DEFAULT		..W-What's that?											
 henry	EM_DEFAULT		All muetos have a	tiny piece of a	human soul within.									
 henry	EM_DEFAULT		Lethedol is used to	remove unfortunate	human memories.									
-ginger	EM_SCARED		..S-So I wouldn't	remember being a	human anymore?									
+ginger	EM_DISAPPOINTED		..S-So I wouldn't	remember being a	human anymore?									
 ginger	EM_WEEP		I need to go home,	I-I need to go home-	I need to go home-									
-sebellus	EM_DEFAULT		Human.	Take care of Ginger	for me.									
-ginger	EM_WEEP		SEBELLUS!!	NO!!										
+sebellus	EM_DEFAULT	ACT_WALK	Human.	Take care of Ginger	for me.				CHAR_SEBELLUS	&sebellus_ready	{15,3}			
+ginger	EM_WEEP		SEBELLUS!!	NO!!					CHAR_GINGER	&anim_face_down				
 vista_02	EM_DISAPPOINTED		Sebellus! Stop that	this instant!										
 sebellus	EM_DEFAULT		Goodbye, Ginger.		I love you so much.									
-henry	EM_DEFAULT		..											
-vista_02	EM_SULLEN		That was entirely	unnescessary, Henry.										
-henry	EM_DEFAULT		I will remake him if	I need to. Scarlett	will clean this up.									
-henry	EM_DEFAULT		Selari, step away	from the body.										
+henry	EM_DEFAULT		Very well.						CHAR_HENRY_MONSTER	&anim_face_right				
+henry	EM_DEFAULT	ACT_SFX_EXPLOSION	..						CHAR_SEBELLUS	&sebellus_death				
+vista_02	EM_SULLEN		That was entirely	unnescessary, Henry.					CHAR_GINGER	&ginger_terror				
+henry	EM_DEFAULT		I will remake him if	I need to.					CHAR_HENRY_MONSTER		&anim_face_down			
+henry	EM_DEFAULT		You will not notice	he was ever gone.										
 ginger	EM_WEEP		I HATE YOU!!											
 henry	EM_DEFAULT		You do know why this	is so urgent, Vista.										
 henry	EM_DEFAULT		Selari's human donor	will be taken off	life support soon.									
@@ -2045,41 +1832,60 @@ vista_02	EM_SULLEN		That's how many	"half-life ""children"""	you've given me.
 vista_02	EM_SULLEN		You say that what	you do is for the	sake of new life.									
 vista_02	EM_SULLEN		You leave nothing	behind you but	death, Henry.									
 vista_02	EM_SAD		Tell me my name,	Henry.										
-henry	EM_SULLEN		Vista Blackrose,	The Senatrix	of Albion.									
+henry	EM_DEFAULT		Vista Blackrose, the	Senatrix and Queen	of the Old World.									
 vista_02	EM_SULLEN		No, Henry.	My REAL name. The	one I've forgotten.									
 vista_02	EM_SAD		I will ask again,	in a different tone	of voice.									
-vista_02	EM_ANGRY		Tell me my real name	or I will skin you	like a potato.									
-vista_02	EM_SAD		Human.. Go into the	other room and	comfort my daughter.									
+		EM_SKIP								CHAR_VISTA_02	&vista_vanish				
+		EM_SKIP	ACT_SFX_FIRE							CHAR_VISTA_LARGE	&vista_uhoh				
+vista_02	EM_ANGRY	ACT_MUSIC_WIND	I demand that you	tell me the name	you stole from me.			SP_SLOW						
+vista_02	EM_SAD	ACT_CUE_GINGER	Human.. Go into the	other room and	comfort my daughter.									
+		EM_SKIP	ACT_VARIABLE					true		HENRY_TALK					
 															
 henry_02															
-ginger	EM_SCARED		..									&henry_02_alt_01	&henry_02_alt_01	
-ginger	EM_WEEP		..	..	..									
+ginger	EM_SCARED	ACT_WALK	..						CHAR_JEREMY		{9,13}			
+ginger	EM_WEEP	ACT_WALK	..	..	..				CHAR_GINGER	&ginger_terror	{10,13}			
 ginger	EM_WEEP		..	..	I have to go home.									
 ginger	EM_SAD		I-I got my hands	on Henry's.. tool.	I know what it is.									
 ginger	EM_SAD		It pulls your soul	from your body.										
-ginger	EM_SAD		I don't know if I'll	return home if I use	it.									
+ginger	EM_SAD		..He uses it when a	mueto doesn't	grow right.									
+ginger	EM_SAD		I don't know if I'll	return home if I	use it.									
 ginger	EM_SAD		I don't know if	I care.										
 ginger	EM_SULLEN		You are the only	friend I have left.										
-ginger	EM_SULLEN		I respect your	opinion.										
-				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&henry_02_alt_01	
-vista_02	EM_SULLEN		Ginger.											
+ginger	EM_SULLEN	ACT_TELEPORT	..I need to know	what to do.					CHAR_VISTA_02	&anim_face_down	{10,9}			
+				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&ending_lab_03	
+vista_02	EM_SULLEN	ACT_WALK	Ginger.						CHAR_VISTA_02		{10,12}			
 ginger	EM_SULLEN		..											
 vista_02	EM_SULLEN		Both of you.		Follow me.									
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
 															
 henry_02_alt_01															
 ginger	EM_SULLEN		..	..	..Alright..									
 ginger	EM_SULLEN		..T-Thank you..	Please make it	quick, okay?									
-ginger	EM_CONFUSED		B-But tell me..	Before I go..	That look..									
-ginger	EM_SAD		That look on your	face.. What are you	feeling?									
-				Sadness	Anger	Relief								&ending_lab_02	
 ginger	EM_LAUGH		Hey..	Take care of	yourself, okay?									
 ginger	EM_LAUGH		Maybe we'll see	each other again.										
-ginger	EM_SAD		Goodbye,	friend.										
-															
-henry_02_alt_01															
+ginger	EM_SAD		Goodbye,	friend.					CHAR_JEREMY	&jeremy_shoot				
+			ACT_SFX_EXPLOSION							CHAR_GINGER	&ginger_death				
+vista_02	EM_SULLEN	ACT_WALK	..	..	..			SP_SLOW	CHAR_VISTA_02		{10,13}			
+vista_02	EM_SAD		..	..	I see.			SP_SLOW						
+vista_02	EM_SULLEN		..	..	Was this her choice?			SP_DEFAULT						
+jeremy			Yes.					SP_DEFAULT	CHAR_JEREMY	&anim_face_right				
+vista_02			Very well.		Was she afraid?			SP_DEFAULT						
+jeremy	EM_DEFAULT		She was brave.					SP_DEFAULT						
+vista_02	EM_SULLEN		..	..	..			SP_SLOW						
+vista_02	EM_SAD		Some nights..	When I was having	trouble sleeping..			SP_DEFAULT						
+vista_02	EM_SAD		I tried to picture	this moment.	I couldn't.			SP_DEFAULT						
+vista_02	EM_SAD		But I knew that it	would come sooner	or later.			SP_DEFAULT						
+vista_02	EM_SULLEN		I should have done	the same, you know.	I'm a coward.			SP_DEFAULT						
+vista_02	EM_SULLEN		But it's too late	for me now.	This is my fate.			SP_DEFAULT						
+vista_02	EM_SAD		I'm proud of her.	I only hope that she	remembers me.			SP_DEFAULT						
+vista_02	EM_SULLEN		I should kill you	for what you've	done, human.			SP_DEFAULT						
+vista_02	EM_SULLEN		But I can't.					SP_DEFAULT						
+vista_02	EM_SULLEN		There's been enough	death today.				SP_DEFAULT						
+vista_02	EM_SULLEN		..	Go home.	Now.			SP_DEFAULT						
+		EM_SKIP	ACT_PROGRESS							ENDING_02_PART_00					
 															
 ending_lab_01															
-kiara	EM_WAT		Your  majesty!	You look troubled!	Where is Henry?!									
+kiara	EM_WAT	ACT_WALK	Your  majesty!	You look troubled!	Where is Henry?!				CHAR_KIARA		{4,6}			
 vista_02	EM_SAD		Henry is gone.		Do not enter.									
 kiara	EM_SAD		O-Oh..	I knew his time was	coming soon, b-but..									
 kiara	EM_SCARED		If Henry..	is DEAD.. then that	means..									
@@ -2090,41 +1896,19 @@ vista_02	EM_SULLEN		My daughter..		What will you do?
 ginger	EM_WEEP		..I-I want to stay	with y-you..		COLOR_PURPLE								
 vista_02	EM_SAD		I sense your mind	will change.										
 vista_02	EM_SAD		Your heart lies	elsewhere.										
-vista_02	EM_SAD		I wish cherish the	time we have left,	but the kingdom..									
+vista_02	EM_SAD		I will cherish the	time we have left,	but the kingdom..									
 vista_02	EM_SAD		It is dead.	No new muetos can be	born without Henry.									
 vista_02	EM_SAD		It was always fated	to end this way.										
 vista_02	EM_SULLEN		Human.. Thank you	for looking after my	daughter.									
 vista_02	EM_SULLEN		You may go home.											
-															
-ending_lab_02															
-				..											
-				Ginger's lifeless	body hits the	ground.									
-				You can only hope	her soul made its	way back home.									
-															
-ending_lab_02b															
-vista_02	EM_SULLEN		..	..	..			SP_SLOW						
-vista_02	EM_SAD		..	..	I see.			SP_SLOW						
-vista_02	EM_SULLEN		..	..	Was this her choice?			SP_DEFAULT						
-				Yes.					SP_DEFAULT						
-vista_02			Very well.		Was she afraid?			SP_DEFAULT						
-				She was brave.					SP_DEFAULT						
-vista_02	EM_SULLEN		..	..	..			SP_SLOW						
-vista_02	EM_SAD		Some nights..	When I was having	trouble sleeping..			SP_DEFAULT						
-vista_02	EM_SAD		I tried to picture	this moment.	I couldn't.			SP_DEFAULT						
-vista_02	EM_SAD		But I knew that it	would come sooner	or later.			SP_DEFAULT						
-vista_02	EM_SULLEN		I should have done	the same, you know.	I'm a coward.			SP_DEFAULT						
-vista_02	EM_SULLEN		But it's too late	for me now.	This is my fate.			SP_DEFAULT						
-vista_02	EM_SAD		I'm proud of her.	I only hope that she	remembers me.			SP_DEFAULT						
-vista_02	EM_SULLEN		I should kill you	for what you've	done, human.			SP_DEFAULT						
-vista_02	EM_SULLEN		But I can't.					SP_DEFAULT						
-vista_02	EM_SULLEN		..		Go home now.			SP_DEFAULT						
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_02					
 															
 ending_lab_03															
 ginger	EM_SCARED		..	..	You really think so?									
 ginger	EM_SAD		You want me to	forget all about	you?									
 ginger	EM_WEEP		A-And forget all	about Sebellus..	And my family..									
 ginger	EM_WEEP		I-I don't.. know..	if I can..	I.. I don't..									
-vista_02	EM_SULLEN		..	..	Ginger.									
+vista_02	EM_SULLEN	ACT_WALK	..	..	Ginger.				CHAR_VISTA_02		{10,12}			
 vista_02	EM_SULLEN		It is done.											
 ginger	EM_DEFAULT		What do you mean?											
 vista_02	EM_DISAPPOINTED		Henry and I have	come to an..	agreement.									
@@ -2155,10 +1939,7 @@ vista_02	EM_SULLEN		Human, you had best	say your goodbyes	and go home.
 ginger	EM_SCARED		..	..	..									
 ginger	EM_SCARED		Take care of	yourself, okay?										
 ginger	EM_WEEP		T-Thank you.		Goodbye, now.									
-															
-henry_02_alt_01b															
-ginger	EM_WEEP		..	..	..									
-ginger	EM_WEEP		..J-Just do it	before I remember	a-again, okay?									
+		EM_SKIP	ACT_PROGRESS							ENDING_03_PART_00					
 															
 final_01															
 				You take an	uneventful train	ride home.									
@@ -2173,25 +1954,37 @@ final_01
 				Vista and Ginger	have become the	last of the muetos.									
 															
 final_01b															
-ginger	EM_DISAPPOINTED		Hey, uh..	Mom.. I was thinking	about something..									
-vista_02	EM_DEFAULT		Yes?	What is it dear?										
-ginger	EM_DISAPPOINTED		Do you think..	I have a gravestone?	My human self.									
-vista_02	EM_SIDE_EYE		You.. may, I don't..	Why are you thinking	of such things?									
+ginger	EM_DISAPPOINTED	ACT_WALK	Hey, uh.. Mom..	Do you remember what	today was?				CHAR_GINGER		{3,2}			
+vista_02			Hmm?											
+ginger	EM_DISAPPOINTED		Have you already	forgotten again?										
+ginger	EM_DISAPPOINTED		I'm worried about	your memory lately.										
+ginger	EM_DISAPPOINTED		You need to stop	taking that	Lethedol.									
+vista_02	EM_EXCITED		Don't worry about me	sunshine, I still	feel just fine.									
+vista_02	EM_SIDE_EYE		I just need a little	reminder from time	to time.									
+ginger	EM_DISAPPOINTED		We were going to	visit Canterbury to	find my gravestone.									
+vista_02			You.. may, I don't..	Why are you thinking	of such things?									
 vista_02	EM_SULLEN		It isn't healthy to	dwell on this.										
-ginger	EM_SAD		Well, I, uh..	You know.. I come	from the Old World..									
-ginger	EM_DEFAULT		Where did you come	from, originally?										
-vista_02	EM_SIDE_EYE		Hmm.. Well..	I think I came from	the Old World too.									
-vista_02	EM_SULLEN		I do not remember	my name, however.										
-ginger	EM_EMBARRASSED		Maybe it's just	morbid curiousity,	you know?									
+ginger	EM_DISAPPOINTED		Maybe it's just	morbid curiousity,	you know?									
 ginger	EM_ANNOYED		I just think it's	worth seeing.	Once.									
 vista_02	EM_EXCITED		Well, it's been too	long since we've	gone on a trip, yes?									
 vista_02	EM_HAPPY		I think it would be	nice to get a good	change of scenery.									
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_03					
 															
 final_01c															
-				Ginger didn't want	to come home from	that trip.									
-				She stayed behind,	while Vista returned	home.									
-				There was plenty of	Lethedol to help her	ease the pain.									
-				And so it went,	on and on,	until the end.									
+ginger	EM_HAPPY		Hello, this is	Ginger Blackrose.										
+ginger	EM_SIDE_EYE		I'd like to get	connected with room	1377, please.									
+ginger	EM_SIDE_EYE		..											
+ginger	EM_LAUGH		..That can't be	right, could you	check again?									
+ginger	EM_SIDE_EYE		No, I was a guest	in that room, my	mother was..									
+ginger	EM_SAD		..											
+ginger	EM_SAD		No, no, no..	I need to know	where she is,									
+ginger	EM_SAD		I don't know how	to get home from	here..									
+ginger	EM_SAD		..I..											
+ginger	EM_WEEP		..											
+ginger	EM_SAD		..I.. understand..											
+ginger	EM_SAD		..											
+ginger	EM_SAD		..	..so this is how	it ends.									
+			ACT_PROGRESS							ENDING_01_PART_04					
 															
 final_02															
 				Your trip home was	quiet and	uneventful.									
@@ -2204,31 +1997,32 @@ final_02
 				After taking the	last of Henry's	Lethedol, she slept.									
 				The woman who	awoke could live a	peaceful life.									
 				And so it went -	each day of eternity	went by the same.									
-				Unable to shake the	feeling that	something..									
-				..wasn't quite	right.										
+				Happily ever after..											
+		EM_SKIP	ACT_HARD_RESET												
 															
 final_03															
 ginger	EM_CONFUSED		..w-where am I?											
-constance	EM_DISAPPOINTED		Ah.. Your majesty,	you're awake again.	Where are my notes-									
-constance	EM_DISAPPOINTED		Your name is Selari,	You have permanent	daily memory loss.									
-constance	EM_DISAPPOINTED		You took a medicine	"named ""Lethedol"","	which has strong									
-constance	EM_DISAPPOINTED		and permanent side	effects on Marelons,	like you.									
-constance	EM_DISAPPOINTED		I am Constance,	The royal maid to	your late mother.									
+constance			Ah.. Your majesty,	you're awake again.	Where are my notes-									
+constance			Your name is Selari,	You have permanent	daily memory loss.									
+constance			You took a medicine	"named ""Lethedol"","	which has strong									
+constance			and permanent side	effects on Marelons,	like you.									
+constance			I am Constance,	The royal maid to	your late mother.									
 ginger	EM_CONFUSED		..late mother?											
-constance	EM_DISAPPOINTED		Yes. She used a soul	extraction tool on	herself last month.									
-constance	EM_DISAPPOINTED		The public does not	know this.. They are	growing impatient.									
-constance	EM_DISAPPOINTED		We need to dress you	up as her for a..	public showing.									
-constance	EM_DISAPPOINTED		You just need to	stand and wave.	Can you do that?									
+constance			Yes. She used a soul	extraction tool on	herself last month.									
+constance			The public does not	know this.. They are	growing impatient.									
+constance			We need to dress you	up as her for a..	public showing.									
+constance			You just need to	stand and wave.	Can you do that?									
 ginger	EM_EMBARRASSED		I-I.. I think so..											
-constance	EM_DISAPPOINTED		Very good, and..	I know you won't	remember this..									
-constance	EM_DISAPPOINTED		The castle staff and	I.. are not sure how	to take care of you.									
-constance	EM_DISAPPOINTED		There is a cabin not	far from here.	It's very cozy.									
+constance			Very good, and..	I know you won't	remember this..									
+constance			The castle staff and	I.. are not sure how	to take care of you.									
+constance			There is a cabin not	far from here.	It's very cozy.									
 constance	EM_DISAPPOINTED		"""Vista is sick"" is"	much safer than	"""Vista is dead""."									
-constance	EM_DISAPPOINTED		You would pretend	to be her.. Very	little would change.									
-constance	EM_DISAPPOINTED		You two look just	the same anyways.	What do you say?									
-ginger	EM_DISAPPOINTED		I-I.. I don't..	I don't know..										
-constance	EM_DISAPPOINTED		I suppose it doesn't	matter. Just change	into the outfit.									
-constance	EM_DISAPPOINTED		It will be over	very, very soon.										
+constance			You would pretend	to be her.. Very	little would change.									
+constance			You two look just	the same anyways.	What do you say?									
+ginger			I-I.. I don't..	I don't know..										
+constance			I suppose it doesn't	matter. Just change	into the outfit.									
+constance			It will be over	very, very soon.										
+		EM_SKIP	ACT_HARD_RESET												
 															
 cutscene_01															
 				CANTERBURY		The domed city									scene_01_00
@@ -2261,7 +2055,7 @@ cutscene_01
 				..Who are you?											scene_01_04
 				I'm a student.			COLOR_BLUE								scene_01_04
 				..How do you feel	about meeting me at	my home tonight?									scene_01_04
-				It would be an	honor, sir.		COLOR_BLUE								scene_01_04
+			ACT_MUSIC_FADEOUT	It would be an	honor, sir.		COLOR_BLUE								scene_01_04
 															
 cutscene_02															
 				This field is so new	and so discrete that	it's unregulated.									scene_02_00
@@ -2276,7 +2070,7 @@ cutscene_02
 				This machine is	designed to print	complex proteins.									scene_02_01
 				I sold one to the	city to help solve	our hunger problems.									scene_02_01
 				But all life is made	from proteins, yes?										scene_02_01
-				It that where the	bodies in the flasks	come from?	COLOR_BLUE								scene_02_01
+				Is that where the	bodies in the flasks	come from?	COLOR_BLUE								scene_02_01
 				I've been working on	combining human and	animal genes.									scene_02_02
 				I think that these	could repopulate	the forests.									scene_02_02
 				Their biology is	viable but there	are still issues.									scene_02_02
@@ -2286,7 +2080,7 @@ cutscene_02
 				That's fine. I	envision these with	human souls, as..									scene_02_01
 				I think you could	call them colonists	in a sense.									scene_02_01
 				You do understand	what this will cost	you, Dr. Erickson?	COLOR_BLUE								scene_02_02
-				Do I look like a man	who has anything	to lose?									scene_02_02
+			ACT_MUSIC_FADEOUT	Do I look like a man	who has anything	to lose?									scene_02_02
 															
 cutscene_03															
 				I don't understand	why they only last	a couple of hours.									scene_03_00
@@ -2306,9 +2100,10 @@ cutscene_03
 				I didn't mean you.			COLOR_BLUE								scene_03_00
 				Are you are sure	that this will work?				SP_SLOW						scene_03_00
 				Of course I am.	Have I ever led you	wrong?	COLOR_BLUE								scene_03_02
-				No..	I suppose not.				SP_DEFAULT						scene_03_02
+			ACT_MUSIC_FADEOUT	No..	I suppose not.				SP_DEFAULT						scene_03_02
 															
 cutscene_04															
+		EM_SKIP	ACT_MUSIC_WIND												
 henry	EM_HAPPY	ACT_WALK	Good morning.	Can you understand	what I'm saying?				CHAR_HENRY		{3,3}			
 henry	EM_DEFAULT		It's alright,	you're safe.	Take slow breaths.				CHAR_VISTA_BED	&vista_bed_awake				
 vista	EM_SCARED		W-What..		W-What happened..	COLOR_PURPLE								
@@ -2332,7 +2127,7 @@ henry			The left door leads	to the toilet if you	feel nauseous.
 vista	EM_WEEP	ACT_WALK	..			COLOR_PURPLE			CHAR_HENRY		{4,3}			
 vista	EM_WEEP		..			COLOR_PURPLE								
 henry	EM_DEFAULT		I apologize for	being so	interrogative.									
-henry	EM_DEFAULT		This will be your	room. Let me know if	you need anything.									
+henry	EM_DEFAULT	ACT_MUSIC_FADEOUT	This will be your	room. Let me know if	you need anything.									
 		EM_SKIP	ACT_PROGRESS							PIT_01					
 															
 cutscene_05															
@@ -2366,12 +2161,12 @@ vista	EM_DEFAULT		That I can't ever	get back.		COLOR_PURPLE
 henry	EM_HAPPY		Vista, I promise you	that when this	research is done,									
 henry	EM_HAPPY		You will be able to	see the sun.										
 vista	EM_HAPPY		..And I won't have	to lose anything?	Do you promise?	COLOR_PURPLE								
-henry	EM_DEFAULT		The contrary. I have	plans. And if they	all work out..									
-henry	EM_HAPPY		We'll have	everything.										
+henry	EM_DEFAULT		Of course. I have	plans. And if they	all work out..									
+henry	EM_HAPPY	ACT_MUSIC_FADEOUT	We'll have	everything.										
 		EM_SKIP	ACT_PROGRESS							DARK_TO_DARK					
 															
 cutscene_06															
-henry	EM_DEFAULT		Are the others down	the chute with the	equipment?				CHAR_VISTA_YOUNG	&vista_young_up				
+henry	EM_DEFAULT	ACT_MUSIC_WIND	Are the others down	the chute with the	equipment?				CHAR_VISTA_YOUNG	&vista_young_up				
 vista	EM_SIDE_EYE		Yes.. They gave the	signal, they're ok..		COLOR_PURPLE								
 henry	EM_HAPPY	ACT_WALK	Don't be nervous.	The police never	check the garbage.				CHAR_HENRY		{7,4}			
 henry	EM_DEFAULT		We can escape as	long as we're	discrete.									
@@ -2404,7 +2199,7 @@ henry	EM_DEFAULT		You have a choice.	Follow me down the	rabbit hole..
 henry	EM_DEFAULT		Or you may go home.											
 vista	EM_DEFAULT		But you gave up your	eye to make me,	didn't you?	COLOR_PURPLE								
 henry	EM_DEFAULT		I have two eyes.	I can do this one	more time.									
-henry	EM_DEFAULT		What do you say?											
+henry	EM_DEFAULT	ACT_MUSIC_FADEOUT	What do you say?											
 		EM_SKIP	ACT_PROGRESS							WAKEY_WAKEY					
 															
 cutscene_08															
@@ -2427,7 +2222,7 @@ vista_02	EM_SULLEN	ACT_WALK	What is your name,	love?					CHAR_VISTA_02		{3,7}
 ginger	EM_SAD		Virginia, ma'am.	People call me	"""Ginger"", though."									
 sebellus	EM_CONFUSED		..so? Is it true?	That Gingers don't	have souls?									
 vista_02	EM_DEFAULT		I see.	Constance, you may	excuse us now.									
-vista_02	EM_DEFAULT	ACT_WALK	Please forgive my	son, Sebellus.					CHAR_CONSTANCE		{-1, 5}			
+vista_02	EM_DEFAULT	ACT_WALK	Please forgive my	son, Sebellus.					CHAR_CONSTANCE		{-2, 5}			
 vista_02	EM_DEFAULT		Sebellus, go with	Constance to the	dining hall.									
 sebellus	EM_HAPPY		Yes, ma'am.											
 vista_02	EM_HAPPY	ACT_WALK	Ginger.. yes?	It is an honor to	welcome you.				CHAR_SEBELLUS		{-1, 5}			
@@ -2467,8 +2262,8 @@ vista_02	EM_HAPPY		clothes.. Something	to whatever your	taste may be.
 ginger	EM_WEEP		..											
 vista_02	EM_EXCITED		Dear.. It will be	alright, I promise.										
 ginger	EM_WEEP		..T-Thank you.											
-vista_02	EM_EXCITED		Of course, dear.											
-		EM_SKIP	ACT_PROGRESS							FLAYITHRO_AWAKE					
+vista_02	EM_EXCITED	ACT_MUSIC_FADEOUT	Of course, dear.											
+		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
 															
 cutscene_09															
 vista_02	EM_SULLEN	ACT_MUSIC_FADEOUT	G-Ginger, dear..	Now isn't the time	to be here..									
@@ -2491,8 +2286,9 @@ vista_02	EM_SULLEN		This war.. Humans	fighting themselves	in different bodies.
 vista_02	EM_SAD		So much death..	Generations..	And generations..									
 vista_02	EM_LAUGH		What irony that I	can't die, the only	one who wants it!									
 vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
+vista_02	EM_SULLEN		It's all fake.. a	wicked parody of a	family..									
 vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
-vista_02	EM_SAD		I want to go home..	I want to go home..	..									
+vista_02	EM_SAD	ACT_MUSIC_FADEOUT	I want to go home..	I want to go home..	..									
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					
 															
 cutscene_07															
@@ -2516,8 +2312,8 @@ vista_02	EM_DEFAULT		Also ask him once	again why he can't	move here?
 vista_02	EM_DEFAULT		We have electricity	now, and the city is	so dangerous.									
 constance	EM_DEFAULT		I'll draft a letter	right away,	your majesty.									
 vista_02	EM_SAD		Very good,	Constance. Now..	Leave me be.									
-constance	EM_DEFAULT		Yes,	your majesty.										
-		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
+constance	EM_DEFAULT	ACT_MUSIC_FADEOUT	Yes,	your majesty.										
+		EM_SKIP	ACT_PROGRESS							FLAYITHRO_AWAKE					
 															
 c09_init															
 ginger	EM_SAD		Ugh.. My neck.	How long was that	nap for?									
@@ -2572,4 +2368,420 @@ convo_obj_pills
 				You're not really	sure what's in	these pills.									
 															
 c09_reiterate															
-vista_02	EM_SAD		The pills, please...	In our secret room,	There's a door..
+vista_02	EM_SAD		The pills, please...	In our secret room,	There's a door..									
+															
+convo_obj_ice_cream															
+				It's pretty good,	all things	considered.									
+				It even has a	waffle cone.	Nice.									
+															
+sans_01															
+sans	EM_DEFAULT		well hey there pal.	long time no see		COLOR_SANS								
+sans	EM_DEFAULT		not sure how you	got here, but it's	nice to see ya	COLOR_SANS								
+sans	EM_ANGRY		no bones about it			COLOR_SANS								
+sans	EM_HAPPY		what, you're looking	at me like you're	surprised i'm here	COLOR_SANS								
+sans	EM_ANGRY		let me tell you a	little secret pal		COLOR_SANS								
+sans	EM_DEFAULT		there isn't a game	i'm not in, i'm just	sneaky about it	COLOR_SANS								
+sans	EM_HAPPY		while you're here,	why don't i take you	on a little tour	COLOR_SANS								
+sans	EM_DEFAULT		oh? right, this is	the official (tm)		COLOR_SANS								
+sans	EM_DEFAULT		glass-eyes-and	undertale-10th	anniversary museum!	COLOR_SANS								
+sans	EM_DEFAULT		that's right, i'm a	tour guide now.		COLOR_SANS								
+sans	EM_DEFAULT		it's just me, so you	could say that we've	only got a	COLOR_SANS								
+sans	EM_ANGRY		skeleton crew			COLOR_SANS								
+sans	EM_DEFAULT		oh, c'mon,	i know you've got a	funny bone in there	COLOR_SANS								
+		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_left	{7,6}			
+															
+sans_02															
+sans	EM_DEFAULT		here's a portrait	of the illustrious	"toby ""radiation"" fox"	COLOR_SANS								
+sans	EM_DEFAULT		he's a cool guy,	he's made some games	you've heard of	COLOR_SANS								
+sans	EM_HAPPY		anything you'd want	to know is on the	internet, but	COLOR_SANS								
+sans	EM_HAPPY		"so ""undertale"" and"	"""deltarune"" are"	anagrams, right	COLOR_SANS								
+sans	EM_DEFAULT		toby has a clear	naming convention	in place	COLOR_SANS								
+sans	EM_DEFAULT		another anagram is	"""unrelated"""		COLOR_SANS								
+sans	EM_ANGRY		i guess you could	say glass eyes is	"""unrelated"" then"	COLOR_SANS								
+sans	EM_DEFAULT		let's move on then,	shall we		COLOR_SANS								
+		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_left	{11,6}			
+															
+sans_03															
+sans	EM_DEFAULT		now, there's this	other guy named	ethan too	COLOR_SANS								
+sans	EM_DEFAULT		he wrote a book in	high school, which	sounds impressive	COLOR_SANS								
+sans	EM_ANGRY		there are pros and	cons to publishing	high school writing	COLOR_SANS								
+sans	EM_DEFAULT		why is this here?	well..		COLOR_SANS								
+sans	EM_DEFAULT		we don't have a lot	of stuff to put in	this museum, kid	COLOR_SANS								
+sans	EM_ANGRY		does a great job of	covering up the	blank wall	COLOR_SANS								
+sans	EM_DEFAULT		let's move on to	talking about	something else, yes?	COLOR_SANS								
+		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_left	{15,6}			
+															
+sans_04															
+sans	EM_DEFAULT		you ever heard of	"""nanowrimo""?"		COLOR_SANS								
+sans	EM_DEFAULT		it stands for	"""national novel"	"writing month"""	COLOR_SANS								
+sans	EM_ANGRY		you have to write	50k words in a	month, it's fun	COLOR_SANS								
+sans	EM_DEFAULT		ethan didn't plan to	write glass eyes, he	was invited by a	COLOR_SANS								
+sans	EM_DEFAULT		friend to join him	for a nanowrimo	challenge.	COLOR_SANS								
+sans	EM_DEFAULT		just like how the	original novel was	finished in a month,	COLOR_SANS								
+sans	EM_DEFAULT		this game, start to	finish, took 5	months to make.	COLOR_SANS								
+sans	EM_ANGRY		guess that explains	all the bugs		COLOR_SANS								
+sans	EM_DEFAULT		the book had a lot	of similarities to	undertale	COLOR_SANS								
+sans	EM_DEFAULT		however it was	entirely due to	coincidence	COLOR_SANS								
+sans	EM_DEFAULT		since he played	undertale for the	first time in 2020.	COLOR_SANS								
+sans	EM_DEFAULT		more or less it was	just the zeitgeist	of 2015	COLOR_SANS								
+sans	EM_HAPPY		something must've	been in the water		COLOR_SANS								
+sans	EM_DEFAULT		anyways, the	similarities were so	uncanny that he	COLOR_SANS								
+sans	EM_DEFAULT		figured a crossover	would be a fun	project.	COLOR_SANS								
+		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_left	{42,5}			
+															
+sans_05															
+sans	EM_DEFAULT		you know what time	it is now.	that's right	COLOR_SANS								
+sans	EM_HAPPY		ice cream time			COLOR_SANS								
+sans	EM_DEFAULT		here at the glass-	eyes-and-undertale-	anniversary museum	COLOR_SANS								
+sans	EM_ANGRY		every day is	a sundae		COLOR_SANS								
+sans	EM_DEFAULT		but first, we gotta	get special thanks	out of the way	COLOR_SANS								
+sans	EM_DEFAULT		we gotta thank:	draconix	"the real ""og"""	COLOR_SANS								
+sans	EM_DEFAULT		liz, iz, costin,	choso, dima,	etc etc..	COLOR_SANS								
+sans	EM_DEFAULT		ok enough of that,	we have ice cream	to eat	COLOR_SANS								
+		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_ice_cream	{46,5}			
+															
+sans_06															
+sans	EM_DEFAULT		oh?	oh yeah	here's your cone	COLOR_SANS								
+			ACT_ITEM	You found:	ICE CREAM	Yum!				OBJ_ICE_CREAM					
+sans	EM_DEFAULT		i know it's	disappointing, with	it being virtual	COLOR_SANS			CHAR_SANS	&anim_face_right				
+sans	EM_ANGRY		besides, what you're	after is the real	inside scoop	COLOR_SANS								
+sans	EM_EXCITED		the roaring knight?	it's visker.	definitely.	COLOR_SANS								
+sans	EM_DEFAULT		just kidding.	but seriously..		COLOR_SANS								
+sans	EM_DEFAULT		ethan goes through	big life changes in	five year intervals	COLOR_SANS								
+sans	EM_DEFAULT		2015 wasn't a good	year for him or his	family and friends	COLOR_SANS								
+sans	EM_ANGRY		and 2020,	need i say more?		COLOR_SANS								
+sans	EM_DEFAULT		it's 2025, and it's	been the hardest	year so far	COLOR_SANS								
+sans	EM_HAPPY		but after bad things	happen, he always	learns a big lesson	COLOR_SANS								
+sans	EM_DEFAULT		sometimes you gotta	be at your lowest	before you can grow	COLOR_SANS								
+sans	EM_DEFAULT		death comes for us	all, friend		COLOR_SANS								
+sans	EM_DEFAULT		and there is no	bigger enemy	to face	COLOR_SANS								
+sans	EM_ANGRY		and sometimes, you	have to die before	you die,	COLOR_SANS								
+sans	EM_ANGRY		so that you don't	die when you die		COLOR_SANS								
+sans	EM_DEFAULT		but what do i know,	i'm just a skeleton		COLOR_SANS								
+sans	EM_DEFAULT		that's all from me.	if you ever want to	take the tour again,	COLOR_SANS								
+sans	EM_ANGRY		just restart the	game console.	see ya later, pal.	COLOR_SANS								
+															
+naomi_garbage_01															
+naomi	EM_DEFAULT		Hmm.. Has anyone	ever told you that	you look.. poor?									
+naomi	EM_DEFAULT		Leave me be,	this smoked rat	is MINE									
+															
+naomi_garbage_02															
+naomi			Can I help you, hmm?											
+															
+pipis_man															
+				NOTICE!! DO NOT	interact with    the	[[ Pipis ]] man									
+				SYMPTOMS INCLUDE	[[redacted]] and	[[redacted]]									
+				AVALON is [[NOT]]	RESPONSIBLE FOR SIDE	EFFECTS of [[pipis]]									
+															
+convo_obj_vodka															
+			ACT_INVERT_CONTROLS	It smells sort of	like hand sanitizer.										
+				You don't feel its	effects right away.										
+			ACT_HP	You recieved:	1 HP					1					
+															
+convo_obj_beer															
+			ACT_INVERT_CONTROLS	It tastes like	cheap, watery beer.										
+				At least it's cold.											
+			ACT_HP	You recieved:	1 HP					1					
+															
+desmond_01															
+desmond	EM_DEFAULT		Pick your poison,	human.										
+desmond	EM_DEFAULT		No.. No, I don't	mean it literally.										
+desmond	EM_DEFAULT		Vodka	Beer	No, thank you							&desmond_01_alt_01	&desmond_01_alt_02	
+			ACT_ITEM	You recieved:	VODKA	Comes in a bottle				OBJ_VODKA					
+															
+desmond_01_alt_01															
+			ACT_ITEM	You recieved:	BEER	Looks cheap				OBJ_BEER					
+															
+desmond_01_alt_02															
+desmond	EM_DEFAULT		Very well.											
+															
+convo_obj_turkey															
+				It's the best thing	you've had to eat	in a while.									
+			ACT_HP	You got:	HP +20					20					
+															
+vodka_01															
+				Huh.. It seems like	someone left a	bottle of vodka.									
+				I hope they don't	miss it.										
+			ACT_ITEM	You found:	VODKA	Refreshing!				OBJ_VODKA	&anim_hidden				
+															
+avalon_01															
+ginger	EM_SIDE_EYE		Okay.. I think this	is the way to	Avalon village.									
+ginger	EM_DEFAULT		Are you ready?											
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_03					
+															
+naomi_shop_01															
+naomi			Oh..	You again, hehe.	Fancy seeing you.									
+naomi	EM_DEFAULT		Welcome to Naomi's	Vape and Smartphone	Repair shop!									
+naomi	EM_DEFAULT		You don't seem to be	the type to have any	money, I fear.									
+naomi	EM_DEFAULT		At least you're not	a zombie like half	the city, though.									
+naomi	EM_DEFAULT		A little birdie told	me you're in with	the royal family.									
+naomi	EM_DEFAULT		Now how did THAT	happen? A random	human? Bizarre.									
+naomi	EM_DEFAULT		I don't sell	anything at this	shop you can afford.									
+naomi	EM_DEFAULT		But if you ever bump	into that crew again	you'll, well..									
+naomi	EM_HAPPY		You'll definitely	need something to	hold.									
+naomi	EM_DEFAULT		But if you have	money, you know	where my shop is.									
+															
+naomi_shop_02															
+naomi	EM_HAPPY		Hmm?	Are you still poor?										
+															
+naomi_shop_03															
+				Overpriced plastic	garbage in garish,	ugly colors.									
+				At least the shop is	actually open.										
+															
+naomi_shop_04															
+				The warning is in	a language you	don't know.									
+															
+canter_shop															
+			ACT_SFX_KNOCK	No one seems to be	in right now.										
+															
+canter_people															
+				Their eyes are grey	and faded. They look	like glass.									
+				Their breathing is	shallow enough to be	like hibernation.									
+				There is nothing you	can do for them as	they are right now.									
+															
+cathedral_door															
+				There is a sign in	multiple languages	on the front.									
+				NOTICE: PLEASE	USE SIDE DOOR										
+															
+boutique_01b															
+sebellus	EM_SIDE_EYE		Oh! Try giving it	the soup!										
+				You give the bear	monster your awful	soup.									
+ginger	EM_WAT	ACT_WALK	Huh..	It actually worked.					CHAR_TEDDY		{-3,3}			
+sebellus	EM_DEFAULT		It seems pulsing	teddy bear monsters	have taste too.									
+sebellus	EM_SIDE_EYE		Unlike my sister	here. Do you know	what she did once?									
+ginger	EM_ANGRY		Oh, here we go	with the fish story.										
+sebellus	EM_EXCITED		See!! She knows it	was gross!!										
+sebellus	EM_SIDE_EYE		She once ate a plate	of fish with a bunch	of sugar on top!									
+sebellus	EM_EXCITED		It wasn't even	cooked! It was raw!										
+ginger	EM_ANGRY		Well you eat chips	in your bed and let	the crumbs fall.									
+sebellus	EM_SIDE_EYE		The human looks like	a college student,	right?									
+sebellus	EM_SIDE_EYE		I'm sure he does	that all the time	too though.									
+sebellus	EM_DEFAULT		We should speak to	the lady outside.										
+		EM_SKIP	ACT_VARIABLE					true		BEAR_DEFEAT					
+															
+boutique_0															
+kathy	EM_DEFAULT		Oh.. Oh dear, don't	go in there right	now.. We're.. uh..									
+kathy	EM_HAPPY		We're having a	situation right now.										
+sebellus	EM_SIDE_EYE		A situation sounds	like fun.										
+kathy	EM_DEFAULT		N-No, there's this,	uh.. How do I say	it.. .. Bear.									
+kathy	EM_HAPPY		You three look like	adventurers?										
+ginger	EM_EMBARRASSED		You could..	say that.	I think.									
+ginger	EM_HAPPY		..Y-Yeah, we're	adventurers.										
+kathy	EM_HAPPY		Wonderful. There's	a reward if you can	make it go away.									
+															
+lobbybot_01															
+lobbybot			hey hey whoa whoa	we don't let POOR	people into town									
+lobbybot			if you want a room	at our establishment	you need suits									
+sebellus	EM_SIDE_EYE		That's such a big	attitude from such a	small robot.									
+lobbybot			listen pal i am so	much taller than you										
+sebellus	EM_DEFAULT		Oh, shut up.											
+lobbybot			i'm a robot so my	clothes are part of	my body									
+lobbybot			therefore my hat	makes me taller than	you									
+sebellus	EM_DEFAULT		Whatever.	We'll be back.										
+ginger	EM_SIDE_EYE		I'm sure we can rest	outside town.										
+sebellus	EM_DEFAULT		Not safe out there.											
+sebellus	EM_HAPPY		But we'll figure	something out.										
+															
+lobbybot_02															
+lobbybot			oh lovely, i see the	three of you have	suits to wear									
+lobbybot			and you're oh so	very tall too,	very nice									
+sebellus	EM_HAPPY		Thank you,	lobby robot.										
+lobbybot			it's lobby	BOY,	it's on my hat									
+															
+lobbybot_03															
+lobbybot			the human is awake,	how fancy										
+lobbybot			enjoy your night but	everyone's asleep	out there									
+lobbybot			of course i'm not	good old lobby boy	works forever									
+lobbybot			personally between	you and i human, i	think muetos suck									
+lobbybot			we should overthrow	them sometime										
+															
+lobbybot_04															
+lobbybot			the new archbishop	of canterbury? he's	a robot too									
+lobbybot			personally i think	he should launch a	holy war									
+lobbybot			nothing but benefits	for our respective	kinds, human									
+lobbybot			just think about it											
+															
+door_locked															
+				The door is locked.											
+															
+hotel_bed															
+				Are you ready to	get some sleep?										
+				Yes	No								&hotel_bed_alt_01		
+		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_07					
+															
+hotel_bed_alt_01															
+		EM_SKIP													
+															
+boutique_0a															
+kathy	EM_DEFAULT		Y-You don't have to	deal with the thing	if you don't want..									
+kathy	EM_DEFAULT		But I'll make sure	you're rewarded,	I promise.									
+															
+final_01d															
+ginger	EM_DISAPPOINTED		I guess it's a good	thing that no human	knows where you are.									
+ginger	EM_DISAPPOINTED		It may mean that	we'll never meet	each other again,									
+ginger			But at least I know	you're safe.										
+ginger	EM_SIDE_EYE		I lived in a	shelter for little	while afterwards.									
+ginger			It was very hard to	find work, but I've	finished so much.									
+ginger	EM_HAPPY		I got an apartment,	I've even been	working on a degree.									
+ginger	EM_EXCITED		If you could	remember me, I think	you'd be so proud.									
+ginger	EM_SAD		I think I once	spotted by former	human family.									
+ginger	EM_SAD		I want to reach out	to them so badly,	but..									
+ginger	EM_DISAPPOINTED		They've come to	peace with my	death already.									
+ginger			I've been trying to	make friends, but	it's been hard.									
+ginger	EM_DISAPPOINTED		I miss Sebellus.	I miss him so much.										
+ginger			I don't know if this	letter will ever	reach you, Vista,									
+ginger			but if it does, I	hope you know that	I'm not angry.									
+ginger	EM_SAD		It may mean nothing	to you, but it's	true.									
+ginger	EM_HAPPY		Thank you for your	kindness to me.	Despite everything.									
+ginger	EM_HAPPY		Love,	Virginia										
+		EM_SKIP	ACT_HARD_RESET												
+															
+airport_closed															
+				NEW BERLIN STATION	CLOSED FOR REPAIRS										
+															
+convo_friend															
+				You shouldn't	be here.										
+															
+convo_friend_leave															
+				You have gone too	far. There is no	going back now.									
+															
+skelly_01															
+ginger	EM_SIDE_EYE		..I think we'll be	fine, but that's a	human skeleton.									
+ginger	EM_DEFAULT		You've gotta watch	out for muetos out	here.									
+ginger	EM_EMBARRASSED		-The bad ones,	of course.	The bad ones.									
+															
+homeless_01															
+homeress			*cough cough*	Hey there, lad..										
+homeress			Forgive me..	I don't think I have	much longer here..									
+homeress			Would you mind..	staying here for a	little while?									
+															
+angel_01															
+angel			Do not be afraid.											
+angel			You will soon	encounter death.										
+angel			Here is a gift,	to present when he	speaks to you.									
+angel			No matter what	happens, human,	remember this.									
+angel			Christ has risen	from the dead,										
+angel			Trampling down	death by death,										
+angel			and upon those in	the tombs bestowing	life.									
+angel		ACT_ITEM	Be wise, human.						OBJ_PANAGIA					
+		EM_SKIP	ACT_SFX_EXPLOSION							CHAR_ANGEL	&angel_disappear				
+															
+convo_obj_panagia															
+				You have an image	of a woman holding	her child.									
+				Their eyes seem to	be following yours.										
+				It is difficult to	look away.										
+															
+henry_02_true															
+ginger	EM_WEEP	ACT_WALK	..	..					CHAR_JEREMY	&anim_face_right	{9,13}			
+ginger	EM_WEEP	ACT_WALK	..						CHAR_GINGER	&ginger_terror	{10,13}			
+ginger	EM_WEEP	ACT_TELEPORT	..	..	..				CHAR_VISTA_02	&anim_face_down	{10,9}			
+vista_02	EM_SAD	ACT_WALK	Child.		Come here.				CHAR_VISTA_02		{10,12}			
+		EM_SKIP								CHAR_GINGER	&ginger_fancy_hug				
+ginger	EM_WEEP		..	..	..				CHAR_VISTA_02	&vista_hug				
+vista_02	EM_SAD		Sunshine,	everything will be	alright now.									
+ginger	EM_WEEP		..Henry-						CHAR_VISTA_02	&vista_hug				
+vista_02	EM_SULLEN		You will never need	to worry about that	man ever again.									
+vista_02	EM_SULLEN		It is over.											
+vista_02	EM_SULLEN		Without Henry, there	is no one to perform	the rituals.									
+vista_02	EM_SULLEN		There will be no	new muetos from	this moment on.									
+vista_02	EM_SAD		This is how it ought	to have been from	the beginning.									
+ginger	EM_WAT		..											
+		EM_SKIP								CHAR_GINGER	&anim_face_up				
+vista_02	EM_SULLEN		My kingdom is over.	And I must make a	confession, child.				CHAR_VISTA_02	&anim_face_down				
+vista_02	EM_SAD	ACT_MUSIC_SORRY	I have been so	selfish to you,	my dear.									
+vista_02	EM_SULLEN		You have been able	to go home this	entire time.									
+ginger	EM_DISAPPOINTED		W-What..?											
+vista_02	EM_EXCITED		All you must do is	recite after me.										
+ginger	EM_CONFUSED		B-But what about	you..?	What will happen?									
+vista_02	EM_EXCITED		I will be fine,	my dear. I have been	fine all this time.									
+vista_02	EM_SULLEN		Do you how I know	this phrase, Ginger?										
+vista_02	EM_SIDE_EYE		I tried it myself,	many years ago.	But it didn't work.									
+vista_02	EM_SULLEN		It was too late for	me, and it will soon	be too late for you.									
+ginger	EM_CONFUSED		..I see.		Human..?									
+jeremy	EM_HAPPY		I have a gift	for you.										
+				You give:	PANAGIA										
+ginger	EM_WEEP		..	..										
+ginger	EM_SAD		I forgot how much	I've missed her.										
+		EM_SKIP								CHAR_GINGER	&ginger_fancy_hug				
+		EM_SKIP								CHAR_JEREMY	&jeremy_fancy_hug				
+ginger	EM_WEEP		Thank you,	Jeremy.										
+ginger	EM_SAD		I need to go back,	don't I?										
+vista_02	EM_SAD		Yes, dear.	But,	remember this-									
+vista_02	EM_EXCITED		I will always love	you, no matter what.										
+		EM_SKIP								CHAR_JEREMY	&anim_face_right				
+ginger	EM_WEEP		..I love you too.						CHAR_GINGER	&ginger_terror				
+ginger	EM_SAD		..	I'm ready.										
+vista_02	EM_EXCITED		Nullus est locus	domui similis.										
+ginger	EM_SAD		Nullus est locus	domui similis.										
+vista_02	EM_EXCITED		Nullus est locus	domui similis.										
+ginger	EM_WEEP		..Nullus est locus	domui similis.										
+vista_02	EM_HAPPY	ACT_MUSIC_FADEOUT	One more time.	Nullus est locus	domui similis.									
+ginger	EM_WEEP		..I-I don't.. I	don't know if I can-										
+vista_02	EM_EXCITED		We will always be	with you, Ginger.										
+ginger	EM_SAD		..	..Nullus est locus	domui similis.									
+vista_02	EM_SULLEN		..						CHAR_GINGER	&ginger_death				
+vista_02	EM_SULLEN		And so it ends.											
+vista_02	EM_SULLEN		Human- or, what name	did she use?	Jeremy?									
+vista_02	EM_SULLEN		Thank you,	Jeremy.										
+vista_02	EM_SAD		There is no place	for me in this	world anymore.									
+vista_02	EM_SULLEN		I will retreat to	the woods and make	a home there.									
+vista_02	EM_SULLEN		Go home human.		May you be blessed.									
+		EM_SKIP	ACT_PROGRESS							ENDING_04_PART_00					
+															
+final_04															
+				And so you take the	train home.										
+				The other humans are	none the wiser, but	everything is new.									
+				And so it goes..											
+		EM_SKIP	ACT_PROGRESS							ENDING_04_PART_00					
+															
+constance_castle															
+constance			Oh! Hello,	your majesty!	How may I help?									
+				Where's Sebellus?	Where's mom?								&constance_castle_alt_01		
+constance			Oh- Why does your	mother have a human	in the castle?									
+ginger	EM_SIDE_EYE		Uh.. That's not	quite what I said,	but-									
+constance			That's because your	kind doesn't live	very long, so									
+constance			It just makes sense	to have a lifelong	human housekeeper.									
+constance			Anyways, your	brother is in the	garden past the									
+constance			throne room, he's	playing something	out there.									
+															
+constance_castle_alt_01															
+constance			Oh- That's easy,	your secret room is	down the hallway.									
+constance			Just walk up and try	to open the painting	like it's a door.									
+ginger	EM_LAUGH		Well, that's not	quite what I-										
+constance			If you're looking	for the queen, she's	in her room.									
+															
+sebellus_gun															
+sebellus			Hey, Greenie!	What's new?										
+ginger	EM_ANGRY		Please don't call me	that, it's weird.										
+sebellus	EM_HAPPY		Yeah, but you're	green.										
+ginger	EM_ANGRY		YOU'RE green!											
+sebellus			So?	Anyway, this cool	gun thing is new!									
+sebellus	EM_HAPPY		She really shouldn't	have gotten me this.										
+ginger	EM_EXCITED		I agree.											
+sebellus	EM_SIDE_EYE	ACT_WALK	I've been having fun	shooting at targets,	wanna try?				CHAR_SEBELLUS	&anim_face_right	{2,5}			
+ginger	EM_DEFAULT	ACT_WALK	..sure, I guess.	Why not.	Hey-				CHAR_GINGER	&anim_face_right	{3,5}			
+ginger	EM_SIDE_EYE		How do we know this	won't wake up mom's	dragon?									
+sebellus	EM_HAPPY		Oh- Bloodflood is a	heavy sleeper, he	doesn't care.									
+sebellus	EM_SIDE_EYE	ACT_WALK	Alright.. So you	wanna keep your eye	on the target, and-				CHAR_SEBELLUS	&anim_face_right	{3,6}			
+		EM_SKIP	ACT_TELEPORT							CHAR_SEBELLUS	&sebellus_shot	{2,6}			
+		EM_SKIP								CHAR_GUN	&gun_shoot				
+sebellus	EM_LAUGH	ACT_SFX_FIRE	..OWWWW!	GAAAH!	THAT HURTS!									
+ginger	EM_WAT		Sebellus!!	Are you alright?!?					CHAR_GINGER	&anim_face_down				
+ginger	EM_DISAPPOINTED		See, this is why mom	giving you things is	a bad idea.									
+sebellus	EM_LAUGH		Hey, I was doing	just fine until you	tried it!									
+ginger	EM_SAD		You're bleeding!!	We need to get you	to a medic!									
+sebellus	EM_LAUGH		HECK no!	I just got this	thing!									
+sebellus	EM_LAUGH		They're gonna take	it away if you tell!										
+ginger	EM_DISAPPOINTED		Then what do we do??											
+sebellus			Nothing.	I'm just gonna walk	it off.				CHAR_SEBELLUS	&sebellus_back_up				
+ginger	EM_DEFAULT		..											
+sebellus	EM_EXCITED		..											
+ginger	EM_DEFAULT		..	You're serious.										
+sebellus			When have I not	been serious about	something?									
+ginger	EM_SIDE_EYE	ACT_WALK	I'll, uh.. be in the	other room.					CHAR_GINGER		{3,6}			
+sebellus		ACT_WALK	You better not tell	though, or I'll call	you Greenie forever!				CHAR_SEBELLUS	&sebellus_back_up	{3,5}			
+															
+sebellus_gun_02															
+sebellus	EM_SIDE_EYE		You didn't tell mom,	did you?										
+ginger			I haven't.											
+sebellus	EM_HAPPY		Fantastic.											
