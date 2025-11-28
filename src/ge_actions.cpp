@@ -308,6 +308,33 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         }
                         break;
                     }
+                    case 364:
+                    {
+                        if (global_data_ptr->items[OBJ_PANAGIA] == true)
+                        {
+                            ch_man->load(&death_02);
+                        }
+                        else
+                        {
+                            ch_man->load(&death_01);
+                        }
+                        break;
+                    }
+                    case 365:
+                    {
+                        if (global_data_ptr->variables[HENRY_TALK] == true)
+                        {
+                            if (global_data_ptr->items[OBJ_PANAGIA] == true)
+                            {
+                                ch_man->load(&henry_02_true);
+                            }
+                            else
+                            {
+                                ch_man->load(&henry_02);
+                            }
+                        }
+                        break;
+                    }
                     default:
                     {
                         int ret = perform_action_automatic(action, *ch_man);

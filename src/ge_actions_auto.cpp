@@ -673,16 +673,6 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&canter_shop);
 		break;
 	}
-	case 331:
-	{
-		global_data_ptr->entry_map = &map_church_01;
-		global_data_ptr->bg_track = &music_items::ambient_wind;
-		music::stop();
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {4, 12};
-		return NEW_MAP;
-		break;
-	}
 	case 333:
 	{
 		if (global_data_ptr->action_iterations[333] == 1) { ch_man.load(&canter_people); } else
@@ -711,6 +701,11 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&hotel_bed);
 		break;
 	}
+	case 357:
+	{
+		ch_man.load(&airport_closed);
+		break;
+	}
 	case 277:
 	{
 		global_data_ptr->entry_map = &map_castle_ginger;
@@ -726,6 +721,31 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[355] == 1) { ch_man.load(&train_ginger); } else
 		{ };
+		break;
+	}
+	case 363:
+	{
+		ch_man.load(&constance_castle);
+		break;
+	}
+	case 366:
+	{
+		global_data_ptr->entry_map = &map_castle_garden;
+		global_data_ptr->bg_track = &music_items::ambient_birds;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->ginger_position = {3, 8};
+		return NEW_MAP;
+		break;
+	}
+	case 331:
+	{
+		global_data_ptr->entry_map = &map_church_02;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {4, 12};
+		return NEW_MAP;
 		break;
 	}
 	}
@@ -2209,11 +2229,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 357:
-	{
-		ch_man.load(&airport_closed);
-		break;
-	}
 	case 358:
 	{
 		if (global_data_ptr->action_iterations[358] == 0) { ch_man.load(&convo_friend); global_data_ptr->action_iterations[358] += 1; } else
@@ -2240,6 +2255,28 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	case 361:
 	{
 		if (global_data_ptr->action_iterations[361] == 0) { ch_man.load(&skelly_01); global_data_ptr->action_iterations[361] += 1; } else
+		{ };
+		break;
+	}
+	case 362:
+	{
+		if (global_data_ptr->action_iterations[362] == 0) { ch_man.load(&homeless_01); global_data_ptr->action_iterations[362] += 1; } else
+		{ };
+		break;
+	}
+	case 367:
+	{
+		global_data_ptr->entry_map = &map_castle_02b;
+		global_data_ptr->bg_track = &music_items::bg_sorry;
+		music::stop();
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->ginger_position = {41, 8};
+		return NEW_MAP;
+		break;
+	}
+	case 368:
+	{
+		if (global_data_ptr->action_iterations[368] == 0) { ch_man.load(&angel_01); global_data_ptr->action_iterations[368] += 1; } else
 		{ };
 		break;
 	}

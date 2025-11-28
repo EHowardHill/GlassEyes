@@ -75,7 +75,8 @@ int navigate_map()
         global_data_ptr->entry_map == &map_castle_ginger_cutscene_01 ||
         global_data_ptr->entry_map == &map_castle_secret_garden ||
         global_data_ptr->entry_map == &map_castle_secret_tunnel ||
-        global_data_ptr->entry_map == &map_castle_vista)
+        global_data_ptr->entry_map == &map_castle_vista ||
+        global_data_ptr->entry_map == &map_castle_garden)
     {
         global_data_ptr->costumes[CHAR_GINGER] = COSTUME_GINGER_CASUAL;
         global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_CASUAL;
@@ -188,6 +189,7 @@ int navigate_map()
     int loop_value = 0;
     bool handle_frame = true;
     int fade_ticker = 0;
+    unsigned int ticker = 0;
 
     while (loop_value == CONTINUE && char_mgr.status == CONTINUE)
     {
@@ -408,6 +410,22 @@ int navigate_map()
                         spk->idle_animation = &elem_spike_down;
                     }
                 }
+            }
+        }
+
+        else if (current_map.current_map == &map_church_02)
+        {
+            if (ticker > (60 * 60) && global_data_ptr->items[OBJ_PANAGIA] == false)
+            {
+                global_data_ptr->entry_map = &map_church_01;
+                global_data_ptr->jeremy_position = {2, 4};
+                global_data_ptr->bg_track = &music_items::bg_paschal;
+                loop_value = NEW_MAP;
+                char_mgr.status = NEW_MAP;
+            }
+            else
+            {
+                ticker++;
             }
         }
 

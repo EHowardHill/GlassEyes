@@ -83,6 +83,8 @@
 #include "bn_sprite_items_spr_death.h"
 #include "bn_sprite_items_spr_friend.h"
 #include "bn_sprite_items_spr_skellybeans.h"
+#include "bn_sprite_items_spr_homeress.h"
+#include "bn_sprite_items_spr_angel.h"
 
 using namespace bn;
 
@@ -169,6 +171,8 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_DEATH: { return &sprite_items::spr_death; break; }
 	case CHAR_FRIEND: { return &sprite_items::spr_friend; break; }
 	case CHAR_SKELLYBEANS: { return &sprite_items::spr_skellybeans; break; }
+	case CHAR_HOMERESS: { return &sprite_items::spr_homeress; break; }
+	case CHAR_ANGEL: { return &sprite_items::spr_angel; break; }
     default:
     {
         return &sprite_items::spr_vista;

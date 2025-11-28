@@ -1768,26 +1768,19 @@ kiara_door
 															
 death_01															
 	db_ch_death				You finally made it.										
-				Who are you?	What do you mean?	Where am I?									
 	db_ch_death				I am Death.										
-	db_ch_death			Do you have a	sacrifice for me?										
-				No.	Yes.										
-				That is no issue.	I will have you	eventually.									
-	db_ch_death			And now,	without further	ado..									
+	db_ch_death			I see that you have	no sacrifice for me.										
+				You will be my	sacrifice, in time.										
+	db_ch_death			Let me get out	of your way,	then..									
 		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
 															
-death_01_alt_01															
-	db_ch_death			I have been waiting	many years for this	moment.									
-	db_ch_death			You will	understand soon.										
-	db_ch_death			Do you have a	sacrifice for me?										
-	db_ch_death			No.	Yes.										
-	db_ch_death			I see. Do not worry.	I will have you	soon enough.									
-															
-death_01_alt_02															
-	db_ch_death			Here is the place	where all muetos are	born.									
-	db_ch_death			Do you have a	sacrifice for me?										
-				No.	Yes.										
-				No worries.	I will have you	soon enough.									
+death_02															
+	db_ch_death				You finally made it.										
+	db_ch_death				I am Death.										
+	db_ch_death			I see that you have	a sacrifice for me.										
+	db_ch_death			Show it to me.											
+				You present the	Panagia icon.										
+		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
 															
 henry_01															
 	db_ch_vista_02	EM_SULLEN		..Human?	What are you doing	in this place?									
@@ -2656,3 +2649,103 @@ skelly_01
 	db_ch_ginger	EM_SIDE_EYE		..I think we'll be	fine, but that's a	human skeleton.									
 	db_ch_ginger	EM_DEFAULT		You've gotta watch	out for muetos out	here.									
 	db_ch_ginger	EM_EMBARRASSED		-The bad ones,	of course.	The bad ones.									
+															
+homeless_01															
+	db_ch_homeress			*cough cough*	Hey there, lad..										
+	db_ch_homeress			Forgive me..	I don't think I have	much longer here..									
+	db_ch_homeress			Would you mind..	staying here for a	little while?									
+															
+angel_01															
+	db_ch_angel			Do not be afraid.											
+	db_ch_angel			You will soon	encounter death.										
+	db_ch_angel			Here is a gift,	to present when he	speaks to you.									
+	db_ch_angel			No matter what	happens, human,	remember this.									
+	db_ch_angel			Christ has risen	from the dead,										
+	db_ch_angel			Trampling down	death by death,										
+	db_ch_angel			and upon those in	the tombs bestowing	life.									
+	db_ch_angel		ACT_ITEM	Be wise, human.						OBJ_PANAGIA					
+		EM_SKIP	ACT_SFX_EXPLOSION							CHAR_ANGEL	&angel_disappear				
+															
+convo_obj_panagia															
+				You have an image	of a woman holding	her child.									
+				Their eyes seem to	be following yours.										
+				It is difficult to	look away.										
+															
+henry_02_true															
+	db_ch_ginger	EM_WEEP	ACT_WALK	..	..					CHAR_JEREMY	&anim_face_right	{9,13}			
+	db_ch_ginger	EM_WEEP	ACT_WALK	..						CHAR_GINGER	&ginger_terror	{10,13}			
+	db_ch_ginger	EM_WEEP	ACT_TELEPORT	..	..	..				CHAR_VISTA_02	&anim_face_down	{10,9}			
+	db_ch_vista_02	EM_SAD	ACT_WALK	Child.		Come here.				CHAR_VISTA_02		{10,12}			
+		EM_SKIP								CHAR_GINGER	&ginger_fancy_hug				
+	db_ch_ginger	EM_WEEP		..	..	..				CHAR_VISTA_02	&vista_hug				
+	db_ch_vista_02	EM_SAD		Sunshine,	everything will be	alright now.									
+	db_ch_ginger	EM_WEEP		..Henry-						CHAR_VISTA_02	&vista_hug				
+	db_ch_vista_02	EM_SULLEN		You will never need	to worry about that	man ever again.									
+	db_ch_vista_02	EM_SULLEN		It is over.											
+	db_ch_vista_02	EM_SULLEN		Without Henry, there	is no one to perform	the rituals.									
+	db_ch_vista_02	EM_SULLEN		There will be no	new muetos from	this moment on.									
+	db_ch_vista_02	EM_SAD		This is how it ought	to have been from	the beginning.									
+	db_ch_ginger	EM_WAT		..											
+		EM_SKIP								CHAR_GINGER	&anim_face_up				
+	db_ch_vista_02	EM_SULLEN		My kingdom is over.	And I must make a	confession, child.				CHAR_VISTA_02	&anim_face_down				
+	db_ch_vista_02	EM_SAD	ACT_MUSIC_SORRY	I have been so	selfish to you,	my dear.									
+	db_ch_vista_02	EM_SULLEN		You have been able	to go home this	entire time.									
+	db_ch_ginger	EM_DISAPPOINTED		W-What..?											
+	db_ch_vista_02	EM_EXCITED		All you must do is	recite after me.										
+	db_ch_ginger	EM_CONFUSED		B-But what about	you..?	What will happen?									
+	db_ch_vista_02	EM_EXCITED		I will be fine,	my dear. I have been	fine all this time.									
+	db_ch_vista_02	EM_SULLEN		Do you how I know	this phrase, Ginger?										
+	db_ch_vista_02	EM_SIDE_EYE		I tried it myself,	many years ago.	But it didn't work.									
+	db_ch_vista_02	EM_SULLEN		It was too late for	me, and it will soon	be too late for you.									
+	db_ch_ginger	EM_CONFUSED		..I see.		Human..?									
+	db_ch_jeremy	EM_HAPPY		I have a gift	for you.										
+				You give:	PANAGIA										
+	db_ch_ginger	EM_WEEP		..	..										
+	db_ch_ginger	EM_SAD		I forgot how much	I've missed her.										
+		EM_SKIP								CHAR_GINGER	&ginger_fancy_hug				
+		EM_SKIP								CHAR_JEREMY	&jeremy_fancy_hug				
+	db_ch_ginger	EM_WEEP		Thank you,	Jeremy.										
+	db_ch_ginger	EM_SAD		I need to go back,	don't I?										
+	db_ch_vista_02	EM_SAD		Yes, dear.	But,	remember this-									
+	db_ch_vista_02	EM_EXCITED		I will always love	you, no matter what.										
+		EM_SKIP								CHAR_JEREMY	&anim_face_right				
+	db_ch_ginger	EM_WEEP		..I love you too.						CHAR_GINGER	&ginger_terror				
+	db_ch_ginger	EM_SAD		..	I'm ready.										
+	db_ch_vista_02	EM_EXCITED		Nullus est locus	domui similis.										
+	db_ch_ginger	EM_SAD		Nullus est locus	domui similis.										
+	db_ch_vista_02	EM_EXCITED		Nullus est locus	domui similis.										
+	db_ch_ginger	EM_WEEP		..Nullus est locus	domui similis.										
+	db_ch_vista_02	EM_HAPPY	ACT_MUSIC_FADEOUT	One more time.	Nullus est locus	domui similis.									
+	db_ch_ginger	EM_WEEP		..I-I don't.. I	don't know if I can-										
+	db_ch_vista_02	EM_EXCITED		We will always be	with you, Ginger.										
+	db_ch_ginger	EM_SAD		..	..Nullus est locus	domui similis.									
+	db_ch_vista_02	EM_SULLEN		..						CHAR_GINGER	&ginger_death				
+	db_ch_vista_02	EM_SULLEN		And so it ends.											
+	db_ch_vista_02	EM_SULLEN		Human- or, what name	did she use?	Jeremy?									
+	db_ch_vista_02	EM_SULLEN		Thank you,	Jeremy.										
+	db_ch_vista_02	EM_SAD		There is no place	for me in this	world anymore.									
+	db_ch_vista_02	EM_SULLEN		I will retreat to	the woods and make	a home there.									
+	db_ch_vista_02	EM_SULLEN		Go home human.		May you be blessed.									
+		EM_SKIP	ACT_PROGRESS							ENDING_04_PART_00					
+															
+final_04															
+				And so you take the	train home.										
+				The other humans are	none the wiser, but	everything is new.									
+				And so it goes..											
+		EM_SKIP	ACT_PROGRESS							ENDING_04_PART_00					
+															
+constance_castle															
+	db_ch_constance			Oh! Hello,	your majesty!	How may I help?									
+				Where's Sebellus?	Where's mom?								&constance_castle_alt_01		
+	db_ch_constance			Oh- Why does your	mother have a human	in the castle?									
+	db_ch_ginger	EM_SIDE_EYE		Uh.. That's not	quite what I said,	but-									
+	db_ch_constance			That's because your	kind doesn't live	very long, so									
+	db_ch_constance			It just makes sense	to have a lifelong	human housekeeper.									
+	db_ch_constance			Anyways, your	brother is in the	garden past the									
+	db_ch_constance			throne room, he's	playing something	out there.									
+															
+constance_castle_alt_01															
+	db_ch_constance			Oh- That's easy,	your secret room is	down the hallway.									
+	db_ch_constance			Just walk up and try	to open the painting	like it's a door.									
+	db_ch_ginger	EM_LAUGH		Well, that's not	quite what I-										
+	db_ch_constance			If you're looking	for the queen, she's	in her room.									

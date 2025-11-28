@@ -254,6 +254,13 @@ void resolve_chapter()
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {1, 5};
 		break;		}
+	case ENDING_04_PART_00: {
+		typewriter(TYPEWRITER_ENDING_04_CUTSCENE_01);
+		global_data_ptr->entry_map = &map_sans;
+		global_data_ptr->bg_track = &music_items::theme_sans;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {0, 0};
+		break;		}
 	default: { break; }
 	}
 }

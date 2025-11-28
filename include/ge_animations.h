@@ -24,6 +24,7 @@ const animation vista_throne = {{10}, 1, 0, false};
 const animation vista_pickup_02 = {{11}, 1, 0, false};
 const animation vista_uhoh = {{1,2}, 2, 1, false};
 const animation vista_vanish = {{13}, 1, 0, false};
+const animation vista_hug = {{14}, 1, 0, false};
 const animation visker_poke = {{9,10}, 2, 0, true};
 const animation visker_battle_init = {{0,1,2,3,4,5}, 6, 0, false};
 const animation visker_battle_idle = {{6,7,8,9}, 4, 0, true};
@@ -101,5 +102,6 @@ const animation pills_hide = {{0}, 1, 0, false};
 const animation sans_left = {{10}, 1, 0, false};
 const animation sans_ice_cream = {{9}, 1, 0, false};
 const animation o_candle = {{0,1}, 2, 0, true};
+const animation angel_disappear = {{1,2}, 2, 0, false};
 
 #endif

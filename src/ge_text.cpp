@@ -686,7 +686,8 @@ void dialogue_box::init(character_manager *ch_man)
         }
         case ACT_WAIT:
         {
-            // Code goes here
+            // Code goes here eventually (?)
+            break;
         }
         case ACT_HARD_RESET:
         {

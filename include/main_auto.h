@@ -42,6 +42,7 @@ enum progress
 	ENDING_02_PART_00,
 	ENDING_03_PART_00,
 	BLACK_TO_LAB_02,
+	ENDING_04_PART_00,
 };
 
 void resolve_chapter();

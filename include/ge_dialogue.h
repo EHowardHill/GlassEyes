@@ -53,6 +53,8 @@ typedef const dialogue_line conversation[128];
 #include "bn_sprite_items_db_ch_sans.h"
 #include "bn_sprite_items_db_ch_desmond.h"
 #include "bn_sprite_items_db_ch_lobbybot.h"
+#include "bn_sprite_items_db_ch_homeress.h"
+#include "bn_sprite_items_db_ch_angel.h"
 #include "bn_regular_bg_items_scene_cabin01.h"
 #include "bn_regular_bg_items_scene_berlin01.h"
 #include "bn_regular_bg_items_scene_tv_02.h"
@@ -75,6 +77,7 @@ typedef const dialogue_line conversation[128];
 // Forward declarations for conversations
 extern const conversation ack_01;
 extern const conversation airport_closed;
+extern const conversation angel_01;
 extern const conversation avalon_01;
 extern const conversation avalon_courier_01;
 extern const conversation avalon_courier_02;
@@ -139,6 +142,8 @@ extern const conversation chat_mcwebb;
 extern const conversation chat_mcwebb_02;
 extern const conversation chat_mcwebb_02_alt_01;
 extern const conversation chat_mcwebb_03;
+extern const conversation constance_castle;
+extern const conversation constance_castle_alt_01;
 extern const conversation convo_friend;
 extern const conversation convo_friend_leave;
 extern const conversation convo_obj_beer;
@@ -147,6 +152,7 @@ extern const conversation convo_obj_document;
 extern const conversation convo_obj_flint;
 extern const conversation convo_obj_ice_cream;
 extern const conversation convo_obj_lime;
+extern const conversation convo_obj_panagia;
 extern const conversation convo_obj_photograph;
 extern const conversation convo_obj_pie;
 extern const conversation convo_obj_pills;
@@ -187,8 +193,7 @@ extern const conversation dart_02;
 extern const conversation dart_03;
 extern const conversation dart_04;
 extern const conversation death_01;
-extern const conversation death_01_alt_01;
-extern const conversation death_01_alt_02;
+extern const conversation death_02;
 extern const conversation desmond_01;
 extern const conversation desmond_01_alt_01;
 extern const conversation desmond_01_alt_02;
@@ -213,6 +218,7 @@ extern const conversation final_01c;
 extern const conversation final_01d;
 extern const conversation final_02;
 extern const conversation final_03;
+extern const conversation final_04;
 extern const conversation final_msg;
 extern const conversation flayithro_sign;
 extern const conversation flayithro_sign_01;
@@ -261,6 +267,8 @@ extern const conversation have_to_go_4;
 extern const conversation henry_01;
 extern const conversation henry_02;
 extern const conversation henry_02_alt_01;
+extern const conversation henry_02_true;
+extern const conversation homeless_01;
 extern const conversation hotel_01;
 extern const conversation hotel_02;
 extern const conversation hotel_bed;

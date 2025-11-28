@@ -61,6 +61,7 @@ const conversation *resolve_typewriter_conversation(int scene)
 	case TYPEWRITER_CCUTSCENE_03: { return &cutscene_03; break; }
 	case TYPEWRITER_ENDING_01_CUTSCENE_01: { return &final_01; break; }
 	case TYPEWRITER_ENDING_02_CUTSCENE_01: { return &final_02; break; }
+	case TYPEWRITER_ENDING_04_CUTSCENE_01: { return &final_04; break; }
 
     default:
     {
@@ -87,6 +88,7 @@ const music_item *resolve_typewriter_music(int scene)
 	case TYPEWRITER_CCUTSCENE_03: {return &music_items::ambient_heartbeat; break; }
 	case TYPEWRITER_ENDING_01_CUTSCENE_01: {return &music_items::bg_sorry_train; break; }
 	case TYPEWRITER_ENDING_02_CUTSCENE_01: {return &music_items::bg_sorry_train; break; }
+	case TYPEWRITER_ENDING_04_CUTSCENE_01: {return &music_items::bg_sorry_train; break; }
 
     default:
     {

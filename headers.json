@@ -154,6 +154,13 @@
                 ],
                 "speed": 0,
                 "loop": false
+            },
+            "hug": {
+                "frames": [
+                    14
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "visker": {
@@ -929,6 +936,16 @@
                 "speed": 0,
                 "loop": true
             }
+        },
+        "angel": {
+            "disappear": {
+                "frames": [
+                    1,
+                    2
+                ],
+                "speed": 0,
+                "loop": false
+            }
         }
     },
     "items": {
@@ -962,7 +979,8 @@
         },
         "Vodka": {
             "drop": true
-        }
+        },
+        "Panagia": {}
     },
     "objects": {
         "Vista": {},
@@ -1081,7 +1099,9 @@
         "Vista Read02": {},
         "Death": {},
         "Friend": {},
-        "Skellybeans": {}
+        "Skellybeans": {},
+        "Homeress": {},
+        "Angel": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1149,6 +1169,10 @@
         },
         "ending_02_cutscene_01": {
             "conversation": "final_02",
+            "music": "bg_sorry_train"
+        },
+        "ending_04_cutscene_01": {
+            "conversation": "final_04",
             "music": "bg_sorry_train"
         }
     },
@@ -1733,18 +1757,6 @@
             "330": {
                 "auto": "canter_shop"
             },
-            "331": {
-                "new_map": {
-                    "map": "church_01",
-                    "bg_track": "ambient_wind",
-                    "positions": {
-                        "jeremy": [
-                            4,
-                            12
-                        ]
-                    }
-                }
-            },
             "333": {
                 "sequence": [
                     "canter_people"
@@ -1764,6 +1776,9 @@
             },
             "343": {
                 "auto": "hotel_bed"
+            },
+            "357": {
+                "auto": "airport_closed"
             },
             "277": {
                 "new_map": {
@@ -1785,6 +1800,33 @@
                 "sequence": [
                     "train_ginger"
                 ]
+            },
+            "363": {
+                "auto": "constance_castle"
+            },
+            "366": {
+                "new_map": {
+                    "map": "castle_garden",
+                    "bg_track": "ambient_birds",
+                    "positions": {
+                        "ginger": [
+                            3,
+                            8
+                        ]
+                    }
+                }
+            },
+            "331": {
+                "new_map": {
+                    "map": "church_02",
+                    "bg_track": "ambient_wind",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            12
+                        ]
+                    }
+                }
             }
         },
         "automatic": {
@@ -3765,9 +3807,6 @@
                     }
                 }
             },
-            "357": {
-                "auto": "airport_closed"
-            },
             "358": {
                 "sequence": [
                     "convo_friend"
@@ -3797,6 +3836,28 @@
             "361": {
                 "sequence": [
                     "skelly_01"
+                ]
+            },
+            "362": {
+                "sequence": [
+                    "homeless_01"
+                ]
+            },
+            "367": {
+                "new_map": {
+                    "map": "castle_02b",
+                    "bg_track": "bg_sorry",
+                    "positions": {
+                        "ginger": [
+                            41,
+                            8
+                        ]
+                    }
+                }
+            },
+            "368": {
+                "sequence": [
+                    "angel_01"
                 ]
             }
         }
@@ -4184,6 +4245,19 @@
                 "jeremy": [
                     1,
                     5
+                ]
+            }
+        },
+        "ENDING_04_PART_00": {
+            "map": "sans",
+            "bg_track": "theme_sans",
+            "cutscenes": [
+                "ending_04_cutscene_01"
+            ],
+            "positions": {
+                "jeremy": [
+                    0,
+                    0
                 ]
             }
         }
