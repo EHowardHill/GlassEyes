@@ -755,6 +755,24 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 370:
+	{
+		if (global_data_ptr->action_iterations[370] == 1) { ch_man.load(&lab_04); } else
+		{ };
+		break;
+	}
+	case 372:
+	{
+		if (global_data_ptr->action_iterations[372] == 1) { ch_man.load(&talk_168); } else
+		{ };
+		break;
+	}
+	case 373:
+	{
+		if (global_data_ptr->action_iterations[373] == 1) { ch_man.load(&estate_sign); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -2284,6 +2302,12 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	case 368:
 	{
 		if (global_data_ptr->action_iterations[368] == 0) { ch_man.load(&angel_01); global_data_ptr->action_iterations[368] += 1; } else
+		{ };
+		break;
+	}
+	case 371:
+	{
+		if (global_data_ptr->action_iterations[371] == 0) { ch_man.load(&dark_info); global_data_ptr->action_iterations[371] += 1; } else
 		{ };
 		break;
 	}
