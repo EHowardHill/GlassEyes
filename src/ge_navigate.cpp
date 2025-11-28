@@ -89,6 +89,19 @@ int navigate_map()
         global_data_ptr->costumes[CHAR_SEBELLUS] = COSTUME_SEBELLUS_FANCY;
     }
 
+    // Turn on all fires in Avalon
+    if (global_data_ptr->entry_map == &map_forest_03)
+    {
+        for (auto &ch : char_mgr.characters)
+        {
+            if (ch->index == CHAR_FIRE)
+            {
+                ch->idle_animation = &fire_on;
+                ch->current_animation = &fire_on;
+            }
+        }
+    }
+
     for (int y = 0; y < current_map.current_map->size.y.integer(); y++)
     {
         for (int x = 0; x < current_map.current_map->size.x.integer(); x++)
