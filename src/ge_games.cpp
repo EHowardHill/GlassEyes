@@ -822,6 +822,7 @@ int game_map()
                     if (gs.result == G_WIN || gs.result == G_LOSE)
                     {
                         // Battle is complete, return to continue the game
+                        text::toasts.clear();
                         return CONTINUE;
                     }
 

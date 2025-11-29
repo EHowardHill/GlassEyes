@@ -113,7 +113,7 @@ void v_sprite_ptr::update(bool dialogue_box_ended)
     for (auto *item : manager)
     {
         bound bounds = item->real_position();
-        bound acceptable = {screen.position, screen.width + 72, screen.height + 72};
+        bound acceptable = {screen.position, screen.width + 96, screen.height + 96};
 
         if (!dialogue_box_ended)
         {
@@ -246,14 +246,6 @@ void character::update(map_manager *current_map, bool db_inactive)
 {
     vector_2 delta = {0, 0};
     bool custom_anim = false;
-
-    if (keypad::r_pressed())
-    {
-        if (index == CHAR_JEREMY)
-        {
-            toggle_falling(true);
-        }
-    }
 
     if (is_falling)
     {

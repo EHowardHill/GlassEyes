@@ -24,6 +24,7 @@ const char *ITEM_LABELS[ITEMS_SIZE] = {
 };
 
 const bool ITEM_DROP[ITEMS_SIZE] = {
+	true,
 	false,
 	false,
 	false,
@@ -31,16 +32,15 @@ const bool ITEM_DROP[ITEMS_SIZE] = {
 	false,
 	false,
 	false,
+	true,
+	true,
 	false,
 	false,
 	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
+	true,
+	true,
+	true,
+	true,
 	false,
 };
 

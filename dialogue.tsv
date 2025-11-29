@@ -2,7 +2,7 @@ Name / ID	Portrait	Emotion	Action	Line1	Line2	Line3	Color	Size	Speed	Index	Anim	
 intro_01															
 				Deep within the	woods of the	old world,									scene_cabin01
 				There once	lay a cabin.										
-				Forgotten by	the man who 	built it,									
+				Long forgotten by	the ones who	built it,									
 				Nearly forgotten	by the woman	who lived within,									
 				The last of her	kind, a Marelon,	named Vista.									
 															
@@ -142,7 +142,8 @@ garbage_spare
 				He seems very	resolute to fight.										
 															
 garbage_05															
-	db_ch_visker	EM_DISAPPOINTED		Fine.	Grrr.	Human can go.									
+	db_ch_visker	EM_DISAPPOINTED	ACT_HP	Okay.. Okay..	Visker sees how	it is.				20					
+	db_ch_visker	EM_DISAPPOINTED		Visker has chosen to	be merciful today.	Human can go.									
 	db_ch_visker	EM_DEFAULT		But if human	*dies*..	Remember..									
 	db_ch_visker	EM_HAPPY		All trash returns	back to VISKER.	KING of TRASH.									
 															
@@ -383,7 +384,7 @@ croke_01_alt_01
 	db_ch_ginger	EM_WAT		Hey! Stop!	Don't you know	who I am??									
 	db_ch_croke	EM_DEFAULT		A glabber	collaborator,	no doubt!!									
 	db_ch_croke	EM_DEFAULT		Same thing as	glabber in	my book!									
-		ACT_FIGHT								FOE_CROKE_01					
+			ACT_FIGHT							FOE_CROKE_01					
 															
 croke_02															
 	db_ch_croke	EM_DEFAULT		TASTE POISON,	GLABBER!										
@@ -604,7 +605,7 @@ avalon_grandma_01
 	db_ch_ginger	EM_DEFAULT		Hello, ma'am?											
 	db_ch_grandma	EM_DEFAULT		Yes, what is it,	sweetheart?										
 	db_ch_ginger	EM_DEFAULT		Do you know how	to get to Canterbury	from here?									
-	db_ch_grandma	EM_DEFAULT		Say.. You look just	like her majesty	Princess Semura.									
+	db_ch_grandma	EM_DEFAULT		Say.. You look just	like her majesty	Princess Selari.									
 	db_ch_ginger	EM_SIDE_EYE		Hehe, I get that a	lot but I'm, uh, not	the Princess.									
 	db_ch_grandma	EM_DEFAULT		What's the human	doing here?	Human..									
 	db_ch_grandma	EM_DEFAULT		Please, cause some	mischief, I'd like	entertainment.									
@@ -791,8 +792,7 @@ scruffys_05_alt_01
 	db_ch_sneaker	EM_DEFAULT		Too afraid.	I see.										
 															
 scruffys_05b															
-	db_ch_sneaker	EM_DEFAULT	ACT_MUSIC_FADEOUT	I.. I can't..	YOU!	GLABBER!									
-	db_ch_sneaker	EM_DEFAULT		I'LL KILL YOU!!											
+	db_ch_sneaker	EM_DEFAULT		DIE, GLABBER!!											
 			ACT_PROGRESS							CH_CUTSCENE_04					
 															
 tollhouse_01															
@@ -1129,7 +1129,8 @@ talk_190b
 talk_177_alt_02															
 	db_ch_ginger	EM_LAUGH		Yeah..	He's a lot.										
 	db_ch_ginger	EM_SIDE_EYE		You probably	noticed his.. Uh..	His eyes.									
-	db_ch_ginger	EM_DEFAULT		He has what they	"call ""Glass Eyes""."										
+	db_ch_ginger	EM_DEFAULT		His eyes have	special runes on	them.									
+	db_ch_ginger	EM_SIDE_EYE		And, uh..	Because of that..	They, uh..									
 	db_ch_ginger	EM_DEFAULT		He can see things	other people	can't.									
 	db_ch_ginger	EM_DEFAULT		It was to	compensate for..	other things.									
 	db_ch_ginger	EM_SIDE_EYE		I'm glad he's in	there.. I don't want	to talk about									
@@ -1216,9 +1217,9 @@ bm_fridge
 		EM_SKIP	ACT_ITEM							OBJ_WATER_BOTTLE					
 															
 chat_197															
-				You found:	SLICE OF PIE										
-				Huh.	Wonder how that	got there.				OBJ_PIE	&elem_pie_take				
-		EM_SKIP	ACT_ITEM							OBJ_PIE					
+				You found:	SLICE OF PIE					CHAR_PIE	&elem_pie_take				
+				Huh.	Wonder how that	got there.									
+		EM_SKIP	ACT_ITEM												
 															
 visker_final															
 	db_ch_visker	EM_DEFAULT	ACT_MUSIC_VISKER	HUMAN!	You're alive?!										
@@ -1406,7 +1407,7 @@ kathy_01
 	db_ch_kathy	EM_SIDE_EYE		W-Well, on a good	day this is the best	place in town..									
 	db_ch_kathy	EM_DEFAULT		Unfortunately..	Well.. Are you three	adventurers?									
 	db_ch_kathy	EM_DEFAULT		..		..									
-	db_ch_kathy	EM_SIDE_EYE		..Just take a look	inside and you'll	see what I mean.									
+	db_ch_kathy	EM_HAPPY		..Just take a look	inside and you'll	see what I mean.									
 															
 boutique_01															
 	db_ch_ginger	EM_WAT		..uh.											
@@ -1530,7 +1531,7 @@ dock_ginger_01
 dock_sebellus_01															
 	db_ch_sebellus	EM_DEFAULT		The water is very	nice this late at	night, yes?									
 	db_ch_sebellus	EM_SIDE_EYE		You wanna hear	something spooky,	human?									
-	db_ch_sebellus	EM_DEFAULT		I'm sure Ginger told	"you about my ""Glass"	"Eyes"", right?"									
+	db_ch_sebellus	EM_DEFAULT		I'm sure Ginger told	you about my	eyes, right?									
 	db_ch_sebellus	EM_DEFAULT		I bet you didn't	know that I can see	how people will die.									
 	db_ch_sebellus	EM_LAUGH		Unfortunately, I'm	not good at knowing	when a joke is dead.									
 	db_ch_sebellus	EM_SIDE_EYE		But it's true. I	know how I'll die,	so until then?									
@@ -1597,7 +1598,7 @@ vista_01
 															
 vista_01_alt_01															
 	db_ch_vista_02	EM_SULLEN		Very well.											
-		EM_SKIP	ACT_HP							-100					
+		EM_SKIP	ACT_PROGRESS							GAME_OVER					
 															
 vista_bar															
 	db_ch_vista_02	EM_EXCITED		Human.. Welcome.	Order anything you	want from the bar.									
@@ -1691,12 +1692,22 @@ matt_01
 		EM_SKIP								CHAR_MATT_POSTER_02	&poster_02				
 	db_ch_matt	EM_DEFAULT	ACT_SFX_CLICK	"It's titled ""M.E."","	"or ""Mechanical"	"Episcopate"". Clever!"				CHAR_MATT	&matt_press				
 	db_ch_matt	EM_DEFAULT		I am very humble, so	I'm selling this to	raise money.									
+	db_ch_matt	EM_DEFAULT		"""For what"", you ask!"	Well, I'm not sure	you've noticed..									
 	db_ch_matt	EM_DEFAULT		This city is full of	er.. zombies?	They're all sick.									
-	db_ch_matt	EM_DEFAULT		I recommend seeing a	doctor if you can,	by the way.									
-	db_ch_matt	EM_DEFAULT		Zombies suck at	raising money so I'm	trying to expand.									
-	db_ch_matt	EM_DEFAULT		"I figured, ""Hey, if"	I put up idols, I	"can get muetos too."""									
-	db_ch_matt	EM_DEFAULT		None of them have	showed up yet.	Frustrating.									
-	db_ch_matt	EM_DEFAULT		Anyway, I've been	told my church has	no legs to stand on.									
+	db_ch_matt	EM_DEFAULT		We tried giving them	places to dispose of	needles, but									
+	db_ch_matt	EM_DEFAULT		unfortunately it's	not drugs.										
+	db_ch_matt	EM_DEFAULT		We don't really know	what it is, so if	you feel fine, uh..									
+	db_ch_matt	EM_DEFAULT		I recommend seeing a	doctor if you can.										
+	db_ch_matt	EM_DEFAULT		This is a travesty,	most all because	zombies are broke.									
+	db_ch_matt	EM_DEFAULT		How am I supposed	to pay the bills	with zombies?									
+	db_ch_matt	EM_DEFAULT		So I changed my	approach! I tried to	appeal to muetos!									
+	db_ch_matt	EM_DEFAULT		I put up Senatrix	idols thinking that	would get them in.									
+	db_ch_matt	EM_DEFAULT		Yes, I know it's	controversial, since	we're at war,									
+	db_ch_matt	EM_DEFAULT		But hey- no one	wants this war	anyways, right?									
+	db_ch_matt	EM_DEFAULT		Sadly, a mueto has	never showed up.	Frustrating.									
+	db_ch_matt	EM_DEFAULT		The few parishoners	I DO get tend to be	very annoying too.									
+	db_ch_matt	EM_DEFAULT		Why can't a robot	be an archbishop,	right?									
+	db_ch_matt	EM_DEFAULT		I've been told my	leadership has no	legs to stand on.									
 	db_ch_matt	EM_DEFAULT		So that gave me	an idea.	Behold.									
 		EM_SKIP								CHAR_MATT_POSTER_01	&poster_03				
 		EM_SKIP								CHAR_MATT_POSTER_02	&poster_03				
@@ -1838,7 +1849,7 @@ henry_01
 	db_ch_vista_02	EM_SULLEN		No, Henry.	My REAL name. The	one I've forgotten.									
 	db_ch_vista_02	EM_SAD		I will ask again,	in a different tone	of voice.									
 		EM_SKIP								CHAR_VISTA_02	&vista_vanish				
-		EM_SKIP	ACT_SFX_FIRE							CHAR_VISTA_LARGE	&vista_uhoh				
+		EM_SKIP	ACT_SFX_EXPLOSION							CHAR_VISTA_LARGE	&vista_uhoh				
 	db_ch_vista_02	EM_ANGRY	ACT_MUSIC_WIND	I demand that you	tell me the name	you stole from me.			SP_SLOW						
 	db_ch_vista_02	EM_SAD	ACT_CUE_GINGER	Human.. Go into the	other room and	comfort my daughter.									
 		EM_SKIP	ACT_VARIABLE					true		HENRY_TALK					
@@ -1846,7 +1857,7 @@ henry_01
 henry_02															
 	db_ch_ginger	EM_SCARED	ACT_WALK	..						CHAR_JEREMY		{9,13}			
 	db_ch_ginger	EM_WEEP	ACT_WALK	..	..	..				CHAR_GINGER	&ginger_terror	{10,13}			
-	db_ch_ginger	EM_WEEP		..	..	I have to go home.									
+	db_ch_ginger	EM_WEEP	ACT_TELEPORT	..	..	I have to go home.				CHAR_GINGER	&ginger_terror	{10,13}			
 	db_ch_ginger	EM_SAD		I-I got my hands	on Henry's.. tool.	I know what it is.									
 	db_ch_ginger	EM_SAD		It pulls your soul	from your body.										
 	db_ch_ginger	EM_SAD		..He uses it when a	mueto doesn't	grow right.									
@@ -1963,6 +1974,8 @@ final_01b
 	db_ch_ginger	EM_DISAPPOINTED		You need to stop	taking that	Lethedol.									
 	db_ch_vista_02	EM_EXCITED		Don't worry about me	sunshine, I still	feel just fine.									
 	db_ch_vista_02	EM_SIDE_EYE		I just need a little	reminder from time	to time.									
+	db_ch_ginger	EM_DISAPPOINTED		That book you're	reading.. you've	read it five times..									
+	db_ch_vista_02	EM_SIDE_EYE		..but of course,	it is one of my	favorites.									
 	db_ch_ginger	EM_DISAPPOINTED		We were going to	visit Canterbury to	find my gravestone.									
 	db_ch_vista_02			You.. may, I don't..	Why are you thinking	of such things?									
 	db_ch_vista_02	EM_SULLEN		It isn't healthy to	dwell on this.										
@@ -2004,7 +2017,7 @@ final_02
 															
 final_03															
 	db_ch_ginger	EM_CONFUSED		..w-where am I?											
-	db_ch_constance			Ah.. Your majesty,	you're awake again.	Where are my notes-									
+	db_ch_constance		ACT_WALK	Ah.. Your majesty,	you're awake again.	Where are my notes-				CHAR_CONSTANCE		{4,4}			
 	db_ch_constance			Your name is Selari,	You have permanent	daily memory loss.									
 	db_ch_constance			You took a medicine	"named ""Lethedol"","	which has strong									
 	db_ch_constance			and permanent side	effects on Marelons,	like you.									
@@ -2014,11 +2027,11 @@ final_03
 	db_ch_constance			The public does not	know this.. They are	growing impatient.									
 	db_ch_constance			We need to dress you	up as her for a..	public showing.									
 	db_ch_constance			You just need to	stand and wave.	Can you do that?									
-	db_ch_ginger	EM_EMBARRASSED		I-I.. I think so..											
+	db_ch_ginger	EM_DISAPPOINTED		I-I.. I think so..											
 	db_ch_constance			Very good, and..	I know you won't	remember this..									
 	db_ch_constance			The castle staff and	I.. are not sure how	to take care of you.									
 	db_ch_constance			There is a cabin not	far from here.	It's very cozy.									
-	db_ch_constance	EM_DISAPPOINTED		"""Vista is sick"" is"	much safer than	"""Vista is dead""."									
+	db_ch_constance			"""Vista is sick"" is"	much safer than	"""Vista is dead""."									
 	db_ch_constance			You would pretend	to be her.. Very	little would change.									
 	db_ch_constance			You two look just	the same anyways.	What do you say?									
 	db_ch_ginger			I-I.. I don't..	I don't know..										
@@ -2027,6 +2040,7 @@ final_03
 		EM_SKIP	ACT_HARD_RESET												
 															
 cutscene_01															
+				CHAPTER ONE:	"""Exordium"""										
 				CANTERBURY		The domed city									scene_01_00
 			ACT_SFX_KNOCK	Dr. Erickson? Hello?	Are you busy?		COLOR_BLUE								scene_01_01
 				My office hours are	clearly posted on	the wall outside.									scene_01_01
@@ -2060,6 +2074,7 @@ cutscene_01
 			ACT_MUSIC_FADEOUT	It would be an	honor, sir.		COLOR_BLUE								scene_01_04
 															
 cutscene_02															
+				CHAPTER TWO:	"""Her"""										
 				This field is so new	and so discrete that	it's unregulated.									scene_02_00
 				We want to keep it	that way, so you	must say nothing.									scene_02_00
 				There's nothing fun	for smart people	that's legal, right?	COLOR_BLUE								scene_02_00
@@ -2085,6 +2100,7 @@ cutscene_02
 			ACT_MUSIC_FADEOUT	Do I look like a man	who has anything	to lose?									scene_02_02
 															
 cutscene_03															
+				CHAPTER THREE:	"""North by North"""										
 				I don't understand	why they only last	a couple of hours.									scene_03_00
 				All these cuts and	carcasses will	attract attention.									scene_03_00
 				The ritual is	correct.. But your	bodies need some	COLOR_BLUE								scene_03_03
@@ -2105,7 +2121,6 @@ cutscene_03
 			ACT_MUSIC_FADEOUT	No..	I suppose not.				SP_DEFAULT						scene_03_02
 															
 cutscene_04															
-		EM_SKIP	ACT_MUSIC_WIND												
 	db_ch_henry	EM_HAPPY	ACT_WALK	Good morning.	Can you understand	what I'm saying?				CHAR_HENRY		{3,3}			
 	db_ch_henry	EM_DEFAULT		It's alright,	you're safe.	Take slow breaths.				CHAR_VISTA_BED	&vista_bed_awake				
 	db_ch_ginger	EM_SCARED		W-What..		W-What happened..	COLOR_PURPLE								
@@ -2124,7 +2139,7 @@ cutscene_04
 	db_ch_henry	EM_DEFAULT		Tell me, what do you	last remember?										
 	db_ch_ginger	EM_SCARED		T-Take me home.	Now.		COLOR_PURPLE			CHAR_VISTA_BED	&vista_bed_cry				
 	db_ch_henry	EM_DEFAULT		You are home. Your	memories came from	a stranger.									
-	db_ch_henry			(It seems my memory	suppressant doesn't	work on full souls.)									
+	db_ch_henry	EM_DEFAULT		I apologize for the	discomfort you must	be feeling.									
 	db_ch_henry			The left door leads	to the toilet if you	feel nauseous.									
 	db_ch_ginger	EM_WEEP	ACT_WALK	..			COLOR_PURPLE			CHAR_HENRY		{4,3}			
 	db_ch_ginger	EM_WEEP		..			COLOR_PURPLE								
@@ -2133,7 +2148,7 @@ cutscene_04
 		EM_SKIP	ACT_PROGRESS							PIT_01					
 															
 cutscene_05															
-		EM_SKIP								CHAR_HENRY	&henry_sit				
+				CHAPTER FOUR:	"""1000 Miles"""					CHAR_HENRY	&henry_sit				
 	db_ch_henry	EM_HAPPY	ACT_WALK	Good morning.	Did you sleep well?					CHAR_VISTA_YOUNG		{1,4}			
 	db_ch_ginger	EM_SULLEN		Good morning, Henry.	Not really.	Too many thoughts.	COLOR_PURPLE								
 	db_ch_henry	EM_DEFAULT		Do you know what day	today is?										
@@ -2168,6 +2183,7 @@ cutscene_05
 		EM_SKIP	ACT_PROGRESS							DARK_TO_DARK					
 															
 cutscene_06															
+			ACT_MUSIC_WIND	CHAPTER FIVE:	"""Morning Bell"""					CHAR_VISTA_YOUNG	&vista_young_up				
 	db_ch_henry	EM_DEFAULT	ACT_MUSIC_WIND	Are the others down	the chute with the	equipment?				CHAR_VISTA_YOUNG	&vista_young_up				
 	db_ch_ginger	EM_SIDE_EYE		Yes.. They gave the	signal, they're ok..		COLOR_PURPLE								
 	db_ch_henry	EM_HAPPY	ACT_WALK	Don't be nervous.	The police never	check the garbage.				CHAR_HENRY		{7,4}			
@@ -2207,6 +2223,7 @@ cutscene_06
 cutscene_08															
 		EM_SKIP								CHAR_VISTA_02	&vista_throne				
 		EM_SKIP								CHAR_GINGER_FANCY2	&anim_face_right				
+				CHAPTER SEVEN:	"""Always Like This"""										
 	db_ch_constance		ACT_WALK	Your majesty! Your	birthday gift has	arrived!				CHAR_CONSTANCE		{3,4}			
 	db_ch_vista_02	EM_SULLEN		Very good,	Constance.										
 	db_ch_sebellus	EM_SIDE_EYE		Oh? May I see?											
@@ -2278,7 +2295,7 @@ cutscene_09
 	db_ch_vista_02	EM_SAD		Please..											
 															
 cutscene_09b															
-	db_ch_vista_02	EM_EXCITED		Thank you,	sunshine..	Thank you..									
+	db_ch_vista_02	EM_EXCITED	ACT_CLEAR_INVENTORY	Thank you,	sunshine..	Thank you..									
 	db_ch_vista_02	EM_DEFAULT		..											
 	db_ch_vista_02	EM_SAD		I shouldn't have	asked you to see my	secret garden, dear.									
 	db_ch_vista_02	EM_DISAPPOINTED		Ginger, dear..	This throne..	These treats..									
@@ -2294,6 +2311,7 @@ cutscene_09b
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					
 															
 cutscene_07															
+			ACT_MUSIC_WIND	CHAPTER SIX:	"""The Giantess"""										
 			ACT_MUSIC_SORRY	Escaping from	Canterbury was	illegal as a human.									
 				But the university	threatened to sue	my father,									
 				and he knew his	chances were better	on the run.									
@@ -2455,7 +2473,7 @@ sans_06
 	db_ch_sans	EM_DEFAULT		it's 2025, and it's	been the hardest	year so far	COLOR_SANS								
 	db_ch_sans	EM_HAPPY		but after bad things	happen, he always	learns a big lesson	COLOR_SANS								
 	db_ch_sans	EM_DEFAULT		sometimes you gotta	be at your lowest	before you can grow	COLOR_SANS								
-	db_ch_sans	EM_DEFAULT		death comes for us	all, friend		COLOR_SANS								
+	db_ch_sans	EM_DEFAULT		death comes for us	all, pal		COLOR_SANS			CHAR_SANS	&anim_face_down				
 	db_ch_sans	EM_DEFAULT		and there is no	bigger enemy	to face	COLOR_SANS								
 	db_ch_sans	EM_ANGRY		and sometimes, you	have to die before	you die,	COLOR_SANS								
 	db_ch_sans	EM_ANGRY		so that you don't	die when you die		COLOR_SANS								
@@ -2625,8 +2643,8 @@ final_01d
 	db_ch_ginger	EM_SIDE_EYE		I lived in a	shelter for little	while afterwards.									
 	db_ch_ginger			It was very hard to	find work, but I've	finished so much.									
 	db_ch_ginger	EM_HAPPY		I got an apartment,	I've even been	working on a degree.									
-	db_ch_ginger	EM_EXCITED		If you could	remember me, I think	you'd be so proud.									
-	db_ch_ginger	EM_SAD		I think I once	spotted by former	human family.									
+	db_ch_ginger	EM_LAUGH		If you could	remember me, I think	you'd be so proud.									
+	db_ch_ginger	EM_SAD		I think I once	spotted my former	human family.									
 	db_ch_ginger	EM_SAD		I want to reach out	to them so badly,	but..									
 	db_ch_ginger	EM_DISAPPOINTED		They've come to	peace with my	death already.									
 	db_ch_ginger			I've been trying to	make friends, but	it's been hard.									
@@ -2688,7 +2706,7 @@ henry_02_true
 	db_ch_vista_02	EM_SULLEN		There will be no	new muetos from	this moment on.									
 	db_ch_vista_02	EM_SAD		This is how it ought	to have been from	the beginning.									
 	db_ch_ginger	EM_WAT		..											
-		EM_SKIP								CHAR_GINGER	&anim_face_up				
+		EM_SKIP	ACT_WALK							CHAR_GINGER	&anim_face_up	{10,13}			
 	db_ch_vista_02	EM_SULLEN		My kingdom is over.	And I must make a	confession, child.				CHAR_VISTA_02	&anim_face_down				
 	db_ch_vista_02	EM_SAD	ACT_MUSIC_SORRY	I have been so	selfish to you,	my dear.									
 	db_ch_vista_02	EM_SULLEN		You have been able	to go home this	entire time.									
@@ -2701,7 +2719,7 @@ henry_02_true
 	db_ch_vista_02	EM_SULLEN		It was too late for	me, and it will soon	be too late for you.									
 	db_ch_ginger	EM_CONFUSED		..I see.		Human..?									
 	db_ch_jeremy	EM_HAPPY		I have a gift	for you.										
-				You give:	PANAGIA										
+			ACT_CLEAR_INVENTORY	You give:	PANAGIA										
 	db_ch_ginger	EM_WEEP		..	..										
 	db_ch_ginger	EM_SAD		I forgot how much	I've missed her.										
 		EM_SKIP								CHAR_GINGER	&ginger_fancy_hug				
@@ -2734,6 +2752,8 @@ final_04
 				And so you take the	train home.										
 				The other humans are	none the wiser, but	everything is new.									
 				And so it goes..											
+				GLASS EYES											
+				Thank you	for playing!	- Cinemint									
 		EM_SKIP	ACT_PROGRESS							ENDING_04_PART_00					
 															
 constance_castle															
@@ -2793,3 +2813,12 @@ estate_sign
 															
 train_talk															
 				The lady behind the	desk is fast asleep.										
+															
+tv_time															
+				It's not TV time	right now.										
+															
+gameover_01															
+			ACT_MUSIC_SORRY	The future of this	cursed world	depends on you!									bg_gameover
+				You cannot give up	just yet..										bg_gameover
+				Keep your eyes open!											bg_gameover
+		EM_SKIP	ACT_HARD_RESET												

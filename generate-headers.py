@@ -83,10 +83,8 @@ if "items" in data:
         name = item.upper().replace(" ", "_")
         text_h_data += "\tOBJ_" + name + ",\n"
 
-        if "drop" in data["items"].keys():
-            h_drop += (
-                "\t" + ("true" if data["items"][item]["drop"] else "false") + ",\n"
-            )
+        if "drop" in data["items"][item].keys():
+            h_drop += "\ttrue,\n"
         else:
             h_drop += "\tfalse,\n"
 

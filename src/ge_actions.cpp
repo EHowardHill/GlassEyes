@@ -99,7 +99,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         break;
                     }
 
-                    case CHAT_SNEAKER:
+                    case 112:
                     {
                         if (global_data_ptr->action_iterations[CHAT_SNEAKER] > 0)
                         {
@@ -443,7 +443,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                             global_data_ptr->items[OBJ_SOUP] = false;
                             ch_man->load(&boutique_01b);
                         }
-                        else if (global_data_ptr->variables[BEAR_DEFEAT] == true)
+                        else if (global_data_ptr->variables[BEAR_DEFEAT] == false)
                         {
                             ch_man->load(&boutique_01);
                         }

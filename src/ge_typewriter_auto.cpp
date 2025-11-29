@@ -82,7 +82,6 @@ const music_item *resolve_typewriter_music(int scene)
 	case TYPEWRITER_MSG: {return nullptr; break; }
 	case TYPEWRITER_NEW_BERLIN: {return nullptr; break; }
 	case TYPEWRITER_DOG_AND_PONY: {return &music_items::z02_the_champ; break; }
-	case TYPEWRITER_GAME_OVER: {return &music_items::intro; break; }
 	case TYPEWRITER_CCUTSCENE_01: {return &music_items::cave_01; break; }
 	case TYPEWRITER_CCUTSCENE_02: {return &music_items::cave_01; break; }
 	case TYPEWRITER_CCUTSCENE_03: {return &music_items::ambient_heartbeat; break; }

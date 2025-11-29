@@ -523,12 +523,6 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 295:
-	{
-		if (global_data_ptr->action_iterations[295] == 1) { ch_man.load(&c09_tv); } else
-		{ };
-		break;
-	}
 	case 296:
 	{
 		if (global_data_ptr->action_iterations[296] == 1) { ch_man.load(&c09_bed); } else
@@ -770,6 +764,26 @@ int perform_action_interactive(int index, character_manager &ch_man)
 	case 373:
 	{
 		if (global_data_ptr->action_iterations[373] == 1) { ch_man.load(&estate_sign); } else
+		{ };
+		break;
+	}
+	case 374:
+	{
+		if (global_data_ptr->action_iterations[374] == 1) { ch_man.load(&train_talk); } else
+		{ };
+		break;
+	}
+	case 295:
+	{
+		if (global_data_ptr->action_iterations[295] == 1) { ch_man.load(&c09_tv); } else
+		if (global_data_ptr->action_iterations[295] == 2) { ch_man.load(&tv_time); } else
+		{ };
+		break;
+	}
+	case 375:
+	{
+		if (global_data_ptr->action_iterations[375] == 1) { ch_man.load(&dima_01); } else
+		if (global_data_ptr->action_iterations[375] == 2) { ch_man.load(&dima_02); } else
 		{ };
 		break;
 	}

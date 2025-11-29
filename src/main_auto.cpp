@@ -226,12 +226,6 @@ void resolve_chapter()
 		global_data_ptr->bg_track = &music_items::ambient_wind;
 		global_data_ptr->bg = nullptr;
 		break;		}
-	case ENDING_01_PART_00: {
-		global_data_ptr->entry_map = &map_lab_final;
-		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {9, 15};
-		break;		}
 	case ENDING_01_PART_01: {
 		typewriter(TYPEWRITER_ENDING_01_CUTSCENE_01);
 		global_data_ptr->entry_map = &map_lab_cutscene_01;
@@ -258,6 +252,16 @@ void resolve_chapter()
 		typewriter(TYPEWRITER_ENDING_04_CUTSCENE_01);
 		global_data_ptr->entry_map = &map_sans;
 		global_data_ptr->bg_track = &music_items::theme_sans;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {0, 0};
+		break;		}
+	case GAME_OVER: {
+		typewriter(TYPEWRITER_GAME_OVER);
+		global_data_ptr->bg = nullptr;
+		break;		}
+	case ENDING_01_PART_00: {
+		global_data_ptr->entry_map = &map_lab_cutscene_01;
+		global_data_ptr->bg_track = &music_items::ambient_wind;
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {0, 0};
 		break;		}

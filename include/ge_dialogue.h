@@ -73,6 +73,7 @@ typedef const dialogue_line conversation[128];
 #include "bn_regular_bg_items_scene_03_03.h"
 #include "bn_regular_bg_items_scene_03_01.h"
 #include "bn_regular_bg_items_scene_03_02.h"
+#include "bn_regular_bg_items_bg_gameover.h"
 
 // Forward declarations for conversations
 extern const conversation ack_01;
@@ -231,6 +232,7 @@ extern const conversation forest_dlg_paper;
 extern const conversation forest_dlg_sign_01;
 extern const conversation forest_dlg_sign_02;
 extern const conversation forest_dlg_sign_02_alt_01;
+extern const conversation gameover_01;
 extern const conversation garbage_01;
 extern const conversation garbage_01_alt_01;
 extern const conversation garbage_02;
@@ -406,6 +408,7 @@ extern const conversation train_mirror;
 extern const conversation train_sebellus;
 extern const conversation train_talk;
 extern const conversation tunnel_01;
+extern const conversation tv_time;
 extern const conversation visker_final;
 extern const conversation visker_final_alt_01;
 extern const conversation visker_h_01;

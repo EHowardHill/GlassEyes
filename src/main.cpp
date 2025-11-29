@@ -176,7 +176,7 @@ int main()
     if (TESTING == true)
     {
         global_data_ptr->process_stage = FINAL_CHAPTER;
-        global_data_ptr->items[OBJ_PANAGIA] = true;
+        // global_data_ptr->items[OBJ_PANAGIA] = true;
     }
     else
     {
@@ -201,6 +201,7 @@ int main()
     while (true)
     {
         global_data_ptr->inverted_controls = false;
+        v_sprite_ptr::clear_all();
 
         switch (value)
         {
@@ -227,22 +228,6 @@ int main()
         case KEYPAD:
         {
             value = game_numpad();
-            break;
-        }
-        case GAME_OVER:
-        {
-            music::stop();
-            music_items::intro.play(1);
-            typewriter(TYPEWRITER_GAME_OVER);
-            value = NEW_CHAPTER;
-            global_data_ptr->hp[0] = 20;
-            global_data_ptr->hp[1] = 20;
-            global_data_ptr->hp[2] = 20;
-            global_data_ptr->hp[3] = 20;
-            for (int t = 0; t < ACTIONS_SIZE; t++)
-            {
-                global_data_ptr->action_iterations[t] = 0;
-            }
             break;
         }
         default:

@@ -651,6 +651,15 @@ void dialogue_box::init(character_manager *ch_man)
             global_data_ptr->shake = false;
             break;
         }
+        case ACT_HP:
+        {
+            global_data_ptr->hp[0] += line.index;
+            if (global_data_ptr->hp[0] > 20)
+            {
+                global_data_ptr->hp[0] = 20;
+            }
+            break;
+        }
         case ACT_PROGRESS:
         {
             global_data_ptr->process_stage = line.index;
@@ -1308,6 +1317,7 @@ void items_box::close()
     active = false;
     box.reset();
     selector.reset();
+    gold.letters.clear();
 
     // Clear text lines
     for (int i = 0; i < 3; i++)

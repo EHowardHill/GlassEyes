@@ -41,6 +41,7 @@ void typewriter(int scene)
     int index = 0;
     int ticker = 0;
     int type = TYPE_IMG;
+    bool reset_after = false;
 
     switch (scene)
     {
@@ -104,15 +105,12 @@ void typewriter(int scene)
     }
     case TYPEWRITER_GAME_OVER:
     {
-        frame = regular_bg_items::bg_gameover.create_bg(0, 0);
         music::stop();
-        music_items::intro.play();
+        music_items::bg_sorry.play();
 
-        while (!keypad::a_pressed())
-        {
-            core::update();
-        }
-
+        current_conversation = &gameover_01;
+        type = TYPE_TEXT;
+        reset_after = true;
         break;
     }
     case TYPEWRITER_CCUTSCENE_01:
@@ -346,5 +344,10 @@ void typewriter(int scene)
         {
             core::update();
         }
+    }
+
+    if (reset_after)
+    {
+        core::reset();
     }
 }
