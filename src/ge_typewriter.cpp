@@ -208,6 +208,21 @@ void typewriter(int scene)
                 core::reset();
             }
 
+            if ((*current_conversation)[index].action == ACT_MUSIC_WIND)
+            {
+                if (music::playing_item().has_value())
+                {
+                    if (music::playing_item().value() != *&music_items::ambient_wind)
+                    {
+                        music_items::ambient_wind.play();
+                    }
+                }
+                else
+                {
+                    music_items::ambient_wind.play();
+                }
+            }
+
             const dialogue_line &current_line = (*current_conversation)[index];
 
             if (current_line.bg_item != nullptr)

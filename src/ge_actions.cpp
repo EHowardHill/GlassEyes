@@ -310,7 +310,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     }
                     case 364:
                     {
-                        if (global_data_ptr->items[OBJ_PANAGIA] == true)
+                        if (global_data_ptr->variables[HAVE_PANAGIA] == true)
                         {
                             ch_man->load(&death_02);
                         }
@@ -324,7 +324,7 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     {
                         if (global_data_ptr->variables[HENRY_TALK] == true)
                         {
-                            if (global_data_ptr->items[OBJ_PANAGIA] == true)
+                            if (global_data_ptr->variables[HAVE_PANAGIA] == true)
                             {
                                 ch_man->load(&henry_02_true);
                             }

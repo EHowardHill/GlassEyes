@@ -176,7 +176,7 @@ int main()
     if (TESTING == true)
     {
         global_data_ptr->process_stage = FINAL_CHAPTER;
-        // global_data_ptr->items[OBJ_PANAGIA] = true;
+        global_data_ptr->items[OBJ_PANAGIA] = true;
     }
     else
     {

@@ -265,6 +265,12 @@ void resolve_chapter()
 		global_data_ptr->bg = nullptr;
 		global_data_ptr->jeremy_position = {0, 0};
 		break;		}
+	case ENDING_00_PART_00: {
+		global_data_ptr->entry_map = &map_lab_final;
+		global_data_ptr->bg_track = &music_items::ambient_heartbeat;
+		global_data_ptr->bg = nullptr;
+		global_data_ptr->jeremy_position = {9, 15};
+		break;		}
 	default: { break; }
 	}
 }

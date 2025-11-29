@@ -44,6 +44,7 @@ enum progress
 	ENDING_04_PART_00,
 	GAME_OVER,
 	ENDING_01_PART_00,
+	ENDING_00_PART_00,
 };
 
 void resolve_chapter();

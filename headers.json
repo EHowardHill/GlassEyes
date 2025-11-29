@@ -1884,6 +1884,9 @@
                     "dima_01",
                     "dima_02"
                 ]
+            },
+            "376": {
+                "auto": "beach_sign"
             }
         },
         "automatic": {
@@ -4326,6 +4329,16 @@
                 "jeremy": [
                     0,
                     0
+                ]
+            }
+        },
+        "ENDING_00_PART_00": {
+            "map": "lab_final",
+            "bg_track": "ambient_heartbeat",
+            "positions": {
+                "jeremy": [
+                    9,
+                    15
                 ]
             }
         }

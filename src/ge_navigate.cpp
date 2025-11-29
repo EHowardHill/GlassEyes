@@ -204,6 +204,11 @@ int navigate_map()
     int fade_ticker = 0;
     unsigned int ticker = 0;
 
+    if (global_data_ptr->variables[HAVE_PANAGIA] == true && global_data_ptr->items[OBJ_PANAGIA] == false && global_data_ptr->entry_map == &map_lab_final)
+    {
+        global_data_ptr->items[OBJ_PANAGIA] = true;
+    }
+
     while (loop_value == CONTINUE && char_mgr.status == CONTINUE)
     {
         // FADE IN using ticker

@@ -742,7 +742,7 @@ scruffys_01
 	db_ch_greyfriar	EM_DEFAULT		I'll give you $10	if they're not.										
 															
 scruffys_01_alt_01															
-				"""B-Bet.."""	I feel..	An itch..									
+	db_ch_greyfriar			"""B-Bet.."""	I feel..	An itch..									
 															
 scruffys_02															
 	db_ch_jelly	EM_DEFAULT		And that's when I	said-..										
@@ -755,7 +755,7 @@ scruffys_02
 	db_ch_jelly	EM_HAPPY		Every mueto knows	how to get to	Canterbury.									
 	db_ch_jelly	EM_DEFAULT		That's why the	gods love us more.										
 	db_ch_ginger	EM_DEFAULT		I don't-											
-				What?	Did I	hear something?									
+	db_ch_jelly			What?	Did I	hear something?									
 															
 scruffys_02_alt_01															
 	db_ch_jelly	EM_DEFAULT		Hey, check out the	tollhouse on the	east side.									
@@ -1046,12 +1046,12 @@ item_168_alt_01
 	db_ch_ginger	EM_SIDE_EYE		Well that's kinda..	weird.										
 															
 talk_189															
-	db_ch_ginger	EM_HAPPY		Whoa.. It's so nice	in here!										
+	db_ch_ginger	EM_HAPPY		Whoa.. It's so nice	in here!					CHAR_GINGER	&anim_face_up				
 	db_ch_ginger	EM_SIDE_EYE		I'm a little	suspicious though..										
 	db_ch_ginger	EM_DEFAULT		Something doesn't	feel right.										
-	db_ch_sebellus	EM_DEFAULT		You can say that,	but that couch is	MINE.									
+	db_ch_sebellus	EM_DEFAULT	ACT_WALK	You can say that,	but that couch is	MINE.				CHAR_SEBELLUS	&anim_face_up	{7,10}			
 	db_ch_ginger	EM_SIDE_EYE		Very well..	I'll check out the	kitchen.									
-	db_ch_sebellus	EM_LAUGH		Hehe.. She likes the	kitchen because	she's a girl.									
+	db_ch_sebellus	EM_LAUGH		Hehe.. She likes the	kitchen because	she's a girl.				CHAR_SEBELLUS	&anim_face_down				
 	db_ch_ginger	EM_ANGRY		Sebellus!											
 	db_ch_sebellus	EM_SIDE_EYE		I wanted to clarify	for human because	I don't know if									
 	db_ch_sebellus	EM_SIDE_EYE		humans can tell	boys and girls	apart.									
@@ -1420,11 +1420,11 @@ boutique_02
 	db_ch_kathy	EM_HAPPY		Oh.. Thank you,	I was afraid it	would never leave.				CHAR_KATHY		{2,4}			
 	db_ch_ginger	EM_DEFAULT		..Where did it	come from?										
 	db_ch_kathy	EM_DEFAULT		We had a customer	who bartered it for	some clothes.									
-	db_ch_kathy	EM_SIDE_EYE		I really need to	stop doing that,	I'll get fired.									
-	db_ch_sebellus	EM_SIDE_EYE		Since you're already	at risk for getting	fired..									
+	db_ch_kathy	EM_HAPPY		I really need to	stop doing that,	I'll get fired.									
+	db_ch_sebellus	EM_DEFAULT		Since you're already	at risk for getting	fired..									
 	db_ch_sebellus	EM_SIDE_EYE		You wouldn't mind if	the three of us	asked for a favor?									
 	db_ch_sebellus	EM_DEFAULT		We're looking for	clothes and don't	have any money.									
-	db_ch_kathy	EM_SIDE_EYE		Uh.. Sure, I suppose	I can make something	work.									
+	db_ch_kathy	EM_HAPPY		Uh.. Sure, I suppose	I can make something	work.									
 			ACT_ITEM	You found:	TAILORED SUIT	Very classy.				OBJ_CLOTHES					
 															
 dima_01															
@@ -1615,8 +1615,7 @@ vista_bar
 	db_ch_vista_02	EM_SIDE_EYE		There is something I	do respect in you	humans.									
 	db_ch_vista_02	EM_SULLEN		You hate me. I	see your propaganda	quite often.									
 	db_ch_vista_02	EM_LAUGH		I deserve all of	your hatred.										
-	db_ch_vista_02	EM_SIDE_EYE		No.. Ginger told me	that you aren't from	New Berlin.									
-	db_ch_vista_02	EM_SIDE_EYE		You're from the	New World,	aren't you?									
+	db_ch_vista_02	EM_SIDE_EYE		Ginger told me	that you're from	New Berlin.									
 	db_ch_vista_02	EM_LAUGH		Haha.. You might not	even know who I am,	right?									
 	db_ch_vista_02	EM_SIDE_EYE		Forgive me.. I'm so	loose-lipped..										
 	db_ch_vista_02	EM_EXCITED		My daughter is fond	of you. Thank you	for protecting her.									
@@ -1687,7 +1686,6 @@ matt_01
 	db_ch_matt	EM_DEFAULT		WELCOME! I am the	A.I.RCHBISHOP of	CANTERBURY, Matthew!				CHAR_MATT	&matt_yay				
 	db_ch_matt	EM_DEFAULT		However, I get	"called ""Matt"" "	a TON.									
 	db_ch_matt	EM_DEFAULT		I'm sure you've seen	ads for my auto-	biography, yes?				CHAR_MATT	&matt_erm				
-		EM_SKIP	ACT_WALK							CHAR_JEREMY		{58,3}			
 		EM_SKIP								CHAR_MATT_POSTER_01	&poster_02				
 		EM_SKIP								CHAR_MATT_POSTER_02	&poster_02				
 	db_ch_matt	EM_DEFAULT	ACT_SFX_CLICK	"It's titled ""M.E."","	"or ""Mechanical"	"Episcopate"". Clever!"				CHAR_MATT	&matt_press				
@@ -1785,7 +1783,7 @@ death_01
 	db_ch_death			I see that you have	no sacrifice for me.										
 				You will be my	sacrifice, in time.										
 	db_ch_death			Let me get out	of your way,	then..									
-		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
+		EM_SKIP	ACT_PROGRESS							ENDING_00_PART_00					
 															
 death_02															
 	db_ch_death				You finally made it.										
@@ -1793,7 +1791,7 @@ death_02
 	db_ch_death			I see that you have	a sacrifice for me.										
 	db_ch_death			Show it to me.											
 				You present the	Panagia icon.										
-		EM_SKIP	ACT_PROGRESS							ENDING_01_PART_00					
+		EM_SKIP	ACT_PROGRESS							ENDING_00_PART_00					
 															
 henry_01															
 	db_ch_vista_02	EM_SULLEN		..Human?	What are you doing	in this place?									
@@ -1857,7 +1855,7 @@ henry_01
 henry_02															
 	db_ch_ginger	EM_SCARED	ACT_WALK	..						CHAR_JEREMY		{9,13}			
 	db_ch_ginger	EM_WEEP	ACT_WALK	..	..	..				CHAR_GINGER	&ginger_terror	{10,13}			
-	db_ch_ginger	EM_WEEP	ACT_TELEPORT	..	..	I have to go home.				CHAR_GINGER	&ginger_terror	{10,13}			
+	db_ch_ginger	EM_WEEP	ACT_WALK	..	..	I have to go home.				CHAR_GINGER	&ginger_terror	{10,13}			
 	db_ch_ginger	EM_SAD		I-I got my hands	on Henry's.. tool.	I know what it is.									
 	db_ch_ginger	EM_SAD		It pulls your soul	from your body.										
 	db_ch_ginger	EM_SAD		..He uses it when a	mueto doesn't	grow right.									
@@ -2051,7 +2049,7 @@ cutscene_01
 				Thank you.											scene_01_02
 				Please let me take	you to lunch.		COLOR_BLUE								scene_01_01
 				I appreciate the	simulated rainfall.	It's convincing.									scene_01_03
-				Do you know what	I miss most from the	New World?									scene_01_03
+				Do you know what	I miss most from	my childhood?									scene_01_03
 				The smell.	This rain doesn't	smell like anything.									scene_01_03
 				So, Dr. Erickson,	they say that at the	quantum level,	COLOR_BLUE								scene_01_03
 				Observation affects	reality. What do you	think of that?	COLOR_BLUE								scene_01_03
@@ -2080,7 +2078,7 @@ cutscene_02
 				There's nothing fun	for smart people	that's legal, right?	COLOR_BLUE								scene_02_00
 				I need you to sign	this non-disclosure	agreement first.									scene_02_00
 				Done.			COLOR_BLUE								scene_02_00
-				You know	why Old World cities	are enclosed, yes?									scene_02_02
+				You do know	why our cities	are enclosed, yes?									scene_02_02
 				Anxiety about the	impact of human	life on nature.	COLOR_BLUE								scene_02_02
 				Yes. It makes	everyone miserable.	And yet..									scene_02_02
 				There is no concern	about the impact of	wildlife.									scene_02_02
@@ -2092,10 +2090,10 @@ cutscene_02
 				I think that these	could repopulate	the forests.									scene_02_02
 				Their biology is	viable but there	are still issues.									scene_02_02
 				I can print them,	but I can't bring	them to life.									scene_02_02
-				Henry, before you	use my sigils, you	ought to know..	COLOR_BLUE								scene_02_01
+				Henry, before you	use my sigils, you	should know..	COLOR_BLUE								scene_02_01
 				They don't create	life. They just..	Move it around.	COLOR_BLUE								scene_02_01
 				That's fine. I	envision these with	human souls, as..									scene_02_01
-				I think you could	call them colonists	in a sense.									scene_02_01
+				Astronauts.	On a brave, new	planet to colonize.									scene_02_01
 				You do understand	what this will cost	you, Dr. Erickson?	COLOR_BLUE								scene_02_02
 			ACT_MUSIC_FADEOUT	Do I look like a man	who has anything	to lose?									scene_02_02
 															
@@ -2162,7 +2160,7 @@ cutscene_05
 	db_ch_ginger	EM_SIDE_EYE		..	I told you.. some	things.. a year ago.	COLOR_PURPLE								
 	db_ch_ginger	EM_SIDE_EYE		I told you that I	went to sleep and	woke up here.	COLOR_PURPLE								
 	db_ch_ginger			..That's.. not..	the whole truth,	Henry..	COLOR_PURPLE								
-	db_ch_henry	EM_SAD		What do you mean?											
+	db_ch_henry	EM_DEFAULT		What do you mean?											
 	db_ch_ginger	EM_EMBARRASSED		I did go to sleep..	but.. in my dreams..	I was visited.	COLOR_PURPLE								
 	db_ch_ginger	EM_EMBARRASSED		I don't know what it	was.. It was like an	angel, I think..	COLOR_PURPLE								
 	db_ch_ginger	EM_DEFAULT		It told me that I	could trade in my	life for a new one.	COLOR_PURPLE								
@@ -2323,7 +2321,7 @@ cutscene_07
 				Father can only make	so many new muetos	at a time.									
 															
 cutscene_07b															
-	db_ch_vista_02	EM_DISAPPOINTED		So.. Tell him that	what I want for my	birthday is an heir.				CHAR_VISTA_02	&vista_throne				
+	db_ch_vista_02	EM_DISAPPOINTED	ACT_MUSIC_GINGER	So.. Tell him that	what I want for my	birthday is an heir.				CHAR_VISTA_02	&vista_throne				
 	db_ch_vista_02	EM_DISAPPOINTED		"Not a ""child"" who"	will only last a	few years. An heir.									
 	db_ch_vista_02	EM_SAD		I know it's hard to	ask.. But I'm tired.	I'm so, so tired.									
 	db_ch_vista_02	EM_SAD		I want to wash my	hands of all this	spilt blood.									
@@ -2676,7 +2674,7 @@ homeless_01
 	db_ch_homeress			Would you mind..	staying here for a	little while?									
 															
 angel_01															
-	db_ch_angel			Do not be afraid.											
+	db_ch_angel		ACT_VARIABLE	Do not be afraid.				true		HAVE_PANAGIA					
 	db_ch_angel			You will soon	encounter death.										
 	db_ch_angel			Here is a gift,	to present when he	speaks to you.									
 	db_ch_angel			No matter what	happens, human,	remember this.									
@@ -2822,3 +2820,6 @@ gameover_01
 				You cannot give up	just yet..										bg_gameover
 				Keep your eyes open!											bg_gameover
 		EM_SKIP	ACT_HARD_RESET												
+															
+beach_sign															
+				WARNING:	No lifeguard	on duty									
