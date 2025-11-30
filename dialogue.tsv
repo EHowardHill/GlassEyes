@@ -1219,7 +1219,7 @@ bm_fridge
 chat_197															
 				You found:	SLICE OF PIE					CHAR_PIE	&elem_pie_take				
 				Huh.	Wonder how that	got there.									
-		EM_SKIP	ACT_ITEM												
+		EM_SKIP	ACT_ITEM							OBJ_PIE					
 															
 visker_final															
 	db_ch_visker	EM_DEFAULT	ACT_MUSIC_VISKER	HUMAN!	You're alive?!										

@@ -510,7 +510,7 @@ const conversation cave_sign_02 = {
 const conversation chat_197 = {
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "You found:", "SLICE OF PIE", "", 0, SIZE_DEFAULT, SP_DEFAULT, CHAR_PIE, &elem_pie_take, {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "Huh.", "Wonder how that", "got there.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
-    {0, nullptr, EM_SKIP, ACT_ITEM, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_SKIP, ACT_ITEM, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, OBJ_PIE, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
 const conversation chat_mcwebb = {
