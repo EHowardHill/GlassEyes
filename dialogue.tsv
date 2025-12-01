@@ -2407,7 +2407,7 @@ sans_01
 	db_ch_sans	EM_DEFAULT		it's just me, so you	could say that we've	only got a	COLOR_SANS								
 	db_ch_sans	EM_ANGRY		skeleton crew			COLOR_SANS								
 	db_ch_sans	EM_DEFAULT		oh, c'mon,	i know you've got a	funny bone in there	COLOR_SANS								
-		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_left	{7,6}			
+		EM_SKIP	ACT_WALK							CHAR_SANS		{2,6}			
 															
 sans_02															
 	db_ch_sans	EM_DEFAULT		here's a portrait	of the illustrious	"toby ""radiation"" fox"	COLOR_SANS								
@@ -2824,3 +2824,8 @@ gameover_01
 															
 beach_sign															
 				WARNING:	No lifeguard	on duty									
+															
+sans_01b															
+	db_ch_sans	EM_HAPPY		oh..	and one more thing.		COLOR_SANS								
+	db_ch_sans	EM_EXCITED		you're gonna have a	good time.		COLOR_SANS								
+		EM_SKIP								CHAR_SANS	&sans_left	{7,6}			

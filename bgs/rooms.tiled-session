@@ -3,10 +3,10 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/lab_05.tmx",
+    "activeFile": "",
     "expandedProjectPaths": [
-        "maps",
         ".",
+        "maps",
         "tilesets"
     ],
     "exportAsImage.includeBackgroundColor": true,
@@ -448,6 +448,14 @@
                 "y": 191.7408906882591
             }
         },
+        "maps/sans.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 201,
+                "y": 278.66666666666663
+            }
+        },
         "maps/shop_01.tmx": {
             "scale": 2,
             "selectedLayer": 1,
@@ -589,26 +597,21 @@
     "map.tileWidth": 32,
     "map.width": 12,
     "openFiles": [
-        "maps/lab_01.tmx",
-        "maps/lab_02.tmx",
-        "maps/lab_03.tmx",
-        "maps/lab_04.tmx",
-        "maps/lab_05.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/sans.tmx",
+        "maps/lab_05.tmx",
         "maps/lab_01.tmx",
         "maps/lab_02.tmx",
         "maps/lab_03.tmx",
         "maps/lab_04.tmx",
-        "maps/lab_05.tmx",
         "maps/lab_06.tmx",
         "maps/flayithro_01.tmx",
         "maps/flayithro_01_night.tmx",
         "maps/flayithro_02.tmx",
         "maps/forest_03.tmx",
-        "maps/forest_03_attack.tmx",
-        "maps/forest_02.tmx"
+        "maps/forest_03_attack.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
