@@ -1798,14 +1798,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 245:
-	{
-		global_data_ptr->entry_map = &map_train_room_03;
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {4, 6};
-		return NEW_MAP;
-		break;
-	}
 	case 248:
 	{
 		global_data_ptr->entry_map = &map_train_01;
@@ -2328,6 +2320,14 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[371] == 0) { ch_man.load(&dark_info); global_data_ptr->action_iterations[371] += 1; } else
 		{ };
+		break;
+	}
+	case 245:
+	{
+		global_data_ptr->entry_map = &map_train_room_03;
+		global_data_ptr->bg = &regular_bg_items::big_bg_forest_01;
+		global_data_ptr->jeremy_position = {4, 6};
+		return NEW_MAP;
 		break;
 	}
 	}

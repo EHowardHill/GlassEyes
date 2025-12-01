@@ -69,7 +69,6 @@ int navigate_map()
     }
 
     if (global_data_ptr->entry_map == &map_castle_ginger ||
-        global_data_ptr->entry_map == &map_castle_01 ||
         global_data_ptr->entry_map == &map_castle_02b ||
         global_data_ptr->entry_map == &map_castle_bonus ||
         global_data_ptr->entry_map == &map_castle_ginger_cutscene_01 ||

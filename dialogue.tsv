@@ -2283,7 +2283,8 @@ cutscene_08c
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_CANTERBURY					
 															
 cutscene_09															
-	db_ch_vista_02	EM_SULLEN	ACT_MUSIC_FADEOUT	G-Ginger, dear..	Now isn't the time	to be here..									
+	db_ch_vista_02	EM_SAD	ACT_MUSIC_FADEOUT	Nullus est locus..	..	Domui similis..									
+	db_ch_vista_02	EM_SULLEN		G-Ginger, dear..	Now isn't the time	to be here..									
 	db_ch_vista_02	EM_LAUGH		*hic* Mama is	consulting with the	spirits, you see..									
 	db_ch_vista_02	EM_SAD		I left my medicine..	for my head.. in the	secret garden..									
 	db_ch_vista_02	EM_SIDE_EYE		Do you remember our	secret room? The one	like the New World?									
@@ -2305,7 +2306,7 @@ cutscene_09b
 	db_ch_vista_02	EM_LAUGH		Drowning.. In a sea	of death.. But I	can't die..									
 	db_ch_vista_02	EM_SULLEN		It's all fake.. a	wicked parody of a	family..									
 	db_ch_vista_02	EM_SAD		You sweet thing,	you shouldn't be	here..									
-	db_ch_vista_02	EM_SAD	ACT_MUSIC_FADEOUT	I want to go home..	I want to go home..	..									
+	db_ch_vista_02	EM_SAD	ACT_MUSIC_FADEOUT	Domui similis..	Nullus est locus..	domui similis..									
 		EM_SKIP	ACT_PROGRESS							BLACK_TO_DEATH					
 															
 cutscene_07															

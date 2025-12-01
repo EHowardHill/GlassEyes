@@ -3290,17 +3290,6 @@
                     }
                 }
             },
-            "245": {
-                "new_map": {
-                    "map": "train_room_03",
-                    "positions": {
-                        "jeremy": [
-                            4,
-                            6
-                        ]
-                    }
-                }
-            },
             "248": {
                 "new_map": {
                     "map": "train_01",
@@ -3924,6 +3913,18 @@
                 "sequence": [
                     "dark_info"
                 ]
+            },
+            "245": {
+                "new_map": {
+                    "map": "train_room_03",
+                    "bg": "big_bg_forest_01",
+                    "positions": {
+                        "jeremy": [
+                            4,
+                            6
+                        ]
+                    }
+                }
             }
         }
     },
