@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "maps/train_01.tmx",
+    "activeFile": "maps/lab_05.tmx",
     "expandedProjectPaths": [
         "maps",
-        "tilesets",
-        "."
+        ".",
+        "tilesets"
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -68,40 +68,40 @@
             "scale": 1.6561383928571427,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 224.01509535683,
-                "y": 223.71318822023048
+                "x": 224.01509535683002,
+                "y": 151.55738257294968
             }
         },
         "maps/cave_02.tmx": {
-            "scale": 1.5,
+            "scale": 1,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 72,
-                "y": 852.3333333333333
+                "x": 585,
+                "y": 287
             }
         },
         "maps/cave_03.tmx": {
             "scale": 1,
-            "selectedLayer": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 486.5,
-                "y": 780
+                "x": 754,
+                "y": 323
             }
         },
         "maps/cave_04.tmx": {
-            "scale": 3,
+            "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 914.8333333333333,
-                "y": 894.6666666666666
+                "x": 483.99999999999994,
+                "y": 582.6666666666666
             }
         },
         "maps/cave_05.tmx": {
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 294.33333333333337,
-                "y": 216.66666666666666
+                "x": 355.99999999999994,
+                "y": 376.66666666666663
             }
         },
         "maps/cave_cowbemmie.tmx": {
@@ -194,26 +194,26 @@
         },
         "maps/flayithro_01.tmx": {
             "scale": 1,
-            "selectedLayer": 4,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 512.5,
-                "y": 576.5
+                "x": 565.5,
+                "y": 457
             }
         },
         "maps/flayithro_01_night.tmx": {
-            "scale": 0.33,
-            "selectedLayer": 3,
+            "scale": 1,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 418.18181818181813,
-                "y": 625.7575757575759
+                "x": 609.5,
+                "y": 556
             }
         },
         "maps/flayithro_02.tmx": {
             "scale": 1.09287109375,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 255.74836922527035,
-                "y": 255.74836922527032
+                "x": 203.59217228129748,
+                "y": 255.29085872576178
             }
         },
         "maps/flayithro_hotel_night.tmx": {
@@ -236,32 +236,32 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 2048.333333333333,
+                "x": 2048,
                 "y": 191.33333333333331
             }
         },
         "maps/forest_02.tmx": {
-            "scale": 2,
-            "selectedLayer": 1,
-            "viewCenter": {
-                "x": 448.25,
-                "y": 352
-            }
-        },
-        "maps/forest_03.tmx": {
-            "scale": 2,
-            "selectedLayer": 4,
-            "viewCenter": {
-                "x": 1926.75,
-                "y": 173
-            }
-        },
-        "maps/forest_03_attack.tmx": {
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1024.5,
+                "x": 325,
                 "y": 384
+            }
+        },
+        "maps/forest_03.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 339.33333333333326,
+                "y": 529.3333333333333
+            }
+        },
+        "maps/forest_03_attack.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 287.75,
+                "y": 469.5
             }
         },
         "maps/forest_04.tmx": {
@@ -332,24 +332,24 @@
             "scale": 0.75,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 151.33333333333331,
-                "y": 257.99999999999994
+                "x": 496.66666666666663,
+                "y": 270.66666666666663
             }
         },
         "maps/lab_02.tmx": {
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 256.33333333333337,
-                "y": 127.66666666666664
+                "x": 256.3333333333333,
+                "y": 128
             }
         },
         "maps/lab_03.tmx": {
             "scale": 1.9296875,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 64.00000000000003,
-                "y": 224.12955465587044
+                "x": 64.00000000000001,
+                "y": 223.87044534412954
             }
         },
         "maps/lab_04.tmx": {
@@ -357,15 +357,15 @@
             "selectedLayer": 2,
             "viewCenter": {
                 "x": 384.5,
-                "y": 384.5
+                "y": 384
             }
         },
         "maps/lab_05.tmx": {
-            "scale": 2.7015625,
-            "selectedLayer": 2,
+            "scale": 1.5,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 127.88895315211104,
-                "y": 160.09253903990745
+                "x": 120.33333333333334,
+                "y": 177.33333333333331
             }
         },
         "maps/lab_06.tmx": {
@@ -373,7 +373,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 127.88895315211104,
-                "y": 160.09253903990745
+                "y": 160.2776171197224
             }
         },
         "maps/lab_path.tmx": {
@@ -589,22 +589,26 @@
     "map.tileWidth": 32,
     "map.width": 12,
     "openFiles": [
-        "maps/train_01.tmx"
+        "maps/lab_01.tmx",
+        "maps/lab_02.tmx",
+        "maps/lab_03.tmx",
+        "maps/lab_04.tmx",
+        "maps/lab_05.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
-        "maps/train_01.tmx",
-        "maps/cave_03.tmx",
-        "maps/flayithro_soup.tmx",
-        "maps/shop_02.tmx",
-        "maps/church_01.tmx",
-        "maps/canter_01.tmx",
-        "maps/cave_04.tmx",
-        "maps/cave_05.tmx",
+        "maps/lab_01.tmx",
+        "maps/lab_02.tmx",
+        "maps/lab_03.tmx",
+        "maps/lab_04.tmx",
+        "maps/lab_05.tmx",
+        "maps/lab_06.tmx",
+        "maps/flayithro_01.tmx",
+        "maps/flayithro_01_night.tmx",
+        "maps/flayithro_02.tmx",
         "maps/forest_03.tmx",
-        "maps/forest_01.tmx",
-        "maps/forest_02.tmx",
-        "maps/forest_03_attack.tmx"
+        "maps/forest_03_attack.tmx",
+        "maps/forest_02.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
