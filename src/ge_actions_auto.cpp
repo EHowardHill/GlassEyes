@@ -2330,6 +2330,12 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
+	case 377:
+	{
+		if (global_data_ptr->action_iterations[377] == 0) { ch_man.load(&sans_01b); global_data_ptr->action_iterations[377] += 1; } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }

@@ -2827,5 +2827,5 @@ beach_sign
 															
 sans_01b															
 	db_ch_sans	EM_HAPPY		oh..	and one more thing.		COLOR_SANS								
-	db_ch_sans	EM_EXCITED		you're gonna have a	good time.		COLOR_SANS								
+	db_ch_sans	EM_ANGRY		you're gonna have a	good time.		COLOR_SANS								
 		EM_SKIP								CHAR_SANS	&sans_left	{7,6}			

@@ -345,6 +345,7 @@ extern const conversation new_berlin_sign;
 extern const conversation pipis_man;
 extern const conversation pringle_01;
 extern const conversation sans_01;
+extern const conversation sans_01b;
 extern const conversation sans_02;
 extern const conversation sans_03;
 extern const conversation sans_04;
