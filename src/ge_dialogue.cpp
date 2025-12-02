@@ -624,6 +624,11 @@ const conversation convo_obj_panagia = {
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "It is difficult to", "look away.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
+const conversation convo_obj_peanut = {
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "Could use salt.", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_HP, "You gained:", "1 HP", "", 0, SIZE_DEFAULT, SP_DEFAULT, 1, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
 const conversation convo_obj_photograph = {
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "It just seems to", "be a photo of", "himself.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
@@ -2486,6 +2491,11 @@ const conversation new_berlin_sign = {
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "Air comes in", "through the slit at", "the top.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "Most of the lower", "levels are destroyed", "because of the war.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "Humans who leave", "don't tend to make", "it back alive.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
+const conversation peanut_stand = {
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "PEANUT STAND", "", "HAVE A PEANUT", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_ITEM, "You found:", "A PEANUT", "", 0, SIZE_DEFAULT, SP_DEFAULT, OBJ_PEANUT, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
 const conversation pipis_man = {

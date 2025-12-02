@@ -2829,3 +2829,11 @@ sans_01b
 	db_ch_sans	EM_HAPPY		oh..	and one more thing.		COLOR_SANS								
 	db_ch_sans	EM_ANGRY		you're gonna have a	good time.		COLOR_SANS								
 		EM_SKIP								CHAR_SANS	&sans_left	{7,6}			
+															
+peanut_stand															
+				PEANUT STAND		HAVE A PEANUT									
+			ACT_ITEM	You found:	A PEANUT					OBJ_PEANUT					
+															
+convo_obj_peanut															
+				Could use salt.											
+			ACT_HP	You gained:	1 HP					1					

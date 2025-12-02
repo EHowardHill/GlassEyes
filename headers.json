@@ -1004,7 +1004,10 @@
         "Vodka": {
             "drop": true
         },
-        "Panagia": {}
+        "Panagia": {},
+        "Peanut": {
+            "drop": true
+        }
     },
     "objects": {
         "Vista": {},
@@ -1887,6 +1890,9 @@
             },
             "376": {
                 "auto": "beach_sign"
+            },
+            "378": {
+                "auto": "peanut_stand"
             }
         },
         "automatic": {

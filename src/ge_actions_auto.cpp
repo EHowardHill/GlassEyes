@@ -792,6 +792,11 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&beach_sign);
 		break;
 	}
+	case 378:
+	{
+		ch_man.load(&peanut_stand);
+		break;
+	}
 	}
 	return -1;
 }
