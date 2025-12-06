@@ -1428,7 +1428,7 @@ boutique_02
 			ACT_ITEM	You found:	TAILORED SUIT	Very classy.				OBJ_CLOTHES					
 															
 dima_01															
-	db_ch_dima	EM_DEFAULT		I just wanted lunch,	but the guy in there	is ridiculous.									
+	db_ch_dima	EM_DEFAULT		I just wanted lunch,	but the guy in there	is rediculous.									
 	db_ch_dima	EM_DEFAULT		Go ahead.	See what I mean.										
 															
 dima_02															
@@ -1696,7 +1696,7 @@ matt_01
 	db_ch_matt	EM_DEFAULT		unfortunately it's	not drugs.										
 	db_ch_matt	EM_DEFAULT		We don't really know	what it is, so if	you feel fine, uh..									
 	db_ch_matt	EM_DEFAULT		I recommend seeing a	doctor if you can.										
-	db_ch_matt	EM_DEFAULT		This is a travesty,	most of all because	zombies are broke.									
+	db_ch_matt	EM_DEFAULT		This is a travesty,	most all because	zombies are broke.									
 	db_ch_matt	EM_DEFAULT		How am I supposed	to pay the bills	with zombies?									
 	db_ch_matt	EM_DEFAULT		So I changed my	approach! I tried to	appeal to muetos!									
 	db_ch_matt	EM_DEFAULT		I put up Senatrix	idols thinking that	would get them in.									
@@ -1830,7 +1830,7 @@ henry_01
 	db_ch_sebellus	EM_DEFAULT		Goodbye, Ginger.		I love you so much.									
 	db_ch_henry	EM_DEFAULT		Very well.						CHAR_HENRY_MONSTER	&anim_face_right				
 	db_ch_henry	EM_DEFAULT	ACT_SFX_EXPLOSION	..						CHAR_SEBELLUS	&sebellus_death				
-	db_ch_vista_02	EM_SULLEN		That was entirely	unnecessary, Henry.					CHAR_GINGER	&ginger_terror				
+	db_ch_vista_02	EM_SULLEN		That was entirely	unnescessary, Henry.					CHAR_GINGER	&ginger_terror				
 	db_ch_henry	EM_DEFAULT		I will remake him if	I need to.					CHAR_HENRY_MONSTER		&anim_face_down			
 	db_ch_henry	EM_DEFAULT		You will not notice	he was ever gone.										
 	db_ch_ginger	EM_WEEP		I HATE YOU!!											

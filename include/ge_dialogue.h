@@ -118,6 +118,7 @@ extern const conversation broken_avalon_00;
 extern const conversation broken_avalon_01;
 extern const conversation broken_avalon_01_alt_01;
 extern const conversation broken_avalon_02;
+extern const conversation bug_gone;
 extern const conversation c09_bed;
 extern const conversation c09_books;
 extern const conversation c09_desk;

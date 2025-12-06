@@ -2341,6 +2341,12 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
+	case 379:
+	{
+		if (global_data_ptr->action_iterations[379] == 0) { ch_man.load(&bug_gone); global_data_ptr->action_iterations[379] += 1; } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
