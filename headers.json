@@ -3936,6 +3936,11 @@
                 "sequence": [
                     "sans_01b"
                 ]
+            },
+            "379": {
+                "sequence": [
+                    "bug_gone"
+                ]
             }
         }
     },
