@@ -335,6 +335,21 @@ int action_listener(map_manager *man, character_manager *ch_man)
                         }
                         break;
                     }
+                    case 380:
+                    {
+                        if (global_data_ptr->variables[BEAR_DEFEAT] == false)
+                        {
+                            global_data_ptr->entry_map = &map_flayithro_shop;
+                            global_data_ptr->bg_track = &music_items::shop;
+                            music::stop();
+                            global_data_ptr->bg = nullptr;
+                            global_data_ptr->jeremy_position = {2, 22};
+                            global_data_ptr->ginger_position = {1, 22};
+                            global_data_ptr->sebellus_position = {1, 21};
+                            return NEW_MAP;
+                        }
+                        break;
+                    }
                     default:
                     {
                         int ret = perform_action_automatic(action, *ch_man);
@@ -354,10 +369,10 @@ int action_listener(map_manager *man, character_manager *ch_man)
                     {
                     case 155:
                     {
-                        bool ready = (global_data_ptr->items[OBJ_FLINT] &&
-                                      global_data_ptr->items[OBJ_STEEL] &&
-                                      global_data_ptr->items[OBJ_STICKS] &&
-                                      global_data_ptr->items[OBJ_STONES]);
+                        bool ready = (global_data_ptr->items[OBJ_FLINT] == true &&
+                                      global_data_ptr->items[OBJ_STEEL] == true &&
+                                      global_data_ptr->items[OBJ_STICKS] == true &&
+                                      global_data_ptr->items[OBJ_STONES] == true);
 
                         if (!ready && global_data_ptr->action_iterations[155] < 16)
                         {
