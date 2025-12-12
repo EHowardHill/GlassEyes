@@ -1893,6 +1893,9 @@
             },
             "378": {
                 "auto": "peanut_stand"
+            },
+            "380": {
+                "auto": "lab_fridge"
             }
         },
         "automatic": {

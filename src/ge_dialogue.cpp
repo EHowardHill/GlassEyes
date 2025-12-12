@@ -2330,6 +2330,11 @@ const conversation lab_08 = {
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "They emptied", "out the lockers.", "Ugh.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
 
+const conversation lab_fridge = {
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "It's entirely full", "of energy drinks.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "You've never seen", "so many energy", "drinks in your life.", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
+    {0, nullptr, EM_DEFAULT, ACT_END, "", "", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)}};
+
 const conversation leaving_lab = {
     {0, &sprite_items::db_ch_ginger, EM_DEFAULT, ACT_DEFAULT, "You don't mind", "if I follow you,", "right?", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, static_cast<const conversation*>(nullptr), static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},
     {0, nullptr, EM_DEFAULT, ACT_DEFAULT, "You're fine.", "Yes I do mind.", "", 0, SIZE_DEFAULT, SP_DEFAULT, 0, static_cast<const animation*>(nullptr), {0, 0}, &leaving_lab_alt_01, static_cast<const conversation*>(nullptr), static_cast<const regular_bg_item*>(nullptr)},

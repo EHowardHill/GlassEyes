@@ -326,6 +326,7 @@ extern const conversation lab_05_alt_03;
 extern const conversation lab_06;
 extern const conversation lab_07;
 extern const conversation lab_08;
+extern const conversation lab_fridge;
 extern const conversation leaving_lab;
 extern const conversation leaving_lab_alt_01;
 extern const conversation leaving_lab_alt_02;
