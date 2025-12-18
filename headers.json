@@ -408,6 +408,13 @@
                 ],
                 "speed": 1,
                 "loop": false
+            },
+            "cutscene_01": {
+                "frames": [
+                    9
+                ],
+                "speed": 0,
+                "loop": false
             }
         },
         "sebellus": {
@@ -503,6 +510,13 @@
             "back_up": {
                 "frames": [
                     10
+                ],
+                "speed": 0,
+                "loop": false
+            },
+            "cutscene_01": {
+                "frames": [
+                    11
                 ],
                 "speed": 0,
                 "loop": false
@@ -1129,7 +1143,8 @@
         "Skellybeans": {},
         "Homeress": {},
         "Angel": {},
-        "Gun": {}
+        "Gun": {},
+        "Dish": {}
     },
     "cutscenes": {
         "Intro": {
@@ -1896,6 +1911,11 @@
             },
             "380": {
                 "auto": "lab_fridge"
+            },
+            "384": {
+                "sequence": [
+                    "lab_fridge"
+                ]
             }
         },
         "automatic": {
@@ -3944,6 +3964,21 @@
                 "sequence": [
                     "bug_gone"
                 ]
+            },
+            "381": {
+                "sequence": [
+                    "ginger_wary"
+                ]
+            },
+            "382": {
+                "sequence": [
+                    "ginger_wary_2"
+                ]
+            },
+            "383": {
+                "sequence": [
+                    "final_confront"
+                ]
             }
         }
     },
@@ -4324,11 +4359,15 @@
             }
         },
         "ENDING_04_PART_00": {
-            "map": "sans",
-            "bg_track": "theme_sans",
+            "map": "castle_ginger_cutscene_02",
+            "bg_track": "theme_anata",
             "cutscenes": [
                 "ending_04_cutscene_01"
-            ],
+            ]
+        },
+        "ENDING_04_PART_01": {
+            "map": "sans",
+            "bg_track": "theme_sans",
             "positions": {
                 "jeremy": [
                     0,

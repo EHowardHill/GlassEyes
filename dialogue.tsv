@@ -831,6 +831,13 @@ captive_01
 	db_ch_ginger	EM_SAD		I-I tried to fight,	but he was	stronger, and-									
 	db_ch_ginger	EM_SAD		I-I think he	knocked us out and	dragged us here!									
 	db_ch_ginger	EM_WAT		We've gotta	get out!!										
+	db_ch_ginger	EM_WAT		..											
+	db_ch_ginger	EM_WAT		H-He..	H-He stole my..										
+	db_ch_ginger	EM_WEEP		..											
+	db_ch_ginger	EM_SAD		..											
+	db_ch_ginger	EM_SAD		..I-I'll be fine..	Just.. If you see a	painting..									
+	db_ch_ginger	EM_SAD		It's small, it has a	woman and a child	on it.. just..									
+	db_ch_ginger	EM_SAD		P-Please let me	know.										
 															
 scruffys_06															
 	db_ch_robin	EM_DEFAULT		I'm sorry, we	haven't gotten any	shipments in									
@@ -874,7 +881,10 @@ togore_01
 	db_ch_ginger	EM_SIDE_EYE		I can't stand seeing	kids in pain like	this.									
 	db_ch_togore	EM_DEFAULT		Thereth juith.	And snacks.	And my toyths.									
 	db_ch_togore	EM_DEFAULT		I'll standth on the	button to let you	guysth out.									
-	db_ch_ginger	EM_SAD		Okay..	If you insist..										
+	db_ch_ginger	EM_SAD		Okay..	If you insist.										
+	db_ch_ginger	EM_SAD		Have you seen a	small painting? It	had humans on it.									
+	db_ch_togore	EM_DEFAULT		Uh..		No.									
+	db_ch_ginger	EM_SAD		Okay..	I understand.										
 		EM_SKIP	ACT_WALK							CHAR_TOGORE		{8, 6}			
 															
 broken_avalon_00															
@@ -1015,7 +1025,8 @@ sebellus_01
 	db_ch_ginger	EM_DEFAULT		..No I don't.											
 	db_ch_ginger	EM_SIDE_EYE		This is Sebellus,	he's my older	brother.									
 	db_ch_ginger	EM_DEFAULT		I'm not sure how	he got all the way	out here.									
-	db_ch_sebellus	EM_DEFAULT		How *I* got out	here, how did YOU	get out here?									
+	db_ch_ginger	EM_ANGRY		Wait.. HAVE YOU BEEN	FOLLOWING US THIS	WHOLE TIME??									
+	db_ch_sebellus	EM_DEFAULT		Yeah!											
 	db_ch_sebellus	EM_DEFAULT		They are so	worried about you	back home!									
 	db_ch_ginger	EM_SAD		I know.			COLOR_PURPLE								
 	db_ch_sebellus	EM_DEFAULT		Did, the, uh,	human kidnap you?	Do I need to kill-									
@@ -2848,3 +2859,54 @@ bug_gone
 lab_fridge															
 				It's entirely full	of energy drinks.										
 				You've never seen	so many energy	drinks in your life.									
+															
+ginger_wary															
+	db_ch_ginger	EM_SIDE_EYE	ACT_SFX_FIRE	Did you hear that?											
+	db_ch_ginger	EM_SIDE_EYE		..											
+	db_ch_ginger	EM_LAUGH		I'm sorry, must have	been the wind.	Silly me.									
+															
+ginger_wary_2															
+	db_ch_ginger	EM_SIDE_EYE		Okay.. I'm a	little spooked now.										
+	db_ch_ginger	EM_DEFAULT		Someone is	definitely following	us.									
+															
+final_confront															
+		EM_SKIP								CHAR_GINGER	&ginger_cutscene_01				
+	db_ch_sebellus	EM_DEFAULT		Hey.. Greenie?	You awake?					CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_SIDE_EYE		I know you're being	grounded and I'm not	supposed to come in.				CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_HAPPY		Mom felt bad about	you having no dinner	though,				CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_DEFAULT		She said I could get	you a snack so I	stuffed this plate.				CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_EXCITED		It's got limes, fish	and all that gross	stuff you like!				CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_DEFAULT		I even put some	catnip on there, I	know it makes you,				CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_DEFAULT		uh, well,	you seemed like you	were having fun.				CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_SIDE_EYE		..						CHAR_SEBELLUS	&anim_face_right				
+	db_ch_sebellus	EM_DEFAULT		Look.. Ginger,	I know you probably	don't want to talk.				CHAR_SEBELLUS	&sebellus_cutscene_01				
+	db_ch_sebellus	EM_DEFAULT		I don't know why	you wanted to run	away last night.									
+	db_ch_sebellus	EM_HAPPY		If you don't want to	tell me, then I	don't want to know.									
+	db_ch_sebellus	EM_SIDE_EYE		..I *am* curious how	it is out there. I'd	love to see it all.									
+	db_ch_sebellus	EM_DEFAULT		And, uh.. I don't	know what mom	told you, either.									
+	db_ch_sebellus	EM_DEFAULT		I know you two have	a special bond and	it's not my place.									
+	db_ch_sebellus	EM_DEFAULT		But.. I love you	anyways, and if it's	best for you to go,									
+	db_ch_sebellus	EM_HAPPY		Then I understand.											
+	db_ch_sebellus	EM_DEFAULT		I know I don't have	long in this world.										
+	db_ch_sebellus	EM_DEFAULT		But I'd give up the	rest of my time to	make you happy.									
+	db_ch_sebellus	EM_DEFAULT		It's probably best	that I leave you be,	yes?				CHAR_SEBELLUS	&anim_face_down				
+	db_ch_ginger	EM_SAD	ACT_WALK	Sebellus..						CHAR_SEBELLUS		{3,4}			
+	db_ch_ginger	EM_SULLEN		Why do you love	me so much?										
+	db_ch_ginger	EM_DISAPPOINTED		What did I ever	do for you?										
+	db_ch_sebellus	EM_DEFAULT		Why would you have	to do something	for me?									
+	db_ch_ginger	EM_SAD		Mom said that you	can see how people	will die.									
+	db_ch_ginger	EM_DEFAULT		Is that true?											
+	db_ch_sebellus	EM_DEFAULT		Yes.											
+	db_ch_ginger	EM_SAD		Do you know how	I'll die someday?										
+	db_ch_sebellus	EM_DEFAULT		I do.											
+	db_ch_ginger	EM_SULLEN		I want to know.											
+	db_ch_sebellus	EM_HAPPY		Okay, but then you	have to tell me how	it is out there.				CHAR_SEBELLUS	&anim_face_right				
+	db_ch_ginger	EM_SULLEN		Deal.											
+	db_ch_sebellus	EM_DEFAULT		You die old and	surrounded by people	you love.									
+	db_ch_ginger	EM_SAD		Are you there?											
+	db_ch_sebellus	EM_DEFAULT		No.											
+	db_ch_sebellus	EM_HAPPY		But I also die	surrounded by people	I love.									
+	db_ch_sebellus	EM_DEFAULT		And you're there.											
+	db_ch_ginger	EM_WEEP		..	I love you,	Sebellus.									
+	db_ch_sebellus	EM_DEFAULT		I love you too,	Greenie.										
+		EM_SKIP	ACT_PROGRESS							ENDING_04_PART_01					

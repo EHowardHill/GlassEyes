@@ -3,11 +3,11 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "maps/lab_02.tmx",
     "expandedProjectPaths": [
         ".",
-        "maps",
-        "tilesets"
+        "tilesets",
+        "maps"
     ],
     "exportAsImage.includeBackgroundColor": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -62,6 +62,14 @@
             "viewCenter": {
                 "x": 615.3333333333333,
                 "y": 740.6666666666665
+            }
+        },
+        "maps/castle_ginger_cutscene_02.tmx": {
+            "scale": 1.1472098214285715,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 153.8515419787917,
+                "y": 176.07938515419784
             }
         },
         "maps/cave_01.tmx": {
@@ -236,15 +244,15 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 2048,
+                "x": 3220.333333333333,
                 "y": 191.33333333333331
             }
         },
         "maps/forest_02.tmx": {
             "scale": 1,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 325,
+                "x": 415.5,
                 "y": 384
             }
         },
@@ -340,7 +348,7 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 256.3333333333333,
+                "x": 441,
                 "y": 128
             }
         },
@@ -597,21 +605,23 @@
     "map.tileWidth": 32,
     "map.width": 12,
     "openFiles": [
+        "maps/castle_ginger_cutscene_02.tmx",
+        "maps/lab_02.tmx"
     ],
     "project": "rooms.tiled-project",
     "recentFiles": [
+        "maps/castle_ginger_cutscene_02.tmx",
+        "maps/lab_02.tmx",
+        "maps/forest_01.tmx",
+        "maps/forest_02.tmx",
         "maps/sans.tmx",
         "maps/lab_05.tmx",
         "maps/lab_01.tmx",
-        "maps/lab_02.tmx",
         "maps/lab_03.tmx",
         "maps/lab_04.tmx",
         "maps/lab_06.tmx",
         "maps/flayithro_01.tmx",
-        "maps/flayithro_01_night.tmx",
-        "maps/flayithro_02.tmx",
-        "maps/forest_03.tmx",
-        "maps/forest_03_attack.tmx"
+        "maps/flayithro_01_night.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

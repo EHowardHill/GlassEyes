@@ -802,6 +802,12 @@ int perform_action_interactive(int index, character_manager &ch_man)
 		ch_man.load(&lab_fridge);
 		break;
 	}
+	case 384:
+	{
+		if (global_data_ptr->action_iterations[384] == 1) { ch_man.load(&lab_fridge); } else
+		{ };
+		break;
+	}
 	}
 	return -1;
 }
@@ -2349,6 +2355,24 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	case 379:
 	{
 		if (global_data_ptr->action_iterations[379] == 0) { ch_man.load(&bug_gone); global_data_ptr->action_iterations[379] += 1; } else
+		{ };
+		break;
+	}
+	case 381:
+	{
+		if (global_data_ptr->action_iterations[381] == 0) { ch_man.load(&ginger_wary); global_data_ptr->action_iterations[381] += 1; } else
+		{ };
+		break;
+	}
+	case 382:
+	{
+		if (global_data_ptr->action_iterations[382] == 0) { ch_man.load(&ginger_wary_2); global_data_ptr->action_iterations[382] += 1; } else
+		{ };
+		break;
+	}
+	case 383:
+	{
+		if (global_data_ptr->action_iterations[383] == 0) { ch_man.load(&final_confront); global_data_ptr->action_iterations[383] += 1; } else
 		{ };
 		break;
 	}

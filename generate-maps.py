@@ -2,7 +2,8 @@ import os
 import xml.etree.ElementTree as ET
 from PIL import Image
 import math
-import json  # Add this import
+import json
+import hashlib
 
 # Define the magic pink color for transparency
 TRANSPARENT_PINK = (255, 0, 255)
@@ -228,13 +229,13 @@ def create_tiled_bmp(png_path, output_path, grid_size, tile_indices, sprite_size
     # This flattens the image, preserving the pink background.
     output_image.convert("RGB").save(output_path, "BMP")
 
-
 map_dir = os.path.join("bgs", "maps")
 maps = os.listdir(map_dir)
 
 map_data = {}
-full_headers = []
-map_names = []  # Track all map names for header generation
+header_includes = set() # Changed to a set to handle duplicates automatically
+map_names = []  
+image_registry = {} # Stores hash -> {name, width, height}
 
 # Single header template that includes everything
 header_template = """// Auto-Generated Map Header
@@ -252,6 +253,8 @@ $definitions
 """
 
 for map in maps:
+    if not map.endswith(".tmx"):
+        continue
 
     with open(os.path.join(map_dir, map), "r") as f:
         xml_data = f.read()
@@ -260,7 +263,7 @@ for map in maps:
 
     map_name = map.replace(".tmx", "")
     map_data[map_name] = {"name": map_name}
-    map_names.append(map_name)  # Store map name for header generation
+    map_names.append(map_name)
 
     tileset = root.findall(".//tileset")[0].attrib["source"].replace("..", "bgs")
     with open(tileset, "r") as f:
@@ -272,16 +275,10 @@ for map in maps:
 
     try:
         lbl_blue = (
-            int(
-                root.find(".//tileset[@source='../tilesets/blue-labels.tsx']").attrib[
-                    "firstgid"
-                ]
-            )
-            - 1
+            int(root.find(".//tileset[@source='../tilesets/blue-labels.tsx']").attrib["firstgid"]) - 1
         )
     except:
-        print(map)
-        print("blue missing")
+        print(f"Error: Blue labels missing in {map}")
         exit(1)
 
     # Find all layer elements
@@ -313,29 +310,61 @@ for map in maps:
                 ]
             )
 
+    # Create the temporary BMP for this map
+    temp_bmp_path = "background_maps/" + map_name + ".bmp"
     create_tiled_bmp(
         tileset_path,
-        "background_maps/" + map_name + ".bmp",
+        temp_bmp_path,
         [width, height],
         tile_basis,
         sprite_size=32,
     )
 
-    process_bmp(
-        "background_maps/" + map_name + ".bmp",
-        "graphics/map_" + map_name + ".bmp",
-    )
+    # Calculate Hash of the raw tiled image
+    with open(temp_bmp_path, "rb") as f:
+        img_bytes = f.read()
+        img_hash = hashlib.md5(img_bytes).hexdigest()
 
-    with open("graphics/map_" + map_name + ".json", "w") as f:
-        f.write('{"type": "regular_bg"}')
+    # Deduplication Logic
+    if img_hash in image_registry:
+        # We have seen this image before!
+        source_info = image_registry[img_hash]
+        graphics_name = source_info['name']
+        
+        map_data[map_name]["raw_width"] = source_info['width']
+        map_data[map_name]["raw_height"] = source_info['height']
+        map_data[map_name]["graphics_name"] = graphics_name
+        
+        print(f"Skipping image gen for {map_name} (Duplicate of {graphics_name})")
+    else:
+        # New image
+        graphics_name = map_name
+        
+        process_bmp(
+            temp_bmp_path,
+            "graphics/map_" + map_name + ".bmp",
+        )
 
-    img = Image.open("graphics/map_" + map_name + ".bmp")
-    raw_width, raw_height = img.size
+        with open("graphics/map_" + map_name + ".json", "w") as f:
+            f.write('{"type": "regular_bg"}')
 
-    map_data[map_name]["raw_width"] = raw_width
-    map_data[map_name]["raw_height"] = raw_height
+        # Get final dimensions
+        img = Image.open("graphics/map_" + map_name + ".bmp")
+        raw_width, raw_height = img.size
+        
+        map_data[map_name]["raw_width"] = raw_width
+        map_data[map_name]["raw_height"] = raw_height
+        map_data[map_name]["graphics_name"] = graphics_name
+        
+        # Add to registry
+        image_registry[img_hash] = {
+            'name': map_name,
+            'width': raw_width,
+            'height': raw_height
+        }
+        print(f"Created graphics for {map_name}")
 
-# Template for inline constexpr definitions
+# Template updated to use $graphics_name
 template = """
 inline constexpr map map_$name = {
     {$width, $height},
@@ -352,30 +381,37 @@ inline constexpr map map_$name = {
     {
     $characters
     },
-    &bn::regular_bg_items::map_$name};
+    &bn::regular_bg_items::map_$graphics_name};
 """
 
 full_data = []
-for key in map_data.keys():
-    map = map_data[key]
-    print(f'> updated "{key}"')
+sorted_keys = sorted(map_data.keys()) # Sort for consistent output
 
-    if "metadata" not in map.keys():
-        map["metadata"] = ""
+for key in sorted_keys:
+    map_info = map_data[key]
+    print(f'> linking "{key}" -> graphics: "{map_info["graphics_name"]}"')
+
+    if "metadata" not in map_info.keys():
+        map_info["metadata"] = ""
 
     new_entry = template
-    for elem in map.keys():
-        new_entry = new_entry.replace("$" + elem, str(map[elem]))
+    for elem in map_info.keys():
+        new_entry = new_entry.replace("$" + elem, str(map_info[elem]))
 
     full_data.append(new_entry)
-    full_headers.append('#include "bn_regular_bg_items_map_' + key + '.h"')
+    
+    # Add to set (handles duplicates automatically)
+    header_includes.add('#include "bn_regular_bg_items_map_' + map_info["graphics_name"] + '.h"')
 
-# Generate only the header file with all definitions
+# Generate header file
 includes_dir = "include"
+
+# Sort includes for stable file generation
+sorted_includes = sorted(list(header_includes))
 
 with open(os.path.join(includes_dir, "ge_map_data.h"), "w") as f:
     f.write(
-        header_template.replace("$includes", "\n".join(full_headers)).replace(
+        header_template.replace("$includes", "\n".join(sorted_includes)).replace(
             "$definitions", "\n".join(full_data)
         )
     )

@@ -86,6 +86,7 @@
 #include "bn_sprite_items_spr_homeress.h"
 #include "bn_sprite_items_spr_angel.h"
 #include "bn_sprite_items_spr_gun.h"
+#include "bn_sprite_items_spr_dish.h"
 
 using namespace bn;
 
@@ -175,6 +176,7 @@ const sprite_item *resolve_sprite_item(int character)
 	case CHAR_HOMERESS: { return &sprite_items::spr_homeress; break; }
 	case CHAR_ANGEL: { return &sprite_items::spr_angel; break; }
 	case CHAR_GUN: { return &sprite_items::spr_gun; break; }
+	case CHAR_DISH: { return &sprite_items::spr_dish; break; }
     default:
     {
         return &sprite_items::spr_vista;

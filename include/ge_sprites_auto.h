@@ -89,6 +89,7 @@ enum character_list
 	CHAR_HOMERESS,
 	CHAR_ANGEL,
 	CHAR_GUN,
+	CHAR_DISH,
 	CHAR_SIZE,
 	CHAR_TYPEWRITER
 };
