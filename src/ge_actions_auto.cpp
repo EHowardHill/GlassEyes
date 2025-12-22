@@ -1871,13 +1871,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		return NEW_MAP;
 		break;
 	}
-	case 262:
-	{
-		music_items::bg_hotel.play();
-		if (global_data_ptr->action_iterations[262] == 0) { ch_man.load(&matt_01); global_data_ptr->action_iterations[262] += 1; } else
-		{ };
-		break;
-	}
 	case 264:
 	{
 		if (global_data_ptr->action_iterations[264] == 0) { ch_man.load(&k_door_01); global_data_ptr->action_iterations[264] += 1; } else
@@ -2036,13 +2029,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 		{ };
 		break;
 	}
-	case 258:
-	{
-		music_items::intro.play();
-		if (global_data_ptr->action_iterations[258] == 0) { ch_man.load(&canter_01); global_data_ptr->action_iterations[258] += 1; } else
-		{ };
-		break;
-	}
 	case 26:
 	{
 		if (global_data_ptr->action_iterations[26] == 0) { ch_man.load(&garbage_06); global_data_ptr->action_iterations[26] += 1; } else
@@ -2098,16 +2084,6 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[81] == 0) { ch_man.load(&avalon_01); global_data_ptr->action_iterations[81] += 1; } else
 		{ };
-		break;
-	}
-	case 332:
-	{
-		global_data_ptr->entry_map = &map_canter_01;
-		global_data_ptr->bg_track = &music_items::bg_canter_02;
-		music::stop();
-		global_data_ptr->bg = nullptr;
-		global_data_ptr->jeremy_position = {2, 20};
-		return NEW_MAP;
 		break;
 	}
 	case 48:
@@ -2374,6 +2350,28 @@ int perform_action_automatic(int index, character_manager &ch_man)
 	{
 		if (global_data_ptr->action_iterations[383] == 0) { ch_man.load(&final_confront); global_data_ptr->action_iterations[383] += 1; } else
 		{ };
+		break;
+	}
+	case 262:
+	{
+		if (global_data_ptr->action_iterations[262] == 0) { ch_man.load(&matt_01); global_data_ptr->action_iterations[262] += 1; } else
+		{ };
+		break;
+	}
+	case 258:
+	{
+		if (global_data_ptr->action_iterations[258] == 0) { ch_man.load(&canter_01); global_data_ptr->action_iterations[258] += 1; } else
+		{ };
+		break;
+	}
+	case 332:
+	{
+		global_data_ptr->entry_map = &map_canter_01;
+		global_data_ptr->bg_track = &music_items::bg_canter_02;
+		music::stop();
+		global_data_ptr->bg = &regular_bg_items::big_bg_city_01;
+		global_data_ptr->jeremy_position = {2, 20};
+		return NEW_MAP;
 		break;
 	}
 	}

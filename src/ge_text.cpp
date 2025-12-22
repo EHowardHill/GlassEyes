@@ -578,6 +578,18 @@ void dialogue_box::init(character_manager *ch_man)
             music_items::theme_sans.play(0.75);
             break;
         }
+        case ACT_MUSIC_HOTEL:
+        {
+            ch_man->music_fadeout = false;
+            music_items::bg_hotel.play(0.75);
+            break;
+        }
+        case ACT_MUSIC_INTRO:
+        {
+            ch_man->music_fadeout = false;
+            music_items::intro.play(0.75);
+            break;
+        }
         case ACT_MUSIC_WIND:
         {
             ch_man->music_fadeout = false;

@@ -3394,12 +3394,6 @@
                     }
                 }
             },
-            "262": {
-                "sequence": [
-                    "matt_01"
-                ],
-                "music": "bg_hotel"
-            },
             "264": {
                 "sequence": [
                     "k_door_01"
@@ -3569,12 +3563,6 @@
                     "sans_05"
                 ]
             },
-            "258": {
-                "sequence": [
-                    "canter_01"
-                ],
-                "music": "intro"
-            },
             "26": {
                 "sequence": [
                     "garbage_06",
@@ -3663,18 +3651,6 @@
                 "sequence": [
                     "avalon_01"
                 ]
-            },
-            "332": {
-                "new_map": {
-                    "bg_track": "bg_canter_02",
-                    "map": "canter_01",
-                    "positions": {
-                        "jeremy": [
-                            2,
-                            20
-                        ]
-                    }
-                }
             },
             "48": {
                 "new_map": {
@@ -3979,6 +3955,29 @@
                 "sequence": [
                     "final_confront"
                 ]
+            },
+            "262": {
+                "sequence": [
+                    "matt_01"
+                ]
+            },
+            "258": {
+                "sequence": [
+                    "canter_01"
+                ]
+            },
+            "332": {
+                "new_map": {
+                    "map": "canter_01",
+                    "bg_track": "bg_canter_02",
+                    "bg": "big_bg_city_01",
+                    "positions": {
+                        "jeremy": [
+                            2,
+                            20
+                        ]
+                    }
+                }
             }
         }
     },
@@ -4360,14 +4359,14 @@
         },
         "ENDING_04_PART_00": {
             "map": "castle_ginger_cutscene_02",
-            "bg_track": "theme_anata",
-            "cutscenes": [
-                "ending_04_cutscene_01"
-            ]
+            "bg_track": "theme_anata"
         },
         "ENDING_04_PART_01": {
             "map": "sans",
             "bg_track": "theme_sans",
+            "cutscenes": [
+                "ending_04_cutscene_01"
+            ],
             "positions": {
                 "jeremy": [
                     0,

@@ -19,7 +19,7 @@ if [ -d "/opt/devkitpro" ]; then
 fi
 
 sudo apt update -y
-sudo apt install -y python3 python3-is-python git
+sudo apt install -y python3 python3-pip python-is-python3 git
 python3 -m pip install -r requirements.txt
 
 git clone https://github.com/GValiente/butano

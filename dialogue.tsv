@@ -1440,7 +1440,7 @@ boutique_02
 			ACT_ITEM	You found:	TAILORED SUIT	Very classy.				OBJ_CLOTHES					
 															
 dima_01															
-	db_ch_dima	EM_DEFAULT		I just wanted lunch,	but the guy in there	is rediculous.									
+	db_ch_dima	EM_DEFAULT		I just wanted lunch,	but the guy in there	is ridiculous.									
 	db_ch_dima	EM_DEFAULT		Go ahead.	See what I mean.										
 															
 dima_02															
@@ -1669,6 +1669,7 @@ train_arrive
 		EM_SKIP	ACT_PROGRESS							CH_CUTSCENE_08					
 															
 canter_01															
+		EM_SKIP	ACT_MUSIC_INTRO												
 		EM_SKIP	ACT_WALK							CHAR_JEREMY		{7,3}			
 		EM_SKIP	ACT_WALK							CHAR_GINGER		{9,3}			
 		EM_SKIP	ACT_WALK							CHAR_SEBELLUS		{10,3}			
@@ -1693,7 +1694,7 @@ canter_01
 		EM_SKIP	ACT_WALK							CHAR_SEBELLUS		{48,6}			
 															
 matt_01															
-	db_ch_matt	EM_DEFAULT		D-DOES MINE EYE	DECEIVE ME?!	..A PARISHONER?!?				CHAR_MATT	&matt_alas				
+	db_ch_matt	EM_DEFAULT	ACT_MUSIC_HOTEL	D-DOES MINE EYE	DECEIVE ME?!	..A PARISHONER?!?				CHAR_MATT	&matt_alas				
 	db_ch_matt	EM_DEFAULT		Oh.. I see, you're	not from around	here, are you.				CHAR_MATT	&matt_erm				
 	db_ch_matt	EM_DEFAULT		WELCOME! I am the	A.I.RCHBISHOP of	CANTERBURY, Matthew!				CHAR_MATT	&matt_yay				
 	db_ch_matt	EM_DEFAULT		However, I get	"called ""Matt"" "	a TON.									
@@ -1708,7 +1709,7 @@ matt_01
 	db_ch_matt	EM_DEFAULT		unfortunately it's	not drugs.										
 	db_ch_matt	EM_DEFAULT		We don't really know	what it is, so if	you feel fine, uh..									
 	db_ch_matt	EM_DEFAULT		I recommend seeing a	doctor if you can.										
-	db_ch_matt	EM_DEFAULT		This is a travesty,	most all because	zombies are broke.									
+	db_ch_matt	EM_DEFAULT		This is a travesty,	mostly because	zombies are broke.									
 	db_ch_matt	EM_DEFAULT		How am I supposed	to pay the bills	with zombies?									
 	db_ch_matt	EM_DEFAULT		So I changed my	approach! I tried to	appeal to muetos!									
 	db_ch_matt	EM_DEFAULT		I put up Senatrix	idols thinking that	would get them in.									
@@ -1875,7 +1876,7 @@ henry_02
 	db_ch_ginger	EM_SAD		I don't know if	I care.										
 	db_ch_ginger	EM_SULLEN		You are the only	friend I have left.										
 	db_ch_ginger	EM_SULLEN	ACT_TELEPORT	..I need to know	what to do.					CHAR_VISTA_02	&anim_face_down	{10,9}			
-				Do nothing.	Henry's tool.	Lethodol.							&henry_02_alt_01	&ending_lab_03	
+				Do nothing.	Henry's tool.	Lethedol.							&henry_02_alt_01	&ending_lab_03	
 	db_ch_vista_02	EM_SULLEN	ACT_WALK	Ginger.						CHAR_VISTA_02		{10,12}			
 	db_ch_ginger	EM_SULLEN		..											
 	db_ch_vista_02	EM_SULLEN		Both of you.		Follow me.									
@@ -1935,7 +1936,7 @@ ending_lab_03
 	db_ch_vista_02	EM_SULLEN		It is done.											
 	db_ch_ginger	EM_DEFAULT		What do you mean?											
 	db_ch_vista_02	EM_DISAPPOINTED		Henry and I have	come to an..	agreement.									
-	db_ch_ginger	EM_SAD		..	I'm going to take	the Lethodol.									
+	db_ch_ginger	EM_SAD		..	I'm going to take	the Lethedol.									
 	db_ch_vista_02	EM_SULLEN		Give me that.											
 	db_ch_vista_02	EM_SULLEN		..	..	..									
 	db_ch_vista_02	EM_SAD		Henry remembered my	name, you know.										
@@ -2725,7 +2726,7 @@ henry_02_true
 	db_ch_vista_02	EM_EXCITED		All you must do is	recite after me.										
 	db_ch_ginger	EM_CONFUSED		B-But what about	you..?	What will happen?									
 	db_ch_vista_02	EM_EXCITED		I will be fine,	my dear. I have been	fine all this time.									
-	db_ch_vista_02	EM_SULLEN		Do you how I know	this phrase, Ginger?										
+	db_ch_vista_02	EM_SULLEN		Do you know how I	know this phrase,	Ginger?									
 	db_ch_vista_02	EM_SIDE_EYE		I tried it myself,	many years ago.	But it didn't work.									
 	db_ch_vista_02	EM_SULLEN		It was too late for	me, and it will soon	be too late for you.									
 	db_ch_ginger	EM_CONFUSED		..I see.		Human..?									
@@ -2840,7 +2841,7 @@ beach_sign
 sans_01b															
 	db_ch_sans	EM_HAPPY		oh..	and one more thing.		COLOR_SANS								
 	db_ch_sans	EM_ANGRY		you're gonna have a	good time.		COLOR_SANS								
-		EM_SKIP								CHAR_SANS	&sans_left	{7,6}			
+		EM_SKIP	ACT_WALK							CHAR_SANS	&sans_left	{7,6}			
 															
 peanut_stand															
 				PEANUT STAND		HAVE A PEANUT									

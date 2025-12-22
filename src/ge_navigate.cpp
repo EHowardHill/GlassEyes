@@ -102,6 +102,12 @@ int navigate_map()
         }
     }
 
+    // Remove clothes item
+    if (global_data_ptr->entry_map == &map_hotel_01_night)
+    {
+        global_data_ptr->items[OBJ_CLOTHES] = false;
+    }
+
     for (int y = 0; y < current_map.current_map->size.y.integer(); y++)
     {
         for (int x = 0; x < current_map.current_map->size.x.integer(); x++)
